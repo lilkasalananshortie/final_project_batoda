@@ -87,17 +87,14 @@ namespace BATODA
         //SA NAV BAR
         private void TogglePanel(Panel panel)
         {
-            // If the panel is already open and active, do nothing (keep it expanded)
             if (activePanel == panel && panel.Height > collapsedHeight)
             {
                 return;
             }
-
-            // Collapse others
+          
             CollapseAllExcept(panel);
             activePanel = panel;
 
-            // Expand this one if collapsed
             if (panel.Height == collapsedHeight)
             {
                 expanding = true;
@@ -207,5 +204,12 @@ namespace BATODA
         {
 
         }
+
+        private void DisplayPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }

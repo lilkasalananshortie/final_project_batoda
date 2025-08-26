@@ -87,9 +87,11 @@
             this.RegisteredVehiclesButton.ForeColor = System.Drawing.Color.Black;
             this.RegisteredVehiclesButton.Location = new System.Drawing.Point(-12, 0);
             this.RegisteredVehiclesButton.Name = "RegisteredVehiclesButton";
+            this.RegisteredVehiclesButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.RegisteredVehiclesButton.Size = new System.Drawing.Size(321, 90);
             this.RegisteredVehiclesButton.TabIndex = 3;
             this.RegisteredVehiclesButton.Text = "Registered Vehicles";
+            this.RegisteredVehiclesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RegisteredVehiclesButton.UseVisualStyleBackColor = false;
             this.RegisteredVehiclesButton.Click += new System.EventHandler(this.btnRegistered_Click);
             // 
@@ -136,9 +138,11 @@
             this.FinanceButton.ForeColor = System.Drawing.Color.Black;
             this.FinanceButton.Location = new System.Drawing.Point(-12, 0);
             this.FinanceButton.Name = "FinanceButton";
+            this.FinanceButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.FinanceButton.Size = new System.Drawing.Size(321, 90);
             this.FinanceButton.TabIndex = 3;
             this.FinanceButton.Text = "Finance";
+            this.FinanceButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.btnFinance_Click);
             // 
@@ -185,9 +189,11 @@
             this.AssistanceLogButton.ForeColor = System.Drawing.Color.Black;
             this.AssistanceLogButton.Location = new System.Drawing.Point(-12, 0);
             this.AssistanceLogButton.Name = "AssistanceLogButton";
+            this.AssistanceLogButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.AssistanceLogButton.Size = new System.Drawing.Size(321, 90);
             this.AssistanceLogButton.TabIndex = 3;
             this.AssistanceLogButton.Text = "Assistance Log";
+            this.AssistanceLogButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AssistanceLogButton.UseVisualStyleBackColor = false;
             this.AssistanceLogButton.Click += new System.EventHandler(this.btnAssistance_Click);
             // 
@@ -234,9 +240,11 @@
             this.MembersButton.ForeColor = System.Drawing.Color.Black;
             this.MembersButton.Location = new System.Drawing.Point(-12, 0);
             this.MembersButton.Name = "MembersButton";
-            this.MembersButton.Size = new System.Drawing.Size(321, 89);
+            this.MembersButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.MembersButton.Size = new System.Drawing.Size(311, 89);
             this.MembersButton.TabIndex = 3;
             this.MembersButton.Text = "Members";
+            this.MembersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MembersButton.UseVisualStyleBackColor = false;
             this.MembersButton.Click += new System.EventHandler(this.btnMembers_Click);
             // 
@@ -282,9 +290,11 @@
             this.SettingsButton.ForeColor = System.Drawing.Color.Black;
             this.SettingsButton.Location = new System.Drawing.Point(-12, 0);
             this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.SettingsButton.Size = new System.Drawing.Size(321, 90);
             this.SettingsButton.TabIndex = 3;
             this.SettingsButton.Text = "Settings";
+            this.SettingsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.btnSettings_Click);
             // 
@@ -335,9 +345,11 @@
             this.HomeButton.ForeColor = System.Drawing.Color.Black;
             this.HomeButton.Location = new System.Drawing.Point(3, 3);
             this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.HomeButton.Size = new System.Drawing.Size(299, 89);
             this.HomeButton.TabIndex = 6;
             this.HomeButton.Text = "Home";
+            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
@@ -349,6 +361,7 @@
             this.DisplayPanel.Name = "DisplayPanel";
             this.DisplayPanel.Size = new System.Drawing.Size(709, 728);
             this.DisplayPanel.TabIndex = 2;
+            this.DisplayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DisplayPanel_Paint);
             // 
             // TopBarPanel
             // 
@@ -364,7 +377,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(455, 20);
+            this.label1.Location = new System.Drawing.Point(479, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 24);
             this.label1.TabIndex = 0;
