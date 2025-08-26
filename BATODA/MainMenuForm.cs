@@ -109,6 +109,7 @@ namespace BATODA
         private void btnRegistered_Click(object sender, EventArgs e)
         {
             TogglePanel(RegisteredContainer);
+            ShowControl(new RegisteredVehicleUForm());
         }
 
         private void btnAssistance_Click(object sender, EventArgs e)
@@ -120,16 +121,20 @@ namespace BATODA
         private void btnFinance_Click(object sender, EventArgs e)
         {
             TogglePanel(FinanceContainer);
+            ShowControl(new FinanceUForm());
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
             TogglePanel(SettingsContainer);
+            ShowControl(new SettingsUForm());
+
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             ShowControl(new DashboardUForm());
+
         }
 
         private void HomeButton_Click(object sender, EventArgs e)

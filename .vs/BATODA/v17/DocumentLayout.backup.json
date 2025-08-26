@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\BATODA\\",
+  "WorkspaceRootPath": "C:\\BSIT 3\\C #\\BATODA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|c:\\users\\admin\\source\\repos\\batoda\\batoda\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|c:\\bsit 3\\c #\\batoda\\batoda\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\Users\\Admin\\source\\repos\\BATODA\\batoda\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|c:\\bsit 3\\c #\\batoda\\batoda\\settingsuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\settingsuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\Users\\Admin\\source\\repos\\BATODA\\batoda\\assistanceloguform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\BSIT 3\\C #\\BATODA\\batoda\\assistanceloguform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\assistanceloguform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\Users\\Admin\\source\\repos\\BATODA\\batoda\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|c:\\bsit 3\\c #\\batoda\\batoda\\registeredvehicleuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\registeredvehicleuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\BSIT 3\\C #\\BATODA\\batoda\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\BSIT 3\\C #\\BATODA\\batoda\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\Users\\Admin\\source\\repos\\BATODA\\batoda\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|C:\\BSIT 3\\C #\\BATODA\\batoda\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|c:\\bsit 3\\c #\\batoda\\batoda\\financeuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F067416-4CF6-4CC5-A095-5E25E376DEE0}|BATODA\\BATODA.csproj|solutionrelative:batoda\\financeuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,61 +54,101 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SettingsUForm.cs [Design]",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\SettingsUForm.cs",
+              "RelativeDocumentMoniker": "BATODA\\SettingsUForm.cs",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\SettingsUForm.cs [Design]",
+              "RelativeToolTip": "BATODA\\SettingsUForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T07:23:58.282Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FinanceUForm.cs [Design]",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\FinanceUForm.cs",
+              "RelativeDocumentMoniker": "BATODA\\FinanceUForm.cs",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\FinanceUForm.cs [Design]",
+              "RelativeToolTip": "BATODA\\FinanceUForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T07:22:54.459Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisteredVehicleUForm.cs [Design]",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\RegisteredVehicleUForm.cs",
+              "RelativeDocumentMoniker": "BATODA\\RegisteredVehicleUForm.cs",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\RegisteredVehicleUForm.cs [Design]",
+              "RelativeToolTip": "BATODA\\RegisteredVehicleUForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T07:20:07.731Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AssistanceLogUForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\AssistanceLogUForm.cs",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\AssistanceLogUForm.cs",
               "RelativeDocumentMoniker": "BATODA\\AssistanceLogUForm.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\AssistanceLogUForm.cs [Design]",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\AssistanceLogUForm.cs [Design]",
               "RelativeToolTip": "BATODA\\AssistanceLogUForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T02:17:16.892Z"
+              "WhenOpened": "2025-08-26T02:17:16.892Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainMenuForm.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\MainMenuForm.cs",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\MainMenuForm.cs",
               "RelativeDocumentMoniker": "BATODA\\MainMenuForm.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\MainMenuForm.cs",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\MainMenuForm.cs",
               "RelativeToolTip": "BATODA\\MainMenuForm.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwA0AAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAowIEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-25T07:19:43.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MainMenuForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\MainMenuForm.cs",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\MainMenuForm.cs",
               "RelativeDocumentMoniker": "BATODA\\MainMenuForm.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\MainMenuForm.cs [Design]",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\MainMenuForm.cs [Design]",
               "RelativeToolTip": "BATODA\\MainMenuForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T07:00:45.379Z"
+              "WhenOpened": "2025-08-25T07:00:45.379Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\LoginForm.cs",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\LoginForm.cs",
               "RelativeDocumentMoniker": "BATODA\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\LoginForm.cs",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\LoginForm.cs",
               "RelativeToolTip": "BATODA\\LoginForm.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T06:55:46.895Z"
+              "WhenOpened": "2025-08-25T06:55:46.895Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\LoginForm.cs",
+              "DocumentMoniker": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\LoginForm.cs",
               "RelativeDocumentMoniker": "BATODA\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\BATODA\\BATODA\\LoginForm.cs [Design]",
+              "ToolTip": "C:\\BSIT 3\\C #\\BATODA\\BATODA\\LoginForm.cs [Design]",
               "RelativeToolTip": "BATODA\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T05:45:01.902Z"
+              "WhenOpened": "2025-08-25T05:45:01.902Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -58,6 +58,12 @@
     <Compile Include="DashboardUForm.Designer.cs">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FinanceUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinanceUForm.Designer.cs">
+      <DependentUpon>FinanceUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +84,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisteredVehicleUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisteredVehicleUForm.Designer.cs">
+      <DependentUpon>RegisteredVehicleUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsUForm.Designer.cs">
+      <DependentUpon>SettingsUForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AssistanceLogUForm.resx">
       <DependentUpon>AssistanceLogUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardUForm.resx">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceUForm.resx">
+      <DependentUpon>FinanceUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
@@ -102,6 +123,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegisteredVehicleUForm.resx">
+      <DependentUpon>RegisteredVehicleUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsUForm.resx">
+      <DependentUpon>SettingsUForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
