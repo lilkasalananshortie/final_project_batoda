@@ -5,29 +5,30 @@ namespace BATODA
 {
     public partial class DashboardForm : Form
     {
+
+        //ALL RELATED TO PANEL AND NAV BAR TOP AND LEFT
         Panel activePanel;
         bool expanding;
-
         int step = 10;
         int collapsedHeight = 80;  
         int expandedHeight = 290;   
-        //CHECK KUNG MAY NABAGOIIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+        
         public DashboardForm()
         {
             InitializeComponent();
-
+            //DEFAULT WAG PALITAN
             MembersContainer.Height = collapsedHeight;
             RegisteredContainer.Height = collapsedHeight;
             AssistanceLogContainer.Height = collapsedHeight;
             FinanceContainer.Height = collapsedHeight;
             SettingsContainer.Height = collapsedHeight;
-
+            //ANIMATION TIMER
             timer1.Interval = 15;
             timer1.Tick += Timer1_Tick;
 
             DisplayPanel.Visible = true;
         }
-
+        //ANIMATION METHOD
         private void Timer1_Tick(object sender, EventArgs e)
         {
             if (activePanel == null) return;
@@ -51,18 +52,21 @@ namespace BATODA
                 }
             }
         }
-        private void CollapseAll()
-        {
-            foreach (Control ctrl in NavBarPanel.Controls)
-            {
-                if (ctrl is Panel p)
-                {
-                    p.Height = collapsedHeight;
-                   
-                }
-            }
-            activePanel = null;
-        }
+
+        // PWEDE MAALIS KAPAG DI NAGAMIT 
+        //private void CollapseAll()
+        //{
+        //    foreach (Control ctrl in NavBarPanel.Controls)
+        //    {
+        //        if (ctrl is Panel p)
+        //        {
+        //            p.Height = collapsedHeight;
+
+        //        }
+        //    }
+        //    activePanel = null;
+        //}
+
         private void CollapseAllExcept(Panel panelToKeepOpen)
         {
             foreach (Control ctrl in NavBarPanel.Controls)
@@ -73,31 +77,34 @@ namespace BATODA
                 }
             }
         }
-
+        //USED TO DISPLAY USER CONTROL
         private void ShowControl(UserControl uc)
         {
             uc.Dock = DockStyle.Fill;    
             DisplayPanel.Controls.Clear(); 
             DisplayPanel.Controls.Add(uc); 
         }
-
+        //SA NAV BAR
         private void TogglePanel(Panel panel)
         {
-            CollapseAllExcept(panel);
+            // If the panel is already open and active, do nothing (keep it expanded)
+            if (activePanel == panel && panel.Height > collapsedHeight)
+            {
+                return;
+            }
 
+            // Collapse others
+            CollapseAllExcept(panel);
             activePanel = panel;
 
+            // Expand this one if collapsed
             if (panel.Height == collapsedHeight)
             {
                 expanding = true;
                 timer1.Start();
             }
-            else
-            {
-                expanding = false;
-                timer1.Start();
-            }
         }
+
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
@@ -147,15 +154,13 @@ namespace BATODA
             else if (activePanel != null && activePanel.Height == collapsedHeight)
             {    
                 activePanel = null;
-            }
-
-            
+            }        
             ShowControl(new DashboardUForm());        
         }
 
         private void TransferMembershipButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new TransferMembershipUForm());
         }
 
         private void TransferRecordsButton_Click(object sender, EventArgs e)

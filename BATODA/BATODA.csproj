@@ -96,6 +96,12 @@
     <Compile Include="SettingsUForm.Designer.cs">
       <DependentUpon>SettingsUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransferMembershipUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransferMembershipUForm.Designer.cs">
+      <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AssistanceLogUForm.resx">
       <DependentUpon>AssistanceLogUForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsUForm.resx">
       <DependentUpon>SettingsUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferMembershipUForm.resx">
+      <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
