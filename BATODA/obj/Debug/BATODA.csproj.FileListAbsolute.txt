@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\BATODA\BATODA\bin\Debug\BATODA.exe.config
+C:\Users\Admin\source\repos\BATODA\BATODA\bin\Debug\BATODA.exe
+C:\Users\Admin\source\repos\BATODA\BATODA\bin\Debug\BATODA.pdb
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.LoginForm.resources
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.Properties.Resources.resources
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.exe
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.pdb
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.DashboardForm.resources
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.DashboardUForm.resources
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.MembersUForm.resources
+C:\Users\Admin\source\repos\BATODA\BATODA\obj\Debug\BATODA.AssistanceLogUForm.resources
