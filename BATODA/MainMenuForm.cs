@@ -102,7 +102,19 @@ namespace BATODA
             }
         }
 
-
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            if (activePanel != null && activePanel.Height > collapsedHeight)
+            {
+                expanding = false;
+                timer1.Start();
+            }
+            else if (activePanel != null && activePanel.Height == collapsedHeight)
+            {
+                activePanel = null;
+            }
+            ShowControl(new DashboardUForm());
+        }
         private void btnMembers_Click(object sender, EventArgs e)
         {
             TogglePanel(MembersContainer);
@@ -141,19 +153,6 @@ namespace BATODA
 
         }
 
-        private void HomeButton_Click(object sender, EventArgs e)
-        {
-            if (activePanel != null && activePanel.Height > collapsedHeight)
-            {
-                expanding = false;
-                timer1.Start();
-            }
-            else if (activePanel != null && activePanel.Height == collapsedHeight)
-            {    
-                activePanel = null;
-            }        
-            ShowControl(new DashboardUForm());        
-        }
 
         private void TransferMembershipButton_Click(object sender, EventArgs e)
         {
@@ -162,22 +161,22 @@ namespace BATODA
 
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl (new TransferRecordUForm());
         }
 
         private void AssistanceRequestButton_Click(object sender, EventArgs e)
         {
-            
+            ShowControl (new AssistanceRequestUForm()); 
         }
 
         private void ARHButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new ARHUForm());
         }
 
         private void TransferVehicleButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new TransferRecordUForm());
         }
 
         private void TransferRecordButton_Click(object sender, EventArgs e)

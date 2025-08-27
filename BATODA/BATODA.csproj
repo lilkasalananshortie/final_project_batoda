@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ARHUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ARHUForm.Designer.cs">
+      <DependentUpon>ARHUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AssistanceLogUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AssistanceLogUForm.Designer.cs">
       <DependentUpon>AssistanceLogUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssistanceRequestUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AssistanceRequestUForm.Designer.cs">
+      <DependentUpon>AssistanceRequestUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DashboardUForm.cs">
       <SubType>UserControl</SubType>
@@ -102,8 +114,26 @@
     <Compile Include="TransferMembershipUForm.Designer.cs">
       <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransferRecordUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransferRecordUForm.Designer.cs">
+      <DependentUpon>TransferRecordUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferVehicleUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransferVehicleUForm.Designer.cs">
+      <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ARHUForm.resx">
+      <DependentUpon>ARHUForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AssistanceLogUForm.resx">
       <DependentUpon>AssistanceLogUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssistanceRequestUForm.resx">
+      <DependentUpon>AssistanceRequestUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardUForm.resx">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
@@ -137,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransferMembershipUForm.resx">
       <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferRecordUForm.resx">
+      <DependentUpon>TransferRecordUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferVehicleUForm.resx">
+      <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
