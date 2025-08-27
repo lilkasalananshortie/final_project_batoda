@@ -161,7 +161,7 @@ namespace BATODA
 
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
-            ShowControl (new TransferRecordUForm());
+            ShowControl (new TransferRecordMemberUForm());
         }
 
         private void AssistanceRequestButton_Click(object sender, EventArgs e)
@@ -176,39 +176,33 @@ namespace BATODA
 
         private void TransferVehicleButton_Click(object sender, EventArgs e)
         {
-            ShowControl(new TransferRecordUForm());
+            ShowControl(new TransferVehicleUForm());
         }
 
         private void TransferRecordButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new TransferRecordVehicleUForm());
         }
 
         private void ButawButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new ButawUForm());
         }
 
         private void MembershipRenewalButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new MembershipRenewalUForm());
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new LogoutUForm());
         }
 
         private void BackupButton_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new BackupUForm());
         }
-
-        private void DisplayPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         
     }
 }

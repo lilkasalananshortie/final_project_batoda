@@ -360,8 +360,7 @@
             this.DisplayPanel.Location = new System.Drawing.Point(305, 0);
             this.DisplayPanel.Name = "DisplayPanel";
             this.DisplayPanel.Size = new System.Drawing.Size(709, 728);
-            this.DisplayPanel.TabIndex = 2;
-            this.DisplayPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DisplayPanel_Paint);
+            this.DisplayPanel.TabIndex = 2;           
             // 
             // TopBarPanel
             // 

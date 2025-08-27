@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BATODA
 {
-    public partial class TransferRecordUForm : UserControl
+    public partial class LogoutUForm : UserControl
     {
-        public TransferRecordUForm()
+        public LogoutUForm()
         {
             InitializeComponent();
         }

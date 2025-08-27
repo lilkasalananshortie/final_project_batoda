@@ -64,6 +64,18 @@
     <Compile Include="AssistanceRequestUForm.Designer.cs">
       <DependentUpon>AssistanceRequestUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BackupUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupUForm.Designer.cs">
+      <DependentUpon>BackupUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButawUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButawUForm.Designer.cs">
+      <DependentUpon>ButawUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashboardUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,6 +88,12 @@
     <Compile Include="FinanceUForm.Designer.cs">
       <DependentUpon>FinanceUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogoutUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogoutUForm.Designer.cs">
+      <DependentUpon>LogoutUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +105,12 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembershipRenewalUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MembershipRenewalUForm.Designer.cs">
+      <DependentUpon>MembershipRenewalUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MembersUForm.cs">
       <SubType>UserControl</SubType>
@@ -114,11 +138,17 @@
     <Compile Include="TransferMembershipUForm.Designer.cs">
       <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransferRecordUForm.cs">
+    <Compile Include="TransferRecordMemberUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TransferRecordUForm.Designer.cs">
-      <DependentUpon>TransferRecordUForm.cs</DependentUpon>
+    <Compile Include="TransferRecordMemberUForm.Designer.cs">
+      <DependentUpon>TransferRecordMemberUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferRecordVehicleUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransferRecordVehicleUForm.Designer.cs">
+      <DependentUpon>TransferRecordVehicleUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TransferVehicleUForm.cs">
       <SubType>UserControl</SubType>
@@ -135,17 +165,29 @@
     <EmbeddedResource Include="AssistanceRequestUForm.resx">
       <DependentUpon>AssistanceRequestUForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BackupUForm.resx">
+      <DependentUpon>BackupUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButawUForm.resx">
+      <DependentUpon>ButawUForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashboardUForm.resx">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FinanceUForm.resx">
       <DependentUpon>FinanceUForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogoutUForm.resx">
+      <DependentUpon>LogoutUForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembershipRenewalUForm.resx">
+      <DependentUpon>MembershipRenewalUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MembersUForm.resx">
       <DependentUpon>MembersUForm.cs</DependentUpon>
@@ -168,8 +210,11 @@
     <EmbeddedResource Include="TransferMembershipUForm.resx">
       <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferRecordUForm.resx">
-      <DependentUpon>TransferRecordUForm.cs</DependentUpon>
+    <EmbeddedResource Include="TransferRecordMemberUForm.resx">
+      <DependentUpon>TransferRecordMemberUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferRecordVehicleUForm.resx">
+      <DependentUpon>TransferRecordVehicleUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransferVehicleUForm.resx">
       <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
