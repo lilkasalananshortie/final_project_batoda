@@ -26,7 +26,12 @@ namespace BATODA
             timer1.Interval = 15;
             timer1.Tick += Timer1_Tick;
 
+            //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayPanel.Visible = true;
+            DisplayPanel.Dock = DockStyle.Fill;
+            NotificationPanel.Visible = false;
+            CalendarXAccoutnContainerPanel.Visible = false;
+
         }
         //ANIMATION METHOD
         private void Timer1_Tick(object sender, EventArgs e)
@@ -82,8 +87,17 @@ namespace BATODA
         {
             uc.Dock = DockStyle.Fill;    
             DisplayPanel.Controls.Clear(); 
-            DisplayPanel.Controls.Add(uc); 
+            DisplayPanel.Controls.Add(uc);
         }
+
+        private void ShowControlMini(UserControl uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            CalendarXAccoutnContainerPanel.Controls.Clear();
+            CalendarXAccoutnContainerPanel.Controls.Add(uc);
+        }
+
+
         //SA NAV BAR
         private void TogglePanel(Panel panel)
         {
@@ -201,8 +215,30 @@ namespace BATODA
 
         private void BackupButton_Click(object sender, EventArgs e)
         {
-            ShowControl(new BackupUForm());
+            ShowControl(new BackupUForm()); 
         }
-        
+
+        private void AccountButton_Click(object sender, EventArgs e)
+        {
+            ShowControlMini(new AccountUForm());
+            CalendarXAccoutnContainerPanel.Visible = !CalendarXAccoutnContainerPanel.Visible;
+            if (CalendarXAccoutnContainerPanel.Visible)
+                CalendarXAccoutnContainerPanel.BringToFront();
+        }
+
+        private void NotificationButton_Click(object sender, EventArgs e)
+        {
+            NotificationPanel.Visible = !NotificationPanel.Visible;
+            if (NotificationPanel.Visible)
+                NotificationPanel.BringToFront();
+        }
+
+        private void CalendarButton_Click(object sender, EventArgs e)
+        {
+            ShowControlMini(new CalendarUForm());
+            CalendarXAccoutnContainerPanel.Visible = !CalendarXAccoutnContainerPanel.Visible;
+            if (CalendarXAccoutnContainerPanel.Visible)
+                CalendarXAccoutnContainerPanel.BringToFront();
+        }
     }
 }

@@ -55,6 +55,12 @@
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.TopBarPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.CalendarButton = new System.Windows.Forms.Button();
+            this.NotificationButton = new System.Windows.Forms.Button();
+            this.AccountButton = new System.Windows.Forms.Button();
+            this.NotificationPanel = new System.Windows.Forms.Panel();
+            this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.RegisteredContainer.SuspendLayout();
             this.FinanceContainer.SuspendLayout();
             this.AssistanceLogContainer.SuspendLayout();
@@ -62,6 +68,7 @@
             this.SettingsContainer.SuspendLayout();
             this.NavBarPanel.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
+            this.NotificationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -334,7 +341,7 @@
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(305, 728);
+            this.NavBarPanel.Size = new System.Drawing.Size(305, 759);
             this.NavBarPanel.TabIndex = 1;
             // 
             // HomeButton
@@ -356,41 +363,101 @@
             // DisplayPanel
             // 
             this.DisplayPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.DisplayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DisplayPanel.Location = new System.Drawing.Point(305, 0);
+            this.DisplayPanel.Location = new System.Drawing.Point(305, 319);
             this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(709, 728);
-            this.DisplayPanel.TabIndex = 2;           
+            this.DisplayPanel.Size = new System.Drawing.Size(334, 409);
+            this.DisplayPanel.TabIndex = 2;
             // 
             // TopBarPanel
             // 
             this.TopBarPanel.BackColor = System.Drawing.Color.Lime;
+            this.TopBarPanel.Controls.Add(this.AccountButton);
+            this.TopBarPanel.Controls.Add(this.NotificationButton);
+            this.TopBarPanel.Controls.Add(this.CalendarButton);
             this.TopBarPanel.Controls.Add(this.label1);
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBarPanel.Location = new System.Drawing.Point(305, 0);
             this.TopBarPanel.Name = "TopBarPanel";
-            this.TopBarPanel.Size = new System.Drawing.Size(709, 66);
+            this.TopBarPanel.Size = new System.Drawing.Size(1400, 66);
             this.TopBarPanel.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(479, 23);
+            this.label1.Font = new System.Drawing.Font("Ubuntu", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 24);
+            this.label1.Size = new System.Drawing.Size(298, 45);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Notif Acc Calendar";
+            this.label1.Text = "Bambang TODA";
+            // 
+            // CalendarButton
+            // 
+            this.CalendarButton.Location = new System.Drawing.Point(964, 10);
+            this.CalendarButton.Name = "CalendarButton";
+            this.CalendarButton.Size = new System.Drawing.Size(57, 52);
+            this.CalendarButton.TabIndex = 1;
+            this.CalendarButton.Text = "CAL";
+            this.CalendarButton.UseVisualStyleBackColor = true;
+            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
+            // 
+            // NotificationButton
+            // 
+            this.NotificationButton.Location = new System.Drawing.Point(901, 11);
+            this.NotificationButton.Name = "NotificationButton";
+            this.NotificationButton.Size = new System.Drawing.Size(57, 52);
+            this.NotificationButton.TabIndex = 2;
+            this.NotificationButton.Text = "NOTIF";
+            this.NotificationButton.UseVisualStyleBackColor = true;
+            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
+            // 
+            // AccountButton
+            // 
+            this.AccountButton.Location = new System.Drawing.Point(838, 10);
+            this.AccountButton.Name = "AccountButton";
+            this.AccountButton.Size = new System.Drawing.Size(57, 52);
+            this.AccountButton.TabIndex = 3;
+            this.AccountButton.Text = "ACC";
+            this.AccountButton.UseVisualStyleBackColor = true;
+            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
+            // 
+            // NotificationPanel
+            // 
+            this.NotificationPanel.BackColor = System.Drawing.Color.Teal;
+            this.NotificationPanel.Controls.Add(this.label2);
+            this.NotificationPanel.Location = new System.Drawing.Point(1368, 72);
+            this.NotificationPanel.Name = "NotificationPanel";
+            this.NotificationPanel.Size = new System.Drawing.Size(337, 323);
+            this.NotificationPanel.TabIndex = 0;
+            // 
+            // CalendarXAccoutnContainerPanel
+            // 
+            this.CalendarXAccoutnContainerPanel.Location = new System.Drawing.Point(781, 237);
+            this.CalendarXAccoutnContainerPanel.Name = "CalendarXAccoutnContainerPanel";
+            this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(794, 522);
+            this.CalendarXAccoutnContainerPanel.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Ubuntu", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 45);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
             // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1014, 728);
-            this.Controls.Add(this.TopBarPanel);
+            this.ClientSize = new System.Drawing.Size(1717, 728);
             this.Controls.Add(this.DisplayPanel);
+            this.Controls.Add(this.NotificationPanel);
+            this.Controls.Add(this.TopBarPanel);
             this.Controls.Add(this.NavBarPanel);
+            this.Controls.Add(this.CalendarXAccoutnContainerPanel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DashboardForm";
@@ -405,6 +472,8 @@
             this.NavBarPanel.ResumeLayout(false);
             this.TopBarPanel.ResumeLayout(false);
             this.TopBarPanel.PerformLayout();
+            this.NotificationPanel.ResumeLayout(false);
+            this.NotificationPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -436,5 +505,11 @@
         private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Panel TopBarPanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button CalendarButton;
+        private System.Windows.Forms.Button AccountButton;
+        private System.Windows.Forms.Button NotificationButton;
+        private System.Windows.Forms.Panel NotificationPanel;
+        private System.Windows.Forms.Panel CalendarXAccoutnContainerPanel;
+        private System.Windows.Forms.Label label2;
     }
 }

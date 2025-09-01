@@ -36,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +79,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(879, 178);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(357, 230);
@@ -110,6 +113,16 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Etc";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ubuntu", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(38, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(257, 27);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Can be the \"Give Penalty";
+            // 
             // DashboardUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +137,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "DashboardUForm";
             this.Size = new System.Drawing.Size(1266, 765);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +154,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

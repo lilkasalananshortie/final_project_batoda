@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace BATODA
 {
-    public partial class RegisteredVehicleUForm : UserControl
+    public partial class AccountUForm : UserControl
     {
-        public RegisteredVehicleUForm()
+        public AccountUForm()
         {
             InitializeComponent();
         }
-
-        
     }
 }

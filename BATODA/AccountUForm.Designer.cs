@@ -1,6 +1,6 @@
 ﻿namespace BATODA
 {
-    partial class TransferVehicleUForm
+    partial class AccountUForm
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,22 +34,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 228);
+            this.label1.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(70, 193);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1413, 172);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "TRANSFER VEVICLE \r\n- FORM THAT WILL SHOW THE TRANSFERSHIP OF A VEHICLE TO THE SAM" +
-    "E OWNER\r\n\r\n\r\n";
+            this.label1.Size = new System.Drawing.Size(679, 175);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "TO BE ADDED\r\nPLAN\r\n- PIC \r\n- INFO OF THE ADMIN (PRES)\r\n- BUTTONS FOR CHANGE ACC? " +
+    "TRANSFER ADMINSHIP? \r\n- OR SOMETHING RELATED FOR TRANSFERING OF NEW ADMIN OR PRE" +
+    "S\r\n- LOG OUT\r\n";
             // 
-            // TransferVehicleUForm
+            // AccountUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.label1);
-            this.Name = "TransferVehicleUForm";
-            this.Size = new System.Drawing.Size(1452, 716);
+            this.Name = "AccountUForm";
+            this.Size = new System.Drawing.Size(846, 644);
             this.ResumeLayout(false);
             this.PerformLayout();
 

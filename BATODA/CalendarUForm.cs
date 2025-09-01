@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace BATODA
 {
-    public partial class RegisteredVehicleUForm : UserControl
+    public partial class CalendarUForm : UserControl
     {
-        public RegisteredVehicleUForm()
+        public CalendarUForm()
         {
             InitializeComponent();
         }
 
-        
+        private void CalendarUForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

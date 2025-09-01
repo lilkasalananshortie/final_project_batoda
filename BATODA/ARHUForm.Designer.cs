@@ -28,19 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ARHUForm));
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Ubuntu", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1455, 180);
+            this.label1.TabIndex = 0;
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // ARHUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.Controls.Add(this.label1);
             this.Name = "ARHUForm";
-            this.Size = new System.Drawing.Size(1083, 776);
+            this.Size = new System.Drawing.Size(1664, 776);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

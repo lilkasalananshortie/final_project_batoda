@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountUForm.Designer.cs">
+      <DependentUpon>AccountUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ARHUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="ButawUForm.Designer.cs">
       <DependentUpon>ButawUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CalendarUForm.Designer.cs">
+      <DependentUpon>CalendarUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DashboardUForm.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +168,9 @@
     <Compile Include="TransferVehicleUForm.Designer.cs">
       <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountUForm.resx">
+      <DependentUpon>AccountUForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ARHUForm.resx">
       <DependentUpon>ARHUForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ButawUForm.resx">
       <DependentUpon>ButawUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarUForm.resx">
+      <DependentUpon>CalendarUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashboardUForm.resx">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
