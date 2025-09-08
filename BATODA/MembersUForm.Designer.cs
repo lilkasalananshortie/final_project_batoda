@@ -37,6 +37,8 @@
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
             this.ApplyButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.TransferMembershipButton = new System.Windows.Forms.Button();
+            this.TransferRecordsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -126,11 +128,35 @@
             this.label4.Text = "MISSING\r\n- TABLE \r\n- ADITIONAL BUTTONS ADD DELETE EDIT\r\n- ANOTHER FORM ?? \r\n- TO " +
     "BE DISCUSED";
             // 
+            // TransferMembershipButton
+            // 
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.Location = new System.Drawing.Point(129, 388);
+            this.TransferMembershipButton.Name = "TransferMembershipButton";
+            this.TransferMembershipButton.Size = new System.Drawing.Size(321, 89);
+            this.TransferMembershipButton.TabIndex = 12;
+            this.TransferMembershipButton.Text = "Transfer Membership";
+            this.TransferMembershipButton.UseVisualStyleBackColor = true;
+            // 
+            // TransferRecordsButton
+            // 
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Ubuntu", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.Location = new System.Drawing.Point(129, 272);
+            this.TransferRecordsButton.Name = "TransferRecordsButton";
+            this.TransferRecordsButton.Size = new System.Drawing.Size(321, 89);
+            this.TransferRecordsButton.TabIndex = 13;
+            this.TransferRecordsButton.Text = "Transfer Record";
+            this.TransferRecordsButton.UseVisualStyleBackColor = true;
+            // 
             // MembersUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.TransferRecordsButton);
+            this.Controls.Add(this.TransferMembershipButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.StatusComboBox);
@@ -159,5 +185,7 @@
         private System.Windows.Forms.ComboBox StatusComboBox;
         private System.Windows.Forms.Button ApplyButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button TransferMembershipButton;
+        private System.Windows.Forms.Button TransferRecordsButton;
     }
 }
