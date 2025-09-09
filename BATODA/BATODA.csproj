@@ -82,6 +82,9 @@
     <Compile Include="ButawUForm.Designer.cs">
       <DependentUpon>ButawUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ButtonStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CalendarUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +189,9 @@
     <EmbeddedResource Include="ButawUForm.resx">
       <DependentUpon>ButawUForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ButtonStyle.resx">
+      <DependentUpon>ButtonStyle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CalendarUForm.resx">
       <DependentUpon>CalendarUForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +255,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pictures\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

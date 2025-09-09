@@ -175,7 +175,7 @@
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBarPanel.Location = new System.Drawing.Point(316, 0);
             this.TopBarPanel.Name = "TopBarPanel";
-            this.TopBarPanel.Size = new System.Drawing.Size(1384, 66);
+            this.TopBarPanel.Size = new System.Drawing.Size(1389, 66);
             this.TopBarPanel.TabIndex = 3;
             // 
             // AccountButton
