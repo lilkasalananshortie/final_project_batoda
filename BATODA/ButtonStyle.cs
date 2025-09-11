@@ -88,7 +88,7 @@ namespace BATODA
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;
             this.Size = new Size(150, 40);
-            this.BackColor = Color.White;
+            this.BackColor = Color.Red;
             this.ForeColor = Color.Black;
             this.Resize += new EventHandler(Button_Resize);
         }

@@ -11,7 +11,7 @@ namespace BATODA
         public DashboardForm()
         {
             InitializeComponent();
-            //DEFAULT WAG PALITAN
+            
 
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayPanel.Visible = true;
@@ -19,29 +19,24 @@ namespace BATODA
             NotificationPanel.Visible = false;
             CalendarXAccoutnContainerPanel.Visible = false;
 
+            DisplayClass.SetMainPanel(DisplayPanel);
+            DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
+
         }
              
-        //USED TO DISPLAY USER CONTROL
-        private void ShowControl(UserControl uc)
-        {
-            uc.Dock = DockStyle.Fill;    
-            DisplayPanel.Controls.Clear(); 
-            DisplayPanel.Controls.Add(uc);
-        }
-
-        private void ShowControlMini(UserControl uc)
-        {
-            uc.Dock = DockStyle.Fill;
-            CalendarXAccoutnContainerPanel.Controls.Clear();
-            CalendarXAccoutnContainerPanel.Controls.Add(uc);
-        }
         private void HomeButton_Click_1(object sender, EventArgs e)
         {
-            ShowControl(new DashboardUForm());
+            DisplayClass.ShowMain(new DashboardUForm());
+
 
         }
 
-        
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new DashboardUForm());
+
+        }
+
         private void btnMembers_Click(object sender, EventArgs e)
         {
             
@@ -49,43 +44,38 @@ namespace BATODA
         private void MembersMainButton_Click(object sender, EventArgs e)
         {
             
-            ShowControl(new MembersUForm());
+            DisplayClass.ShowMain(new MembersUForm());
         }
 
         private void btnRegistered_Click(object sender, EventArgs e)
         {
             
-            ShowControl(new RegisteredVehicleUForm());
+            DisplayClass.ShowMain(new RegisteredVehicleUForm());
         }
 
         private void btnAssistance_Click(object sender, EventArgs e)
         {
             
-            ShowControl(new AssistanceLogUForm());
+            DisplayClass.ShowMain(new AssistanceLogUForm());
         }
 
         private void btnFinance_Click(object sender, EventArgs e)
         {
            
-            ShowControl(new FinanceUForm());
+            DisplayClass.ShowMain(new FinanceUForm());
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
             
-            ShowControl(new SettingsUForm());
+            DisplayClass.ShowMain(new SettingsUForm());
 
         }
 
-        private void DashboardForm_Load(object sender, EventArgs e)
-        {
-            ShowControl(new DashboardUForm());
-
-        }
 
         private void AccountButton_Click(object sender, EventArgs e)
         {
-            ShowControlMini(new AccountUForm());
+            DisplayClass.ShowMini(new AccountUForm());
             CalendarXAccoutnContainerPanel.Visible = !CalendarXAccoutnContainerPanel.Visible;
             if (CalendarXAccoutnContainerPanel.Visible)
                 CalendarXAccoutnContainerPanel.BringToFront();
@@ -100,12 +90,12 @@ namespace BATODA
 
         private void CalendarButton_Click(object sender, EventArgs e)
         {
-            ShowControlMini(new CalendarUForm());
+            DisplayClass.ShowMini(new CalendarUForm());
             CalendarXAccoutnContainerPanel.Visible = !CalendarXAccoutnContainerPanel.Visible;
             if (CalendarXAccoutnContainerPanel.Visible)
                 CalendarXAccoutnContainerPanel.BringToFront();
         }
 
-       
+
     }
 }

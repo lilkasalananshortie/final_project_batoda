@@ -54,8 +54,8 @@ namespace BATODA
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            PlaceHolderTextBox.SetPlaceholder(UsernameTextBox, "Username");
-            PlaceHolderTextBox.SetPlaceholder(PasswordTextBox, "Password");
+            DisplayClass.SetPlaceholder(UsernameTextBox, "Username");
+            DisplayClass.SetPlaceholder(PasswordTextBox, "Password");
 
             this.ActiveControl = null;
         }
