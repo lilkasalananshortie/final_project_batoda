@@ -35,10 +35,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.OrderComboBox = new System.Windows.Forms.ComboBox();
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
-            this.ApplyButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.TransferMembershipButton = new System.Windows.Forms.Button();
             this.TransferRecordsButton = new System.Windows.Forms.Button();
+            this.ApplyButton = new BATODA.ButtonStyle();
             this.SuspendLayout();
             // 
             // label1
@@ -107,16 +107,6 @@
             this.StatusComboBox.TabIndex = 9;
             this.StatusComboBox.SelectedIndexChanged += new System.EventHandler(this.StatusComboBox_SelectedIndexChanged);
             // 
-            // ApplyButton
-            // 
-            this.ApplyButton.Font = new System.Drawing.Font("Ubuntu", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyButton.Location = new System.Drawing.Point(1361, 218);
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.Size = new System.Drawing.Size(182, 49);
-            this.ApplyButton.TabIndex = 10;
-            this.ApplyButton.Text = "Apply Filter";
-            this.ApplyButton.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -150,15 +140,34 @@
             this.TransferRecordsButton.Text = "Transfer Record";
             this.TransferRecordsButton.UseVisualStyleBackColor = true;
             // 
+            // ApplyButton
+            // 
+            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplyButton.BorderRadius = 20;
+            this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.FlatAppearance.BorderSize = 0;
+            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyButton.Font = new System.Drawing.Font("Ubuntu", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.ForeColor = System.Drawing.Color.Black;
+            this.ApplyButton.Location = new System.Drawing.Point(1359, 202);
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.Size = new System.Drawing.Size(181, 46);
+            this.ApplyButton.TabIndex = 14;
+            this.ApplyButton.Text = "Apply Filter";
+            this.ApplyButton.TextColor = System.Drawing.Color.Black;
+            this.ApplyButton.UseVisualStyleBackColor = false;
+            // 
             // MembersUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.TransferRecordsButton);
             this.Controls.Add(this.TransferMembershipButton);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.StatusComboBox);
             this.Controls.Add(this.OrderComboBox);
             this.Controls.Add(this.label3);
@@ -183,9 +192,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox OrderComboBox;
         private System.Windows.Forms.ComboBox StatusComboBox;
-        private System.Windows.Forms.Button ApplyButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button TransferMembershipButton;
         private System.Windows.Forms.Button TransferRecordsButton;
+        private ButtonStyle ApplyButton;
     }
 }

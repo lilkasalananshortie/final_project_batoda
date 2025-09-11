@@ -19,7 +19,7 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
-
+            PlaceHolderTextBox.SetPlaceholder(SearchTextBox, "Search Member");
         }
 
         private void StatusComboBox_SelectedIndexChanged(object sender, EventArgs e)

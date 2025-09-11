@@ -129,7 +129,7 @@
             // 
             // NavBarPanel
             // 
-            this.NavBarPanel.BackColor = System.Drawing.Color.IndianRed;
+            this.NavBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.NavBarPanel.Controls.Add(this.HomeButton);
             this.NavBarPanel.Controls.Add(this.MembersMainButton);
             this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
@@ -249,6 +249,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1717, 728);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);

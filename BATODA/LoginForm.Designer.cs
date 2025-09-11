@@ -142,14 +142,14 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.BackColor = System.Drawing.Color.Black;
-            this.LoginButton.BackgroundColor = System.Drawing.Color.Black;
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.LoginButton.BorderColor = System.Drawing.Color.White;
             this.LoginButton.BorderRadius = 40;
             this.LoginButton.BorderSize = 0;
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.Transparent;
             this.LoginButton.Location = new System.Drawing.Point(92, 341);
             this.LoginButton.Name = "LoginButton";
@@ -177,6 +177,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BATODA Management System";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

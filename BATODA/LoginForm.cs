@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace BATODA
 {
@@ -33,13 +33,6 @@ namespace BATODA
             LoadingPanel.Visible = false; 
         }
 
-       
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoginButton_Click_1(object sender, EventArgs e)
         {
             DashboardForm DashBoardform = new DashboardForm();
@@ -49,15 +42,30 @@ namespace BATODA
 
         private void UsernameTextBox_TextChanged(object sender, EventArgs e)
         {
-            UsernameTextBox.Text = "Username";
-            UsernameTextBox.ForeColor = Color.Gray;
+            
+            
         }
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            
 
-            PasswordTextBox.ForeColor = Color.Gray;
+            
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            PlaceHolderTextBox.SetPlaceholder(UsernameTextBox, "Username");
+            PlaceHolderTextBox.SetPlaceholder(PasswordTextBox, "Password");
+
+            this.ActiveControl = null;
+        }
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            this.ActiveControl = null; 
+        }
+        
+
     }
 }
+

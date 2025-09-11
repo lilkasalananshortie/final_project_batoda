@@ -38,6 +38,7 @@ namespace BATODA
         private void HomeButton_Click_1(object sender, EventArgs e)
         {
             ShowControl(new DashboardUForm());
+
         }
 
         
