@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace BATODA
@@ -23,17 +24,16 @@ namespace BATODA
             DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
         }
-             
-        private void HomeButton_Click_1(object sender, EventArgs e)
+
+        private void HomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new DashboardUForm());
-
-
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new DashboardUForm());
+            DisplayClass.AttachHoverEffect(HomeButton, Color.Blue, Color.DarkBlue);
 
         }
 
@@ -95,7 +95,6 @@ namespace BATODA
             if (CalendarXAccoutnContainerPanel.Visible)
                 CalendarXAccoutnContainerPanel.BringToFront();
         }
-
 
     }
 }

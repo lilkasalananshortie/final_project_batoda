@@ -115,7 +115,7 @@ namespace BATODA
 
 
 
-        // ========= Display Methods =========
+        // ========= Display Methods - main - mini =========
         public static void SetMainPanel(Panel panel)
         {
             _mainPanel = panel;
@@ -145,5 +145,21 @@ namespace BATODA
             _miniPanel.Controls.Clear();
             _miniPanel.Controls.Add(uc);
         }
+
+
+        //========= hover method ===========
+        public static void AttachHoverEffect(Button button, Color enterColor, Color leaveColor)
+        {
+            button.MouseEnter += (sender, e) =>
+            {
+                button.BackColor = enterColor;
+            };
+
+            button.MouseLeave += (sender, e) =>
+            {
+                button.BackColor = leaveColor;
+            };
+        }
     }
 }
+

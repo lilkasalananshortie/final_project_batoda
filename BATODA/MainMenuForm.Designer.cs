@@ -58,7 +58,7 @@
             // RegisteredVehiclesButton
             // 
             this.RegisteredVehiclesButton.BackColor = System.Drawing.Color.IndianRed;
-            this.RegisteredVehiclesButton.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisteredVehiclesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisteredVehiclesButton.ForeColor = System.Drawing.Color.Black;
             this.RegisteredVehiclesButton.Location = new System.Drawing.Point(3, 167);
             this.RegisteredVehiclesButton.Name = "RegisteredVehiclesButton";
@@ -73,7 +73,7 @@
             // FinanceButton
             // 
             this.FinanceButton.BackColor = System.Drawing.Color.IndianRed;
-            this.FinanceButton.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinanceButton.ForeColor = System.Drawing.Color.Black;
             this.FinanceButton.Location = new System.Drawing.Point(3, 364);
             this.FinanceButton.Name = "FinanceButton";
@@ -88,7 +88,7 @@
             // AssistanceLogButton
             // 
             this.AssistanceLogButton.BackColor = System.Drawing.Color.IndianRed;
-            this.AssistanceLogButton.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceLogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceLogButton.ForeColor = System.Drawing.Color.Black;
             this.AssistanceLogButton.Location = new System.Drawing.Point(3, 262);
             this.AssistanceLogButton.Name = "AssistanceLogButton";
@@ -102,7 +102,7 @@
             // 
             // MembersMainButton
             // 
-            this.MembersMainButton.Font = new System.Drawing.Font("Ubuntu", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembersMainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MembersMainButton.ForeColor = System.Drawing.Color.Black;
             this.MembersMainButton.Location = new System.Drawing.Point(3, 72);
             this.MembersMainButton.Name = "MembersMainButton";
@@ -115,7 +115,7 @@
             // SettingsButton
             // 
             this.SettingsButton.BackColor = System.Drawing.Color.IndianRed;
-            this.SettingsButton.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsButton.ForeColor = System.Drawing.Color.Black;
             this.SettingsButton.Location = new System.Drawing.Point(3, 460);
             this.SettingsButton.Name = "SettingsButton";
@@ -145,7 +145,7 @@
             // HomeButton
             // 
             this.HomeButton.BackColor = System.Drawing.Color.IndianRed;
-            this.HomeButton.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.Black;
             this.HomeButton.Location = new System.Drawing.Point(3, 3);
             this.HomeButton.Name = "HomeButton";
@@ -155,7 +155,7 @@
             this.HomeButton.Text = "Home";
             this.HomeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButton.UseVisualStyleBackColor = false;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click_1);
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // DisplayPanel
             // 
@@ -211,10 +211,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 45);
+            this.label1.Size = new System.Drawing.Size(304, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bambang TODA";
             // 
@@ -230,10 +230,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ubuntu", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 45);
+            this.label2.Size = new System.Drawing.Size(124, 42);
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             // 
@@ -250,7 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1717, 728);
+            this.ClientSize = new System.Drawing.Size(1381, 745);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);

@@ -20,11 +20,12 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
-
+            
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
+            
 
 
 
@@ -60,12 +61,13 @@ namespace BATODA
 
         private void ApplyButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ClearInputs(this);
+            
         }
     }
 }
