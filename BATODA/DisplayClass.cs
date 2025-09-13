@@ -160,6 +160,29 @@ namespace BATODA
                 button.BackColor = leaveColor;
             };
         }
+
+        public static void SetButtonToggleColor(Button btn, Color toggleColor, Color defaultColor, Color hoverColor)
+        {
+            bool isToggled = false;
+
+            btn.Click += (s, e) =>
+            {
+                isToggled = !isToggled;
+                btn.BackColor = isToggled ? toggleColor : defaultColor;
+            };
+
+            btn.MouseEnter += (s, e) =>
+            {
+                if (!isToggled)
+                    btn.BackColor = hoverColor;
+            };
+
+            btn.MouseLeave += (s, e) =>
+            {
+                if (!isToggled)
+                    btn.BackColor = defaultColor;
+            };
+        }
     }
 }
 

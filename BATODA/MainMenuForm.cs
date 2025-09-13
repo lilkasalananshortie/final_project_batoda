@@ -24,53 +24,45 @@ namespace BATODA
             DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
         }
+        private void DashboardForm_Load(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new DashboardUForm());
+
+
+        }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new DashboardUForm());
         }
 
-        private void DashboardForm_Load(object sender, EventArgs e)
+        private void MembersMainButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMain(new DashboardUForm());
-            DisplayClass.AttachHoverEffect(HomeButton, Color.Blue, Color.DarkBlue);
-
+            DisplayClass.ShowMain(new MembersUForm());
         }
 
+        private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new RegisteredVehicleUForm());
+        }
+
+        private void AssistanceLogButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new AssistanceLogUForm());
+        }
+        private void FinanceButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new FinanceUForm());
+        }
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new SettingsUForm());
+        }
         private void btnMembers_Click(object sender, EventArgs e)
         {
             
         }
-        private void MembersMainButton_Click(object sender, EventArgs e)
-        {
-            
-            DisplayClass.ShowMain(new MembersUForm());
-        }
-
-        private void btnRegistered_Click(object sender, EventArgs e)
-        {
-            
-            DisplayClass.ShowMain(new RegisteredVehicleUForm());
-        }
-
-        private void btnAssistance_Click(object sender, EventArgs e)
-        {
-            
-            DisplayClass.ShowMain(new AssistanceLogUForm());
-        }
-
-        private void btnFinance_Click(object sender, EventArgs e)
-        {
-           
-            DisplayClass.ShowMain(new FinanceUForm());
-        }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            
-            DisplayClass.ShowMain(new SettingsUForm());
-
-        }
+          
 
 
         private void AccountButton_Click(object sender, EventArgs e)
@@ -96,5 +88,6 @@ namespace BATODA
                 CalendarXAccoutnContainerPanel.BringToFront();
         }
 
+        
     }
 }

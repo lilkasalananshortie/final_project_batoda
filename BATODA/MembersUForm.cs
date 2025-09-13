@@ -20,7 +20,14 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
-            
+            DisplayClass.AttachHoverEffect(TransferRecordsButton, Color.Gray, Color.DarkGray);
+            DisplayClass.AttachHoverEffect(ManageMembersButton, Color.Gray, Color.DarkGray);
+            DisplayClass.AttachHoverEffect(TransferMembershipButton, Color.Gray, Color.DarkGray);
+
+            DisplayClass.SetButtonToggleColor(TransferRecordsButton, Color.DarkGray, Color.Gray, Color.Gray);
+            DisplayClass.SetButtonToggleColor(ManageMembersButton, Color.DarkGray, Color.Gray, Color.Gray);
+            DisplayClass.SetButtonToggleColor(TransferMembershipButton, Color.DarkGray, Color.Gray, Color.Gray);
+
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
@@ -34,10 +41,13 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
         }
+
         private void TransferMembershipButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferMembershipUForm());
         }
+
+
 
         private void StatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -68,6 +78,11 @@ namespace BATODA
         {
             DisplayClass.ClearInputs(this);
             
+        }
+
+        private void ManageMembersButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
