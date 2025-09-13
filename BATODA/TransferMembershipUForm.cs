@@ -17,9 +17,9 @@ namespace BATODA
             InitializeComponent();
         }
 
-        private void MembersTopPanel_Paint(object sender, PaintEventArgs e)
+        private void TransferMembershipUForm_Load(object sender, EventArgs e)
         {
-
+            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
         }
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
@@ -36,5 +36,17 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
         }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

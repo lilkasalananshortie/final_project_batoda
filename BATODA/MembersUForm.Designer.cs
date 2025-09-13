@@ -37,12 +37,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.buttonStyle2 = new BATODA.ButtonStyle();
             this.TransferMembershipButton = new BATODA.ButtonStyle();
             this.TransferRecordsButton = new BATODA.ButtonStyle();
             this.ManageMembersButton = new BATODA.ButtonStyle();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonStyle2 = new BATODA.ButtonStyle();
             this.ApplyButton = new BATODA.ButtonStyle();
             this.ClearButton = new BATODA.ButtonStyle();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -144,46 +144,6 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1532, 128);
             this.MembersTopPanel.TabIndex = 18;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1143, 236);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 42);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Sort";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1366, 235);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 42);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Status";
-            // 
-            // buttonStyle2
-            // 
-            this.buttonStyle2.BackColor = System.Drawing.Color.Red;
-            this.buttonStyle2.BackgroundColor = System.Drawing.Color.Red;
-            this.buttonStyle2.BorderColor = System.Drawing.Color.Red;
-            this.buttonStyle2.BorderRadius = 0;
-            this.buttonStyle2.BorderSize = 0;
-            this.buttonStyle2.FlatAppearance.BorderSize = 0;
-            this.buttonStyle2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStyle2.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle2.ForeColor = System.Drawing.Color.Black;
-            this.buttonStyle2.Location = new System.Drawing.Point(92, 320);
-            this.buttonStyle2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle2.Name = "buttonStyle2";
-            this.buttonStyle2.Size = new System.Drawing.Size(249, 55);
-            this.buttonStyle2.TabIndex = 21;
-            this.buttonStyle2.Text = "Add Member";
-            this.buttonStyle2.TextColor = System.Drawing.Color.Black;
-            this.buttonStyle2.UseVisualStyleBackColor = false;
-            // 
             // TransferMembershipButton
             // 
             this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
@@ -246,6 +206,46 @@
             this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1143, 236);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 42);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Sort";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1366, 235);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 42);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Status";
+            // 
+            // buttonStyle2
+            // 
+            this.buttonStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle2.BorderColor = System.Drawing.Color.Red;
+            this.buttonStyle2.BorderRadius = 0;
+            this.buttonStyle2.BorderSize = 0;
+            this.buttonStyle2.FlatAppearance.BorderSize = 0;
+            this.buttonStyle2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStyle2.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStyle2.ForeColor = System.Drawing.Color.Black;
+            this.buttonStyle2.Location = new System.Drawing.Point(92, 320);
+            this.buttonStyle2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonStyle2.Name = "buttonStyle2";
+            this.buttonStyle2.Size = new System.Drawing.Size(249, 55);
+            this.buttonStyle2.TabIndex = 21;
+            this.buttonStyle2.Text = "Add Member";
+            this.buttonStyle2.TextColor = System.Drawing.Color.Black;
+            this.buttonStyle2.UseVisualStyleBackColor = false;
             // 
             // ApplyButton
             // 

@@ -16,5 +16,20 @@ namespace BATODA
         {
             InitializeComponent();
         }
+
+        private void ManageMembersButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new MembersUForm());
+        }
+
+        private void TransferMembershipButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new TransferMembershipUForm());
+        }
+
+        private void TransferRecordsButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new TransferRecordMemberUForm());
+        }
     }
 }
