@@ -82,7 +82,7 @@
     <Compile Include="ButawUForm.Designer.cs">
       <DependentUpon>ButawUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ButtonStyle.cs">
+    <Compile Include="UI Displays\ButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CalendarUForm.cs">
@@ -133,7 +133,7 @@
     <Compile Include="MembersUForm.Designer.cs">
       <DependentUpon>MembersUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DisplayClass.cs" />
+    <Compile Include="UI Displays\DisplayClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisteredVehicleUForm.cs">
@@ -190,7 +190,7 @@
     <EmbeddedResource Include="ButawUForm.resx">
       <DependentUpon>ButawUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ButtonStyle.resx">
+    <EmbeddedResource Include="UI Displays\ButtonStyle.resx">
       <DependentUpon>ButtonStyle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalendarUForm.resx">

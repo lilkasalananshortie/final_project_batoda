@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.LoginButton = new BATODA.ButtonStyle();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LoadingPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LoginButton = new BATODA.ButtonStyle();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,6 +60,26 @@
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(409, 501);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BorderColor = System.Drawing.Color.White;
+            this.LoginButton.BorderRadius = 40;
+            this.LoginButton.BorderSize = 0;
+            this.LoginButton.FlatAppearance.BorderSize = 0;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.Transparent;
+            this.LoginButton.Location = new System.Drawing.Point(92, 341);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(245, 58);
+            this.LoginButton.TabIndex = 12;
+            this.LoginButton.Text = "Log In";
+            this.LoginButton.TextColor = System.Drawing.Color.Transparent;
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click_1);
             // 
             // pictureBox4
             // 
@@ -139,26 +159,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1002, 504);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BorderColor = System.Drawing.Color.White;
-            this.LoginButton.BorderRadius = 40;
-            this.LoginButton.BorderSize = 0;
-            this.LoginButton.FlatAppearance.BorderSize = 0;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginButton.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.Color.Transparent;
-            this.LoginButton.Location = new System.Drawing.Point(92, 341);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(245, 58);
-            this.LoginButton.TabIndex = 12;
-            this.LoginButton.Text = "Log In";
-            this.LoginButton.TextColor = System.Drawing.Color.Transparent;
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click_1);
             // 
             // LoginForm
             // 
