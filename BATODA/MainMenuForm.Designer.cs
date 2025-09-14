@@ -71,7 +71,7 @@
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(316, 759);
+            this.NavBarPanel.Size = new System.Drawing.Size(316, 789);
             this.NavBarPanel.TabIndex = 1;
             // 
             // panel1
@@ -110,7 +110,7 @@
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBarPanel.Location = new System.Drawing.Point(316, 0);
             this.TopBarPanel.Name = "TopBarPanel";
-            this.TopBarPanel.Size = new System.Drawing.Size(1558, 74);
+            this.TopBarPanel.Size = new System.Drawing.Size(1575, 74);
             this.TopBarPanel.TabIndex = 3;
             // 
             // AccountButton
@@ -305,7 +305,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1891, 589);
+            this.ClientSize = new System.Drawing.Size(1891, 789);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);

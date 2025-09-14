@@ -16,5 +16,20 @@ namespace BATODA
         {
             InitializeComponent();
         }
+
+        private void AssistanceHomeButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new AssistanceLogUForm());
+        }
+
+        private void AssistanceRequestButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new AssistanceRequestUForm());
+        }
+
+        private void ARHButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new ARHUForm());
+        }
     }
 }

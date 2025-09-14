@@ -16,5 +16,20 @@ namespace BATODA
         {
             InitializeComponent();
         }
+
+        private void FinanceButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new FinanceUForm());
+        }
+
+        private void ButawButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new ButawUForm());
+        }
+
+        private void MembershipRenewalButton_Click(object sender, EventArgs e)
+        {
+           DisplayClass.ShowMain(new MembershipRenewalUForm());
+        }
     }
 }
