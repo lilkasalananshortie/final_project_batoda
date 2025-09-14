@@ -42,7 +42,7 @@
             this.MembersTopPanel.Controls.Add(this.TransferRecordButton);
             this.MembersTopPanel.Controls.Add(this.RegisteredVehicleButton);
             this.MembersTopPanel.Controls.Add(this.TransferVehicleButton);
-            this.MembersTopPanel.Location = new System.Drawing.Point(51, 31);
+            this.MembersTopPanel.Location = new System.Drawing.Point(16, 19);
             this.MembersTopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1532, 128);

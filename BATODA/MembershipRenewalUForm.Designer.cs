@@ -52,7 +52,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(24, 147);
+            this.panel1.Location = new System.Drawing.Point(16, 154);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1532, 661);
             this.panel1.TabIndex = 24;
@@ -63,7 +63,7 @@
             this.MembersTopPanel.Controls.Add(this.ButawButton);
             this.MembersTopPanel.Controls.Add(this.MembershipRenewalButton);
             this.MembersTopPanel.Controls.Add(this.FinanceButton);
-            this.MembersTopPanel.Location = new System.Drawing.Point(24, 4);
+            this.MembersTopPanel.Location = new System.Drawing.Point(16, 19);
             this.MembersTopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1532, 128);

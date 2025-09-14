@@ -74,7 +74,7 @@
             this.MembersTopPanel.Controls.Add(this.TransferMembershipButton);
             this.MembersTopPanel.Controls.Add(this.TransferRecordsButton);
             this.MembersTopPanel.Controls.Add(this.ManageMembersButton);
-            this.MembersTopPanel.Location = new System.Drawing.Point(45, 4);
+            this.MembersTopPanel.Location = new System.Drawing.Point(16, 19);
             this.MembersTopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1532, 128);

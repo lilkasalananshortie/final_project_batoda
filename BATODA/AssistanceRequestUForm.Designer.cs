@@ -65,7 +65,7 @@
             this.MembersTopPanel.Controls.Add(this.ARHButton);
             this.MembersTopPanel.Controls.Add(this.AssistanceHomeButton);
             this.MembersTopPanel.Controls.Add(this.AssistanceRequestButton);
-            this.MembersTopPanel.Location = new System.Drawing.Point(60, 41);
+            this.MembersTopPanel.Location = new System.Drawing.Point(16, 19);
             this.MembersTopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1532, 128);
