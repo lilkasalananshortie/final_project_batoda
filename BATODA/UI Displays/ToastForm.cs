@@ -33,13 +33,13 @@ namespace BATODA.UI_Displays
 
             if (icon != null)
             {
-                pictureBox1.Image = icon;
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBox1.Visible = true;
+                iconTextBox.Image = icon;
+                iconTextBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                iconTextBox.Visible = true;
             }
             else
             {
-                pictureBox1.Visible = false;
+                iconTextBox.Visible = false;
             }
 
             // timers
@@ -87,7 +87,7 @@ namespace BATODA.UI_Displays
             // close triggers
             Click += (s, e) => StartFadeOut();
             label1.Click += (s, e) => StartFadeOut();
-            pictureBox1.Click += (s, e) => StartFadeOut();
+            iconTextBox.Click += (s, e) => StartFadeOut();
             btnClose.Click += (s, e) => StartFadeOut();
 
             FormBorderStyle = FormBorderStyle.None;
@@ -133,6 +133,7 @@ namespace BATODA.UI_Displays
         public void SetProgressColor(Color color)
         {
             progressFillPanel.BackColor = color;
+            SideColorPanel.BackColor = color;
         }
 
         // Rounded corners

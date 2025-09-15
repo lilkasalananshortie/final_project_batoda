@@ -6,7 +6,7 @@ namespace BATODA.UI_Displays
     partial class ToastForm
     {
         private System.ComponentModel.IContainer components = null;
-        private PictureBox pictureBox1;
+        private PictureBox iconTextBox;
         private Label label1;
         private Panel progressBarPanel;
         private Panel progressFillPanel;
@@ -23,32 +23,33 @@ namespace BATODA.UI_Displays
 
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconTextBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBarPanel = new System.Windows.Forms.Panel();
             this.progressFillPanel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SideColorPanel = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTextBox)).BeginInit();
             this.progressBarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // iconTextBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(10, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 32);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.iconTextBox.Location = new System.Drawing.Point(43, 19);
+            this.iconTextBox.Name = "iconTextBox";
+            this.iconTextBox.Size = new System.Drawing.Size(36, 32);
+            this.iconTextBox.TabIndex = 2;
+            this.iconTextBox.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ubuntu", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 25);
+            this.label1.Location = new System.Drawing.Point(85, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
+            this.label1.Size = new System.Drawing.Size(158, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "message placeholder";
             // 
             // progressBarPanel
             // 
@@ -85,22 +86,32 @@ namespace BATODA.UI_Displays
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Visible = false;
             // 
+            // SideColorPanel
+            // 
+            this.SideColorPanel.Location = new System.Drawing.Point(0, 0);
+            this.SideColorPanel.Name = "SideColorPanel";
+            this.SideColorPanel.Size = new System.Drawing.Size(21, 69);
+            this.SideColorPanel.TabIndex = 4;
+            // 
             // ToastForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 72);
+            this.Controls.Add(this.SideColorPanel);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.iconTextBox);
             this.Controls.Add(this.progressBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ToastForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTextBox)).EndInit();
             this.progressBarPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+        private Panel SideColorPanel;
     }
 }
