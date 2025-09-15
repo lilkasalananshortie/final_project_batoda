@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BATODA.UI_Displays;
 
 namespace BATODA
 {
@@ -27,18 +28,20 @@ namespace BATODA
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new DashboardUForm());
-
+            
 
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new DashboardUForm());
+           
         }
 
         private void MembersMainButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new MembersUForm());
+            
         }
 
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)

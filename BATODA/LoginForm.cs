@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.UI_Displays;
 
 
 namespace BATODA
@@ -37,7 +38,9 @@ namespace BATODA
         {
             DashboardForm DashBoardform = new DashboardForm();
             DashBoardform.Show();
+            ToastManager.Success("Login Successful!");
             this.Hide();
+
         }
 
         private void UsernameTextBox_TextChanged(object sender, EventArgs e)
