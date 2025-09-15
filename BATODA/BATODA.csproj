@@ -46,67 +46,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountUForm.cs">
+    <Compile Include="User Control Forms\AccountUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AccountUForm.Designer.cs">
+    <Compile Include="User Control Forms\AccountUForm.Designer.cs">
       <DependentUpon>AccountUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ARHUForm.cs">
+    <Compile Include="User Control Forms\ARHUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ARHUForm.Designer.cs">
+    <Compile Include="User Control Forms\ARHUForm.Designer.cs">
       <DependentUpon>ARHUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssistanceLogUForm.cs">
+    <Compile Include="User Control Forms\AssistanceLogUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AssistanceLogUForm.Designer.cs">
+    <Compile Include="User Control Forms\AssistanceLogUForm.Designer.cs">
       <DependentUpon>AssistanceLogUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AssistanceRequestUForm.cs">
+    <Compile Include="User Control Forms\AssistanceRequestUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AssistanceRequestUForm.Designer.cs">
+    <Compile Include="User Control Forms\AssistanceRequestUForm.Designer.cs">
       <DependentUpon>AssistanceRequestUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BackupUForm.cs">
+    <Compile Include="User Control Forms\BackupUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BackupUForm.Designer.cs">
+    <Compile Include="User Control Forms\BackupUForm.Designer.cs">
       <DependentUpon>BackupUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ButawUForm.cs">
+    <Compile Include="User Control Forms\ButawUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ButawUForm.Designer.cs">
+    <Compile Include="User Control Forms\ButawUForm.Designer.cs">
       <DependentUpon>ButawUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI Displays\ButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CalendarUForm.cs">
+    <Compile Include="User Control Forms\CalendarUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CalendarUForm.Designer.cs">
+    <Compile Include="User Control Forms\CalendarUForm.Designer.cs">
       <DependentUpon>CalendarUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DashboardUForm.cs">
+    <Compile Include="User Control Forms\DashboardUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DashboardUForm.Designer.cs">
+    <Compile Include="User Control Forms\DashboardUForm.Designer.cs">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FinanceUForm.cs">
+    <Compile Include="User Control Forms\FinanceUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FinanceUForm.Designer.cs">
+    <Compile Include="User Control Forms\FinanceUForm.Designer.cs">
       <DependentUpon>FinanceUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogoutUForm.cs">
+    <Compile Include="User Control Forms\LogoutUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LogoutUForm.Designer.cs">
+    <Compile Include="User Control Forms\LogoutUForm.Designer.cs">
       <DependentUpon>LogoutUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenuForm.cs">
@@ -121,88 +121,88 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MembershipRenewalUForm.cs">
+    <Compile Include="User Control Forms\MembershipRenewalUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MembershipRenewalUForm.Designer.cs">
+    <Compile Include="User Control Forms\MembershipRenewalUForm.Designer.cs">
       <DependentUpon>MembershipRenewalUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MembersUForm.cs">
+    <Compile Include="User Control Forms\MembersUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MembersUForm.Designer.cs">
+    <Compile Include="User Control Forms\MembersUForm.Designer.cs">
       <DependentUpon>MembersUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI Displays\DisplayClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisteredVehicleUForm.cs">
+    <Compile Include="User Control Forms\RegisteredVehicleUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RegisteredVehicleUForm.Designer.cs">
+    <Compile Include="User Control Forms\RegisteredVehicleUForm.Designer.cs">
       <DependentUpon>RegisteredVehicleUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsUForm.cs">
+    <Compile Include="User Control Forms\SettingsUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SettingsUForm.Designer.cs">
+    <Compile Include="User Control Forms\SettingsUForm.Designer.cs">
       <DependentUpon>SettingsUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransferMembershipUForm.cs">
+    <Compile Include="User Control Forms\TransferMembershipUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TransferMembershipUForm.Designer.cs">
+    <Compile Include="User Control Forms\TransferMembershipUForm.Designer.cs">
       <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransferRecordMemberUForm.cs">
+    <Compile Include="User Control Forms\TransferRecordMemberUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TransferRecordMemberUForm.Designer.cs">
+    <Compile Include="User Control Forms\TransferRecordMemberUForm.Designer.cs">
       <DependentUpon>TransferRecordMemberUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransferRecordVehicleUForm.cs">
+    <Compile Include="User Control Forms\TransferRecordVehicleUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TransferRecordVehicleUForm.Designer.cs">
+    <Compile Include="User Control Forms\TransferRecordVehicleUForm.Designer.cs">
       <DependentUpon>TransferRecordVehicleUForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransferVehicleUForm.cs">
+    <Compile Include="User Control Forms\TransferVehicleUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TransferVehicleUForm.Designer.cs">
+    <Compile Include="User Control Forms\TransferVehicleUForm.Designer.cs">
       <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountUForm.resx">
+    <EmbeddedResource Include="User Control Forms\AccountUForm.resx">
       <DependentUpon>AccountUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ARHUForm.resx">
+    <EmbeddedResource Include="User Control Forms\ARHUForm.resx">
       <DependentUpon>ARHUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssistanceLogUForm.resx">
+    <EmbeddedResource Include="User Control Forms\AssistanceLogUForm.resx">
       <DependentUpon>AssistanceLogUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AssistanceRequestUForm.resx">
+    <EmbeddedResource Include="User Control Forms\AssistanceRequestUForm.resx">
       <DependentUpon>AssistanceRequestUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BackupUForm.resx">
+    <EmbeddedResource Include="User Control Forms\BackupUForm.resx">
       <DependentUpon>BackupUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ButawUForm.resx">
+    <EmbeddedResource Include="User Control Forms\ButawUForm.resx">
       <DependentUpon>ButawUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Displays\ButtonStyle.resx">
       <DependentUpon>ButtonStyle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CalendarUForm.resx">
+    <EmbeddedResource Include="User Control Forms\CalendarUForm.resx">
       <DependentUpon>CalendarUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashboardUForm.resx">
+    <EmbeddedResource Include="User Control Forms\DashboardUForm.resx">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FinanceUForm.resx">
+    <EmbeddedResource Include="User Control Forms\FinanceUForm.resx">
       <DependentUpon>FinanceUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogoutUForm.resx">
+    <EmbeddedResource Include="User Control Forms\LogoutUForm.resx">
       <DependentUpon>LogoutUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
@@ -211,10 +211,10 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MembershipRenewalUForm.resx">
+    <EmbeddedResource Include="User Control Forms\MembershipRenewalUForm.resx">
       <DependentUpon>MembershipRenewalUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MembersUForm.resx">
+    <EmbeddedResource Include="User Control Forms\MembersUForm.resx">
       <DependentUpon>MembersUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -226,22 +226,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegisteredVehicleUForm.resx">
+    <EmbeddedResource Include="User Control Forms\RegisteredVehicleUForm.resx">
       <DependentUpon>RegisteredVehicleUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsUForm.resx">
+    <EmbeddedResource Include="User Control Forms\SettingsUForm.resx">
       <DependentUpon>SettingsUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferMembershipUForm.resx">
+    <EmbeddedResource Include="User Control Forms\TransferMembershipUForm.resx">
       <DependentUpon>TransferMembershipUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferRecordMemberUForm.resx">
+    <EmbeddedResource Include="User Control Forms\TransferRecordMemberUForm.resx">
       <DependentUpon>TransferRecordMemberUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferRecordVehicleUForm.resx">
+    <EmbeddedResource Include="User Control Forms\TransferRecordVehicleUForm.resx">
       <DependentUpon>TransferRecordVehicleUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransferVehicleUForm.resx">
+    <EmbeddedResource Include="User Control Forms\TransferVehicleUForm.resx">
       <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
