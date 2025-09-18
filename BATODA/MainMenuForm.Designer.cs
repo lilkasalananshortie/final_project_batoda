@@ -44,7 +44,7 @@
             this.AccountButton = new System.Windows.Forms.Button();
             this.NotificationButton = new System.Windows.Forms.Button();
             this.CalendarButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TopPanelText = new System.Windows.Forms.Label();
             this.NotificationPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
@@ -226,11 +226,11 @@
             this.TopBarPanel.Controls.Add(this.AccountButton);
             this.TopBarPanel.Controls.Add(this.NotificationButton);
             this.TopBarPanel.Controls.Add(this.CalendarButton);
-            this.TopBarPanel.Controls.Add(this.label1);
+            this.TopBarPanel.Controls.Add(this.TopPanelText);
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBarPanel.Location = new System.Drawing.Point(316, 0);
             this.TopBarPanel.Name = "TopBarPanel";
-            this.TopBarPanel.Size = new System.Drawing.Size(1575, 74);
+            this.TopBarPanel.Size = new System.Drawing.Size(1575, 90);
             this.TopBarPanel.TabIndex = 3;
             // 
             // AccountButton
@@ -263,15 +263,15 @@
             this.CalendarButton.UseVisualStyleBackColor = true;
             this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
             // 
-            // label1
+            // TopPanelText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 60);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bambang TODA";
+            this.TopPanelText.AutoSize = true;
+            this.TopPanelText.Font = new System.Drawing.Font("Ubuntu", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TopPanelText.Location = new System.Drawing.Point(20, 10);
+            this.TopPanelText.Name = "TopPanelText";
+            this.TopPanelText.Size = new System.Drawing.Size(383, 60);
+            this.TopPanelText.TabIndex = 0;
+            this.TopPanelText.Text = "Bambang TODA";
             // 
             // NotificationPanel
             // 
@@ -333,7 +333,7 @@
         private System.Windows.Forms.FlowLayoutPanel NavBarPanel;
         private System.Windows.Forms.Panel DisplayPanel;
         private System.Windows.Forms.Panel TopBarPanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TopPanelText;
         private System.Windows.Forms.Button CalendarButton;
         private System.Windows.Forms.Button AccountButton;
         private System.Windows.Forms.Button NotificationButton;

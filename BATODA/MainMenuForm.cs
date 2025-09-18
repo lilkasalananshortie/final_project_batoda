@@ -28,43 +28,48 @@ namespace BATODA
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new DashboardUForm());
-            
+            TopPanelText.Text = "Dashboard";
+
 
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new DashboardUForm());
-           
+            TopPanelText.Text = "Dashboard";
+
+
         }
 
         private void MembersMainButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new MembersUForm());
-            
+            TopPanelText.Text = "Members Management";
+
         }
 
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new RegisteredVehicleUForm());
+            TopPanelText.Text = "Registered Vehicles";
         }
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new AssistanceLogUForm());
+            TopPanelText.Text = "Manage Assistance";
         }
         private void FinanceButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new FinanceUForm());
+            TopPanelText.Text = "Finance Management";
         }
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new SettingsUForm());
+            TopPanelText.Text = "Settings";
         }
-        private void btnMembers_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
           
 
 

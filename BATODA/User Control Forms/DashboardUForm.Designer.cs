@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,15 +50,6 @@
             this.panel1.Size = new System.Drawing.Size(357, 294);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(485, 114);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(357, 294);
-            this.panel2.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -68,6 +59,15 @@
             this.label1.Size = new System.Drawing.Size(187, 45);
             this.label1.TabIndex = 2;
             this.label1.Text = "Members";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(485, 114);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(357, 294);
+            this.panel2.TabIndex = 1;
             // 
             // label2
             // 
@@ -128,6 +128,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "DashboardUForm";
             this.Size = new System.Drawing.Size(1266, 765);
+            this.Load += new System.EventHandler(this.DashboardUForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

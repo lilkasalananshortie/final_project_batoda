@@ -9,7 +9,7 @@ namespace BATODA
         private static Panel _mainPanel;
         private static Panel _miniPanel;
 
-        // ========= Placeholder Methods: Text Box -  Combo Box =========
+        // ========= Placeholder Methods: Text Box -  Combo Box  - Label =========
         public static void SetPlaceholder(TextBox tb, string placeholder)
         {
             tb.Tag = placeholder;
@@ -110,7 +110,7 @@ namespace BATODA
             }
         }
 
-
+       
 
 
 

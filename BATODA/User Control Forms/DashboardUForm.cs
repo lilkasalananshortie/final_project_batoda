@@ -12,9 +12,16 @@ namespace BATODA
 {
     public partial class DashboardUForm : UserControl
     {
+
         public DashboardUForm()
         {
             InitializeComponent();
+           
+        }
+
+        private void DashboardUForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
