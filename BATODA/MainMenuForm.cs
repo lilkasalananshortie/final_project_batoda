@@ -27,6 +27,7 @@ namespace BATODA
         }
         private void DashboardForm_Load(object sender, EventArgs e)
         {
+            this.ActiveControl = null;
             DisplayClass.ShowMain(new DashboardUForm());
             TopPanelText.Text = "Dashboard";
 
