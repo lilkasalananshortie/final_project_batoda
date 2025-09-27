@@ -29,49 +29,69 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.LogOutButton = new System.Windows.Forms.Button();
-            this.BackupButton = new System.Windows.Forms.Button();
+            this.BackupButton = new BATODA.ButtonStyle();
+            this.LogOutButton = new BATODA.ButtonStyle();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 309);
+            this.label1.Location = new System.Drawing.Point(173, 299);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(626, 86);
             this.label1.TabIndex = 2;
             this.label1.Text = "SETTINGS\r\n- DUUNO KUNG ANO LALAGAY DITO\r\n";
             // 
-            // LogOutButton
-            // 
-            this.LogOutButton.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOutButton.ForeColor = System.Drawing.Color.Black;
-            this.LogOutButton.Location = new System.Drawing.Point(496, 172);
-            this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(321, 89);
-            this.LogOutButton.TabIndex = 5;
-            this.LogOutButton.Text = "Log Out";
-            this.LogOutButton.UseVisualStyleBackColor = true;
-            // 
             // BackupButton
             // 
-            this.BackupButton.Font = new System.Drawing.Font("Ubuntu", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackupButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackupButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.BackupButton.BorderColor = System.Drawing.Color.LightGray;
+            this.BackupButton.BorderRadius = 0;
+            this.BackupButton.BorderSize = 0;
+            this.BackupButton.FlatAppearance.BorderSize = 0;
+            this.BackupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackupButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackupButton.ForeColor = System.Drawing.Color.Black;
-            this.BackupButton.Location = new System.Drawing.Point(169, 172);
+            this.BackupButton.Location = new System.Drawing.Point(29, 31);
+            this.BackupButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BackupButton.Name = "BackupButton";
-            this.BackupButton.Size = new System.Drawing.Size(321, 89);
-            this.BackupButton.TabIndex = 6;
+            this.BackupButton.Size = new System.Drawing.Size(494, 100);
+            this.BackupButton.TabIndex = 20;
             this.BackupButton.Text = "Back UP";
-            this.BackupButton.UseVisualStyleBackColor = true;
+            this.BackupButton.TextColor = System.Drawing.Color.Black;
+            this.BackupButton.UseVisualStyleBackColor = false;
+            this.BackupButton.Click += new System.EventHandler(this.BackupButton_Click);
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.LogOutButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.LogOutButton.BorderColor = System.Drawing.Color.LightGray;
+            this.LogOutButton.BorderRadius = 0;
+            this.LogOutButton.BorderSize = 0;
+            this.LogOutButton.FlatAppearance.BorderSize = 0;
+            this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOutButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutButton.ForeColor = System.Drawing.Color.Black;
+            this.LogOutButton.Location = new System.Drawing.Point(529, 31);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Size = new System.Drawing.Size(494, 100);
+            this.LogOutButton.TabIndex = 21;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.TextColor = System.Drawing.Color.Black;
+            this.LogOutButton.UseVisualStyleBackColor = false;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // SettingsUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.BackupButton);
+            this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.LogOutButton);
+            this.Controls.Add(this.BackupButton);
             this.Controls.Add(this.label1);
             this.Name = "SettingsUForm";
             this.Size = new System.Drawing.Size(998, 723);
@@ -83,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button LogOutButton;
-        private System.Windows.Forms.Button BackupButton;
+        private ButtonStyle BackupButton;
+        private ButtonStyle LogOutButton;
     }
 }

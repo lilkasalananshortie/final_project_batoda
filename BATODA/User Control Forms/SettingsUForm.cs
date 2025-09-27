@@ -16,5 +16,15 @@ namespace BATODA
         {
             InitializeComponent();
         }
+
+        private void BackupButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new BackupUForm());
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new LogoutUForm());
+        }
     }
 }

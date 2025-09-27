@@ -70,9 +70,6 @@ namespace BATODA
             DisplayClass.ShowMain(new SettingsUForm());
             TopPanelText.Text = "Settings";
         }
-        
-          
-
 
         private void AccountButton_Click(object sender, EventArgs e)
         {
@@ -85,8 +82,8 @@ namespace BATODA
         private void NotificationButton_Click(object sender, EventArgs e)
         {
             NotificationPanel.Visible = !NotificationPanel.Visible;
-            if (NotificationPanel.Visible)
-                NotificationPanel.BringToFront();
+                 if (NotificationPanel.Visible)
+                   NotificationPanel.BringToFront();
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
@@ -96,7 +93,5 @@ namespace BATODA
             if (CalendarXAccoutnContainerPanel.Visible)
                 CalendarXAccoutnContainerPanel.BringToFront();
         }
-
-        
     }
 }

@@ -54,7 +54,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(60, 177);
+            this.panel1.Location = new System.Drawing.Point(16, 154);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1532, 670);
             this.panel1.TabIndex = 26;

@@ -41,9 +41,9 @@
             this.SettingsButton = new BATODA.ButtonStyle();
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.TopBarPanel = new System.Windows.Forms.Panel();
-            this.AccountButton = new System.Windows.Forms.Button();
-            this.NotificationButton = new System.Windows.Forms.Button();
-            this.CalendarButton = new System.Windows.Forms.Button();
+            this.CalendarButton = new BATODA.ButtonStyle();
+            this.NotificationButton = new BATODA.ButtonStyle();
+            this.AccountButton = new BATODA.ButtonStyle();
             this.TopPanelText = new System.Windows.Forms.Label();
             this.NotificationPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -223,9 +223,9 @@
             // TopBarPanel
             // 
             this.TopBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.TopBarPanel.Controls.Add(this.AccountButton);
-            this.TopBarPanel.Controls.Add(this.NotificationButton);
             this.TopBarPanel.Controls.Add(this.CalendarButton);
+            this.TopBarPanel.Controls.Add(this.NotificationButton);
+            this.TopBarPanel.Controls.Add(this.AccountButton);
             this.TopBarPanel.Controls.Add(this.TopPanelText);
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBarPanel.Location = new System.Drawing.Point(316, 0);
@@ -233,35 +233,62 @@
             this.TopBarPanel.Size = new System.Drawing.Size(1575, 90);
             this.TopBarPanel.TabIndex = 3;
             // 
-            // AccountButton
+            // CalendarButton
             // 
-            this.AccountButton.Location = new System.Drawing.Point(1346, 10);
-            this.AccountButton.Name = "AccountButton";
-            this.AccountButton.Size = new System.Drawing.Size(57, 52);
-            this.AccountButton.TabIndex = 3;
-            this.AccountButton.Text = "ACC";
-            this.AccountButton.UseVisualStyleBackColor = true;
-            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
+            this.CalendarButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CalendarButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.CalendarButton.BorderColor = System.Drawing.Color.Red;
+            this.CalendarButton.BorderRadius = 0;
+            this.CalendarButton.BorderSize = 0;
+            this.CalendarButton.FlatAppearance.BorderSize = 0;
+            this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalendarButton.ForeColor = System.Drawing.Color.Black;
+            this.CalendarButton.Location = new System.Drawing.Point(1443, 16);
+            this.CalendarButton.Name = "CalendarButton";
+            this.CalendarButton.Size = new System.Drawing.Size(106, 40);
+            this.CalendarButton.TabIndex = 6;
+            this.CalendarButton.Text = "Calendar";
+            this.CalendarButton.TextColor = System.Drawing.Color.Black;
+            this.CalendarButton.UseVisualStyleBackColor = false;
+            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
             // 
             // NotificationButton
             // 
-            this.NotificationButton.Location = new System.Drawing.Point(1409, 10);
+            this.NotificationButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NotificationButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.NotificationButton.BorderColor = System.Drawing.Color.Red;
+            this.NotificationButton.BorderRadius = 0;
+            this.NotificationButton.BorderSize = 0;
+            this.NotificationButton.FlatAppearance.BorderSize = 0;
+            this.NotificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotificationButton.ForeColor = System.Drawing.Color.Black;
+            this.NotificationButton.Location = new System.Drawing.Point(1331, 16);
             this.NotificationButton.Name = "NotificationButton";
-            this.NotificationButton.Size = new System.Drawing.Size(57, 52);
-            this.NotificationButton.TabIndex = 2;
-            this.NotificationButton.Text = "NOTIF";
-            this.NotificationButton.UseVisualStyleBackColor = true;
+            this.NotificationButton.Size = new System.Drawing.Size(106, 40);
+            this.NotificationButton.TabIndex = 5;
+            this.NotificationButton.Text = "Notification";
+            this.NotificationButton.TextColor = System.Drawing.Color.Black;
+            this.NotificationButton.UseVisualStyleBackColor = false;
             this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
             // 
-            // CalendarButton
+            // AccountButton
             // 
-            this.CalendarButton.Location = new System.Drawing.Point(1472, 10);
-            this.CalendarButton.Name = "CalendarButton";
-            this.CalendarButton.Size = new System.Drawing.Size(57, 52);
-            this.CalendarButton.TabIndex = 1;
-            this.CalendarButton.Text = "CAL";
-            this.CalendarButton.UseVisualStyleBackColor = true;
-            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
+            this.AccountButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AccountButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.AccountButton.BorderColor = System.Drawing.Color.Red;
+            this.AccountButton.BorderRadius = 0;
+            this.AccountButton.BorderSize = 0;
+            this.AccountButton.FlatAppearance.BorderSize = 0;
+            this.AccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccountButton.ForeColor = System.Drawing.Color.Black;
+            this.AccountButton.Location = new System.Drawing.Point(1219, 16);
+            this.AccountButton.Name = "AccountButton";
+            this.AccountButton.Size = new System.Drawing.Size(106, 40);
+            this.AccountButton.TabIndex = 4;
+            this.AccountButton.Text = "Account";
+            this.AccountButton.TextColor = System.Drawing.Color.Black;
+            this.AccountButton.UseVisualStyleBackColor = false;
+            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
             // 
             // TopPanelText
             // 
@@ -334,9 +361,6 @@
         private System.Windows.Forms.Panel DisplayPanel;
         private System.Windows.Forms.Panel TopBarPanel;
         private System.Windows.Forms.Label TopPanelText;
-        private System.Windows.Forms.Button CalendarButton;
-        private System.Windows.Forms.Button AccountButton;
-        private System.Windows.Forms.Button NotificationButton;
         private System.Windows.Forms.Panel NotificationPanel;
         private System.Windows.Forms.Panel CalendarXAccoutnContainerPanel;
         private System.Windows.Forms.Label label2;
@@ -348,5 +372,8 @@
         private ButtonStyle AssistanceLogButton;
         private ButtonStyle FinanceButton;
         private ButtonStyle SettingsButton;
+        private ButtonStyle AccountButton;
+        private ButtonStyle NotificationButton;
+        private ButtonStyle CalendarButton;
     }
 }
