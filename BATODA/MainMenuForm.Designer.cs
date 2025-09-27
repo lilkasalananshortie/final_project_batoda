@@ -243,7 +243,7 @@
             this.CalendarButton.FlatAppearance.BorderSize = 0;
             this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalendarButton.ForeColor = System.Drawing.Color.Black;
-            this.CalendarButton.Location = new System.Drawing.Point(1443, 16);
+            this.CalendarButton.Location = new System.Drawing.Point(1443, 30);
             this.CalendarButton.Name = "CalendarButton";
             this.CalendarButton.Size = new System.Drawing.Size(106, 40);
             this.CalendarButton.TabIndex = 6;
@@ -262,7 +262,7 @@
             this.NotificationButton.FlatAppearance.BorderSize = 0;
             this.NotificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NotificationButton.ForeColor = System.Drawing.Color.Black;
-            this.NotificationButton.Location = new System.Drawing.Point(1331, 16);
+            this.NotificationButton.Location = new System.Drawing.Point(1331, 30);
             this.NotificationButton.Name = "NotificationButton";
             this.NotificationButton.Size = new System.Drawing.Size(106, 40);
             this.NotificationButton.TabIndex = 5;
@@ -281,7 +281,7 @@
             this.AccountButton.FlatAppearance.BorderSize = 0;
             this.AccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AccountButton.ForeColor = System.Drawing.Color.Black;
-            this.AccountButton.Location = new System.Drawing.Point(1219, 16);
+            this.AccountButton.Location = new System.Drawing.Point(1219, 30);
             this.AccountButton.Name = "AccountButton";
             this.AccountButton.Size = new System.Drawing.Size(106, 40);
             this.AccountButton.TabIndex = 4;
