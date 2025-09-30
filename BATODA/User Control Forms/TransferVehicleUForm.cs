@@ -16,6 +16,11 @@ namespace BATODA
         {
             InitializeComponent();
         }
+        private void TransferVehicleUForm_Load(object sender, EventArgs e)
+        {
+            DisplayClass.SetPlaceholder(SearchTextBox, "Search Body Number");
+            TransferPanel.Visible = false;
+        }
 
         private void RegisteredVehicleButton_Click(object sender, EventArgs e)
         {
@@ -30,6 +35,24 @@ namespace BATODA
         private void TransferRecordButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferRecordVehicleUForm());
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            TransferPanel.Visible = true;
+            SearchButton.Enabled = false;
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            TransferPanel.Visible = false;
+            SearchButton.Enabled = true;
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            TransferPanel.Visible = false;
+            SearchButton.Enabled = true;
         }
     }
 }

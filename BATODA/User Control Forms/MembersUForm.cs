@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.UI_Displays;
 
 namespace BATODA
 {
@@ -32,7 +33,15 @@ namespace BATODA
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
-            
+            DisplayClass.SetPlaceholder(BodyNumberTextBox, "Enter Body Number");
+            DisplayClass.SetPlaceholder(ContactNumTextBox, "Enter Cellphone Number");
+            DisplayClass.SetPlaceholder(VehicleInfoTextBox, "Enter Unit Brand");
+            DisplayClass.SetPlaceholder(FirstNameTextBox, "Enter First Name");
+            DisplayClass.SetPlaceholder(LastNameTextBox, "Enter Last Name");
+            DisplayClass.SetPlaceholder(MiddleNameTextBox, "Enter Middle Name");
+
+            AddMemberPanel.Visible = false;
+            AddMemberPanel.BringToFront();
 
 
 
@@ -81,6 +90,38 @@ namespace BATODA
         }
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddMemberButton_Click(object sender, EventArgs e)
+        {
+            AddMemberPanel.Visible = true;
+            AddMemberButton.Enabled = false;
+            ClearButton.Enabled = false;
+            ApplyButton.Enabled = false;
+            
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            ToastManager.Success("New Member Added Successfully!");
+            AddMemberPanel.Visible = false;
+            AddMemberButton.Enabled = true;
+            ApplyButton.Enabled = true;
+            ClearButton.Enabled = true;
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            ToastManager.Warning("Adding New Member Cancelled");
+            AddMemberPanel.Visible = false;
+            AddMemberButton.Enabled = true;
+            ApplyButton.Enabled = true;
+            ClearButton.Enabled = true;
+        }
+
+        private void AddMemberPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

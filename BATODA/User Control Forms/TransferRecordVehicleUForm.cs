@@ -15,6 +15,11 @@ namespace BATODA
         public TransferRecordVehicleUForm()
         {
             InitializeComponent();
+
+        }
+        private void TransferRecordVehicleUForm_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void RegisteredVehicleButton_Click(object sender, EventArgs e)
@@ -31,5 +36,7 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new TransferRecordVehicleUForm());
         }
+
+      
     }
 }

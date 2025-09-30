@@ -85,7 +85,7 @@
             this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
             this.RegisteredVehicleButton.Size = new System.Drawing.Size(494, 100);
             this.RegisteredVehicleButton.TabIndex = 20;
-            this.RegisteredVehicleButton.Text = "Registered Vehicle";
+            this.RegisteredVehicleButton.Text = "Vehicle Information";
             this.RegisteredVehicleButton.TextColor = System.Drawing.Color.Black;
             this.RegisteredVehicleButton.UseVisualStyleBackColor = false;
             this.RegisteredVehicleButton.Click += new System.EventHandler(this.RegisteredVehicleButton_Click);
@@ -128,6 +128,7 @@
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "TransferRecordVehicleUForm";
             this.Size = new System.Drawing.Size(1297, 870);
+            this.Load += new System.EventHandler(this.TransferRecordVehicleUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

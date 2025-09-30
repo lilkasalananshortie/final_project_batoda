@@ -42,11 +42,30 @@
             this.ManageMembersButton = new BATODA.ButtonStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttonStyle2 = new BATODA.ButtonStyle();
+            this.AddMemberPanel = new System.Windows.Forms.Panel();
+            this.AddressRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.MiddleNameTextBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.FirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.VehicleInfoTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ContactNumTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.BodyNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SaveButton = new BATODA.ButtonStyle();
+            this.CancelButton = new BATODA.ButtonStyle();
+            this.AddMemberButton = new BATODA.ButtonStyle();
             this.ApplyButton = new BATODA.ButtonStyle();
             this.ClearButton = new BATODA.ButtonStyle();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
+            this.AddMemberPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchTextBox
@@ -227,25 +246,229 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Status";
             // 
-            // buttonStyle2
+            // AddMemberPanel
             // 
-            this.buttonStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle2.BorderColor = System.Drawing.Color.Red;
-            this.buttonStyle2.BorderRadius = 0;
-            this.buttonStyle2.BorderSize = 0;
-            this.buttonStyle2.FlatAppearance.BorderSize = 0;
-            this.buttonStyle2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStyle2.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle2.ForeColor = System.Drawing.Color.Black;
-            this.buttonStyle2.Location = new System.Drawing.Point(92, 320);
-            this.buttonStyle2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle2.Name = "buttonStyle2";
-            this.buttonStyle2.Size = new System.Drawing.Size(249, 55);
-            this.buttonStyle2.TabIndex = 21;
-            this.buttonStyle2.Text = "Add Member";
-            this.buttonStyle2.TextColor = System.Drawing.Color.Black;
-            this.buttonStyle2.UseVisualStyleBackColor = false;
+            this.AddMemberPanel.Controls.Add(this.AddressRichTextBox);
+            this.AddMemberPanel.Controls.Add(this.label13);
+            this.AddMemberPanel.Controls.Add(this.MiddleNameTextBox);
+            this.AddMemberPanel.Controls.Add(this.label12);
+            this.AddMemberPanel.Controls.Add(this.LastNameTextBox);
+            this.AddMemberPanel.Controls.Add(this.label11);
+            this.AddMemberPanel.Controls.Add(this.FirstNameTextBox);
+            this.AddMemberPanel.Controls.Add(this.label10);
+            this.AddMemberPanel.Controls.Add(this.VehicleInfoTextBox);
+            this.AddMemberPanel.Controls.Add(this.label9);
+            this.AddMemberPanel.Controls.Add(this.ContactNumTextBox);
+            this.AddMemberPanel.Controls.Add(this.label8);
+            this.AddMemberPanel.Controls.Add(this.BodyNumberTextBox);
+            this.AddMemberPanel.Controls.Add(this.label7);
+            this.AddMemberPanel.Controls.Add(this.label1);
+            this.AddMemberPanel.Controls.Add(this.SaveButton);
+            this.AddMemberPanel.Controls.Add(this.CancelButton);
+            this.AddMemberPanel.Location = new System.Drawing.Point(151, 219);
+            this.AddMemberPanel.Name = "AddMemberPanel";
+            this.AddMemberPanel.Size = new System.Drawing.Size(1319, 676);
+            this.AddMemberPanel.TabIndex = 22;
+            this.AddMemberPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddMemberPanel_Paint);
+            // 
+            // AddressRichTextBox
+            // 
+            this.AddressRichTextBox.Location = new System.Drawing.Point(80, 474);
+            this.AddressRichTextBox.Name = "AddressRichTextBox";
+            this.AddressRichTextBox.Size = new System.Drawing.Size(676, 121);
+            this.AddressRichTextBox.TabIndex = 38;
+            this.AddressRichTextBox.Text = "";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(73, 416);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(166, 40);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Address *";
+            // 
+            // MiddleNameTextBox
+            // 
+            this.MiddleNameTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiddleNameTextBox.Location = new System.Drawing.Point(762, 346);
+            this.MiddleNameTextBox.Name = "MiddleNameTextBox";
+            this.MiddleNameTextBox.Size = new System.Drawing.Size(266, 39);
+            this.MiddleNameTextBox.TabIndex = 36;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(755, 290);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(242, 40);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Middle Name *";
+            // 
+            // LastNameTextBox
+            // 
+            this.LastNameTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTextBox.Location = new System.Drawing.Point(410, 346);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(275, 39);
+            this.LastNameTextBox.TabIndex = 34;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(403, 290);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(196, 40);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Last Name*";
+            // 
+            // FirstNameTextBox
+            // 
+            this.FirstNameTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTextBox.Location = new System.Drawing.Point(80, 346);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(271, 39);
+            this.FirstNameTextBox.TabIndex = 32;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(73, 290);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(208, 40);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "First Name *";
+            // 
+            // VehicleInfoTextBox
+            // 
+            this.VehicleInfoTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VehicleInfoTextBox.Location = new System.Drawing.Point(762, 205);
+            this.VehicleInfoTextBox.Name = "VehicleInfoTextBox";
+            this.VehicleInfoTextBox.Size = new System.Drawing.Size(266, 39);
+            this.VehicleInfoTextBox.TabIndex = 30;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(755, 149);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(225, 40);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Vehicle Info *";
+            // 
+            // ContactNumTextBox
+            // 
+            this.ContactNumTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactNumTextBox.Location = new System.Drawing.Point(410, 205);
+            this.ContactNumTextBox.Name = "ContactNumTextBox";
+            this.ContactNumTextBox.Size = new System.Drawing.Size(275, 39);
+            this.ContactNumTextBox.TabIndex = 28;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(403, 149);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(292, 40);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Contact Number *";
+            // 
+            // BodyNumberTextBox
+            // 
+            this.BodyNumberTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyNumberTextBox.Location = new System.Drawing.Point(80, 205);
+            this.BodyNumberTextBox.Name = "BodyNumberTextBox";
+            this.BodyNumberTextBox.Size = new System.Drawing.Size(271, 39);
+            this.BodyNumberTextBox.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(73, 149);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(246, 40);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Body Number *";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(143, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 40);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Add New Member";
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BorderColor = System.Drawing.Color.Red;
+            this.SaveButton.BorderRadius = 0;
+            this.SaveButton.BorderSize = 0;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.ForeColor = System.Drawing.Color.Black;
+            this.SaveButton.Location = new System.Drawing.Point(1115, 540);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(185, 55);
+            this.SaveButton.TabIndex = 23;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.TextColor = System.Drawing.Color.Black;
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.White;
+            this.CancelButton.BackgroundColor = System.Drawing.Color.White;
+            this.CancelButton.BorderColor = System.Drawing.Color.Red;
+            this.CancelButton.BorderRadius = 0;
+            this.CancelButton.BorderSize = 0;
+            this.CancelButton.FlatAppearance.BorderSize = 0;
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelButton.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.ForeColor = System.Drawing.Color.Black;
+            this.CancelButton.Location = new System.Drawing.Point(934, 540);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(175, 55);
+            this.CancelButton.TabIndex = 22;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.TextColor = System.Drawing.Color.Black;
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // AddMemberButton
+            // 
+            this.AddMemberButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddMemberButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddMemberButton.BorderColor = System.Drawing.Color.Red;
+            this.AddMemberButton.BorderRadius = 0;
+            this.AddMemberButton.BorderSize = 0;
+            this.AddMemberButton.FlatAppearance.BorderSize = 0;
+            this.AddMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddMemberButton.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMemberButton.ForeColor = System.Drawing.Color.Black;
+            this.AddMemberButton.Location = new System.Drawing.Point(92, 320);
+            this.AddMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddMemberButton.Name = "AddMemberButton";
+            this.AddMemberButton.Size = new System.Drawing.Size(249, 55);
+            this.AddMemberButton.TabIndex = 21;
+            this.AddMemberButton.Text = "Add Member";
+            this.AddMemberButton.TextColor = System.Drawing.Color.Black;
+            this.AddMemberButton.UseVisualStyleBackColor = false;
+            this.AddMemberButton.Click += new System.EventHandler(this.AddMemberButton_Click);
             // 
             // ApplyButton
             // 
@@ -294,7 +517,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.Controls.Add(this.buttonStyle2);
+            this.Controls.Add(this.AddMemberPanel);
+            this.Controls.Add(this.AddMemberButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.MembersTopPanel);
@@ -315,6 +539,8 @@
             this.Load += new System.EventHandler(this.MembersUForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.MembersTopPanel.ResumeLayout(false);
+            this.AddMemberPanel.ResumeLayout(false);
+            this.AddMemberPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,8 +561,26 @@
         private ButtonStyle ManageMembersButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private ButtonStyle buttonStyle2;
+        private ButtonStyle AddMemberButton;
         private ButtonStyle TransferRecordsButton;
         private ButtonStyle TransferMembershipButton;
+        private System.Windows.Forms.Panel AddMemberPanel;
+        private ButtonStyle SaveButton;
+        private ButtonStyle CancelButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox MiddleNameTextBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox LastNameTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox FirstNameTextBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox VehicleInfoTextBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox ContactNumTextBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox BodyNumberTextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox AddressRichTextBox;
     }
 }
