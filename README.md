@@ -29,7 +29,8 @@ This system improves accuracy, efficiency, and transparency in handling BATODA�
 
 #Contributors
 
-Mhaku Jose Manalili — UI / UX  
+Mhaku Jose Manalili — System Designer
+Rod Erick Dulalia - Visual Designer 
 Mark Arone Dela Cruz — Backend Developer  
 
 #License
