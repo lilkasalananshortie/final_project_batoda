@@ -16,8 +16,11 @@ namespace BATODA
         private int borderSize = 0;
         private Color borderColor = Color.Red;
         private int borderRadius = 40;
+        private Image buttonImage = null;
+        private Size imageSize = new Size(24, 24);
+        private Point imagePosition = new Point(10, 8); // default position (x=10, y=8)
 
-        
+
         [Category("PARA MA EDIT BUTTON")]
         public int BorderSize
         {
@@ -82,6 +85,27 @@ namespace BATODA
             set { this.ForeColor = value; }
         }
 
+        [Category("PARA MA EDIT BUTTON - IMAGE")]
+        public Image ButtonImage
+        {
+            get { return buttonImage; }
+            set { buttonImage = value; this.Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON - IMAGE")]
+        public Size ImageSize
+        {
+            get { return imageSize; }
+            set { imageSize = value; this.Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON - IMAGE")]
+        public Point ImagePosition
+        {
+            get { return imagePosition; }
+            set { imagePosition = value; this.Invalidate(); }
+        }
+
         //Constructor
         public ButtonStyle()
         {
@@ -114,6 +138,14 @@ namespace BATODA
             Rectangle rectSurface = this.ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
             int smoothSize = borderSize > 0 ? borderSize : 2;
+
+            // Draw Image if exists
+            if (buttonImage != null)
+            {
+                Rectangle imageRect = new Rectangle(imagePosition, imageSize);
+                pevent.Graphics.DrawImage(buttonImage, imageRect);
+            }
+
 
             if (borderRadius > 2)
             {

@@ -31,6 +31,7 @@ namespace BATODA
             DisplayClass.ShowMain(new DashboardUForm());
             TopPanelText.Text = "Dashboard";
 
+           
 
         }
 

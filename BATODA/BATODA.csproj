@@ -268,7 +268,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Pictures\success.png" />
   </ItemGroup>
@@ -280,6 +279,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav bar finance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav bar assistance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav bar settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav bar members.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav bar registered vehicles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active assistance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active finance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active registered vehicle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active members.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
