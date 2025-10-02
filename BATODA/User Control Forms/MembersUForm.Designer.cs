@@ -63,9 +63,11 @@
             this.AddMemberButton = new BATODA.ButtonStyle();
             this.ApplyButton = new BATODA.ButtonStyle();
             this.ClearButton = new BATODA.ButtonStyle();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchTextBox
@@ -154,6 +156,7 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.Controls.Add(this.pictureBox7);
             this.MembersTopPanel.Controls.Add(this.TransferMembershipButton);
             this.MembersTopPanel.Controls.Add(this.TransferRecordsButton);
             this.MembersTopPanel.Controls.Add(this.ManageMembersButton);
@@ -170,10 +173,14 @@
             this.TransferMembershipButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferMembershipButton.BorderRadius = 0;
             this.TransferMembershipButton.BorderSize = 0;
+            this.TransferMembershipButton.ButtonImage = null;
             this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
             this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMembershipButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(24, 24);
             this.TransferMembershipButton.Location = new System.Drawing.Point(520, 11);
             this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferMembershipButton.Name = "TransferMembershipButton";
@@ -181,6 +188,7 @@
             this.TransferMembershipButton.TabIndex = 21;
             this.TransferMembershipButton.Text = "Transfer Membership";
             this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.TextPadding = 10;
             this.TransferMembershipButton.UseVisualStyleBackColor = false;
             this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
             // 
@@ -191,10 +199,14 @@
             this.TransferRecordsButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferRecordsButton.BorderRadius = 0;
             this.TransferRecordsButton.BorderSize = 0;
+            this.TransferRecordsButton.ButtonImage = null;
             this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordsButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(24, 24);
             this.TransferRecordsButton.Location = new System.Drawing.Point(1027, 11);
             this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferRecordsButton.Name = "TransferRecordsButton";
@@ -202,6 +214,7 @@
             this.TransferRecordsButton.TabIndex = 20;
             this.TransferRecordsButton.Text = "Transfer History";
             this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.TextPadding = 10;
             this.TransferRecordsButton.UseVisualStyleBackColor = false;
             this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
             // 
@@ -212,10 +225,14 @@
             this.ManageMembersButton.BorderColor = System.Drawing.Color.LightGray;
             this.ManageMembersButton.BorderRadius = 0;
             this.ManageMembersButton.BorderSize = 0;
+            this.ManageMembersButton.ButtonImage = null;
             this.ManageMembersButton.FlatAppearance.BorderSize = 0;
             this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageMembersButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ManageMembersButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ManageMembersButton.Location = new System.Drawing.Point(13, 11);
             this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ManageMembersButton.Name = "ManageMembersButton";
@@ -223,6 +240,7 @@
             this.ManageMembersButton.TabIndex = 19;
             this.ManageMembersButton.Text = "Manage Members";
             this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.TextPadding = 10;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
@@ -282,128 +300,128 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(73, 416);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(166, 40);
+            this.label13.Size = new System.Drawing.Size(165, 37);
             this.label13.TabIndex = 37;
             this.label13.Text = "Address *";
             // 
             // MiddleNameTextBox
             // 
-            this.MiddleNameTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleNameTextBox.Location = new System.Drawing.Point(762, 346);
             this.MiddleNameTextBox.Name = "MiddleNameTextBox";
-            this.MiddleNameTextBox.Size = new System.Drawing.Size(266, 39);
+            this.MiddleNameTextBox.Size = new System.Drawing.Size(266, 38);
             this.MiddleNameTextBox.TabIndex = 36;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(755, 290);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(242, 40);
+            this.label12.Size = new System.Drawing.Size(239, 37);
             this.label12.TabIndex = 35;
             this.label12.Text = "Middle Name *";
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameTextBox.Location = new System.Drawing.Point(410, 346);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(275, 39);
+            this.LastNameTextBox.Size = new System.Drawing.Size(275, 38);
             this.LastNameTextBox.TabIndex = 34;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(403, 290);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(196, 40);
+            this.label11.Size = new System.Drawing.Size(195, 37);
             this.label11.TabIndex = 33;
             this.label11.Text = "Last Name*";
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameTextBox.Location = new System.Drawing.Point(80, 346);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(271, 39);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(271, 38);
             this.FirstNameTextBox.TabIndex = 32;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(73, 290);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(208, 40);
+            this.label10.Size = new System.Drawing.Size(208, 37);
             this.label10.TabIndex = 31;
             this.label10.Text = "First Name *";
             // 
             // VehicleInfoTextBox
             // 
-            this.VehicleInfoTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VehicleInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VehicleInfoTextBox.Location = new System.Drawing.Point(762, 205);
             this.VehicleInfoTextBox.Name = "VehicleInfoTextBox";
-            this.VehicleInfoTextBox.Size = new System.Drawing.Size(266, 39);
+            this.VehicleInfoTextBox.Size = new System.Drawing.Size(266, 38);
             this.VehicleInfoTextBox.TabIndex = 30;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(755, 149);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 40);
+            this.label9.Size = new System.Drawing.Size(218, 37);
             this.label9.TabIndex = 29;
             this.label9.Text = "Vehicle Info *";
             // 
             // ContactNumTextBox
             // 
-            this.ContactNumTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactNumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContactNumTextBox.Location = new System.Drawing.Point(410, 205);
             this.ContactNumTextBox.Name = "ContactNumTextBox";
-            this.ContactNumTextBox.Size = new System.Drawing.Size(275, 39);
+            this.ContactNumTextBox.Size = new System.Drawing.Size(275, 38);
             this.ContactNumTextBox.TabIndex = 28;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(403, 149);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(292, 40);
+            this.label8.Size = new System.Drawing.Size(289, 37);
             this.label8.TabIndex = 27;
             this.label8.Text = "Contact Number *";
             // 
             // BodyNumberTextBox
             // 
-            this.BodyNumberTextBox.Font = new System.Drawing.Font("Ubuntu", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BodyNumberTextBox.Location = new System.Drawing.Point(80, 205);
             this.BodyNumberTextBox.Name = "BodyNumberTextBox";
-            this.BodyNumberTextBox.Size = new System.Drawing.Size(271, 39);
+            this.BodyNumberTextBox.Size = new System.Drawing.Size(271, 38);
             this.BodyNumberTextBox.TabIndex = 26;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(73, 149);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(246, 40);
+            this.label7.Size = new System.Drawing.Size(247, 37);
             this.label7.TabIndex = 25;
             this.label7.Text = "Body Number *";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(143, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 40);
+            this.label1.Size = new System.Drawing.Size(287, 37);
             this.label1.TabIndex = 24;
             this.label1.Text = "Add New Member";
             // 
@@ -414,10 +432,14 @@
             this.SaveButton.BorderColor = System.Drawing.Color.Red;
             this.SaveButton.BorderRadius = 0;
             this.SaveButton.BorderSize = 0;
+            this.SaveButton.ButtonImage = null;
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.ForeColor = System.Drawing.Color.Black;
+            this.SaveButton.ImageColor = System.Drawing.Color.Black;
+            this.SaveButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.SaveButton.ImageSize = new System.Drawing.Size(24, 24);
             this.SaveButton.Location = new System.Drawing.Point(1115, 540);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SaveButton.Name = "SaveButton";
@@ -425,6 +447,7 @@
             this.SaveButton.TabIndex = 23;
             this.SaveButton.Text = "Save";
             this.SaveButton.TextColor = System.Drawing.Color.Black;
+            this.SaveButton.TextPadding = 10;
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -435,10 +458,14 @@
             this.CancelButton.BorderColor = System.Drawing.Color.Red;
             this.CancelButton.BorderRadius = 0;
             this.CancelButton.BorderSize = 0;
+            this.CancelButton.ButtonImage = null;
             this.CancelButton.FlatAppearance.BorderSize = 0;
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelButton.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelButton.ForeColor = System.Drawing.Color.Black;
+            this.CancelButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CancelButton.ImageSize = new System.Drawing.Size(24, 24);
             this.CancelButton.Location = new System.Drawing.Point(934, 540);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelButton.Name = "CancelButton";
@@ -446,6 +473,7 @@
             this.CancelButton.TabIndex = 22;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.TextColor = System.Drawing.Color.Black;
+            this.CancelButton.TextPadding = 10;
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -456,10 +484,14 @@
             this.AddMemberButton.BorderColor = System.Drawing.Color.Red;
             this.AddMemberButton.BorderRadius = 0;
             this.AddMemberButton.BorderSize = 0;
+            this.AddMemberButton.ButtonImage = null;
             this.AddMemberButton.FlatAppearance.BorderSize = 0;
             this.AddMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMemberButton.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddMemberButton.ForeColor = System.Drawing.Color.Black;
+            this.AddMemberButton.ImageColor = System.Drawing.Color.Black;
+            this.AddMemberButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.AddMemberButton.ImageSize = new System.Drawing.Size(24, 24);
             this.AddMemberButton.Location = new System.Drawing.Point(92, 320);
             this.AddMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddMemberButton.Name = "AddMemberButton";
@@ -467,6 +499,7 @@
             this.AddMemberButton.TabIndex = 21;
             this.AddMemberButton.Text = "Add Member";
             this.AddMemberButton.TextColor = System.Drawing.Color.Black;
+            this.AddMemberButton.TextPadding = 10;
             this.AddMemberButton.UseVisualStyleBackColor = false;
             this.AddMemberButton.Click += new System.EventHandler(this.AddMemberButton_Click);
             // 
@@ -477,10 +510,14 @@
             this.ApplyButton.BorderColor = System.Drawing.Color.Red;
             this.ApplyButton.BorderRadius = 0;
             this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.ButtonImage = null;
             this.ApplyButton.FlatAppearance.BorderSize = 0;
             this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplyButton.ForeColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.Location = new System.Drawing.Point(1383, 373);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.Name = "ApplyButton";
@@ -488,6 +525,7 @@
             this.ApplyButton.TabIndex = 14;
             this.ApplyButton.Text = "Apply Filter";
             this.ApplyButton.TextColor = System.Drawing.Color.Black;
+            this.ApplyButton.TextPadding = 10;
             this.ApplyButton.UseVisualStyleBackColor = false;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
@@ -498,10 +536,14 @@
             this.ClearButton.BorderColor = System.Drawing.Color.Red;
             this.ClearButton.BorderRadius = 0;
             this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
             this.ClearButton.FlatAppearance.BorderSize = 0;
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.ForeColor = System.Drawing.Color.Black;
+            this.ClearButton.ImageColor = System.Drawing.Color.Black;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.Location = new System.Drawing.Point(1173, 373);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.Name = "ClearButton";
@@ -509,12 +551,22 @@
             this.ClearButton.TabIndex = 15;
             this.ClearButton.Text = "Clear Filter";
             this.ClearButton.TextColor = System.Drawing.Color.Black;
+            this.ClearButton.TextPadding = 10;
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(26, 23);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 22;
+            this.pictureBox7.TabStop = false;
+            // 
             // MembersUForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.AddMemberPanel);
@@ -532,7 +584,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.ClearButton);
-            this.Font = new System.Drawing.Font("Ubuntu", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MembersUForm";
             this.Size = new System.Drawing.Size(1884, 1333);
@@ -541,6 +593,7 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.AddMemberPanel.ResumeLayout(false);
             this.AddMemberPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,5 +635,6 @@
         private System.Windows.Forms.TextBox BodyNumberTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox AddressRichTextBox;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

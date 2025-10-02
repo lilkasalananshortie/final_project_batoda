@@ -301,5 +301,26 @@
   <ItemGroup>
     <None Include="Resources\registered vehicle nav bar icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\penalty icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tricycle icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\operator icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Total Members icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Request icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actuvity_log.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

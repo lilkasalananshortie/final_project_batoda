@@ -63,6 +63,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actuvity_log {
+            get {
+                object obj = ResourceManager.GetObject("actuvity_log", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap assistance_log_nav_bar_icon {
             get {
                 object obj = ResourceManager.GetObject("assistance_log_nav_bar_icon", resourceCulture);
@@ -76,6 +86,16 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap dashboard_icon {
             get {
                 object obj = ResourceManager.GetObject("dashboard_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Driver_icon {
+            get {
+                object obj = ResourceManager.GetObject("Driver_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +153,39 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap operator_icon {
+            get {
+                object obj = ResourceManager.GetObject("operator_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap penalty_icon {
+            get {
+                object obj = ResourceManager.GetObject("penalty_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap registered_vehicle_nav_bar_icon {
             get {
                 object obj = ResourceManager.GetObject("registered_vehicle_nav_bar_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Request_icon {
+            get {
+                object obj = ResourceManager.GetObject("Request_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +206,26 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap success {
             get {
                 object obj = ResourceManager.GetObject("success", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Total_Members_icon {
+            get {
+                object obj = ResourceManager.GetObject("Total_Members_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tricycle_icon {
+            get {
+                object obj = ResourceManager.GetObject("tricycle_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
