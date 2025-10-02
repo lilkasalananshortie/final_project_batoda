@@ -63,11 +63,23 @@
             this.AddMemberButton = new BATODA.ButtonStyle();
             this.ApplyButton = new BATODA.ButtonStyle();
             this.ClearButton = new BATODA.ButtonStyle();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchTextBox
@@ -156,6 +168,8 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.Controls.Add(this.pictureBox2);
+            this.MembersTopPanel.Controls.Add(this.pictureBox1);
             this.MembersTopPanel.Controls.Add(this.pictureBox7);
             this.MembersTopPanel.Controls.Add(this.TransferMembershipButton);
             this.MembersTopPanel.Controls.Add(this.TransferRecordsButton);
@@ -266,6 +280,7 @@
             // 
             // AddMemberPanel
             // 
+            this.AddMemberPanel.Controls.Add(this.pictureBox3);
             this.AddMemberPanel.Controls.Add(this.AddressRichTextBox);
             this.AddMemberPanel.Controls.Add(this.label13);
             this.AddMemberPanel.Controls.Add(this.MiddleNameTextBox);
@@ -488,17 +503,17 @@
             this.AddMemberButton.FlatAppearance.BorderSize = 0;
             this.AddMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMemberButton.ForeColor = System.Drawing.Color.Black;
+            this.AddMemberButton.ForeColor = System.Drawing.Color.White;
             this.AddMemberButton.ImageColor = System.Drawing.Color.Black;
             this.AddMemberButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.AddMemberButton.ImageSize = new System.Drawing.Size(24, 24);
             this.AddMemberButton.Location = new System.Drawing.Point(92, 320);
             this.AddMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddMemberButton.Name = "AddMemberButton";
-            this.AddMemberButton.Size = new System.Drawing.Size(249, 55);
+            this.AddMemberButton.Size = new System.Drawing.Size(347, 55);
             this.AddMemberButton.TabIndex = 21;
             this.AddMemberButton.Text = "Add Member";
-            this.AddMemberButton.TextColor = System.Drawing.Color.Black;
+            this.AddMemberButton.TextColor = System.Drawing.Color.White;
             this.AddMemberButton.TextPadding = 10;
             this.AddMemberButton.UseVisualStyleBackColor = false;
             this.AddMemberButton.Click += new System.EventHandler(this.AddMemberButton_Click);
@@ -540,7 +555,7 @@
             this.ClearButton.FlatAppearance.BorderSize = 0;
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.Black;
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
             this.ClearButton.ImageColor = System.Drawing.Color.Black;
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
@@ -550,19 +565,87 @@
             this.ClearButton.Size = new System.Drawing.Size(188, 76);
             this.ClearButton.TabIndex = 15;
             this.ClearButton.Text = "Clear Filter";
-            this.ClearButton.TextColor = System.Drawing.Color.Black;
+            this.ClearButton.TextColor = System.Drawing.Color.White;
             this.ClearButton.TextPadding = 10;
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
+            this.pictureBox4.Location = new System.Drawing.Point(167, 261);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::BATODA.Properties.Resources.add_user;
+            this.pictureBox3.Location = new System.Drawing.Point(62, 37);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 25;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.history;
+            this.pictureBox2.Location = new System.Drawing.Point(1100, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.transfer;
+            this.pictureBox1.Location = new System.Drawing.Point(555, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(26, 23);
+            this.pictureBox7.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox7.Image = global::BATODA.Properties.Resources.tab_members_icon;
+            this.pictureBox7.Location = new System.Drawing.Point(71, 33);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 22;
             this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::BATODA.Properties.Resources.filter_off;
+            this.pictureBox5.Location = new System.Drawing.Point(1567, 283);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.pictureBox6.Image = global::BATODA.Properties.Resources.add_member;
+            this.pictureBox6.Location = new System.Drawing.Point(96, 322);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 27;
+            this.pictureBox6.TabStop = false;
             // 
             // MembersUForm
             // 
@@ -570,6 +653,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.AddMemberPanel);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.AddMemberButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -593,7 +679,13 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.AddMemberPanel.ResumeLayout(false);
             this.AddMemberPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,5 +728,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox AddressRichTextBox;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

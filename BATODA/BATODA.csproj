@@ -322,5 +322,101 @@
   <ItemGroup>
     <None Include="Resources\actuvity_log.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab members icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approved request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\decline request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change vehicle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inactive_vehicle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active_vehicle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspended.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Members.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inactive member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\due.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\overdue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assistance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
