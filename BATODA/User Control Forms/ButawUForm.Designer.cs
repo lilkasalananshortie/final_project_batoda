@@ -42,10 +42,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Ubuntu", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(86, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1182, 215);
+            this.label4.Size = new System.Drawing.Size(1218, 195);
             this.label4.TabIndex = 13;
             this.label4.Text = "BUTAW\r\n- TABLE FOR BAYAD NA AND NOT BAYAD\r\n- QUICK SEARCH? \r\n- BUTTON FOR ADD (CH" +
     "ECK) NA BAYAD NA \r\n- QUICK OVERVIEW NG MONTH NA TO KUNG MAGKANO NAKALOKTA\r\n";
@@ -78,17 +78,22 @@
             this.ButawButton.BorderColor = System.Drawing.Color.LightGray;
             this.ButawButton.BorderRadius = 0;
             this.ButawButton.BorderSize = 0;
+            this.ButawButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
             this.ButawButton.FlatAppearance.BorderSize = 0;
             this.ButawButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButawButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButawButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButawButton.ForeColor = System.Drawing.Color.Black;
+            this.ButawButton.ImageColor = System.Drawing.Color.Black;
+            this.ButawButton.ImagePosition = new System.Drawing.Point(22, 22);
+            this.ButawButton.ImageSize = new System.Drawing.Size(50, 50);
             this.ButawButton.Location = new System.Drawing.Point(520, 11);
             this.ButawButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButawButton.Name = "ButawButton";
             this.ButawButton.Size = new System.Drawing.Size(494, 100);
             this.ButawButton.TabIndex = 21;
-            this.ButawButton.Text = "Butaw";
+            this.ButawButton.Text = "Membership Renewal";
             this.ButawButton.TextColor = System.Drawing.Color.Black;
+            this.ButawButton.TextPadding = 20;
             this.ButawButton.UseVisualStyleBackColor = false;
             this.ButawButton.Click += new System.EventHandler(this.ButawButton_Click);
             // 
@@ -99,17 +104,22 @@
             this.MembershipRenewalButton.BorderColor = System.Drawing.Color.LightGray;
             this.MembershipRenewalButton.BorderRadius = 0;
             this.MembershipRenewalButton.BorderSize = 0;
+            this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
             this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MembershipRenewalButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembershipRenewalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MembershipRenewalButton.ForeColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.ImageColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(22, 22);
+            this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(50, 50);
             this.MembershipRenewalButton.Location = new System.Drawing.Point(1027, 11);
             this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembershipRenewalButton.Name = "MembershipRenewalButton";
             this.MembershipRenewalButton.Size = new System.Drawing.Size(494, 100);
             this.MembershipRenewalButton.TabIndex = 20;
-            this.MembershipRenewalButton.Text = "Membership Renewal";
+            this.MembershipRenewalButton.Text = "Renewal History";
             this.MembershipRenewalButton.TextColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.TextPadding = 20;
             this.MembershipRenewalButton.UseVisualStyleBackColor = false;
             this.MembershipRenewalButton.Click += new System.EventHandler(this.MembershipRenewalButton_Click);
             // 
@@ -120,10 +130,14 @@
             this.FinanceButton.BorderColor = System.Drawing.Color.LightGray;
             this.FinanceButton.BorderRadius = 0;
             this.FinanceButton.BorderSize = 0;
+            this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
             this.FinanceButton.FlatAppearance.BorderSize = 0;
             this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinanceButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinanceButton.ForeColor = System.Drawing.Color.Black;
+            this.FinanceButton.ImageColor = System.Drawing.Color.Black;
+            this.FinanceButton.ImagePosition = new System.Drawing.Point(22, 22);
+            this.FinanceButton.ImageSize = new System.Drawing.Size(50, 50);
             this.FinanceButton.Location = new System.Drawing.Point(13, 11);
             this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FinanceButton.Name = "FinanceButton";
@@ -131,6 +145,7 @@
             this.FinanceButton.TabIndex = 19;
             this.FinanceButton.Text = "Finance";
             this.FinanceButton.TextColor = System.Drawing.Color.Black;
+            this.FinanceButton.TextPadding = 20;
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 

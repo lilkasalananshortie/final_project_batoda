@@ -418,5 +418,32 @@
   <ItemGroup>
     <None Include="Resources\add.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending assistance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\membership renewal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total paid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total due.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total overdue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ascending.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

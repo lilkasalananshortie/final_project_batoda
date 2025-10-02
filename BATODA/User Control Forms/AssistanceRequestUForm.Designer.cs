@@ -104,14 +104,14 @@
             this.AssistanceHomeButton.BorderColor = System.Drawing.Color.LightGray;
             this.AssistanceHomeButton.BorderRadius = 0;
             this.AssistanceHomeButton.BorderSize = 0;
-            this.AssistanceHomeButton.ButtonImage = null;
+            this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
             this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
             this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
             this.AssistanceHomeButton.ImageColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(22, 22);
+            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(50, 50);
             this.AssistanceHomeButton.Location = new System.Drawing.Point(14, 14);
             this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceHomeButton.Name = "AssistanceHomeButton";
@@ -119,7 +119,7 @@
             this.AssistanceHomeButton.TabIndex = 20;
             this.AssistanceHomeButton.Text = "Assistance Dashboard";
             this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.TextPadding = 10;
+            this.AssistanceHomeButton.TextPadding = 20;
             this.AssistanceHomeButton.UseVisualStyleBackColor = false;
             this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
             // 
