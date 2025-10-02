@@ -33,6 +33,7 @@
             this.RegisteredVehicleButton = new BATODA.ButtonStyle();
             this.TransferVehicleButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchButton = new BATODA.ButtonStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,11 +47,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.ClearButton = new BATODA.ButtonStyle();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -72,10 +74,14 @@
             this.TransferRecordButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferRecordButton.BorderRadius = 0;
             this.TransferRecordButton.BorderSize = 0;
+            this.TransferRecordButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TransferRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferRecordButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferRecordButton.ImagePosition = new System.Drawing.Point(22, 25);
+            this.TransferRecordButton.ImageSize = new System.Drawing.Size(50, 50);
             this.TransferRecordButton.Location = new System.Drawing.Point(1014, 14);
             this.TransferRecordButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferRecordButton.Name = "TransferRecordButton";
@@ -83,6 +89,7 @@
             this.TransferRecordButton.TabIndex = 21;
             this.TransferRecordButton.Text = "Transfer Records";
             this.TransferRecordButton.TextColor = System.Drawing.Color.Black;
+            this.TransferRecordButton.TextPadding = 20;
             this.TransferRecordButton.UseVisualStyleBackColor = false;
             this.TransferRecordButton.Click += new System.EventHandler(this.TransferRecordButton_Click);
             // 
@@ -93,10 +100,14 @@
             this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.LightGray;
             this.RegisteredVehicleButton.BorderRadius = 0;
             this.RegisteredVehicleButton.BorderSize = 0;
+            this.RegisteredVehicleButton.ButtonImage = global::BATODA.Properties.Resources.tricycle_icon;
             this.RegisteredVehicleButton.FlatAppearance.BorderSize = 0;
             this.RegisteredVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisteredVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisteredVehicleButton.ForeColor = System.Drawing.Color.Black;
+            this.RegisteredVehicleButton.ImageColor = System.Drawing.Color.LightGray;
+            this.RegisteredVehicleButton.ImagePosition = new System.Drawing.Point(22, 15);
+            this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(60, 60);
             this.RegisteredVehicleButton.Location = new System.Drawing.Point(14, 14);
             this.RegisteredVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
@@ -104,6 +115,7 @@
             this.RegisteredVehicleButton.TabIndex = 20;
             this.RegisteredVehicleButton.Text = "Vehicle Infromation";
             this.RegisteredVehicleButton.TextColor = System.Drawing.Color.Black;
+            this.RegisteredVehicleButton.TextPadding = 10;
             this.RegisteredVehicleButton.UseVisualStyleBackColor = false;
             this.RegisteredVehicleButton.Click += new System.EventHandler(this.RegisteredVehicleButton_Click);
             // 
@@ -114,10 +126,14 @@
             this.TransferVehicleButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferVehicleButton.BorderRadius = 0;
             this.TransferVehicleButton.BorderSize = 0;
+            this.TransferVehicleButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferVehicleButton.FlatAppearance.BorderSize = 0;
             this.TransferVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferVehicleButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferVehicleButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferVehicleButton.ImagePosition = new System.Drawing.Point(22, 25);
+            this.TransferVehicleButton.ImageSize = new System.Drawing.Size(50, 50);
             this.TransferVehicleButton.Location = new System.Drawing.Point(514, 14);
             this.TransferVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferVehicleButton.Name = "TransferVehicleButton";
@@ -125,12 +141,14 @@
             this.TransferVehicleButton.TabIndex = 19;
             this.TransferVehicleButton.Text = "Transfer Vehicle Registration";
             this.TransferVehicleButton.TextColor = System.Drawing.Color.Black;
+            this.TransferVehicleButton.TextPadding = 20;
             this.TransferVehicleButton.UseVisualStyleBackColor = false;
             this.TransferVehicleButton.Click += new System.EventHandler(this.TransferVehicleButton_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.SearchButton);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -150,6 +168,17 @@
             this.panel1.Size = new System.Drawing.Size(1532, 776);
             this.panel1.TabIndex = 21;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.magnifying_glass;
+            this.pictureBox1.Location = new System.Drawing.Point(94, 145);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            // 
             // SearchButton
             // 
             this.SearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -157,16 +186,21 @@
             this.SearchButton.BorderColor = System.Drawing.Color.Red;
             this.SearchButton.BorderRadius = 0;
             this.SearchButton.BorderSize = 0;
+            this.SearchButton.ButtonImage = null;
             this.SearchButton.FlatAppearance.BorderSize = 0;
             this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchButton.ForeColor = System.Drawing.Color.Black;
+            this.SearchButton.ImageColor = System.Drawing.Color.Black;
+            this.SearchButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.SearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.SearchButton.Location = new System.Drawing.Point(366, 192);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(164, 55);
             this.SearchButton.TabIndex = 35;
             this.SearchButton.Text = "Search";
             this.SearchButton.TextColor = System.Drawing.Color.Black;
+            this.SearchButton.TextPadding = 10;
             this.SearchButton.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
@@ -181,7 +215,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1321, 83);
+            this.label6.Location = new System.Drawing.Point(1265, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 42);
             this.label6.TabIndex = 32;
@@ -191,7 +225,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1098, 84);
+            this.label4.Location = new System.Drawing.Point(1042, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 42);
             this.label4.TabIndex = 31;
@@ -201,7 +235,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(802, 84);
+            this.label5.Location = new System.Drawing.Point(746, 84);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(259, 42);
             this.label5.TabIndex = 30;
@@ -214,10 +248,14 @@
             this.ApplyButton.BorderColor = System.Drawing.Color.Red;
             this.ApplyButton.BorderRadius = 0;
             this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.ButtonImage = null;
             this.ApplyButton.FlatAppearance.BorderSize = 0;
             this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplyButton.ForeColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.Location = new System.Drawing.Point(1320, 221);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.Name = "ApplyButton";
@@ -225,6 +263,7 @@
             this.ApplyButton.TabIndex = 28;
             this.ApplyButton.Text = "Apply Filter";
             this.ApplyButton.TextColor = System.Drawing.Color.Black;
+            this.ApplyButton.TextPadding = 10;
             this.ApplyButton.UseVisualStyleBackColor = false;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
@@ -232,7 +271,7 @@
             // 
             this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Location = new System.Drawing.Point(1328, 138);
+            this.StatusComboBox.Location = new System.Drawing.Point(1272, 138);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(188, 41);
@@ -242,7 +281,7 @@
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(1105, 138);
+            this.OrderComboBox.Location = new System.Drawing.Point(1049, 138);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
             this.OrderComboBox.Size = new System.Drawing.Size(188, 41);
@@ -252,7 +291,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(622, 138);
+            this.label3.Location = new System.Drawing.Point(566, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 42);
             this.label3.TabIndex = 25;
@@ -262,7 +301,7 @@
             // 
             this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(809, 140);
+            this.MemberTypeComboBox.Location = new System.Drawing.Point(753, 140);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
             this.MemberTypeComboBox.Size = new System.Drawing.Size(252, 41);
@@ -294,10 +333,14 @@
             this.ClearButton.BorderColor = System.Drawing.Color.Red;
             this.ClearButton.BorderRadius = 0;
             this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
             this.ClearButton.FlatAppearance.BorderSize = 0;
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.ForeColor = System.Drawing.Color.Black;
+            this.ClearButton.ImageColor = System.Drawing.Color.Black;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.Location = new System.Drawing.Point(1105, 221);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.Name = "ClearButton";
@@ -305,19 +348,20 @@
             this.ClearButton.TabIndex = 29;
             this.ClearButton.Text = "Clear Filter";
             this.ClearButton.TextColor = System.Drawing.Color.Black;
+            this.ClearButton.TextPadding = 10;
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // pictureBox1
+            // pictureBox5
             // 
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(491, 145);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::BATODA.Properties.Resources.filter_off;
+            this.pictureBox5.Location = new System.Drawing.Point(1466, 131);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 37;
+            this.pictureBox5.TabStop = false;
             // 
             // RegisteredVehicleUForm
             // 
@@ -332,8 +376,9 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,5 +403,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private ButtonStyle SearchButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

@@ -55,10 +55,14 @@
             this.TransferRecordButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferRecordButton.BorderRadius = 0;
             this.TransferRecordButton.BorderSize = 0;
+            this.TransferRecordButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferRecordButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferRecordButton.ImagePosition = new System.Drawing.Point(22, 25);
+            this.TransferRecordButton.ImageSize = new System.Drawing.Size(50, 50);
             this.TransferRecordButton.Location = new System.Drawing.Point(1014, 14);
             this.TransferRecordButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferRecordButton.Name = "TransferRecordButton";
@@ -66,6 +70,7 @@
             this.TransferRecordButton.TabIndex = 21;
             this.TransferRecordButton.Text = "Transfer Records";
             this.TransferRecordButton.TextColor = System.Drawing.Color.Black;
+            this.TransferRecordButton.TextPadding = 20;
             this.TransferRecordButton.UseVisualStyleBackColor = false;
             this.TransferRecordButton.Click += new System.EventHandler(this.TransferRecordButton_Click);
             // 
@@ -76,10 +81,14 @@
             this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.LightGray;
             this.RegisteredVehicleButton.BorderRadius = 0;
             this.RegisteredVehicleButton.BorderSize = 0;
+            this.RegisteredVehicleButton.ButtonImage = global::BATODA.Properties.Resources.tricycle_icon;
             this.RegisteredVehicleButton.FlatAppearance.BorderSize = 0;
             this.RegisteredVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisteredVehicleButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisteredVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisteredVehicleButton.ForeColor = System.Drawing.Color.Black;
+            this.RegisteredVehicleButton.ImageColor = System.Drawing.Color.LightGray;
+            this.RegisteredVehicleButton.ImagePosition = new System.Drawing.Point(22, 15);
+            this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(60, 60);
             this.RegisteredVehicleButton.Location = new System.Drawing.Point(14, 14);
             this.RegisteredVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
@@ -87,6 +96,7 @@
             this.RegisteredVehicleButton.TabIndex = 20;
             this.RegisteredVehicleButton.Text = "Vehicle Information";
             this.RegisteredVehicleButton.TextColor = System.Drawing.Color.Black;
+            this.RegisteredVehicleButton.TextPadding = 10;
             this.RegisteredVehicleButton.UseVisualStyleBackColor = false;
             this.RegisteredVehicleButton.Click += new System.EventHandler(this.RegisteredVehicleButton_Click);
             // 
@@ -97,10 +107,14 @@
             this.TransferVehicleButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferVehicleButton.BorderRadius = 0;
             this.TransferVehicleButton.BorderSize = 0;
+            this.TransferVehicleButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferVehicleButton.FlatAppearance.BorderSize = 0;
             this.TransferVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferVehicleButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferVehicleButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferVehicleButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferVehicleButton.ImagePosition = new System.Drawing.Point(22, 25);
+            this.TransferVehicleButton.ImageSize = new System.Drawing.Size(50, 50);
             this.TransferVehicleButton.Location = new System.Drawing.Point(514, 14);
             this.TransferVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferVehicleButton.Name = "TransferVehicleButton";
@@ -108,6 +122,7 @@
             this.TransferVehicleButton.TabIndex = 19;
             this.TransferVehicleButton.Text = "Transfer Vehicle Registration";
             this.TransferVehicleButton.TextColor = System.Drawing.Color.Black;
+            this.TransferVehicleButton.TextPadding = 20;
             this.TransferVehicleButton.UseVisualStyleBackColor = false;
             this.TransferVehicleButton.Click += new System.EventHandler(this.TransferVehicleButton_Click);
             // 

@@ -41,10 +41,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ubuntu", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(62, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1051, 180);
+            this.label1.Size = new System.Drawing.Size(999, 168);
             this.label1.TabIndex = 2;
             this.label1.Text = "Assistance Request Maker = Ticket Maker \r\n- Serves as the maker of the ticket (no" +
     "t literal)\r\n- must have another form that will show the request form\r\n- addition" +
@@ -78,10 +78,14 @@
             this.ARHButton.BorderColor = System.Drawing.Color.LightGray;
             this.ARHButton.BorderRadius = 0;
             this.ARHButton.BorderSize = 0;
+            this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.ARHButton.FlatAppearance.BorderSize = 0;
             this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ARHButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ARHButton.ForeColor = System.Drawing.Color.Black;
+            this.ARHButton.ImageColor = System.Drawing.Color.Black;
+            this.ARHButton.ImagePosition = new System.Drawing.Point(22, 22);
+            this.ARHButton.ImageSize = new System.Drawing.Size(50, 50);
             this.ARHButton.Location = new System.Drawing.Point(1014, 14);
             this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ARHButton.Name = "ARHButton";
@@ -89,6 +93,7 @@
             this.ARHButton.TabIndex = 21;
             this.ARHButton.Text = "Approved Request History";
             this.ARHButton.TextColor = System.Drawing.Color.Black;
+            this.ARHButton.TextPadding = 20;
             this.ARHButton.UseVisualStyleBackColor = false;
             this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
             // 
@@ -99,10 +104,14 @@
             this.AssistanceHomeButton.BorderColor = System.Drawing.Color.LightGray;
             this.AssistanceHomeButton.BorderRadius = 0;
             this.AssistanceHomeButton.BorderSize = 0;
+            this.AssistanceHomeButton.ButtonImage = null;
             this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
             this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceHomeButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.ImageColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(24, 24);
             this.AssistanceHomeButton.Location = new System.Drawing.Point(14, 14);
             this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceHomeButton.Name = "AssistanceHomeButton";
@@ -110,6 +119,7 @@
             this.AssistanceHomeButton.TabIndex = 20;
             this.AssistanceHomeButton.Text = "Assistance Dashboard";
             this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.TextPadding = 10;
             this.AssistanceHomeButton.UseVisualStyleBackColor = false;
             this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
             // 
@@ -120,10 +130,14 @@
             this.AssistanceRequestButton.BorderColor = System.Drawing.Color.LightGray;
             this.AssistanceRequestButton.BorderRadius = 0;
             this.AssistanceRequestButton.BorderSize = 0;
+            this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
             this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
             this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceRequestButton.Font = new System.Drawing.Font("Ubuntu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.ImageColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(22, 30);
+            this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
             this.AssistanceRequestButton.Location = new System.Drawing.Point(514, 14);
             this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceRequestButton.Name = "AssistanceRequestButton";
@@ -131,6 +145,7 @@
             this.AssistanceRequestButton.TabIndex = 19;
             this.AssistanceRequestButton.Text = "Assistance Request";
             this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.TextPadding = 20;
             this.AssistanceRequestButton.UseVisualStyleBackColor = false;
             this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
             // 
