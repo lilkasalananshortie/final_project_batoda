@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace BATODA
 {
@@ -8,6 +9,11 @@ namespace BATODA
     {
         private static Panel _mainPanel;
         private static Panel _miniPanel;
+
+        //ButtonColorManager
+        private static List<ButtonStyle> _buttons = new List<ButtonStyle>();
+        private static Color _defaultColor = Color.FromArgb(105, 100, 100);
+        private static Color _activeColor = Color.FromArgb(175, 40, 40);
 
         // ========= Placeholder Methods: Text Box -  Combo Box  - Label =========
         public static void SetPlaceholder(TextBox tb, string placeholder)
@@ -182,6 +188,26 @@ namespace BATODA
                 if (!isToggled)
                     btn.BackColor = defaultColor;
             };
+        }
+
+
+        
+
+        public static void Register(params ButtonStyle[] buttons)
+        {
+            _buttons.AddRange(buttons);
+        }
+
+        public static void SetActive(ButtonStyle activeButton)
+        {
+            foreach (var btn in _buttons)
+            {
+                btn.ImageColor = _defaultColor;
+                btn.TextColor = _defaultColor;
+            }
+
+            activeButton.ImageColor = _activeColor;
+            activeButton.TextColor = _activeColor;
         }
     }
 }

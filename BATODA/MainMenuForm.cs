@@ -28,28 +28,28 @@ namespace BATODA
 
 
 
-        private void defaultIconColor() 
-        { 
-            //default gray color in nav bar buttons
-            HomeButton.ImageColor = Color.FromArgb(105, 100, 100);
-            HomeButton.TextColor = Color.FromArgb(105, 100, 100);
+        //private void defaultIconColor() 
+        //{ 
+        //    //default gray color in nav bar buttons
+        //    HomeButton.ImageColor = Color.FromArgb(105, 100, 100);
+        //    HomeButton.TextColor = Color.FromArgb(105, 100, 100);
 
-            MembersMainButton.ImageColor = Color.FromArgb(105, 100, 100);
-            MembersMainButton.TextColor =  Color.FromArgb(105, 100, 100);
+        //    MembersMainButton.ImageColor = Color.FromArgb(105, 100, 100);
+        //    MembersMainButton.TextColor =  Color.FromArgb(105, 100, 100);
 
-            RegisteredVehiclesButton.ImageColor = Color.FromArgb(105, 100, 100);
-            RegisteredVehiclesButton.TextColor = Color.FromArgb(105, 100, 100);
+        //    RegisteredVehiclesButton.ImageColor = Color.FromArgb(105, 100, 100);
+        //    RegisteredVehiclesButton.TextColor = Color.FromArgb(105, 100, 100);
 
-            AssistanceLogButton.ImageColor = Color.FromArgb(105, 100, 100);
-            AssistanceLogButton.TextColor = Color.FromArgb(105, 100, 100);
+        //    AssistanceLogButton.ImageColor = Color.FromArgb(105, 100, 100);
+        //    AssistanceLogButton.TextColor = Color.FromArgb(105, 100, 100);
 
-            FinanceButton.ImageColor = Color.FromArgb(105, 100, 100);
-            FinanceButton.TextColor = Color.FromArgb(105, 100, 100);
+        //    FinanceButton.ImageColor = Color.FromArgb(105, 100, 100);
+        //    FinanceButton.TextColor = Color.FromArgb(105, 100, 100);
 
-            SettingsButton.ImageColor = Color.FromArgb(105, 100, 100);
-            SettingsButton.TextColor = Color.FromArgb(105, 100, 100);
+        //    SettingsButton.ImageColor = Color.FromArgb(105, 100, 100);
+        //    SettingsButton.TextColor = Color.FromArgb(105, 100, 100);
 
-        }
+        //}
       
 
         private void DashboardForm_Load(object sender, EventArgs e)
@@ -58,74 +58,87 @@ namespace BATODA
             DisplayClass.ShowMain(new DashboardUForm());
             TopPanelText.Text = "Dashboard";
 
-           
+            DisplayClass.Register
+            (
+                 HomeButton,
+                 MembersMainButton,
+                 RegisteredVehiclesButton,
+                 AssistanceLogButton,
+                 FinanceButton,
+                 SettingsButton
+            );
+
+            DisplayClass.SetActive(HomeButton);
 
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-           defaultIconColor();
-
+           //defaultIconColor();
+            
+            DisplayClass.SetActive(HomeButton);
             DisplayClass.ShowMain(new DashboardUForm());
             TopPanelText.Text = "Dashboard";
 
          // active color button (#AF2828)
-            HomeButton.ImageColor = Color.FromArgb(175, 40, 40); 
-            HomeButton.TextColor = Color.FromArgb(175, 40, 40);
+         //   HomeButton.ImageColor = Color.FromArgb(175, 40, 40); 
+         //   HomeButton.TextColor = Color.FromArgb(175, 40, 40);
         
         }
 
         private void MembersMainButton_Click(object sender, EventArgs e)
         {
-            defaultIconColor();
+            //defaultIconColor();
 
+            DisplayClass.SetActive(MembersMainButton);
             DisplayClass.ShowMain(new MembersUForm());
             TopPanelText.Text = "Members Management";
 
-            MembersMainButton.ImageColor = Color.FromArgb(175, 40, 40);
-            MembersMainButton.TextColor = Color.FromArgb(175, 40, 40);
+            //MembersMainButton.ImageColor = Color.FromArgb(175, 40, 40);
+            //MembersMainButton.TextColor = Color.FromArgb(175, 40, 40);
         }
 
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
         {
-            defaultIconColor();
+            //defaultIconColor();
 
+            DisplayClass.SetActive(RegisteredVehiclesButton);
             DisplayClass.ShowMain(new RegisteredVehicleUForm());
             TopPanelText.Text = "Registered Vehicles";
 
-            RegisteredVehiclesButton.ImageColor = Color.FromArgb(175, 40, 40);
-           RegisteredVehiclesButton.TextColor = Color.FromArgb(175, 40, 40);
+           // RegisteredVehiclesButton.ImageColor = Color.FromArgb(175, 40, 40);
+           //RegisteredVehiclesButton.TextColor = Color.FromArgb(175, 40, 40);
         }
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
         {
-            defaultIconColor();
-
+            //defaultIconColor();
+            DisplayClass.SetActive(AssistanceLogButton);
             DisplayClass.ShowMain(new AssistanceLogUForm());
             TopPanelText.Text = "Manage Assistance";
 
-            AssistanceLogButton.ImageColor = Color.FromArgb(175, 40, 40);
-            AssistanceLogButton.TextColor = Color.FromArgb(175, 40, 40);
+            //AssistanceLogButton.ImageColor = Color.FromArgb(175, 40, 40);
+            //AssistanceLogButton.TextColor = Color.FromArgb(175, 40, 40);
         }
         private void FinanceButton_Click(object sender, EventArgs e)
         {
-            defaultIconColor();
-
+            //defaultIconColor();
+            DisplayClass.SetActive(FinanceButton);
             DisplayClass.ShowMain(new FinanceUForm());
             TopPanelText.Text = "Finance Management";
 
-            FinanceButton.ImageColor = Color.FromArgb(175, 40, 40);
-            FinanceButton.TextColor = Color.FromArgb(175, 40, 40);
+            //FinanceButton.ImageColor = Color.FromArgb(175, 40, 40);
+            //FinanceButton.TextColor = Color.FromArgb(175, 40, 40);
         }
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            defaultIconColor();
-
+            //defaultIconColor();
+            DisplayClass.SetActive(SettingsButton);
             DisplayClass.ShowMain(new SettingsUForm());
             TopPanelText.Text = "Settings";
 
-            SettingsButton.ImageColor = Color.FromArgb(175, 40, 40);
-           SettingsButton.TextColor = Color.FromArgb(175, 40, 40);
+           // SettingsButton.ImageColor = Color.FromArgb(175, 40, 40);
+           //SettingsButton.TextColor = Color.FromArgb(175, 40, 40);
         }
 
         private void AccountButton_Click(object sender, EventArgs e)
