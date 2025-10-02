@@ -284,34 +284,22 @@
     <None Include="Resources\magnifying-glass.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nav bar finance.png" />
+    <None Include="Resources\dashboard icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nav bar assistance.png" />
+    <None Include="Resources\finance nav bar icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nav bar settings.png" />
+    <None Include="Resources\assistance log nav bar icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nav bar members.png" />
+    <None Include="Resources\settings nav bar icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\nav bar registered vehicles.png" />
+    <None Include="Resources\members nav bar icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\active settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\active assistance.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\active finance.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\active registered vehicle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\active members.png" />
+    <None Include="Resources\registered vehicle nav bar icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

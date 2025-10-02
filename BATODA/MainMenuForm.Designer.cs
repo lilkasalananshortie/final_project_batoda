@@ -33,21 +33,21 @@
             this.NavBarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.DisplayPanel = new System.Windows.Forms.Panel();
-            this.TopBarPanel = new System.Windows.Forms.Panel();
-            this.TopPanelText = new System.Windows.Forms.Label();
-            this.NotificationPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
-            this.CalendarButton = new BATODA.ButtonStyle();
-            this.NotificationButton = new BATODA.ButtonStyle();
-            this.AccountButton = new BATODA.ButtonStyle();
             this.HomeButton = new BATODA.ButtonStyle();
             this.MembersMainButton = new BATODA.ButtonStyle();
             this.RegisteredVehiclesButton = new BATODA.ButtonStyle();
             this.AssistanceLogButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
             this.SettingsButton = new BATODA.ButtonStyle();
+            this.DisplayPanel = new System.Windows.Forms.Panel();
+            this.TopBarPanel = new System.Windows.Forms.Panel();
+            this.CalendarButton = new BATODA.ButtonStyle();
+            this.NotificationButton = new BATODA.ButtonStyle();
+            this.AccountButton = new BATODA.ButtonStyle();
+            this.TopPanelText = new System.Windows.Forms.Label();
+            this.NotificationPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
             this.NavBarPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
@@ -71,7 +71,7 @@
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(300, 901);
+            this.NavBarPanel.Size = new System.Drawing.Size(300, 918);
             this.NavBarPanel.TabIndex = 1;
             // 
             // panel1
@@ -91,6 +91,150 @@
             this.label3.Size = new System.Drawing.Size(227, 55);
             this.label3.TabIndex = 0;
             this.label3.Text = "BATODA";
+            // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.HomeButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.HomeButton.BorderColor = System.Drawing.Color.Red;
+            this.HomeButton.BorderRadius = 0;
+            this.HomeButton.BorderSize = 0;
+            this.HomeButton.ButtonImage = global::BATODA.Properties.Resources.dashboard_icon;
+            this.HomeButton.FlatAppearance.BorderSize = 0;
+            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.HomeButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.HomeButton.ImagePosition = new System.Drawing.Point(20, 20);
+            this.HomeButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.HomeButton.Location = new System.Drawing.Point(3, 161);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(300, 75);
+            this.HomeButton.TabIndex = 8;
+            this.HomeButton.Text = "Dashboard";
+            this.HomeButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.HomeButton.UseVisualStyleBackColor = false;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            // 
+            // MembersMainButton
+            // 
+            this.MembersMainButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersMainButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersMainButton.BorderColor = System.Drawing.Color.Red;
+            this.MembersMainButton.BorderRadius = 0;
+            this.MembersMainButton.BorderSize = 0;
+            this.MembersMainButton.ButtonImage = global::BATODA.Properties.Resources.members_nav_bar_icon;
+            this.MembersMainButton.FlatAppearance.BorderSize = 0;
+            this.MembersMainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MembersMainButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembersMainButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.MembersMainButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.MembersMainButton.ImagePosition = new System.Drawing.Point(20, 20);
+            this.MembersMainButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.MembersMainButton.Location = new System.Drawing.Point(3, 242);
+            this.MembersMainButton.Name = "MembersMainButton";
+            this.MembersMainButton.Size = new System.Drawing.Size(300, 75);
+            this.MembersMainButton.TabIndex = 9;
+            this.MembersMainButton.Text = "Members";
+            this.MembersMainButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.MembersMainButton.UseVisualStyleBackColor = false;
+            this.MembersMainButton.Click += new System.EventHandler(this.MembersMainButton_Click);
+            // 
+            // RegisteredVehiclesButton
+            // 
+            this.RegisteredVehiclesButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.RegisteredVehiclesButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.RegisteredVehiclesButton.BorderColor = System.Drawing.Color.Red;
+            this.RegisteredVehiclesButton.BorderRadius = 0;
+            this.RegisteredVehiclesButton.BorderSize = 0;
+            this.RegisteredVehiclesButton.ButtonImage = global::BATODA.Properties.Resources.registered_vehicle_nav_bar_icon;
+            this.RegisteredVehiclesButton.FlatAppearance.BorderSize = 0;
+            this.RegisteredVehiclesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisteredVehiclesButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisteredVehiclesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.RegisteredVehiclesButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.RegisteredVehiclesButton.ImagePosition = new System.Drawing.Point(20, 20);
+            this.RegisteredVehiclesButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.RegisteredVehiclesButton.Location = new System.Drawing.Point(3, 323);
+            this.RegisteredVehiclesButton.Name = "RegisteredVehiclesButton";
+            this.RegisteredVehiclesButton.Size = new System.Drawing.Size(300, 75);
+            this.RegisteredVehiclesButton.TabIndex = 10;
+            this.RegisteredVehiclesButton.Text = "Registered Vehicles";
+            this.RegisteredVehiclesButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.RegisteredVehiclesButton.UseVisualStyleBackColor = false;
+            this.RegisteredVehiclesButton.Click += new System.EventHandler(this.RegisteredVehiclesButton_Click);
+            // 
+            // AssistanceLogButton
+            // 
+            this.AssistanceLogButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AssistanceLogButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.AssistanceLogButton.BorderColor = System.Drawing.Color.Red;
+            this.AssistanceLogButton.BorderRadius = 0;
+            this.AssistanceLogButton.BorderSize = 0;
+            this.AssistanceLogButton.ButtonImage = global::BATODA.Properties.Resources.assistance_log_nav_bar_icon;
+            this.AssistanceLogButton.FlatAppearance.BorderSize = 0;
+            this.AssistanceLogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AssistanceLogButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceLogButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.AssistanceLogButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.AssistanceLogButton.ImagePosition = new System.Drawing.Point(20, 20);
+            this.AssistanceLogButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.AssistanceLogButton.Location = new System.Drawing.Point(3, 404);
+            this.AssistanceLogButton.Name = "AssistanceLogButton";
+            this.AssistanceLogButton.Size = new System.Drawing.Size(300, 75);
+            this.AssistanceLogButton.TabIndex = 11;
+            this.AssistanceLogButton.Text = "Assistance Log";
+            this.AssistanceLogButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.AssistanceLogButton.UseVisualStyleBackColor = false;
+            this.AssistanceLogButton.Click += new System.EventHandler(this.AssistanceLogButton_Click);
+            // 
+            // FinanceButton
+            // 
+            this.FinanceButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.FinanceButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.FinanceButton.BorderColor = System.Drawing.Color.Red;
+            this.FinanceButton.BorderRadius = 0;
+            this.FinanceButton.BorderSize = 0;
+            this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
+            this.FinanceButton.FlatAppearance.BorderSize = 0;
+            this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinanceButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FinanceButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FinanceButton.ImagePosition = new System.Drawing.Point(20, 20);
+            this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.FinanceButton.Location = new System.Drawing.Point(3, 485);
+            this.FinanceButton.Name = "FinanceButton";
+            this.FinanceButton.Size = new System.Drawing.Size(300, 75);
+            this.FinanceButton.TabIndex = 12;
+            this.FinanceButton.Text = "Finance\r\n";
+            this.FinanceButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FinanceButton.UseVisualStyleBackColor = false;
+            this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SettingsButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.SettingsButton.BorderColor = System.Drawing.Color.Red;
+            this.SettingsButton.BorderRadius = 0;
+            this.SettingsButton.BorderSize = 0;
+            this.SettingsButton.ButtonImage = global::BATODA.Properties.Resources.settings_nav_bar_icon;
+            this.SettingsButton.FlatAppearance.BorderSize = 0;
+            this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.ImagePosition = new System.Drawing.Point(20, 20);
+            this.SettingsButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SettingsButton.Location = new System.Drawing.Point(3, 566);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(300, 75);
+            this.SettingsButton.TabIndex = 13;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.UseVisualStyleBackColor = false;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // DisplayPanel
             // 
@@ -112,6 +256,76 @@
             this.TopBarPanel.Name = "TopBarPanel";
             this.TopBarPanel.Size = new System.Drawing.Size(1444, 90);
             this.TopBarPanel.TabIndex = 3;
+            this.TopBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopBarPanel_Paint);
+            // 
+            // CalendarButton
+            // 
+            this.CalendarButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CalendarButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.CalendarButton.BorderColor = System.Drawing.Color.Red;
+            this.CalendarButton.BorderRadius = 0;
+            this.CalendarButton.BorderSize = 0;
+            this.CalendarButton.ButtonImage = null;
+            this.CalendarButton.FlatAppearance.BorderSize = 0;
+            this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalendarButton.ForeColor = System.Drawing.Color.Black;
+            this.CalendarButton.ImageColor = System.Drawing.Color.Black;
+            this.CalendarButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CalendarButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CalendarButton.Location = new System.Drawing.Point(1443, 30);
+            this.CalendarButton.Name = "CalendarButton";
+            this.CalendarButton.Size = new System.Drawing.Size(106, 40);
+            this.CalendarButton.TabIndex = 6;
+            this.CalendarButton.Text = "Calendar";
+            this.CalendarButton.TextColor = System.Drawing.Color.Black;
+            this.CalendarButton.UseVisualStyleBackColor = false;
+            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
+            // 
+            // NotificationButton
+            // 
+            this.NotificationButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NotificationButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.NotificationButton.BorderColor = System.Drawing.Color.Red;
+            this.NotificationButton.BorderRadius = 0;
+            this.NotificationButton.BorderSize = 0;
+            this.NotificationButton.ButtonImage = null;
+            this.NotificationButton.FlatAppearance.BorderSize = 0;
+            this.NotificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotificationButton.ForeColor = System.Drawing.Color.Black;
+            this.NotificationButton.ImageColor = System.Drawing.Color.Black;
+            this.NotificationButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.NotificationButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.NotificationButton.Location = new System.Drawing.Point(1331, 30);
+            this.NotificationButton.Name = "NotificationButton";
+            this.NotificationButton.Size = new System.Drawing.Size(106, 40);
+            this.NotificationButton.TabIndex = 5;
+            this.NotificationButton.Text = "Notification";
+            this.NotificationButton.TextColor = System.Drawing.Color.Black;
+            this.NotificationButton.UseVisualStyleBackColor = false;
+            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
+            // 
+            // AccountButton
+            // 
+            this.AccountButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AccountButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.AccountButton.BorderColor = System.Drawing.Color.Red;
+            this.AccountButton.BorderRadius = 0;
+            this.AccountButton.BorderSize = 0;
+            this.AccountButton.ButtonImage = null;
+            this.AccountButton.FlatAppearance.BorderSize = 0;
+            this.AccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccountButton.ForeColor = System.Drawing.Color.Black;
+            this.AccountButton.ImageColor = System.Drawing.Color.Black;
+            this.AccountButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.AccountButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.AccountButton.Location = new System.Drawing.Point(1219, 30);
+            this.AccountButton.Name = "AccountButton";
+            this.AccountButton.Size = new System.Drawing.Size(106, 40);
+            this.AccountButton.TabIndex = 4;
+            this.AccountButton.Text = "Account";
+            this.AccountButton.TextColor = System.Drawing.Color.Black;
+            this.AccountButton.UseVisualStyleBackColor = false;
+            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
             // 
             // TopPanelText
             // 
@@ -149,217 +363,13 @@
             this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(903, 522);
             this.CalendarXAccoutnContainerPanel.TabIndex = 4;
             // 
-            // CalendarButton
-            // 
-            this.CalendarButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CalendarButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.CalendarButton.BorderColor = System.Drawing.Color.Red;
-            this.CalendarButton.BorderRadius = 0;
-            this.CalendarButton.BorderSize = 0;
-            this.CalendarButton.ButtonImage = null;
-            this.CalendarButton.FlatAppearance.BorderSize = 0;
-            this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalendarButton.ForeColor = System.Drawing.Color.Black;
-            this.CalendarButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.CalendarButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CalendarButton.Location = new System.Drawing.Point(1443, 30);
-            this.CalendarButton.Name = "CalendarButton";
-            this.CalendarButton.Size = new System.Drawing.Size(106, 40);
-            this.CalendarButton.TabIndex = 6;
-            this.CalendarButton.Text = "Calendar";
-            this.CalendarButton.TextColor = System.Drawing.Color.Black;
-            this.CalendarButton.UseVisualStyleBackColor = false;
-            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
-            // 
-            // NotificationButton
-            // 
-            this.NotificationButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.NotificationButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.NotificationButton.BorderColor = System.Drawing.Color.Red;
-            this.NotificationButton.BorderRadius = 0;
-            this.NotificationButton.BorderSize = 0;
-            this.NotificationButton.ButtonImage = null;
-            this.NotificationButton.FlatAppearance.BorderSize = 0;
-            this.NotificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotificationButton.ForeColor = System.Drawing.Color.Black;
-            this.NotificationButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.NotificationButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.NotificationButton.Location = new System.Drawing.Point(1331, 30);
-            this.NotificationButton.Name = "NotificationButton";
-            this.NotificationButton.Size = new System.Drawing.Size(106, 40);
-            this.NotificationButton.TabIndex = 5;
-            this.NotificationButton.Text = "Notification";
-            this.NotificationButton.TextColor = System.Drawing.Color.Black;
-            this.NotificationButton.UseVisualStyleBackColor = false;
-            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
-            // 
-            // AccountButton
-            // 
-            this.AccountButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AccountButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.AccountButton.BorderColor = System.Drawing.Color.Red;
-            this.AccountButton.BorderRadius = 0;
-            this.AccountButton.BorderSize = 0;
-            this.AccountButton.ButtonImage = null;
-            this.AccountButton.FlatAppearance.BorderSize = 0;
-            this.AccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AccountButton.ForeColor = System.Drawing.Color.Black;
-            this.AccountButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.AccountButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.AccountButton.Location = new System.Drawing.Point(1219, 30);
-            this.AccountButton.Name = "AccountButton";
-            this.AccountButton.Size = new System.Drawing.Size(106, 40);
-            this.AccountButton.TabIndex = 4;
-            this.AccountButton.Text = "Account";
-            this.AccountButton.TextColor = System.Drawing.Color.Black;
-            this.AccountButton.UseVisualStyleBackColor = false;
-            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
-            // 
-            // HomeButton
-            // 
-            this.HomeButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.HomeButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.HomeButton.BorderColor = System.Drawing.Color.Red;
-            this.HomeButton.BorderRadius = 0;
-            this.HomeButton.BorderSize = 0;
-            this.HomeButton.ButtonImage = null;
-            this.HomeButton.FlatAppearance.BorderSize = 0;
-            this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeButton.ForeColor = System.Drawing.Color.Black;
-            this.HomeButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.HomeButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.HomeButton.Location = new System.Drawing.Point(3, 161);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(300, 75);
-            this.HomeButton.TabIndex = 8;
-            this.HomeButton.Text = "Dashboard";
-            this.HomeButton.TextColor = System.Drawing.Color.Black;
-            this.HomeButton.UseVisualStyleBackColor = false;
-            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
-            // 
-            // MembersMainButton
-            // 
-            this.MembersMainButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MembersMainButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.MembersMainButton.BorderColor = System.Drawing.Color.Red;
-            this.MembersMainButton.BorderRadius = 0;
-            this.MembersMainButton.BorderSize = 0;
-            this.MembersMainButton.ButtonImage = global::BATODA.Properties.Resources.nav_bar_members;
-            this.MembersMainButton.FlatAppearance.BorderSize = 0;
-            this.MembersMainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MembersMainButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MembersMainButton.ForeColor = System.Drawing.Color.Black;
-            this.MembersMainButton.ImagePosition = new System.Drawing.Point(20, 20);
-            this.MembersMainButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.MembersMainButton.Location = new System.Drawing.Point(3, 242);
-            this.MembersMainButton.Name = "MembersMainButton";
-            this.MembersMainButton.Size = new System.Drawing.Size(300, 75);
-            this.MembersMainButton.TabIndex = 9;
-            this.MembersMainButton.Text = "Members";
-            this.MembersMainButton.TextColor = System.Drawing.Color.Black;
-            this.MembersMainButton.UseVisualStyleBackColor = false;
-            this.MembersMainButton.Click += new System.EventHandler(this.MembersMainButton_Click);
-            // 
-            // RegisteredVehiclesButton
-            // 
-            this.RegisteredVehiclesButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.RegisteredVehiclesButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.RegisteredVehiclesButton.BorderColor = System.Drawing.Color.Red;
-            this.RegisteredVehiclesButton.BorderRadius = 0;
-            this.RegisteredVehiclesButton.BorderSize = 0;
-            this.RegisteredVehiclesButton.ButtonImage = global::BATODA.Properties.Resources.nav_bar_registered_vehicles;
-            this.RegisteredVehiclesButton.FlatAppearance.BorderSize = 0;
-            this.RegisteredVehiclesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisteredVehiclesButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisteredVehiclesButton.ForeColor = System.Drawing.Color.Black;
-            this.RegisteredVehiclesButton.ImagePosition = new System.Drawing.Point(20, 20);
-            this.RegisteredVehiclesButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.RegisteredVehiclesButton.Location = new System.Drawing.Point(3, 323);
-            this.RegisteredVehiclesButton.Name = "RegisteredVehiclesButton";
-            this.RegisteredVehiclesButton.Size = new System.Drawing.Size(300, 75);
-            this.RegisteredVehiclesButton.TabIndex = 10;
-            this.RegisteredVehiclesButton.Text = "Registered Vehicles";
-            this.RegisteredVehiclesButton.TextColor = System.Drawing.Color.Black;
-            this.RegisteredVehiclesButton.UseVisualStyleBackColor = false;
-            this.RegisteredVehiclesButton.Click += new System.EventHandler(this.RegisteredVehiclesButton_Click);
-            // 
-            // AssistanceLogButton
-            // 
-            this.AssistanceLogButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AssistanceLogButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.AssistanceLogButton.BorderColor = System.Drawing.Color.Red;
-            this.AssistanceLogButton.BorderRadius = 0;
-            this.AssistanceLogButton.BorderSize = 0;
-            this.AssistanceLogButton.ButtonImage = global::BATODA.Properties.Resources.nav_bar_assistance;
-            this.AssistanceLogButton.FlatAppearance.BorderSize = 0;
-            this.AssistanceLogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceLogButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceLogButton.ForeColor = System.Drawing.Color.Black;
-            this.AssistanceLogButton.ImagePosition = new System.Drawing.Point(20, 20);
-            this.AssistanceLogButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.AssistanceLogButton.Location = new System.Drawing.Point(3, 404);
-            this.AssistanceLogButton.Name = "AssistanceLogButton";
-            this.AssistanceLogButton.Size = new System.Drawing.Size(300, 75);
-            this.AssistanceLogButton.TabIndex = 11;
-            this.AssistanceLogButton.Text = "Assistance Log";
-            this.AssistanceLogButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceLogButton.UseVisualStyleBackColor = false;
-            this.AssistanceLogButton.Click += new System.EventHandler(this.AssistanceLogButton_Click);
-            // 
-            // FinanceButton
-            // 
-            this.FinanceButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.FinanceButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.FinanceButton.BorderColor = System.Drawing.Color.Red;
-            this.FinanceButton.BorderRadius = 0;
-            this.FinanceButton.BorderSize = 0;
-            this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.nav_bar_finance;
-            this.FinanceButton.FlatAppearance.BorderSize = 0;
-            this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinanceButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinanceButton.ForeColor = System.Drawing.Color.Black;
-            this.FinanceButton.ImagePosition = new System.Drawing.Point(20, 20);
-            this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.FinanceButton.Location = new System.Drawing.Point(3, 485);
-            this.FinanceButton.Name = "FinanceButton";
-            this.FinanceButton.Size = new System.Drawing.Size(300, 75);
-            this.FinanceButton.TabIndex = 12;
-            this.FinanceButton.Text = "Finance\r\n";
-            this.FinanceButton.TextColor = System.Drawing.Color.Black;
-            this.FinanceButton.UseVisualStyleBackColor = false;
-            this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
-            // 
-            // SettingsButton
-            // 
-            this.SettingsButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SettingsButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.SettingsButton.BorderColor = System.Drawing.Color.Red;
-            this.SettingsButton.BorderRadius = 0;
-            this.SettingsButton.BorderSize = 0;
-            this.SettingsButton.ButtonImage = global::BATODA.Properties.Resources.nav_bar_settings;
-            this.SettingsButton.FlatAppearance.BorderSize = 0;
-            this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsButton.ForeColor = System.Drawing.Color.Black;
-            this.SettingsButton.ImagePosition = new System.Drawing.Point(20, 20);
-            this.SettingsButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.SettingsButton.Location = new System.Drawing.Point(3, 566);
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(300, 75);
-            this.SettingsButton.TabIndex = 13;
-            this.SettingsButton.Text = "Settings";
-            this.SettingsButton.TextColor = System.Drawing.Color.Black;
-            this.SettingsButton.UseVisualStyleBackColor = false;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1424, 918);
+            this.ClientSize = new System.Drawing.Size(1424, 935);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);

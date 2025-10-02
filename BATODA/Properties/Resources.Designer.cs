@@ -63,9 +63,9 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap active_assistance {
+        internal static System.Drawing.Bitmap assistance_log_nav_bar_icon {
             get {
-                object obj = ResourceManager.GetObject("active_assistance", resourceCulture);
+                object obj = ResourceManager.GetObject("assistance_log_nav_bar_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,39 +73,9 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap active_finance {
+        internal static System.Drawing.Bitmap dashboard_icon {
             get {
-                object obj = ResourceManager.GetObject("active_finance", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap active_members {
-            get {
-                object obj = ResourceManager.GetObject("active_members", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap active_registered_vehicle {
-            get {
-                object obj = ResourceManager.GetObject("active_registered_vehicle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap active_settings {
-            get {
-                object obj = ResourceManager.GetObject("active_settings", resourceCulture);
+                object obj = ResourceManager.GetObject("dashboard_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +86,16 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap error {
             get {
                 object obj = ResourceManager.GetObject("error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap finance_nav_bar_icon {
+            get {
+                object obj = ResourceManager.GetObject("finance_nav_bar_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +123,9 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nav_bar_assistance {
+        internal static System.Drawing.Bitmap members_nav_bar_icon {
             get {
-                object obj = ResourceManager.GetObject("nav_bar_assistance", resourceCulture);
+                object obj = ResourceManager.GetObject("members_nav_bar_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +133,9 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nav_bar_finance {
+        internal static System.Drawing.Bitmap registered_vehicle_nav_bar_icon {
             get {
-                object obj = ResourceManager.GetObject("nav_bar_finance", resourceCulture);
+                object obj = ResourceManager.GetObject("registered_vehicle_nav_bar_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,29 +143,9 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nav_bar_members {
+        internal static System.Drawing.Bitmap settings_nav_bar_icon {
             get {
-                object obj = ResourceManager.GetObject("nav_bar_members", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nav_bar_registered_vehicles {
-            get {
-                object obj = ResourceManager.GetObject("nav_bar_registered_vehicles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nav_bar_settings {
-            get {
-                object obj = ResourceManager.GetObject("nav_bar_settings", resourceCulture);
+                object obj = ResourceManager.GetObject("settings_nav_bar_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

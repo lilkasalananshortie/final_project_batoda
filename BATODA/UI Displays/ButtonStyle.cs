@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
+using System.Drawing.Imaging;
 
 namespace BATODA
 {
@@ -19,6 +20,7 @@ namespace BATODA
         private Image buttonImage = null;
         private Size imageSize = new Size(24, 24);
         private Point imagePosition = new Point(10, 8); // default position (x=10, y=8)
+        private Color imageColor = Color.Black;
 
 
         [Category("PARA MA EDIT BUTTON")]
@@ -106,6 +108,13 @@ namespace BATODA
             set { imagePosition = value; this.Invalidate(); }
         }
 
+        [Category("PARA MA EDIT BUTTON - IMAGE")]
+        public Color ImageColor
+        {
+            get { return imageColor; }
+            set { imageColor = value; this.Invalidate(); }
+        }
+
         //Constructor
         public ButtonStyle()
         {
@@ -131,6 +140,45 @@ namespace BATODA
             return path;
         }
 
+        private Image RecolorImage(Image originalImage, Color color)
+        {
+            if (originalImage == null)
+                return null;
+
+            Bitmap recoloredImage = new Bitmap(originalImage.Width, originalImage.Height);
+            using (Graphics g = Graphics.FromImage(recoloredImage))
+            {
+                // Use color matrix to apply tint
+                float r = color.R / 255f;
+                float gC = color.G / 255f;
+                float b = color.B / 255f;
+
+                ColorMatrix colorMatrix = new ColorMatrix(new float[][]
+                {
+                     new float[] {r, 0, 0, 0, 0},
+                     new float[] {0, gC, 0, 0, 0},
+                     new float[] {0, 0, b, 0, 0},
+                     new float[] {0, 0, 0, 1, 0},
+                     new float[] {0, 0, 0, 0, 1}
+                });
+
+                using (ImageAttributes attributes = new ImageAttributes())
+                {
+                    attributes.SetColorMatrix(colorMatrix);
+
+                    g.DrawImage(
+                        originalImage,
+                        new Rectangle(0, 0, originalImage.Width, originalImage.Height),
+                        0, 0, originalImage.Width, originalImage.Height,
+                        GraphicsUnit.Pixel,
+                        attributes
+                    );
+                }
+            }
+            return recoloredImage;
+        }
+
+
         protected override void OnPaint(PaintEventArgs pevent)
         {
             base.OnPaint(pevent);
@@ -143,8 +191,14 @@ namespace BATODA
             if (buttonImage != null)
             {
                 Rectangle imageRect = new Rectangle(imagePosition, imageSize);
-                pevent.Graphics.DrawImage(buttonImage, imageRect);
+
+                // Apply color tint
+                using (Image tinted = RecolorImage(buttonImage, imageColor))
+                {
+                    pevent.Graphics.DrawImage(tinted, imageRect);
+                }
             }
+
 
 
             if (borderRadius > 2)
