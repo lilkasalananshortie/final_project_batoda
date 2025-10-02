@@ -57,7 +57,7 @@ namespace BATODA
             
             DisplayClass.SetActive(HomeButton);
             DisplayClass.ShowMain(new DashboardUForm());
-           // TopPanelText.Text = "Dashboard";
+            TopPanelText.Text = "Dashboard";
 
         
         
@@ -69,7 +69,7 @@ namespace BATODA
 
             DisplayClass.SetActive(MembersMainButton);
             DisplayClass.ShowMain(new MembersUForm());
-          //  TopPanelText.Text = "Members Management";
+            TopPanelText.Text = "Members Management";
 
         }
 
@@ -79,7 +79,7 @@ namespace BATODA
 
             DisplayClass.SetActive(RegisteredVehiclesButton);
             DisplayClass.ShowMain(new RegisteredVehicleUForm());
-          //  TopPanelText.Text = "Registered Vehicles";
+            TopPanelText.Text = "Registered Vehicles";
 
         }
 
@@ -88,7 +88,7 @@ namespace BATODA
           
             DisplayClass.SetActive(AssistanceLogButton);
             DisplayClass.ShowMain(new AssistanceLogUForm());
-          //  TopPanelText.Text = "Manage Assistance";
+            TopPanelText.Text = "Manage Assistance";
 
          
         }
@@ -97,7 +97,7 @@ namespace BATODA
           
             DisplayClass.SetActive(FinanceButton);
             DisplayClass.ShowMain(new FinanceUForm());
-          //  TopPanelText.Text = "Finance Management";
+            TopPanelText.Text = "Finance Management";
 
           
         }
@@ -106,7 +106,7 @@ namespace BATODA
            
             DisplayClass.SetActive(SettingsButton);
             DisplayClass.ShowMain(new SettingsUForm());
-          //  TopPanelText.Text = "Settings";
+            TopPanelText.Text = "Settings";
 
           
         }
@@ -135,6 +135,11 @@ namespace BATODA
         }
 
         private void TopBarPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NavBarPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

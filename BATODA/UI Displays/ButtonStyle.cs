@@ -162,7 +162,7 @@ namespace BATODA
             Bitmap recoloredImage = new Bitmap(originalImage.Width, originalImage.Height);
             using (Graphics g = Graphics.FromImage(recoloredImage))
             {
-                // Use color matrix to apply tint
+                
                 float r = color.R / 255f;
                 float gC = color.G / 255f;
                 float b = color.B / 255f;
@@ -206,7 +206,7 @@ namespace BATODA
                 pevent.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
 
-            // Draw Image if exists
+            
             int textOffset = 0;
             if (buttonImage != null)
             {
