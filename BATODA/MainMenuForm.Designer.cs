@@ -109,10 +109,12 @@
             this.HomeButton.ImageSize = new System.Drawing.Size(32, 32);
             this.HomeButton.Location = new System.Drawing.Point(3, 161);
             this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.HomeButton.Size = new System.Drawing.Size(300, 75);
             this.HomeButton.TabIndex = 8;
             this.HomeButton.Text = "Dashboard";
             this.HomeButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.HomeButton.TextPadding = 0;
             this.HomeButton.UseVisualStyleBackColor = false;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
@@ -133,10 +135,12 @@
             this.MembersMainButton.ImageSize = new System.Drawing.Size(32, 32);
             this.MembersMainButton.Location = new System.Drawing.Point(3, 242);
             this.MembersMainButton.Name = "MembersMainButton";
+            this.MembersMainButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.MembersMainButton.Size = new System.Drawing.Size(300, 75);
             this.MembersMainButton.TabIndex = 9;
             this.MembersMainButton.Text = "Members";
             this.MembersMainButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.MembersMainButton.TextPadding = 10;
             this.MembersMainButton.UseVisualStyleBackColor = false;
             this.MembersMainButton.Click += new System.EventHandler(this.MembersMainButton_Click);
             // 
@@ -157,10 +161,12 @@
             this.RegisteredVehiclesButton.ImageSize = new System.Drawing.Size(32, 32);
             this.RegisteredVehiclesButton.Location = new System.Drawing.Point(3, 323);
             this.RegisteredVehiclesButton.Name = "RegisteredVehiclesButton";
+            this.RegisteredVehiclesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.RegisteredVehiclesButton.Size = new System.Drawing.Size(300, 75);
             this.RegisteredVehiclesButton.TabIndex = 10;
             this.RegisteredVehiclesButton.Text = "Registered Vehicles";
             this.RegisteredVehiclesButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.RegisteredVehiclesButton.TextPadding = 10;
             this.RegisteredVehiclesButton.UseVisualStyleBackColor = false;
             this.RegisteredVehiclesButton.Click += new System.EventHandler(this.RegisteredVehiclesButton_Click);
             // 
@@ -185,6 +191,7 @@
             this.AssistanceLogButton.TabIndex = 11;
             this.AssistanceLogButton.Text = "Assistance Log";
             this.AssistanceLogButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.AssistanceLogButton.TextPadding = 10;
             this.AssistanceLogButton.UseVisualStyleBackColor = false;
             this.AssistanceLogButton.Click += new System.EventHandler(this.AssistanceLogButton_Click);
             // 
@@ -209,6 +216,7 @@
             this.FinanceButton.TabIndex = 12;
             this.FinanceButton.Text = "Finance\r\n";
             this.FinanceButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FinanceButton.TextPadding = 10;
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
@@ -233,6 +241,7 @@
             this.SettingsButton.TabIndex = 13;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.TextPadding = 10;
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
@@ -278,6 +287,7 @@
             this.CalendarButton.TabIndex = 6;
             this.CalendarButton.Text = "Calendar";
             this.CalendarButton.TextColor = System.Drawing.Color.Black;
+            this.CalendarButton.TextPadding = 10;
             this.CalendarButton.UseVisualStyleBackColor = false;
             this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
             // 
@@ -301,6 +311,7 @@
             this.NotificationButton.TabIndex = 5;
             this.NotificationButton.Text = "Notification";
             this.NotificationButton.TextColor = System.Drawing.Color.Black;
+            this.NotificationButton.TextPadding = 10;
             this.NotificationButton.UseVisualStyleBackColor = false;
             this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
             // 
@@ -324,6 +335,7 @@
             this.AccountButton.TabIndex = 4;
             this.AccountButton.Text = "Account";
             this.AccountButton.TextColor = System.Drawing.Color.Black;
+            this.AccountButton.TextPadding = 10;
             this.AccountButton.UseVisualStyleBackColor = false;
             this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
             // 

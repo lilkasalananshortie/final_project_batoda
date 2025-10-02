@@ -17,10 +17,13 @@ namespace BATODA
         private int borderSize = 0;
         private Color borderColor = Color.Red;
         private int borderRadius = 40;
+        private int textPadding = 10;
+
         private Image buttonImage = null;
         private Size imageSize = new Size(24, 24);
         private Point imagePosition = new Point(10, 8); // default position (x=10, y=8)
         private Color imageColor = Color.Black;
+        
 
 
         [Category("PARA MA EDIT BUTTON")]
@@ -39,6 +42,8 @@ namespace BATODA
                 }
             }
         }
+
+
         [Category("PARA MA EDIT BUTTON")]
         public Color BorderColor
         {
@@ -87,6 +92,13 @@ namespace BATODA
             set { this.ForeColor = value; }
         }
 
+        [Category("PARA MA EDIT BUTTON")]
+        public int TextPadding
+        {
+            get => textPadding;
+            set { textPadding = value; Invalidate(); }
+        }
+
         [Category("PARA MA EDIT BUTTON - IMAGE")]
         public Image ButtonImage
         {
@@ -114,6 +126,8 @@ namespace BATODA
             get { return imageColor; }
             set { imageColor = value; this.Invalidate(); }
         }
+
+        
 
         //Constructor
         public ButtonStyle()
@@ -181,13 +195,19 @@ namespace BATODA
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            base.OnPaint(pevent);
+           // base.OnPaint(pevent);
 
             Rectangle rectSurface = this.ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
             int smoothSize = borderSize > 0 ? borderSize : 2;
 
+            using (SolidBrush brush = new SolidBrush(this.BackColor))
+            {
+                pevent.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+
             // Draw Image if exists
+            int textOffset = 0;
             if (buttonImage != null)
             {
                 Rectangle imageRect = new Rectangle(imagePosition, imageSize);
@@ -197,8 +217,37 @@ namespace BATODA
                 {
                     pevent.Graphics.DrawImage(tinted, imageRect);
                 }
+
+                textOffset = imagePosition.X + imageSize.Width + textPadding;
             }
 
+            using (StringFormat textAlign = new StringFormat())
+            using (SolidBrush textFill = new SolidBrush(this.ForeColor))
+            {
+                Rectangle textRect;
+
+                if (buttonImage != null)
+                {
+                    // Text beside image
+                    textAlign.Alignment = StringAlignment.Near;
+                    textAlign.LineAlignment = StringAlignment.Center;
+
+                    textRect = new Rectangle(
+                        textOffset, 0,
+                        this.Width - textOffset - 10, this.Height
+                    );
+                }
+                else
+                {
+                    // No image → center text
+                    textAlign.Alignment = StringAlignment.Center;
+                    textAlign.LineAlignment = StringAlignment.Center;
+
+                    textRect = this.ClientRectangle;
+                }
+
+                pevent.Graphics.DrawString(this.Text, this.Font, textFill, textRect, textAlign);
+            }
 
 
             if (borderRadius > 2)
