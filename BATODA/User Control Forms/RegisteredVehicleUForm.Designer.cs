@@ -199,7 +199,7 @@
             this.SearchButton.BorderSize = 0;
             this.SearchButton.ButtonImage = null;
             this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchButton.ForeColor = System.Drawing.Color.Black;
             this.SearchButton.ImageColor = System.Drawing.Color.Black;
@@ -213,6 +213,7 @@
             this.SearchButton.TextColor = System.Drawing.Color.Black;
             this.SearchButton.TextPadding = 10;
             this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // dataGridView1
             // 

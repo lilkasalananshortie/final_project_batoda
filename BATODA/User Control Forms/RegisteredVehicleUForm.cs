@@ -52,5 +52,10 @@ namespace BATODA
         {
             ToastManager.Success("Filters Applied!");
         }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -173,6 +173,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1573, 661);
             this.panel1.TabIndex = 22;
+           
             // 
             // dataGridView1
             // 
@@ -202,6 +203,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 41;
             this.pictureBox5.TabStop = false;
+            
             // 
             // pictureBox4
             // 
@@ -248,6 +250,7 @@
             this.label6.Size = new System.Drawing.Size(147, 42);
             this.label6.TabIndex = 38;
             this.label6.Text = "Sort By";
+            
             // 
             // label4
             // 
@@ -304,6 +307,7 @@
             this.SortComboBox.Name = "SortComboBox";
             this.SortComboBox.Size = new System.Drawing.Size(188, 41);
             this.SortComboBox.TabIndex = 33;
+           
             // 
             // YearComboBox
             // 

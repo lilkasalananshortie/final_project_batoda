@@ -16,6 +16,12 @@ namespace BATODA
         {
             InitializeComponent();
         }
+        private void AssistanceLogUForm_Load(object sender, EventArgs e)
+        {
+            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
+            DisplayClass.SetPlaceholder(AssistanceTypeComboBox, "Assistance Type", "Accident", "Burial", "Death");
+            DisplayClass.SetPlaceholder(SortComboBox, "Status", "Ongoing", "Completed", "Cancelled");
+        }
 
         private void AssistanceHomeButton_Click(object sender, EventArgs e)
         {
@@ -30,6 +36,11 @@ namespace BATODA
         private void ARHButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new ARHUForm());
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ClearInputs(this);
         }
     }
 }

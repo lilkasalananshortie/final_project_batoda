@@ -55,5 +55,9 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new ButawUForm());
         }
+
+       
+
+       
     }
 }
