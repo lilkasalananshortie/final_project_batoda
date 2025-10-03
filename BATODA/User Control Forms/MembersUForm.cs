@@ -96,6 +96,7 @@ namespace BATODA
 
         private void AddMemberButton_Click(object sender, EventArgs e)
         {
+            ToastManager.Info("Member Searchd");    // testing lang 
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
             ClearButton.Enabled = false;

@@ -33,6 +33,7 @@
             this.RegisteredVehicleButton = new BATODA.ButtonStyle();
             this.TransferVehicleButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchButton = new BATODA.ButtonStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,12 +48,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.ClearButton = new BATODA.ButtonStyle();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -74,7 +74,7 @@
             this.TransferRecordButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferRecordButton.BorderRadius = 0;
             this.TransferRecordButton.BorderSize = 0;
-            this.TransferRecordButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.TransferRecordButton.ButtonImage = null;
             this.TransferRecordButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TransferRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,10 +168,21 @@
             this.panel1.Size = new System.Drawing.Size(1532, 776);
             this.panel1.TabIndex = 21;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::BATODA.Properties.Resources.filter_off;
+            this.pictureBox5.Location = new System.Drawing.Point(1466, 131);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 37;
+            this.pictureBox5.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 145);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 147);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -188,7 +199,7 @@
             this.SearchButton.BorderSize = 0;
             this.SearchButton.ButtonImage = null;
             this.SearchButton.FlatAppearance.BorderSize = 0;
-            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchButton.ForeColor = System.Drawing.Color.Black;
             this.SearchButton.ImageColor = System.Drawing.Color.Black;
@@ -206,7 +217,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 338);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 321);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1461, 415);
             this.dataGridView1.TabIndex = 34;
@@ -352,17 +363,6 @@
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::BATODA.Properties.Resources.filter_off;
-            this.pictureBox5.Location = new System.Drawing.Point(1466, 131);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 37;
-            this.pictureBox5.TabStop = false;
-            // 
             // RegisteredVehicleUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,9 +376,9 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

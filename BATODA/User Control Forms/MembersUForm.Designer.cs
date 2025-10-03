@@ -289,7 +289,7 @@
             this.AddMemberPanel.Controls.Add(this.label1);
             this.AddMemberPanel.Controls.Add(this.SaveButton);
             this.AddMemberPanel.Controls.Add(this.CancelButton);
-            this.AddMemberPanel.Location = new System.Drawing.Point(151, 219);
+            this.AddMemberPanel.Location = new System.Drawing.Point(113, 419);
             this.AddMemberPanel.Name = "AddMemberPanel";
             this.AddMemberPanel.Size = new System.Drawing.Size(1319, 676);
             this.AddMemberPanel.TabIndex = 22;
@@ -329,7 +329,7 @@
             this.MiddleNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleNameTextBox.Location = new System.Drawing.Point(762, 346);
             this.MiddleNameTextBox.Name = "MiddleNameTextBox";
-            this.MiddleNameTextBox.Size = new System.Drawing.Size(266, 38);
+            this.MiddleNameTextBox.Size = new System.Drawing.Size(286, 38);
             this.MiddleNameTextBox.TabIndex = 36;
             // 
             // label12
@@ -347,7 +347,7 @@
             this.LastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameTextBox.Location = new System.Drawing.Point(410, 346);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(275, 38);
+            this.LastNameTextBox.Size = new System.Drawing.Size(303, 38);
             this.LastNameTextBox.TabIndex = 34;
             // 
             // label11
@@ -365,7 +365,7 @@
             this.FirstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameTextBox.Location = new System.Drawing.Point(80, 346);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(271, 38);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(292, 38);
             this.FirstNameTextBox.TabIndex = 32;
             // 
             // label10
@@ -383,7 +383,7 @@
             this.VehicleInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VehicleInfoTextBox.Location = new System.Drawing.Point(762, 205);
             this.VehicleInfoTextBox.Name = "VehicleInfoTextBox";
-            this.VehicleInfoTextBox.Size = new System.Drawing.Size(266, 38);
+            this.VehicleInfoTextBox.Size = new System.Drawing.Size(286, 38);
             this.VehicleInfoTextBox.TabIndex = 30;
             // 
             // label9
@@ -401,7 +401,7 @@
             this.ContactNumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContactNumTextBox.Location = new System.Drawing.Point(410, 205);
             this.ContactNumTextBox.Name = "ContactNumTextBox";
-            this.ContactNumTextBox.Size = new System.Drawing.Size(275, 38);
+            this.ContactNumTextBox.Size = new System.Drawing.Size(303, 38);
             this.ContactNumTextBox.TabIndex = 28;
             // 
             // label8
@@ -419,7 +419,7 @@
             this.BodyNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BodyNumberTextBox.Location = new System.Drawing.Point(80, 205);
             this.BodyNumberTextBox.Name = "BodyNumberTextBox";
-            this.BodyNumberTextBox.Size = new System.Drawing.Size(271, 38);
+            this.BodyNumberTextBox.Size = new System.Drawing.Size(292, 38);
             this.BodyNumberTextBox.TabIndex = 26;
             // 
             // label7
@@ -576,7 +576,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(167, 261);
+            this.pictureBox4.Location = new System.Drawing.Point(113, 262);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

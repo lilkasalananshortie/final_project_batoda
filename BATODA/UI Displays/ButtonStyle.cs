@@ -18,10 +18,11 @@ namespace BATODA
         private Color borderColor = Color.Red;
         private int borderRadius = 40;
         private int textPadding = 10;
+       
 
         private Image buttonImage = null;
         private Size imageSize = new Size(24, 24);
-        private Point imagePosition = new Point(10, 8); // default position (x=10, y=8)
+        private Point imagePosition = new Point(10, 8); 
         private Color imageColor = Color.Black;
         
 
@@ -126,19 +127,20 @@ namespace BATODA
             get { return imageColor; }
             set { imageColor = value; this.Invalidate(); }
         }
-
         
+
 
         //Constructor
         public ButtonStyle()
         {
             this.FlatStyle = FlatStyle.Flat;
-            this.FlatAppearance.BorderSize = 0;
+
             this.Size = new Size(150, 40);
             this.BackColor = Color.Red;
             this.ForeColor = Color.Black;
             this.Resize += new EventHandler(Button_Resize);
         }
+
 
        
         //Methods
@@ -195,61 +197,28 @@ namespace BATODA
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-           // base.OnPaint(pevent);
+            
+            base.OnPaint(pevent);
 
             Rectangle rectSurface = this.ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
             int smoothSize = borderSize > 0 ? borderSize : 2;
 
-            using (SolidBrush brush = new SolidBrush(this.BackColor))
+            
+            if (buttonImage != null)
             {
-                pevent.Graphics.FillRectangle(brush, this.ClientRectangle);
+                Image img = imageColor != Color.Transparent
+                    ? RecolorImage(buttonImage, imageColor)
+                    : buttonImage;
+
+               
+                int y = (this.Height - imageSize.Height) / 2;
+                Rectangle imageRect = new Rectangle(imagePosition.X, y, imageSize.Width, imageSize.Height);
+
+                pevent.Graphics.DrawImage(img, imageRect);
             }
 
             
-            int textOffset = 0;
-            if (buttonImage != null)
-            {
-                Rectangle imageRect = new Rectangle(imagePosition, imageSize);
-
-                // Apply color tint
-                using (Image tinted = RecolorImage(buttonImage, imageColor))
-                {
-                    pevent.Graphics.DrawImage(tinted, imageRect);
-                }
-
-                textOffset = imagePosition.X + imageSize.Width + textPadding;
-            }
-
-            using (StringFormat textAlign = new StringFormat())
-            using (SolidBrush textFill = new SolidBrush(this.ForeColor))
-            {
-                Rectangle textRect;
-
-                if (buttonImage != null)
-                {
-                    // Text beside image
-                    textAlign.Alignment = StringAlignment.Near;
-                    textAlign.LineAlignment = StringAlignment.Center;
-
-                    textRect = new Rectangle(
-                        textOffset, 0,
-                        this.Width - textOffset - 10, this.Height
-                    );
-                }
-                else
-                {
-                    // No image → center text
-                    textAlign.Alignment = StringAlignment.Center;
-                    textAlign.LineAlignment = StringAlignment.Center;
-
-                    textRect = this.ClientRectangle;
-                }
-
-                pevent.Graphics.DrawString(this.Text, this.Font, textFill, textRect, textAlign);
-            }
-
-
             if (borderRadius > 2)
             {
                 using (GraphicsPath pathSurface = GetGraphicsPath(rectSurface, borderRadius))
@@ -258,14 +227,10 @@ namespace BATODA
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-
-                    // Button surface
                     this.Region = new Region(pathSurface);
 
-                    // Draw surface border for HD result
                     pevent.Graphics.DrawPath(penSurface, pathSurface);
 
-                    // Button border
                     if (borderSize >= 1)
                         pevent.Graphics.DrawPath(penBorder, pathBorder);
                 }
@@ -285,6 +250,7 @@ namespace BATODA
                 }
             }
         }
+
 
         protected override void OnHandleCreated(EventArgs e)
         {

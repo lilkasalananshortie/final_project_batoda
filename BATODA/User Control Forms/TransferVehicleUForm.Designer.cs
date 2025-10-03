@@ -65,7 +65,6 @@
             this.TransferRecordButton.BorderColor = System.Drawing.Color.LightGray;
             this.TransferRecordButton.BorderRadius = 0;
             this.TransferRecordButton.BorderSize = 0;
-            this.TransferRecordButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TransferRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

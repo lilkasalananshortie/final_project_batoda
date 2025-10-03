@@ -30,7 +30,10 @@ namespace BATODA.UI_Displays
         {
             Show(message, Properties.Resources.error, Color.Red, durationMs);
         }
-
+        public static void Info(string message, int durationMs = 2000)
+        {
+            Show(message, Properties.Resources.info, Color.DodgerBlue, durationMs);
+        }
         private static void Show(string message, Image icon, Color progressColor, int durationMs)
         {
             var toast = new ToastForm(message, BackgroundColor, icon, durationMs);
