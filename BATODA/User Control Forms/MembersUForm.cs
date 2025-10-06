@@ -21,9 +21,7 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
-            DisplayClass.AttachHoverEffect(TransferRecordsButton, Color.Gray, Color.DarkGray);
-            DisplayClass.AttachHoverEffect(ManageMembersButton, Color.Gray, Color.DarkGray);
-            DisplayClass.AttachHoverEffect(TransferMembershipButton, Color.Gray, Color.DarkGray);
+            
 
             DisplayClass.SetButtonToggleColor(TransferRecordsButton, Color.DarkGray, Color.Gray, Color.Gray);
             DisplayClass.SetButtonToggleColor(ManageMembersButton, Color.DarkGray, Color.Gray, Color.Gray);

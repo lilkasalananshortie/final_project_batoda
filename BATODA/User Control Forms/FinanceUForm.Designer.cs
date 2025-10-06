@@ -66,61 +66,78 @@
             this.MembersTopPanel.Controls.Add(this.MembershipRenewalButton);
             this.MembersTopPanel.Controls.Add(this.RenewalHistoryButton);
             this.MembersTopPanel.Controls.Add(this.FinanceButton);
-            this.MembersTopPanel.Location = new System.Drawing.Point(16, 18);
+            this.MembersTopPanel.ForeColor = System.Drawing.SystemColors.Control;
+            this.MembersTopPanel.Location = new System.Drawing.Point(14, 14);
             this.MembersTopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembersTopPanel.Name = "MembersTopPanel";
-            this.MembersTopPanel.Size = new System.Drawing.Size(1567, 71);
+            this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 19;
             // 
             // MembershipRenewalButton
             // 
-            this.MembershipRenewalButton.BackColor = System.Drawing.Color.LightGray;
-            this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.LightGray;
+            this.MembershipRenewalButton.BackColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.White;
             this.MembershipRenewalButton.BorderRadius = 0;
             this.MembershipRenewalButton.BorderSize = 0;
             this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
             this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
             this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MembershipRenewalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembershipRenewalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MembershipRenewalButton.ForeColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.MembershipRenewalButton.HoverColor = System.Drawing.Color.Silver;
             this.MembershipRenewalButton.ImageColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(22, 22);
-            this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(50, 50);
-            this.MembershipRenewalButton.Location = new System.Drawing.Point(538, 10);
+            this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(130, 0);
+            this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.MembershipRenewalButton.IsToggled = false;
+            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 7);
             this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MembershipRenewalButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.MembershipRenewalButton.Name = "MembershipRenewalButton";
-            this.MembershipRenewalButton.Size = new System.Drawing.Size(494, 53);
+            this.MembershipRenewalButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.MembershipRenewalButton.PaddingX = 0;
+            this.MembershipRenewalButton.PaddingY = 0;
+            this.MembershipRenewalButton.Size = new System.Drawing.Size(525, 49);
             this.MembershipRenewalButton.TabIndex = 21;
             this.MembershipRenewalButton.Text = "Membership Renewal";
             this.MembershipRenewalButton.TextColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.TextPadding = 20;
+            this.MembershipRenewalButton.TextOffset = 20;
+            this.MembershipRenewalButton.ToggleColor = System.Drawing.Color.LightGray;
             this.MembershipRenewalButton.UseVisualStyleBackColor = false;
             this.MembershipRenewalButton.Click += new System.EventHandler(this.MembershipRenewalButton_Click_1);
             // 
             // RenewalHistoryButton
             // 
-            this.RenewalHistoryButton.BackColor = System.Drawing.Color.LightGray;
-            this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.LightGray;
+            this.RenewalHistoryButton.BackColor = System.Drawing.Color.White;
+            this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.White;
+            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.White;
             this.RenewalHistoryButton.BorderRadius = 0;
             this.RenewalHistoryButton.BorderSize = 0;
             this.RenewalHistoryButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.RenewalHistoryButton.FlatAppearance.BorderSize = 0;
             this.RenewalHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RenewalHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RenewalHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RenewalHistoryButton.ForeColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.RenewalHistoryButton.HoverColor = System.Drawing.Color.Silver;
             this.RenewalHistoryButton.ImageColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(22, 22);
-            this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(50, 50);
-            this.RenewalHistoryButton.Location = new System.Drawing.Point(1045, 10);
+            this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(155, 0);
+            this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.RenewalHistoryButton.IsToggled = false;
+            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 7);
             this.RenewalHistoryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RenewalHistoryButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.RenewalHistoryButton.Name = "RenewalHistoryButton";
-            this.RenewalHistoryButton.Size = new System.Drawing.Size(494, 53);
+            this.RenewalHistoryButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.RenewalHistoryButton.PaddingX = 0;
+            this.RenewalHistoryButton.PaddingY = 0;
+            this.RenewalHistoryButton.Size = new System.Drawing.Size(525, 49);
             this.RenewalHistoryButton.TabIndex = 20;
             this.RenewalHistoryButton.Text = "Renewal History";
             this.RenewalHistoryButton.TextColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.TextPadding = 20;
+            this.RenewalHistoryButton.TextOffset = 20;
+            this.RenewalHistoryButton.ToggleColor = System.Drawing.Color.LightGray;
             this.RenewalHistoryButton.UseVisualStyleBackColor = false;
             this.RenewalHistoryButton.Click += new System.EventHandler(this.RenewalHistoryButton_Click);
             // 
@@ -134,19 +151,27 @@
             this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
             this.FinanceButton.FlatAppearance.BorderSize = 0;
             this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinanceButton.ForeColor = System.Drawing.Color.Black;
+            this.FinanceButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.FinanceButton.HoverColor = System.Drawing.Color.Silver;
             this.FinanceButton.ImageColor = System.Drawing.Color.Black;
-            this.FinanceButton.ImagePosition = new System.Drawing.Point(22, 22);
-            this.FinanceButton.ImageSize = new System.Drawing.Size(50, 50);
-            this.FinanceButton.Location = new System.Drawing.Point(31, 10);
+            this.FinanceButton.ImagePosition = new System.Drawing.Point(180, 0);
+            this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.FinanceButton.IsToggled = false;
+            this.FinanceButton.Location = new System.Drawing.Point(5, 7);
             this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FinanceButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.FinanceButton.Name = "FinanceButton";
-            this.FinanceButton.Size = new System.Drawing.Size(494, 53);
+            this.FinanceButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.FinanceButton.PaddingX = 0;
+            this.FinanceButton.PaddingY = 0;
+            this.FinanceButton.Size = new System.Drawing.Size(525, 49);
             this.FinanceButton.TabIndex = 19;
             this.FinanceButton.Text = "Finance";
             this.FinanceButton.TextColor = System.Drawing.Color.Black;
-            this.FinanceButton.TextPadding = 20;
+            this.FinanceButton.TextOffset = 20;
+            this.FinanceButton.ToggleColor = System.Drawing.Color.LightGray;
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
@@ -173,7 +198,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1573, 661);
             this.panel1.TabIndex = 22;
-           
             // 
             // dataGridView1
             // 
@@ -203,7 +227,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 41;
             this.pictureBox5.TabStop = false;
-            
             // 
             // pictureBox4
             // 
@@ -228,17 +251,23 @@
             this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
+            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
             this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplySearchButton.IsToggled = false;
             this.ApplySearchButton.Location = new System.Drawing.Point(399, 144);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
+            this.ApplySearchButton.PaddingX = 10;
+            this.ApplySearchButton.PaddingY = 5;
             this.ApplySearchButton.Size = new System.Drawing.Size(212, 55);
             this.ApplySearchButton.TabIndex = 39;
-            this.ApplySearchButton.Text = "Apply";
             this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextPadding = 10;
+            this.ApplySearchButton.TextOffset = 8;
+            this.ApplySearchButton.ToggleColor = System.Drawing.Color.DimGray;
             this.ApplySearchButton.UseVisualStyleBackColor = false;
             // 
             // label6
@@ -250,7 +279,6 @@
             this.label6.Size = new System.Drawing.Size(147, 42);
             this.label6.TabIndex = 38;
             this.label6.Text = "Sort By";
-            
             // 
             // label4
             // 
@@ -284,17 +312,23 @@
             this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplyButton.ForeColor = System.Drawing.Color.Black;
+            this.ApplyButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
             this.ApplyButton.ImageColor = System.Drawing.Color.Black;
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplyButton.IsToggled = false;
             this.ApplyButton.Location = new System.Drawing.Point(1333, 198);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.PaddingX = 10;
+            this.ApplyButton.PaddingY = 5;
             this.ApplyButton.Size = new System.Drawing.Size(188, 76);
             this.ApplyButton.TabIndex = 34;
-            this.ApplyButton.Text = "Apply Filter";
             this.ApplyButton.TextColor = System.Drawing.Color.Black;
-            this.ApplyButton.TextPadding = 10;
+            this.ApplyButton.TextOffset = 8;
+            this.ApplyButton.ToggleColor = System.Drawing.Color.DimGray;
             this.ApplyButton.UseVisualStyleBackColor = false;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
@@ -307,7 +341,6 @@
             this.SortComboBox.Name = "SortComboBox";
             this.SortComboBox.Size = new System.Drawing.Size(188, 41);
             this.SortComboBox.TabIndex = 33;
-           
             // 
             // YearComboBox
             // 
@@ -370,17 +403,23 @@
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
             this.ClearButton.ImageColor = System.Drawing.Color.Black;
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ClearButton.IsToggled = false;
             this.ClearButton.Location = new System.Drawing.Point(1123, 198);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.ClearButton.Name = "ClearButton";
+            this.ClearButton.PaddingX = 10;
+            this.ClearButton.PaddingY = 5;
             this.ClearButton.Size = new System.Drawing.Size(188, 76);
             this.ClearButton.TabIndex = 35;
-            this.ClearButton.Text = "Clear Filter";
             this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextPadding = 10;
+            this.ClearButton.TextOffset = 8;
+            this.ClearButton.ToggleColor = System.Drawing.Color.DimGray;
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 

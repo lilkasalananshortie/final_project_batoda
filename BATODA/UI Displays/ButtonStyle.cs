@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 using System.Drawing.Imaging;
@@ -13,141 +9,169 @@ namespace BATODA
 {
     public class ButtonStyle : Button
     {
-        // Fields
+       
         private int borderSize = 0;
         private Color borderColor = Color.Red;
         private int borderRadius = 40;
-        private int textPadding = 10;
-       
 
-        private Image buttonImage = null;
+        private Image buttonImage;
         private Size imageSize = new Size(24, 24);
-        private Point imagePosition = new Point(10, 8); 
+        private Point imagePosition = new Point(10, 0);
         private Color imageColor = Color.Black;
-        
 
+
+        private int paddingX = 0;
+        private int paddingY = 0;
+        private int textOffset = 20;
+
+        private Color hoverColor;
+        private Color hoverBorderColor;
+
+        private bool isHovered = false;
+        private bool isToggled = false;
+        private bool isPressed = false;
+
+        private Color mouseDownColor;
+        private Color toggleColor;
+
+        
+        [Browsable(false)]
+        public bool IsToggled
+        {
+            get => isToggled;
+            set { isToggled = value; Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON")]
+        public Color MouseDownColor
+        {
+            get => mouseDownColor == Color.Empty ? ControlPaint.Dark(hoverColor, 0.2f) : mouseDownColor;
+            set { mouseDownColor = value; Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON")]
+        public Color ToggleColor
+        {
+            get => toggleColor;
+            set { toggleColor = value; if (isToggled) Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON")]
+        public Color HoverColor
+        {
+            get => hoverColor;
+            set { hoverColor = value; if (mouseDownColor == Color.Empty) Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON")]
+        public Color HoverBorderColor
+        {
+            get => hoverBorderColor;
+            set { hoverBorderColor = value; Invalidate(); }
+        }
 
         [Category("PARA MA EDIT BUTTON")]
         public int BorderSize
         {
-            get
-            {
-                return borderSize;
-            }
-            set
-            {
-                if (borderSize != value)
-                {
-                    borderSize = value;
-                    this.Invalidate();
-                }
-            }
+            get => borderSize;
+            set { borderSize = value; Invalidate(); }
         }
-
 
         [Category("PARA MA EDIT BUTTON")]
         public Color BorderColor
         {
-            get
-            {
-                return borderColor;
-            }
-            set
-            {
-                if (borderColor != value)
-                {
-                    borderColor = value;
-                    this.Invalidate();
-                }
-            }
+            get => borderColor;
+            set { borderColor = value; Invalidate(); }
         }
+
         [Category("PARA MA EDIT BUTTON")]
         public int BorderRadius
         {
-            get
-            {
-                return borderRadius;
-            }
-            set
-            {
-                int newValue = value <= this.Height ? value : this.Height;
-                if (borderRadius != newValue)
-                {
-                    borderRadius = newValue;
-                    this.Invalidate();
-                }
-            }
+            get => borderRadius;
+            set { borderRadius = Math.Min(value, Height); Invalidate(); }
         }
 
         [Category("PARA MA EDIT BUTTON")]
         public Color BackgroundColor
         {
-            get { return this.BackColor; }
-            set { this.BackColor = value; }
+            get => BackColor;
+            set => BackColor = value;
         }
 
         [Category("PARA MA EDIT BUTTON")]
         public Color TextColor
         {
-            get { return this.ForeColor; }
-            set { this.ForeColor = value; }
+            get => ForeColor;
+            set => ForeColor = value;
         }
 
         [Category("PARA MA EDIT BUTTON")]
-        public int TextPadding
+        public int PaddingX
         {
-            get => textPadding;
-            set { textPadding = value; Invalidate(); }
+            get => paddingX;
+            set { paddingX = value; Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON")]
+        public int PaddingY
+        {
+            get => paddingY;
+            set { paddingY = value; Invalidate(); }
+        }
+
+        [Category("PARA MA EDIT BUTTON")]
+        public int TextOffset
+        {
+            get => textOffset;
+            set { textOffset = value; Invalidate(); }
         }
 
         [Category("PARA MA EDIT BUTTON - IMAGE")]
         public Image ButtonImage
         {
-            get { return buttonImage; }
-            set { buttonImage = value; this.Invalidate(); }
+            get => buttonImage;
+            set { buttonImage = value; Invalidate(); }
         }
 
         [Category("PARA MA EDIT BUTTON - IMAGE")]
         public Size ImageSize
         {
-            get { return imageSize; }
-            set { imageSize = value; this.Invalidate(); }
+            get => imageSize;
+            set { imageSize = value; Invalidate(); }
         }
 
         [Category("PARA MA EDIT BUTTON - IMAGE")]
         public Point ImagePosition
         {
-            get { return imagePosition; }
-            set { imagePosition = value; this.Invalidate(); }
+            get => imagePosition;
+            set { imagePosition = value; Invalidate(); }
         }
 
         [Category("PARA MA EDIT BUTTON - IMAGE")]
         public Color ImageColor
         {
-            get { return imageColor; }
-            set { imageColor = value; this.Invalidate(); }
+            get => imageColor;
+            set { imageColor = value; Invalidate(); }
         }
-        
 
-
-        //Constructor
+        // Constructor
         public ButtonStyle()
         {
-            this.FlatStyle = FlatStyle.Flat;
+            FlatStyle = FlatStyle.Standard;
+            Size = new Size(150, 40);
+            BackColor = Color.WhiteSmoke;
+            ForeColor = Color.WhiteSmoke;
 
-            this.Size = new Size(150, 40);
-            this.BackColor = Color.Red;
-            this.ForeColor = Color.Black;
-            this.Resize += new EventHandler(Button_Resize);
+            Resize += (s, e) => { if (borderRadius > Height) borderRadius = Height; };
+            MouseEnter += (s, e) => { isHovered = true; Invalidate(); };
+            MouseLeave += (s, e) => { isHovered = false; Invalidate(); };
+            MouseDown += (s, e) => { isPressed = true; Invalidate(); };
+            MouseUp += (s, e) => { isPressed = false; Invalidate(); };
         }
 
-
-       
-        //Methods
         private GraphicsPath GetGraphicsPath(RectangleF rect, float radius)
         {
             GraphicsPath path = new GraphicsPath();
-            path.StartFigure();
             path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
             path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90);
             path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
@@ -164,143 +188,99 @@ namespace BATODA
             Bitmap recoloredImage = new Bitmap(originalImage.Width, originalImage.Height);
             using (Graphics g = Graphics.FromImage(recoloredImage))
             {
-                
-                float r = color.R / 255f;
-                float gC = color.G / 255f;
-                float b = color.B / 255f;
-
+                float r = color.R / 255f, gC = color.G / 255f, b = color.B / 255f;
                 ColorMatrix colorMatrix = new ColorMatrix(new float[][]
                 {
-                     new float[] {r, 0, 0, 0, 0},
-                     new float[] {0, gC, 0, 0, 0},
-                     new float[] {0, 0, b, 0, 0},
-                     new float[] {0, 0, 0, 1, 0},
-                     new float[] {0, 0, 0, 0, 1}
+                    new float[] {r, 0, 0, 0, 0},
+                    new float[] {0, gC, 0, 0, 0},
+                    new float[] {0, 0, b, 0, 0},
+                    new float[] {0, 0, 0, 1, 0},
+                    new float[] {0, 0, 0, 0, 1}
                 });
 
                 using (ImageAttributes attributes = new ImageAttributes())
                 {
                     attributes.SetColorMatrix(colorMatrix);
-
-                    g.DrawImage(
-                        originalImage,
-                        new Rectangle(0, 0, originalImage.Width, originalImage.Height),
-                        0, 0, originalImage.Width, originalImage.Height,
-                        GraphicsUnit.Pixel,
-                        attributes
-                    );
+                    g.DrawImage(originalImage, new Rectangle(0, 0, originalImage.Width, originalImage.Height),
+                        0, 0, originalImage.Width, originalImage.Height, GraphicsUnit.Pixel, attributes);
                 }
             }
             return recoloredImage;
         }
-
-
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            
-            base.OnPaint(pevent);
-
-            Rectangle rectSurface = this.ClientRectangle;
+            Rectangle rectSurface = ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
-            int smoothSize = borderSize > 0 ? borderSize : 2;
 
-            
+            Color currentBack = isPressed && isToggled
+                ? ControlPaint.Dark(toggleColor)
+                : isPressed
+                    ? mouseDownColor
+                    : isToggled
+                        ? toggleColor
+                        : isHovered
+                            ? hoverColor
+                            : BackColor;
+
+            Graphics g = pevent.Graphics;
+            using (SolidBrush brush = new SolidBrush(currentBack))
+                g.FillRectangle(brush, rectSurface);
+
             if (buttonImage != null)
             {
-                Image img = imageColor != Color.Transparent
-                    ? RecolorImage(buttonImage, imageColor)
-                    : buttonImage;
+                Image img = imageColor != Color.Transparent ? RecolorImage(buttonImage, imageColor) : buttonImage;
+                int imgX = paddingX + imagePosition.X;
+                int imgY = (Height - imageSize.Height) / 2 + imagePosition.Y + paddingY;
 
-               
-                int y = (this.Height - imageSize.Height) / 2;
-                Rectangle imageRect = new Rectangle(imagePosition.X, y, imageSize.Width, imageSize.Height);
+                Rectangle imageRect = new Rectangle(imgX, imgY, imageSize.Width, imageSize.Height);
+                g.DrawImage(img, imageRect);
 
-                pevent.Graphics.DrawImage(img, imageRect);
-            }
+                Rectangle textRect = new Rectangle(imageRect.Right + textOffset, paddingY,
+                    Width - imageRect.Right - textOffset - paddingX, Height - paddingY * 2);
 
-            
-            if (borderRadius > 2)
-            {
-                using (GraphicsPath pathSurface = GetGraphicsPath(rectSurface, borderRadius))
-                using (GraphicsPath pathBorder = GetGraphicsPath(rectBorder, borderRadius - borderSize))
-                using (Pen penSurface = new Pen(this.Parent?.BackColor ?? this.BackColor, smoothSize))
-                using (Pen penBorder = new Pen(borderColor, borderSize))
-                {
-                    pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                    this.Region = new Region(pathSurface);
-
-                    pevent.Graphics.DrawPath(penSurface, pathSurface);
-
-                    if (borderSize >= 1)
-                        pevent.Graphics.DrawPath(penBorder, pathBorder);
-                }
+                TextRenderer.DrawText(g, Text, Font, textRect, ForeColor,
+                   TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
             }
             else
             {
-                pevent.Graphics.SmoothingMode = SmoothingMode.None;
-                this.Region = new Region(rectSurface);
-
-                if (borderSize >= 1)
-                {
-                    using (Pen penBorder = new Pen(borderColor, borderSize))
-                    {
-                        penBorder.Alignment = PenAlignment.Inset;
-                        pevent.Graphics.DrawRectangle(penBorder, 0, 0, this.Width - 1, this.Height - 1);
-                    }
-                }
+                Rectangle textRect = new Rectangle(paddingX, paddingY,
+                    Width - paddingX * 2, Height - paddingY * 2);
+                TextRenderer.DrawText(g, Text, Font, textRect, ForeColor,
+                    TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
             }
-        }
 
+            if (borderRadius > 2)
+                using (GraphicsPath path = GetGraphicsPath(rectSurface, borderRadius))
+                    Region = new Region(path);
+
+            if (borderSize > 0)
+                using (Pen borderPen = new Pen(isHovered ? hoverBorderColor : borderColor, borderSize))
+                    g.DrawPath(borderPen, GetGraphicsPath(rectBorder, borderRadius - borderSize));
+        }
 
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            if (this.Parent != null)
-            {
-                this.Parent.BackColorChanged += Container_BackColorChanged;
-            }
+            if (Parent != null)
+                Parent.BackColorChanged += Container_BackColorChanged;
         }
 
         protected override void OnParentChanged(EventArgs e)
         {
-            if (this.Parent != null)
-            {
-                this.Parent.BackColorChanged -= Container_BackColorChanged;
-            }
+            if (Parent != null)
+                Parent.BackColorChanged -= Container_BackColorChanged;
             base.OnParentChanged(e);
-            if (this.Parent != null)
-            {
-                this.Parent.BackColorChanged += Container_BackColorChanged;
-            }
+            if (Parent != null)
+                Parent.BackColorChanged += Container_BackColorChanged;
         }
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && this.Parent != null)
-            {
-                this.Parent.BackColorChanged -= Container_BackColorChanged;
-            }
+            if (disposing && Parent != null)
+                Parent.BackColorChanged -= Container_BackColorChanged;
             base.Dispose(disposing);
         }
 
-        private void Container_BackColorChanged(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            this.ResumeLayout(false);
-
-        }
-        private void Button_Resize(object sender, EventArgs e)
-        {
-            if (borderRadius > this.Height)
-            {
-                borderRadius = this.Height;
-                this.Invalidate();
-            }
-        }
+        private void Container_BackColorChanged(object sender, EventArgs e) => Invalidate();
     }
 }

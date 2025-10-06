@@ -89,7 +89,6 @@
             this.TransferRecordButton.TabIndex = 21;
             this.TransferRecordButton.Text = "Transfer Records";
             this.TransferRecordButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordButton.TextPadding = 20;
             this.TransferRecordButton.UseVisualStyleBackColor = false;
             this.TransferRecordButton.Click += new System.EventHandler(this.TransferRecordButton_Click);
             // 
@@ -115,7 +114,6 @@
             this.RegisteredVehicleButton.TabIndex = 20;
             this.RegisteredVehicleButton.Text = "Vehicle Infromation";
             this.RegisteredVehicleButton.TextColor = System.Drawing.Color.Black;
-            this.RegisteredVehicleButton.TextPadding = 10;
             this.RegisteredVehicleButton.UseVisualStyleBackColor = false;
             this.RegisteredVehicleButton.Click += new System.EventHandler(this.RegisteredVehicleButton_Click);
             // 
@@ -141,7 +139,6 @@
             this.TransferVehicleButton.TabIndex = 19;
             this.TransferVehicleButton.Text = "Transfer Vehicle Registration";
             this.TransferVehicleButton.TextColor = System.Drawing.Color.Black;
-            this.TransferVehicleButton.TextPadding = 20;
             this.TransferVehicleButton.UseVisualStyleBackColor = false;
             this.TransferVehicleButton.Click += new System.EventHandler(this.TransferVehicleButton_Click);
             // 
@@ -211,7 +208,6 @@
             this.SearchButton.TabIndex = 35;
             this.SearchButton.Text = "Search";
             this.SearchButton.TextColor = System.Drawing.Color.Black;
-            this.SearchButton.TextPadding = 10;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
@@ -275,7 +271,6 @@
             this.ApplyButton.TabIndex = 28;
             this.ApplyButton.Text = "Apply Filter";
             this.ApplyButton.TextColor = System.Drawing.Color.Black;
-            this.ApplyButton.TextPadding = 10;
             this.ApplyButton.UseVisualStyleBackColor = false;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
@@ -360,7 +355,6 @@
             this.ClearButton.TabIndex = 29;
             this.ClearButton.Text = "Clear Filter";
             this.ClearButton.TextColor = System.Drawing.Color.Black;
-            this.ClearButton.TextPadding = 10;
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 

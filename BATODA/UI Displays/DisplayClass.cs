@@ -10,12 +10,12 @@ namespace BATODA
         private static Panel _mainPanel;
         private static Panel _miniPanel;
 
-        //ButtonColorManager
-        private static List<ButtonStyle> _buttons = new List<ButtonStyle>();
-        private static Color _defaultColor = Color.FromArgb(105, 100, 100);
-        private static Color _activeColor = Color.FromArgb(175, 40, 40);
+        private static readonly List<ButtonStyle> _buttons = new List<ButtonStyle>();
+        private static readonly Color _defaultColor = Color.FromArgb(105, 100, 100);
+        private static readonly Color _activeColor = Color.FromArgb(175, 40, 40);
 
-        // ========= Placeholder Methods: Text Box -  Combo Box  - Label =========
+
+        // ========= Placeholder Methods =========
         public static void SetPlaceholder(TextBox tb, string placeholder)
         {
             tb.Tag = placeholder;
@@ -40,6 +40,7 @@ namespace BATODA
                 }
             };
         }
+
         public static void SetPlaceholder(ComboBox cb, string placeholder, params string[] items)
         {
             cb.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -60,7 +61,7 @@ namespace BATODA
 
                 if (e.Index < 0 && cb.SelectedIndex == -1)
                 {
-                    text = (string)cb.Tag;   
+                    text = (string)cb.Tag;
                     color = Color.Gray;
                 }
                 else
@@ -77,13 +78,13 @@ namespace BATODA
                 e.DrawFocusRectangle();
             };
         }
+
         public static void ClearInputs(Control parent)
         {
             foreach (Control ctrl in parent.Controls)
             {
                 if (ctrl is TextBox tb)
                 {
-                    
                     if (tb.Tag is string placeholder)
                     {
                         tb.Text = placeholder;
@@ -96,11 +97,10 @@ namespace BATODA
                 }
                 else if (ctrl is ComboBox cb)
                 {
-                   
-                    if (cb.Tag is string placeholder)
+                    if (cb.Tag is string)
                     {
                         cb.SelectedIndex = -1;
-                        cb.Refresh(); 
+                        cb.Refresh();
                     }
                     else
                     {
@@ -108,7 +108,6 @@ namespace BATODA
                     }
                 }
 
-               
                 if (ctrl.HasChildren)
                 {
                     ClearInputs(ctrl);
@@ -116,21 +115,9 @@ namespace BATODA
             }
         }
 
-       
-
-
-
-
-        // ========= Display Methods - main - mini =========
-        public static void SetMainPanel(Panel panel)
-        {
-            _mainPanel = panel;
-        }
-
-        public static void SetMiniPanel(Panel panel)
-        {
-            _miniPanel = panel;
-        }
+        // ========= Display Methods =========
+        public static void SetMainPanel(Panel panel) => _mainPanel = panel;
+        public static void SetMiniPanel(Panel panel) => _miniPanel = panel;
 
         public static void ShowMain(UserControl uc)
         {
@@ -152,52 +139,26 @@ namespace BATODA
             _miniPanel.Controls.Add(uc);
         }
 
-
-        //========= hover method ===========
-        public static void AttachHoverEffect(Button button, Color enterColor, Color leaveColor)
+        // ========= Button Hover + Toggle =========
+        public static void SetButtonToggleColor(ButtonStyle btn, Color toggleColor, Color defaultColor, Color hoverColor)
         {
-            button.MouseEnter += (sender, e) =>
-            {
-                button.BackColor = enterColor;
-            };
-
-            button.MouseLeave += (sender, e) =>
-            {
-                button.BackColor = leaveColor;
-            };
-        }
-
-        public static void SetButtonToggleColor(Button btn, Color toggleColor, Color defaultColor, Color hoverColor)
-        {
-            bool isToggled = false;
+            btn.ToggleColor = toggleColor;
+            btn.BackColor = defaultColor;
+            btn.HoverColor = hoverColor;
+            btn.IsToggled = false;
 
             btn.Click += (s, e) =>
             {
-                isToggled = !isToggled;
-                btn.BackColor = isToggled ? toggleColor : defaultColor;
-            };
-
-            btn.MouseEnter += (s, e) =>
-            {
-                if (!isToggled)
-                    btn.BackColor = hoverColor;
-            };
-
-            btn.MouseLeave += (s, e) =>
-            {
-                if (!isToggled)
-                    btn.BackColor = defaultColor;
+                btn.IsToggled = !btn.IsToggled;
+                btn.Invalidate();
             };
         }
-
-
-        
 
         public static void Register(params ButtonStyle[] buttons)
         {
             _buttons.AddRange(buttons);
         }
-
+               
         public static void SetActive(ButtonStyle activeButton)
         {
             foreach (var btn in _buttons)
@@ -205,10 +166,8 @@ namespace BATODA
                 btn.ImageColor = _defaultColor;
                 btn.TextColor = _defaultColor;
             }
-
             activeButton.ImageColor = _activeColor;
             activeButton.TextColor = _activeColor;
         }
     }
 }
-

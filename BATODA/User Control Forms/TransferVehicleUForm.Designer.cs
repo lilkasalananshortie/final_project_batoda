@@ -79,7 +79,6 @@
             this.TransferRecordButton.TabIndex = 21;
             this.TransferRecordButton.Text = "Transfer Records";
             this.TransferRecordButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordButton.TextPadding = 20;
             this.TransferRecordButton.UseVisualStyleBackColor = false;
             this.TransferRecordButton.Click += new System.EventHandler(this.TransferRecordButton_Click);
             // 
@@ -105,7 +104,6 @@
             this.RegisteredVehicleButton.TabIndex = 20;
             this.RegisteredVehicleButton.Text = "Vehicle Information";
             this.RegisteredVehicleButton.TextColor = System.Drawing.Color.Black;
-            this.RegisteredVehicleButton.TextPadding = 10;
             this.RegisteredVehicleButton.UseVisualStyleBackColor = false;
             this.RegisteredVehicleButton.Click += new System.EventHandler(this.RegisteredVehicleButton_Click);
             // 
@@ -131,7 +129,6 @@
             this.TransferVehicleButton.TabIndex = 19;
             this.TransferVehicleButton.Text = "Transfer Vehicle Registration";
             this.TransferVehicleButton.TextColor = System.Drawing.Color.Black;
-            this.TransferVehicleButton.TextPadding = 20;
             this.TransferVehicleButton.UseVisualStyleBackColor = false;
             this.TransferVehicleButton.Click += new System.EventHandler(this.TransferVehicleButton_Click);
             // 
@@ -179,7 +176,6 @@
             this.CancelButton.TabIndex = 9;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.TextColor = System.Drawing.Color.Black;
-            this.CancelButton.TextPadding = 10;
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -203,8 +199,7 @@
             this.SaveButton.Size = new System.Drawing.Size(188, 54);
             this.SaveButton.TabIndex = 8;
             this.SaveButton.Text = "Save";
-            this.SaveButton.TextColor = System.Drawing.Color.Black;
-            this.SaveButton.TextPadding = 10;
+            this.SaveButton.TextColor = System.Drawing.Color.Black;   
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -239,7 +234,6 @@
             this.SearchButton.TabIndex = 5;
             this.SearchButton.Text = "Search";
             this.SearchButton.TextColor = System.Drawing.Color.Black;
-            this.SearchButton.TextPadding = 10;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 

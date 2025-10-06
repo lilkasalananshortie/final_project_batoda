@@ -93,7 +93,6 @@
             this.ARHButton.TabIndex = 21;
             this.ARHButton.Text = "Approved Request History";
             this.ARHButton.TextColor = System.Drawing.Color.Black;
-            this.ARHButton.TextPadding = 20;
             this.ARHButton.UseVisualStyleBackColor = false;
             this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
             // 
@@ -119,7 +118,6 @@
             this.AssistanceHomeButton.TabIndex = 20;
             this.AssistanceHomeButton.Text = "Assistance Dashboard";
             this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.TextPadding = 20;
             this.AssistanceHomeButton.UseVisualStyleBackColor = false;
             this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
             // 
@@ -145,7 +143,6 @@
             this.AssistanceRequestButton.TabIndex = 19;
             this.AssistanceRequestButton.Text = "Assistance Request";
             this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.TextPadding = 20;
             this.AssistanceRequestButton.UseVisualStyleBackColor = false;
             this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
             // 

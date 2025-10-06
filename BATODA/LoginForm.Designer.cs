@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.LoginButton = new BATODA.ButtonStyle();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LoadingPanel = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LoginButton = new BATODA.ButtonStyle();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,64 +60,6 @@
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(409, 501);
             this.LoginPanel.TabIndex = 0;
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BorderColor = System.Drawing.Color.White;
-            this.LoginButton.BorderRadius = 40;
-            this.LoginButton.BorderSize = 0;
-            this.LoginButton.FlatAppearance.BorderSize = 0;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginButton.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.Color.Transparent;
-            this.LoginButton.Location = new System.Drawing.Point(92, 341);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(245, 58);
-            this.LoginButton.TabIndex = 12;
-            this.LoginButton.Text = "Log In";
-            this.LoginButton.TextColor = System.Drawing.Color.Transparent;
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click_1);
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(132, 281);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(194, 29);
-            this.PasswordTextBox.TabIndex = 7;
-            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
-            // 
-            // UsernameTextBox
-            // 
-            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(132, 235);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(194, 29);
-            this.UsernameTextBox.TabIndex = 6;
-            this.UsernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Ubuntu", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(24, 160);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(373, 45);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Log In Your Account";
-            // 
-            // LoadingPanel
-            // 
-            this.LoadingPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LoadingPanel.Location = new System.Drawing.Point(12, 389);
-            this.LoadingPanel.Name = "LoadingPanel";
-            this.LoadingPanel.Size = new System.Drawing.Size(200, 100);
-            this.LoadingPanel.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -150,6 +92,44 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.Location = new System.Drawing.Point(132, 281);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(194, 29);
+            this.PasswordTextBox.TabIndex = 7;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
+            // 
+            // UsernameTextBox
+            // 
+            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTextBox.Location = new System.Drawing.Point(132, 235);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(194, 29);
+            this.UsernameTextBox.TabIndex = 6;
+            this.UsernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(24, 160);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(375, 42);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Log In Your Account";
+            // 
+            // LoadingPanel
+            // 
+            this.LoadingPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LoadingPanel.Location = new System.Drawing.Point(12, 389);
+            this.LoadingPanel.Name = "LoadingPanel";
+            this.LoadingPanel.Size = new System.Drawing.Size(200, 100);
+            this.LoadingPanel.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -159,6 +139,38 @@
             this.pictureBox1.Size = new System.Drawing.Size(1002, 504);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BorderColor = System.Drawing.Color.White;
+            this.LoginButton.BorderRadius = 40;
+            this.LoginButton.BorderSize = 0;
+            this.LoginButton.ButtonImage = null;
+            this.LoginButton.FlatAppearance.BorderSize = 0;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.White;
+            this.LoginButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.ImageColor = System.Drawing.Color.Black;
+            this.LoginButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.LoginButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.LoginButton.IsToggled = false;
+            this.LoginButton.Location = new System.Drawing.Point(92, 341);
+            this.LoginButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.PaddingX = 89;
+            this.LoginButton.PaddingY = 0;
+            this.LoginButton.Size = new System.Drawing.Size(245, 58);
+            this.LoginButton.TabIndex = 12;
+            this.LoginButton.Text = "Log In";
+            this.LoginButton.TextColor = System.Drawing.Color.White;
+            this.LoginButton.TextOffset = 0;
+            this.LoginButton.ToggleColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click_1);
             // 
             // LoginForm
             // 

@@ -110,7 +110,6 @@
             this.TransferMembershipButton.TabIndex = 21;
             this.TransferMembershipButton.Text = "Transfer Membership";
             this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.TextPadding = 20;
             this.TransferMembershipButton.UseVisualStyleBackColor = false;
             this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
             // 
@@ -136,7 +135,6 @@
             this.TransferRecordsButton.TabIndex = 20;
             this.TransferRecordsButton.Text = "Transfer History";
             this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.TextPadding = 20;
             this.TransferRecordsButton.UseVisualStyleBackColor = false;
             this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
             // 
@@ -162,7 +160,6 @@
             this.ManageMembersButton.TabIndex = 19;
             this.ManageMembersButton.Text = "Manage Members";
             this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.TextPadding = 20;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
@@ -232,7 +229,6 @@
             this.SaveButton.TabIndex = 7;
             this.SaveButton.Text = "Save";
             this.SaveButton.TextColor = System.Drawing.Color.Black;
-            this.SaveButton.TextPadding = 10;
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -257,7 +253,6 @@
             this.CancelButton.TabIndex = 6;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.TextColor = System.Drawing.Color.Black;
-            this.CancelButton.TextPadding = 10;
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -292,7 +287,6 @@
             this.SearchButton.TabIndex = 2;
             this.SearchButton.Text = "Search";
             this.SearchButton.TextColor = System.Drawing.Color.Black;
-            this.SearchButton.TextPadding = 10;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 

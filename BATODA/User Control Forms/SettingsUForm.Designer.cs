@@ -65,7 +65,6 @@
             this.BackupButton.TabIndex = 20;
             this.BackupButton.Text = "Back UP";
             this.BackupButton.TextColor = System.Drawing.Color.Black;
-            this.BackupButton.TextPadding = 20;
             this.BackupButton.UseVisualStyleBackColor = false;
             this.BackupButton.Click += new System.EventHandler(this.BackupButton_Click);
             // 
@@ -91,7 +90,6 @@
             this.LogOutButton.TabIndex = 21;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.TextColor = System.Drawing.Color.Black;
-            this.LogOutButton.TextPadding = 20;
             this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 

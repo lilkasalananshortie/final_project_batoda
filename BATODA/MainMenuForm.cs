@@ -25,12 +25,6 @@ namespace BATODA
             DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
         }
-
-
-
-        
-      
-
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             this.ActiveControl = null;
@@ -52,63 +46,43 @@ namespace BATODA
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
-        {
-           
-            
+        { 
             DisplayClass.SetActive(HomeButton);
             DisplayClass.ShowMain(new DashboardUForm());
-            TopPanelText.Text = "Dashboard";
-
-        
-        
+            TopPanelText.Text = "Dashboard"; 
         }
 
         private void MembersMainButton_Click(object sender, EventArgs e)
         {
-            
-
             DisplayClass.SetActive(MembersMainButton);
             DisplayClass.ShowMain(new MembersUForm());
             TopPanelText.Text = "Members Management";
-
         }
 
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
         {
-            
-
             DisplayClass.SetActive(RegisteredVehiclesButton);
             DisplayClass.ShowMain(new RegisteredVehicleUForm());
             TopPanelText.Text = "Registered Vehicles";
-
         }
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
         {
-          
             DisplayClass.SetActive(AssistanceLogButton);
             DisplayClass.ShowMain(new AssistanceLogUForm());
             TopPanelText.Text = "Manage Assistance";
-
-         
         }
         private void FinanceButton_Click(object sender, EventArgs e)
         {
-          
             DisplayClass.SetActive(FinanceButton);
             DisplayClass.ShowMain(new FinanceUForm());
             TopPanelText.Text = "Finance Management";
-
-          
         }
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-           
             DisplayClass.SetActive(SettingsButton);
             DisplayClass.ShowMain(new SettingsUForm());
             TopPanelText.Text = "Settings";
-
-          
         }
 
         private void AccountButton_Click(object sender, EventArgs e)

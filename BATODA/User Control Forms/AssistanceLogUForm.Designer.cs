@@ -87,7 +87,6 @@
             this.ARHButton.TabIndex = 21;
             this.ARHButton.Text = "Approved Request History";
             this.ARHButton.TextColor = System.Drawing.Color.Black;
-            this.ARHButton.TextPadding = 20;
             this.ARHButton.UseVisualStyleBackColor = false;
             this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
             // 
@@ -113,7 +112,6 @@
             this.AssistanceHomeButton.TabIndex = 20;
             this.AssistanceHomeButton.Text = "Assistance Dashboard";
             this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.TextPadding = 20;
             this.AssistanceHomeButton.UseVisualStyleBackColor = false;
             this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
             // 
@@ -139,7 +137,6 @@
             this.AssistanceRequestButton.TabIndex = 19;
             this.AssistanceRequestButton.Text = "Assistance Request";
             this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.TextPadding = 20;
             this.AssistanceRequestButton.UseVisualStyleBackColor = false;
             this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
             // 
@@ -204,7 +201,6 @@
             this.ApplyButton.TabIndex = 48;
             this.ApplyButton.Text = "Apply Filter";
             this.ApplyButton.TextColor = System.Drawing.Color.Black;
-            this.ApplyButton.TextPadding = 10;
             this.ApplyButton.UseVisualStyleBackColor = false;
             // 
             // SortComboBox
@@ -249,7 +245,6 @@
             this.ClearButton.TabIndex = 49;
             this.ClearButton.Text = "Clear Filter";
             this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextPadding = 10;
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
@@ -286,7 +281,6 @@
             this.ApplySearchButton.TabIndex = 44;
             this.ApplySearchButton.Text = "Apply";
             this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextPadding = 10;
             this.ApplySearchButton.UseVisualStyleBackColor = false;
             // 
             // label3

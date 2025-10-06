@@ -70,7 +70,6 @@
             this.TransferMembershipButton.TabIndex = 21;
             this.TransferMembershipButton.Text = "Transfer Membership";
             this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.TextPadding = 20;
             this.TransferMembershipButton.UseVisualStyleBackColor = false;
             this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
             // 
@@ -96,7 +95,6 @@
             this.TransferRecordsButton.TabIndex = 20;
             this.TransferRecordsButton.Text = "Transfer History";
             this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.TextPadding = 20;
             this.TransferRecordsButton.UseVisualStyleBackColor = false;
             this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
             // 
@@ -122,7 +120,6 @@
             this.ManageMembersButton.TabIndex = 19;
             this.ManageMembersButton.Text = "Manage Members";
             this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.TextPadding = 20;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 

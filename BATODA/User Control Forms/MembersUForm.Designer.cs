@@ -193,7 +193,6 @@
             this.TransferMembershipButton.TabIndex = 21;
             this.TransferMembershipButton.Text = "Transfer Membership";
             this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.TextPadding = 20;
             this.TransferMembershipButton.UseVisualStyleBackColor = false;
             this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
             // 
@@ -219,7 +218,6 @@
             this.TransferRecordsButton.TabIndex = 20;
             this.TransferRecordsButton.Text = "Transfer History";
             this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.TextPadding = 20;
             this.TransferRecordsButton.UseVisualStyleBackColor = false;
             this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
             // 
@@ -245,7 +243,6 @@
             this.ManageMembersButton.TabIndex = 19;
             this.ManageMembersButton.Text = "Manage Members";
             this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.TextPadding = 20;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
@@ -464,7 +461,6 @@
             this.SaveButton.TabIndex = 23;
             this.SaveButton.Text = "Save";
             this.SaveButton.TextColor = System.Drawing.Color.Black;
-            this.SaveButton.TextPadding = 10;
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -490,7 +486,6 @@
             this.CancelButton.TabIndex = 22;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.TextColor = System.Drawing.Color.Black;
-            this.CancelButton.TextPadding = 10;
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -516,7 +511,6 @@
             this.AddMemberButton.TabIndex = 21;
             this.AddMemberButton.Text = "Add Member";
             this.AddMemberButton.TextColor = System.Drawing.Color.White;
-            this.AddMemberButton.TextPadding = 10;
             this.AddMemberButton.UseVisualStyleBackColor = false;
             this.AddMemberButton.Click += new System.EventHandler(this.AddMemberButton_Click);
             // 
@@ -542,7 +536,6 @@
             this.ApplyButton.TabIndex = 14;
             this.ApplyButton.Text = "Apply Filter";
             this.ApplyButton.TextColor = System.Drawing.Color.Black;
-            this.ApplyButton.TextPadding = 10;
             this.ApplyButton.UseVisualStyleBackColor = false;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
@@ -568,7 +561,6 @@
             this.ClearButton.TabIndex = 15;
             this.ClearButton.Text = "Clear Filter";
             this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextPadding = 10;
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
