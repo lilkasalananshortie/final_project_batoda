@@ -13,7 +13,10 @@ namespace BATODA
         public DashboardForm()
         {
             InitializeComponent();
-            
+            this.MinimumSize = new Size(1920, 1080);
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+
 
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayPanel.Visible = true;
