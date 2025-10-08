@@ -91,7 +91,7 @@ namespace BATODA
             ToastManager.Info("Member Searchd");    // testing lang 
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
-            ClearButton.Enabled = false;
+            
             ApplyButton.Enabled = false;
             
         }
@@ -102,7 +102,7 @@ namespace BATODA
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
             ApplyButton.Enabled = true;
-            ClearButton.Enabled = true;
+            
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -111,10 +111,20 @@ namespace BATODA
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
             ApplyButton.Enabled = true;
-            ClearButton.Enabled = true;
+            
         }
 
         private void AddMemberPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

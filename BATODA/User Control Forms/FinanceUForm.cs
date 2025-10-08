@@ -56,6 +56,14 @@ namespace BATODA
             DisplayClass.ShowMain(new ButawUForm());
         }
 
-        
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PaymentStatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

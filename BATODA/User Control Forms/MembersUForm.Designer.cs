@@ -63,36 +63,63 @@
             this.CancelButton = new BATODA.ButtonStyle();
             this.AddMemberButton = new BATODA.ButtonStyle();
             this.ApplyButton = new BATODA.ButtonStyle();
-            this.ClearButton = new BATODA.ButtonStyle();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchTextBox
             // 
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(151, 255);
+            this.SearchTextBox.Location = new System.Drawing.Point(50, 6);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SearchTextBox.Multiline = true;
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(441, 47);
+            this.SearchTextBox.Size = new System.Drawing.Size(558, 34);
             this.SearchTextBox.TabIndex = 4;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 199);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(38, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 42);
+            this.label2.Size = new System.Drawing.Size(218, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "Search Member";
             // 
@@ -100,7 +127,7 @@
             // 
             this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(854, 292);
+            this.MemberTypeComboBox.Location = new System.Drawing.Point(704, 128);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
             this.MemberTypeComboBox.Size = new System.Drawing.Size(252, 41);
@@ -110,21 +137,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(667, 290);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(698, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 42);
+            this.label3.Size = new System.Drawing.Size(137, 31);
             this.label3.TabIndex = 7;
             this.label3.Text = "Filter by :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // OrderComboBox
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(1150, 290);
+            this.OrderComboBox.Location = new System.Drawing.Point(970, 128);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
-            this.OrderComboBox.Size = new System.Drawing.Size(188, 41);
+            this.OrderComboBox.Size = new System.Drawing.Size(252, 41);
             this.OrderComboBox.TabIndex = 8;
             this.OrderComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderComboBox_SelectedIndexChanged);
             // 
@@ -132,10 +160,10 @@
             // 
             this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Location = new System.Drawing.Point(1373, 290);
+            this.StatusComboBox.Location = new System.Drawing.Point(1230, 128);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(188, 41);
+            this.StatusComboBox.Size = new System.Drawing.Size(252, 41);
             this.StatusComboBox.TabIndex = 9;
             this.StatusComboBox.SelectedIndexChanged += new System.EventHandler(this.StatusComboBox_SelectedIndexChanged);
             // 
@@ -143,19 +171,19 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 457);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 204);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1521, 674);
+            this.dataGridView1.Size = new System.Drawing.Size(1505, 462);
             this.dataGridView1.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(847, 236);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(698, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(259, 42);
+            this.label5.Size = new System.Drawing.Size(191, 31);
             this.label5.TabIndex = 17;
             this.label5.Text = "Member Type";
             // 
@@ -273,25 +301,26 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1143, 236);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(965, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 42);
+            this.label4.Size = new System.Drawing.Size(68, 31);
             this.label4.TabIndex = 19;
             this.label4.Text = "Sort";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1366, 235);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(1227, 86);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 42);
+            this.label6.Size = new System.Drawing.Size(98, 31);
             this.label6.TabIndex = 20;
             this.label6.Text = "Status";
             // 
             // AddMemberPanel
             // 
+            this.AddMemberPanel.BackColor = System.Drawing.Color.DarkGray;
             this.AddMemberPanel.Controls.Add(this.pictureBox3);
             this.AddMemberPanel.Controls.Add(this.AddressRichTextBox);
             this.AddMemberPanel.Controls.Add(this.label13);
@@ -310,7 +339,7 @@
             this.AddMemberPanel.Controls.Add(this.label1);
             this.AddMemberPanel.Controls.Add(this.SaveButton);
             this.AddMemberPanel.Controls.Add(this.CancelButton);
-            this.AddMemberPanel.Location = new System.Drawing.Point(113, 419);
+            this.AddMemberPanel.Location = new System.Drawing.Point(154, 125);
             this.AddMemberPanel.Name = "AddMemberPanel";
             this.AddMemberPanel.Size = new System.Drawing.Size(1319, 676);
             this.AddMemberPanel.TabIndex = 22;
@@ -536,24 +565,24 @@
             this.AddMemberButton.BorderColor = System.Drawing.Color.Red;
             this.AddMemberButton.BorderRadius = 0;
             this.AddMemberButton.BorderSize = 0;
-            this.AddMemberButton.ButtonImage = null;
+            this.AddMemberButton.ButtonImage = global::BATODA.Properties.Resources.add_member;
             this.AddMemberButton.FlatAppearance.BorderSize = 0;
             this.AddMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.AddMemberButton.ForeColor = System.Drawing.Color.White;
             this.AddMemberButton.HoverBorderColor = System.Drawing.Color.Empty;
             this.AddMemberButton.HoverColor = System.Drawing.Color.Empty;
-            this.AddMemberButton.ImageColor = System.Drawing.Color.Black;
-            this.AddMemberButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.AddMemberButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.AddMemberButton.ImageColor = System.Drawing.Color.White;
+            this.AddMemberButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.AddMemberButton.ImageSize = new System.Drawing.Size(40, 40);
             this.AddMemberButton.IsToggled = false;
-            this.AddMemberButton.Location = new System.Drawing.Point(92, 320);
+            this.AddMemberButton.Location = new System.Drawing.Point(35, 127);
             this.AddMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddMemberButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AddMemberButton.Name = "AddMemberButton";
             this.AddMemberButton.PaddingX = 0;
             this.AddMemberButton.PaddingY = 0;
-            this.AddMemberButton.Size = new System.Drawing.Size(347, 55);
+            this.AddMemberButton.Size = new System.Drawing.Size(347, 45);
             this.AddMemberButton.TabIndex = 21;
             this.AddMemberButton.Text = "Add Member";
             this.AddMemberButton.TextColor = System.Drawing.Color.White;
@@ -572,118 +601,275 @@
             this.ApplyButton.ButtonImage = null;
             this.ApplyButton.FlatAppearance.BorderSize = 0;
             this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyButton.ForeColor = System.Drawing.Color.Black;
+            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.ApplyButton.ForeColor = System.Drawing.Color.White;
             this.ApplyButton.HoverBorderColor = System.Drawing.Color.Empty;
             this.ApplyButton.HoverColor = System.Drawing.Color.Empty;
             this.ApplyButton.ImageColor = System.Drawing.Color.Black;
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1383, 373);
+            this.ApplyButton.Location = new System.Drawing.Point(540, 126);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.PaddingX = 0;
             this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(188, 76);
+            this.ApplyButton.Size = new System.Drawing.Size(129, 45);
             this.ApplyButton.TabIndex = 14;
             this.ApplyButton.Text = "Apply Filter";
-            this.ApplyButton.TextColor = System.Drawing.Color.Black;
+            this.ApplyButton.TextColor = System.Drawing.Color.White;
             this.ApplyButton.TextOffset = 20;
             this.ApplyButton.ToggleColor = System.Drawing.Color.Empty;
             this.ApplyButton.UseVisualStyleBackColor = false;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderColor = System.Drawing.Color.Red;
-            this.ClearButton.BorderRadius = 0;
-            this.ClearButton.BorderSize = 0;
-            this.ClearButton.ButtonImage = null;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.HoverBorderColor = System.Drawing.Color.Empty;
-            this.ClearButton.HoverColor = System.Drawing.Color.Empty;
-            this.ClearButton.ImageColor = System.Drawing.Color.Black;
-            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1173, 373);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.PaddingX = 0;
-            this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(188, 76);
-            this.ClearButton.TabIndex = 15;
-            this.ClearButton.Text = "Clear Filter";
-            this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextOffset = 20;
-            this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ClearButton.UseVisualStyleBackColor = false;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(113, 262);
+            this.pictureBox4.Location = new System.Drawing.Point(8, 8);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 25;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::BATODA.Properties.Resources.filter_off;
-            this.pictureBox5.Location = new System.Drawing.Point(1567, 283);
+            this.pictureBox5.Location = new System.Drawing.Point(1488, 119);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 26;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox6
+            // panel1
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.pictureBox6.Image = global::BATODA.Properties.Resources.add_member;
-            this.pictureBox6.Location = new System.Drawing.Point(96, 322);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 27;
-            this.pictureBox6.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.AddMemberPanel);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.MemberTypeComboBox);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.AddMemberButton);
+            this.panel1.Controls.Add(this.OrderComboBox);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.StatusComboBox);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.ApplyButton);
+            this.panel1.Location = new System.Drawing.Point(25, 265);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1573, 661);
+            this.panel1.TabIndex = 28;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.SearchTextBox);
+            this.panel6.Controls.Add(this.pictureBox4);
+            this.panel6.Location = new System.Drawing.Point(42, 69);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(613, 50);
+            this.panel6.TabIndex = 28;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Location = new System.Drawing.Point(84, 93);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(350, 150);
+            this.panel2.TabIndex = 39;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.Total_Members_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(68, 74);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 39);
+            this.label14.TabIndex = 49;
+            this.label14.Text = "1000";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(28, 28);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(127, 24);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "Total Member";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Location = new System.Drawing.Point(453, 93);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(350, 150);
+            this.panel3.TabIndex = 40;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.active_member;
+            this.pictureBox1.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(68, 74);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 39);
+            this.label16.TabIndex = 52;
+            this.label16.Text = "1000";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(28, 28);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(61, 24);
+            this.label17.TabIndex = 51;
+            this.label17.Text = "Active";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.pictureBox7);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Location = new System.Drawing.Point(821, 93);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(350, 150);
+            this.panel4.TabIndex = 55;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Image = global::BATODA.Properties.Resources.inactive_member;
+            this.pictureBox7.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 54;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(68, 74);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(97, 39);
+            this.label18.TabIndex = 54;
+            this.label18.Text = "1000";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(28, 28);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(73, 24);
+            this.label19.TabIndex = 54;
+            this.label19.Text = "Inactive";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Controls.Add(this.pictureBox8);
+            this.panel5.Controls.Add(this.label20);
+            this.panel5.Controls.Add(this.label21);
+            this.panel5.Location = new System.Drawing.Point(1189, 93);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(350, 150);
+            this.panel5.TabIndex = 56;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Image = global::BATODA.Properties.Resources.suspended;
+            this.pictureBox8.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 55;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(68, 74);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(97, 39);
+            this.label20.TabIndex = 56;
+            this.label20.Text = "1000";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(28, 28);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(108, 24);
+            this.label21.TabIndex = 57;
+            this.label21.Text = "Suspended";
             // 
             // MembersUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.Controls.Add(this.AddMemberPanel);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.AddMemberButton);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.MembersTopPanel);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.ApplyButton);
-            this.Controls.Add(this.StatusComboBox);
-            this.Controls.Add(this.OrderComboBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.MemberTypeComboBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.SearchTextBox);
-            this.Controls.Add(this.ClearButton);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MembersUForm";
@@ -696,9 +882,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -710,7 +910,6 @@
         private System.Windows.Forms.ComboBox OrderComboBox;
         private System.Windows.Forms.ComboBox StatusComboBox;
         private ButtonStyle ApplyButton;
-        private ButtonStyle ClearButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel MembersTopPanel;
@@ -741,6 +940,23 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel6;
     }
 }
