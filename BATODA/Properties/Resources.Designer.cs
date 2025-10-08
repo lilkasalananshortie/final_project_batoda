@@ -183,6 +183,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bag_3257422 {
+            get {
+                object obj = ResourceManager.GetObject("bag_3257422", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brand {
             get {
                 object obj = ResourceManager.GetObject("brand", resourceCulture);

@@ -21,12 +21,6 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
-            
-
-            DisplayClass.SetButtonToggleColor(TransferRecordsButton, Color.DarkGray, Color.Gray, Color.Gray);
-            DisplayClass.SetButtonToggleColor(ManageMembersButton, Color.DarkGray, Color.Gray, Color.Gray);
-            DisplayClass.SetButtonToggleColor(TransferMembershipButton, Color.DarkGray, Color.Gray, Color.Gray);
-
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");

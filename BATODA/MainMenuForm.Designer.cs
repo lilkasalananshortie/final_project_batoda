@@ -41,17 +41,19 @@
             this.NotificationPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
-            this.NavBarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.HomeButton = new BATODA.ButtonStyle();
             this.MembersMainButton = new BATODA.ButtonStyle();
             this.RegisteredVehiclesButton = new BATODA.ButtonStyle();
             this.AssistanceLogButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
             this.SettingsButton = new BATODA.ButtonStyle();
+            this.NavBarPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
             this.NotificationPanel.SuspendLayout();
             this.NavBarPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -227,27 +229,11 @@
             this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(903, 522);
             this.CalendarXAccoutnContainerPanel.TabIndex = 4;
             // 
-            // NavBarPanel
-            // 
-            this.NavBarPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.NavBarPanel.Controls.Add(this.panel1);
-            this.NavBarPanel.Controls.Add(this.HomeButton);
-            this.NavBarPanel.Controls.Add(this.MembersMainButton);
-            this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
-            this.NavBarPanel.Controls.Add(this.AssistanceLogButton);
-            this.NavBarPanel.Controls.Add(this.FinanceButton);
-            this.NavBarPanel.Controls.Add(this.SettingsButton);
-            this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(300, 864);
-            this.NavBarPanel.TabIndex = 1;
-            // 
             // HomeButton
             // 
-            this.HomeButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.HomeButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.HomeButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.HomeButton.BackColor = System.Drawing.Color.White;
+            this.HomeButton.BackgroundColor = System.Drawing.Color.White;
+            this.HomeButton.BorderColor = System.Drawing.Color.White;
             this.HomeButton.BorderRadius = 0;
             this.HomeButton.BorderSize = 0;
             this.HomeButton.ButtonImage = global::BATODA.Properties.Resources.dashboard_icon;
@@ -278,9 +264,9 @@
             // 
             // MembersMainButton
             // 
-            this.MembersMainButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MembersMainButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.MembersMainButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.MembersMainButton.BackColor = System.Drawing.Color.White;
+            this.MembersMainButton.BackgroundColor = System.Drawing.Color.White;
+            this.MembersMainButton.BorderColor = System.Drawing.Color.White;
             this.MembersMainButton.BorderRadius = 0;
             this.MembersMainButton.BorderSize = 0;
             this.MembersMainButton.ButtonImage = global::BATODA.Properties.Resources.members_nav_bar_icon;
@@ -311,9 +297,9 @@
             // 
             // RegisteredVehiclesButton
             // 
-            this.RegisteredVehiclesButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.RegisteredVehiclesButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.RegisteredVehiclesButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.RegisteredVehiclesButton.BackColor = System.Drawing.Color.White;
+            this.RegisteredVehiclesButton.BackgroundColor = System.Drawing.Color.White;
+            this.RegisteredVehiclesButton.BorderColor = System.Drawing.Color.White;
             this.RegisteredVehiclesButton.BorderRadius = 0;
             this.RegisteredVehiclesButton.BorderSize = 0;
             this.RegisteredVehiclesButton.ButtonImage = global::BATODA.Properties.Resources.registered_vehicle_nav_bar_icon;
@@ -344,9 +330,9 @@
             // 
             // AssistanceLogButton
             // 
-            this.AssistanceLogButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AssistanceLogButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.AssistanceLogButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.AssistanceLogButton.BackColor = System.Drawing.Color.White;
+            this.AssistanceLogButton.BackgroundColor = System.Drawing.Color.White;
+            this.AssistanceLogButton.BorderColor = System.Drawing.Color.White;
             this.AssistanceLogButton.BorderRadius = 0;
             this.AssistanceLogButton.BorderSize = 0;
             this.AssistanceLogButton.ButtonImage = global::BATODA.Properties.Resources.assistance_log_nav_bar_icon;
@@ -376,9 +362,9 @@
             // 
             // FinanceButton
             // 
-            this.FinanceButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.FinanceButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.FinanceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FinanceButton.BackColor = System.Drawing.Color.White;
+            this.FinanceButton.BackgroundColor = System.Drawing.Color.White;
+            this.FinanceButton.BorderColor = System.Drawing.Color.White;
             this.FinanceButton.BorderRadius = 0;
             this.FinanceButton.BorderSize = 0;
             this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
@@ -399,7 +385,7 @@
             this.FinanceButton.PaddingY = 0;
             this.FinanceButton.Size = new System.Drawing.Size(300, 75);
             this.FinanceButton.TabIndex = 12;
-            this.FinanceButton.Text = "Finance\r\n";
+            this.FinanceButton.Text = "Finance";
             this.FinanceButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.FinanceButton.TextOffset = 20;
             this.FinanceButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
@@ -408,9 +394,9 @@
             // 
             // SettingsButton
             // 
-            this.SettingsButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SettingsButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.SettingsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.BackColor = System.Drawing.Color.White;
+            this.SettingsButton.BackgroundColor = System.Drawing.Color.White;
+            this.SettingsButton.BorderColor = System.Drawing.Color.White;
             this.SettingsButton.BorderRadius = 0;
             this.SettingsButton.BorderSize = 0;
             this.SettingsButton.ButtonImage = global::BATODA.Properties.Resources.settings_nav_bar_icon;
@@ -424,7 +410,7 @@
             this.SettingsButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.SettingsButton.ImageSize = new System.Drawing.Size(32, 32);
             this.SettingsButton.IsToggled = false;
-            this.SettingsButton.Location = new System.Drawing.Point(3, 566);
+            this.SettingsButton.Location = new System.Drawing.Point(0, 405);
             this.SettingsButton.MouseDownColor = System.Drawing.Color.LightGray;
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.PaddingX = 0;
@@ -438,13 +424,37 @@
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
+            // NavBarPanel
+            // 
+            this.NavBarPanel.BackColor = System.Drawing.Color.White;
+            this.NavBarPanel.Controls.Add(this.panel1);
+            this.NavBarPanel.Controls.Add(this.HomeButton);
+            this.NavBarPanel.Controls.Add(this.MembersMainButton);
+            this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
+            this.NavBarPanel.Controls.Add(this.AssistanceLogButton);
+            this.NavBarPanel.Controls.Add(this.FinanceButton);
+            this.NavBarPanel.Controls.Add(this.panel2);
+            this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
+            this.NavBarPanel.Name = "NavBarPanel";
+            this.NavBarPanel.Size = new System.Drawing.Size(300, 1044);
+            this.NavBarPanel.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.SettingsButton);
+            this.panel2.Location = new System.Drawing.Point(3, 566);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 609);
+            this.panel2.TabIndex = 14;
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.ClientSize = new System.Drawing.Size(1604, 1061);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);
@@ -463,6 +473,7 @@
             this.NotificationPanel.ResumeLayout(false);
             this.NotificationPanel.PerformLayout();
             this.NavBarPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -487,5 +498,6 @@
         private ButtonStyle NotificationButton;
         private ButtonStyle CalendarButton;
         private System.Windows.Forms.FlowLayoutPanel NavBarPanel;
+        private System.Windows.Forms.Panel panel2;
     }
 }

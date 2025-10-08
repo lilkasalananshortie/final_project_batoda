@@ -16,9 +16,9 @@ namespace BATODA
         {
             InitializeComponent();
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
-            DisplayClass.SetPlaceholder(PaymentStatusComboBox, "Status", "Paid", "Unpaid");
+            DisplayClass.SetPlaceholder(PaymentStatusComboBox, "Status", "Paid", "Unpaid", "Overdue");
             DisplayClass.SetPlaceholder(YearComboBox, "Year", "2025", "2024");
-            DisplayClass.SetPlaceholder(SortComboBox, "Sort By" , "Body Number", "ETC ETC");
+            DisplayClass.SetPlaceholder(SortComboBox, "Sort By" , "Body Number", "Name");
 
         }
 
@@ -56,8 +56,6 @@ namespace BATODA
             DisplayClass.ShowMain(new ButawUForm());
         }
 
-       
-
-       
+        
     }
 }
