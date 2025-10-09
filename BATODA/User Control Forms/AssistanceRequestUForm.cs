@@ -15,10 +15,7 @@ namespace BATODA
         public AssistanceRequestUForm()
         {
             InitializeComponent();
-            DisplayClass.SetPlaceholder(SearchTextBox, "Enter Tricycle Brand");
-            DisplayClass.SetPlaceholder(RequestTypeTextBox, "Enter Type of Request");
-            DisplayClass.SetPlaceholder(RequestReasonTextBox2, "Enter Reason For Request");
-
+            
 
 
         }
@@ -36,6 +33,11 @@ namespace BATODA
         private void ARHButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new ARHUForm());
+        }
+
+        private void AssistanceRequestUForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         

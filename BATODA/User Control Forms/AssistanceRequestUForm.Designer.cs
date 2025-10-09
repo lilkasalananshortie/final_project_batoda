@@ -29,31 +29,27 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.RequestTypeTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.RequestReasonTextBox2 = new System.Windows.Forms.TextBox();
-            this.SaveButton = new BATODA.ButtonStyle();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ARHButton = new BATODA.ButtonStyle();
             this.AssistanceHomeButton = new BATODA.ButtonStyle();
             this.AssistanceRequestButton = new BATODA.ButtonStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.SaveButton = new BATODA.ButtonStyle();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.BodyNumberTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ResultButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,186 +64,6 @@
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 25;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.SaveButton);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(14, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1595, 747);
-            this.panel1.TabIndex = 26;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 52);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 25);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Search Member";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(120, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(544, 42);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Pending Assistance Requests";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(39, 139);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1515, 461);
-            this.panel2.TabIndex = 45;
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.SearchTextBox);
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Location = new System.Drawing.Point(44, 93);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(664, 50);
-            this.panel7.TabIndex = 43;
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(12, 12);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(602, 24);
-            this.SearchTextBox.TabIndex = 42;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.RequestTypeTextBox);
-            this.panel3.Location = new System.Drawing.Point(807, 93);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(664, 50);
-            this.panel3.TabIndex = 43;
-            // 
-            // RequestTypeTextBox
-            // 
-            this.RequestTypeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RequestTypeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RequestTypeTextBox.Location = new System.Drawing.Point(12, 12);
-            this.RequestTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RequestTypeTextBox.Name = "RequestTypeTextBox";
-            this.RequestTypeTextBox.Size = new System.Drawing.Size(602, 24);
-            this.RequestTypeTextBox.TabIndex = 42;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(802, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 25);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Request Type *";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 25);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Reason For Request *";
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.RequestReasonTextBox2);
-            this.panel4.Location = new System.Drawing.Point(44, 226);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1427, 193);
-            this.panel4.TabIndex = 43;
-            // 
-            // RequestReasonTextBox2
-            // 
-            this.RequestReasonTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RequestReasonTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RequestReasonTextBox2.Location = new System.Drawing.Point(12, 10);
-            this.RequestReasonTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RequestReasonTextBox2.Multiline = true;
-            this.RequestReasonTextBox2.Name = "RequestReasonTextBox2";
-            this.RequestReasonTextBox2.Size = new System.Drawing.Size(1399, 166);
-            this.RequestReasonTextBox2.TabIndex = 42;
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.BorderRadius = 0;
-            this.SaveButton.BorderSize = 0;
-            this.SaveButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.SaveButton.FlatAppearance.BorderSize = 0;
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.SaveButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.SaveButton.ImageColor = System.Drawing.Color.White;
-            this.SaveButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SaveButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.SaveButton.IsToggled = false;
-            this.SaveButton.Location = new System.Drawing.Point(1309, 641);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SaveButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.PaddingX = 0;
-            this.SaveButton.PaddingY = 0;
-            this.SaveButton.Size = new System.Drawing.Size(245, 55);
-            this.SaveButton.TabIndex = 46;
-            this.SaveButton.Text = "Submit Request";
-            this.SaveButton.TextColor = System.Drawing.Color.White;
-            this.SaveButton.TextOffset = 5;
-            this.SaveButton.ToggleColor = System.Drawing.Color.Empty;
-            this.SaveButton.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(620, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Image = global::BATODA.Properties.Resources.request;
-            this.pictureBox3.Location = new System.Drawing.Point(39, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 44;
-            this.pictureBox3.TabStop = false;
             // 
             // ARHButton
             // 
@@ -348,6 +164,189 @@
             this.AssistanceRequestButton.UseVisualStyleBackColor = false;
             this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.SaveButton);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(14, 83);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1595, 832);
+            this.panel1.TabIndex = 26;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BorderRadius = 0;
+            this.SaveButton.BorderSize = 0;
+            this.SaveButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.ForeColor = System.Drawing.Color.White;
+            this.SaveButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SaveButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.SaveButton.ImageColor = System.Drawing.Color.White;
+            this.SaveButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SaveButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SaveButton.IsToggled = false;
+            this.SaveButton.Location = new System.Drawing.Point(1309, 751);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.PaddingX = 0;
+            this.SaveButton.PaddingY = 0;
+            this.SaveButton.Size = new System.Drawing.Size(245, 55);
+            this.SaveButton.TabIndex = 46;
+            this.SaveButton.Text = "Submit Request";
+            this.SaveButton.TextColor = System.Drawing.Color.White;
+            this.SaveButton.TextOffset = 5;
+            this.SaveButton.ToggleColor = System.Drawing.Color.Empty;
+            this.SaveButton.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.ResultButton);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Location = new System.Drawing.Point(39, 139);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1515, 594);
+            this.panel2.TabIndex = 45;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Location = new System.Drawing.Point(87, 199);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(583, 50);
+            this.panel3.TabIndex = 47;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 14);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(575, 21);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(82, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 29);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Type of Aid*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(68, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 29);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Body Number*";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.BodyNumberTextBox);
+            this.panel6.Location = new System.Drawing.Point(87, 72);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(583, 50);
+            this.panel6.TabIndex = 46;
+            // 
+            // BodyNumberTextBox
+            // 
+            this.BodyNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BodyNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyNumberTextBox.Location = new System.Drawing.Point(3, 10);
+            this.BodyNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BodyNumberTextBox.Name = "BodyNumberTextBox";
+            this.BodyNumberTextBox.Size = new System.Drawing.Size(575, 24);
+            this.BodyNumberTextBox.TabIndex = 28;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Image = global::BATODA.Properties.Resources.request;
+            this.pictureBox3.Location = new System.Drawing.Point(39, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(120, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(544, 42);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Pending Assistance Requests";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(782, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(676, 203);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "AUTO FILL YUNG MGA DETAILS NETO PARA HINDI NA \r\nMANUAL NA MAG INPUT NG INFOS\r\n\r\nP" +
+    "AKI LAGYAN NG PLACE HOLDER FOR NAME LAST NAME \r\n\r\n\r\nYUNG RIGHT SIDE LANG ";
+            // 
+            // ResultButton
+            // 
+            this.ResultButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResultButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResultButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResultButton.BorderRadius = 0;
+            this.ResultButton.BorderSize = 0;
+            this.ResultButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.ResultButton.FlatAppearance.BorderSize = 0;
+            this.ResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultButton.ForeColor = System.Drawing.Color.White;
+            this.ResultButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ResultButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ResultButton.ImageColor = System.Drawing.Color.White;
+            this.ResultButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ResultButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ResultButton.IsToggled = false;
+            this.ResultButton.Location = new System.Drawing.Point(425, 292);
+            this.ResultButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ResultButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResultButton.Name = "ResultButton";
+            this.ResultButton.PaddingX = 0;
+            this.ResultButton.PaddingY = 0;
+            this.ResultButton.Size = new System.Drawing.Size(245, 55);
+            this.ResultButton.TabIndex = 50;
+            this.ResultButton.Text = "See Result\r\n";
+            this.ResultButton.TextColor = System.Drawing.Color.White;
+            this.ResultButton.TextOffset = 5;
+            this.ResultButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ResultButton.UseVisualStyleBackColor = false;
+            // 
             // AssistanceRequestUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,18 +356,15 @@
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "AssistanceRequestUForm";
             this.Size = new System.Drawing.Size(1878, 940);
+            this.Load += new System.EventHandler(this.AssistanceRequestUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -381,19 +377,17 @@
         private ButtonStyle ARHButton;
         private System.Windows.Forms.Panel MembersTopPanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox RequestTypeTextBox;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox SearchTextBox;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox RequestReasonTextBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ButtonStyle SaveButton;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox BodyNumberTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private ButtonStyle ResultButton;
+        private System.Windows.Forms.Label label4;
     }
 }
