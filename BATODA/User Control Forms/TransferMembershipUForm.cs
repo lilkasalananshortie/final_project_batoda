@@ -16,12 +16,24 @@ namespace BATODA
         public TransferMembershipUForm()
         {
             InitializeComponent();
+
+            
+            DisplayClass.SetPlaceholder(BodyNumberTextBox, "Enter Body Number");
+            DisplayClass.SetPlaceholder(ContactNumTextBox, "Enter Cellphone Number");
+            DisplayClass.SetPlaceholder(VehicleInfoTextBox, "Enter Unit Brand");
+            DisplayClass.SetPlaceholder(FirstNameTextBox, "Enter First Name");
+            DisplayClass.SetPlaceholder(LastNameTextBox, "Enter Last Name");
+            DisplayClass.SetPlaceholder(MiddleNameTextBox, "Enter Middle Name");
+            DisplayClass.SetPlaceholder(PlateNumberTextBox, "Enter Plate Number");
+            DisplayClass.SetPlaceholder(MTypeComboBox, "Member Type", "Operator", "Driver");
+            DisplayClass.SetPlaceholder(MemberStatuscomboBox, "Status", "Active", "Inactive");
+            DisplayClass.SetPlaceholder(RTransferTextBox, "Enter Transfer Description");
+            
         }
 
         private void TransferMembershipUForm_Load(object sender, EventArgs e)
         {
-            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
-            TransferOperationPanel.Visible = false;
+           
         }
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
@@ -41,8 +53,7 @@ namespace BATODA
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            TransferOperationPanel.Visible =! TransferOperationPanel.Visible;
-            SearchButton.Enabled = false;
+            
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
@@ -52,18 +63,18 @@ namespace BATODA
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            TransferOperationPanel.Visible = false;
-            SearchButton.Enabled = true;
-            ToastManager.Warning("Transfership Cancelled");
+            
+
             
 
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            TransferOperationPanel.Visible = false;
-            SearchButton.Enabled = true;
+            
             ToastManager.Success("Membership Transferred Successfully");
         }
+
+        
     }
 }

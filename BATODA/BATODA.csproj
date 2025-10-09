@@ -451,5 +451,17 @@
   <ItemGroup>
     <None Include="Resources\bag_3257422.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer-data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trisokol.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

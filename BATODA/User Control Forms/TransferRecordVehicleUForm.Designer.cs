@@ -29,24 +29,100 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.TransferRecordButton = new BATODA.ButtonStyle();
-            this.RegisteredVehicleButton = new BATODA.ButtonStyle();
-            this.TransferVehicleButton = new BATODA.ButtonStyle();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.RegisteredVehicleButton = new BATODA.ButtonStyle();
+            this.TransferRecordButton = new BATODA.ButtonStyle();
+            this.TransferVehicleButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MembersTopPanel.Controls.Add(this.TransferRecordButton);
             this.MembersTopPanel.Controls.Add(this.RegisteredVehicleButton);
+            this.MembersTopPanel.Controls.Add(this.TransferRecordButton);
             this.MembersTopPanel.Controls.Add(this.TransferVehicleButton);
             this.MembersTopPanel.Location = new System.Drawing.Point(14, 14);
             this.MembersTopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 21;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.pictureBox7);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Location = new System.Drawing.Point(18, 88);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1585, 100);
+            this.panel7.TabIndex = 49;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(87, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(299, 42);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Transfer History";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Location = new System.Drawing.Point(18, 188);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1585, 623);
+            this.panel1.TabIndex = 48;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BATODA.Properties.Resources.history;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // RegisteredVehicleButton
+            // 
+            this.RegisteredVehicleButton.BackColor = System.Drawing.Color.White;
+            this.RegisteredVehicleButton.BackgroundColor = System.Drawing.Color.White;
+            this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.White;
+            this.RegisteredVehicleButton.BorderRadius = 0;
+            this.RegisteredVehicleButton.BorderSize = 0;
+            this.RegisteredVehicleButton.ButtonImage = global::BATODA.Properties.Resources.trisokol;
+            this.RegisteredVehicleButton.FlatAppearance.BorderSize = 0;
+            this.RegisteredVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisteredVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisteredVehicleButton.ForeColor = System.Drawing.Color.Black;
+            this.RegisteredVehicleButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.RegisteredVehicleButton.HoverColor = System.Drawing.Color.Silver;
+            this.RegisteredVehicleButton.ImageColor = System.Drawing.Color.Transparent;
+            this.RegisteredVehicleButton.ImagePosition = new System.Drawing.Point(131, 0);
+            this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.RegisteredVehicleButton.IsToggled = false;
+            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 7);
+            this.RegisteredVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RegisteredVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
+            this.RegisteredVehicleButton.PaddingX = 0;
+            this.RegisteredVehicleButton.PaddingY = 0;
+            this.RegisteredVehicleButton.Size = new System.Drawing.Size(525, 49);
+            this.RegisteredVehicleButton.TabIndex = 22;
+            this.RegisteredVehicleButton.Text = "Vehicle Infromation";
+            this.RegisteredVehicleButton.TextColor = System.Drawing.Color.Black;
+            this.RegisteredVehicleButton.TextOffset = 20;
+            this.RegisteredVehicleButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.RegisteredVehicleButton.UseVisualStyleBackColor = false;
             // 
             // TransferRecordButton
             // 
@@ -81,39 +157,6 @@
             this.TransferRecordButton.UseVisualStyleBackColor = false;
             this.TransferRecordButton.Click += new System.EventHandler(this.TransferRecordButton_Click);
             // 
-            // RegisteredVehicleButton
-            // 
-            this.RegisteredVehicleButton.BackColor = System.Drawing.Color.White;
-            this.RegisteredVehicleButton.BackgroundColor = System.Drawing.Color.White;
-            this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.White;
-            this.RegisteredVehicleButton.BorderRadius = 0;
-            this.RegisteredVehicleButton.BorderSize = 0;
-            this.RegisteredVehicleButton.ButtonImage = global::BATODA.Properties.Resources.tricycle_icon;
-            this.RegisteredVehicleButton.FlatAppearance.BorderSize = 0;
-            this.RegisteredVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisteredVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisteredVehicleButton.ForeColor = System.Drawing.Color.Black;
-            this.RegisteredVehicleButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.RegisteredVehicleButton.HoverColor = System.Drawing.Color.Silver;
-            this.RegisteredVehicleButton.ImageColor = System.Drawing.Color.White;
-            this.RegisteredVehicleButton.ImagePosition = new System.Drawing.Point(131, 0);
-            this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.RegisteredVehicleButton.IsToggled = false;
-            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 7);
-            this.RegisteredVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RegisteredVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
-            this.RegisteredVehicleButton.PaddingX = 0;
-            this.RegisteredVehicleButton.PaddingY = 0;
-            this.RegisteredVehicleButton.Size = new System.Drawing.Size(525, 49);
-            this.RegisteredVehicleButton.TabIndex = 20;
-            this.RegisteredVehicleButton.Text = "Vehicle Information";
-            this.RegisteredVehicleButton.TextColor = System.Drawing.Color.Black;
-            this.RegisteredVehicleButton.TextOffset = 20;
-            this.RegisteredVehicleButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.RegisteredVehicleButton.UseVisualStyleBackColor = false;
-            this.RegisteredVehicleButton.Click += new System.EventHandler(this.RegisteredVehicleButton_Click);
-            // 
             // TransferVehicleButton
             // 
             this.TransferVehicleButton.BackColor = System.Drawing.Color.White;
@@ -147,25 +190,21 @@
             this.TransferVehicleButton.UseVisualStyleBackColor = false;
             this.TransferVehicleButton.Click += new System.EventHandler(this.TransferVehicleButton_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(16, 154);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1532, 690);
-            this.panel1.TabIndex = 22;
-            // 
             // TransferRecordVehicleUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "TransferRecordVehicleUForm";
-            this.Size = new System.Drawing.Size(1297, 870);
+            this.Size = new System.Drawing.Size(1659, 870);
             this.Load += new System.EventHandler(this.TransferRecordVehicleUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,8 +213,11 @@
 
         private System.Windows.Forms.Panel MembersTopPanel;
         private ButtonStyle TransferRecordButton;
-        private ButtonStyle RegisteredVehicleButton;
         private ButtonStyle TransferVehicleButton;
+        private ButtonStyle RegisteredVehicleButton;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
     }
 }

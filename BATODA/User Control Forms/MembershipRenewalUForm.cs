@@ -16,9 +16,7 @@ namespace BATODA
         {
             InitializeComponent();
 
-            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
-            DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive", "Suspended");
-            DisplayClass.SetPlaceholder(MemberTypeComboBox, "Type", "Driver", "Operator");
+            
         }
 
         private void FinanceButton_Click(object sender, EventArgs e)

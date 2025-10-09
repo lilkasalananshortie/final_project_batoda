@@ -15,11 +15,17 @@ namespace BATODA
         public TransferVehicleUForm()
         {
             InitializeComponent();
+            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
+            DisplayClass.SetPlaceholder(NewTeicycleTextBox, "Enter Tricycle Brand");
+            DisplayClass.SetPlaceholder(NewPlateNoTextBox, "Enter Tricycle Plate Number");
+            DisplayClass.SetPlaceholder(ReasonForChangeTextBox, "Enter Change Description");
+
+
+
         }
         private void TransferVehicleUForm_Load(object sender, EventArgs e)
         {
-            DisplayClass.SetPlaceholder(SearchTextBox, "Search Body Number");
-            TransferPanel.Visible = false;
+            
         }
 
         private void RegisteredVehicleButton_Click(object sender, EventArgs e)
@@ -39,20 +45,17 @@ namespace BATODA
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            TransferPanel.Visible = true;
-            SearchButton.Enabled = false;
+            
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            TransferPanel.Visible = false;
-            SearchButton.Enabled = true;
+            
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            TransferPanel.Visible = false;
-            SearchButton.Enabled = true;
+            
         }
     }
 }

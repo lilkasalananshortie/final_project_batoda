@@ -31,6 +31,9 @@ namespace BATODA
             DisplayClass.SetPlaceholder(FirstNameTextBox, "Enter First Name");
             DisplayClass.SetPlaceholder(LastNameTextBox, "Enter Last Name");
             DisplayClass.SetPlaceholder(MiddleNameTextBox, "Enter Middle Name");
+            DisplayClass.SetPlaceholder(PlateNumberTextBox, "Enter Plate Number");
+            DisplayClass.SetPlaceholder(MTypeComboBox, "Member Type", "Operator", "Driver");
+            DisplayClass.SetPlaceholder(MemberStatuscomboBox, "Status", "Active", "Inactive");
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
@@ -117,16 +120,6 @@ namespace BATODA
         private void AddMemberPanel_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        } 
     }
 }

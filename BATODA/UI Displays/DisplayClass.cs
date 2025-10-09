@@ -143,7 +143,7 @@ namespace BATODA
         public static void SetButtonToggleColor(ButtonStyle btn, Color toggleColor, Color defaultColor, Color hoverColor)
         {
             btn.ToggleColor = toggleColor;
-            btn.BackColor = defaultColor;
+            btn.BackColor = Color.White;
             btn.HoverColor = hoverColor;
             btn.IsToggled = false;
 

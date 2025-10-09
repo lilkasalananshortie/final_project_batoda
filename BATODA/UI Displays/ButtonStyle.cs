@@ -211,6 +211,7 @@ namespace BATODA
         {
             Rectangle rectSurface = ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
+            int smoothSize = borderSize > 0 ? borderSize : 2;
 
             Color currentBack = isPressed && isToggled
                 ? ControlPaint.Dark(toggleColor)
@@ -228,6 +229,7 @@ namespace BATODA
 
             if (buttonImage != null)
             {
+                
                 Image img = imageColor != Color.Transparent ? RecolorImage(buttonImage, imageColor) : buttonImage;
                 int imgX = paddingX + imagePosition.X;
                 int imgY = (Height - imageSize.Height) / 2 + imagePosition.Y + paddingY;
@@ -235,27 +237,66 @@ namespace BATODA
                 Rectangle imageRect = new Rectangle(imgX, imgY, imageSize.Width, imageSize.Height);
                 g.DrawImage(img, imageRect);
 
-                Rectangle textRect = new Rectangle(imageRect.Right + textOffset, paddingY,
-                    Width - imageRect.Right - textOffset - paddingX, Height - paddingY * 2);
+                
+                Rectangle textRect = new Rectangle(
+                    imageRect.Right + textOffset, paddingY,
+                    Width - imageRect.Right - textOffset - paddingX,
+                    Height - paddingY * 2
+                );
 
-                TextRenderer.DrawText(g, Text, Font, textRect, ForeColor,
-                   TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
-            }
-            else
-            {
-                Rectangle textRect = new Rectangle(paddingX, paddingY,
-                    Width - paddingX * 2, Height - paddingY * 2);
                 TextRenderer.DrawText(g, Text, Font, textRect, ForeColor,
                     TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
             }
+            else
+            {
+                
+                Rectangle textRect = new Rectangle(
+                    paddingX, paddingY,
+                    Width - paddingX * 2,
+                    Height - paddingY * 2
+                );
+
+                TextRenderer.DrawText(g, Text, Font, textRect, ForeColor,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+            }
+
+
+
 
             if (borderRadius > 2)
-                using (GraphicsPath path = GetGraphicsPath(rectSurface, borderRadius))
-                    Region = new Region(path);
+            {
+                using (GraphicsPath pathSurface = GetGraphicsPath(rectSurface, borderRadius))
+                using (GraphicsPath pathBorder = GetGraphicsPath(rectBorder, borderRadius - borderSize))
+                using (Pen penSurface = new Pen(this.Parent?.BackColor ?? this.BackColor, smoothSize))
+                using (Pen penBorder = new Pen(borderColor, borderSize))
+                {
+                    pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-            if (borderSize > 0)
-                using (Pen borderPen = new Pen(isHovered ? hoverBorderColor : borderColor, borderSize))
-                    g.DrawPath(borderPen, GetGraphicsPath(rectBorder, borderRadius - borderSize));
+                    // Button surface
+                    this.Region = new Region(pathSurface);
+
+                    // Draw surface border for HD result
+                    pevent.Graphics.DrawPath(penSurface, pathSurface);
+
+                    // Button border
+                    if (borderSize >= 1)
+                        pevent.Graphics.DrawPath(penBorder, pathBorder);
+                }
+            }
+            else
+            {
+                pevent.Graphics.SmoothingMode = SmoothingMode.None;
+                this.Region = new Region(rectSurface);
+
+                if (borderSize >= 1)
+                {
+                    using (Pen penBorder = new Pen(borderColor, borderSize))
+                    {
+                        penBorder.Alignment = PenAlignment.Inset;
+                        pevent.Graphics.DrawRectangle(penBorder, 0, 0, this.Width - 1, this.Height - 1);
+                    }
+                }
+            }
         }
 
         protected override void OnHandleCreated(EventArgs e)
