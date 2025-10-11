@@ -28,7 +28,7 @@ namespace BATODA
         {
             this.ActiveControl = null;
             DisplayClass.ShowMain(new DashboardUForm());
-            TopPanelText.Text = "Dashboard";
+            TopPanelText.Text = "DASHBOARD";
 
             DisplayClass.Register
             (
@@ -48,40 +48,40 @@ namespace BATODA
         { 
             DisplayClass.SetActive(HomeButton);
             DisplayClass.ShowMain(new DashboardUForm());
-            TopPanelText.Text = "Dashboard"; 
+            TopPanelText.Text = "DASHBOARD"; 
         }
 
         private void MembersMainButton_Click(object sender, EventArgs e)
         {
             DisplayClass.SetActive(MembersMainButton);
             DisplayClass.ShowMain(new MembersUForm());
-            TopPanelText.Text = "Members Management";
+            TopPanelText.Text = "MEMBER MANAGEMENT";
         }
 
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
         {
             DisplayClass.SetActive(RegisteredVehiclesButton);
             DisplayClass.ShowMain(new RegisteredVehicleUForm());
-            TopPanelText.Text = "Registered Vehicles";
+            TopPanelText.Text = "MANAGE VEHICLE";
         }
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
         {
             DisplayClass.SetActive(AssistanceLogButton);
             DisplayClass.ShowMain(new AssistanceLogUForm());
-            TopPanelText.Text = "Manage Assistance";
+            TopPanelText.Text = "MANAGE ASSISTANCE";
         }
         private void FinanceButton_Click(object sender, EventArgs e)
         {
             DisplayClass.SetActive(FinanceButton);
             DisplayClass.ShowMain(new FinanceUForm());
-            TopPanelText.Text = "Finance Management";
+            TopPanelText.Text = "FINANCE MANAGEMENT";
         }
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             DisplayClass.SetActive(SettingsButton);
             DisplayClass.ShowMain(new SettingsUForm());
-            TopPanelText.Text = "Settings";
+            TopPanelText.Text = "SETTINGS";
         }
 
         private void AccountButton_Click(object sender, EventArgs e)

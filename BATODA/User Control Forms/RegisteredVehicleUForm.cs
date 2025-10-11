@@ -42,18 +42,20 @@ namespace BATODA
             DisplayClass.ShowMain(new TransferRecordVehicleUForm());
         }
 
-        private void ClearButton_Click(object sender, EventArgs e)
+        private void ClearButton_Click_1(object sender, EventArgs e)
         {
             DisplayClass.ClearInputs(this);
             ToastManager.Success("Filters Cleared Successfully!");
         }
 
-        private void ApplyButton_Click(object sender, EventArgs e)
+        
+
+        private void AapplyButtton_Click(object sender, EventArgs e)
         {
             ToastManager.Success("Filters Applied!");
         }
 
-        private void SearchButton_Click(object sender, EventArgs e)
+        private void ApplyearchButton_Click(object sender, EventArgs e)
         {
 
         }

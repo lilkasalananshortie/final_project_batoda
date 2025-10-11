@@ -63,7 +63,7 @@
             this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
             this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
             this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
@@ -96,7 +96,7 @@
             this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
             this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
@@ -129,7 +129,7 @@
             this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
             this.ManageMembersButton.FlatAppearance.BorderSize = 0;
             this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
             this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;

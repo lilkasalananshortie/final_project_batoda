@@ -63,7 +63,7 @@
             this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.ARHButton.FlatAppearance.BorderSize = 0;
             this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ARHButton.ForeColor = System.Drawing.Color.Black;
             this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.ARHButton.HoverColor = System.Drawing.Color.Silver;
@@ -96,7 +96,7 @@
             this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
             this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
             this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
             this.AssistanceHomeButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.AssistanceHomeButton.HoverColor = System.Drawing.Color.Silver;
@@ -129,7 +129,7 @@
             this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
             this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
             this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
             this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;

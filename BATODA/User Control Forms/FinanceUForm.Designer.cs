@@ -33,6 +33,7 @@
             this.RenewalHistoryButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ApplyButton = new BATODA.ButtonStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -42,11 +43,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.ClearButton = new BATODA.ButtonStyle();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.ApplySearchButton = new BATODA.ButtonStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -82,7 +83,6 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -211,10 +211,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.ApplyButton);
             this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.ClearButton);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.ApplySearchButton);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
@@ -228,6 +229,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1573, 661);
             this.panel1.TabIndex = 22;
+            // 
+            // ApplyButton
+            // 
+            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplyButton.BorderRadius = 0;
+            this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.ButtonImage = null;
+            this.ApplyButton.FlatAppearance.BorderSize = 0;
+            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.ForeColor = System.Drawing.Color.White;
+            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplyButton.IsToggled = false;
+            this.ApplyButton.Location = new System.Drawing.Point(1338, 172);
+            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.PaddingX = 0;
+            this.ApplyButton.PaddingY = 0;
+            this.ApplyButton.Size = new System.Drawing.Size(108, 33);
+            this.ApplyButton.TabIndex = 50;
+            this.ApplyButton.Text = "Apply Filter";
+            this.ApplyButton.TextColor = System.Drawing.Color.White;
+            this.ApplyButton.TextOffset = 20;
+            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.UseVisualStyleBackColor = false;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // panel7
             // 
@@ -329,6 +363,39 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "Tax (Butaw Overview) - 2025";
             // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderColor = System.Drawing.Color.Red;
+            this.ClearButton.BorderRadius = 0;
+            this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.ImageColor = System.Drawing.Color.Black;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ClearButton.IsToggled = false;
+            this.ClearButton.Location = new System.Drawing.Point(1452, 172);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.PaddingX = 0;
+            this.ClearButton.PaddingY = 0;
+            this.ClearButton.Size = new System.Drawing.Size(103, 33);
+            this.ClearButton.TabIndex = 51;
+            this.ClearButton.Text = "Clear Filter";
+            this.ClearButton.TextColor = System.Drawing.Color.White;
+            this.ClearButton.TextOffset = 20;
+            this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click_1);
+            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -372,17 +439,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1480, 312);
             this.dataGridView1.TabIndex = 44;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::BATODA.Properties.Resources.filter_off;
-            this.pictureBox5.Location = new System.Drawing.Point(1497, 110);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 41;
-            this.pictureBox5.TabStop = false;
-            // 
             // ApplySearchButton
             // 
             this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -393,7 +449,7 @@
             this.ApplySearchButton.ButtonImage = null;
             this.ApplySearchButton.FlatAppearance.BorderSize = 0;
             this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
             this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
@@ -409,46 +465,46 @@
             this.ApplySearchButton.PaddingY = 0;
             this.ApplySearchButton.Size = new System.Drawing.Size(115, 45);
             this.ApplySearchButton.TabIndex = 39;
-            this.ApplySearchButton.Text = "Apply";
+            this.ApplySearchButton.Text = "Search";
             this.ApplySearchButton.TextColor = System.Drawing.Color.White;
             this.ApplySearchButton.TextOffset = 0;
             this.ApplySearchButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.UseVisualStyleBackColor = false;
+            this.ApplySearchButton.Click += new System.EventHandler(this.ApplySearchButton_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1233, 76);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1231, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 31);
+            this.label6.Size = new System.Drawing.Size(89, 25);
             this.label6.TabIndex = 38;
             this.label6.Text = "Sort By";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(965, 76);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(965, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 33);
+            this.label4.Size = new System.Drawing.Size(62, 25);
             this.label4.TabIndex = 37;
             this.label4.Text = "Year";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(698, 76);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(699, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(220, 31);
+            this.label5.Size = new System.Drawing.Size(177, 25);
             this.label5.TabIndex = 36;
             this.label5.Text = "Payment Status";
             // 
             // SortComboBox
             // 
-            this.SortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortComboBox.FormattingEnabled = true;
             this.SortComboBox.Location = new System.Drawing.Point(1236, 117);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -458,7 +514,7 @@
             // 
             // YearComboBox
             // 
-            this.YearComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YearComboBox.FormattingEnabled = true;
             this.YearComboBox.Location = new System.Drawing.Point(970, 117);
             this.YearComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -469,16 +525,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(698, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 31);
+            this.label3.Size = new System.Drawing.Size(112, 25);
             this.label3.TabIndex = 31;
             this.label3.Text = "Filter by :";
             // 
             // PaymentStatusComboBox
             // 
-            this.PaymentStatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaymentStatusComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PaymentStatusComboBox.FormattingEnabled = true;
             this.PaymentStatusComboBox.Location = new System.Drawing.Point(704, 117);
             this.PaymentStatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -490,10 +546,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 23);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(37, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 31);
+            this.label2.Size = new System.Drawing.Size(177, 25);
             this.label2.TabIndex = 29;
             this.label2.Text = "Search Member";
             // 
@@ -708,7 +764,6 @@
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -735,7 +790,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private ButtonStyle ApplySearchButton;
         private System.Windows.Forms.Label label6;
@@ -770,5 +824,7 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private ButtonStyle ApplyButton;
+        private ButtonStyle ClearButton;
     }
 }

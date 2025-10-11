@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.RegisteredVehicleButton = new BATODA.ButtonStyle();
             this.TransferRecordButton = new BATODA.ButtonStyle();
             this.TransferVehicleButton = new BATODA.ButtonStyle();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -53,45 +53,6 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 21;
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(18, 88);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1585, 100);
-            this.panel7.TabIndex = 49;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(87, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(299, 42);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Transfer History";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(18, 188);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 623);
-            this.panel1.TabIndex = 48;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::BATODA.Properties.Resources.history;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 16);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
-            // 
             // RegisteredVehicleButton
             // 
             this.RegisteredVehicleButton.BackColor = System.Drawing.Color.White;
@@ -102,7 +63,7 @@
             this.RegisteredVehicleButton.ButtonImage = global::BATODA.Properties.Resources.trisokol;
             this.RegisteredVehicleButton.FlatAppearance.BorderSize = 0;
             this.RegisteredVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisteredVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisteredVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisteredVehicleButton.ForeColor = System.Drawing.Color.Black;
             this.RegisteredVehicleButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.RegisteredVehicleButton.HoverColor = System.Drawing.Color.Silver;
@@ -134,7 +95,7 @@
             this.TransferRecordButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferRecordButton.ForeColor = System.Drawing.Color.Black;
             this.TransferRecordButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.TransferRecordButton.HoverColor = System.Drawing.Color.Silver;
@@ -167,7 +128,7 @@
             this.TransferVehicleButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferVehicleButton.FlatAppearance.BorderSize = 0;
             this.TransferVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferVehicleButton.ForeColor = System.Drawing.Color.Black;
             this.TransferVehicleButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.TransferVehicleButton.HoverColor = System.Drawing.Color.Silver;
@@ -189,6 +150,46 @@
             this.TransferVehicleButton.ToggleColor = System.Drawing.Color.LightGray;
             this.TransferVehicleButton.UseVisualStyleBackColor = false;
             this.TransferVehicleButton.Click += new System.EventHandler(this.TransferVehicleButton_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.pictureBox7);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Location = new System.Drawing.Point(18, 88);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1585, 100);
+            this.panel7.TabIndex = 49;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BATODA.Properties.Resources.history;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(87, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(299, 42);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Transfer History";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(18, 188);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1585, 623);
+            this.panel1.TabIndex = 48;
             // 
             // TransferRecordVehicleUForm
             // 

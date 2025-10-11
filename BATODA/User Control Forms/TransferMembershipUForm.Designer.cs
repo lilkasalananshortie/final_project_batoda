@@ -65,6 +65,7 @@
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BodyNumberTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -82,6 +83,7 @@
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,7 +127,7 @@
             this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
             this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
             this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
@@ -158,7 +160,7 @@
             this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
             this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
@@ -191,7 +193,7 @@
             this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
             this.ManageMembersButton.FlatAppearance.BorderSize = 0;
             this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
             this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
@@ -551,11 +553,23 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.pictureBox2);
             this.panel7.Controls.Add(this.BodyNumberTextBox);
             this.panel7.Location = new System.Drawing.Point(37, 80);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(664, 50);
             this.panel7.TabIndex = 28;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
+            this.pictureBox2.Location = new System.Drawing.Point(620, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
             // 
             // BodyNumberTextBox
             // 
@@ -564,7 +578,7 @@
             this.BodyNumberTextBox.Location = new System.Drawing.Point(12, 12);
             this.BodyNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BodyNumberTextBox.Name = "BodyNumberTextBox";
-            this.BodyNumberTextBox.Size = new System.Drawing.Size(558, 24);
+            this.BodyNumberTextBox.Size = new System.Drawing.Size(602, 24);
             this.BodyNumberTextBox.TabIndex = 42;
             // 
             // label7
@@ -573,9 +587,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(35, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 25);
+            this.label7.Size = new System.Drawing.Size(178, 25);
             this.label7.TabIndex = 29;
-            this.label7.Text = "Body Number *";
+            this.label7.Text = "Search Member *";
             // 
             // pictureBox3
             // 
@@ -634,6 +648,7 @@
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -683,5 +698,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox RTransferTextBox;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

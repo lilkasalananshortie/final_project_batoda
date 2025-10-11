@@ -41,8 +41,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ApplyButton = new BATODA.ButtonStyle();
             this.SortComboBox = new System.Windows.Forms.ComboBox();
-            this.AssistanceTypeComboBox = new System.Windows.Forms.ComboBox();
             this.ClearButton = new BATODA.ButtonStyle();
+            this.AssistanceTypeComboBox = new System.Windows.Forms.ComboBox();
             this.ApplySearchButton = new BATODA.ButtonStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -104,7 +104,7 @@
             this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.ARHButton.FlatAppearance.BorderSize = 0;
             this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ARHButton.ForeColor = System.Drawing.Color.Black;
             this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.ARHButton.HoverColor = System.Drawing.Color.Silver;
@@ -137,7 +137,7 @@
             this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
             this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
             this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
             this.AssistanceHomeButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.AssistanceHomeButton.HoverColor = System.Drawing.Color.Silver;
@@ -170,7 +170,7 @@
             this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
             this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
             this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
             this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;
@@ -203,8 +203,8 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.ApplyButton);
             this.panel1.Controls.Add(this.SortComboBox);
-            this.panel1.Controls.Add(this.AssistanceTypeComboBox);
             this.panel1.Controls.Add(this.ClearButton);
+            this.panel1.Controls.Add(this.AssistanceTypeComboBox);
             this.panel1.Controls.Add(this.ApplySearchButton);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -253,26 +253,24 @@
             this.label13.Size = new System.Drawing.Size(524, 42);
             this.label13.TabIndex = 43;
             this.label13.Text = "Pending Assistance Request";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(698, 76);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(699, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 31);
+            this.label1.Size = new System.Drawing.Size(112, 25);
             this.label1.TabIndex = 51;
-            this.label1.Text = "ANY PA TO";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Any pa to";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(965, 76);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(965, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 31);
+            this.label6.Size = new System.Drawing.Size(89, 25);
             this.label6.TabIndex = 50;
             this.label6.Text = "Sort By";
             // 
@@ -286,7 +284,7 @@
             this.ApplyButton.ButtonImage = null;
             this.ApplyButton.FlatAppearance.BorderSize = 0;
             this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApplyButton.ForeColor = System.Drawing.Color.White;
             this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
@@ -294,39 +292,30 @@
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1230, 113);
+            this.ApplyButton.Location = new System.Drawing.Point(1338, 172);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.PaddingX = 0;
             this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(133, 45);
+            this.ApplyButton.Size = new System.Drawing.Size(108, 33);
             this.ApplyButton.TabIndex = 48;
             this.ApplyButton.Text = "Apply Filter";
             this.ApplyButton.TextColor = System.Drawing.Color.White;
             this.ApplyButton.TextOffset = 20;
             this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.UseVisualStyleBackColor = false;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // SortComboBox
             // 
-            this.SortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortComboBox.FormattingEnabled = true;
             this.SortComboBox.Location = new System.Drawing.Point(970, 117);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SortComboBox.Name = "SortComboBox";
             this.SortComboBox.Size = new System.Drawing.Size(250, 41);
             this.SortComboBox.TabIndex = 47;
-            // 
-            // AssistanceTypeComboBox
-            // 
-            this.AssistanceTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceTypeComboBox.FormattingEnabled = true;
-            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(704, 117);
-            this.AssistanceTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
-            this.AssistanceTypeComboBox.Size = new System.Drawing.Size(250, 41);
-            this.AssistanceTypeComboBox.TabIndex = 46;
             // 
             // ClearButton
             // 
@@ -338,7 +327,7 @@
             this.ClearButton.ButtonImage = null;
             this.ClearButton.FlatAppearance.BorderSize = 0;
             this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.ForeColor = System.Drawing.Color.White;
             this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
@@ -346,13 +335,13 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1369, 113);
+            this.ClearButton.Location = new System.Drawing.Point(1452, 172);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.PaddingX = 0;
             this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(128, 45);
+            this.ClearButton.Size = new System.Drawing.Size(103, 33);
             this.ClearButton.TabIndex = 49;
             this.ClearButton.Text = "Clear Filter";
             this.ClearButton.TextColor = System.Drawing.Color.White;
@@ -360,6 +349,16 @@
             this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.UseVisualStyleBackColor = false;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // AssistanceTypeComboBox
+            // 
+            this.AssistanceTypeComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceTypeComboBox.FormattingEnabled = true;
+            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(704, 117);
+            this.AssistanceTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
+            this.AssistanceTypeComboBox.Size = new System.Drawing.Size(250, 41);
+            this.AssistanceTypeComboBox.TabIndex = 46;
             // 
             // ApplySearchButton
             // 
@@ -379,7 +378,7 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(44, 126);
+            this.ApplySearchButton.Location = new System.Drawing.Point(540, 126);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
@@ -392,24 +391,25 @@
             this.ApplySearchButton.TextOffset = 0;
             this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
             this.ApplySearchButton.UseVisualStyleBackColor = false;
+            this.ApplySearchButton.Click += new System.EventHandler(this.ApplySearchButton_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(698, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 31);
+            this.label3.Size = new System.Drawing.Size(112, 25);
             this.label3.TabIndex = 43;
             this.label3.Text = "Filter by :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(38, 23);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(37, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 31);
+            this.label2.Size = new System.Drawing.Size(177, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "Search Member";
             // 
@@ -426,12 +426,11 @@
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(50, 4);
+            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.Location = new System.Drawing.Point(50, 13);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SearchTextBox.Multiline = true;
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(558, 42);
+            this.SearchTextBox.Size = new System.Drawing.Size(558, 24);
             this.SearchTextBox.TabIndex = 41;
             // 
             // pictureBox4

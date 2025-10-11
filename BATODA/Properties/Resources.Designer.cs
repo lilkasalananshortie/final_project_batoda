@@ -133,6 +133,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap angry_12129344 {
+            get {
+                object obj = ResourceManager.GetObject("angry_12129344", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap approved_request {
             get {
                 object obj = ResourceManager.GetObject("approved_request", resourceCulture);

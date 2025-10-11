@@ -73,17 +73,9 @@ namespace BATODA
 
         }
 
-        private void ApplyButton_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-            DisplayClass.ClearInputs(this);
-            
-        }
-
+       
         private void ManageMembersButton_Click(object sender, EventArgs e)
         {
 
@@ -95,7 +87,7 @@ namespace BATODA
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
             
-            ApplyButton.Enabled = false;
+            ApplySearchButton.Enabled = false;
             
         }
 
@@ -104,7 +96,7 @@ namespace BATODA
             ToastManager.Success("New Member Added Successfully!");
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
-            ApplyButton.Enabled = true;
+            ApplySearchButton.Enabled = true;
             
         }
 
@@ -113,13 +105,32 @@ namespace BATODA
             ToastManager.Warning("Adding New Member Cancelled");
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
-            ApplyButton.Enabled = true;
+            ApplySearchButton.Enabled = true;
             
         }
 
         private void AddMemberPanel_Paint(object sender, PaintEventArgs e)
         {
 
-        } 
+        }
+
+        private void ClearButton_Click_1(object sender, EventArgs e)
+        {
+            DisplayClass.ClearInputs(this);
+            ToastManager.Success("Filters Cleared Successfully!");
+        }
+
+        
+
+        private void ApplyButton_Click(object sender, EventArgs e)
+        {
+            ToastManager.Success("Filters Applied!");
+
+        }
+
+        private void ApplySearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

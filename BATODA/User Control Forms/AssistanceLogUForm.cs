@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.UI_Displays;
 
 namespace BATODA
 {
@@ -41,14 +42,20 @@ namespace BATODA
         private void ClearButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ClearInputs(this);
+            ToastManager.Success("Filters Cleared Successfully!");
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void ApplyButton_Click(object sender, EventArgs e)
         {
+            ToastManager.Success("Filters Applied!");
 
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void ApplySearchButton_Click(object sender, EventArgs e)
         {
 
         }
