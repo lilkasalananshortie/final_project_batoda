@@ -234,7 +234,7 @@
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(300, 881);
+            this.NavBarPanel.Size = new System.Drawing.Size(300, 898);
             this.NavBarPanel.TabIndex = 1;
             // 
             // HomeButton
@@ -454,7 +454,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1604, 898);
+            this.ClientSize = new System.Drawing.Size(1604, 915);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);

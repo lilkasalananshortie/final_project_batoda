@@ -14,6 +14,7 @@ namespace BATODA
         {
             InitializeComponent();
             
+
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayPanel.Visible = true;
             DisplayPanel.Dock = DockStyle.Fill;
