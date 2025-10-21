@@ -28,13 +28,17 @@ namespace BATODA
             DisplayClass.SetPlaceholder(MTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(MemberStatuscomboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(RTransferTextBox, "Enter Transfer Description");
-            
+           
+
+
         }
 
         private void TransferMembershipUForm_Load(object sender, EventArgs e)
         {
-           
+            
+            
         }
+
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
         {
@@ -74,6 +78,8 @@ namespace BATODA
             
             ToastManager.Success("Membership Transferred Successfully");
         }
+
+        
 
         
     }

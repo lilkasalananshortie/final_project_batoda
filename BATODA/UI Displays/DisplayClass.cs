@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Text;
+using System.Windows.Forms;
 
 namespace BATODA
 {
@@ -10,9 +11,11 @@ namespace BATODA
         private static Panel _mainPanel;
         private static Panel _miniPanel;
 
-        private static readonly List<ButtonStyle> _buttons = new List<ButtonStyle>();
-        private static readonly Color _defaultColor = Color.FromArgb(105, 100, 100);
-        private static readonly Color _activeColor = Color.FromArgb(175, 40, 40);
+
+
+        public static readonly List<ButtonStyle> _buttons = new List<ButtonStyle>();
+        public static readonly Color _defaultColor = Color.FromArgb(105, 100, 100);
+        public static readonly Color _activeColor = Color.FromArgb(175, 40, 40);
 
 
         // ========= Placeholder Methods =========
@@ -115,9 +118,16 @@ namespace BATODA
             }
         }
 
-        // ========= Display Methods =========
-        public static void SetMainPanel(Panel panel) => _mainPanel = panel;
-        public static void SetMiniPanel(Panel panel) => _miniPanel = panel;
+        // ========= Display Methods + Fonts Loader =========
+        public static void SetMainPanel(Panel panel)
+        {
+            _mainPanel = panel;
+        }
+
+        public static void SetMiniPanel(Panel panel)
+        {
+            _miniPanel = panel;
+        }
 
         public static void ShowMain(UserControl uc)
         {
@@ -138,6 +148,10 @@ namespace BATODA
             _miniPanel.Controls.Clear();
             _miniPanel.Controls.Add(uc);
         }
+
+        
+ 
+       
 
         // ========= Button Hover + Toggle =========
         public static void SetButtonToggleColor(ButtonStyle btn, Color toggleColor, Color defaultColor, Color hoverColor)
@@ -169,5 +183,6 @@ namespace BATODA
             activeButton.ImageColor = _activeColor;
             activeButton.TextColor = _activeColor;
         }
+
     }
 }

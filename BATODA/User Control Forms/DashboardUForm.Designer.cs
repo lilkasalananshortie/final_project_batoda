@@ -30,25 +30,35 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.QuickActionReviewActionButton = new BATODA.ButtonStyle();
+            this.QuickActionChangeVehicleButton = new BATODA.ButtonStyle();
+            this.QuickActionTransferMemberButton = new BATODA.ButtonStyle();
+            this.QuickActionNewMemberButton = new BATODA.ButtonStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
@@ -57,32 +67,22 @@
             this.label16 = new System.Windows.Forms.Label();
             this.buttonStyle4 = new BATODA.ButtonStyle();
             this.label15 = new System.Windows.Forms.Label();
-            this.buttonStyle3 = new BATODA.ButtonStyle();
-            this.buttonStyle2 = new BATODA.ButtonStyle();
-            this.buttonStyle1 = new BATODA.ButtonStyle();
-            this.QuickActionNewMemberButton = new BATODA.ButtonStyle();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,6 +107,16 @@
             this.label8.Size = new System.Drawing.Size(108, 55);
             this.label8.TabIndex = 4;
             this.label8.Text = "618";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.Total_Members_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(380, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -140,6 +150,16 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "618";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::BATODA.Properties.Resources.operator_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(380, 47);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -171,6 +191,16 @@
             this.label10.Size = new System.Drawing.Size(108, 55);
             this.label10.TabIndex = 8;
             this.label10.Text = "618";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::BATODA.Properties.Resources.Request_icon;
+            this.pictureBox6.Location = new System.Drawing.Point(380, 47);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
             // 
             // label3
             // 
@@ -223,6 +253,16 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "618";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.tricycle_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(380, 47);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -256,6 +296,16 @@
             this.label13.TabIndex = 5;
             this.label13.Text = "618";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BATODA.Properties.Resources.Driver_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(380, 47);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -288,6 +338,16 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "618";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::BATODA.Properties.Resources.penalty_icon;
+            this.pictureBox5.Location = new System.Drawing.Point(380, 47);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -301,15 +361,144 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.buttonStyle3);
-            this.panel8.Controls.Add(this.buttonStyle2);
-            this.panel8.Controls.Add(this.buttonStyle1);
+            this.panel8.Controls.Add(this.QuickActionReviewActionButton);
+            this.panel8.Controls.Add(this.QuickActionChangeVehicleButton);
+            this.panel8.Controls.Add(this.QuickActionTransferMemberButton);
             this.panel8.Controls.Add(this.QuickActionNewMemberButton);
             this.panel8.Controls.Add(this.label14);
             this.panel8.Location = new System.Drawing.Point(1103, 390);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(499, 314);
             this.panel8.TabIndex = 2;
+            // 
+            // QuickActionReviewActionButton
+            // 
+            this.QuickActionReviewActionButton.BackColor = System.Drawing.Color.White;
+            this.QuickActionReviewActionButton.BackgroundColor = System.Drawing.Color.White;
+            this.QuickActionReviewActionButton.BorderColor = System.Drawing.Color.Black;
+            this.QuickActionReviewActionButton.BorderRadius = 0;
+            this.QuickActionReviewActionButton.BorderSize = 1;
+            this.QuickActionReviewActionButton.ButtonImage = global::BATODA.Properties.Resources.request;
+            this.QuickActionReviewActionButton.FlatAppearance.BorderSize = 0;
+            this.QuickActionReviewActionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionReviewActionButton.ForeColor = System.Drawing.Color.Black;
+            this.QuickActionReviewActionButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.QuickActionReviewActionButton.HoverColor = System.Drawing.Color.Silver;
+            this.QuickActionReviewActionButton.ImageColor = System.Drawing.Color.Black;
+            this.QuickActionReviewActionButton.ImagePosition = new System.Drawing.Point(0, 0);
+            this.QuickActionReviewActionButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.QuickActionReviewActionButton.IsToggled = false;
+            this.QuickActionReviewActionButton.Location = new System.Drawing.Point(35, 229);
+            this.QuickActionReviewActionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.QuickActionReviewActionButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.QuickActionReviewActionButton.Name = "QuickActionReviewActionButton";
+            this.QuickActionReviewActionButton.PaddingX = 15;
+            this.QuickActionReviewActionButton.PaddingY = 0;
+            this.QuickActionReviewActionButton.Size = new System.Drawing.Size(432, 45);
+            this.QuickActionReviewActionButton.TabIndex = 40;
+            this.QuickActionReviewActionButton.Text = "Review Request";
+            this.QuickActionReviewActionButton.TextColor = System.Drawing.Color.Black;
+            this.QuickActionReviewActionButton.TextOffset = 18;
+            this.QuickActionReviewActionButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.QuickActionReviewActionButton.UseVisualStyleBackColor = false;
+            this.QuickActionReviewActionButton.Click += new System.EventHandler(this.QuickActionReviewActionButton_Click);
+            // 
+            // QuickActionChangeVehicleButton
+            // 
+            this.QuickActionChangeVehicleButton.BackColor = System.Drawing.Color.White;
+            this.QuickActionChangeVehicleButton.BackgroundColor = System.Drawing.Color.White;
+            this.QuickActionChangeVehicleButton.BorderColor = System.Drawing.Color.Black;
+            this.QuickActionChangeVehicleButton.BorderRadius = 0;
+            this.QuickActionChangeVehicleButton.BorderSize = 1;
+            this.QuickActionChangeVehicleButton.ButtonImage = global::BATODA.Properties.Resources.change_vehicle;
+            this.QuickActionChangeVehicleButton.FlatAppearance.BorderSize = 0;
+            this.QuickActionChangeVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionChangeVehicleButton.ForeColor = System.Drawing.Color.Black;
+            this.QuickActionChangeVehicleButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.QuickActionChangeVehicleButton.HoverColor = System.Drawing.Color.Silver;
+            this.QuickActionChangeVehicleButton.ImageColor = System.Drawing.Color.Black;
+            this.QuickActionChangeVehicleButton.ImagePosition = new System.Drawing.Point(0, 0);
+            this.QuickActionChangeVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.QuickActionChangeVehicleButton.IsToggled = false;
+            this.QuickActionChangeVehicleButton.Location = new System.Drawing.Point(35, 176);
+            this.QuickActionChangeVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.QuickActionChangeVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.QuickActionChangeVehicleButton.Name = "QuickActionChangeVehicleButton";
+            this.QuickActionChangeVehicleButton.PaddingX = 15;
+            this.QuickActionChangeVehicleButton.PaddingY = 0;
+            this.QuickActionChangeVehicleButton.Size = new System.Drawing.Size(432, 45);
+            this.QuickActionChangeVehicleButton.TabIndex = 40;
+            this.QuickActionChangeVehicleButton.Text = "Change Vehicle";
+            this.QuickActionChangeVehicleButton.TextColor = System.Drawing.Color.Black;
+            this.QuickActionChangeVehicleButton.TextOffset = 18;
+            this.QuickActionChangeVehicleButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.QuickActionChangeVehicleButton.UseVisualStyleBackColor = false;
+            this.QuickActionChangeVehicleButton.Click += new System.EventHandler(this.QuickActionChangeVehicleButton_Click);
+            // 
+            // QuickActionTransferMemberButton
+            // 
+            this.QuickActionTransferMemberButton.BackColor = System.Drawing.Color.White;
+            this.QuickActionTransferMemberButton.BackgroundColor = System.Drawing.Color.White;
+            this.QuickActionTransferMemberButton.BorderColor = System.Drawing.Color.Black;
+            this.QuickActionTransferMemberButton.BorderRadius = 0;
+            this.QuickActionTransferMemberButton.BorderSize = 1;
+            this.QuickActionTransferMemberButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
+            this.QuickActionTransferMemberButton.FlatAppearance.BorderSize = 0;
+            this.QuickActionTransferMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionTransferMemberButton.ForeColor = System.Drawing.Color.Black;
+            this.QuickActionTransferMemberButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.QuickActionTransferMemberButton.HoverColor = System.Drawing.Color.Silver;
+            this.QuickActionTransferMemberButton.ImageColor = System.Drawing.Color.Black;
+            this.QuickActionTransferMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
+            this.QuickActionTransferMemberButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.QuickActionTransferMemberButton.IsToggled = false;
+            this.QuickActionTransferMemberButton.Location = new System.Drawing.Point(33, 123);
+            this.QuickActionTransferMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.QuickActionTransferMemberButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.QuickActionTransferMemberButton.Name = "QuickActionTransferMemberButton";
+            this.QuickActionTransferMemberButton.PaddingX = 15;
+            this.QuickActionTransferMemberButton.PaddingY = 0;
+            this.QuickActionTransferMemberButton.Size = new System.Drawing.Size(432, 45);
+            this.QuickActionTransferMemberButton.TabIndex = 40;
+            this.QuickActionTransferMemberButton.Text = "Transfer Membership";
+            this.QuickActionTransferMemberButton.TextColor = System.Drawing.Color.Black;
+            this.QuickActionTransferMemberButton.TextOffset = 18;
+            this.QuickActionTransferMemberButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.QuickActionTransferMemberButton.UseVisualStyleBackColor = false;
+            this.QuickActionTransferMemberButton.Click += new System.EventHandler(this.QuickActionTransferMemberButton_Click);
+            // 
+            // QuickActionNewMemberButton
+            // 
+            this.QuickActionNewMemberButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.QuickActionNewMemberButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.QuickActionNewMemberButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.QuickActionNewMemberButton.BorderRadius = 0;
+            this.QuickActionNewMemberButton.BorderSize = 0;
+            this.QuickActionNewMemberButton.ButtonImage = global::BATODA.Properties.Resources.add_member;
+            this.QuickActionNewMemberButton.FlatAppearance.BorderSize = 0;
+            this.QuickActionNewMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuickActionNewMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionNewMemberButton.ForeColor = System.Drawing.Color.White;
+            this.QuickActionNewMemberButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.QuickActionNewMemberButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.QuickActionNewMemberButton.ImageColor = System.Drawing.Color.White;
+            this.QuickActionNewMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
+            this.QuickActionNewMemberButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.QuickActionNewMemberButton.IsToggled = false;
+            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(33, 70);
+            this.QuickActionNewMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.QuickActionNewMemberButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.QuickActionNewMemberButton.Name = "QuickActionNewMemberButton";
+            this.QuickActionNewMemberButton.PaddingX = 15;
+            this.QuickActionNewMemberButton.PaddingY = 0;
+            this.QuickActionNewMemberButton.Size = new System.Drawing.Size(432, 45);
+            this.QuickActionNewMemberButton.TabIndex = 40;
+            this.QuickActionNewMemberButton.Text = "Add New Member";
+            this.QuickActionNewMemberButton.TextColor = System.Drawing.Color.White;
+            this.QuickActionNewMemberButton.TextOffset = 18;
+            this.QuickActionNewMemberButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.QuickActionNewMemberButton.UseVisualStyleBackColor = false;
+            this.QuickActionNewMemberButton.Click += new System.EventHandler(this.QuickActionNewMemberButton_Click);
             // 
             // label14
             // 
@@ -418,131 +607,6 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "Total Members";
             // 
-            // buttonStyle3
-            // 
-            this.buttonStyle3.BackColor = System.Drawing.Color.White;
-            this.buttonStyle3.BackgroundColor = System.Drawing.Color.White;
-            this.buttonStyle3.BorderColor = System.Drawing.Color.Black;
-            this.buttonStyle3.BorderRadius = 0;
-            this.buttonStyle3.BorderSize = 1;
-            this.buttonStyle3.ButtonImage = global::BATODA.Properties.Resources.request;
-            this.buttonStyle3.FlatAppearance.BorderSize = 0;
-            this.buttonStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle3.ForeColor = System.Drawing.Color.Black;
-            this.buttonStyle3.HoverBorderColor = System.Drawing.Color.Silver;
-            this.buttonStyle3.HoverColor = System.Drawing.Color.Silver;
-            this.buttonStyle3.ImageColor = System.Drawing.Color.Black;
-            this.buttonStyle3.ImagePosition = new System.Drawing.Point(0, 0);
-            this.buttonStyle3.ImageSize = new System.Drawing.Size(32, 32);
-            this.buttonStyle3.IsToggled = false;
-            this.buttonStyle3.Location = new System.Drawing.Point(35, 229);
-            this.buttonStyle3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle3.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.buttonStyle3.Name = "buttonStyle3";
-            this.buttonStyle3.PaddingX = 15;
-            this.buttonStyle3.PaddingY = 0;
-            this.buttonStyle3.Size = new System.Drawing.Size(432, 45);
-            this.buttonStyle3.TabIndex = 40;
-            this.buttonStyle3.Text = "Review Request";
-            this.buttonStyle3.TextColor = System.Drawing.Color.Black;
-            this.buttonStyle3.TextOffset = 18;
-            this.buttonStyle3.ToggleColor = System.Drawing.Color.LightGray;
-            this.buttonStyle3.UseVisualStyleBackColor = false;
-            // 
-            // buttonStyle2
-            // 
-            this.buttonStyle2.BackColor = System.Drawing.Color.White;
-            this.buttonStyle2.BackgroundColor = System.Drawing.Color.White;
-            this.buttonStyle2.BorderColor = System.Drawing.Color.Black;
-            this.buttonStyle2.BorderRadius = 0;
-            this.buttonStyle2.BorderSize = 1;
-            this.buttonStyle2.ButtonImage = global::BATODA.Properties.Resources.change_vehicle;
-            this.buttonStyle2.FlatAppearance.BorderSize = 0;
-            this.buttonStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle2.ForeColor = System.Drawing.Color.Black;
-            this.buttonStyle2.HoverBorderColor = System.Drawing.Color.Silver;
-            this.buttonStyle2.HoverColor = System.Drawing.Color.Silver;
-            this.buttonStyle2.ImageColor = System.Drawing.Color.Black;
-            this.buttonStyle2.ImagePosition = new System.Drawing.Point(0, 0);
-            this.buttonStyle2.ImageSize = new System.Drawing.Size(32, 32);
-            this.buttonStyle2.IsToggled = false;
-            this.buttonStyle2.Location = new System.Drawing.Point(35, 176);
-            this.buttonStyle2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle2.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.buttonStyle2.Name = "buttonStyle2";
-            this.buttonStyle2.PaddingX = 15;
-            this.buttonStyle2.PaddingY = 0;
-            this.buttonStyle2.Size = new System.Drawing.Size(432, 45);
-            this.buttonStyle2.TabIndex = 40;
-            this.buttonStyle2.Text = "Change Vehicle";
-            this.buttonStyle2.TextColor = System.Drawing.Color.Black;
-            this.buttonStyle2.TextOffset = 18;
-            this.buttonStyle2.ToggleColor = System.Drawing.Color.LightGray;
-            this.buttonStyle2.UseVisualStyleBackColor = false;
-            // 
-            // buttonStyle1
-            // 
-            this.buttonStyle1.BackColor = System.Drawing.Color.White;
-            this.buttonStyle1.BackgroundColor = System.Drawing.Color.White;
-            this.buttonStyle1.BorderColor = System.Drawing.Color.Black;
-            this.buttonStyle1.BorderRadius = 0;
-            this.buttonStyle1.BorderSize = 1;
-            this.buttonStyle1.ButtonImage = global::BATODA.Properties.Resources.transfer;
-            this.buttonStyle1.FlatAppearance.BorderSize = 0;
-            this.buttonStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle1.ForeColor = System.Drawing.Color.Black;
-            this.buttonStyle1.HoverBorderColor = System.Drawing.Color.Silver;
-            this.buttonStyle1.HoverColor = System.Drawing.Color.Silver;
-            this.buttonStyle1.ImageColor = System.Drawing.Color.Black;
-            this.buttonStyle1.ImagePosition = new System.Drawing.Point(0, 0);
-            this.buttonStyle1.ImageSize = new System.Drawing.Size(32, 32);
-            this.buttonStyle1.IsToggled = false;
-            this.buttonStyle1.Location = new System.Drawing.Point(33, 123);
-            this.buttonStyle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle1.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.buttonStyle1.Name = "buttonStyle1";
-            this.buttonStyle1.PaddingX = 15;
-            this.buttonStyle1.PaddingY = 0;
-            this.buttonStyle1.Size = new System.Drawing.Size(432, 45);
-            this.buttonStyle1.TabIndex = 40;
-            this.buttonStyle1.Text = "Transfer Membership";
-            this.buttonStyle1.TextColor = System.Drawing.Color.Black;
-            this.buttonStyle1.TextOffset = 18;
-            this.buttonStyle1.ToggleColor = System.Drawing.Color.LightGray;
-            this.buttonStyle1.UseVisualStyleBackColor = false;
-            // 
-            // QuickActionNewMemberButton
-            // 
-            this.QuickActionNewMemberButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.QuickActionNewMemberButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.QuickActionNewMemberButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.QuickActionNewMemberButton.BorderRadius = 0;
-            this.QuickActionNewMemberButton.BorderSize = 0;
-            this.QuickActionNewMemberButton.ButtonImage = global::BATODA.Properties.Resources.add_member;
-            this.QuickActionNewMemberButton.FlatAppearance.BorderSize = 0;
-            this.QuickActionNewMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuickActionNewMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuickActionNewMemberButton.ForeColor = System.Drawing.Color.White;
-            this.QuickActionNewMemberButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.QuickActionNewMemberButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.QuickActionNewMemberButton.ImageColor = System.Drawing.Color.White;
-            this.QuickActionNewMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
-            this.QuickActionNewMemberButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.QuickActionNewMemberButton.IsToggled = false;
-            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(33, 70);
-            this.QuickActionNewMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.QuickActionNewMemberButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.QuickActionNewMemberButton.Name = "QuickActionNewMemberButton";
-            this.QuickActionNewMemberButton.PaddingX = 15;
-            this.QuickActionNewMemberButton.PaddingY = 0;
-            this.QuickActionNewMemberButton.Size = new System.Drawing.Size(432, 45);
-            this.QuickActionNewMemberButton.TabIndex = 40;
-            this.QuickActionNewMemberButton.Text = "Add New Member";
-            this.QuickActionNewMemberButton.TextColor = System.Drawing.Color.White;
-            this.QuickActionNewMemberButton.TextOffset = 18;
-            this.QuickActionNewMemberButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.QuickActionNewMemberButton.UseVisualStyleBackColor = false;
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::BATODA.Properties.Resources.actuvity_log;
@@ -552,66 +616,6 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::BATODA.Properties.Resources.penalty_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(380, 47);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BATODA.Properties.Resources.Driver_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(380, 47);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BATODA.Properties.Resources.tricycle_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(380, 47);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::BATODA.Properties.Resources.Request_icon;
-            this.pictureBox6.Location = new System.Drawing.Point(380, 47);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::BATODA.Properties.Resources.operator_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(380, 47);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.Total_Members_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // DashboardUForm
             // 
@@ -634,27 +638,27 @@
             this.Load += new System.EventHandler(this.DashboardUForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,9 +695,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label14;
-        private ButtonStyle buttonStyle3;
-        private ButtonStyle buttonStyle2;
-        private ButtonStyle buttonStyle1;
+        private ButtonStyle QuickActionReviewActionButton;
+        private ButtonStyle QuickActionChangeVehicleButton;
+        private ButtonStyle QuickActionTransferMemberButton;
         private ButtonStyle QuickActionNewMemberButton;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label19;

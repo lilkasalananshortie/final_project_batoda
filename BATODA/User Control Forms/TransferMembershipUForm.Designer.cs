@@ -34,7 +34,7 @@
             this.TransferMembershipButton = new BATODA.ButtonStyle();
             this.TransferRecordsButton = new BATODA.ButtonStyle();
             this.ManageMembersButton = new BATODA.ButtonStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ScrollablePanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.RTransferTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.ScrollablePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -216,18 +216,19 @@
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
-            // panel1
+            // ScrollablePanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.SaveButton);
-            this.panel1.Controls.Add(this.panel16);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(19, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 1101);
-            this.panel1.TabIndex = 20;
+            this.ScrollablePanel.AutoScroll = true;
+            this.ScrollablePanel.BackColor = System.Drawing.Color.White;
+            this.ScrollablePanel.Controls.Add(this.panel2);
+            this.ScrollablePanel.Controls.Add(this.SaveButton);
+            this.ScrollablePanel.Controls.Add(this.panel16);
+            this.ScrollablePanel.Controls.Add(this.pictureBox3);
+            this.ScrollablePanel.Controls.Add(this.label3);
+            this.ScrollablePanel.Location = new System.Drawing.Point(19, 99);
+            this.ScrollablePanel.Name = "ScrollablePanel";
+            this.ScrollablePanel.Size = new System.Drawing.Size(1585, 1111);
+            this.ScrollablePanel.TabIndex = 20;
             // 
             // panel2
             // 
@@ -278,7 +279,7 @@
             this.SaveButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.SaveButton.ImageSize = new System.Drawing.Size(32, 32);
             this.SaveButton.IsToggled = false;
-            this.SaveButton.Location = new System.Drawing.Point(1240, 1005);
+            this.SaveButton.Location = new System.Drawing.Point(1249, 1006);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SaveButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.SaveButton.Name = "SaveButton";
@@ -598,7 +599,7 @@
             this.pictureBox3.Image = global::BATODA.Properties.Resources.transfer;
             this.pictureBox3.Location = new System.Drawing.Point(62, 37);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox3.Size = new System.Drawing.Size(75, 63);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
@@ -606,10 +607,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(143, 63);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(143, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(340, 37);
+            this.label3.Size = new System.Drawing.Size(290, 31);
             this.label3.TabIndex = 26;
             this.label3.Text = "Transfer Membership";
             // 
@@ -617,17 +618,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ScrollablePanel);
             this.Controls.Add(this.MembersTopPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "TransferMembershipUForm";
-            this.Size = new System.Drawing.Size(1678, 1334);
+            this.Size = new System.Drawing.Size(1661, 1168);
             this.Load += new System.EventHandler(this.TransferMembershipUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ScrollablePanel.ResumeLayout(false);
+            this.ScrollablePanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel16.ResumeLayout(false);
@@ -663,7 +665,7 @@
         private ButtonStyle TransferMembershipButton;
         private ButtonStyle TransferRecordsButton;
         private ButtonStyle ManageMembersButton;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ScrollablePanel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel16;

@@ -71,10 +71,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Fugaz One", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(14, 56);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 70);
+            this.label3.Size = new System.Drawing.Size(221, 55);
             this.label3.TabIndex = 0;
             this.label3.Text = "BATODA";
             // 
@@ -188,10 +188,10 @@
             // TopPanelText
             // 
             this.TopPanelText.AutoSize = true;
-            this.TopPanelText.Font = new System.Drawing.Font("Fugaz One", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TopPanelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TopPanelText.Location = new System.Drawing.Point(20, 10);
             this.TopPanelText.Name = "TopPanelText";
-            this.TopPanelText.Size = new System.Drawing.Size(401, 70);
+            this.TopPanelText.Size = new System.Drawing.Size(410, 55);
             this.TopPanelText.TabIndex = 0;
             this.TopPanelText.Text = "BAMBANG TODA";
             // 
@@ -247,7 +247,7 @@
             this.HomeButton.ButtonImage = global::BATODA.Properties.Resources.dashboard_icon;
             this.HomeButton.FlatAppearance.BorderSize = 0;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.HomeButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.HomeButton.HoverColor = System.Drawing.Color.Silver;
@@ -280,7 +280,7 @@
             this.MembersMainButton.ButtonImage = global::BATODA.Properties.Resources.members_nav_bar_icon;
             this.MembersMainButton.FlatAppearance.BorderSize = 0;
             this.MembersMainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MembersMainButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembersMainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MembersMainButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.MembersMainButton.HoverBorderColor = System.Drawing.Color.Black;
             this.MembersMainButton.HoverColor = System.Drawing.Color.Silver;
@@ -313,7 +313,7 @@
             this.RegisteredVehiclesButton.ButtonImage = global::BATODA.Properties.Resources.registered_vehicle_nav_bar_icon;
             this.RegisteredVehiclesButton.FlatAppearance.BorderSize = 0;
             this.RegisteredVehiclesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisteredVehiclesButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisteredVehiclesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisteredVehiclesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.RegisteredVehiclesButton.HoverBorderColor = System.Drawing.Color.Black;
             this.RegisteredVehiclesButton.HoverColor = System.Drawing.Color.Silver;
@@ -346,7 +346,7 @@
             this.AssistanceLogButton.ButtonImage = global::BATODA.Properties.Resources.assistance_log_nav_bar_icon;
             this.AssistanceLogButton.FlatAppearance.BorderSize = 0;
             this.AssistanceLogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceLogButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceLogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceLogButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.AssistanceLogButton.HoverBorderColor = System.Drawing.Color.Black;
             this.AssistanceLogButton.HoverColor = System.Drawing.Color.Silver;
@@ -378,7 +378,7 @@
             this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
             this.FinanceButton.FlatAppearance.BorderSize = 0;
             this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinanceButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FinanceButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.FinanceButton.HoverBorderColor = System.Drawing.Color.Black;
             this.FinanceButton.HoverColor = System.Drawing.Color.Silver;
@@ -418,7 +418,7 @@
             this.SettingsButton.ButtonImage = global::BATODA.Properties.Resources.settings_nav_bar_icon;
             this.SettingsButton.FlatAppearance.BorderSize = 0;
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsButton.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.SettingsButton.HoverBorderColor = System.Drawing.Color.Black;
             this.SettingsButton.HoverColor = System.Drawing.Color.Silver;
