@@ -19,6 +19,7 @@ namespace BATODA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            MontserratFont.Initialize();
             Application.Run(new LoginForm());
         }
     }

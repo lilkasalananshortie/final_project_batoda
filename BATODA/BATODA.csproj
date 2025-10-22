@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI Displays\FontFamily.cs" />
+    <Compile Include="UI Displays\MontserratFont.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,12 +256,8 @@
     <EmbeddedResource Include="User Control Forms\TransferVehicleUForm.resx">
       <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fonts\Montserrat-Italic.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fonts\Montserrat-Normal.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Fonts\Montserrat-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Normal.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -148,12 +148,12 @@
             // 
             // MemberTypeComboBox
             // 
-            this.MemberTypeComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
             this.MemberTypeComboBox.Location = new System.Drawing.Point(704, 117);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
-            this.MemberTypeComboBox.Size = new System.Drawing.Size(252, 41);
+            this.MemberTypeComboBox.Size = new System.Drawing.Size(252, 33);
             this.MemberTypeComboBox.TabIndex = 6;
             this.MemberTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.MemberTypeComboBox_SelectedIndexChanged);
             // 
@@ -169,23 +169,23 @@
             // 
             // OrderComboBox
             // 
-            this.OrderComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
             this.OrderComboBox.Location = new System.Drawing.Point(970, 117);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
-            this.OrderComboBox.Size = new System.Drawing.Size(252, 41);
+            this.OrderComboBox.Size = new System.Drawing.Size(252, 33);
             this.OrderComboBox.TabIndex = 8;
             this.OrderComboBox.SelectedIndexChanged += new System.EventHandler(this.OrderComboBox_SelectedIndexChanged);
             // 
             // StatusComboBox
             // 
-            this.StatusComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusComboBox.FormattingEnabled = true;
             this.StatusComboBox.Location = new System.Drawing.Point(1236, 117);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(252, 41);
+            this.StatusComboBox.Size = new System.Drawing.Size(252, 33);
             this.StatusComboBox.TabIndex = 9;
             this.StatusComboBox.SelectedIndexChanged += new System.EventHandler(this.StatusComboBox_SelectedIndexChanged);
             // 
@@ -826,7 +826,7 @@
             this.AddMemberButton.ButtonImage = global::BATODA.Properties.Resources.add_member;
             this.AddMemberButton.FlatAppearance.BorderSize = 0;
             this.AddMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMemberButton.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddMemberButton.ForeColor = System.Drawing.Color.White;
             this.AddMemberButton.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.AddMemberButton.HoverColor = System.Drawing.Color.DarkRed;

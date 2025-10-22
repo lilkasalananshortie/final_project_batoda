@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.UI_Displays;
 
 namespace BATODA
 {
@@ -15,6 +16,7 @@ namespace BATODA
         public ARHUForm()
         {
             InitializeComponent();
+            
         }
 
         private void AssistanceHomeButton_Click(object sender, EventArgs e)
@@ -30,6 +32,11 @@ namespace BATODA
         private void ARHButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new ARHUForm());
+        }
+
+        private void ARHUForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

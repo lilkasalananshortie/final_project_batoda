@@ -201,6 +201,7 @@
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "ARHUForm";
             this.Size = new System.Drawing.Size(1898, 994);
+            this.Load += new System.EventHandler(this.ARHUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

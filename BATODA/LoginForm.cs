@@ -19,7 +19,12 @@ namespace BATODA
         public LoginForm()
         {
             InitializeComponent();
-            
+
+            MontserratFont.Initialize();
+            MontserratFont.ApplyToForm(this);
+
+
+
             LoadingPanel.Visible = true;
             LoadingPanel.Dock = DockStyle.Fill;
             timer.Interval = 2000;

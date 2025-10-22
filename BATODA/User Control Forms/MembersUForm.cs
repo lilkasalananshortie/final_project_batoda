@@ -16,7 +16,10 @@ namespace BATODA
         public MembersUForm()
         {
             InitializeComponent();
-            
+            this.AutoScaleMode = AutoScaleMode.None;
+            MontserratFont.Initialize();
+            MontserratFont.ApplyToUserControl(this);
+
         }
 
         private void MembersUForm_Load(object sender, EventArgs e)

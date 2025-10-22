@@ -13,6 +13,9 @@ namespace BATODA
         public DashboardForm()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.None;
+            MontserratFont.Initialize();
+            MontserratFont.ApplyToForm(this);
             
 
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA

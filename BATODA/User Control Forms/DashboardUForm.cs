@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.UI_Displays;
 
 namespace BATODA
 {
@@ -18,7 +19,12 @@ namespace BATODA
         public DashboardUForm()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.None;
+            MontserratFont.Initialize();
+            MontserratFont.ApplyToUserControl(this);
             
+
+
 
         }
 

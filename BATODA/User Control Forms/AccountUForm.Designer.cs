@@ -51,6 +51,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AccountUForm";
             this.Size = new System.Drawing.Size(846, 644);
+            this.Load += new System.EventHandler(this.AccountUForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
