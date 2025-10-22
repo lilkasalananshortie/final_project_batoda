@@ -211,6 +211,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ApplyButton);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.ClearButton);
@@ -248,7 +249,7 @@
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1338, 172);
+            this.ApplyButton.Location = new System.Drawing.Point(1304, 166);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.Name = "ApplyButton";
@@ -275,15 +276,15 @@
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(41, 217);
+            this.panel7.Location = new System.Drawing.Point(41, 212);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1480, 100);
+            this.panel7.Size = new System.Drawing.Size(1480, 75);
             this.panel7.TabIndex = 46;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::BATODA.Properties.Resources.paid;
-            this.pictureBox10.Location = new System.Drawing.Point(965, 36);
+            this.pictureBox10.Location = new System.Drawing.Point(1049, 22);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(28, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -293,7 +294,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::BATODA.Properties.Resources.due;
-            this.pictureBox9.Location = new System.Drawing.Point(1265, 36);
+            this.pictureBox9.Location = new System.Drawing.Point(1349, 22);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(28, 28);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -303,7 +304,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::BATODA.Properties.Resources.overdue;
-            this.pictureBox8.Location = new System.Drawing.Point(1115, 36);
+            this.pictureBox8.Location = new System.Drawing.Point(1195, 22);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(28, 28);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,7 +316,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1300, 40);
+            this.label17.Location = new System.Drawing.Point(1384, 26);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 20);
             this.label17.TabIndex = 51;
@@ -326,7 +327,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1150, 40);
+            this.label16.Location = new System.Drawing.Point(1230, 26);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 20);
             this.label16.TabIndex = 50;
@@ -337,7 +338,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1000, 40);
+            this.label15.Location = new System.Drawing.Point(1084, 26);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 20);
             this.label15.TabIndex = 49;
@@ -348,7 +349,7 @@
             this.pictureBox7.Image = global::BATODA.Properties.Resources.Request_icon;
             this.pictureBox7.Location = new System.Drawing.Point(16, 16);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 44;
             this.pictureBox7.TabStop = false;
@@ -356,10 +357,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(82, 28);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(62, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(528, 42);
+            this.label7.Size = new System.Drawing.Size(391, 31);
             this.label7.TabIndex = 43;
             this.label7.Text = "Tax (Butaw Overview) - 2025";
             // 
@@ -381,7 +382,7 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1452, 172);
+            this.ClearButton.Location = new System.Drawing.Point(1418, 166);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
@@ -403,16 +404,16 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(42, 69);
+            this.panel6.Location = new System.Drawing.Point(40, 67);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(613, 50);
+            this.panel6.Size = new System.Drawing.Size(613, 41);
             this.panel6.TabIndex = 45;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(50, 10);
+            this.SearchTextBox.Location = new System.Drawing.Point(46, 8);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(558, 24);
@@ -423,7 +424,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -434,9 +435,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 316);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 286);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1480, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(1480, 341);
             this.dataGridView1.TabIndex = 44;
             // 
             // ApplySearchButton
@@ -457,13 +458,13 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(540, 126);
+            this.ApplySearchButton.Location = new System.Drawing.Point(540, 120);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
             this.ApplySearchButton.PaddingX = 22;
             this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(115, 45);
+            this.ApplySearchButton.Size = new System.Drawing.Size(115, 33);
             this.ApplySearchButton.TabIndex = 39;
             this.ApplySearchButton.Text = "Search";
             this.ApplySearchButton.TextColor = System.Drawing.Color.White;
@@ -475,30 +476,31 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1231, 82);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1192, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 25);
+            this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 38;
             this.label6.Text = "Sort By";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(965, 82);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(936, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 25);
+            this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 37;
             this.label4.Text = "Year";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(699, 82);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(679, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 25);
+            this.label5.Size = new System.Drawing.Size(136, 20);
             this.label5.TabIndex = 36;
             this.label5.Text = "Payment Status";
             // 
@@ -506,7 +508,7 @@
             // 
             this.SortComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortComboBox.FormattingEnabled = true;
-            this.SortComboBox.Location = new System.Drawing.Point(1236, 117);
+            this.SortComboBox.Location = new System.Drawing.Point(1196, 117);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SortComboBox.Name = "SortComboBox";
             this.SortComboBox.Size = new System.Drawing.Size(250, 41);
@@ -516,7 +518,7 @@
             // 
             this.YearComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YearComboBox.FormattingEnabled = true;
-            this.YearComboBox.Location = new System.Drawing.Point(970, 117);
+            this.YearComboBox.Location = new System.Drawing.Point(940, 117);
             this.YearComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.YearComboBox.Name = "YearComboBox";
             this.YearComboBox.Size = new System.Drawing.Size(250, 41);
@@ -525,18 +527,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(698, 23);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(679, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 31;
             this.label3.Text = "Filter by :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // PaymentStatusComboBox
             // 
             this.PaymentStatusComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PaymentStatusComboBox.FormattingEnabled = true;
-            this.PaymentStatusComboBox.Location = new System.Drawing.Point(704, 117);
+            this.PaymentStatusComboBox.Location = new System.Drawing.Point(684, 117);
             this.PaymentStatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PaymentStatusComboBox.Name = "PaymentStatusComboBox";
             this.PaymentStatusComboBox.Size = new System.Drawing.Size(250, 41);
@@ -546,12 +549,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 32);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 25);
+            this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 29;
             this.label2.Text = "Search Member";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -742,6 +746,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -749,7 +754,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "FinanceUForm";
-            this.Size = new System.Drawing.Size(1843, 942);
+            this.Size = new System.Drawing.Size(1841, 940);
             this.Load += new System.EventHandler(this.FinanceUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

@@ -225,7 +225,7 @@
             this.ScrollablePanel.Controls.Add(this.panel16);
             this.ScrollablePanel.Controls.Add(this.pictureBox3);
             this.ScrollablePanel.Controls.Add(this.label3);
-            this.ScrollablePanel.Location = new System.Drawing.Point(19, 99);
+            this.ScrollablePanel.Location = new System.Drawing.Point(14, 85);
             this.ScrollablePanel.Name = "ScrollablePanel";
             this.ScrollablePanel.Size = new System.Drawing.Size(1585, 1111);
             this.ScrollablePanel.TabIndex = 20;
@@ -236,7 +236,7 @@
             this.panel2.Controls.Add(this.RTransferTextBox);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.panel2.Location = new System.Drawing.Point(46, 708);
+            this.panel2.Location = new System.Drawing.Point(39, 680);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1515, 258);
             this.panel2.TabIndex = 32;
@@ -314,7 +314,7 @@
             this.panel16.Controls.Add(this.label8);
             this.panel16.Controls.Add(this.panel7);
             this.panel16.Controls.Add(this.label7);
-            this.panel16.Location = new System.Drawing.Point(46, 135);
+            this.panel16.Location = new System.Drawing.Point(39, 107);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(1515, 548);
             this.panel16.TabIndex = 29;
@@ -597,9 +597,9 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Image = global::BATODA.Properties.Resources.transfer;
-            this.pictureBox3.Location = new System.Drawing.Point(62, 37);
+            this.pictureBox3.Location = new System.Drawing.Point(39, 36);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 63);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
@@ -608,7 +608,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(143, 57);
+            this.label3.Location = new System.Drawing.Point(86, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(290, 31);
             this.label3.TabIndex = 26;
@@ -625,7 +625,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "TransferMembershipUForm";
-            this.Size = new System.Drawing.Size(1661, 1168);
+            this.Size = new System.Drawing.Size(1644, 1168);
             this.Load += new System.EventHandler(this.TransferMembershipUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.ScrollablePanel.ResumeLayout(false);

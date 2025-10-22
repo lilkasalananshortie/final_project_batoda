@@ -215,18 +215,19 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkGray;
-            this.panel4.Location = new System.Drawing.Point(44, 450);
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Location = new System.Drawing.Point(44, 435);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1012, 527);
+            this.panel4.Size = new System.Drawing.Size(1012, 499);
             this.panel4.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 390);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(76, 398);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 39);
+            this.label4.Size = new System.Drawing.Size(166, 31);
             this.label4.TabIndex = 5;
             this.label4.Text = "Activity Log";
             // 
@@ -361,6 +362,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.QuickActionReviewActionButton);
             this.panel8.Controls.Add(this.QuickActionChangeVehicleButton);
             this.panel8.Controls.Add(this.QuickActionTransferMemberButton);
@@ -513,6 +515,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.label19);
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.label17);
@@ -610,9 +613,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::BATODA.Properties.Resources.actuvity_log;
-            this.pictureBox7.Location = new System.Drawing.Point(48, 384);
+            this.pictureBox7.Location = new System.Drawing.Point(44, 394);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;

@@ -142,7 +142,7 @@
             this.RegisteredVehicleButton.ImagePosition = new System.Drawing.Point(131, 0);
             this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
             this.RegisteredVehicleButton.IsToggled = false;
-            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 7);
+            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 1);
             this.RegisteredVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RegisteredVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
@@ -193,6 +193,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ApplySearchButton);
             this.panel1.Controls.Add(this.ClearButton);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -229,7 +230,7 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(1338, 172);
+            this.ApplySearchButton.Location = new System.Drawing.Point(1304, 166);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
@@ -262,7 +263,7 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1452, 172);
+            this.ClearButton.Location = new System.Drawing.Point(1418, 166);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
@@ -280,38 +281,38 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 217);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 212);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1480, 443);
+            this.dataGridView1.Size = new System.Drawing.Size(1480, 416);
             this.dataGridView1.TabIndex = 34;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1231, 82);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1192, 82);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 25);
+            this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 32;
             this.label6.Text = "Status";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(965, 82);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(936, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 25);
+            this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "Sort";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(699, 82);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(679, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 25);
+            this.label5.Size = new System.Drawing.Size(116, 20);
             this.label5.TabIndex = 30;
             this.label5.Text = "Member Type";
             // 
@@ -333,13 +334,13 @@
             this.ApplyearchButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.ApplyearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyearchButton.IsToggled = false;
-            this.ApplyearchButton.Location = new System.Drawing.Point(540, 126);
+            this.ApplyearchButton.Location = new System.Drawing.Point(540, 120);
             this.ApplyearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyearchButton.Name = "ApplyearchButton";
             this.ApplyearchButton.PaddingX = 0;
             this.ApplyearchButton.PaddingY = 0;
-            this.ApplyearchButton.Size = new System.Drawing.Size(115, 45);
+            this.ApplyearchButton.Size = new System.Drawing.Size(115, 33);
             this.ApplyearchButton.TabIndex = 28;
             this.ApplyearchButton.Text = "Search";
             this.ApplyearchButton.TextColor = System.Drawing.Color.White;
@@ -352,7 +353,7 @@
             // 
             this.StatusComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Location = new System.Drawing.Point(1236, 117);
+            this.StatusComboBox.Location = new System.Drawing.Point(1196, 117);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(250, 41);
@@ -362,7 +363,7 @@
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(970, 117);
+            this.OrderComboBox.Location = new System.Drawing.Point(940, 117);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
             this.OrderComboBox.Size = new System.Drawing.Size(250, 41);
@@ -371,10 +372,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(698, 23);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(679, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Filter by :";
             // 
@@ -382,7 +383,7 @@
             // 
             this.MemberTypeComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(704, 117);
+            this.MemberTypeComboBox.Location = new System.Drawing.Point(684, 117);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
             this.MemberTypeComboBox.Size = new System.Drawing.Size(250, 41);
@@ -391,10 +392,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 32);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 25);
+            this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Search Member";
             // 
@@ -403,16 +404,16 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Location = new System.Drawing.Point(42, 69);
+            this.panel6.Location = new System.Drawing.Point(40, 67);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(613, 50);
+            this.panel6.Size = new System.Drawing.Size(613, 41);
             this.panel6.TabIndex = 38;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(45, 12);
+            this.SearchTextBox.Location = new System.Drawing.Point(46, 8);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(563, 24);
@@ -421,7 +422,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -626,7 +627,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "RegisteredVehicleUForm";
-            this.Size = new System.Drawing.Size(1614, 950);
+            this.Size = new System.Drawing.Size(1843, 942);
             this.Load += new System.EventHandler(this.RegisteredVehicleUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

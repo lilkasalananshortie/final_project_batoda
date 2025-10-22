@@ -241,7 +241,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.ApplySearchButton);
-            this.panel1.Location = new System.Drawing.Point(19, 209);
+            this.panel1.Location = new System.Drawing.Point(14, 159);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1590, 681);
             this.panel1.TabIndex = 24;
@@ -259,7 +259,7 @@
             this.pictureBox7.Image = global::BATODA.Properties.Resources.angry_12129344;
             this.pictureBox7.Location = new System.Drawing.Point(16, 16);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 44;
             this.pictureBox7.TabStop = false;
@@ -267,10 +267,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(87, 28);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(62, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(378, 42);
+            this.label7.Size = new System.Drawing.Size(278, 31);
             this.label7.TabIndex = 43;
             this.label7.Text = "Expired Membership";
             // 
@@ -280,9 +280,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(19, 110);
+            this.panel7.Location = new System.Drawing.Point(14, 85);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1585, 100);
+            this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 50;
             // 
             // MembershipRenewalUForm

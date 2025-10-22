@@ -67,8 +67,6 @@ namespace BATODA
             base.OnShown(e);
             this.ActiveControl = null; 
         }
-        
-
     }
 }
 

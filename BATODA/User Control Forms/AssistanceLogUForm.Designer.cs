@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.ARHButton = new BATODA.ButtonStyle();
-            this.AssistanceHomeButton = new BATODA.ButtonStyle();
-            this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -39,11 +36,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.ApplyButton = new BATODA.ButtonStyle();
             this.SortComboBox = new System.Windows.Forms.ComboBox();
-            this.ClearButton = new BATODA.ButtonStyle();
             this.AssistanceTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.ApplySearchButton = new BATODA.ButtonStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -65,6 +59,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.ApplyButton = new BATODA.ButtonStyle();
+            this.ClearButton = new BATODA.ButtonStyle();
+            this.ApplySearchButton = new BATODA.ButtonStyle();
+            this.ARHButton = new BATODA.ButtonStyle();
+            this.AssistanceHomeButton = new BATODA.ButtonStyle();
+            this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -94,105 +94,6 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 23;
             // 
-            // ARHButton
-            // 
-            this.ARHButton.BackColor = System.Drawing.Color.White;
-            this.ARHButton.BackgroundColor = System.Drawing.Color.White;
-            this.ARHButton.BorderColor = System.Drawing.Color.White;
-            this.ARHButton.BorderRadius = 0;
-            this.ARHButton.BorderSize = 0;
-            this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.ARHButton.FlatAppearance.BorderSize = 0;
-            this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ARHButton.ForeColor = System.Drawing.Color.Black;
-            this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.ARHButton.HoverColor = System.Drawing.Color.Silver;
-            this.ARHButton.ImageColor = System.Drawing.Color.Black;
-            this.ARHButton.ImagePosition = new System.Drawing.Point(95, 0);
-            this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ARHButton.IsToggled = false;
-            this.ARHButton.Location = new System.Drawing.Point(1065, 7);
-            this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.ARHButton.Name = "ARHButton";
-            this.ARHButton.PaddingX = 0;
-            this.ARHButton.PaddingY = 0;
-            this.ARHButton.Size = new System.Drawing.Size(525, 49);
-            this.ARHButton.TabIndex = 21;
-            this.ARHButton.Text = "Approved Request History";
-            this.ARHButton.TextColor = System.Drawing.Color.Black;
-            this.ARHButton.TextOffset = 20;
-            this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.ARHButton.UseVisualStyleBackColor = false;
-            this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
-            // 
-            // AssistanceHomeButton
-            // 
-            this.AssistanceHomeButton.BackColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.BorderColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.BorderRadius = 0;
-            this.AssistanceHomeButton.BorderSize = 0;
-            this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
-            this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
-            this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.AssistanceHomeButton.HoverColor = System.Drawing.Color.Silver;
-            this.AssistanceHomeButton.ImageColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(117, 0);
-            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.AssistanceHomeButton.IsToggled = false;
-            this.AssistanceHomeButton.Location = new System.Drawing.Point(5, 7);
-            this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceHomeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.AssistanceHomeButton.Name = "AssistanceHomeButton";
-            this.AssistanceHomeButton.PaddingX = 0;
-            this.AssistanceHomeButton.PaddingY = 0;
-            this.AssistanceHomeButton.Size = new System.Drawing.Size(525, 49);
-            this.AssistanceHomeButton.TabIndex = 20;
-            this.AssistanceHomeButton.Text = "Assistance Dashboard";
-            this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.TextOffset = 20;
-            this.AssistanceHomeButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.UseVisualStyleBackColor = false;
-            this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
-            // 
-            // AssistanceRequestButton
-            // 
-            this.AssistanceRequestButton.BackColor = System.Drawing.Color.White;
-            this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.White;
-            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.White;
-            this.AssistanceRequestButton.BorderRadius = 0;
-            this.AssistanceRequestButton.BorderSize = 0;
-            this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
-            this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
-            this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;
-            this.AssistanceRequestButton.ImageColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(145, 0);
-            this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.AssistanceRequestButton.IsToggled = false;
-            this.AssistanceRequestButton.Location = new System.Drawing.Point(535, 7);
-            this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.AssistanceRequestButton.Name = "AssistanceRequestButton";
-            this.AssistanceRequestButton.PaddingX = 0;
-            this.AssistanceRequestButton.PaddingY = 0;
-            this.AssistanceRequestButton.Size = new System.Drawing.Size(525, 49);
-            this.AssistanceRequestButton.TabIndex = 19;
-            this.AssistanceRequestButton.Text = "Assistance Request";
-            this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.TextOffset = 20;
-            this.AssistanceRequestButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.UseVisualStyleBackColor = false;
-            this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -218,9 +119,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 316);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 285);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1480, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(1480, 338);
             this.dataGridView1.TabIndex = 45;
             // 
             // panel7
@@ -229,9 +130,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Location = new System.Drawing.Point(41, 217);
+            this.panel7.Location = new System.Drawing.Point(42, 212);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1480, 100);
+            this.panel7.Size = new System.Drawing.Size(1480, 75);
             this.panel7.TabIndex = 53;
             // 
             // pictureBox7
@@ -239,7 +140,7 @@
             this.pictureBox7.Image = global::BATODA.Properties.Resources.assistance;
             this.pictureBox7.Location = new System.Drawing.Point(16, 16);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 44;
             this.pictureBox7.TabStop = false;
@@ -247,169 +148,70 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(82, 28);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(62, 21);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(524, 42);
+            this.label13.Size = new System.Drawing.Size(388, 31);
             this.label13.TabIndex = 43;
             this.label13.Text = "Pending Assistance Request";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(699, 82);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(679, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 51;
             this.label1.Text = "Any pa to";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(965, 82);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(936, 86);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 25);
+            this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 50;
             this.label6.Text = "Sort By";
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplyButton.BorderRadius = 0;
-            this.ApplyButton.BorderSize = 0;
-            this.ApplyButton.ButtonImage = null;
-            this.ApplyButton.FlatAppearance.BorderSize = 0;
-            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyButton.ForeColor = System.Drawing.Color.White;
-            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1338, 172);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.PaddingX = 0;
-            this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(108, 33);
-            this.ApplyButton.TabIndex = 48;
-            this.ApplyButton.Text = "Apply Filter";
-            this.ApplyButton.TextColor = System.Drawing.Color.White;
-            this.ApplyButton.TextOffset = 20;
-            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.UseVisualStyleBackColor = false;
-            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // SortComboBox
             // 
             this.SortComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortComboBox.FormattingEnabled = true;
-            this.SortComboBox.Location = new System.Drawing.Point(970, 117);
+            this.SortComboBox.Location = new System.Drawing.Point(940, 117);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SortComboBox.Name = "SortComboBox";
             this.SortComboBox.Size = new System.Drawing.Size(250, 41);
             this.SortComboBox.TabIndex = 47;
             // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderColor = System.Drawing.Color.Red;
-            this.ClearButton.BorderRadius = 0;
-            this.ClearButton.BorderSize = 0;
-            this.ClearButton.ButtonImage = null;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.ImageColor = System.Drawing.Color.Black;
-            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1452, 172);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.PaddingX = 0;
-            this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(103, 33);
-            this.ClearButton.TabIndex = 49;
-            this.ClearButton.Text = "Clear Filter";
-            this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextOffset = 20;
-            this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.UseVisualStyleBackColor = false;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
-            // 
             // AssistanceTypeComboBox
             // 
             this.AssistanceTypeComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceTypeComboBox.FormattingEnabled = true;
-            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(704, 117);
+            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(684, 117);
             this.AssistanceTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
             this.AssistanceTypeComboBox.Size = new System.Drawing.Size(250, 41);
             this.AssistanceTypeComboBox.TabIndex = 46;
             // 
-            // ApplySearchButton
-            // 
-            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplySearchButton.BorderRadius = 0;
-            this.ApplySearchButton.BorderSize = 0;
-            this.ApplySearchButton.ButtonImage = null;
-            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
-            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
-            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(540, 126);
-            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.Name = "ApplySearchButton";
-            this.ApplySearchButton.PaddingX = 0;
-            this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(115, 45);
-            this.ApplySearchButton.TabIndex = 44;
-            this.ApplySearchButton.Text = "Search";
-            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextOffset = 0;
-            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ApplySearchButton.UseVisualStyleBackColor = false;
-            this.ApplySearchButton.Click += new System.EventHandler(this.ApplySearchButton_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(698, 23);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(679, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 43;
             this.label3.Text = "Filter by :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 32);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 25);
+            this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 42;
             this.label2.Text = "Search Member";
             // 
@@ -418,16 +220,16 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(42, 69);
+            this.panel6.Location = new System.Drawing.Point(40, 67);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(613, 50);
+            this.panel6.Size = new System.Drawing.Size(613, 41);
             this.panel6.TabIndex = 52;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(50, 13);
+            this.SearchTextBox.Location = new System.Drawing.Point(46, 8);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(558, 24);
@@ -437,7 +239,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -628,11 +430,210 @@
             this.label4.TabIndex = 48;
             this.label4.Text = "Total Request";
             // 
+            // ApplyButton
+            // 
+            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplyButton.BorderRadius = 0;
+            this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.ButtonImage = null;
+            this.ApplyButton.FlatAppearance.BorderSize = 0;
+            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.ForeColor = System.Drawing.Color.White;
+            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplyButton.IsToggled = false;
+            this.ApplyButton.Location = new System.Drawing.Point(1304, 166);
+            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.PaddingX = 0;
+            this.ApplyButton.PaddingY = 0;
+            this.ApplyButton.Size = new System.Drawing.Size(108, 33);
+            this.ApplyButton.TabIndex = 48;
+            this.ApplyButton.Text = "Apply Filter";
+            this.ApplyButton.TextColor = System.Drawing.Color.White;
+            this.ApplyButton.TextOffset = 20;
+            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.UseVisualStyleBackColor = false;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderColor = System.Drawing.Color.Red;
+            this.ClearButton.BorderRadius = 0;
+            this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.ImageColor = System.Drawing.Color.Black;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ClearButton.IsToggled = false;
+            this.ClearButton.Location = new System.Drawing.Point(1418, 166);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.PaddingX = 0;
+            this.ClearButton.PaddingY = 0;
+            this.ClearButton.Size = new System.Drawing.Size(103, 33);
+            this.ClearButton.TabIndex = 49;
+            this.ClearButton.Text = "Clear Filter";
+            this.ClearButton.TextColor = System.Drawing.Color.White;
+            this.ClearButton.TextOffset = 20;
+            this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // ApplySearchButton
+            // 
+            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplySearchButton.BorderRadius = 0;
+            this.ApplySearchButton.BorderSize = 0;
+            this.ApplySearchButton.ButtonImage = null;
+            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
+            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
+            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplySearchButton.IsToggled = false;
+            this.ApplySearchButton.Location = new System.Drawing.Point(540, 120);
+            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.Name = "ApplySearchButton";
+            this.ApplySearchButton.PaddingX = 0;
+            this.ApplySearchButton.PaddingY = 0;
+            this.ApplySearchButton.Size = new System.Drawing.Size(115, 33);
+            this.ApplySearchButton.TabIndex = 44;
+            this.ApplySearchButton.Text = "Search";
+            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
+            this.ApplySearchButton.TextOffset = 0;
+            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ApplySearchButton.UseVisualStyleBackColor = false;
+            this.ApplySearchButton.Click += new System.EventHandler(this.ApplySearchButton_Click);
+            // 
+            // ARHButton
+            // 
+            this.ARHButton.BackColor = System.Drawing.Color.White;
+            this.ARHButton.BackgroundColor = System.Drawing.Color.White;
+            this.ARHButton.BorderColor = System.Drawing.Color.White;
+            this.ARHButton.BorderRadius = 0;
+            this.ARHButton.BorderSize = 0;
+            this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.ARHButton.FlatAppearance.BorderSize = 0;
+            this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARHButton.ForeColor = System.Drawing.Color.Black;
+            this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ARHButton.HoverColor = System.Drawing.Color.Silver;
+            this.ARHButton.ImageColor = System.Drawing.Color.Black;
+            this.ARHButton.ImagePosition = new System.Drawing.Point(95, 0);
+            this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ARHButton.IsToggled = false;
+            this.ARHButton.Location = new System.Drawing.Point(1065, 7);
+            this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.ARHButton.Name = "ARHButton";
+            this.ARHButton.PaddingX = 0;
+            this.ARHButton.PaddingY = 0;
+            this.ARHButton.Size = new System.Drawing.Size(525, 49);
+            this.ARHButton.TabIndex = 21;
+            this.ARHButton.Text = "Approved Request History";
+            this.ARHButton.TextColor = System.Drawing.Color.Black;
+            this.ARHButton.TextOffset = 20;
+            this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.ARHButton.UseVisualStyleBackColor = false;
+            this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
+            // 
+            // AssistanceHomeButton
+            // 
+            this.AssistanceHomeButton.BackColor = System.Drawing.Color.LightGray;
+            this.AssistanceHomeButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.AssistanceHomeButton.BorderColor = System.Drawing.Color.LightGray;
+            this.AssistanceHomeButton.BorderRadius = 0;
+            this.AssistanceHomeButton.BorderSize = 0;
+            this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
+            this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
+            this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.AssistanceHomeButton.HoverColor = System.Drawing.Color.Silver;
+            this.AssistanceHomeButton.ImageColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(117, 0);
+            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.AssistanceHomeButton.IsToggled = false;
+            this.AssistanceHomeButton.Location = new System.Drawing.Point(5, 7);
+            this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AssistanceHomeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.AssistanceHomeButton.Name = "AssistanceHomeButton";
+            this.AssistanceHomeButton.PaddingX = 0;
+            this.AssistanceHomeButton.PaddingY = 0;
+            this.AssistanceHomeButton.Size = new System.Drawing.Size(525, 49);
+            this.AssistanceHomeButton.TabIndex = 20;
+            this.AssistanceHomeButton.Text = "Assistance Dashboard";
+            this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.TextOffset = 20;
+            this.AssistanceHomeButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.AssistanceHomeButton.UseVisualStyleBackColor = false;
+            this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
+            // 
+            // AssistanceRequestButton
+            // 
+            this.AssistanceRequestButton.BackColor = System.Drawing.Color.White;
+            this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.White;
+            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.White;
+            this.AssistanceRequestButton.BorderRadius = 0;
+            this.AssistanceRequestButton.BorderSize = 0;
+            this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
+            this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
+            this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;
+            this.AssistanceRequestButton.ImageColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(145, 0);
+            this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.AssistanceRequestButton.IsToggled = false;
+            this.AssistanceRequestButton.Location = new System.Drawing.Point(535, 7);
+            this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.AssistanceRequestButton.Name = "AssistanceRequestButton";
+            this.AssistanceRequestButton.PaddingX = 0;
+            this.AssistanceRequestButton.PaddingY = 0;
+            this.AssistanceRequestButton.Size = new System.Drawing.Size(525, 49);
+            this.AssistanceRequestButton.TabIndex = 19;
+            this.AssistanceRequestButton.Text = "Assistance Request";
+            this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.TextOffset = 20;
+            this.AssistanceRequestButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.UseVisualStyleBackColor = false;
+            this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
+            // 
             // AssistanceLogUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -640,7 +641,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "AssistanceLogUForm";
-            this.Size = new System.Drawing.Size(1835, 942);
+            this.Size = new System.Drawing.Size(1841, 940);
             this.Load += new System.EventHandler(this.AssistanceLogUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

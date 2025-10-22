@@ -157,9 +157,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(18, 88);
+            this.panel7.Location = new System.Drawing.Point(19, 94);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1585, 100);
+            this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 49;
             // 
             // pictureBox7
@@ -167,7 +167,7 @@
             this.pictureBox7.Image = global::BATODA.Properties.Resources.history;
             this.pictureBox7.Location = new System.Drawing.Point(16, 16);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 44;
             this.pictureBox7.TabStop = false;
@@ -175,10 +175,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(87, 28);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(62, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(299, 42);
+            this.label7.Size = new System.Drawing.Size(225, 31);
             this.label7.TabIndex = 43;
             this.label7.Text = "Transfer History";
             // 
@@ -186,9 +186,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(18, 188);
+            this.panel1.Location = new System.Drawing.Point(19, 169);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 623);
+            this.panel1.Size = new System.Drawing.Size(1585, 642);
             this.panel1.TabIndex = 48;
             // 
             // TransferRecordVehicleUForm

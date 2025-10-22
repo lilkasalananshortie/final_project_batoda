@@ -209,7 +209,7 @@
             this.SaveButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.SaveButton.ImageSize = new System.Drawing.Size(32, 32);
             this.SaveButton.IsToggled = false;
-            this.SaveButton.Location = new System.Drawing.Point(1281, 818);
+            this.SaveButton.Location = new System.Drawing.Point(1281, 806);
             this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SaveButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.SaveButton.Name = "SaveButton";
@@ -227,7 +227,7 @@
             // 
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(39, 552);
+            this.panel5.Location = new System.Drawing.Point(39, 538);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1509, 235);
             this.panel5.TabIndex = 30;
@@ -275,7 +275,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Location = new System.Drawing.Point(39, 132);
+            this.panel2.Location = new System.Drawing.Point(39, 107);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1509, 396);
             this.panel2.TabIndex = 29;
@@ -426,7 +426,7 @@
             this.pictureBox3.Image = global::BATODA.Properties.Resources.transfer;
             this.pictureBox3.Location = new System.Drawing.Point(39, 36);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
@@ -434,10 +434,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(120, 55);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(86, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 42);
+            this.label3.Size = new System.Drawing.Size(219, 31);
             this.label3.TabIndex = 6;
             this.label3.Text = "Change Vehicle";
             // 
