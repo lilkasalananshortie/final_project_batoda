@@ -68,6 +68,9 @@
             this.buttonStyle4 = new BATODA.ButtonStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -83,6 +86,7 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,7 +99,7 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(15, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(525, 175);
+            this.panel1.Size = new System.Drawing.Size(523, 153);
             this.panel1.TabIndex = 0;
             // 
             // label8
@@ -135,9 +139,9 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(546, 194);
+            this.panel2.Location = new System.Drawing.Point(546, 172);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(525, 175);
+            this.panel2.Size = new System.Drawing.Size(523, 153);
             this.panel2.TabIndex = 1;
             // 
             // label11
@@ -179,7 +183,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(1077, 13);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(525, 175);
+            this.panel3.Size = new System.Drawing.Size(523, 153);
             this.panel3.TabIndex = 2;
             // 
             // label10
@@ -216,16 +220,16 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkGray;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(44, 435);
+            this.panel4.Location = new System.Drawing.Point(43, 390);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1012, 499);
+            this.panel4.Size = new System.Drawing.Size(1018, 514);
             this.panel4.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(76, 398);
+            this.label4.Location = new System.Drawing.Point(75, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 31);
             this.label4.TabIndex = 5;
@@ -241,7 +245,7 @@
             this.panel5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel5.Location = new System.Drawing.Point(546, 13);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(525, 175);
+            this.panel5.Size = new System.Drawing.Size(523, 153);
             this.panel5.TabIndex = 3;
             // 
             // label9
@@ -282,9 +286,9 @@
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.label6);
             this.panel6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel6.Location = new System.Drawing.Point(15, 194);
+            this.panel6.Location = new System.Drawing.Point(15, 172);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(525, 175);
+            this.panel6.Size = new System.Drawing.Size(523, 153);
             this.panel6.TabIndex = 4;
             // 
             // label13
@@ -324,9 +328,9 @@
             this.panel7.Controls.Add(this.label12);
             this.panel7.Controls.Add(this.pictureBox5);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(1077, 194);
+            this.panel7.Location = new System.Drawing.Point(1077, 172);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(525, 175);
+            this.panel7.Size = new System.Drawing.Size(523, 153);
             this.panel7.TabIndex = 5;
             // 
             // label12
@@ -368,9 +372,9 @@
             this.panel8.Controls.Add(this.QuickActionTransferMemberButton);
             this.panel8.Controls.Add(this.QuickActionNewMemberButton);
             this.panel8.Controls.Add(this.label14);
-            this.panel8.Location = new System.Drawing.Point(1103, 390);
+            this.panel8.Location = new System.Drawing.Point(1078, 345);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(499, 314);
+            this.panel8.Size = new System.Drawing.Size(523, 314);
             this.panel8.TabIndex = 2;
             // 
             // QuickActionReviewActionButton
@@ -390,7 +394,7 @@
             this.QuickActionReviewActionButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionReviewActionButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionReviewActionButton.IsToggled = false;
-            this.QuickActionReviewActionButton.Location = new System.Drawing.Point(35, 229);
+            this.QuickActionReviewActionButton.Location = new System.Drawing.Point(45, 227);
             this.QuickActionReviewActionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionReviewActionButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionReviewActionButton.Name = "QuickActionReviewActionButton";
@@ -422,7 +426,7 @@
             this.QuickActionChangeVehicleButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionChangeVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionChangeVehicleButton.IsToggled = false;
-            this.QuickActionChangeVehicleButton.Location = new System.Drawing.Point(35, 176);
+            this.QuickActionChangeVehicleButton.Location = new System.Drawing.Point(45, 174);
             this.QuickActionChangeVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionChangeVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionChangeVehicleButton.Name = "QuickActionChangeVehicleButton";
@@ -454,7 +458,7 @@
             this.QuickActionTransferMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionTransferMemberButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionTransferMemberButton.IsToggled = false;
-            this.QuickActionTransferMemberButton.Location = new System.Drawing.Point(33, 123);
+            this.QuickActionTransferMemberButton.Location = new System.Drawing.Point(43, 121);
             this.QuickActionTransferMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionTransferMemberButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionTransferMemberButton.Name = "QuickActionTransferMemberButton";
@@ -487,7 +491,7 @@
             this.QuickActionNewMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionNewMemberButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionNewMemberButton.IsToggled = false;
-            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(33, 70);
+            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(43, 68);
             this.QuickActionNewMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionNewMemberButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.QuickActionNewMemberButton.Name = "QuickActionNewMemberButton";
@@ -506,7 +510,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(30, 23);
+            this.label14.Location = new System.Drawing.Point(40, 21);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(176, 29);
             this.label14.TabIndex = 5;
@@ -522,16 +526,16 @@
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.buttonStyle4);
             this.panel9.Controls.Add(this.label15);
-            this.panel9.Location = new System.Drawing.Point(1103, 710);
+            this.panel9.Location = new System.Drawing.Point(1077, 665);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(499, 239);
+            this.panel9.Size = new System.Drawing.Size(523, 239);
             this.panel9.TabIndex = 2;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(395, 86);
+            this.label19.Location = new System.Drawing.Point(405, 83);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(65, 20);
             this.label19.TabIndex = 44;
@@ -542,7 +546,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(377, 127);
+            this.label18.Location = new System.Drawing.Point(387, 124);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(84, 20);
             this.label18.TabIndex = 43;
@@ -553,21 +557,21 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(37, 86);
+            this.label17.Location = new System.Drawing.Point(47, 83);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(114, 20);
+            this.label17.Size = new System.Drawing.Size(58, 20);
             this.label17.TabIndex = 42;
-            this.label17.Text = "Total Members";
+            this.label17.Text = "Events";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(37, 127);
+            this.label16.Location = new System.Drawing.Point(47, 124);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 20);
+            this.label16.Size = new System.Drawing.Size(48, 20);
             this.label16.TabIndex = 41;
-            this.label16.Text = "Total Members";
+            this.label16.Text = "Done";
             // 
             // buttonStyle4
             // 
@@ -586,7 +590,7 @@
             this.buttonStyle4.ImagePosition = new System.Drawing.Point(0, 0);
             this.buttonStyle4.ImageSize = new System.Drawing.Size(32, 32);
             this.buttonStyle4.IsToggled = false;
-            this.buttonStyle4.Location = new System.Drawing.Point(19, 178);
+            this.buttonStyle4.Location = new System.Drawing.Point(29, 175);
             this.buttonStyle4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonStyle4.MouseDownColor = System.Drawing.Color.DarkGray;
             this.buttonStyle4.Name = "buttonStyle4";
@@ -604,27 +608,59 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(35, 30);
+            this.label15.Location = new System.Drawing.Point(45, 27);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(176, 29);
+            this.label15.Size = new System.Drawing.Size(201, 29);
             this.label15.TabIndex = 5;
-            this.label15.Text = "Total Members";
+            this.label15.Text = "Upcoming Events";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::BATODA.Properties.Resources.actuvity_log;
-            this.pictureBox7.Location = new System.Drawing.Point(44, 394);
+            this.pictureBox7.Location = new System.Drawing.Point(43, 340);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 35);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.label24);
+            this.panel10.Location = new System.Drawing.Point(43, 922);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1557, 422);
+            this.panel10.TabIndex = 7;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(35, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(205, 29);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "Payment Overdue";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DarkGray;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Location = new System.Drawing.Point(40, 66);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1479, 332);
+            this.panel11.TabIndex = 6;
+            // 
             // DashboardUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.pictureBox7);
@@ -637,7 +673,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "DashboardUForm";
-            this.Size = new System.Drawing.Size(1857, 1010);
+            this.Size = new System.Drawing.Size(1857, 1491);
             this.Load += new System.EventHandler(this.DashboardUForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -662,6 +698,8 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -709,5 +747,8 @@
         private System.Windows.Forms.Label label16;
         private ButtonStyle buttonStyle4;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label24;
     }
 }

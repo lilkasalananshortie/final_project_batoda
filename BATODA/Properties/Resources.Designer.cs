@@ -113,6 +113,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Image_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Add_Image_Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_member {
             get {
                 object obj = ResourceManager.GetObject("add_member", resourceCulture);
@@ -366,6 +376,16 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap icon {
             get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_add_image {
+            get {
+                object obj = ResourceManager.GetObject("icon_add_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
