@@ -67,6 +67,7 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.ARHButton);
             this.MembersTopPanel.Controls.Add(this.AssistanceHomeButton);
             this.MembersTopPanel.Controls.Add(this.AssistanceRequestButton);
@@ -80,9 +81,9 @@
             // 
             this.ARHButton.BackColor = System.Drawing.Color.White;
             this.ARHButton.BackgroundColor = System.Drawing.Color.White;
-            this.ARHButton.BorderColor = System.Drawing.Color.White;
+            this.ARHButton.BorderColor = System.Drawing.Color.Black;
             this.ARHButton.BorderRadius = 0;
-            this.ARHButton.BorderSize = 0;
+            this.ARHButton.BorderSize = 1;
             this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.ARHButton.FlatAppearance.BorderSize = 0;
             this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -94,7 +95,7 @@
             this.ARHButton.ImagePosition = new System.Drawing.Point(95, 0);
             this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
             this.ARHButton.IsToggled = false;
-            this.ARHButton.Location = new System.Drawing.Point(1065, 7);
+            this.ARHButton.Location = new System.Drawing.Point(1065, 5);
             this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.ARHButton.Name = "ARHButton";
@@ -113,9 +114,9 @@
             // 
             this.AssistanceHomeButton.BackColor = System.Drawing.Color.White;
             this.AssistanceHomeButton.BackgroundColor = System.Drawing.Color.White;
-            this.AssistanceHomeButton.BorderColor = System.Drawing.Color.White;
+            this.AssistanceHomeButton.BorderColor = System.Drawing.Color.Black;
             this.AssistanceHomeButton.BorderRadius = 0;
-            this.AssistanceHomeButton.BorderSize = 0;
+            this.AssistanceHomeButton.BorderSize = 1;
             this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
             this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
             this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -127,7 +128,7 @@
             this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(117, 0);
             this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(32, 32);
             this.AssistanceHomeButton.IsToggled = false;
-            this.AssistanceHomeButton.Location = new System.Drawing.Point(5, 7);
+            this.AssistanceHomeButton.Location = new System.Drawing.Point(5, 5);
             this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceHomeButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.AssistanceHomeButton.Name = "AssistanceHomeButton";
@@ -146,9 +147,9 @@
             // 
             this.AssistanceRequestButton.BackColor = System.Drawing.Color.LightGray;
             this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.Black;
             this.AssistanceRequestButton.BorderRadius = 0;
-            this.AssistanceRequestButton.BorderSize = 0;
+            this.AssistanceRequestButton.BorderSize = 1;
             this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
             this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
             this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -160,7 +161,7 @@
             this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(145, 0);
             this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
             this.AssistanceRequestButton.IsToggled = false;
-            this.AssistanceRequestButton.Location = new System.Drawing.Point(535, 7);
+            this.AssistanceRequestButton.Location = new System.Drawing.Point(535, 5);
             this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.AssistanceRequestButton.Name = "AssistanceRequestButton";
@@ -489,11 +490,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "AssistanceRequestUForm";
-            this.Size = new System.Drawing.Size(1878, 940);
+            this.Size = new System.Drawing.Size(1876, 938);
             this.Load += new System.EventHandler(this.AssistanceRequestUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

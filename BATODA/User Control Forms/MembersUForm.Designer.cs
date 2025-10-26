@@ -149,7 +149,7 @@
             // 
             this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(763, 45);
+            this.MemberTypeComboBox.Location = new System.Drawing.Point(743, 45);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
             this.MemberTypeComboBox.Size = new System.Drawing.Size(250, 33);
@@ -160,7 +160,7 @@
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(1023, 46);
+            this.OrderComboBox.Location = new System.Drawing.Point(1013, 45);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
             this.OrderComboBox.Size = new System.Drawing.Size(250, 33);
@@ -171,7 +171,7 @@
             // 
             this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Location = new System.Drawing.Point(1279, 46);
+            this.StatusComboBox.Location = new System.Drawing.Point(1279, 45);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(250, 33);
@@ -192,7 +192,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(763, 21);
+            this.label5.Location = new System.Drawing.Point(743, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 20);
             this.label5.TabIndex = 17;
@@ -201,6 +201,7 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.TransferMembershipButton);
             this.MembersTopPanel.Controls.Add(this.TransferRecordsButton);
             this.MembersTopPanel.Controls.Add(this.ManageMembersButton);
@@ -214,9 +215,9 @@
             // 
             this.TransferMembershipButton.BackColor = System.Drawing.Color.White;
             this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferMembershipButton.BorderColor = System.Drawing.Color.White;
+            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
             this.TransferMembershipButton.BorderRadius = 0;
-            this.TransferMembershipButton.BorderSize = 0;
+            this.TransferMembershipButton.BorderSize = 1;
             this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
             this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -228,7 +229,7 @@
             this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
             this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferMembershipButton.IsToggled = false;
-            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 7);
+            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
             this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.TransferMembershipButton.Name = "TransferMembershipButton";
@@ -247,9 +248,9 @@
             // 
             this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
             this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BorderColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
             this.TransferRecordsButton.BorderRadius = 0;
-            this.TransferRecordsButton.BorderSize = 0;
+            this.TransferRecordsButton.BorderSize = 1;
             this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -261,7 +262,7 @@
             this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
             this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferRecordsButton.IsToggled = false;
-            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 7);
+            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
             this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.TransferRecordsButton.Name = "TransferRecordsButton";
@@ -280,9 +281,9 @@
             // 
             this.ManageMembersButton.BackColor = System.Drawing.Color.LightGray;
             this.ManageMembersButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.ManageMembersButton.BorderColor = System.Drawing.Color.LightGray;
+            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
             this.ManageMembersButton.BorderRadius = 0;
-            this.ManageMembersButton.BorderSize = 0;
+            this.ManageMembersButton.BorderSize = 1;
             this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
             this.ManageMembersButton.FlatAppearance.BorderSize = 0;
             this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -294,7 +295,7 @@
             this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
             this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
             this.ManageMembersButton.IsToggled = false;
-            this.ManageMembersButton.Location = new System.Drawing.Point(5, 7);
+            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
             this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.ManageMembersButton.Name = "ManageMembersButton";
@@ -313,7 +314,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1020, 21);
+            this.label4.Location = new System.Drawing.Point(1013, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 19;
@@ -1080,7 +1081,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

@@ -54,7 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.SortComboBox = new System.Windows.Forms.ComboBox();
             this.YearComboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.PaymentStatusComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -96,6 +95,7 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.MembershipRenewalButton);
             this.MembersTopPanel.Controls.Add(this.RenewalHistoryButton);
             this.MembersTopPanel.Controls.Add(this.FinanceButton);
@@ -110,9 +110,9 @@
             // 
             this.MembershipRenewalButton.BackColor = System.Drawing.Color.White;
             this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.White;
-            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.Black;
             this.MembershipRenewalButton.BorderRadius = 0;
-            this.MembershipRenewalButton.BorderSize = 0;
+            this.MembershipRenewalButton.BorderSize = 1;
             this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
             this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
             this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -124,7 +124,7 @@
             this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(130, 0);
             this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(32, 32);
             this.MembershipRenewalButton.IsToggled = false;
-            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 7);
+            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 5);
             this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembershipRenewalButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.MembershipRenewalButton.Name = "MembershipRenewalButton";
@@ -144,9 +144,9 @@
             // 
             this.RenewalHistoryButton.BackColor = System.Drawing.Color.White;
             this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.White;
-            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.White;
+            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.Black;
             this.RenewalHistoryButton.BorderRadius = 0;
-            this.RenewalHistoryButton.BorderSize = 0;
+            this.RenewalHistoryButton.BorderSize = 1;
             this.RenewalHistoryButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.RenewalHistoryButton.FlatAppearance.BorderSize = 0;
             this.RenewalHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -158,7 +158,7 @@
             this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(155, 0);
             this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(32, 32);
             this.RenewalHistoryButton.IsToggled = false;
-            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 7);
+            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 5);
             this.RenewalHistoryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RenewalHistoryButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.RenewalHistoryButton.Name = "RenewalHistoryButton";
@@ -178,9 +178,9 @@
             // 
             this.FinanceButton.BackColor = System.Drawing.Color.LightGray;
             this.FinanceButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.FinanceButton.BorderColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.BorderColor = System.Drawing.Color.Black;
             this.FinanceButton.BorderRadius = 0;
-            this.FinanceButton.BorderSize = 0;
+            this.FinanceButton.BorderSize = 1;
             this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
             this.FinanceButton.FlatAppearance.BorderSize = 0;
             this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,7 +192,7 @@
             this.FinanceButton.ImagePosition = new System.Drawing.Point(180, 0);
             this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
             this.FinanceButton.IsToggled = false;
-            this.FinanceButton.Location = new System.Drawing.Point(5, 7);
+            this.FinanceButton.Location = new System.Drawing.Point(5, 5);
             this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FinanceButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.FinanceButton.Name = "FinanceButton";
@@ -223,7 +223,6 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.SortComboBox);
             this.panel1.Controls.Add(this.YearComboBox);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.PaymentStatusComboBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(25, 265);
@@ -249,7 +248,7 @@
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1304, 166);
+            this.ApplyButton.Location = new System.Drawing.Point(1312, 90);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.Name = "ApplyButton";
@@ -276,9 +275,9 @@
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(41, 212);
+            this.panel7.Location = new System.Drawing.Point(47, 134);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1480, 75);
+            this.panel7.Size = new System.Drawing.Size(1482, 75);
             this.panel7.TabIndex = 46;
             // 
             // pictureBox10
@@ -382,7 +381,7 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1418, 166);
+            this.ClearButton.Location = new System.Drawing.Point(1426, 90);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
@@ -404,7 +403,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(40, 67);
+            this.panel6.Location = new System.Drawing.Point(45, 40);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(613, 41);
             this.panel6.TabIndex = 45;
@@ -435,9 +434,9 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 286);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 208);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1480, 341);
+            this.dataGridView1.Size = new System.Drawing.Size(1482, 341);
             this.dataGridView1.TabIndex = 44;
             // 
             // ApplySearchButton
@@ -458,7 +457,7 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(540, 120);
+            this.ApplySearchButton.Location = new System.Drawing.Point(545, 93);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
@@ -477,7 +476,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1192, 82);
+            this.label6.Location = new System.Drawing.Point(1279, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 38;
@@ -487,7 +486,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(936, 82);
+            this.label4.Location = new System.Drawing.Point(1013, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 37;
@@ -498,7 +497,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(679, 82);
+            this.label5.Location = new System.Drawing.Point(743, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 20);
             this.label5.TabIndex = 36;
@@ -506,43 +505,32 @@
             // 
             // SortComboBox
             // 
-            this.SortComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortComboBox.FormattingEnabled = true;
-            this.SortComboBox.Location = new System.Drawing.Point(1196, 117);
+            this.SortComboBox.Location = new System.Drawing.Point(1279, 45);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SortComboBox.Name = "SortComboBox";
-            this.SortComboBox.Size = new System.Drawing.Size(250, 41);
+            this.SortComboBox.Size = new System.Drawing.Size(250, 33);
             this.SortComboBox.TabIndex = 33;
             // 
             // YearComboBox
             // 
-            this.YearComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YearComboBox.FormattingEnabled = true;
-            this.YearComboBox.Location = new System.Drawing.Point(940, 117);
+            this.YearComboBox.Location = new System.Drawing.Point(1013, 45);
             this.YearComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.YearComboBox.Name = "YearComboBox";
-            this.YearComboBox.Size = new System.Drawing.Size(250, 41);
+            this.YearComboBox.Size = new System.Drawing.Size(250, 33);
             this.YearComboBox.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(679, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Filter by :";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // PaymentStatusComboBox
             // 
-            this.PaymentStatusComboBox.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaymentStatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PaymentStatusComboBox.FormattingEnabled = true;
-            this.PaymentStatusComboBox.Location = new System.Drawing.Point(684, 117);
+            this.PaymentStatusComboBox.Location = new System.Drawing.Point(743, 45);
             this.PaymentStatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PaymentStatusComboBox.Name = "PaymentStatusComboBox";
-            this.PaymentStatusComboBox.Size = new System.Drawing.Size(250, 41);
+            this.PaymentStatusComboBox.Size = new System.Drawing.Size(250, 33);
             this.PaymentStatusComboBox.TabIndex = 30;
             this.PaymentStatusComboBox.SelectedIndexChanged += new System.EventHandler(this.PaymentStatusComboBox_SelectedIndexChanged);
             // 
@@ -550,7 +538,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 40);
+            this.label2.Location = new System.Drawing.Point(45, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 29;
@@ -745,7 +733,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -802,7 +790,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox SortComboBox;
         private System.Windows.Forms.ComboBox YearComboBox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox PaymentStatusComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SearchTextBox;

@@ -9,7 +9,7 @@ namespace BATODA
     {
 
        
-       
+        
         public DashboardForm()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace BATODA
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-            DisplayClass.ShowMain(new DashboardUForm());
+            DisplayClass.ShowMain(new DashboardUForm(this));
             TopPanelText.Text = "DASHBOARD";
 
             DisplayClass.Register
@@ -45,42 +45,83 @@ namespace BATODA
 
         }
 
+        public void ActivateMainButton(string module)
+        {
+            switch (module)
+            {
+                case "Dashboard":
+                    DisplayClass.SetActive(HomeButton);
+                    DisplayClass.ShowMain(new DashboardUForm(this));
+                    TopPanelText.Text = "DASHBOARD";
+                    break;
+
+                case "Members":
+                    DisplayClass.SetActive(MembersMainButton);
+                    DisplayClass.ShowMain(new MembersUForm());
+                    TopPanelText.Text = "MEMBER MANAGEMENT";
+                    break;
+
+                case "Vehicles":
+                    DisplayClass.SetActive(RegisteredVehiclesButton);
+                    DisplayClass.ShowMain(new RegisteredVehicleUForm());
+                    TopPanelText.Text = "MANAGE VEHICLE";
+                    break;
+
+                case "Assistance":
+                    DisplayClass.SetActive(AssistanceLogButton);
+                    DisplayClass.ShowMain(new AssistanceLogUForm());
+                    TopPanelText.Text = "MANAGE ASSISTANCE";
+                    break;
+
+                case "Finance":
+                    DisplayClass.SetActive(FinanceButton);
+                    DisplayClass.ShowMain(new FinanceUForm());
+                    TopPanelText.Text = "FINANCE MANAGEMENT";
+                    break;
+
+                case "Settings":
+                    DisplayClass.SetActive(SettingsButton);
+                    DisplayClass.ShowMain(new SettingsUForm());
+                    TopPanelText.Text = "SETTINGS";
+                    break;
+            }
+        }
         private void HomeButton_Click(object sender, EventArgs e)
-        { 
-            DisplayClass.SetActive(HomeButton);
-            DisplayClass.ShowMain(new DashboardUForm());
+        {
+            ActivateMainButton("Dashboard");
+            DisplayClass.ShowMain(new DashboardUForm(this));
             TopPanelText.Text = "DASHBOARD"; 
         }
 
         private void MembersMainButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.SetActive(MembersMainButton);
+            ActivateMainButton("Members");
             DisplayClass.ShowMain(new MembersUForm());
             TopPanelText.Text = "MEMBER MANAGEMENT";
         }
 
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.SetActive(RegisteredVehiclesButton);
+            ActivateMainButton("Vehicles");
             DisplayClass.ShowMain(new RegisteredVehicleUForm());
             TopPanelText.Text = "MANAGE VEHICLE";
         }
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.SetActive(AssistanceLogButton);
+            ActivateMainButton("Assistance"); 
             DisplayClass.ShowMain(new AssistanceLogUForm());
             TopPanelText.Text = "MANAGE ASSISTANCE";
         }
         private void FinanceButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.SetActive(FinanceButton);
+            ActivateMainButton("Finance");
             DisplayClass.ShowMain(new FinanceUForm());
             TopPanelText.Text = "FINANCE MANAGEMENT";
         }
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.SetActive(SettingsButton);
+            ActivateMainButton("Settings");
             DisplayClass.ShowMain(new SettingsUForm());
             TopPanelText.Text = "SETTINGS";
         }

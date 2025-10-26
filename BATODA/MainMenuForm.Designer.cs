@@ -234,7 +234,7 @@
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(300, 898);
+            this.NavBarPanel.Size = new System.Drawing.Size(300, 932);
             this.NavBarPanel.TabIndex = 1;
             // 
             // HomeButton
@@ -454,7 +454,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1604, 915);
+            this.ClientSize = new System.Drawing.Size(1604, 949);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);
@@ -488,7 +488,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private ButtonStyle HomeButton;
-        private ButtonStyle MembersMainButton;
         private ButtonStyle RegisteredVehiclesButton;
         private ButtonStyle AssistanceLogButton;
         private ButtonStyle FinanceButton;
@@ -499,5 +498,6 @@
         private System.Windows.Forms.FlowLayoutPanel NavBarPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel DisplayPanel;
+        private ButtonStyle MembersMainButton;
     }
 }

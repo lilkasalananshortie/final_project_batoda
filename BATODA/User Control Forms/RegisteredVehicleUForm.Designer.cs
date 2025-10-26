@@ -81,6 +81,7 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.TransferRecordButton);
             this.MembersTopPanel.Controls.Add(this.RegisteredVehicleButton);
             this.MembersTopPanel.Controls.Add(this.TransferVehicleButton);
@@ -94,9 +95,9 @@
             // 
             this.TransferRecordButton.BackColor = System.Drawing.Color.White;
             this.TransferRecordButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferRecordButton.BorderColor = System.Drawing.Color.White;
+            this.TransferRecordButton.BorderColor = System.Drawing.Color.Black;
             this.TransferRecordButton.BorderRadius = 0;
-            this.TransferRecordButton.BorderSize = 0;
+            this.TransferRecordButton.BorderSize = 1;
             this.TransferRecordButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -108,7 +109,7 @@
             this.TransferRecordButton.ImagePosition = new System.Drawing.Point(142, 0);
             this.TransferRecordButton.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferRecordButton.IsToggled = false;
-            this.TransferRecordButton.Location = new System.Drawing.Point(1065, 7);
+            this.TransferRecordButton.Location = new System.Drawing.Point(1065, 5);
             this.TransferRecordButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferRecordButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.TransferRecordButton.Name = "TransferRecordButton";
@@ -127,9 +128,9 @@
             // 
             this.RegisteredVehicleButton.BackColor = System.Drawing.Color.LightGray;
             this.RegisteredVehicleButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.LightGray;
+            this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.Black;
             this.RegisteredVehicleButton.BorderRadius = 0;
-            this.RegisteredVehicleButton.BorderSize = 0;
+            this.RegisteredVehicleButton.BorderSize = 1;
             this.RegisteredVehicleButton.ButtonImage = global::BATODA.Properties.Resources.trisokol;
             this.RegisteredVehicleButton.FlatAppearance.BorderSize = 0;
             this.RegisteredVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -141,7 +142,7 @@
             this.RegisteredVehicleButton.ImagePosition = new System.Drawing.Point(131, 0);
             this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
             this.RegisteredVehicleButton.IsToggled = false;
-            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 7);
+            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 5);
             this.RegisteredVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RegisteredVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
@@ -160,9 +161,9 @@
             // 
             this.TransferVehicleButton.BackColor = System.Drawing.Color.White;
             this.TransferVehicleButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferVehicleButton.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.TransferVehicleButton.BorderColor = System.Drawing.Color.Black;
             this.TransferVehicleButton.BorderRadius = 0;
-            this.TransferVehicleButton.BorderSize = 0;
+            this.TransferVehicleButton.BorderSize = 1;
             this.TransferVehicleButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferVehicleButton.FlatAppearance.BorderSize = 0;
             this.TransferVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -174,7 +175,7 @@
             this.TransferVehicleButton.ImagePosition = new System.Drawing.Point(80, 0);
             this.TransferVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferVehicleButton.IsToggled = false;
-            this.TransferVehicleButton.Location = new System.Drawing.Point(535, 7);
+            this.TransferVehicleButton.Location = new System.Drawing.Point(535, 5);
             this.TransferVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.TransferVehicleButton.Name = "TransferVehicleButton";
@@ -228,7 +229,7 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(1312, 105);
+            this.ApplySearchButton.Location = new System.Drawing.Point(1312, 90);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
@@ -261,7 +262,7 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1426, 105);
+            this.ClearButton.Location = new System.Drawing.Point(1426, 90);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
@@ -279,16 +280,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 147);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 134);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1480, 486);
+            this.dataGridView1.Size = new System.Drawing.Size(1482, 504);
             this.dataGridView1.TabIndex = 34;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1277, 32);
+            this.label6.Location = new System.Drawing.Point(1279, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 32;
@@ -298,7 +299,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1021, 32);
+            this.label4.Location = new System.Drawing.Point(1013, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 31;
@@ -308,7 +309,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(764, 32);
+            this.label5.Location = new System.Drawing.Point(743, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 20);
             this.label5.TabIndex = 30;
@@ -332,7 +333,7 @@
             this.ApplyearchButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.ApplyearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyearchButton.IsToggled = false;
-            this.ApplyearchButton.Location = new System.Drawing.Point(550, 107);
+            this.ApplyearchButton.Location = new System.Drawing.Point(545, 93);
             this.ApplyearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyearchButton.Name = "ApplyearchButton";
@@ -351,7 +352,7 @@
             // 
             this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Location = new System.Drawing.Point(1281, 58);
+            this.StatusComboBox.Location = new System.Drawing.Point(1279, 45);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(250, 33);
@@ -361,7 +362,7 @@
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(1025, 58);
+            this.OrderComboBox.Location = new System.Drawing.Point(1013, 45);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
             this.OrderComboBox.Size = new System.Drawing.Size(250, 33);
@@ -371,7 +372,7 @@
             // 
             this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(769, 58);
+            this.MemberTypeComboBox.Location = new System.Drawing.Point(743, 45);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
             this.MemberTypeComboBox.Size = new System.Drawing.Size(250, 33);
@@ -381,7 +382,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 27);
+            this.label2.Location = new System.Drawing.Point(45, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 23;
@@ -392,7 +393,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Location = new System.Drawing.Point(50, 54);
+            this.panel6.Location = new System.Drawing.Point(45, 40);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(613, 41);
             this.panel6.TabIndex = 38;
@@ -606,7 +607,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);

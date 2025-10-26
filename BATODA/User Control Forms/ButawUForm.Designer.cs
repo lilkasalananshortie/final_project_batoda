@@ -44,6 +44,7 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.MembershipRenewalButton);
             this.MembersTopPanel.Controls.Add(this.RenewalHistoryButton);
             this.MembersTopPanel.Controls.Add(this.FinanceButton);
@@ -57,9 +58,9 @@
             // 
             this.MembershipRenewalButton.BackColor = System.Drawing.Color.White;
             this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.White;
-            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.Black;
             this.MembershipRenewalButton.BorderRadius = 0;
-            this.MembershipRenewalButton.BorderSize = 0;
+            this.MembershipRenewalButton.BorderSize = 1;
             this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
             this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
             this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -71,7 +72,7 @@
             this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(130, 0);
             this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(32, 32);
             this.MembershipRenewalButton.IsToggled = false;
-            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 7);
+            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 5);
             this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MembershipRenewalButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.MembershipRenewalButton.Name = "MembershipRenewalButton";
@@ -90,9 +91,9 @@
             // 
             this.RenewalHistoryButton.BackColor = System.Drawing.Color.LightGray;
             this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.LightGray;
+            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.Black;
             this.RenewalHistoryButton.BorderRadius = 0;
-            this.RenewalHistoryButton.BorderSize = 0;
+            this.RenewalHistoryButton.BorderSize = 1;
             this.RenewalHistoryButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.RenewalHistoryButton.FlatAppearance.BorderSize = 0;
             this.RenewalHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -104,7 +105,7 @@
             this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(155, 0);
             this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(32, 32);
             this.RenewalHistoryButton.IsToggled = false;
-            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 7);
+            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 5);
             this.RenewalHistoryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RenewalHistoryButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.RenewalHistoryButton.Name = "RenewalHistoryButton";
@@ -123,9 +124,9 @@
             // 
             this.FinanceButton.BackColor = System.Drawing.Color.White;
             this.FinanceButton.BackgroundColor = System.Drawing.Color.White;
-            this.FinanceButton.BorderColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.BorderColor = System.Drawing.Color.Black;
             this.FinanceButton.BorderRadius = 0;
-            this.FinanceButton.BorderSize = 0;
+            this.FinanceButton.BorderSize = 1;
             this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
             this.FinanceButton.FlatAppearance.BorderSize = 0;
             this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -137,7 +138,7 @@
             this.FinanceButton.ImagePosition = new System.Drawing.Point(180, 0);
             this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
             this.FinanceButton.IsToggled = false;
-            this.FinanceButton.Location = new System.Drawing.Point(5, 7);
+            this.FinanceButton.Location = new System.Drawing.Point(5, 5);
             this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FinanceButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.FinanceButton.Name = "FinanceButton";
@@ -195,12 +196,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "ButawUForm";
-            this.Size = new System.Drawing.Size(1833, 929);
+            this.Size = new System.Drawing.Size(1831, 927);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

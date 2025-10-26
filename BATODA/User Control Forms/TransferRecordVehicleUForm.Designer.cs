@@ -44,6 +44,7 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.RegisteredVehicleButton);
             this.MembersTopPanel.Controls.Add(this.TransferRecordButton);
             this.MembersTopPanel.Controls.Add(this.TransferVehicleButton);
@@ -57,9 +58,9 @@
             // 
             this.RegisteredVehicleButton.BackColor = System.Drawing.Color.White;
             this.RegisteredVehicleButton.BackgroundColor = System.Drawing.Color.White;
-            this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.White;
+            this.RegisteredVehicleButton.BorderColor = System.Drawing.Color.Black;
             this.RegisteredVehicleButton.BorderRadius = 0;
-            this.RegisteredVehicleButton.BorderSize = 0;
+            this.RegisteredVehicleButton.BorderSize = 1;
             this.RegisteredVehicleButton.ButtonImage = global::BATODA.Properties.Resources.trisokol;
             this.RegisteredVehicleButton.FlatAppearance.BorderSize = 0;
             this.RegisteredVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -69,9 +70,9 @@
             this.RegisteredVehicleButton.HoverColor = System.Drawing.Color.Silver;
             this.RegisteredVehicleButton.ImageColor = System.Drawing.Color.Transparent;
             this.RegisteredVehicleButton.ImagePosition = new System.Drawing.Point(131, 0);
-            this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.RegisteredVehicleButton.ImageSize = new System.Drawing.Size(46, 46);
             this.RegisteredVehicleButton.IsToggled = false;
-            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 7);
+            this.RegisteredVehicleButton.Location = new System.Drawing.Point(5, 5);
             this.RegisteredVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RegisteredVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.RegisteredVehicleButton.Name = "RegisteredVehicleButton";
@@ -89,9 +90,9 @@
             // 
             this.TransferRecordButton.BackColor = System.Drawing.Color.LightGray;
             this.TransferRecordButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.TransferRecordButton.BorderColor = System.Drawing.Color.LightGray;
+            this.TransferRecordButton.BorderColor = System.Drawing.Color.Black;
             this.TransferRecordButton.BorderRadius = 0;
-            this.TransferRecordButton.BorderSize = 0;
+            this.TransferRecordButton.BorderSize = 1;
             this.TransferRecordButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -103,7 +104,7 @@
             this.TransferRecordButton.ImagePosition = new System.Drawing.Point(142, 0);
             this.TransferRecordButton.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferRecordButton.IsToggled = false;
-            this.TransferRecordButton.Location = new System.Drawing.Point(1065, 7);
+            this.TransferRecordButton.Location = new System.Drawing.Point(1065, 5);
             this.TransferRecordButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferRecordButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.TransferRecordButton.Name = "TransferRecordButton";
@@ -122,9 +123,9 @@
             // 
             this.TransferVehicleButton.BackColor = System.Drawing.Color.White;
             this.TransferVehicleButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferVehicleButton.BorderColor = System.Drawing.Color.White;
+            this.TransferVehicleButton.BorderColor = System.Drawing.Color.Black;
             this.TransferVehicleButton.BorderRadius = 0;
-            this.TransferVehicleButton.BorderSize = 0;
+            this.TransferVehicleButton.BorderSize = 1;
             this.TransferVehicleButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferVehicleButton.FlatAppearance.BorderSize = 0;
             this.TransferVehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,7 +137,7 @@
             this.TransferVehicleButton.ImagePosition = new System.Drawing.Point(80, 0);
             this.TransferVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferVehicleButton.IsToggled = false;
-            this.TransferVehicleButton.Location = new System.Drawing.Point(535, 7);
+            this.TransferVehicleButton.Location = new System.Drawing.Point(535, 5);
             this.TransferVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.TransferVehicleButton.Name = "TransferVehicleButton";
@@ -195,12 +196,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "TransferRecordVehicleUForm";
-            this.Size = new System.Drawing.Size(1659, 870);
+            this.Size = new System.Drawing.Size(1657, 868);
             this.Load += new System.EventHandler(this.TransferRecordVehicleUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);

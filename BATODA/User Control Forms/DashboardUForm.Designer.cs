@@ -69,8 +69,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -635,6 +635,15 @@
             this.panel10.Size = new System.Drawing.Size(1557, 422);
             this.panel10.TabIndex = 7;
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DarkGray;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Location = new System.Drawing.Point(40, 66);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1479, 332);
+            this.panel11.TabIndex = 6;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -645,21 +654,13 @@
             this.label24.TabIndex = 5;
             this.label24.Text = "Payment Overdue";
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.DarkGray;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Location = new System.Drawing.Point(40, 66);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1479, 332);
-            this.panel11.TabIndex = 6;
-            // 
             // DashboardUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -673,7 +674,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "DashboardUForm";
-            this.Size = new System.Drawing.Size(1857, 1491);
+            this.Size = new System.Drawing.Size(1855, 1489);
             this.Load += new System.EventHandler(this.DashboardUForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
