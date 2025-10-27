@@ -15,6 +15,7 @@ namespace BATODA
         public TransferRecordMemberUForm()
         {
             InitializeComponent();
+            
         }
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
@@ -30,6 +31,11 @@ namespace BATODA
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
+        }
+
+        private void TransferRecordMemberUForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -17,7 +17,7 @@ namespace BATODA
         {
             InitializeComponent();
 
-            
+            ConfirmationPanel.Hide();
             DisplayClass.SetPlaceholder(BodyNumberTextBox, "Enter Body Number");
             DisplayClass.SetPlaceholder(ContactNumTextBox, "Enter Cellphone Number");
             DisplayClass.SetPlaceholder(VehicleInfoTextBox, "Enter Unit Brand");
@@ -26,9 +26,10 @@ namespace BATODA
             DisplayClass.SetPlaceholder(MiddleNameTextBox, "Enter Middle Name");
             DisplayClass.SetPlaceholder(PlateNumberTextBox, "Enter Plate Number");
             DisplayClass.SetPlaceholder(MTypeComboBox, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(MemberStatuscomboBox, "Status", "Active", "Inactive");
+            DisplayClass.SetPlaceholder(ModelTextBox, "Enter Model");
             DisplayClass.SetPlaceholder(RTransferTextBox, "Enter Transfer Description");
-           
+            DisplayClass.SetPlaceholder(ChassisNumberTextBox,"Enter Chassis Number");
+            DisplayClass.SetPlaceholder(EngineNumberTextBox, "Enter Engine Number");
 
 
         }
@@ -73,14 +74,24 @@ namespace BATODA
 
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
+       
+
+        private void ConfirmationButton_Click(object sender, EventArgs e)
         {
+           ConfirmationPanel.Hide();
+           ToastManager.Success("Membership Transferred Successfully!");
             
-            ToastManager.Success("Membership Transferred Successfully");
         }
 
-        
+        private void CancelConfirmation_Click(object sender, EventArgs e)
+        {
+            ConfirmationPanel.Hide();
+            ToastManager.Info("Membership Transfer Cancelled.");
+        }
 
-        
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            ConfirmationPanel.Show();
+        }
     }
 }

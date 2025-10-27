@@ -158,7 +158,7 @@
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Location = new System.Drawing.Point(19, 169);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 649);
+            this.panel1.Size = new System.Drawing.Size(1585, 810);
             this.panel1.TabIndex = 20;
             // 
             // panel7
@@ -196,13 +196,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "TransferRecordMemberUForm";
-            this.Size = new System.Drawing.Size(1692, 874);
+            this.Size = new System.Drawing.Size(1692, 1061);
+            this.Load += new System.EventHandler(this.TransferRecordMemberUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

@@ -33,7 +33,9 @@ namespace BATODA
             DisplayClass.SetPlaceholder(MiddleNameTextBox, "Enter Middle Name");
             DisplayClass.SetPlaceholder(PlateNumberTextBox, "Enter Plate Number");
             DisplayClass.SetPlaceholder(MTypeComboBox, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(MemberStatuscomboBox, "Status", "Active", "Inactive");
+            DisplayClass.SetPlaceholder(ModelTextBox, "Enter Model Type");
+            DisplayClass.SetPlaceholder(EngineNumberTextBox, "Enter Engine Number");
+            DisplayClass.SetPlaceholder(ChasisNumberTextBox, "Enter Chassis Number");
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
@@ -129,6 +131,11 @@ namespace BATODA
         }
 
         private void ApplySearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UploadButton_Click(object sender, EventArgs e)
         {
 
         }

@@ -33,22 +33,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.TopBarPanel = new System.Windows.Forms.Panel();
-            this.CalendarButton = new BATODA.ButtonStyle();
-            this.NotificationButton = new BATODA.ButtonStyle();
-            this.AccountButton = new BATODA.ButtonStyle();
             this.TopPanelText = new System.Windows.Forms.Label();
             this.NotificationPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
             this.NavBarPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.DisplayPanel = new System.Windows.Forms.Panel();
+            this.CalendarButton = new BATODA.ButtonStyle();
+            this.NotificationButton = new BATODA.ButtonStyle();
+            this.AccountButton = new BATODA.ButtonStyle();
             this.HomeButton = new BATODA.ButtonStyle();
             this.MembersMainButton = new BATODA.ButtonStyle();
             this.RegisteredVehiclesButton = new BATODA.ButtonStyle();
             this.AssistanceLogButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.SettingsButton = new BATODA.ButtonStyle();
-            this.DisplayPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
             this.NotificationPanel.SuspendLayout();
@@ -91,6 +91,74 @@
             this.TopBarPanel.Size = new System.Drawing.Size(1444, 90);
             this.TopBarPanel.TabIndex = 3;
             this.TopBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopBarPanel_Paint);
+            // 
+            // TopPanelText
+            // 
+            this.TopPanelText.AutoSize = true;
+            this.TopPanelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TopPanelText.Location = new System.Drawing.Point(20, 10);
+            this.TopPanelText.Name = "TopPanelText";
+            this.TopPanelText.Size = new System.Drawing.Size(410, 55);
+            this.TopPanelText.TabIndex = 0;
+            this.TopPanelText.Text = "BAMBANG TODA";
+            // 
+            // NotificationPanel
+            // 
+            this.NotificationPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NotificationPanel.Controls.Add(this.label2);
+            this.NotificationPanel.Location = new System.Drawing.Point(1378, 80);
+            this.NotificationPanel.Name = "NotificationPanel";
+            this.NotificationPanel.Size = new System.Drawing.Size(366, 334);
+            this.NotificationPanel.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 42);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Notification";
+            // 
+            // CalendarXAccoutnContainerPanel
+            // 
+            this.CalendarXAccoutnContainerPanel.Location = new System.Drawing.Point(672, 237);
+            this.CalendarXAccoutnContainerPanel.Name = "CalendarXAccoutnContainerPanel";
+            this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(903, 522);
+            this.CalendarXAccoutnContainerPanel.TabIndex = 4;
+            // 
+            // NavBarPanel
+            // 
+            this.NavBarPanel.BackColor = System.Drawing.Color.White;
+            this.NavBarPanel.Controls.Add(this.panel1);
+            this.NavBarPanel.Controls.Add(this.HomeButton);
+            this.NavBarPanel.Controls.Add(this.MembersMainButton);
+            this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
+            this.NavBarPanel.Controls.Add(this.AssistanceLogButton);
+            this.NavBarPanel.Controls.Add(this.FinanceButton);
+            this.NavBarPanel.Controls.Add(this.panel2);
+            this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
+            this.NavBarPanel.Name = "NavBarPanel";
+            this.NavBarPanel.Size = new System.Drawing.Size(300, 983);
+            this.NavBarPanel.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.SettingsButton);
+            this.panel2.Location = new System.Drawing.Point(3, 566);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 609);
+            this.panel2.TabIndex = 14;
+            // 
+            // DisplayPanel
+            // 
+            this.DisplayPanel.BackColor = System.Drawing.Color.Silver;
+            this.DisplayPanel.Location = new System.Drawing.Point(322, 522);
+            this.DisplayPanel.Name = "DisplayPanel";
+            this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
+            this.DisplayPanel.TabIndex = 5;
             // 
             // CalendarButton
             // 
@@ -184,58 +252,6 @@
             this.AccountButton.ToggleColor = System.Drawing.Color.DarkGray;
             this.AccountButton.UseVisualStyleBackColor = false;
             this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
-            // 
-            // TopPanelText
-            // 
-            this.TopPanelText.AutoSize = true;
-            this.TopPanelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TopPanelText.Location = new System.Drawing.Point(20, 10);
-            this.TopPanelText.Name = "TopPanelText";
-            this.TopPanelText.Size = new System.Drawing.Size(410, 55);
-            this.TopPanelText.TabIndex = 0;
-            this.TopPanelText.Text = "BAMBANG TODA";
-            // 
-            // NotificationPanel
-            // 
-            this.NotificationPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.NotificationPanel.Controls.Add(this.label2);
-            this.NotificationPanel.Location = new System.Drawing.Point(1378, 80);
-            this.NotificationPanel.Name = "NotificationPanel";
-            this.NotificationPanel.Size = new System.Drawing.Size(366, 334);
-            this.NotificationPanel.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 42);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Notification";
-            // 
-            // CalendarXAccoutnContainerPanel
-            // 
-            this.CalendarXAccoutnContainerPanel.Location = new System.Drawing.Point(672, 237);
-            this.CalendarXAccoutnContainerPanel.Name = "CalendarXAccoutnContainerPanel";
-            this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(903, 522);
-            this.CalendarXAccoutnContainerPanel.TabIndex = 4;
-            // 
-            // NavBarPanel
-            // 
-            this.NavBarPanel.BackColor = System.Drawing.Color.White;
-            this.NavBarPanel.Controls.Add(this.panel1);
-            this.NavBarPanel.Controls.Add(this.HomeButton);
-            this.NavBarPanel.Controls.Add(this.MembersMainButton);
-            this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
-            this.NavBarPanel.Controls.Add(this.AssistanceLogButton);
-            this.NavBarPanel.Controls.Add(this.FinanceButton);
-            this.NavBarPanel.Controls.Add(this.panel2);
-            this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(300, 932);
-            this.NavBarPanel.TabIndex = 1;
             // 
             // HomeButton
             // 
@@ -400,14 +416,6 @@
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.SettingsButton);
-            this.panel2.Location = new System.Drawing.Point(3, 566);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 609);
-            this.panel2.TabIndex = 14;
-            // 
             // SettingsButton
             // 
             this.SettingsButton.BackColor = System.Drawing.Color.White;
@@ -440,21 +448,13 @@
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // DisplayPanel
-            // 
-            this.DisplayPanel.BackColor = System.Drawing.Color.Silver;
-            this.DisplayPanel.Location = new System.Drawing.Point(322, 522);
-            this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
-            this.DisplayPanel.TabIndex = 5;
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1604, 949);
+            this.ClientSize = new System.Drawing.Size(1604, 1000);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);
