@@ -33,6 +33,21 @@
             this.AssistanceHomeButton = new BATODA.ButtonStyle();
             this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ResultPanel = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.ConfirmButton = new BATODA.ButtonStyle();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.SaveButton = new BATODA.ButtonStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ResultButton = new BATODA.ButtonStyle();
@@ -58,6 +73,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.ResultPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -183,10 +199,197 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.ResultPanel);
             this.panel1.Location = new System.Drawing.Point(14, 85);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1595, 832);
             this.panel1.TabIndex = 26;
+            // 
+            // ResultPanel
+            // 
+            this.ResultPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ResultPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ResultPanel.Controls.Add(this.label28);
+            this.ResultPanel.Controls.Add(this.ConfirmButton);
+            this.ResultPanel.Controls.Add(this.label16);
+            this.ResultPanel.Controls.Add(this.label17);
+            this.ResultPanel.Controls.Add(this.label18);
+            this.ResultPanel.Controls.Add(this.label19);
+            this.ResultPanel.Controls.Add(this.label20);
+            this.ResultPanel.Controls.Add(this.label21);
+            this.ResultPanel.Controls.Add(this.label22);
+            this.ResultPanel.Controls.Add(this.label23);
+            this.ResultPanel.Controls.Add(this.label24);
+            this.ResultPanel.Controls.Add(this.label25);
+            this.ResultPanel.Controls.Add(this.label26);
+            this.ResultPanel.Controls.Add(this.label27);
+            this.ResultPanel.Location = new System.Drawing.Point(403, 89);
+            this.ResultPanel.Name = "ResultPanel";
+            this.ResultPanel.Size = new System.Drawing.Size(803, 644);
+            this.ResultPanel.TabIndex = 47;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(115, 97);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(116, 29);
+            this.label28.TabIndex = 62;
+            this.label28.Text = "PIC DITO";
+            // 
+            // ConfirmButton
+            // 
+            this.ConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmButton.BorderRadius = 0;
+            this.ConfirmButton.BorderSize = 0;
+            this.ConfirmButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.ConfirmButton.FlatAppearance.BorderSize = 0;
+            this.ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmButton.ForeColor = System.Drawing.Color.White;
+            this.ConfirmButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ConfirmButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ConfirmButton.ImageColor = System.Drawing.Color.White;
+            this.ConfirmButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ConfirmButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ConfirmButton.IsToggled = false;
+            this.ConfirmButton.Location = new System.Drawing.Point(527, 557);
+            this.ConfirmButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ConfirmButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmButton.Name = "ConfirmButton";
+            this.ConfirmButton.PaddingX = 0;
+            this.ConfirmButton.PaddingY = 0;
+            this.ConfirmButton.Size = new System.Drawing.Size(251, 55);
+            this.ConfirmButton.TabIndex = 48;
+            this.ConfirmButton.Text = "Confirm Request";
+            this.ConfirmButton.TextColor = System.Drawing.Color.White;
+            this.ConfirmButton.TextOffset = 5;
+            this.ConfirmButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ConfirmButton.UseVisualStyleBackColor = false;
+            this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(226, 278);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(143, 29);
+            this.label16.TabIndex = 50;
+            this.label16.Text = "Placeholder";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(226, 320);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(143, 29);
+            this.label17.TabIndex = 51;
+            this.label17.Text = "Placeholder";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(226, 367);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(143, 29);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "Placeholder";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(44, 423);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(158, 29);
+            this.label19.TabIndex = 53;
+            this.label19.Text = "Type Of Aid : ";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(405, 270);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(148, 29);
+            this.label20.TabIndex = 54;
+            this.label20.Text = "Attacments : ";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(44, 477);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(176, 29);
+            this.label21.TabIndex = 55;
+            this.label21.Text = "Member Type :";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(405, 168);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(150, 29);
+            this.label22.TabIndex = 56;
+            this.label22.Text = "Contact No : ";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(405, 120);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(173, 29);
+            this.label23.TabIndex = 57;
+            this.label23.Text = "Date Created : ";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(405, 69);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(126, 29);
+            this.label24.TabIndex = 58;
+            this.label24.Text = "Ticket ID : ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(44, 367);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(140, 29);
+            this.label25.TabIndex = 59;
+            this.label25.Text = "Last Name :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(44, 319);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(170, 29);
+            this.label26.TabIndex = 60;
+            this.label26.Text = "Middle Name :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(44, 278);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(143, 29);
+            this.label27.TabIndex = 61;
+            this.label27.Text = "First Name :";
             // 
             // SaveButton
             // 
@@ -219,6 +422,7 @@
             this.SaveButton.TextOffset = 5;
             this.SaveButton.ToggleColor = System.Drawing.Color.Empty;
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // panel2
             // 
@@ -244,7 +448,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1515, 594);
             this.panel2.TabIndex = 45;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // ResultButton
             // 
@@ -317,7 +520,6 @@
             this.label13.Size = new System.Drawing.Size(158, 29);
             this.label13.TabIndex = 49;
             this.label13.Text = "Type Of Aid : ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label15
             // 
@@ -328,7 +530,6 @@
             this.label15.Size = new System.Drawing.Size(148, 29);
             this.label15.TabIndex = 49;
             this.label15.Text = "Attacments : ";
-            this.label15.Click += new System.EventHandler(this.label12_Click);
             // 
             // label14
             // 
@@ -339,7 +540,6 @@
             this.label14.Size = new System.Drawing.Size(176, 29);
             this.label14.TabIndex = 49;
             this.label14.Text = "Member Type :";
-            this.label14.Click += new System.EventHandler(this.label12_Click);
             // 
             // label12
             // 
@@ -350,7 +550,6 @@
             this.label12.Size = new System.Drawing.Size(150, 29);
             this.label12.TabIndex = 49;
             this.label12.Text = "Contact No : ";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -391,7 +590,6 @@
             this.label6.Size = new System.Drawing.Size(170, 29);
             this.label6.TabIndex = 49;
             this.label6.Text = "Middle Name :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label4
             // 
@@ -500,6 +698,8 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.ResultPanel.ResumeLayout(false);
+            this.ResultPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -540,5 +740,20 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel ResultPanel;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private ButtonStyle ConfirmButton;
     }
 }

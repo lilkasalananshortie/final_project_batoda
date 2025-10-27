@@ -135,8 +135,13 @@ namespace BATODA
                 throw new InvalidOperationException("Main display panel not set. Call SetMainPanel first.");
 
             uc.Dock = DockStyle.Fill;
+
+            _mainPanel.SuspendLayout();
+            _mainPanel.Visible = false;
             _mainPanel.Controls.Clear();
             _mainPanel.Controls.Add(uc);
+            _mainPanel.Visible = true;
+            _mainPanel.ResumeLayout();
         }
 
         public static void ShowMini(UserControl uc)
@@ -145,13 +150,14 @@ namespace BATODA
                 throw new InvalidOperationException("Mini display panel not set. Call SetMiniPanel first.");
 
             uc.Dock = DockStyle.Fill;
+
+            _miniPanel.SuspendLayout();
+            _miniPanel.Visible = false;
             _miniPanel.Controls.Clear();
             _miniPanel.Controls.Add(uc);
+            _miniPanel.Visible = true;
+            _miniPanel.ResumeLayout();
         }
-
-        
- 
-       
 
         // ========= Button Hover + Toggle =========
         public static void SetButtonToggleColor(ButtonStyle btn, Color toggleColor, Color defaultColor, Color hoverColor)

@@ -15,6 +15,7 @@ namespace BATODA
         public AssistanceRequestUForm()
         {
             InitializeComponent();
+            ResultPanel.Hide();
             
 
 
@@ -39,24 +40,17 @@ namespace BATODA
         {
 
         }
-
-        private void label13_Click(object sender, EventArgs e)
+        private void ConfirmButton_Click(object sender, EventArgs e)
         {
+            ResultPanel.Hide();
+            SaveButton.Enabled = true;
 
         }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
+            ResultPanel.Show();
+            ResultPanel.BringToFront();
+            SaveButton.Enabled = false;
 
         }
     }

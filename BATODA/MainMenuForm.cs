@@ -16,13 +16,15 @@ namespace BATODA
             
 
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
+            DisplayClass.SetMainPanel(DisplayPanel);
+            DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
+
             DisplayPanel.Visible = true;
             DisplayPanel.Dock = DockStyle.Fill;
             NotificationPanel.Visible = false;
             CalendarXAccoutnContainerPanel.Visible = false;
 
-            DisplayClass.SetMainPanel(DisplayPanel);
-            DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
+          
 
         }
         private void DashboardForm_Load(object sender, EventArgs e)

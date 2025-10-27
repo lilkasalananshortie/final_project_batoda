@@ -189,7 +189,7 @@
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Location = new System.Drawing.Point(19, 169);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 631);
+            this.panel1.Size = new System.Drawing.Size(1585, 796);
             this.panel1.TabIndex = 50;
             // 
             // ARHUForm
