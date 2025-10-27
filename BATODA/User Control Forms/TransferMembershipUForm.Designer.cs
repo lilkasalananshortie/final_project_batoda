@@ -32,6 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
+            this.TransferMembershipButton = new BATODA.ButtonStyle();
+            this.TransferRecordsButton = new BATODA.ButtonStyle();
+            this.ManageMembersButton = new BATODA.ButtonStyle();
             this.ScrollablePanel = new System.Windows.Forms.Panel();
             this.HolderPanel1 = new System.Windows.Forms.Panel();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
@@ -48,6 +51,8 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.PlaceholderFname = new System.Windows.Forms.Label();
+            this.CancelConfirmation = new BATODA.ButtonStyle();
+            this.ConfirmationButton = new BATODA.ButtonStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -72,7 +77,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UploadButton = new BATODA.ButtonStyle();
             this.UploadPictureBox = new System.Windows.Forms.PictureBox();
+            this.ClearButton = new BATODA.ButtonStyle();
+            this.SaveButton = new BATODA.ButtonStyle();
             this.RTransferTextBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -104,14 +112,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.CancelConfirmation = new BATODA.ButtonStyle();
-            this.ConfirmationButton = new BATODA.ButtonStyle();
-            this.UploadButton = new BATODA.ButtonStyle();
-            this.ClearButton = new BATODA.ButtonStyle();
-            this.SaveButton = new BATODA.ButtonStyle();
-            this.TransferMembershipButton = new BATODA.ButtonStyle();
-            this.TransferRecordsButton = new BATODA.ButtonStyle();
-            this.ManageMembersButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.ScrollablePanel.SuspendLayout();
             this.HolderPanel1.SuspendLayout();
@@ -164,6 +164,105 @@
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 19;
+            // 
+            // TransferMembershipButton
+            // 
+            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.BorderRadius = 0;
+            this.TransferMembershipButton.BorderSize = 1;
+            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
+            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
+            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
+            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferMembershipButton.IsToggled = false;
+            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
+            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferMembershipButton.Name = "TransferMembershipButton";
+            this.TransferMembershipButton.PaddingX = 0;
+            this.TransferMembershipButton.PaddingY = 0;
+            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferMembershipButton.TabIndex = 21;
+            this.TransferMembershipButton.Text = "Transfer Membership";
+            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.TextOffset = 20;
+            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.UseVisualStyleBackColor = false;
+            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
+            // 
+            // TransferRecordsButton
+            // 
+            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.BorderRadius = 0;
+            this.TransferRecordsButton.BorderSize = 1;
+            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
+            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
+            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferRecordsButton.IsToggled = false;
+            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
+            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferRecordsButton.Name = "TransferRecordsButton";
+            this.TransferRecordsButton.PaddingX = 0;
+            this.TransferRecordsButton.PaddingY = 0;
+            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferRecordsButton.TabIndex = 20;
+            this.TransferRecordsButton.Text = "Transfer History";
+            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.TextOffset = 20;
+            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferRecordsButton.UseVisualStyleBackColor = false;
+            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
+            // 
+            // ManageMembersButton
+            // 
+            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.BorderRadius = 0;
+            this.ManageMembersButton.BorderSize = 1;
+            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
+            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
+            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
+            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ManageMembersButton.IsToggled = false;
+            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
+            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.ManageMembersButton.Name = "ManageMembersButton";
+            this.ManageMembersButton.PaddingX = 0;
+            this.ManageMembersButton.PaddingY = 0;
+            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
+            this.ManageMembersButton.TabIndex = 19;
+            this.ManageMembersButton.Text = "Manage Members";
+            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.TextOffset = 20;
+            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.ManageMembersButton.UseVisualStyleBackColor = false;
+            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
             // ScrollablePanel
             // 
@@ -257,7 +356,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(779, 341);
+            this.label36.Location = new System.Drawing.Point(868, 313);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(126, 25);
             this.label36.TabIndex = 91;
@@ -267,7 +366,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(787, 266);
+            this.label35.Location = new System.Drawing.Point(907, 231);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(126, 25);
             this.label35.TabIndex = 90;
@@ -277,7 +376,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(786, 168);
+            this.label34.Location = new System.Drawing.Point(638, 234);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(126, 25);
             this.label34.TabIndex = 89;
@@ -287,7 +386,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(778, 87);
+            this.label31.Location = new System.Drawing.Point(420, 234);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(126, 25);
             this.label31.TabIndex = 88;
@@ -297,7 +396,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(573, 87);
+            this.label40.Location = new System.Drawing.Point(638, 314);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(126, 25);
             this.label40.TabIndex = 87;
@@ -307,7 +406,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(407, 341);
+            this.label32.Location = new System.Drawing.Point(420, 310);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(126, 25);
             this.label32.TabIndex = 86;
@@ -317,7 +416,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(407, 266);
+            this.label30.Location = new System.Drawing.Point(906, 152);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(126, 25);
             this.label30.TabIndex = 85;
@@ -327,7 +426,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(407, 168);
+            this.label17.Location = new System.Drawing.Point(645, 156);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(126, 25);
             this.label17.TabIndex = 84;
@@ -366,7 +465,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(787, 87);
+            this.label33.Location = new System.Drawing.Point(936, 167);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(0, 25);
             this.label33.TabIndex = 77;
@@ -375,17 +474,83 @@
             // 
             this.PlaceholderFname.AutoSize = true;
             this.PlaceholderFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlaceholderFname.Location = new System.Drawing.Point(407, 87);
+            this.PlaceholderFname.Location = new System.Drawing.Point(422, 152);
             this.PlaceholderFname.Name = "PlaceholderFname";
             this.PlaceholderFname.Size = new System.Drawing.Size(126, 25);
             this.PlaceholderFname.TabIndex = 72;
             this.PlaceholderFname.Text = "Placeholder";
             // 
+            // CancelConfirmation
+            // 
+            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderRadius = 0;
+            this.CancelConfirmation.BorderSize = 0;
+            this.CancelConfirmation.ButtonImage = null;
+            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
+            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
+            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
+            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
+            this.CancelConfirmation.IsToggled = false;
+            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
+            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.Name = "CancelConfirmation";
+            this.CancelConfirmation.PaddingX = 0;
+            this.CancelConfirmation.PaddingY = 0;
+            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
+            this.CancelConfirmation.TabIndex = 56;
+            this.CancelConfirmation.Text = "Exit";
+            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
+            this.CancelConfirmation.TextOffset = 5;
+            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
+            this.CancelConfirmation.UseVisualStyleBackColor = false;
+            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
+            // 
+            // ConfirmationButton
+            // 
+            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderRadius = 0;
+            this.ConfirmationButton.BorderSize = 0;
+            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
+            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
+            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
+            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
+            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ConfirmationButton.IsToggled = false;
+            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
+            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.Name = "ConfirmationButton";
+            this.ConfirmationButton.PaddingX = 0;
+            this.ConfirmationButton.PaddingY = 0;
+            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
+            this.ConfirmationButton.TabIndex = 71;
+            this.ConfirmationButton.Text = "Confrim Transfer";
+            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
+            this.ConfirmationButton.TextOffset = 5;
+            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ConfirmationButton.UseVisualStyleBackColor = false;
+            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(778, 213);
+            this.label15.Location = new System.Drawing.Point(891, 204);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(158, 25);
             this.label15.TabIndex = 70;
@@ -395,7 +560,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(778, 127);
+            this.label29.Location = new System.Drawing.Point(627, 207);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(174, 25);
             this.label29.TabIndex = 69;
@@ -415,7 +580,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(770, 49);
+            this.label16.Location = new System.Drawing.Point(420, 207);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(182, 25);
             this.label16.TabIndex = 67;
@@ -446,7 +611,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(584, 49);
+            this.label19.Location = new System.Drawing.Point(638, 285);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(85, 25);
             this.label19.TabIndex = 63;
@@ -456,7 +621,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(778, 304);
+            this.label20.Location = new System.Drawing.Point(852, 285);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(150, 25);
             this.label20.TabIndex = 62;
@@ -466,7 +631,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(407, 304);
+            this.label21.Location = new System.Drawing.Point(411, 285);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(181, 25);
             this.label21.TabIndex = 61;
@@ -486,7 +651,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(400, 213);
+            this.label25.Location = new System.Drawing.Point(899, 127);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(150, 25);
             this.label25.TabIndex = 58;
@@ -496,7 +661,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(401, 128);
+            this.label26.Location = new System.Drawing.Point(638, 127);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(127, 25);
             this.label26.TabIndex = 57;
@@ -506,7 +671,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(400, 49);
+            this.label27.Location = new System.Drawing.Point(411, 127);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(128, 25);
             this.label27.TabIndex = 56;
@@ -618,6 +783,38 @@
             this.textBox1.Size = new System.Drawing.Size(275, 24);
             this.textBox1.TabIndex = 42;
             // 
+            // UploadButton
+            // 
+            this.UploadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.BorderRadius = 0;
+            this.UploadButton.BorderSize = 0;
+            this.UploadButton.ButtonImage = null;
+            this.UploadButton.FlatAppearance.BorderSize = 0;
+            this.UploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadButton.ForeColor = System.Drawing.Color.White;
+            this.UploadButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.UploadButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.UploadButton.ImageColor = System.Drawing.Color.White;
+            this.UploadButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.UploadButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.UploadButton.IsToggled = false;
+            this.UploadButton.Location = new System.Drawing.Point(1194, 691);
+            this.UploadButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UploadButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.Name = "UploadButton";
+            this.UploadButton.PaddingX = 0;
+            this.UploadButton.PaddingY = 0;
+            this.UploadButton.Size = new System.Drawing.Size(239, 53);
+            this.UploadButton.TabIndex = 49;
+            this.UploadButton.Text = "Upload Picture";
+            this.UploadButton.TextColor = System.Drawing.Color.White;
+            this.UploadButton.TextOffset = 5;
+            this.UploadButton.ToggleColor = System.Drawing.Color.Empty;
+            this.UploadButton.UseVisualStyleBackColor = false;
+            // 
             // UploadPictureBox
             // 
             this.UploadPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -628,6 +825,71 @@
             this.UploadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.UploadPictureBox.TabIndex = 48;
             this.UploadPictureBox.TabStop = false;
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderRadius = 0;
+            this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.ImageColor = System.Drawing.Color.White;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ClearButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ClearButton.IsToggled = false;
+            this.ClearButton.Location = new System.Drawing.Point(1194, 762);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.PaddingX = 0;
+            this.ClearButton.PaddingY = 0;
+            this.ClearButton.Size = new System.Drawing.Size(239, 53);
+            this.ClearButton.TabIndex = 46;
+            this.ClearButton.Text = "Reset";
+            this.ClearButton.TextColor = System.Drawing.Color.White;
+            this.ClearButton.TextOffset = 5;
+            this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ClearButton.UseVisualStyleBackColor = false;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.BorderRadius = 0;
+            this.SaveButton.BorderSize = 0;
+            this.SaveButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.ForeColor = System.Drawing.Color.White;
+            this.SaveButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SaveButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.SaveButton.ImageColor = System.Drawing.Color.White;
+            this.SaveButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SaveButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SaveButton.IsToggled = false;
+            this.SaveButton.Location = new System.Drawing.Point(1173, 969);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.PaddingX = 0;
+            this.SaveButton.PaddingY = 0;
+            this.SaveButton.Size = new System.Drawing.Size(312, 55);
+            this.SaveButton.TabIndex = 31;
+            this.SaveButton.Text = "Transfer Membership";
+            this.SaveButton.TextColor = System.Drawing.Color.White;
+            this.SaveButton.TextOffset = 5;
+            this.SaveButton.ToggleColor = System.Drawing.Color.Empty;
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // RTransferTextBox
             // 
@@ -924,268 +1186,6 @@
             this.label3.Size = new System.Drawing.Size(290, 31);
             this.label3.TabIndex = 26;
             this.label3.Text = "Transfer Membership";
-            // 
-            // CancelConfirmation
-            // 
-            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderRadius = 0;
-            this.CancelConfirmation.BorderSize = 0;
-            this.CancelConfirmation.ButtonImage = null;
-            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
-            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
-            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
-            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
-            this.CancelConfirmation.IsToggled = false;
-            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
-            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.Name = "CancelConfirmation";
-            this.CancelConfirmation.PaddingX = 0;
-            this.CancelConfirmation.PaddingY = 0;
-            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
-            this.CancelConfirmation.TabIndex = 56;
-            this.CancelConfirmation.Text = "Exit";
-            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
-            this.CancelConfirmation.TextOffset = 5;
-            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
-            this.CancelConfirmation.UseVisualStyleBackColor = false;
-            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
-            // 
-            // ConfirmationButton
-            // 
-            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderRadius = 0;
-            this.ConfirmationButton.BorderSize = 0;
-            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
-            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
-            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
-            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
-            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ConfirmationButton.IsToggled = false;
-            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
-            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.Name = "ConfirmationButton";
-            this.ConfirmationButton.PaddingX = 0;
-            this.ConfirmationButton.PaddingY = 0;
-            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
-            this.ConfirmationButton.TabIndex = 71;
-            this.ConfirmationButton.Text = "Confrim Transfer";
-            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
-            this.ConfirmationButton.TextOffset = 5;
-            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ConfirmationButton.UseVisualStyleBackColor = false;
-            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
-            // 
-            // UploadButton
-            // 
-            this.UploadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BorderRadius = 0;
-            this.UploadButton.BorderSize = 0;
-            this.UploadButton.ButtonImage = null;
-            this.UploadButton.FlatAppearance.BorderSize = 0;
-            this.UploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadButton.ForeColor = System.Drawing.Color.White;
-            this.UploadButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.UploadButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.UploadButton.ImageColor = System.Drawing.Color.White;
-            this.UploadButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.UploadButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.UploadButton.IsToggled = false;
-            this.UploadButton.Location = new System.Drawing.Point(1194, 691);
-            this.UploadButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UploadButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.Name = "UploadButton";
-            this.UploadButton.PaddingX = 0;
-            this.UploadButton.PaddingY = 0;
-            this.UploadButton.Size = new System.Drawing.Size(239, 53);
-            this.UploadButton.TabIndex = 49;
-            this.UploadButton.Text = "Upload Picture";
-            this.UploadButton.TextColor = System.Drawing.Color.White;
-            this.UploadButton.TextOffset = 5;
-            this.UploadButton.ToggleColor = System.Drawing.Color.Empty;
-            this.UploadButton.UseVisualStyleBackColor = false;
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderRadius = 0;
-            this.ClearButton.BorderSize = 0;
-            this.ClearButton.ButtonImage = null;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.ImageColor = System.Drawing.Color.White;
-            this.ClearButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ClearButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1194, 762);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.PaddingX = 0;
-            this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(239, 53);
-            this.ClearButton.TabIndex = 46;
-            this.ClearButton.Text = "Reset";
-            this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextOffset = 5;
-            this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ClearButton.UseVisualStyleBackColor = false;
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.BorderRadius = 0;
-            this.SaveButton.BorderSize = 0;
-            this.SaveButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
-            this.SaveButton.FlatAppearance.BorderSize = 0;
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.SaveButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.SaveButton.ImageColor = System.Drawing.Color.White;
-            this.SaveButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SaveButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.SaveButton.IsToggled = false;
-            this.SaveButton.Location = new System.Drawing.Point(1173, 969);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SaveButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.PaddingX = 0;
-            this.SaveButton.PaddingY = 0;
-            this.SaveButton.Size = new System.Drawing.Size(312, 55);
-            this.SaveButton.TabIndex = 31;
-            this.SaveButton.Text = "Transfer Membership";
-            this.SaveButton.TextColor = System.Drawing.Color.White;
-            this.SaveButton.TextOffset = 5;
-            this.SaveButton.ToggleColor = System.Drawing.Color.Empty;
-            this.SaveButton.UseVisualStyleBackColor = false;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // TransferMembershipButton
-            // 
-            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.BorderRadius = 0;
-            this.TransferMembershipButton.BorderSize = 1;
-            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
-            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
-            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
-            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferMembershipButton.IsToggled = false;
-            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
-            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferMembershipButton.Name = "TransferMembershipButton";
-            this.TransferMembershipButton.PaddingX = 0;
-            this.TransferMembershipButton.PaddingY = 0;
-            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferMembershipButton.TabIndex = 21;
-            this.TransferMembershipButton.Text = "Transfer Membership";
-            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.TextOffset = 20;
-            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.UseVisualStyleBackColor = false;
-            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
-            // 
-            // TransferRecordsButton
-            // 
-            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.BorderRadius = 0;
-            this.TransferRecordsButton.BorderSize = 1;
-            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
-            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
-            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferRecordsButton.IsToggled = false;
-            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
-            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferRecordsButton.Name = "TransferRecordsButton";
-            this.TransferRecordsButton.PaddingX = 0;
-            this.TransferRecordsButton.PaddingY = 0;
-            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferRecordsButton.TabIndex = 20;
-            this.TransferRecordsButton.Text = "Transfer History";
-            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.TextOffset = 20;
-            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferRecordsButton.UseVisualStyleBackColor = false;
-            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
-            // 
-            // ManageMembersButton
-            // 
-            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.BorderRadius = 0;
-            this.ManageMembersButton.BorderSize = 1;
-            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
-            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
-            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
-            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ManageMembersButton.IsToggled = false;
-            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
-            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.ManageMembersButton.Name = "ManageMembersButton";
-            this.ManageMembersButton.PaddingX = 0;
-            this.ManageMembersButton.PaddingY = 0;
-            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
-            this.ManageMembersButton.TabIndex = 19;
-            this.ManageMembersButton.Text = "Manage Members";
-            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.TextOffset = 20;
-            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.ManageMembersButton.UseVisualStyleBackColor = false;
-            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
             // TransferMembershipUForm
             // 
