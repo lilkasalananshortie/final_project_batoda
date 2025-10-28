@@ -18,8 +18,8 @@ namespace BATODA.Helpers.DataGrids
             if (dgv == null) return;
 
             dgv.Font = new Font("Microsoft Sans Serif", 18, FontStyle.Regular);
-            dgv.RowTemplate.Height = 60;
-            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 18, FontStyle.Bold);
+            dgv.RowTemplate.Height = 70;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13, FontStyle.Regular);
         }
     }
 }

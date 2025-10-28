@@ -33,7 +33,6 @@ namespace BATODA
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
-            DisplayClass.SetPlaceholder(AddBodyNumberTxt, "Enter Body Number");
             DisplayClass.SetPlaceholder(AddContactNumber, "Enter Cellphone Number");
             DisplayClass.SetPlaceholder(AddTricycleBrand, "Enter Unit Brand");
             DisplayClass.SetPlaceholder(AddFirstNameTxt, "Enter First Name");
@@ -53,8 +52,8 @@ namespace BATODA
 
         private void LoadMembersToGrid()
         {
-            string[] columnNames = { "BodyNumber", "LastName", "FirstName", "MiddleName", "Birthdate", "MembershipType", "ContactNumber", "MemberStatus", "PenaltyLevel" };
-            string[] columnHeaders = { "Body Number", "Last Name", "First Name", "Middle Name", "Birthdate", "Membership Type", "Contact Number", "Status", "Penalty Details" };
+            string[] columnNames = { "BodyNumber", "LastName", "FirstName", "Birthdate", "MembershipType", "ContactNumber", "MemberStatus", "PenaltyLevel" };
+            string[] columnHeaders = { "Body No.", "Last Name", "First Name", "Birthdate", "Membership Type", "Contact Number", "Status", "Penalty Details" };
 
             // Disabling built-in sort to avoid confusion and unintentional sorting
             // Array > Hardcoded
@@ -99,7 +98,6 @@ namespace BATODA
                     bodyNumFormatted,
                     m.LastName,
                     m.FirstName,
-                    m.MiddleInitial,
                     m.Birthdate.ToString("MMMM d, yyyy"),
                     m.MembershipType,
                     m.ContactNumber,
@@ -109,6 +107,26 @@ namespace BATODA
             }
 
         }
+
+        private MemberModel GetMemberFromForm()
+        {
+            return new MemberModel
+            {
+                //MembershipType = AddMemberTypeCmb.Text,
+                //LastName = AddLastNameTxt.Text,
+                //FirstName = AddFirstNameTxt.Text,
+                //MiddleInitial = AddMiddleNameTxt.Text,
+                //Birthdate = addbirth.Value, // assuming you use DateTimePicker
+                //TricycleBrand = txtTricycleBrand.Text,
+                //TricycleModel = txtTricycleModel.Text,
+                //ContactNumber = txtContactNumber.Text,
+                //ChassisNumber = txtChassisNumber.Text,
+                //EngineNumber = txtEngineNumber.Text,
+                //PlateNumber = txtPlateNumber.Text,
+                // TaxBalance and DateJoined will be handled by SQL defaults
+            };
+        }
+
 
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
@@ -142,9 +160,9 @@ namespace BATODA
 
         }
 
-       
 
-       
+
+
         private void ManageMembersButton_Click(object sender, EventArgs e)
         {
 
@@ -155,9 +173,9 @@ namespace BATODA
             ToastManager.Info("Member Searchd");    // testing lang 
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
-            
+
             ApplySearchButton.Enabled = false;
-            
+
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -166,7 +184,7 @@ namespace BATODA
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
             ApplySearchButton.Enabled = true;
-            
+
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -175,7 +193,7 @@ namespace BATODA
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
             ApplySearchButton.Enabled = true;
-            
+
         }
 
         private void AddMemberPanel_Paint(object sender, PaintEventArgs e)
@@ -189,7 +207,7 @@ namespace BATODA
             ToastManager.Success("Filters Cleared Successfully!");
         }
 
-        
+
 
         private void ApplyButton_Click(object sender, EventArgs e)
         {
@@ -203,6 +221,11 @@ namespace BATODA
         }
 
         private void UploadButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel16_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -6,6 +6,7 @@
      - Server name: localhost\SQLEXPRESS
      - Put check mark on "Trust Server Certificate"
      - Db name = BatodaDb
+
      ------------------------------------------------------------------------------------------------------------------
      STEP 2:
      - Right click on your db from server explorer and find "New Query"

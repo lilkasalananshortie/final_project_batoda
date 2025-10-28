@@ -15,7 +15,8 @@ namespace BATODA.Helpers.Database.Members
     // used in MembersUForm to display total members
     public static class TotalMembers
     {
-        private static readonly string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Security=True;TrustServerCertificate=True";
+        private static readonly string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True";
+
         public static int GetCount()
         {
             int total = 0;
