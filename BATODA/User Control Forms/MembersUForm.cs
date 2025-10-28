@@ -112,18 +112,17 @@ namespace BATODA
         {
             return new MemberModel
             {
-                //MembershipType = AddMemberTypeCmb.Text,
-                //LastName = AddLastNameTxt.Text,
-                //FirstName = AddFirstNameTxt.Text,
-                //MiddleInitial = AddMiddleNameTxt.Text,
-                //Birthdate = addbirth.Value, // assuming you use DateTimePicker
-                //TricycleBrand = txtTricycleBrand.Text,
-                //TricycleModel = txtTricycleModel.Text,
-                //ContactNumber = txtContactNumber.Text,
-                //ChassisNumber = txtChassisNumber.Text,
-                //EngineNumber = txtEngineNumber.Text,
-                //PlateNumber = txtPlateNumber.Text,
-                // TaxBalance and DateJoined will be handled by SQL defaults
+                MembershipType = AddMemberTypeCmb.Text,
+                LastName = AddLastNameTxt.Text,
+                FirstName = AddFirstNameTxt.Text,
+                MiddleInitial = AddMiddleNameTxt.Text,
+                Birthdate = BirthdatePicker.Value,
+                TricycleBrand = AddTricycleBrand.Text,
+                TricycleModel = AddModelTxt.Text,
+                ContactNumber = AddContactNumber.Text,
+                ChassisNumber = AddChassisNumber.Text,
+                EngineNumber = AddEngineNumberTxt.Text,
+                PlateNumber = AddPlateNumberTxt.Text,
             };
         }
 
@@ -180,6 +179,10 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            MemberModel NewMember = GetMemberFromForm();
+            var MemberRepo = new MemberRepository();
+
+            MemberRepo.AddMember(NewMember);
             ToastManager.Success("New Member Added Successfully!");
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;

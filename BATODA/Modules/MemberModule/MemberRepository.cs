@@ -67,10 +67,10 @@ namespace BATODA.Modules.MemberModule
             {
                 string query = @"INSERT INTO MemberInfo 
                                 (MembershipType, LastName, FirstName, MiddleInitial, Birthdate, TricycleBrand, TricycleModel, 
-                                 ContactNumber, ChassisNumber, EngineNumber, PlateNumber, DateJoined)
+                                 ContactNumber, ChassisNumber, EngineNumber, PlateNumber, DateJoined, MemberStatus)
                                 VALUES 
                                 (@MembershipType, @LastName, @FirstName, @MiddleInitial, @Birthdate, @TricycleBrand, @TricycleModel, 
-                                 @ContactNumber, @ChassisNumber, @EngineNumber, @PlateNumber, @DateJoined)";
+                                 @ContactNumber, @ChassisNumber, @EngineNumber, @PlateNumber, @DateJoined, @MemberStatus)";
 
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
@@ -87,6 +87,7 @@ namespace BATODA.Modules.MemberModule
                     cmd.Parameters.AddWithValue("@EngineNumber", member.EngineNumber);
                     cmd.Parameters.AddWithValue("@PlateNumber", member.PlateNumber);
                     cmd.Parameters.AddWithValue("@DateJoined", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@MemberStatus", "Active");
 
                     con.Open();
                     cmd.ExecuteNonQuery();
