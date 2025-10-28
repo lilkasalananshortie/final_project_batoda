@@ -1,0 +1,37 @@
+﻿     Sundin Mabuti para no error pag debugging kahit UI lang
+     
+     STEP 1:
+     - Follow these steps to connect your local db
+     - View > Server Explorer > Connect to Database > Microsoft SQL Server
+     - Server name: localhost\SQLEXPRESS
+     - Put check mark on "Trust Server Certificate"
+     - Db name = BatodaDb
+     ------------------------------------------------------------------------------------------------------------------
+     STEP 2:
+     - Right click on your db from server explorer and find "New Query"
+     - Use this input to create the MemberInfo table
+
+        CREATE TABLE MemberInfo(
+        BodyNumber INT IDENTITY(1,1) PRIMARY KEY,
+        MembershipType VARCHAR(20) CHECK(MembershipType IN ('Operator', 'Driver')) NOT NULL,
+        LastName VARCHAR(50) NOT NULL,
+        FirstName VARCHAR(50) NOT NULL,
+        MiddleInitial CHAR(1),
+        Birthdate DATE NOT NULL,
+        TricycleBrand VARCHAR(50),
+        TricycleModel VARCHAR(50),
+        ContactNumber VARCHAR(11) UNIQUE CHECK(ContactNumber LIKE '09%' AND LEN(ContactNumber) = 11),
+        ChassisNumber VARCHAR(50) UNIQUE,
+        EngineNumber VARCHAR(50) UNIQUE,
+        PlateNumber VARCHAR(20) UNIQUE,
+        TaxBalance DECIMAL(10,2) DEFAULT 0,
+        MemberStatus VARCHAR(10) CHECK(MemberStatus IN ('Active', 'Inactive')),
+        PenaltyLevel INT DEFAULT 0 CHECK(PenaltyLevel BETWEEN 0 AND 3),
+        SuspensionDays INT DEFAULT 0,
+        DaysRemaining INT DEFAULT 0
+        );
+
+     ------------------------------------------------------------------------------------------------------------------
+
+    STEP 3:
+    - hingi lang kayo kay gpt ng input na >= 20 sample data

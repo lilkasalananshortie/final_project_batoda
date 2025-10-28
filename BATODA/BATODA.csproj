@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
+    <Compile Include="Helpers\DataGrids\DataGridHelper.cs" />
+    <Compile Include="Modules\MemberModule\MemberModel.cs" />
+    <Compile Include="Modules\MemberModule\MemberRepository.cs" />
     <Compile Include="UI Displays\FontFamily.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
       <SubType>Form</SubType>
@@ -478,6 +482,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_add_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbConnectionGuide.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

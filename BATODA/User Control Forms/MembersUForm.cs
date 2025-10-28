@@ -7,16 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrids;
+using BATODA.Modules.MemberModule;
 using BATODA.UI_Displays;
+using BATODA.Helpers.Database.Members;
 
 namespace BATODA
 {
     public partial class MembersUForm : UserControl
     {
+        MemberRepository MemberRepo = new MemberRepository();
+
         public MembersUForm()
         {
             InitializeComponent();
-            
+
+            DataGridHelper.ApplyCustomGrid(MembersDataGrid);
+
+            TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
         }
 
         private void MembersUForm_Load(object sender, EventArgs e)
@@ -25,24 +33,83 @@ namespace BATODA
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
-            DisplayClass.SetPlaceholder(BodyNumberTextBox, "Enter Body Number");
-            DisplayClass.SetPlaceholder(ContactNumTextBox, "Enter Cellphone Number");
-            DisplayClass.SetPlaceholder(VehicleInfoTextBox, "Enter Unit Brand");
-            DisplayClass.SetPlaceholder(FirstNameTextBox, "Enter First Name");
-            DisplayClass.SetPlaceholder(LastNameTextBox, "Enter Last Name");
-            DisplayClass.SetPlaceholder(MiddleNameTextBox, "Enter Middle Name");
-            DisplayClass.SetPlaceholder(PlateNumberTextBox, "Enter Plate Number");
-            DisplayClass.SetPlaceholder(MTypeComboBox, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(ModelTextBox, "Enter Model Type");
-            DisplayClass.SetPlaceholder(EngineNumberTextBox, "Enter Engine Number");
-            DisplayClass.SetPlaceholder(ChasisNumberTextBox, "Enter Chassis Number");
+            DisplayClass.SetPlaceholder(AddBodyNumberTxt, "Enter Body Number");
+            DisplayClass.SetPlaceholder(AddContactNumber, "Enter Cellphone Number");
+            DisplayClass.SetPlaceholder(AddTricycleBrand, "Enter Unit Brand");
+            DisplayClass.SetPlaceholder(AddFirstNameTxt, "Enter First Name");
+            DisplayClass.SetPlaceholder(AddLastNameTxt, "Enter Last Name");
+            DisplayClass.SetPlaceholder(AddMiddleNameTxt, "Enter Middle Name");
+            DisplayClass.SetPlaceholder(AddPlateNumberTxt, "Enter Plate Number");
+            DisplayClass.SetPlaceholder(AddMemberTypeCmb, "Member Type", "Operator", "Driver");
+            DisplayClass.SetPlaceholder(AddModelTxt, "Enter Model Type");
+            DisplayClass.SetPlaceholder(AddEngineNumberTxt, "Enter Engine Number");
+            DisplayClass.SetPlaceholder(AddChassisNumber, "Enter Chassis Number");
+
+            LoadMembersToGrid();
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
+        }
+
+        private void LoadMembersToGrid()
+        {
+            string[] columnNames = { "BodyNumber", "LastName", "FirstName", "MiddleName", "Birthdate", "MembershipType", "ContactNumber", "MemberStatus", "PenaltyLevel" };
+            string[] columnHeaders = { "Body Number", "Last Name", "First Name", "Middle Name", "Birthdate", "Membership Type", "Contact Number", "Status", "Penalty Details" };
+
+            // Disabling built-in sort to avoid confusion and unintentional sorting
+            // Array > Hardcoded
+            for (int i = 0; i < columnNames.Length; i++)
+            {
+                MembersDataGrid.Columns.Add(columnNames[i], columnHeaders[i]);
+                MembersDataGrid.Columns[columnNames[i]].SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
 
 
+            var members = MemberRepo.GetAllMembers();
+            MembersDataGrid.Rows.Clear();
+
+            foreach (var m in members)
+            {
+                string penaltyDisplay;
+
+                if (m.PenaltyLevel == 0)
+                {
+                    penaltyDisplay = "None";
+                }
+                else if (m.PenaltyLevel == 1)
+                {
+                    penaltyDisplay = "First Warning";
+                }
+                else if (m.PenaltyLevel == 2)
+                {
+                    penaltyDisplay = "Final Warning";
+                }
+                else if (m.PenaltyLevel == 3)
+                {
+                    penaltyDisplay = $"Remaining {m.SuspensionDaysRemaining} days of Suspension";
+                }
+                else
+                {
+                    penaltyDisplay = "Unknown";
+                }
+
+                string bodyNumFormatted = m.BodyNumber.ToString("D3"); // formats 1 -> 001
+
+                MembersDataGrid.Rows.Add(
+                    bodyNumFormatted,
+                    m.LastName,
+                    m.FirstName,
+                    m.MiddleInitial,
+                    m.Birthdate.ToString("MMMM d, yyyy"),
+                    m.MembershipType,
+                    m.ContactNumber,
+                    m.MemberStatus,
+                    penaltyDisplay
+                );
+            }
 
         }
+
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
