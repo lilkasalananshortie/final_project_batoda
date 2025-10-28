@@ -33,16 +33,6 @@ namespace BATODA
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
-            DisplayClass.SetPlaceholder(AddContactNumber, "Enter Cellphone Number");
-            DisplayClass.SetPlaceholder(AddTricycleBrand, "Enter Unit Brand");
-            DisplayClass.SetPlaceholder(AddFirstNameTxt, "Enter First Name");
-            DisplayClass.SetPlaceholder(AddLastNameTxt, "Enter Last Name");
-            DisplayClass.SetPlaceholder(AddMiddleNameTxt, "Enter Middle Name");
-            DisplayClass.SetPlaceholder(AddPlateNumberTxt, "Enter Plate Number");
-            DisplayClass.SetPlaceholder(AddMemberTypeCmb, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(AddModelTxt, "Enter Model Type");
-            DisplayClass.SetPlaceholder(AddEngineNumberTxt, "Enter Engine Number");
-            DisplayClass.SetPlaceholder(AddChassisNumber, "Enter Chassis Number");
 
             SetupGridColumns();
             LoadMembersToGrid();
@@ -111,25 +101,23 @@ namespace BATODA
             }
 
         }
-
         private MemberModel GetMemberFromForm()
         {
             return new MemberModel
             {
-                MembershipType = AddMemberTypeCmb.Text,
-                LastName = AddLastNameTxt.Text,
-                FirstName = AddFirstNameTxt.Text,
-                MiddleInitial = AddMiddleNameTxt.Text,
+                FirstName = AddFirstNameTxt.Text.Trim(),
+                LastName = AddLastNameTxt.Text.Trim(),
+                MiddleInitial = AddMiddleNameTxt.Text.Trim(),
                 Birthdate = BirthdatePicker.Value,
-                TricycleBrand = AddTricycleBrand.Text,
-                TricycleModel = AddModelTxt.Text,
-                ContactNumber = AddContactNumber.Text,
-                ChassisNumber = AddChassisNumber.Text,
-                EngineNumber = AddEngineNumberTxt.Text,
-                PlateNumber = AddPlateNumberTxt.Text,
+                PlateNumber = AddPlateNumberTxt.Text.Trim(),
+                EngineNumber = AddEngineNumberTxt.Text.Trim(),
+                ChassisNumber = AddChassisNumberTxt.Text.Trim(),
+                ContactNumber = AddContactNumber.Text.Trim(),
+                TricycleBrand = AddTricycleBrand.Text.Trim(),
+                TricycleModel = AddModelTxt.Text.Trim(),
+                MembershipType = AddMemberTypeCmb.Text.Trim(),
             };
         }
-
 
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
@@ -173,7 +161,8 @@ namespace BATODA
 
         private void AddMemberButton_Click(object sender, EventArgs e)
         {
-            ToastManager.Info("Member Searchd");    // testing lang 
+            ToastManager.Info("Member Search");    // testing lang 
+            GenerateNextBodyNumber.ShowNext(AddBodyNo);
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
 
@@ -183,19 +172,24 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            MemberModel NewMember = GetMemberFromForm();
-            var MemberRepo = new MemberRepository();
+                MemberModel NewMember = GetMemberFromForm();
 
-            MemberRepo.AddMember(NewMember);
-            ToastManager.Success("New Member Added Successfully!");
+                if (!MemberValidator.ValidateMember(NewMember)) // STOP VALIDATION IF FALSE
+                {
+                    return;
+                }
 
-            LoadMembersToGrid();
+                var MemberRepo = new MemberRepository();
+                MemberRepo.AddMember(NewMember);
+                ToastManager.Success("New Member Added Successfully!");
 
-            AddMemberPanel.Visible = false;
-            AddMemberButton.Enabled = true;
-            ApplySearchButton.Enabled = true;
+                LoadMembersToGrid();
 
+                AddMemberPanel.Visible = false;
+                AddMemberButton.Enabled = true;
+                ApplySearchButton.Enabled = true;
         }
+
 
         private void CancelButton_Click(object sender, EventArgs e)
         {

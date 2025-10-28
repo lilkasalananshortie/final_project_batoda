@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BATODA.Modules.MemberModule
 {
@@ -63,37 +64,77 @@ namespace BATODA.Modules.MemberModule
         // --------------- ADDING NEW MEMBERS -----------------
         public void AddMember(MemberModel member)
         {
+            MemberValidator.ValidateMember(member);
+
+            // WAG TATANGGAP NG INPUT
+            if (!string.Equals(member.MembershipType, "Driver", StringComparison.OrdinalIgnoreCase) &&
+                !string.Equals(member.MembershipType, "Operator", StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("Membership Type must be either 'Driver' or 'Operator'.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = @"INSERT INTO MemberInfo 
-                                (MembershipType, LastName, FirstName, MiddleInitial, Birthdate, TricycleBrand, TricycleModel, 
-                                 ContactNumber, ChassisNumber, EngineNumber, PlateNumber, DateJoined, MemberStatus)
-                                VALUES 
-                                (@MembershipType, @LastName, @FirstName, @MiddleInitial, @Birthdate, @TricycleBrand, @TricycleModel, 
-                                 @ContactNumber, @ChassisNumber, @EngineNumber, @PlateNumber, @DateJoined, @MemberStatus)";
+                con.Open();
 
+                // DUPE CHECKING QUERY
+                string duplicateQuery = @"
+                   SELECT COUNT(*) FROM MemberInfo 
+                   WHERE PlateNumber = @PlateNumber 
+                   OR ChassisNumber = @ChassisNumber 
+                   OR EngineNumber = @EngineNumber
+                   OR ContactNumber = @ContactNumber";
 
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlCommand checkCmd = new SqlCommand(duplicateQuery, con))
                 {
-                    cmd.Parameters.AddWithValue("@MembershipType", member.MembershipType);
-                    cmd.Parameters.AddWithValue("@LastName", member.LastName);
-                    cmd.Parameters.AddWithValue("@FirstName", member.FirstName);
-                    cmd.Parameters.AddWithValue("@MiddleInitial", member.MiddleInitial);
+                    checkCmd.Parameters.AddWithValue("@PlateNumber", member.PlateNumber ?? "");
+                    checkCmd.Parameters.AddWithValue("@ChassisNumber", member.ChassisNumber ?? "");
+                    checkCmd.Parameters.AddWithValue("@EngineNumber", member.EngineNumber ?? "");
+                    checkCmd.Parameters.AddWithValue("@ContactNumber", member.ContactNumber ?? "");
+
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("A member with the same Plate, Chassis, \nEngine number, or Contact Number already exists!");
+                        return;
+                    }
+                }
+
+                // Insert new member
+                string insertQuery = @"
+                INSERT INTO MemberInfo 
+                (MembershipType, LastName, FirstName, MiddleInitial, Birthdate, 
+                TricycleBrand, TricycleModel, ContactNumber, ChassisNumber, 
+                EngineNumber, PlateNumber, DateJoined, MemberStatus)
+                VALUES 
+                (@MembershipType, @LastName, @FirstName, @MiddleInitial, @Birthdate, 
+                @TricycleBrand, @TricycleModel, @ContactNumber, @ChassisNumber, 
+                @EngineNumber, @PlateNumber, @DateJoined, @MemberStatus)";
+
+                using (SqlCommand cmd = new SqlCommand(insertQuery, con))
+                {
+                    cmd.Parameters.AddWithValue("@MembershipType", member.MembershipType ?? "");
+                    cmd.Parameters.AddWithValue("@LastName", member.LastName ?? "");
+                    cmd.Parameters.AddWithValue("@FirstName", member.FirstName ?? "");
+                    cmd.Parameters.AddWithValue("@MiddleInitial", member.MiddleInitial ?? "");
                     cmd.Parameters.AddWithValue("@Birthdate", member.Birthdate);
-                    cmd.Parameters.AddWithValue("@TricycleBrand", member.TricycleBrand);
-                    cmd.Parameters.AddWithValue("@TricycleModel", member.TricycleModel);
-                    cmd.Parameters.AddWithValue("@ContactNumber", member.ContactNumber);
-                    cmd.Parameters.AddWithValue("@ChassisNumber", member.ChassisNumber);
-                    cmd.Parameters.AddWithValue("@EngineNumber", member.EngineNumber);
-                    cmd.Parameters.AddWithValue("@PlateNumber", member.PlateNumber);
+                    cmd.Parameters.AddWithValue("@TricycleBrand", member.TricycleBrand ?? "");
+                    cmd.Parameters.AddWithValue("@TricycleModel", member.TricycleModel ?? "");
+                    cmd.Parameters.AddWithValue("@ContactNumber", member.ContactNumber ?? "");
+                    cmd.Parameters.AddWithValue("@ChassisNumber", member.ChassisNumber ?? "");
+                    cmd.Parameters.AddWithValue("@EngineNumber", member.EngineNumber ?? "");
+                    cmd.Parameters.AddWithValue("@PlateNumber", member.PlateNumber ?? "");
                     cmd.Parameters.AddWithValue("@DateJoined", DateTime.Now);
                     cmd.Parameters.AddWithValue("@MemberStatus", "Active");
 
-                    con.Open();
                     cmd.ExecuteNonQuery();
                 }
             }
         }
+
+
 
         // --------------- UPDATE MEMBERS -----------------
         public void UpdateMember(MemberModel member)

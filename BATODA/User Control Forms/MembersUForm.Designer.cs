@@ -48,13 +48,15 @@
             this.AddMemberBtn = new BATODA.ButtonStyle();
             this.CancelButton = new BATODA.ButtonStyle();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.BirthdatePicker = new System.Windows.Forms.DateTimePicker();
+            this.label25 = new System.Windows.Forms.Label();
             this.UploadButton = new BATODA.ButtonStyle();
             this.UploadPictureBox = new System.Windows.Forms.PictureBox();
             this.ResetButton = new BATODA.ButtonStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.AddChassisNumber = new System.Windows.Forms.TextBox();
+            this.AddChassisNumberTxt = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
             this.AddEngineNumberTxt = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -68,6 +70,7 @@
             this.AddModelTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.AddBodyNo = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.AddTricycleBrand = new System.Windows.Forms.TextBox();
@@ -106,9 +109,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.BirthdatePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.MembersDataGrid)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
@@ -415,7 +415,7 @@
             this.AddMemberBtn.ImagePosition = new System.Drawing.Point(20, 0);
             this.AddMemberBtn.ImageSize = new System.Drawing.Size(24, 24);
             this.AddMemberBtn.IsToggled = false;
-            this.AddMemberBtn.Location = new System.Drawing.Point(1084, 710);
+            this.AddMemberBtn.Location = new System.Drawing.Point(1076, 710);
             this.AddMemberBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddMemberBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.AddMemberBtn.Name = "AddMemberBtn";
@@ -423,7 +423,7 @@
             this.AddMemberBtn.PaddingY = 0;
             this.AddMemberBtn.Size = new System.Drawing.Size(183, 45);
             this.AddMemberBtn.TabIndex = 23;
-            this.AddMemberBtn.Text = "Add Member";
+            this.AddMemberBtn.Text = "Save Record";
             this.AddMemberBtn.TextColor = System.Drawing.Color.White;
             this.AddMemberBtn.TextOffset = 5;
             this.AddMemberBtn.ToggleColor = System.Drawing.Color.Empty;
@@ -448,7 +448,7 @@
             this.CancelButton.ImagePosition = new System.Drawing.Point(30, 0);
             this.CancelButton.ImageSize = new System.Drawing.Size(24, 24);
             this.CancelButton.IsToggled = false;
-            this.CancelButton.Location = new System.Drawing.Point(927, 710);
+            this.CancelButton.Location = new System.Drawing.Point(918, 710);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.CancelButton.Name = "CancelButton";
@@ -498,6 +498,26 @@
             this.panel16.Size = new System.Drawing.Size(1229, 593);
             this.panel16.TabIndex = 28;
             this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
+            // 
+            // BirthdatePicker
+            // 
+            this.BirthdatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthdatePicker.Location = new System.Drawing.Point(640, 81);
+            this.BirthdatePicker.MaxDate = new System.DateTime(2999, 12, 31, 0, 0, 0, 0);
+            this.BirthdatePicker.Name = "BirthdatePicker";
+            this.BirthdatePicker.Size = new System.Drawing.Size(267, 26);
+            this.BirthdatePicker.TabIndex = 54;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(635, 51);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(112, 25);
+            this.label25.TabIndex = 53;
+            this.label25.Text = "Birthdate *";
             // 
             // UploadButton
             // 
@@ -598,21 +618,21 @@
             // panel17
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.AddChassisNumber);
+            this.panel17.Controls.Add(this.AddChassisNumberTxt);
             this.panel17.Location = new System.Drawing.Point(934, 188);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(258, 50);
             this.panel17.TabIndex = 28;
             // 
-            // AddChassisNumber
+            // AddChassisNumberTxt
             // 
-            this.AddChassisNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddChassisNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddChassisNumber.Location = new System.Drawing.Point(12, 12);
-            this.AddChassisNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddChassisNumber.Name = "AddChassisNumber";
-            this.AddChassisNumber.Size = new System.Drawing.Size(241, 24);
-            this.AddChassisNumber.TabIndex = 42;
+            this.AddChassisNumberTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AddChassisNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddChassisNumberTxt.Location = new System.Drawing.Point(12, 12);
+            this.AddChassisNumberTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddChassisNumberTxt.Name = "AddChassisNumberTxt";
+            this.AddChassisNumberTxt.Size = new System.Drawing.Size(241, 24);
+            this.AddChassisNumberTxt.TabIndex = 42;
             // 
             // panel18
             // 
@@ -657,6 +677,9 @@
             this.AddMemberTypeCmb.BackColor = System.Drawing.Color.White;
             this.AddMemberTypeCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddMemberTypeCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMemberTypeCmb.Items.AddRange(new object[] {
+            "Driver",
+            "Operator"});
             this.AddMemberTypeCmb.Location = new System.Drawing.Point(3, 8);
             this.AddMemberTypeCmb.Name = "AddMemberTypeCmb";
             this.AddMemberTypeCmb.Size = new System.Drawing.Size(254, 33);
@@ -733,11 +756,21 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.AddBodyNo);
             this.panel7.Location = new System.Drawing.Point(304, 188);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(280, 50);
             this.panel7.TabIndex = 26;
+            // 
+            // AddBodyNo
+            // 
+            this.AddBodyNo.AutoSize = true;
+            this.AddBodyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBodyNo.Location = new System.Drawing.Point(3, 11);
+            this.AddBodyNo.Name = "AddBodyNo";
+            this.AddBodyNo.Size = new System.Drawing.Size(257, 25);
+            this.AddBodyNo.TabIndex = 53;
+            this.AddBodyNo.Text = "Auto-generated body no.*";
             // 
             // label13
             // 
@@ -830,11 +863,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(39, 466);
+            this.label10.Location = new System.Drawing.Point(34, 466);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 25);
+            this.label10.Size = new System.Drawing.Size(146, 25);
             this.label10.TabIndex = 27;
-            this.label10.Text = "Middle Name";
+            this.label10.Text = "Middle Initial *";
             // 
             // panel10
             // 
@@ -1243,36 +1276,6 @@
             this.label21.TabIndex = 57;
             this.label21.Text = "Suspended";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(257, 25);
-            this.label14.TabIndex = 53;
-            this.label14.Text = "Auto-generated body no.*";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(635, 51);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(112, 25);
-            this.label25.TabIndex = 53;
-            this.label25.Text = "Birthdate *";
-            // 
-            // BirthdatePicker
-            // 
-            this.BirthdatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthdatePicker.Location = new System.Drawing.Point(640, 81);
-            this.BirthdatePicker.MaxDate = new System.DateTime(2999, 12, 31, 0, 0, 0, 0);
-            this.BirthdatePicker.Name = "BirthdatePicker";
-            this.BirthdatePicker.Size = new System.Drawing.Size(267, 26);
-            this.BirthdatePicker.TabIndex = 54;
-            // 
             // MembersUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -1387,7 +1390,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.TextBox AddChassisNumber;
+        private System.Windows.Forms.TextBox AddChassisNumberTxt;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.TextBox AddEngineNumberTxt;
         private System.Windows.Forms.Label label23;
@@ -1421,6 +1424,6 @@
         private System.Windows.Forms.TextBox AddModelTxt;
         private System.Windows.Forms.DateTimePicker BirthdatePicker;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label AddBodyNo;
     }
 }
