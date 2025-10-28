@@ -44,16 +44,18 @@ namespace BATODA
             DisplayClass.SetPlaceholder(AddEngineNumberTxt, "Enter Engine Number");
             DisplayClass.SetPlaceholder(AddChassisNumber, "Enter Chassis Number");
 
+            SetupGridColumns();
             LoadMembersToGrid();
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
         }
 
-        private void LoadMembersToGrid()
+        private void SetupGridColumns()
         {
             string[] columnNames = { "BodyNumber", "LastName", "FirstName", "Birthdate", "MembershipType", "ContactNumber", "MemberStatus", "PenaltyLevel" };
             string[] columnHeaders = { "Body No.", "Last Name", "First Name", "Birthdate", "Membership Type", "Contact Number", "Status", "Penalty Details" };
+
 
             // Disabling built-in sort to avoid confusion and unintentional sorting
             // Array > Hardcoded
@@ -62,10 +64,12 @@ namespace BATODA
                 MembersDataGrid.Columns.Add(columnNames[i], columnHeaders[i]);
                 MembersDataGrid.Columns[columnNames[i]].SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+        }
 
-
-            var members = MemberRepo.GetAllMembers();
+        private void LoadMembersToGrid()
+        {
             MembersDataGrid.Rows.Clear();
+            var members = MemberRepo.GetAllMembers();
 
             foreach (var m in members)
             {
@@ -184,6 +188,9 @@ namespace BATODA
 
             MemberRepo.AddMember(NewMember);
             ToastManager.Success("New Member Added Successfully!");
+
+            LoadMembersToGrid();
+
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
             ApplySearchButton.Enabled = true;
