@@ -354,7 +354,7 @@
             this.AddMemberPanel.Controls.Add(this.AddMemberBtn);
             this.AddMemberPanel.Controls.Add(this.CancelButton);
             this.AddMemberPanel.Controls.Add(this.panel16);
-            this.AddMemberPanel.Location = new System.Drawing.Point(440, 83);
+            this.AddMemberPanel.Location = new System.Drawing.Point(25, 93);
             this.AddMemberPanel.Name = "AddMemberPanel";
             this.AddMemberPanel.Size = new System.Drawing.Size(1579, 833);
             this.AddMemberPanel.TabIndex = 22;
