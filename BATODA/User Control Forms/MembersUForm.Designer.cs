@@ -50,8 +50,8 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.BirthdatePicker = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
-            this.UploadButton = new BATODA.ButtonStyle();
-            this.UploadPictureBox = new System.Windows.Forms.PictureBox();
+            this.UploadImageBtn = new BATODA.ButtonStyle();
+            this.PreviewImagePb = new System.Windows.Forms.PictureBox();
             this.ResetButton = new BATODA.ButtonStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -109,12 +109,13 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.UploadImageDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.MembersDataGrid)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -468,8 +469,8 @@
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Controls.Add(this.BirthdatePicker);
             this.panel16.Controls.Add(this.label25);
-            this.panel16.Controls.Add(this.UploadButton);
-            this.panel16.Controls.Add(this.UploadPictureBox);
+            this.panel16.Controls.Add(this.UploadImageBtn);
+            this.panel16.Controls.Add(this.PreviewImagePb);
             this.panel16.Controls.Add(this.ResetButton);
             this.panel16.Controls.Add(this.label3);
             this.panel16.Controls.Add(this.label24);
@@ -519,49 +520,49 @@
             this.label25.TabIndex = 53;
             this.label25.Text = "Birthdate *";
             // 
-            // UploadButton
+            // UploadImageBtn
             // 
-            this.UploadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BorderRadius = 0;
-            this.UploadButton.BorderSize = 0;
-            this.UploadButton.ButtonImage = null;
-            this.UploadButton.FlatAppearance.BorderSize = 0;
-            this.UploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadButton.ForeColor = System.Drawing.Color.White;
-            this.UploadButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.UploadButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.UploadButton.ImageColor = System.Drawing.Color.White;
-            this.UploadButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.UploadButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.UploadButton.IsToggled = false;
-            this.UploadButton.Location = new System.Drawing.Point(304, 53);
-            this.UploadButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UploadButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.Name = "UploadButton";
-            this.UploadButton.PaddingX = 0;
-            this.UploadButton.PaddingY = 0;
-            this.UploadButton.Size = new System.Drawing.Size(256, 37);
-            this.UploadButton.TabIndex = 52;
-            this.UploadButton.Text = "Upload Picture";
-            this.UploadButton.TextColor = System.Drawing.Color.White;
-            this.UploadButton.TextOffset = 5;
-            this.UploadButton.ToggleColor = System.Drawing.Color.Empty;
-            this.UploadButton.UseVisualStyleBackColor = false;
-            this.UploadButton.Click += new System.EventHandler(this.UploadButton_Click);
+            this.UploadImageBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.BorderRadius = 0;
+            this.UploadImageBtn.BorderSize = 0;
+            this.UploadImageBtn.ButtonImage = null;
+            this.UploadImageBtn.FlatAppearance.BorderSize = 0;
+            this.UploadImageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UploadImageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadImageBtn.ForeColor = System.Drawing.Color.White;
+            this.UploadImageBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.UploadImageBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.UploadImageBtn.ImageColor = System.Drawing.Color.White;
+            this.UploadImageBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.UploadImageBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.UploadImageBtn.IsToggled = false;
+            this.UploadImageBtn.Location = new System.Drawing.Point(304, 53);
+            this.UploadImageBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UploadImageBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.Name = "UploadImageBtn";
+            this.UploadImageBtn.PaddingX = 0;
+            this.UploadImageBtn.PaddingY = 0;
+            this.UploadImageBtn.Size = new System.Drawing.Size(256, 37);
+            this.UploadImageBtn.TabIndex = 52;
+            this.UploadImageBtn.Text = "Upload Picture";
+            this.UploadImageBtn.TextColor = System.Drawing.Color.White;
+            this.UploadImageBtn.TextOffset = 5;
+            this.UploadImageBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.UploadImageBtn.UseVisualStyleBackColor = false;
+            this.UploadImageBtn.Click += new System.EventHandler(this.UploadButton_Click);
             // 
-            // UploadPictureBox
+            // PreviewImagePb
             // 
-            this.UploadPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UploadPictureBox.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.UploadPictureBox.Location = new System.Drawing.Point(38, 37);
-            this.UploadPictureBox.Name = "UploadPictureBox";
-            this.UploadPictureBox.Size = new System.Drawing.Size(230, 218);
-            this.UploadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UploadPictureBox.TabIndex = 51;
-            this.UploadPictureBox.TabStop = false;
+            this.PreviewImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PreviewImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.PreviewImagePb.Location = new System.Drawing.Point(38, 37);
+            this.PreviewImagePb.Name = "PreviewImagePb";
+            this.PreviewImagePb.Size = new System.Drawing.Size(230, 218);
+            this.PreviewImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PreviewImagePb.TabIndex = 51;
+            this.PreviewImagePb.TabStop = false;
             // 
             // ResetButton
             // 
@@ -1276,6 +1277,10 @@
             this.label21.TabIndex = 57;
             this.label21.Text = "Suspended";
             // 
+            // UploadImageDialog
+            // 
+            this.UploadImageDialog.FileName = "openFileDialog1";
+            // 
             // MembersUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -1301,7 +1306,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
@@ -1418,12 +1423,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox AddPlateNumberTxt;
-        private ButtonStyle UploadButton;
-        private System.Windows.Forms.PictureBox UploadPictureBox;
+        private ButtonStyle UploadImageBtn;
+        private System.Windows.Forms.PictureBox PreviewImagePb;
         private ButtonStyle ResetButton;
         private System.Windows.Forms.TextBox AddModelTxt;
         private System.Windows.Forms.DateTimePicker BirthdatePicker;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label AddBodyNo;
+        private System.Windows.Forms.OpenFileDialog UploadImageDialog;
     }
 }

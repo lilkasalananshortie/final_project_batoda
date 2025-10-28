@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Member_Module.Member_Classes;
 using BATODA.Modules.MemberModule;
 using BATODA.UI_Displays;
-using BATODA.Helpers.Database.Members;
 
 namespace BATODA
 {
@@ -174,12 +175,18 @@ namespace BATODA
         {
                 MemberModel NewMember = GetMemberFromForm();
 
-                if (!MemberValidator.ValidateMember(NewMember)) // STOP VALIDATION IF FALSE
+                //if (!MemberValidator.ValidateMember(NewMember)) // STOP VALIDATION IF FALSE
+                //{
+                //    return;
+                //}
+
+                if (PreviewImagePb.Image != null && !string.IsNullOrEmpty(UploadImageDialog.FileName))
                 {
-                    return;
+                    string savedPath = SaveImageToFolder.Save(UploadImageDialog.FileName, NewMember.BodyNumber);
+                    NewMember.ImagePath = savedPath; 
                 }
 
-                var MemberRepo = new MemberRepository();
+            var MemberRepo = new MemberRepository();
                 MemberRepo.AddMember(NewMember);
                 ToastManager.Success("New Member Added Successfully!");
 
@@ -226,7 +233,14 @@ namespace BATODA
 
         private void UploadButton_Click(object sender, EventArgs e)
         {
+            UploadImageDialog.Title = "Select an Image";
+            UploadImageDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
+            if (UploadImageDialog.ShowDialog() == DialogResult.OK)
+            {
+                PreviewImagePb.ImageLocation = UploadImageDialog.FileName;
+                PreviewImagePb.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
 
         private void panel16_Paint(object sender, PaintEventArgs e)

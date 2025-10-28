@@ -49,9 +49,10 @@
     <Compile Include="Helpers\Database\Members\GenerateNextBodyNumber.cs" />
     <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
     <Compile Include="Helpers\DataGrids\DataGridHelper.cs" />
-    <Compile Include="Modules\MemberModule\MemberModel.cs" />
-    <Compile Include="Modules\MemberModule\MemberRepository.cs" />
-    <Compile Include="Modules\MemberModule\MemberValidator.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\MemberValidator.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\SaveImageToFolder.cs" />
     <Compile Include="UI Displays\FontFamily.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
       <SubType>Form</SubType>
@@ -487,6 +488,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DbConnectionGuide.txt" />
+    <Content Include="FixImageNotShowing.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Member Module\Member Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

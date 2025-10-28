@@ -2,15 +2,21 @@
      
      STEP 1:
      - Follow these steps to connect your local db
-     - View > Server Explorer > Connect to Database > Microsoft SQL Server
+     - Top Left ng Visual Studio > View > Server Explorer > Connect to Database > Microsoft SQL Server
      - Server name: localhost\SQLEXPRESS
      - Put check mark on "Trust Server Certificate"
      - Db name = BatodaDb
 
+     ****NOTE****
+     - IF MAY ERROR, WALA KANG INSTALLED NA EXPRESS SQL(CHAT SI MHAKU FOR TUTS)
+     - MAY PROBLEM SA SQ CONNSTRING (CHAT SI ARONE FOR TUTS)
+
      ------------------------------------------------------------------------------------------------------------------
      STEP 2:
-     - Right click on your db from server explorer and find "New Query"
-     - Use this input to create the MemberInfo table
+     - Right click your created db from server explorer(left side ng screen mo) and find "New Query"
+     - Use this input to create the MemberInfo table:
+
+COPY PASTE MO LANG TO FOR SAMPLES
 
 CREATE TABLE MemberInfo (
     BodyNumber INT IDENTITY(1,1) PRIMARY KEY,

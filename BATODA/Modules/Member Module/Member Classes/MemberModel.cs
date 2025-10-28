@@ -29,6 +29,8 @@ namespace BATODA.Modules.MemberModule
         public string MemberStatus { get; set; }
         public int PenaltyLevel { get; set; }
         public int PenaltyCount { get; set; }
+        public string ImagePath { get; set; }
+
 
         public int SuspensionDaysRemaining
         {

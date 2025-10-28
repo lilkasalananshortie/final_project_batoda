@@ -102,7 +102,6 @@ namespace BATODA.Modules.MemberModule
                     }
                 }
 
-                // Insert new member
                 string insertQuery = @"
                 INSERT INTO MemberInfo 
                 (MembershipType, LastName, FirstName, MiddleInitial, Birthdate, 
