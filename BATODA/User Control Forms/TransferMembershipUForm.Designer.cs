@@ -312,6 +312,7 @@
             // HolderPanel1
             // 
             this.HolderPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.HolderPanel1.Controls.Add(this.ConfirmationPanel);
             this.HolderPanel1.Controls.Add(this.panel23);
             this.HolderPanel1.Controls.Add(this.panel24);
             this.HolderPanel1.Location = new System.Drawing.Point(39, 70);
@@ -351,9 +352,9 @@
             this.ConfirmationPanel.Controls.Add(this.label25);
             this.ConfirmationPanel.Controls.Add(this.label26);
             this.ConfirmationPanel.Controls.Add(this.label27);
-            this.ConfirmationPanel.Location = new System.Drawing.Point(35, 123);
+            this.ConfirmationPanel.Location = new System.Drawing.Point(408, -1);
             this.ConfirmationPanel.Name = "ConfirmationPanel";
-            this.ConfirmationPanel.Size = new System.Drawing.Size(168, 477);
+            this.ConfirmationPanel.Size = new System.Drawing.Size(692, 521);
             this.ConfirmationPanel.TabIndex = 30;
             // 
             // label36
@@ -1480,7 +1481,6 @@
             // panel24
             // 
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel24.Controls.Add(this.ConfirmationPanel);
             this.panel24.Controls.Add(this.TransferBtn);
             this.panel24.Controls.Add(this.label7);
             this.panel24.Controls.Add(this.label41);

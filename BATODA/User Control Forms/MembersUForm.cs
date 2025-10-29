@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace BATODA
         {
             InitializeComponent();
 
-            DataGridHelper.ApplyCustomGrid(MembersDataGrid);
+            DataGridCustom.ApplyCustomGrid(MembersDataGrid);
 
             //TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
         }
@@ -31,9 +32,9 @@ namespace BATODA
         private void MembersUForm_Load(object sender, EventArgs e)
         {
             DisplayClass.SetPlaceholder(SearchTxt, "Search Member");
-            DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
-            DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
+            DisplayClass.SetPlaceholder(SortStatusCmb, "Status", "Active", "Inactive");
+            DisplayClass.SetPlaceholder(SortMembertTypeCmb, "Member Type", "Operator", "Driver");
+            DisplayClass.SetPlaceholder(SortOrderCmb, "Order By", "Ascending", "Descending");
 
             SetupGridColumns();
             LoadMembersToGrid();
@@ -222,8 +223,16 @@ namespace BATODA
 
         private void ApplyButton_Click(object sender, EventArgs e)
         {
-            ToastManager.Success("Filters Applied!");
+            string memberType = SortMembertTypeCmb.SelectedItem?.ToString();
+            string order = SortOrderCmb.SelectedItem?.ToString();
+            string status = SortStatusCmb.SelectedItem?.ToString();
 
+            DataTable dataTable = MemberSort.ApplyFilter(memberType, order, status);
+            MembersDataGrid.Rows.Clear();
+
+            DataGridColumns.LoadMembersToGrid(MembersDataGrid, dataTable);
+
+            ToastManager.Success("Filters Applied!");
         }
 
         private void ApplySearchButton_Click(object sender, EventArgs e)
@@ -231,22 +240,9 @@ namespace BATODA
             string SearchText = SearchTxt.Text.Trim();
             DataTable MemberTable = SearchMembers.Find(SearchText);
 
-            MembersDataGrid.Rows.Clear();
-            foreach (DataRow row in MemberTable.Rows)
-            {
-                MembersDataGrid.Rows.Add(
-                    row["BodyNumber"].ToString().PadLeft(3, '0'),
-                    row["LastName"].ToString(),
-                    row["FirstName"].ToString(),
-                    Convert.ToDateTime(row["Birthdate"]).ToShortDateString(),
-                    row["MembershipType"].ToString(),
-                    row["ContactNumber"].ToString(),
-                    row["MemberStatus"].ToString(),
-                    row["PenaltyLevel"].ToString()
-                );
-            }
+            DataGridColumns.LoadMembersToGrid(MembersDataGrid, MemberTable);
 
-            // Show “No Results” panel if table is empty
+            // Show “No Results” panel
             if (MemberTable.Rows.Count == 0)
             {
                 NoResultsPanel.BringToFront();

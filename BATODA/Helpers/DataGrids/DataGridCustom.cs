@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace BATODA.Helpers.DataGrids
 {
-    internal static class DataGridHelper
+    internal static class DataGridCustom
     {
         /// <summary>
         /// Applies consistent font and row height style to any DataGridView.
