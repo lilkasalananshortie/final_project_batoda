@@ -31,9 +31,9 @@ namespace BATODA
         private void MembersUForm_Load(object sender, EventArgs e)
         {
             DisplayClass.SetPlaceholder(SearchTxt, "Search Member");
-            DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
-            DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
+            DisplayClass.SetPlaceholder(StatusCmb, "Status", "Active", "Inactive");
+            DisplayClass.SetPlaceholder(MemberTypeCmb, "Member Type", "Operator", "Driver");
+            DisplayClass.SetPlaceholder(OrderCmb, "Order By", "Ascending", "Descending");
 
             SetupGridColumns();
             LoadMembersToGrid();
