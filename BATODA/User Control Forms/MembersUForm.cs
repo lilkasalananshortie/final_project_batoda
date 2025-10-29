@@ -25,7 +25,7 @@ namespace BATODA
 
             DataGridHelper.ApplyCustomGrid(MembersDataGrid);
 
-            TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
+            //TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
         }
 
         private void MembersUForm_Load(object sender, EventArgs e)
