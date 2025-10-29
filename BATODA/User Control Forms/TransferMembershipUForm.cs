@@ -18,20 +18,6 @@ namespace BATODA
             InitializeComponent();
 
             ConfirmationPanel.Hide();
-            DisplayClass.SetPlaceholder(BodyNumberTextBox, "Enter Body Number");
-            DisplayClass.SetPlaceholder(ContactNumTextBox, "Enter Cellphone Number");
-            DisplayClass.SetPlaceholder(VehicleInfoTextBox, "Enter Unit Brand");
-            DisplayClass.SetPlaceholder(FirstNameTextBox, "Enter First Name");
-            DisplayClass.SetPlaceholder(LastNameTextBox, "Enter Last Name");
-            DisplayClass.SetPlaceholder(MiddleNameTextBox, "Enter Middle Name");
-            DisplayClass.SetPlaceholder(PlateNumberTextBox, "Enter Plate Number");
-            DisplayClass.SetPlaceholder(MTypeComboBox, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(ModelTextBox, "Enter Model");
-            DisplayClass.SetPlaceholder(RTransferTextBox, "Enter Transfer Description");
-            DisplayClass.SetPlaceholder(ChassisNumberTextBox,"Enter Chassis Number");
-            DisplayClass.SetPlaceholder(EngineNumberTextBox, "Enter Engine Number");
-
-
         }
 
         private void TransferMembershipUForm_Load(object sender, EventArgs e)
@@ -94,6 +80,9 @@ namespace BATODA
             ConfirmationPanel.Show();
         }
 
-        
+        private void HolderPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
