@@ -30,7 +30,7 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
-            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
+            DisplayClass.SetPlaceholder(SearchTxt, "Search Member");
             DisplayClass.SetPlaceholder(StatusComboBox, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
@@ -167,7 +167,7 @@ namespace BATODA
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
 
-            ApplySearchButton.Enabled = false;
+            SearchBtn.Enabled = false;
 
         }
 
@@ -194,7 +194,7 @@ namespace BATODA
 
                 AddMemberPanel.Visible = false;
                 AddMemberButton.Enabled = true;
-                ApplySearchButton.Enabled = true;
+                SearchBtn.Enabled = true;
         }
 
 
@@ -203,7 +203,7 @@ namespace BATODA
             ToastManager.Warning("Adding New Member Cancelled");
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
-            ApplySearchButton.Enabled = true;
+            SearchBtn.Enabled = true;
 
         }
 
@@ -228,7 +228,34 @@ namespace BATODA
 
         private void ApplySearchButton_Click(object sender, EventArgs e)
         {
+            string SearchText = SearchTxt.Text.Trim();
+            DataTable MemberTable = SearchMembers.Find(SearchText);
 
+            MembersDataGrid.Rows.Clear();
+            foreach (DataRow row in MemberTable.Rows)
+            {
+                MembersDataGrid.Rows.Add(
+                    row["BodyNumber"].ToString().PadLeft(3, '0'),
+                    row["LastName"].ToString(),
+                    row["FirstName"].ToString(),
+                    Convert.ToDateTime(row["Birthdate"]).ToShortDateString(),
+                    row["MembershipType"].ToString(),
+                    row["ContactNumber"].ToString(),
+                    row["MemberStatus"].ToString(),
+                    row["PenaltyLevel"].ToString()
+                );
+            }
+
+            // Show “No Results” panel if table is empty
+            if (MemberTable.Rows.Count == 0)
+            {
+                NoResultsPanel.BringToFront();
+                NoResultsPanel.Visible = true;
+            }
+            else
+            {
+                NoResultsPanel.Visible = false;
+            }
         }
 
         private void UploadButton_Click(object sender, EventArgs e)

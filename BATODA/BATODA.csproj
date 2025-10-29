@@ -53,6 +53,7 @@
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberValidator.cs" />
     <Compile Include="Modules\Member Module\Member Classes\SaveImageToFolder.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\SearchMember.cs" />
     <Compile Include="UI Displays\FontFamily.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
       <SubType>Form</SubType>
