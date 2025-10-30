@@ -18,6 +18,8 @@ namespace BATODA
             InitializeComponent();
 
             ConfirmationPanel.Hide();
+
+            // test lang pang push
         }
 
         private void TransferMembershipUForm_Load(object sender, EventArgs e)
