@@ -230,7 +230,7 @@ namespace BATODA
         {
             string SearchText = SearchTxt.Text.Trim();
             DataTable MemberTable = SearchMembers.Find(SearchText);
-
+            //DBUG LANG
             MembersDataGrid.Rows.Clear();
             foreach (DataRow row in MemberTable.Rows)
             {
