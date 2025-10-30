@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.Database.Members;
 using BATODA.Modules.Member_Module.Member_Classes;
 using BATODA.UI_Displays;
 
@@ -135,7 +136,8 @@ namespace BATODA
                     CurrentBrandLbl,
                     CurrentModelLbl,
                     CurrentBirthdateLbl,
-                    CurrentContactLbl);
+                    CurrentContactLbl,
+                    TransferBodyNumberLbl);
 
                 OwnerSearchGrid.Visible = false;
             }

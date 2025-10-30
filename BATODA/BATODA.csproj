@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Database\Members\GenerateNextBodyNumber.cs" />
+    <Compile Include="Helpers\Database\Members\LoadOwnerImage.cs" />
     <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
     <Compile Include="Helpers\DataGrids\DataGridColumns.cs" />
     <Compile Include="Helpers\DataGrids\DataGridCustom.cs" />

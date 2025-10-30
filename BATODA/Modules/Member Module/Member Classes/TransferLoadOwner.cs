@@ -17,7 +17,7 @@ namespace BATODA.Modules.Member_Module.Member_Classes
         public void LoadOwnerDetails(string bodyNumber,
         Label CurrentBodyLbl, Label CurrentFirstNameLbl, Label CurrentLastNameLbl, Label CurrentMiddleLbl,
         Label CurrentMemberTypeLbl, Label CurrentPlateLbl, Label CurrentChassisLbl, Label CurrentEngineLbl,
-        Label CurrentBrandLbl, Label CurrentModelLbl, Label CurrentBirthdateLbl, Label CurrentContactLbl)
+        Label CurrentBrandLbl, Label CurrentModelLbl, Label CurrentBirthdateLbl, Label CurrentContactLbl, Label TransferBodyNumberLbl)
         {
             try
             {
@@ -50,6 +50,7 @@ namespace BATODA.Modules.Member_Module.Member_Classes
                             CurrentModelLbl.Text = reader["TricycleModel"].ToString();
                             CurrentBirthdateLbl.Text = reader["Birthdate"].ToString();
                             CurrentContactLbl.Text = reader["ContactNumber"].ToString();
+                            TransferBodyNumberLbl.Text = "BATODA (" + Convert.ToInt32(reader["BodyNumber"]).ToString("D3") + ")";
                         }
                         else
                         {

@@ -69,7 +69,7 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.CurrentBodyNumberLbl = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.CurrentOwnerPb = new System.Windows.Forms.PictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label53 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -99,7 +99,7 @@
             this.TransferContactTxt = new System.Windows.Forms.TextBox();
             this.TransferBirthdatePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AddBodyNo = new System.Windows.Forms.Label();
+            this.TransferBodyNumberLbl = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
@@ -162,7 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.HolderPanel1.SuspendLayout();
             this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -715,7 +715,7 @@
             this.panel23.Controls.Add(this.panel25);
             this.panel23.Controls.Add(this.CurrentBodyNumberLbl);
             this.panel23.Controls.Add(this.label54);
-            this.panel23.Controls.Add(this.pictureBox4);
+            this.panel23.Controls.Add(this.CurrentOwnerPb);
             this.panel23.Controls.Add(this.panel16);
             this.panel23.Controls.Add(this.label53);
             this.panel23.Controls.Add(this.panel22);
@@ -762,16 +762,16 @@
             this.label54.TabIndex = 84;
             this.label54.Text = "Current Owner - ";
             // 
-            // pictureBox4
+            // CurrentOwnerPb
             // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.pictureBox4.Location = new System.Drawing.Point(198, 88);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(247, 232);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 85;
-            this.pictureBox4.TabStop = false;
+            this.CurrentOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrentOwnerPb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.CurrentOwnerPb.Location = new System.Drawing.Point(198, 88);
+            this.CurrentOwnerPb.Name = "CurrentOwnerPb";
+            this.CurrentOwnerPb.Size = new System.Drawing.Size(247, 232);
+            this.CurrentOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CurrentOwnerPb.TabIndex = 85;
+            this.CurrentOwnerPb.TabStop = false;
             // 
             // panel16
             // 
@@ -1101,21 +1101,21 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.AddBodyNo);
+            this.panel1.Controls.Add(this.TransferBodyNumberLbl);
             this.panel1.Location = new System.Drawing.Point(402, 252);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 50);
             this.panel1.TabIndex = 58;
             // 
-            // AddBodyNo
+            // TransferBodyNumberLbl
             // 
-            this.AddBodyNo.AutoSize = true;
-            this.AddBodyNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBodyNo.Location = new System.Drawing.Point(8, 11);
-            this.AddBodyNo.Name = "AddBodyNo";
-            this.AddBodyNo.Size = new System.Drawing.Size(227, 24);
-            this.AddBodyNo.TabIndex = 53;
-            this.AddBodyNo.Text = "Auto-generated body no.*";
+            this.TransferBodyNumberLbl.AutoSize = true;
+            this.TransferBodyNumberLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferBodyNumberLbl.Location = new System.Drawing.Point(8, 11);
+            this.TransferBodyNumberLbl.Name = "TransferBodyNumberLbl";
+            this.TransferBodyNumberLbl.Size = new System.Drawing.Size(227, 24);
+            this.TransferBodyNumberLbl.TabIndex = 53;
+            this.TransferBodyNumberLbl.Text = "Auto-generated body no.*";
             // 
             // panel7
             // 
@@ -1724,7 +1724,7 @@
             this.HolderPanel1.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel22.ResumeLayout(false);
@@ -1866,9 +1866,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label AddBodyNo;
+        private System.Windows.Forms.Label TransferBodyNumberLbl;
         private System.Windows.Forms.TextBox TransferContactTxt;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox CurrentOwnerPb;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Panel panel5;

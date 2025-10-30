@@ -30,6 +30,7 @@ namespace BATODA.Modules.MemberModule
         public int PenaltyLevel { get; set; }
         public int PenaltyCount { get; set; }
         public string ImagePath { get; set; }
+        public DateTime DateJoined { get; set; }
 
 
         public int SuspensionDaysRemaining
