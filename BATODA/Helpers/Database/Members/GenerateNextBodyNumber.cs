@@ -34,5 +34,29 @@ namespace BATODA.Helpers.Database.Members
                     "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static int GetNextNumber()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    string query = "SELECT ISNULL(MAX(BodyNumber), 0) + 1 FROM MemberInfo";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        int nextNumber = Convert.ToInt32(cmd.ExecuteScalar());
+                        return nextNumber;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error generating next Body Number:\n" + ex.Message,
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 1;
+            }
+        }
+
     }
 }

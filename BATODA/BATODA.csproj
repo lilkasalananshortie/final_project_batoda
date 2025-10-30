@@ -56,6 +56,8 @@
     <Compile Include="Modules\Member Module\Member Classes\MemberValidator.cs" />
     <Compile Include="Modules\Member Module\Member Classes\SaveImageToFolder.cs" />
     <Compile Include="Modules\Member Module\Member Classes\SearchMember.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\TransferLoadOwner.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\TransferSearchOwner.cs" />
     <Compile Include="UI Displays\FontFamily.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
       <SubType>Form</SubType>

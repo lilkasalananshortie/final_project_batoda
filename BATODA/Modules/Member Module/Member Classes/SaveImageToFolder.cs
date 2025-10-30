@@ -25,7 +25,7 @@ namespace BATODA.Modules.Member_Module.Member_Classes
 
                 // SAMPLE FORMAT: 600_September292025.jpg
                 // UNIQUE KAHIT MAY SAME BODY NO. NG PREVIOUS OWNER
-                string NewFileName = $"{bodyNumber}_{DateTime.Now:MMMMddyyyy}{Path.GetExtension(sourcePath)}";
+                string NewFileName = $"{bodyNumber.ToString("D3")}_{DateTime.Now:MMMMddyyyy}{Path.GetExtension(sourcePath)}";
                 string DestinationPath = Path.Combine(ImagesFolder, NewFileName);
                 MessageBox.Show($"Saving to: {DestinationPath}");
 

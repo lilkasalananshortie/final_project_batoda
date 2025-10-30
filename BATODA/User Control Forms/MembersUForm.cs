@@ -174,28 +174,26 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-                MemberModel NewMember = GetMemberFromForm();
+            int nextBodyNumber = GenerateNextBodyNumber.GetNextNumber(); // get next number
 
-                //if (!MemberValidator.ValidateMember(NewMember)) // STOP VALIDATION IF FALSE
-                //{
-                //    return;
-                //}
+            MemberModel NewMember = GetMemberFromForm();
+            NewMember.BodyNumber = nextBodyNumber;
 
-                if (PreviewImagePb.Image != null && !string.IsNullOrEmpty(UploadImageDialog.FileName))
-                {
-                    string savedPath = SaveImageToFolder.Save(UploadImageDialog.FileName, NewMember.BodyNumber);
-                    NewMember.ImagePath = savedPath; 
-                }
+            if (PreviewImagePb.Image != null && !string.IsNullOrEmpty(UploadImageDialog.FileName))
+            {
+                string savedPath = SaveImageToFolder.Save(UploadImageDialog.FileName, nextBodyNumber);
+                NewMember.ImagePath = savedPath;
+            }
 
             var MemberRepo = new MemberRepository();
-                MemberRepo.AddMember(NewMember);
-                ToastManager.Success("New Member Added Successfully!");
+            MemberRepo.AddMember(NewMember);
 
-                LoadMembersToGrid();
+            ToastManager.Success("New Member Added Successfully!");
+            LoadMembersToGrid();
 
-                AddMemberPanel.Visible = false;
-                AddMemberButton.Enabled = true;
-                SearchBtn.Enabled = true;
+            AddMemberPanel.Visible = false;
+            AddMemberButton.Enabled = true;
+            SearchBtn.Enabled = true;
         }
 
 
