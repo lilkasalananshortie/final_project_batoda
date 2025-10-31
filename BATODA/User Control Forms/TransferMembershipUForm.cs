@@ -171,6 +171,42 @@ namespace BATODA
 
         private void SavePanelButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var memberRepo = new MemberRepository();
+
+                // Create a MemberModel for the current owner (BodyNumber is key)
+                MemberModel updatedMember = new MemberModel
+                {
+                    BodyNumber = int.Parse(CurrentBodyNumberLbl.Text), // current member's BodyNumber
+                    MembershipType = TransferMemberTypeCmb.Text,
+                    LastName = TransferLastNameTxt.Text,
+                    FirstName = TransferFirstNameTxt.Text,
+                    MiddleInitial = TransferMiddleTxt.Text,
+                    Birthdate = TransferBirthdatePicker.Value,
+                    TricycleBrand = TransferBrandTxt.Text,
+                    TricycleModel = TransferModelTxt.Text,
+                    ContactNumber = TransferContactTxt.Text,
+                    ChassisNumber = TransferChassisTxt.Text,
+                    EngineNumber = TransferEngineTxt.Text,
+                    PlateNumber = TransferPlateTxt.Text,
+                    MemberStatus = "Active",
+
+                    // Reset fields after transfer
+                    PenaltyLevel = 1,
+                    PenaltyCount = 0,
+                    // If you want to reset DateJoined, you can add: DateJoined = DateTime.Now
+                    DateJoined = DateTime.Now
+                };
+
+                memberRepo.UpdateMember(updatedMember);
+
+                MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             ConfirmationTransferPanel.Hide();
         }
 

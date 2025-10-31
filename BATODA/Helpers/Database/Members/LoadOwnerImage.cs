@@ -16,11 +16,11 @@ namespace BATODA.Helpers.Database.Members
     {
         public static void FromMember(MemberModel owner, PictureBox pictureBox)
         {
-            string imagesFolder = Path.Combine(Application.StartupPath, "Modules", "Member Module", "Member Images");
+            string ImagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
             string bodyNumber = owner.BodyNumber.ToString("D3");
 
             // Look for any file that starts with bodyNumber_
-            string[] files = Directory.GetFiles(imagesFolder, $"{bodyNumber}_*.*");
+            string[] files = Directory.GetFiles(ImagesFolder, $"{bodyNumber}_*.*");
 
             if (files.Length > 0)
             {
@@ -28,7 +28,7 @@ namespace BATODA.Helpers.Database.Members
             }
             else
             {
-                string defaultImagePath = Path.Combine(imagesFolder, "USER_DEFAULT.jpg");
+                string defaultImagePath = Path.Combine(ImagesFolder, "USER_DEFAULT.jpg");
                 pictureBox.Image = File.Exists(defaultImagePath) ? Image.FromFile(defaultImagePath) : null;
             }
         }

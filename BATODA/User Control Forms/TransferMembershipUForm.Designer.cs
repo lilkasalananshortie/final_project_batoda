@@ -33,6 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
             this.ScrollablePanel = new System.Windows.Forms.Panel();
+            this.ConfirmationTransferPanel = new System.Windows.Forms.Panel();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -51,6 +58,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -59,12 +67,15 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.HolderPanel1 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.CurrentBirthdateLbl = new System.Windows.Forms.Label();
             this.CurrentBodyNumberLbl = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
+            this.CurrentOwnerPb = new System.Windows.Forms.PictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.CurrentMemberTypeLbl = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
@@ -109,6 +120,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.TransferBodyNumberLbl = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -131,6 +143,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.TransferPlateTxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.UploadPictureBox = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.TransferEngineTxt = new System.Windows.Forms.TextBox();
@@ -141,19 +154,9 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.TransferMemberTypeCmb = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ConfirmationTransferPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.CurrentOwnerPb = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.UploadPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.CancelPanelButton = new BATODA.ButtonStyle();
-            this.SavePanelButton = new BATODA.ButtonStyle();
+            this.FinalSaveTransferBtn = new BATODA.ButtonStyle();
             this.CancelConfirmation = new BATODA.ButtonStyle();
             this.ConfirmationButton = new BATODA.ButtonStyle();
             this.TransferBtn = new BATODA.ButtonStyle();
@@ -162,15 +165,19 @@
             this.TransferMembershipButton = new BATODA.ButtonStyle();
             this.TransferRecordsButton = new BATODA.ButtonStyle();
             this.ManageMembersButton = new BATODA.ButtonStyle();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.ScrollablePanel.SuspendLayout();
+            this.ConfirmationTransferPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.ConfirmationPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.HolderPanel1.SuspendLayout();
             this.panel23.SuspendLayout();
             this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -186,6 +193,7 @@
             this.panel12.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -193,17 +201,9 @@
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.ConfirmationTransferPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -251,6 +251,84 @@
             this.ScrollablePanel.Name = "ScrollablePanel";
             this.ScrollablePanel.Size = new System.Drawing.Size(1585, 1013);
             this.ScrollablePanel.TabIndex = 20;
+            // 
+            // ConfirmationTransferPanel
+            // 
+            this.ConfirmationTransferPanel.Controls.Add(this.label56);
+            this.ConfirmationTransferPanel.Controls.Add(this.label55);
+            this.ConfirmationTransferPanel.Controls.Add(this.label46);
+            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox6);
+            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox5);
+            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox4);
+            this.ConfirmationTransferPanel.Controls.Add(this.CancelPanelButton);
+            this.ConfirmationTransferPanel.Controls.Add(this.FinalSaveTransferBtn);
+            this.ConfirmationTransferPanel.Location = new System.Drawing.Point(314, 185);
+            this.ConfirmationTransferPanel.Name = "ConfirmationTransferPanel";
+            this.ConfirmationTransferPanel.Size = new System.Drawing.Size(913, 472);
+            this.ConfirmationTransferPanel.TabIndex = 87;
+            this.ConfirmationTransferPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ConfirmationTransferPanel_Paint);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(575, 340);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(165, 31);
+            this.label56.TabIndex = 87;
+            this.label56.Text = "placeholder";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(183, 339);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(165, 31);
+            this.label55.TabIndex = 86;
+            this.label55.Text = "placeholder";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(24, 32);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(513, 31);
+            this.label46.TabIndex = 85;
+            this.label46.Text = "Are you sure?? OR Confirm Changes. ";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::BATODA.Properties.Resources.black_transfer;
+            this.pictureBox6.Location = new System.Drawing.Point(392, 159);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(133, 121);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 51;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.pictureBox5.Location = new System.Drawing.Point(530, 105);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(247, 232);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 50;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.pictureBox4.Location = new System.Drawing.Point(139, 104);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(247, 232);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 49;
+            this.pictureBox4.TabStop = false;
             // 
             // ConfirmationPanel
             // 
@@ -456,6 +534,17 @@
             this.label16.TabIndex = 67;
             this.label16.Text = "Chassis Number :";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 316);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -535,6 +624,28 @@
             this.label27.Size = new System.Drawing.Size(128, 25);
             this.label27.TabIndex = 56;
             this.label27.Text = "First Name :";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Image = global::BATODA.Properties.Resources.transfer;
+            this.pictureBox3.Location = new System.Drawing.Point(39, 15);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(86, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(290, 31);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Transfer Membership";
             // 
             // HolderPanel1
             // 
@@ -618,6 +729,17 @@
             this.label54.Size = new System.Drawing.Size(231, 31);
             this.label54.TabIndex = 84;
             this.label54.Text = "Current Owner - ";
+            // 
+            // CurrentOwnerPb
+            // 
+            this.CurrentOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrentOwnerPb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.CurrentOwnerPb.Location = new System.Drawing.Point(198, 88);
+            this.CurrentOwnerPb.Name = "CurrentOwnerPb";
+            this.CurrentOwnerPb.Size = new System.Drawing.Size(247, 232);
+            this.CurrentOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CurrentOwnerPb.TabIndex = 85;
+            this.CurrentOwnerPb.TabStop = false;
             // 
             // panel16
             // 
@@ -1075,6 +1197,17 @@
             this.panel7.Size = new System.Drawing.Size(668, 38);
             this.panel7.TabIndex = 28;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
+            this.pictureBox2.Location = new System.Drawing.Point(635, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Size = new System.Drawing.Size(22, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
             // OwnerSearchTxt
             // 
             this.OwnerSearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1289,6 +1422,17 @@
             this.label11.TabIndex = 37;
             this.label11.Text = "Plate Number *";
             // 
+            // UploadPictureBox
+            // 
+            this.UploadPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UploadPictureBox.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.UploadPictureBox.Location = new System.Drawing.Point(130, 99);
+            this.UploadPictureBox.Name = "UploadPictureBox";
+            this.UploadPictureBox.Size = new System.Drawing.Size(247, 232);
+            this.UploadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UploadPictureBox.TabIndex = 48;
+            this.UploadPictureBox.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1387,120 +1531,6 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Reason For Transfer *";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 31);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Transfer Membership";
-            // 
-            // ConfirmationTransferPanel
-            // 
-            this.ConfirmationTransferPanel.Controls.Add(this.label56);
-            this.ConfirmationTransferPanel.Controls.Add(this.label55);
-            this.ConfirmationTransferPanel.Controls.Add(this.label46);
-            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox6);
-            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox5);
-            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox4);
-            this.ConfirmationTransferPanel.Controls.Add(this.CancelPanelButton);
-            this.ConfirmationTransferPanel.Controls.Add(this.SavePanelButton);
-            this.ConfirmationTransferPanel.Location = new System.Drawing.Point(314, 185);
-            this.ConfirmationTransferPanel.Name = "ConfirmationTransferPanel";
-            this.ConfirmationTransferPanel.Size = new System.Drawing.Size(913, 472);
-            this.ConfirmationTransferPanel.TabIndex = 87;
-            this.ConfirmationTransferPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ConfirmationTransferPanel_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 316);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::BATODA.Properties.Resources.black_transfer;
-            this.pictureBox6.Location = new System.Drawing.Point(392, 159);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(133, 121);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 51;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.pictureBox5.Location = new System.Drawing.Point(530, 105);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(247, 232);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 50;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.pictureBox4.Location = new System.Drawing.Point(139, 104);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(247, 232);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 49;
-            this.pictureBox4.TabStop = false;
-            // 
-            // CurrentOwnerPb
-            // 
-            this.CurrentOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CurrentOwnerPb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.CurrentOwnerPb.Location = new System.Drawing.Point(198, 88);
-            this.CurrentOwnerPb.Name = "CurrentOwnerPb";
-            this.CurrentOwnerPb.Size = new System.Drawing.Size(247, 232);
-            this.CurrentOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CurrentOwnerPb.TabIndex = 85;
-            this.CurrentOwnerPb.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox2.Location = new System.Drawing.Point(635, 1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Size = new System.Drawing.Size(22, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
-            // 
-            // UploadPictureBox
-            // 
-            this.UploadPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UploadPictureBox.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.UploadPictureBox.Location = new System.Drawing.Point(130, 99);
-            this.UploadPictureBox.Name = "UploadPictureBox";
-            this.UploadPictureBox.Size = new System.Drawing.Size(247, 232);
-            this.UploadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UploadPictureBox.TabIndex = 48;
-            this.UploadPictureBox.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Image = global::BATODA.Properties.Resources.transfer;
-            this.pictureBox3.Location = new System.Drawing.Point(39, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            // 
             // CancelPanelButton
             // 
             this.CancelPanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -1534,38 +1564,38 @@
             this.CancelPanelButton.UseVisualStyleBackColor = false;
             this.CancelPanelButton.Click += new System.EventHandler(this.CancelPanelButton_Click);
             // 
-            // SavePanelButton
+            // FinalSaveTransferBtn
             // 
-            this.SavePanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SavePanelButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SavePanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SavePanelButton.BorderRadius = 0;
-            this.SavePanelButton.BorderSize = 0;
-            this.SavePanelButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.SavePanelButton.FlatAppearance.BorderSize = 0;
-            this.SavePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SavePanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SavePanelButton.ForeColor = System.Drawing.Color.White;
-            this.SavePanelButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.SavePanelButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.SavePanelButton.ImageColor = System.Drawing.Color.White;
-            this.SavePanelButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SavePanelButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.SavePanelButton.IsToggled = false;
-            this.SavePanelButton.Location = new System.Drawing.Point(670, 402);
-            this.SavePanelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SavePanelButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SavePanelButton.Name = "SavePanelButton";
-            this.SavePanelButton.PaddingX = 0;
-            this.SavePanelButton.PaddingY = 0;
-            this.SavePanelButton.Size = new System.Drawing.Size(187, 45);
-            this.SavePanelButton.TabIndex = 32;
-            this.SavePanelButton.Text = "Save";
-            this.SavePanelButton.TextColor = System.Drawing.Color.White;
-            this.SavePanelButton.TextOffset = 5;
-            this.SavePanelButton.ToggleColor = System.Drawing.Color.Empty;
-            this.SavePanelButton.UseVisualStyleBackColor = false;
-            this.SavePanelButton.Click += new System.EventHandler(this.SavePanelButton_Click);
+            this.FinalSaveTransferBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.FinalSaveTransferBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.FinalSaveTransferBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.FinalSaveTransferBtn.BorderRadius = 0;
+            this.FinalSaveTransferBtn.BorderSize = 0;
+            this.FinalSaveTransferBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.FinalSaveTransferBtn.FlatAppearance.BorderSize = 0;
+            this.FinalSaveTransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinalSaveTransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinalSaveTransferBtn.ForeColor = System.Drawing.Color.White;
+            this.FinalSaveTransferBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.FinalSaveTransferBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.FinalSaveTransferBtn.ImageColor = System.Drawing.Color.White;
+            this.FinalSaveTransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.FinalSaveTransferBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.FinalSaveTransferBtn.IsToggled = false;
+            this.FinalSaveTransferBtn.Location = new System.Drawing.Point(670, 402);
+            this.FinalSaveTransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FinalSaveTransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.FinalSaveTransferBtn.Name = "FinalSaveTransferBtn";
+            this.FinalSaveTransferBtn.PaddingX = 0;
+            this.FinalSaveTransferBtn.PaddingY = 0;
+            this.FinalSaveTransferBtn.Size = new System.Drawing.Size(187, 45);
+            this.FinalSaveTransferBtn.TabIndex = 32;
+            this.FinalSaveTransferBtn.Text = "Save";
+            this.FinalSaveTransferBtn.TextColor = System.Drawing.Color.White;
+            this.FinalSaveTransferBtn.TextOffset = 5;
+            this.FinalSaveTransferBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.FinalSaveTransferBtn.UseVisualStyleBackColor = false;
+            this.FinalSaveTransferBtn.Click += new System.EventHandler(this.SavePanelButton_Click);
             // 
             // CancelConfirmation
             // 
@@ -1829,36 +1859,6 @@
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(24, 32);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(513, 31);
-            this.label46.TabIndex = 85;
-            this.label46.Text = "Are you sure?? OR Confirm Changes. ";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(183, 339);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(165, 31);
-            this.label55.TabIndex = 86;
-            this.label55.Text = "placeholder";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(575, 340);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(165, 31);
-            this.label56.TabIndex = 87;
-            this.label56.Text = "placeholder";
-            // 
             // TransferMembershipUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1876,13 +1876,21 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.ScrollablePanel.ResumeLayout(false);
             this.ScrollablePanel.PerformLayout();
+            this.ConfirmationTransferPanel.ResumeLayout(false);
+            this.ConfirmationTransferPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ConfirmationPanel.ResumeLayout(false);
             this.ConfirmationPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.HolderPanel1.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel22.ResumeLayout(false);
@@ -1912,6 +1920,7 @@
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1926,19 +1935,10 @@
             this.panel3.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel15.ResumeLayout(false);
-            this.ConfirmationTransferPanel.ResumeLayout(false);
-            this.ConfirmationTransferPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2078,7 +2078,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private ButtonStyle CancelPanelButton;
-        private ButtonStyle SavePanelButton;
+        private ButtonStyle FinalSaveTransferBtn;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label46;

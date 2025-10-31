@@ -16,7 +16,8 @@ namespace BATODA.Modules.Member_Module.Member_Classes
             { 
                 // PATH NG LALAGYAN NG PFP NG MGA MEMBS
                 string ProjectPath = Directory.GetParent(Application.StartupPath).Parent.FullName;
-                string ImagesFolder = Path.Combine(ProjectPath, "Modules", "Member Module", "Member Images");
+
+                string ImagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
 
                 if (!Directory.Exists(ImagesFolder))
                 {
