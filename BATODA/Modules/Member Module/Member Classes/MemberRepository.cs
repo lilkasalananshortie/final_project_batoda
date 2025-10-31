@@ -186,5 +186,41 @@ namespace BATODA.Modules.MemberModule
                 }
             }
         }
+
+        public MemberModel GetByBodyNumber(int bodyNumber)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    string query = "SELECT * FROM MemberInfo WHERE BodyNumber = @BodyNumber";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return new MemberModel
+                                {
+                                    BodyNumber = Convert.ToInt32(reader["BodyNumber"]),
+                                    DateJoined = Convert.ToDateTime(reader["DateJoined"])
+                                };
+
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error fetching member:\n" + ex.Message,
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return null;
+        }
     }
 }

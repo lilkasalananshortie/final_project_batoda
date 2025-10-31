@@ -21,21 +21,21 @@ namespace BATODA.Modules.Member_Module.Member_Classes
                 con.Open();
                 string query;
 
-                    query = @"SELECT * FROM MemberInfo 
+                query = @"SELECT * FROM MemberInfo 
                               WHERE RIGHT('000' + CAST(BodyNumber AS VARCHAR), 3) LIKE @search
                                OR FirstName LIKE @search
                                OR LastName LIKE @search
 
                             ";
 
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        if(!string.IsNullOrWhiteSpace(searchText))
-                        cmd.Parameters.AddWithValue("@search", "%" + searchText + "%");
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    if(!string.IsNullOrWhiteSpace(searchText))
+                    cmd.Parameters.AddWithValue("@search", "%" + searchText + "%");
 
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        da.Fill(MemberTable);
-                    }     
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(MemberTable);
+                }     
             }
 
             return MemberTable;

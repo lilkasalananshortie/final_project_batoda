@@ -58,5 +58,28 @@ namespace BATODA.Helpers.Database.Members
             }
         }
 
+        public static int GetCurrentNumber()
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    string query = "SELECT ISNULL(MAX(BodyNumber), 0) FROM MemberInfo";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        int currentNumber = Convert.ToInt32(cmd.ExecuteScalar());
+                        return currentNumber;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting current Body Number:\n" + ex.Message,
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+
     }
 }

@@ -16,33 +16,20 @@ namespace BATODA.Helpers.Database.Members
     {
         public static void FromMember(MemberModel owner, PictureBox pictureBox)
         {
-            // Folder where member images are stored
             string imagesFolder = @"C:\BSIT 1\GIT CLONES\BATODA\Modules\Member Module\Member Images\";
-
-            // Ensure BodyNumber is 3 digits
             string bodyNumber = owner.BodyNumber.ToString("D3");
 
-            // Format DateJoined as MonthName + Day + Year
-            string datePart = owner.DateJoined.ToString("MMMMdyyyy"); // e.g., September262004
+            // Look for any file that starts with bodyNumber_
+            string[] files = Directory.GetFiles(imagesFolder, $"{bodyNumber}_*.*");
 
-            // Build the image file name
-            string imageName = $"{bodyNumber}_{datePart}.jpg"; // change extension if needed
-
-            // Full path to the image
-            string imagePath = Path.Combine(imagesFolder, imageName);
-
-            // Load the image if it exists, otherwise load default
-            if (File.Exists(imagePath))
+            if (files.Length > 0)
             {
-                pictureBox.Image = Image.FromFile(imagePath);
+                pictureBox.Image = Image.FromFile(files[0]); // take the first match
             }
             else
             {
-                string defaultImagePath = @"C:\BSIT 1\GIT CLONES\BATODA\Modules\Member Module\Member Images\USER_DEFAULT.jpg";
-                if (File.Exists(defaultImagePath))
-                    pictureBox.Image = Image.FromFile(defaultImagePath);
-                else
-                    pictureBox.Image = null;
+                string defaultImagePath = Path.Combine(imagesFolder, "USER_DEFAULT.jpg");
+                pictureBox.Image = File.Exists(defaultImagePath) ? Image.FromFile(defaultImagePath) : null;
             }
         }
     }

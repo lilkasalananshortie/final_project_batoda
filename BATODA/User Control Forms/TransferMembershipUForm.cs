@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BATODA.Helpers.Database.Members;
 using BATODA.Modules.Member_Module.Member_Classes;
+using BATODA.Modules.MemberModule;
 using BATODA.UI_Displays;
 
 namespace BATODA
@@ -123,29 +124,45 @@ namespace BATODA
 
         private void OwnerSearchGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // CHECK IF VALID ROW
+            if (e.RowIndex < 0) return; // check for invalid row
+
+            // Get BodyNumber safely
+            string bodyNumberStr = OwnerSearchGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value?.ToString();
+            if (string.IsNullOrEmpty(bodyNumberStr)) return;
+
+            if (!int.TryParse(bodyNumberStr, out int bodyNumber)) return;
+
+            // --- Load member details into labels ---
+            TransferLoadOwner loader = new TransferLoadOwner();
+            loader.LoadOwnerDetails(bodyNumberStr,
+                CurrentBodyNumberLbl,
+                CurrentFirstNameLbl,
+                CurrentLastNameLbl,
+                CurrentMiddleLbl,
+                CurrentMemberTypeLbl,
+                CurrentPlateLbl,
+                CurrentChassisLbl,
+                CurrentEngineLbl,
+                CurrentBrandLbl,
+                CurrentModelLbl,
+                CurrentBirthdateLbl,
+                CurrentContactLbl,
+                TransferBodyNumberLbl);
+
+            MemberRepository memberRepo = new MemberRepository();
+            MemberModel owner = memberRepo.GetByBodyNumber(bodyNumber);
+
+            if (owner != null)
             {
-                string bodyNumber = OwnerSearchGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value.ToString();
-
-                TransferLoadOwner loader = new TransferLoadOwner();
-                loader.LoadOwnerDetails(bodyNumber,
-                    CurrentBodyNumberLbl,
-                    CurrentFirstNameLbl,
-                    CurrentLastNameLbl,
-                    CurrentMiddleLbl,
-                    CurrentMemberTypeLbl,
-                    CurrentPlateLbl,
-                    CurrentChassisLbl,
-                    CurrentEngineLbl,
-                    CurrentBrandLbl,
-                    CurrentModelLbl,
-                    CurrentBirthdateLbl,
-                    CurrentContactLbl,
-                    TransferBodyNumberLbl);
-
-                OwnerSearchGrid.Visible = false;
+                LoadOwnerImage.FromMember(owner, CurrentOwnerPb);
             }
+
+
+
+            // Hide search grid after selection
+            OwnerSearchGrid.Visible = false;
         }
+
 
         private void ConfirmationTransferPanel_Paint(object sender, PaintEventArgs e)
         {
