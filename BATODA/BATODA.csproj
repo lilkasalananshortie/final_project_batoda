@@ -106,6 +106,12 @@
     <Compile Include="UI Displays\ButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="User Control Forms\CalendarContainerUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\CalendarContainerUForm.Designer.cs">
+      <DependentUpon>CalendarContainerUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control Forms\CalendarUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="User Control Forms\DashboardUForm.Designer.cs">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control Forms\DaysUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\DaysUForm.Designer.cs">
+      <DependentUpon>DaysUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control Forms\FinanceUForm.cs">
       <SubType>UserControl</SubType>
@@ -223,11 +235,17 @@
     <EmbeddedResource Include="UI Displays\ButtonStyle.resx">
       <DependentUpon>ButtonStyle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\CalendarContainerUForm.resx">
+      <DependentUpon>CalendarContainerUForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\CalendarUForm.resx">
       <DependentUpon>CalendarUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\DashboardUForm.resx">
       <DependentUpon>DashboardUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\DaysUForm.resx">
+      <DependentUpon>DaysUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\FinanceUForm.resx">
       <DependentUpon>FinanceUForm.cs</DependentUpon>

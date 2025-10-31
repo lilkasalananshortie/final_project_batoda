@@ -46,14 +46,13 @@
             this.RegisteredVehiclesButton = new BATODA.ButtonStyle();
             this.AssistanceLogButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.CalendarBtn = new BATODA.ButtonStyle();
             this.SettingsButton = new BATODA.ButtonStyle();
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
             this.NotificationPanel.SuspendLayout();
             this.NavBarPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -230,7 +229,8 @@
             this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
             this.NavBarPanel.Controls.Add(this.AssistanceLogButton);
             this.NavBarPanel.Controls.Add(this.FinanceButton);
-            this.NavBarPanel.Controls.Add(this.panel2);
+            this.NavBarPanel.Controls.Add(this.CalendarBtn);
+            this.NavBarPanel.Controls.Add(this.SettingsButton);
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
@@ -400,13 +400,35 @@
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
-            // panel2
+            // CalendarBtn
             // 
-            this.panel2.Controls.Add(this.SettingsButton);
-            this.panel2.Location = new System.Drawing.Point(3, 566);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 609);
-            this.panel2.TabIndex = 14;
+            this.CalendarBtn.BackColor = System.Drawing.Color.White;
+            this.CalendarBtn.BackgroundColor = System.Drawing.Color.White;
+            this.CalendarBtn.BorderColor = System.Drawing.Color.Red;
+            this.CalendarBtn.BorderRadius = 0;
+            this.CalendarBtn.BorderSize = 0;
+            this.CalendarBtn.ButtonImage = global::BATODA.Properties.Resources.total_request;
+            this.CalendarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalendarBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.CalendarBtn.HoverBorderColor = System.Drawing.Color.Black;
+            this.CalendarBtn.HoverColor = System.Drawing.Color.Silver;
+            this.CalendarBtn.ImageColor = System.Drawing.Color.Black;
+            this.CalendarBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CalendarBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.CalendarBtn.IsToggled = false;
+            this.CalendarBtn.Location = new System.Drawing.Point(3, 566);
+            this.CalendarBtn.MouseDownColor = System.Drawing.Color.LightGray;
+            this.CalendarBtn.Name = "CalendarBtn";
+            this.CalendarBtn.PaddingX = 0;
+            this.CalendarBtn.PaddingY = 0;
+            this.CalendarBtn.Size = new System.Drawing.Size(300, 75);
+            this.CalendarBtn.TabIndex = 13;
+            this.CalendarBtn.Text = "Calendar";
+            this.CalendarBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.CalendarBtn.TextOffset = 20;
+            this.CalendarBtn.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CalendarBtn.UseVisualStyleBackColor = false;
+            this.CalendarBtn.Click += new System.EventHandler(this.CalendarBtn_Click);
             // 
             // SettingsButton
             // 
@@ -426,7 +448,7 @@
             this.SettingsButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.SettingsButton.ImageSize = new System.Drawing.Size(32, 32);
             this.SettingsButton.IsToggled = false;
-            this.SettingsButton.Location = new System.Drawing.Point(0, 405);
+            this.SettingsButton.Location = new System.Drawing.Point(3, 647);
             this.SettingsButton.MouseDownColor = System.Drawing.Color.LightGray;
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.PaddingX = 0;
@@ -473,7 +495,6 @@
             this.NotificationPanel.ResumeLayout(false);
             this.NotificationPanel.PerformLayout();
             this.NavBarPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -496,8 +517,8 @@
         private ButtonStyle NotificationButton;
         private ButtonStyle CalendarButton;
         private System.Windows.Forms.FlowLayoutPanel NavBarPanel;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel DisplayPanel;
         private ButtonStyle MembersMainButton;
+        private ButtonStyle CalendarBtn;
     }
 }

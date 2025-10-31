@@ -40,7 +40,8 @@ namespace BATODA
                  RegisteredVehiclesButton,
                  AssistanceLogButton,
                  FinanceButton,
-                 SettingsButton
+                 SettingsButton,
+                 CalendarBtn
             );
 
             DisplayClass.SetActive(HomeButton);
@@ -86,6 +87,13 @@ namespace BATODA
                     DisplayClass.ShowMain(new SettingsUForm());
                     TopPanelText.Text = "SETTINGS";
                     break;
+
+                case "Calendar":
+                    DisplayClass.SetActive(CalendarBtn);
+                    DisplayClass.ShowMain(new CalendarUForm());
+                    TopPanelText.Text = "CALENDAR";
+                    break;
+
             }
         }
         private void HomeButton_Click(object sender, EventArgs e)
@@ -121,6 +129,14 @@ namespace BATODA
             DisplayClass.ShowMain(new FinanceUForm());
             TopPanelText.Text = "FINANCE MANAGEMENT";
         }
+        private void CalendarBtn_Click(object sender, EventArgs e)
+        {
+            ActivateMainButton("Calendar");
+            DisplayClass.ShowMain(new CalendarUForm());
+            TopPanelText.Text = "CALENDAR";
+
+        }
+
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Settings");
@@ -137,9 +153,7 @@ namespace BATODA
 
         private void CalendarButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMini(new CalendarUForm());
-            CalendarXAccoutnContainerPanel.Visible = true; 
-            CalendarXAccoutnContainerPanel.BringToFront();
+            
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void NotificationButton_Click(object sender, EventArgs e)
@@ -160,5 +174,7 @@ namespace BATODA
         {
 
         }
+
+       
     }
 }
