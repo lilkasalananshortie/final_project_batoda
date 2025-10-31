@@ -127,15 +127,21 @@ namespace BATODA
             DisplayClass.ShowMain(new SettingsUForm());
             TopPanelText.Text = "SETTINGS";
         }
-
+        //THIS PART IS FOR CALENDAR AND ACCOUNT BUTTONS NEED PA AYUSIN LOGIC KAPAG TINOGLE BUTTON CLOSE OR MAY IN BUILT CLOSE BTN
         private void AccountButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMini(new AccountUForm());
-            CalendarXAccoutnContainerPanel.Visible = !CalendarXAccoutnContainerPanel.Visible;
-            if (CalendarXAccoutnContainerPanel.Visible)
-                CalendarXAccoutnContainerPanel.BringToFront();
+            CalendarXAccoutnContainerPanel.Visible = true; 
+            CalendarXAccoutnContainerPanel.BringToFront();
         }
 
+        private void CalendarButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMini(new CalendarUForm());
+            CalendarXAccoutnContainerPanel.Visible = true; 
+            CalendarXAccoutnContainerPanel.BringToFront();
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void NotificationButton_Click(object sender, EventArgs e)
         {
             NotificationPanel.Visible = !NotificationPanel.Visible;
@@ -143,13 +149,7 @@ namespace BATODA
                    NotificationPanel.BringToFront();
         }
 
-        private void CalendarButton_Click(object sender, EventArgs e)
-        {
-            DisplayClass.ShowMini(new CalendarUForm());
-            CalendarXAccoutnContainerPanel.Visible = !CalendarXAccoutnContainerPanel.Visible;
-            if (CalendarXAccoutnContainerPanel.Visible)
-                CalendarXAccoutnContainerPanel.BringToFront();
-        }
+       
 
         private void TopBarPanel_Paint(object sender, PaintEventArgs e)
         {

@@ -88,7 +88,7 @@
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBarPanel.Location = new System.Drawing.Point(300, 0);
             this.TopBarPanel.Name = "TopBarPanel";
-            this.TopBarPanel.Size = new System.Drawing.Size(1444, 90);
+            this.TopBarPanel.Size = new System.Drawing.Size(1526, 90);
             this.TopBarPanel.TabIndex = 3;
             this.TopBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopBarPanel_Paint);
             // 
@@ -216,9 +216,9 @@
             // 
             // CalendarXAccoutnContainerPanel
             // 
-            this.CalendarXAccoutnContainerPanel.Location = new System.Drawing.Point(672, 237);
+            this.CalendarXAccoutnContainerPanel.Location = new System.Drawing.Point(367, 111);
             this.CalendarXAccoutnContainerPanel.Name = "CalendarXAccoutnContainerPanel";
-            this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(903, 522);
+            this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(1433, 845);
             this.CalendarXAccoutnContainerPanel.TabIndex = 4;
             // 
             // NavBarPanel
@@ -234,7 +234,7 @@
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
             this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(300, 983);
+            this.NavBarPanel.Size = new System.Drawing.Size(300, 1000);
             this.NavBarPanel.TabIndex = 1;
             // 
             // HomeButton
@@ -454,7 +454,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1604, 1000);
+            this.ClientSize = new System.Drawing.Size(1826, 1000);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);

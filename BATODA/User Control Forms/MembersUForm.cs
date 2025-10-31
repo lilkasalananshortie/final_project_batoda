@@ -13,6 +13,7 @@ using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Member_Module.Member_Classes;
 using BATODA.Modules.MemberModule;
 using BATODA.UI_Displays;
+using BATODA.User_Control_Forms;
 
 namespace BATODA
 {
@@ -24,20 +25,27 @@ namespace BATODA
         {
             InitializeComponent();
 
-            DataGridCustom.ApplyCustomGrid(MembersDataGrid);
-
+            
+           
             //TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
         }
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
+
             DisplayClass.SetPlaceholder(SearchTxt, "Search Member");
             DisplayClass.SetPlaceholder(SortStatusCmb, "Status", "Active", "Inactive");
             DisplayClass.SetPlaceholder(SortMembertTypeCmb, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(SortOrderCmb, "Order By", "Ascending", "Descending");
+            DataGridCustom.ApplyCustomGrid(MembersDataGrid);
 
+            MembersDataGrid.AutoGenerateColumns = false;
             SetupGridColumns();
             LoadMembersToGrid();
+
+            DataGridCustom.AddActionButtons(MembersDataGrid);
+            DataGridCustom.ApplyCustomGrid(MembersDataGrid);
+            
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
@@ -267,6 +275,25 @@ namespace BATODA
         private void panel16_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MembersDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.RowIndex == MembersDataGrid.NewRowIndex) return;
+
+            DataGridView dgv = sender as DataGridView;
+            if (dgv == null) return;
+
+            if (dgv.Columns[e.ColumnIndex].Name == "Edit")
+            {
+                var id = dgv.Rows[e.RowIndex].Cells["BodyNumber"].Value?.ToString();
+                DisplayClass.CloseMiniAndMain();
+                DisplayClass.ShowMini(new MembersEditPanel());
+            }
+            else if (dgv.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                
+            }
         }
     }
 }

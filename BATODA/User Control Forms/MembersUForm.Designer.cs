@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SortMembertTypeCmb = new System.Windows.Forms.ComboBox();
@@ -101,10 +101,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.UploadImageDialog = new System.Windows.Forms.OpenFileDialog();
-            this.AddMemberBtn = new BATODA.ButtonStyle();
-            this.CancelButton = new BATODA.ButtonStyle();
-            this.UploadImageBtn = new BATODA.ButtonStyle();
-            this.ResetButton = new BATODA.ButtonStyle();
             this.TransferMembershipButton = new BATODA.ButtonStyle();
             this.TransferRecordsButton = new BATODA.ButtonStyle();
             this.ManageMembersButton = new BATODA.ButtonStyle();
@@ -112,6 +108,10 @@
             this.ClearButton = new BATODA.ButtonStyle();
             this.AddMemberButton = new BATODA.ButtonStyle();
             this.SearchBtn = new BATODA.ButtonStyle();
+            this.AddMemberBtn = new BATODA.ButtonStyle();
+            this.CancelButton = new BATODA.ButtonStyle();
+            this.UploadImageBtn = new BATODA.ButtonStyle();
+            this.ResetButton = new BATODA.ButtonStyle();
             ((System.ComponentModel.ISupportInitialize)(this.MembersDataGrid)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
@@ -205,14 +205,14 @@
             this.MembersDataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.MembersDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.MembersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.MembersDataGrid.EnableHeadersVisualStyles = false;
             this.MembersDataGrid.Location = new System.Drawing.Point(24, 134);
             this.MembersDataGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -222,6 +222,7 @@
             this.MembersDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.MembersDataGrid.Size = new System.Drawing.Size(1522, 531);
             this.MembersDataGrid.TabIndex = 16;
+            this.MembersDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MembersDataGrid_CellContentClick);
             // 
             // label5
             // 
@@ -940,140 +941,6 @@
             this.label21.TabIndex = 57;
             this.label21.Text = "Suspended";
             // 
-            // UploadImageDialog
-            // 
-            // 
-            // AddMemberBtn
-            // 
-            this.AddMemberBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddMemberBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddMemberBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddMemberBtn.BorderRadius = 0;
-            this.AddMemberBtn.BorderSize = 0;
-            this.AddMemberBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.AddMemberBtn.FlatAppearance.BorderSize = 0;
-            this.AddMemberBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMemberBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMemberBtn.ForeColor = System.Drawing.Color.White;
-            this.AddMemberBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.AddMemberBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.AddMemberBtn.ImageColor = System.Drawing.Color.White;
-            this.AddMemberBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.AddMemberBtn.ImageSize = new System.Drawing.Size(24, 24);
-            this.AddMemberBtn.IsToggled = false;
-            this.AddMemberBtn.Location = new System.Drawing.Point(1076, 710);
-            this.AddMemberBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddMemberBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddMemberBtn.Name = "AddMemberBtn";
-            this.AddMemberBtn.PaddingX = 0;
-            this.AddMemberBtn.PaddingY = 0;
-            this.AddMemberBtn.Size = new System.Drawing.Size(183, 45);
-            this.AddMemberBtn.TabIndex = 23;
-            this.AddMemberBtn.Text = "Save Record";
-            this.AddMemberBtn.TextColor = System.Drawing.Color.White;
-            this.AddMemberBtn.TextOffset = 5;
-            this.AddMemberBtn.ToggleColor = System.Drawing.Color.Empty;
-            this.AddMemberBtn.UseVisualStyleBackColor = false;
-            this.AddMemberBtn.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // CancelButton
-            // 
-            this.CancelButton.BackColor = System.Drawing.Color.White;
-            this.CancelButton.BackgroundColor = System.Drawing.Color.White;
-            this.CancelButton.BorderColor = System.Drawing.Color.Black;
-            this.CancelButton.BorderRadius = 0;
-            this.CancelButton.BorderSize = 1;
-            this.CancelButton.ButtonImage = global::BATODA.Properties.Resources.exit;
-            this.CancelButton.FlatAppearance.BorderSize = 0;
-            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelButton.ForeColor = System.Drawing.Color.Black;
-            this.CancelButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.CancelButton.HoverColor = System.Drawing.Color.Silver;
-            this.CancelButton.ImageColor = System.Drawing.Color.Black;
-            this.CancelButton.ImagePosition = new System.Drawing.Point(30, 0);
-            this.CancelButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CancelButton.IsToggled = false;
-            this.CancelButton.Location = new System.Drawing.Point(918, 710);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.PaddingX = 0;
-            this.CancelButton.PaddingY = 0;
-            this.CancelButton.Size = new System.Drawing.Size(148, 45);
-            this.CancelButton.TabIndex = 22;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.TextColor = System.Drawing.Color.Black;
-            this.CancelButton.TextOffset = 5;
-            this.CancelButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.CancelButton.UseVisualStyleBackColor = false;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // UploadImageBtn
-            // 
-            this.UploadImageBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadImageBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadImageBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadImageBtn.BorderRadius = 0;
-            this.UploadImageBtn.BorderSize = 0;
-            this.UploadImageBtn.ButtonImage = null;
-            this.UploadImageBtn.FlatAppearance.BorderSize = 0;
-            this.UploadImageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UploadImageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadImageBtn.ForeColor = System.Drawing.Color.White;
-            this.UploadImageBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.UploadImageBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.UploadImageBtn.ImageColor = System.Drawing.Color.White;
-            this.UploadImageBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.UploadImageBtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.UploadImageBtn.IsToggled = false;
-            this.UploadImageBtn.Location = new System.Drawing.Point(304, 53);
-            this.UploadImageBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UploadImageBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadImageBtn.Name = "UploadImageBtn";
-            this.UploadImageBtn.PaddingX = 0;
-            this.UploadImageBtn.PaddingY = 0;
-            this.UploadImageBtn.Size = new System.Drawing.Size(256, 37);
-            this.UploadImageBtn.TabIndex = 52;
-            this.UploadImageBtn.Text = "Upload Picture";
-            this.UploadImageBtn.TextColor = System.Drawing.Color.White;
-            this.UploadImageBtn.TextOffset = 5;
-            this.UploadImageBtn.ToggleColor = System.Drawing.Color.Empty;
-            this.UploadImageBtn.UseVisualStyleBackColor = false;
-            this.UploadImageBtn.Click += new System.EventHandler(this.UploadButton_Click);
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ResetButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ResetButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ResetButton.BorderRadius = 0;
-            this.ResetButton.BorderSize = 0;
-            this.ResetButton.ButtonImage = null;
-            this.ResetButton.FlatAppearance.BorderSize = 0;
-            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton.ForeColor = System.Drawing.Color.White;
-            this.ResetButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ResetButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ResetButton.ImageColor = System.Drawing.Color.White;
-            this.ResetButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ResetButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ResetButton.IsToggled = false;
-            this.ResetButton.Location = new System.Drawing.Point(304, 100);
-            this.ResetButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ResetButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.PaddingX = 0;
-            this.ResetButton.PaddingY = 0;
-            this.ResetButton.Size = new System.Drawing.Size(256, 37);
-            this.ResetButton.TabIndex = 50;
-            this.ResetButton.Text = "Reset";
-            this.ResetButton.TextColor = System.Drawing.Color.White;
-            this.ResetButton.TextOffset = 5;
-            this.ResetButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ResetButton.UseVisualStyleBackColor = false;
-            // 
             // TransferMembershipButton
             // 
             this.TransferMembershipButton.BackColor = System.Drawing.Color.White;
@@ -1305,19 +1172,150 @@
             this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.ApplySearchButton_Click);
             // 
+            // AddMemberBtn
+            // 
+            this.AddMemberBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddMemberBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddMemberBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddMemberBtn.BorderRadius = 0;
+            this.AddMemberBtn.BorderSize = 0;
+            this.AddMemberBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.AddMemberBtn.FlatAppearance.BorderSize = 0;
+            this.AddMemberBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddMemberBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMemberBtn.ForeColor = System.Drawing.Color.White;
+            this.AddMemberBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.AddMemberBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.AddMemberBtn.ImageColor = System.Drawing.Color.White;
+            this.AddMemberBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.AddMemberBtn.ImageSize = new System.Drawing.Size(24, 24);
+            this.AddMemberBtn.IsToggled = false;
+            this.AddMemberBtn.Location = new System.Drawing.Point(1076, 710);
+            this.AddMemberBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddMemberBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddMemberBtn.Name = "AddMemberBtn";
+            this.AddMemberBtn.PaddingX = 0;
+            this.AddMemberBtn.PaddingY = 0;
+            this.AddMemberBtn.Size = new System.Drawing.Size(183, 45);
+            this.AddMemberBtn.TabIndex = 23;
+            this.AddMemberBtn.Text = "Save Record";
+            this.AddMemberBtn.TextColor = System.Drawing.Color.White;
+            this.AddMemberBtn.TextOffset = 5;
+            this.AddMemberBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.AddMemberBtn.UseVisualStyleBackColor = false;
+            this.AddMemberBtn.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.White;
+            this.CancelButton.BackgroundColor = System.Drawing.Color.White;
+            this.CancelButton.BorderColor = System.Drawing.Color.Black;
+            this.CancelButton.BorderRadius = 0;
+            this.CancelButton.BorderSize = 1;
+            this.CancelButton.ButtonImage = global::BATODA.Properties.Resources.exit;
+            this.CancelButton.FlatAppearance.BorderSize = 0;
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.ForeColor = System.Drawing.Color.Black;
+            this.CancelButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.CancelButton.HoverColor = System.Drawing.Color.Silver;
+            this.CancelButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelButton.ImagePosition = new System.Drawing.Point(30, 0);
+            this.CancelButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CancelButton.IsToggled = false;
+            this.CancelButton.Location = new System.Drawing.Point(918, 710);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.PaddingX = 0;
+            this.CancelButton.PaddingY = 0;
+            this.CancelButton.Size = new System.Drawing.Size(148, 45);
+            this.CancelButton.TabIndex = 22;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.TextColor = System.Drawing.Color.Black;
+            this.CancelButton.TextOffset = 5;
+            this.CancelButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // UploadImageBtn
+            // 
+            this.UploadImageBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.BorderRadius = 0;
+            this.UploadImageBtn.BorderSize = 0;
+            this.UploadImageBtn.ButtonImage = null;
+            this.UploadImageBtn.FlatAppearance.BorderSize = 0;
+            this.UploadImageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UploadImageBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadImageBtn.ForeColor = System.Drawing.Color.White;
+            this.UploadImageBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.UploadImageBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.UploadImageBtn.ImageColor = System.Drawing.Color.White;
+            this.UploadImageBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.UploadImageBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.UploadImageBtn.IsToggled = false;
+            this.UploadImageBtn.Location = new System.Drawing.Point(304, 53);
+            this.UploadImageBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UploadImageBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadImageBtn.Name = "UploadImageBtn";
+            this.UploadImageBtn.PaddingX = 0;
+            this.UploadImageBtn.PaddingY = 0;
+            this.UploadImageBtn.Size = new System.Drawing.Size(256, 37);
+            this.UploadImageBtn.TabIndex = 52;
+            this.UploadImageBtn.Text = "Upload Picture";
+            this.UploadImageBtn.TextColor = System.Drawing.Color.White;
+            this.UploadImageBtn.TextOffset = 5;
+            this.UploadImageBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.UploadImageBtn.UseVisualStyleBackColor = false;
+            this.UploadImageBtn.Click += new System.EventHandler(this.UploadButton_Click);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResetButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResetButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResetButton.BorderRadius = 0;
+            this.ResetButton.BorderSize = 0;
+            this.ResetButton.ButtonImage = null;
+            this.ResetButton.FlatAppearance.BorderSize = 0;
+            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.ForeColor = System.Drawing.Color.White;
+            this.ResetButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ResetButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ResetButton.ImageColor = System.Drawing.Color.White;
+            this.ResetButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ResetButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ResetButton.IsToggled = false;
+            this.ResetButton.Location = new System.Drawing.Point(304, 100);
+            this.ResetButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ResetButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.PaddingX = 0;
+            this.ResetButton.PaddingY = 0;
+            this.ResetButton.Size = new System.Drawing.Size(256, 37);
+            this.ResetButton.TabIndex = 50;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.TextColor = System.Drawing.Color.White;
+            this.ResetButton.TextOffset = 5;
+            this.ResetButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ResetButton.UseVisualStyleBackColor = false;
+            // 
             // MembersUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.AddMemberPanel);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.MembersTopPanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.AddMemberPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MembersUForm";

@@ -142,6 +142,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control Forms\MembersEditPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\MembersEditPanel.Designer.cs">
+      <DependentUpon>MembersEditPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control Forms\MembershipRenewalUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\MembersEditPanel.resx">
+      <DependentUpon>MembersEditPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\MembershipRenewalUForm.resx">
       <DependentUpon>MembershipRenewalUForm.cs</DependentUpon>

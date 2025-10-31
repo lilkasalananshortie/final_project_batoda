@@ -10,9 +10,9 @@ namespace BATODA
     {
         private static Panel _mainPanel;
         private static Panel _miniPanel;
+        public static Panel CalendarXAccoutnContainerPanel;
 
-
-
+       
         public static readonly List<ButtonStyle> _buttons = new List<ButtonStyle>();
         public static readonly Color _defaultColor = Color.FromArgb(105, 100, 100);
         public static readonly Color _activeColor = Color.FromArgb(175, 40, 40);
@@ -149,16 +149,42 @@ namespace BATODA
             if (_miniPanel == null)
                 throw new InvalidOperationException("Mini display panel not set. Call SetMiniPanel first.");
 
-            uc.Dock = DockStyle.Fill;
-
-            _miniPanel.SuspendLayout();
-            _miniPanel.Visible = false;
-            _miniPanel.Controls.Clear();
+            uc.Dock = DockStyle.None;
+            uc.Top = (_miniPanel.Height - uc.Height);
+            uc.Left = (_miniPanel.Width - uc.Width);
             _miniPanel.Controls.Add(uc);
+            uc.BringToFront();
+
+
             _miniPanel.Visible = true;
-            _miniPanel.ResumeLayout();
+            _miniPanel.BringToFront();
+        }
+        public static void CloseMini(UserControl uc)
+        {
+            if (_miniPanel == null) return;
+
+            _miniPanel.Controls.Remove(uc);
+
+            foreach (Control ctrl in _miniPanel.Controls)
+                ctrl.Enabled = true;
+
+            _miniPanel.Visible = false;
         }
 
+        public static void CloseMiniAndMain()
+        {
+            if (_miniPanel != null)
+            {
+                _miniPanel.Controls.Clear();
+                _miniPanel.Visible = false;
+            }
+
+            if (_mainPanel != null)
+            {
+                _mainPanel.Controls.Clear();
+                _mainPanel.Visible = false;
+            }
+        }
         // ========= Button Hover + Toggle =========
         public static void SetButtonToggleColor(ButtonStyle btn, Color toggleColor, Color defaultColor, Color hoverColor)
         {
