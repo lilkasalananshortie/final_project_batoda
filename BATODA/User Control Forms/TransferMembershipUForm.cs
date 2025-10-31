@@ -175,10 +175,22 @@ namespace BATODA
             {
                 var memberRepo = new MemberRepository();
 
-                // Create a MemberModel for the current owner (BodyNumber is key)
+                // EXTRACT DIGIT ONLY FROM STRING
+                string digitsOnly = new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray());
+
+                if (string.IsNullOrEmpty(digitsOnly))
+                {
+                    MessageBox.Show("Invalid Body Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // RESET SINCE MAY FORMAT YUNG DISPLAY
+                // AYAW MAWALA SA NAUNANG VAR PERO NAGEERROR PAG TINANGGAL KAHIT USELESS
+                int bodyNumber = int.Parse(digitsOnly); 
+
                 MemberModel updatedMember = new MemberModel
                 {
-                    BodyNumber = int.Parse(CurrentBodyNumberLbl.Text), // current member's BodyNumber
+                    BodyNumber = bodyNumber,
                     MembershipType = TransferMemberTypeCmb.Text,
                     LastName = TransferLastNameTxt.Text,
                     FirstName = TransferFirstNameTxt.Text,
@@ -190,25 +202,25 @@ namespace BATODA
                     ChassisNumber = TransferChassisTxt.Text,
                     EngineNumber = TransferEngineTxt.Text,
                     PlateNumber = TransferPlateTxt.Text,
-                    MemberStatus = "Active",
-
-                    // Reset fields after transfer
-                    PenaltyLevel = 1,
-                    PenaltyCount = 0,
-                    // If you want to reset DateJoined, you can add: DateJoined = DateTime.Now
-                    DateJoined = DateTime.Now
+                    TaxBalance = 0,                // RESET TAX
+                    MemberStatus = "Active",       // ACTIVE GIVEN
+                    PenaltyLevel = 1,              
+                    DateJoined = DateTime.Now,                 
                 };
 
+                // Update member in database
                 memberRepo.UpdateMember(updatedMember);
 
                 MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ConfirmationTransferPanel.Hide();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            ConfirmationTransferPanel.Hide();
         }
+
+
 
         private void CancelPanelButton_Click(object sender, EventArgs e)
         {
