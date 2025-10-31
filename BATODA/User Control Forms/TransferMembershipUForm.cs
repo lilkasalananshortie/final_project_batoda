@@ -17,6 +17,8 @@ namespace BATODA
 {
     public partial class TransferMembershipUForm : UserControl
     {
+        private MemberModel owner;
+
         public TransferMembershipUForm()
         {
             InitializeComponent();
@@ -84,11 +86,31 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            // CURRENT OWNER
+            if (owner != null)
+            {
+                LoadOwnerImage.FromMember(owner, ConfirmCurrentImage);
+            }
+
+            // NEW OWNER (UPLOADED FROM BTN)
+            if (!string.IsNullOrEmpty(TransferUploadImage.FileName) && File.Exists(TransferUploadImage.FileName))
+            {
+                ConfirmNewImage.Image = Image.FromFile(TransferUploadImage.FileName);
+                ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
+            else if (NewOwnerPb.Image != null)
+            {
+                ConfirmNewImage.Image = NewOwnerPb.Image;
+                ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
             HolderPanel1.SendToBack();
             ConfirmationPanel.Show();
             ConfirmationTransferPanel.BringToFront();
             ConfirmationTransferPanel.Show();
         }
+
 
         private void HolderPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -124,15 +146,13 @@ namespace BATODA
 
         private void OwnerSearchGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return; // check for invalid row
+            if (e.RowIndex < 0) return;
 
-            // Get BodyNumber safely
             string bodyNumberStr = OwnerSearchGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value?.ToString();
             if (string.IsNullOrEmpty(bodyNumberStr)) return;
 
             if (!int.TryParse(bodyNumberStr, out int bodyNumber)) return;
 
-            // --- Load member details into labels ---
             TransferLoadOwner loader = new TransferLoadOwner();
             loader.LoadOwnerDetails(bodyNumberStr,
                 CurrentBodyNumberLbl,
@@ -150,16 +170,13 @@ namespace BATODA
                 TransferBodyNumberLbl);
 
             MemberRepository memberRepo = new MemberRepository();
-            MemberModel owner = memberRepo.GetByBodyNumber(bodyNumber);
+            owner = memberRepo.GetByBodyNumber(bodyNumber); // <-- assign to class field
 
             if (owner != null)
             {
                 LoadOwnerImage.FromMember(owner, CurrentOwnerPb);
             }
 
-
-
-            // Hide search grid after selection
             OwnerSearchGrid.Visible = false;
         }
 
@@ -175,7 +192,7 @@ namespace BATODA
             {
                 var memberRepo = new MemberRepository();
 
-                // EXTRACT DIGIT ONLY FROM STRING
+                // EXTRACT DIGITS 
                 string digitsOnly = new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray());
 
                 if (string.IsNullOrEmpty(digitsOnly))
@@ -184,9 +201,7 @@ namespace BATODA
                     return;
                 }
 
-                // RESET SINCE MAY FORMAT YUNG DISPLAY
-                // AYAW MAWALA SA NAUNANG VAR PERO NAGEERROR PAG TINANGGAL KAHIT USELESS
-                int bodyNumber = int.Parse(digitsOnly); 
+                int bodyNumber = int.Parse(digitsOnly);
 
                 MemberModel updatedMember = new MemberModel
                 {
@@ -202,13 +217,19 @@ namespace BATODA
                     ChassisNumber = TransferChassisTxt.Text,
                     EngineNumber = TransferEngineTxt.Text,
                     PlateNumber = TransferPlateTxt.Text,
-                    TaxBalance = 0,                // RESET TAX
-                    MemberStatus = "Active",       // ACTIVE GIVEN
-                    PenaltyLevel = 1,              
-                    DateJoined = DateTime.Now,                 
+                    TaxBalance = 0,
+                    MemberStatus = "Active",
+                    PenaltyLevel = 1,
+                    DateJoined = DateTime.Now
                 };
 
-                // Update member in database
+                if (NewOwnerPb.Image != null && !string.IsNullOrEmpty(TransferUploadImage.FileName))
+                {
+                    string savedPath = SaveImageToFolder.Save(TransferUploadImage.FileName, bodyNumber);
+                    updatedMember.ImagePath = savedPath;
+                }
+
+                // Update record
                 memberRepo.UpdateMember(updatedMember);
 
                 MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -222,9 +243,34 @@ namespace BATODA
 
 
 
+
         private void CancelPanelButton_Click(object sender, EventArgs e)
         {
             ConfirmationTransferPanel.Hide();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
+        {
+                    }
+
+        private void TransferUploadBtn_Click(object sender, EventArgs e)
+        {
+            TransferUploadImage.Title = "Select an Image";
+            TransferUploadImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (TransferUploadImage.ShowDialog() == DialogResult.OK)
+            {
+                NewOwnerPb.ImageLocation = TransferUploadImage.FileName;
+
+
+                NewOwnerPb.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
         }
     }
 }

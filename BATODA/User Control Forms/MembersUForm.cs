@@ -184,7 +184,7 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            int nextBodyNumber = GenerateNextBodyNumber.GetNextNumber(); // get next number
+            int nextBodyNumber = GenerateNextBodyNumber.GetNextNumber(); 
 
             MemberModel NewMember = GetMemberFromForm();
             NewMember.BodyNumber = nextBodyNumber;
@@ -250,7 +250,7 @@ namespace BATODA
 
             DataGridColumns.LoadMembersToGrid(MembersDataGrid, MemberTable);
 
-            // Show “No Results” panel
+            // Show No Results panel
             if (MemberTable.Rows.Count == 0)
             {
                 NoResultsPanel.BringToFront();
@@ -297,8 +297,6 @@ namespace BATODA
                 
             }
         }
-
-       
 
         private void MembersDataGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
