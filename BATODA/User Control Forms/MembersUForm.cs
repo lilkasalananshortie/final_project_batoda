@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -49,6 +50,7 @@ namespace BATODA
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
+            ViewMemberInfoPanel.Visible = false;
         }
 
         private void SetupGridColumns()
@@ -294,6 +296,25 @@ namespace BATODA
             {
                 
             }
+        }
+
+       
+
+        private void MembersDataGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ViewMemberInfoPanel.Visible = true;
+            ViewMemberInfoPanel.BringToFront();
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            ViewMemberInfoPanel.Visible = false;
+        }
+
+        private void GoToEditPanel_Click(object sender, EventArgs e)
+        {
+            DisplayClass.CloseMiniAndMain();
+            DisplayClass.ShowMini(new MembersEditPanel());
         }
     }
 }
