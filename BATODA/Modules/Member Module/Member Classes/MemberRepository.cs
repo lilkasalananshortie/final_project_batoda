@@ -141,13 +141,26 @@ namespace BATODA.Modules.MemberModule
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = @"UPDATE MemberInfo SET 
-                    MembershipType=@MembershipType, LastName=@LastName, FirstName=@FirstName, 
-                    MiddleInitial=@MiddleInitial, Birthdate=@Birthdate, TricycleBrand=@TricycleBrand, 
-                    TricycleModel=@TricycleModel, ContactNumber=@ContactNumber, ChassisNumber=@ChassisNumber, 
-                    EngineNumber=@EngineNumber, PlateNumber=@PlateNumber, TaxBalance=@TaxBalance, 
-                    MemberStatus=@MemberStatus, PenaltyLevel=@PenaltyLevel, SuspensionDays=@SuspensionDays, 
-                    DaysRemaining=@DaysRemaining
-                    WHERE BodyNumber=@BodyNumber";
+                MembershipType=@MembershipType,
+                LastName=@LastName,
+                FirstName=@FirstName,
+                MiddleInitial=@MiddleInitial,
+                Birthdate=@Birthdate,
+                TricycleBrand=@TricycleBrand,
+                TricycleModel=@TricycleModel,
+                ContactNumber=@ContactNumber,
+                ChassisNumber=@ChassisNumber,
+                EngineNumber=@EngineNumber,
+                PlateNumber=@PlateNumber,
+                TaxBalance=@TaxBalance,
+                MemberStatus=@MemberStatus,
+                PenaltyLevel=@PenaltyLevel,
+                SuspensionDays=@SuspensionDays,
+                DaysRemaining=@DaysRemaining,
+                DateJoined=@DateJoined
+            WHERE BodyNumber=@BodyNumber";
+
+
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -165,6 +178,12 @@ namespace BATODA.Modules.MemberModule
                     cmd.Parameters.AddWithValue("@PlateNumber", member.PlateNumber);
                     cmd.Parameters.AddWithValue("@TaxBalance", member.TaxBalance);
                     cmd.Parameters.AddWithValue("@MemberStatus", member.MemberStatus);
+                    cmd.Parameters.AddWithValue("@PenaltyLevel", member.PenaltyLevel);
+                    cmd.Parameters.AddWithValue("@SuspensionDays", 0);  // reset after transfer
+                    cmd.Parameters.AddWithValue("@DaysRemaining", 0);   // reset after transfer
+                    cmd.Parameters.AddWithValue("@DateJoined", member.DateJoined);
+
+
 
                     con.Open();
                     cmd.ExecuteNonQuery();
