@@ -213,6 +213,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_transfer {
+            get {
+                object obj = ResourceManager.GetObject("black_transfer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brand {
             get {
                 object obj = ResourceManager.GetObject("brand", resourceCulture);
@@ -676,6 +686,16 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap transfer {
             get {
                 object obj = ResourceManager.GetObject("transfer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transfer_black {
+            get {
+                object obj = ResourceManager.GetObject("transfer_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

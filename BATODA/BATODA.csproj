@@ -504,6 +504,8 @@
   <ItemGroup>
     <Content Include="DbConnectionGuide.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\black_transfer.png" />
+    <None Include="Resources\transfer_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modules\Member Module\Member Images\" />

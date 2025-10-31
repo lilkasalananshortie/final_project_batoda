@@ -32,9 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.TransferMembershipButton = new BATODA.ButtonStyle();
-            this.TransferRecordsButton = new BATODA.ButtonStyle();
-            this.ManageMembersButton = new BATODA.ButtonStyle();
             this.ScrollablePanel = new System.Windows.Forms.Panel();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
@@ -50,13 +47,10 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.PlaceholderFname = new System.Windows.Forms.Label();
-            this.CancelConfirmation = new BATODA.ButtonStyle();
-            this.ConfirmationButton = new BATODA.ButtonStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -67,32 +61,46 @@
             this.label27 = new System.Windows.Forms.Label();
             this.HolderPanel1 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.CurrentBirthdateLbl = new System.Windows.Forms.Label();
             this.CurrentBodyNumberLbl = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.CurrentOwnerPb = new System.Windows.Forms.PictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.CurrentMemberTypeLbl = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.CurrentFirstNameLbl = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.CurrentLastNameLbl = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.CurrentModelLbl = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.CurrentEngineLbl = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.CurrentMiddleLbl = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.CurrentPlateLbl = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.CurrentChassisLbl = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.CurrentContactLbl = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.CurrentBrandLbl = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.TransferBtn = new BATODA.ButtonStyle();
+            this.OwnerSearchGrid = new System.Windows.Forms.DataGridView();
+            this.BodyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -101,7 +109,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.TransferBodyNumberLbl = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -123,11 +130,8 @@
             this.TransferChassisTxt = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.TransferPlateTxt = new System.Windows.Forms.TextBox();
-            this.UploadButton = new BATODA.ButtonStyle();
             this.label11 = new System.Windows.Forms.Label();
-            this.UploadPictureBox = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.ClearButton = new BATODA.ButtonStyle();
             this.panel13 = new System.Windows.Forms.Panel();
             this.TransferEngineTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -137,32 +141,36 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.TransferMemberTypeCmb = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.CurrentFirstNameLbl = new System.Windows.Forms.Label();
-            this.CurrentLastNameLbl = new System.Windows.Forms.Label();
-            this.CurrentMiddleLbl = new System.Windows.Forms.Label();
-            this.CurrentMemberTypeLbl = new System.Windows.Forms.Label();
-            this.CurrentPlateLbl = new System.Windows.Forms.Label();
-            this.CurrentEngineLbl = new System.Windows.Forms.Label();
-            this.CurrentChassisLbl = new System.Windows.Forms.Label();
-            this.CurrentBrandLbl = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.CurrentBirthdateLbl = new System.Windows.Forms.Label();
-            this.CurrentModelLbl = new System.Windows.Forms.Label();
-            this.CurrentContactLbl = new System.Windows.Forms.Label();
-            this.OwnerSearchGrid = new System.Windows.Forms.DataGridView();
-            this.BodyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfirmationTransferPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.CurrentOwnerPb = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.UploadPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.CancelPanelButton = new BATODA.ButtonStyle();
+            this.SavePanelButton = new BATODA.ButtonStyle();
+            this.CancelConfirmation = new BATODA.ButtonStyle();
+            this.ConfirmationButton = new BATODA.ButtonStyle();
+            this.TransferBtn = new BATODA.ButtonStyle();
+            this.UploadButton = new BATODA.ButtonStyle();
+            this.ClearButton = new BATODA.ButtonStyle();
+            this.TransferMembershipButton = new BATODA.ButtonStyle();
+            this.TransferRecordsButton = new BATODA.ButtonStyle();
+            this.ManageMembersButton = new BATODA.ButtonStyle();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.ScrollablePanel.SuspendLayout();
             this.ConfirmationPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.HolderPanel1.SuspendLayout();
             this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).BeginInit();
+            this.panel25.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -174,10 +182,10 @@
             this.panel18.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -185,12 +193,17 @@
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.ConfirmationTransferPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -224,114 +237,16 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 19;
             // 
-            // TransferMembershipButton
-            // 
-            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.BorderRadius = 0;
-            this.TransferMembershipButton.BorderSize = 1;
-            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
-            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
-            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
-            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferMembershipButton.IsToggled = false;
-            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
-            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferMembershipButton.Name = "TransferMembershipButton";
-            this.TransferMembershipButton.PaddingX = 0;
-            this.TransferMembershipButton.PaddingY = 0;
-            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferMembershipButton.TabIndex = 21;
-            this.TransferMembershipButton.Text = "Transfer Membership";
-            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.TextOffset = 20;
-            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.UseVisualStyleBackColor = false;
-            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
-            // 
-            // TransferRecordsButton
-            // 
-            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.BorderRadius = 0;
-            this.TransferRecordsButton.BorderSize = 1;
-            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
-            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
-            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferRecordsButton.IsToggled = false;
-            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
-            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferRecordsButton.Name = "TransferRecordsButton";
-            this.TransferRecordsButton.PaddingX = 0;
-            this.TransferRecordsButton.PaddingY = 0;
-            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferRecordsButton.TabIndex = 20;
-            this.TransferRecordsButton.Text = "Transfer History";
-            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.TextOffset = 20;
-            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferRecordsButton.UseVisualStyleBackColor = false;
-            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
-            // 
-            // ManageMembersButton
-            // 
-            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.BorderRadius = 0;
-            this.ManageMembersButton.BorderSize = 1;
-            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
-            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
-            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
-            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ManageMembersButton.IsToggled = false;
-            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
-            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.ManageMembersButton.Name = "ManageMembersButton";
-            this.ManageMembersButton.PaddingX = 0;
-            this.ManageMembersButton.PaddingY = 0;
-            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
-            this.ManageMembersButton.TabIndex = 19;
-            this.ManageMembersButton.Text = "Manage Members";
-            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.TextOffset = 20;
-            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.ManageMembersButton.UseVisualStyleBackColor = false;
-            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
-            // 
             // ScrollablePanel
             // 
             this.ScrollablePanel.AutoScroll = true;
             this.ScrollablePanel.BackColor = System.Drawing.Color.White;
             this.ScrollablePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ScrollablePanel.Controls.Add(this.ConfirmationTransferPanel);
             this.ScrollablePanel.Controls.Add(this.ConfirmationPanel);
-            this.ScrollablePanel.Controls.Add(this.HolderPanel1);
             this.ScrollablePanel.Controls.Add(this.pictureBox3);
             this.ScrollablePanel.Controls.Add(this.label3);
+            this.ScrollablePanel.Controls.Add(this.HolderPanel1);
             this.ScrollablePanel.Location = new System.Drawing.Point(14, 85);
             this.ScrollablePanel.Name = "ScrollablePanel";
             this.ScrollablePanel.Size = new System.Drawing.Size(1585, 1013);
@@ -501,72 +416,6 @@
             this.PlaceholderFname.TabIndex = 72;
             this.PlaceholderFname.Text = "Placeholder";
             // 
-            // CancelConfirmation
-            // 
-            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderRadius = 0;
-            this.CancelConfirmation.BorderSize = 0;
-            this.CancelConfirmation.ButtonImage = null;
-            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
-            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
-            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
-            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
-            this.CancelConfirmation.IsToggled = false;
-            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
-            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.Name = "CancelConfirmation";
-            this.CancelConfirmation.PaddingX = 0;
-            this.CancelConfirmation.PaddingY = 0;
-            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
-            this.CancelConfirmation.TabIndex = 56;
-            this.CancelConfirmation.Text = "Exit";
-            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
-            this.CancelConfirmation.TextOffset = 5;
-            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
-            this.CancelConfirmation.UseVisualStyleBackColor = false;
-            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
-            // 
-            // ConfirmationButton
-            // 
-            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderRadius = 0;
-            this.ConfirmationButton.BorderSize = 0;
-            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
-            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
-            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
-            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
-            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ConfirmationButton.IsToggled = false;
-            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
-            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.Name = "ConfirmationButton";
-            this.ConfirmationButton.PaddingX = 0;
-            this.ConfirmationButton.PaddingY = 0;
-            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
-            this.ConfirmationButton.TabIndex = 71;
-            this.ConfirmationButton.Text = "Confrim Transfer";
-            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
-            this.ConfirmationButton.TextOffset = 5;
-            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ConfirmationButton.UseVisualStyleBackColor = false;
-            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -606,17 +455,6 @@
             this.label16.Size = new System.Drawing.Size(182, 25);
             this.label16.TabIndex = 67;
             this.label16.Text = "Chassis Number :";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 316);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
             // 
             // label18
             // 
@@ -742,6 +580,25 @@
             this.panel23.Size = new System.Drawing.Size(665, 878);
             this.panel23.TabIndex = 86;
             // 
+            // panel25
+            // 
+            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel25.Controls.Add(this.CurrentBirthdateLbl);
+            this.panel25.Location = new System.Drawing.Point(322, 670);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(316, 50);
+            this.panel25.TabIndex = 79;
+            // 
+            // CurrentBirthdateLbl
+            // 
+            this.CurrentBirthdateLbl.AutoSize = true;
+            this.CurrentBirthdateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBirthdateLbl.Location = new System.Drawing.Point(6, 11);
+            this.CurrentBirthdateLbl.Name = "CurrentBirthdateLbl";
+            this.CurrentBirthdateLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentBirthdateLbl.TabIndex = 64;
+            this.CurrentBirthdateLbl.Text = "Placeholder";
+            // 
             // CurrentBodyNumberLbl
             // 
             this.CurrentBodyNumberLbl.AutoSize = true;
@@ -762,17 +619,6 @@
             this.label54.TabIndex = 84;
             this.label54.Text = "Current Owner - ";
             // 
-            // CurrentOwnerPb
-            // 
-            this.CurrentOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CurrentOwnerPb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.CurrentOwnerPb.Location = new System.Drawing.Point(198, 88);
-            this.CurrentOwnerPb.Name = "CurrentOwnerPb";
-            this.CurrentOwnerPb.Size = new System.Drawing.Size(247, 232);
-            this.CurrentOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CurrentOwnerPb.TabIndex = 85;
-            this.CurrentOwnerPb.TabStop = false;
-            // 
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -781,6 +627,16 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(287, 50);
             this.panel16.TabIndex = 76;
+            // 
+            // CurrentMemberTypeLbl
+            // 
+            this.CurrentMemberTypeLbl.AutoSize = true;
+            this.CurrentMemberTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentMemberTypeLbl.Location = new System.Drawing.Point(3, 10);
+            this.CurrentMemberTypeLbl.Name = "CurrentMemberTypeLbl";
+            this.CurrentMemberTypeLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentMemberTypeLbl.TabIndex = 62;
+            this.CurrentMemberTypeLbl.Text = "Placeholder";
             // 
             // label53
             // 
@@ -801,6 +657,16 @@
             this.panel22.Size = new System.Drawing.Size(258, 50);
             this.panel22.TabIndex = 60;
             // 
+            // CurrentFirstNameLbl
+            // 
+            this.CurrentFirstNameLbl.AutoSize = true;
+            this.CurrentFirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentFirstNameLbl.Location = new System.Drawing.Point(3, 10);
+            this.CurrentFirstNameLbl.Name = "CurrentFirstNameLbl";
+            this.CurrentFirstNameLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentFirstNameLbl.TabIndex = 60;
+            this.CurrentFirstNameLbl.Text = "Placeholder";
+            // 
             // label42
             // 
             this.label42.AutoSize = true;
@@ -820,6 +686,16 @@
             this.panel21.Size = new System.Drawing.Size(262, 50);
             this.panel21.TabIndex = 62;
             // 
+            // CurrentLastNameLbl
+            // 
+            this.CurrentLastNameLbl.AutoSize = true;
+            this.CurrentLastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentLastNameLbl.Location = new System.Drawing.Point(9, 10);
+            this.CurrentLastNameLbl.Name = "CurrentLastNameLbl";
+            this.CurrentLastNameLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentLastNameLbl.TabIndex = 61;
+            this.CurrentLastNameLbl.Text = "Placeholder";
+            // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -828,6 +704,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(287, 50);
             this.panel5.TabIndex = 75;
+            // 
+            // CurrentModelLbl
+            // 
+            this.CurrentModelLbl.AutoSize = true;
+            this.CurrentModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentModelLbl.Location = new System.Drawing.Point(3, 11);
+            this.CurrentModelLbl.Name = "CurrentModelLbl";
+            this.CurrentModelLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentModelLbl.TabIndex = 66;
+            this.CurrentModelLbl.Text = "Placeholder";
             // 
             // label52
             // 
@@ -868,6 +754,16 @@
             this.panel6.Size = new System.Drawing.Size(316, 50);
             this.panel6.TabIndex = 78;
             // 
+            // CurrentEngineLbl
+            // 
+            this.CurrentEngineLbl.AutoSize = true;
+            this.CurrentEngineLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentEngineLbl.Location = new System.Drawing.Point(6, 11);
+            this.CurrentEngineLbl.Name = "CurrentEngineLbl";
+            this.CurrentEngineLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentEngineLbl.TabIndex = 64;
+            this.CurrentEngineLbl.Text = "Placeholder";
+            // 
             // panel20
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -876,6 +772,16 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(77, 50);
             this.panel20.TabIndex = 64;
+            // 
+            // CurrentMiddleLbl
+            // 
+            this.CurrentMiddleLbl.AutoSize = true;
+            this.CurrentMiddleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentMiddleLbl.Location = new System.Drawing.Point(5, 10);
+            this.CurrentMiddleLbl.Name = "CurrentMiddleLbl";
+            this.CurrentMiddleLbl.Size = new System.Drawing.Size(41, 25);
+            this.CurrentMiddleLbl.TabIndex = 62;
+            this.CurrentMiddleLbl.Text = "PC";
             // 
             // label44
             // 
@@ -896,6 +802,16 @@
             this.panel19.Size = new System.Drawing.Size(316, 50);
             this.panel19.TabIndex = 66;
             // 
+            // CurrentPlateLbl
+            // 
+            this.CurrentPlateLbl.AutoSize = true;
+            this.CurrentPlateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPlateLbl.Location = new System.Drawing.Point(3, 10);
+            this.CurrentPlateLbl.Name = "CurrentPlateLbl";
+            this.CurrentPlateLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentPlateLbl.TabIndex = 63;
+            this.CurrentPlateLbl.Text = "Placeholder";
+            // 
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -904,6 +820,16 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(287, 50);
             this.panel14.TabIndex = 80;
+            // 
+            // CurrentChassisLbl
+            // 
+            this.CurrentChassisLbl.AutoSize = true;
+            this.CurrentChassisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentChassisLbl.Location = new System.Drawing.Point(3, 11);
+            this.CurrentChassisLbl.Name = "CurrentChassisLbl";
+            this.CurrentChassisLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentChassisLbl.TabIndex = 65;
+            this.CurrentChassisLbl.Text = "Placeholder";
             // 
             // label50
             // 
@@ -934,6 +860,16 @@
             this.panel18.Size = new System.Drawing.Size(316, 50);
             this.panel18.TabIndex = 70;
             // 
+            // CurrentContactLbl
+            // 
+            this.CurrentContactLbl.AutoSize = true;
+            this.CurrentContactLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentContactLbl.Location = new System.Drawing.Point(9, 11);
+            this.CurrentContactLbl.Name = "CurrentContactLbl";
+            this.CurrentContactLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentContactLbl.TabIndex = 65;
+            this.CurrentContactLbl.Text = "Placeholder";
+            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -962,6 +898,16 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(287, 50);
             this.panel17.TabIndex = 72;
+            // 
+            // CurrentBrandLbl
+            // 
+            this.CurrentBrandLbl.AutoSize = true;
+            this.CurrentBrandLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBrandLbl.Location = new System.Drawing.Point(3, 12);
+            this.CurrentBrandLbl.Name = "CurrentBrandLbl";
+            this.CurrentBrandLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentBrandLbl.TabIndex = 65;
+            this.CurrentBrandLbl.Text = "Placeholder";
             // 
             // label48
             // 
@@ -1015,38 +961,40 @@
             this.panel24.TabIndex = 87;
             this.panel24.Click += new System.EventHandler(this.panel24_Click);
             // 
-            // TransferBtn
+            // OwnerSearchGrid
             // 
-            this.TransferBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.BorderRadius = 0;
-            this.TransferBtn.BorderSize = 0;
-            this.TransferBtn.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
-            this.TransferBtn.FlatAppearance.BorderSize = 0;
-            this.TransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferBtn.ForeColor = System.Drawing.Color.White;
-            this.TransferBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.TransferBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.TransferBtn.ImageColor = System.Drawing.Color.White;
-            this.TransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.TransferBtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferBtn.IsToggled = false;
-            this.TransferBtn.Location = new System.Drawing.Point(503, 810);
-            this.TransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.Name = "TransferBtn";
-            this.TransferBtn.PaddingX = 0;
-            this.TransferBtn.PaddingY = 0;
-            this.TransferBtn.Size = new System.Drawing.Size(255, 49);
-            this.TransferBtn.TabIndex = 31;
-            this.TransferBtn.Text = "Transfer Membership";
-            this.TransferBtn.TextColor = System.Drawing.Color.White;
-            this.TransferBtn.TextOffset = 5;
-            this.TransferBtn.ToggleColor = System.Drawing.Color.Empty;
-            this.TransferBtn.UseVisualStyleBackColor = false;
-            this.TransferBtn.Click += new System.EventHandler(this.SaveButton_Click);
+            this.OwnerSearchGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OwnerSearchGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.OwnerSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OwnerSearchGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BodyNumber,
+            this.FirstName,
+            this.LastName});
+            this.OwnerSearchGrid.Location = new System.Drawing.Point(70, 77);
+            this.OwnerSearchGrid.Name = "OwnerSearchGrid";
+            this.OwnerSearchGrid.RowHeadersVisible = false;
+            this.OwnerSearchGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.OwnerSearchGrid.Size = new System.Drawing.Size(668, 107);
+            this.OwnerSearchGrid.TabIndex = 60;
+            this.OwnerSearchGrid.Visible = false;
+            this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick);
+            this.OwnerSearchGrid.Click += new System.EventHandler(this.OwnerSearchGrid_Click);
+            this.OwnerSearchGrid.Leave += new System.EventHandler(this.OwnerSearchGrid_Leave);
+            // 
+            // BodyNumber
+            // 
+            this.BodyNumber.HeaderText = "Body No.";
+            this.BodyNumber.Name = "BodyNumber";
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
             // 
             // label7
             // 
@@ -1126,17 +1074,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(668, 38);
             this.panel7.TabIndex = 28;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox2.Location = new System.Drawing.Point(635, 1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Size = new System.Drawing.Size(22, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
             // 
             // OwnerSearchTxt
             // 
@@ -1342,38 +1279,6 @@
             this.TransferPlateTxt.Size = new System.Drawing.Size(245, 24);
             this.TransferPlateTxt.TabIndex = 42;
             // 
-            // UploadButton
-            // 
-            this.UploadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.BorderRadius = 0;
-            this.UploadButton.BorderSize = 0;
-            this.UploadButton.ButtonImage = null;
-            this.UploadButton.FlatAppearance.BorderSize = 0;
-            this.UploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UploadButton.ForeColor = System.Drawing.Color.White;
-            this.UploadButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.UploadButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.UploadButton.ImageColor = System.Drawing.Color.White;
-            this.UploadButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.UploadButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.UploadButton.IsToggled = false;
-            this.UploadButton.Location = new System.Drawing.Point(402, 123);
-            this.UploadButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UploadButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.UploadButton.Name = "UploadButton";
-            this.UploadButton.PaddingX = 0;
-            this.UploadButton.PaddingY = 0;
-            this.UploadButton.Size = new System.Drawing.Size(300, 37);
-            this.UploadButton.TabIndex = 49;
-            this.UploadButton.Text = "Upload Picture";
-            this.UploadButton.TextColor = System.Drawing.Color.White;
-            this.UploadButton.TextOffset = 5;
-            this.UploadButton.ToggleColor = System.Drawing.Color.Empty;
-            this.UploadButton.UseVisualStyleBackColor = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1384,17 +1289,6 @@
             this.label11.TabIndex = 37;
             this.label11.Text = "Plate Number *";
             // 
-            // UploadPictureBox
-            // 
-            this.UploadPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UploadPictureBox.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.UploadPictureBox.Location = new System.Drawing.Point(130, 99);
-            this.UploadPictureBox.Name = "UploadPictureBox";
-            this.UploadPictureBox.Size = new System.Drawing.Size(247, 232);
-            this.UploadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.UploadPictureBox.TabIndex = 48;
-            this.UploadPictureBox.TabStop = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1404,38 +1298,6 @@
             this.label12.Size = new System.Drawing.Size(181, 25);
             this.label12.TabIndex = 39;
             this.label12.Text = "Contact Number *";
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderRadius = 0;
-            this.ClearButton.BorderSize = 0;
-            this.ClearButton.ButtonImage = null;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.ImageColor = System.Drawing.Color.White;
-            this.ClearButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ClearButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(402, 168);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.PaddingX = 0;
-            this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(300, 37);
-            this.ClearButton.TabIndex = 46;
-            this.ClearButton.Text = "Reset";
-            this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextOffset = 5;
-            this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ClearButton.UseVisualStyleBackColor = false;
             // 
             // panel13
             // 
@@ -1525,6 +1387,108 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Reason For Transfer *";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(86, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(290, 31);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Transfer Membership";
+            // 
+            // ConfirmationTransferPanel
+            // 
+            this.ConfirmationTransferPanel.Controls.Add(this.label56);
+            this.ConfirmationTransferPanel.Controls.Add(this.label55);
+            this.ConfirmationTransferPanel.Controls.Add(this.label46);
+            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox6);
+            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox5);
+            this.ConfirmationTransferPanel.Controls.Add(this.pictureBox4);
+            this.ConfirmationTransferPanel.Controls.Add(this.CancelPanelButton);
+            this.ConfirmationTransferPanel.Controls.Add(this.SavePanelButton);
+            this.ConfirmationTransferPanel.Location = new System.Drawing.Point(314, 185);
+            this.ConfirmationTransferPanel.Name = "ConfirmationTransferPanel";
+            this.ConfirmationTransferPanel.Size = new System.Drawing.Size(913, 472);
+            this.ConfirmationTransferPanel.TabIndex = 87;
+            this.ConfirmationTransferPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ConfirmationTransferPanel_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 316);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::BATODA.Properties.Resources.black_transfer;
+            this.pictureBox6.Location = new System.Drawing.Point(392, 159);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(133, 121);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 51;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.pictureBox5.Location = new System.Drawing.Point(530, 105);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(247, 232);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 50;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.pictureBox4.Location = new System.Drawing.Point(139, 104);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(247, 232);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 49;
+            this.pictureBox4.TabStop = false;
+            // 
+            // CurrentOwnerPb
+            // 
+            this.CurrentOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrentOwnerPb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.CurrentOwnerPb.Location = new System.Drawing.Point(198, 88);
+            this.CurrentOwnerPb.Name = "CurrentOwnerPb";
+            this.CurrentOwnerPb.Size = new System.Drawing.Size(247, 232);
+            this.CurrentOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CurrentOwnerPb.TabIndex = 85;
+            this.CurrentOwnerPb.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
+            this.pictureBox2.Location = new System.Drawing.Point(635, 1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Size = new System.Drawing.Size(22, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
+            // UploadPictureBox
+            // 
+            this.UploadPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UploadPictureBox.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.UploadPictureBox.Location = new System.Drawing.Point(130, 99);
+            this.UploadPictureBox.Name = "UploadPictureBox";
+            this.UploadPictureBox.Size = new System.Drawing.Size(247, 232);
+            this.UploadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UploadPictureBox.TabIndex = 48;
+            this.UploadPictureBox.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
@@ -1537,169 +1501,363 @@
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
             // 
-            // label3
+            // CancelPanelButton
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 31);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Transfer Membership";
+            this.CancelPanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.BorderRadius = 0;
+            this.CancelPanelButton.BorderSize = 0;
+            this.CancelPanelButton.ButtonImage = global::BATODA.Properties.Resources.delete;
+            this.CancelPanelButton.FlatAppearance.BorderSize = 0;
+            this.CancelPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelPanelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelPanelButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelPanelButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelPanelButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelPanelButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CancelPanelButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.CancelPanelButton.IsToggled = false;
+            this.CancelPanelButton.Location = new System.Drawing.Point(477, 402);
+            this.CancelPanelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelPanelButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.Name = "CancelPanelButton";
+            this.CancelPanelButton.PaddingX = 0;
+            this.CancelPanelButton.PaddingY = 0;
+            this.CancelPanelButton.Size = new System.Drawing.Size(187, 45);
+            this.CancelPanelButton.TabIndex = 33;
+            this.CancelPanelButton.Text = "Cancel";
+            this.CancelPanelButton.TextColor = System.Drawing.Color.White;
+            this.CancelPanelButton.TextOffset = 5;
+            this.CancelPanelButton.ToggleColor = System.Drawing.Color.Empty;
+            this.CancelPanelButton.UseVisualStyleBackColor = false;
+            this.CancelPanelButton.Click += new System.EventHandler(this.CancelPanelButton_Click);
             // 
-            // CurrentFirstNameLbl
+            // SavePanelButton
             // 
-            this.CurrentFirstNameLbl.AutoSize = true;
-            this.CurrentFirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentFirstNameLbl.Location = new System.Drawing.Point(3, 10);
-            this.CurrentFirstNameLbl.Name = "CurrentFirstNameLbl";
-            this.CurrentFirstNameLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentFirstNameLbl.TabIndex = 60;
-            this.CurrentFirstNameLbl.Text = "Placeholder";
+            this.SavePanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SavePanelButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SavePanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SavePanelButton.BorderRadius = 0;
+            this.SavePanelButton.BorderSize = 0;
+            this.SavePanelButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.SavePanelButton.FlatAppearance.BorderSize = 0;
+            this.SavePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SavePanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SavePanelButton.ForeColor = System.Drawing.Color.White;
+            this.SavePanelButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SavePanelButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.SavePanelButton.ImageColor = System.Drawing.Color.White;
+            this.SavePanelButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SavePanelButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SavePanelButton.IsToggled = false;
+            this.SavePanelButton.Location = new System.Drawing.Point(670, 402);
+            this.SavePanelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SavePanelButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SavePanelButton.Name = "SavePanelButton";
+            this.SavePanelButton.PaddingX = 0;
+            this.SavePanelButton.PaddingY = 0;
+            this.SavePanelButton.Size = new System.Drawing.Size(187, 45);
+            this.SavePanelButton.TabIndex = 32;
+            this.SavePanelButton.Text = "Save";
+            this.SavePanelButton.TextColor = System.Drawing.Color.White;
+            this.SavePanelButton.TextOffset = 5;
+            this.SavePanelButton.ToggleColor = System.Drawing.Color.Empty;
+            this.SavePanelButton.UseVisualStyleBackColor = false;
+            this.SavePanelButton.Click += new System.EventHandler(this.SavePanelButton_Click);
             // 
-            // CurrentLastNameLbl
+            // CancelConfirmation
             // 
-            this.CurrentLastNameLbl.AutoSize = true;
-            this.CurrentLastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentLastNameLbl.Location = new System.Drawing.Point(9, 10);
-            this.CurrentLastNameLbl.Name = "CurrentLastNameLbl";
-            this.CurrentLastNameLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentLastNameLbl.TabIndex = 61;
-            this.CurrentLastNameLbl.Text = "Placeholder";
+            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderRadius = 0;
+            this.CancelConfirmation.BorderSize = 0;
+            this.CancelConfirmation.ButtonImage = null;
+            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
+            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
+            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
+            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
+            this.CancelConfirmation.IsToggled = false;
+            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
+            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.Name = "CancelConfirmation";
+            this.CancelConfirmation.PaddingX = 0;
+            this.CancelConfirmation.PaddingY = 0;
+            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
+            this.CancelConfirmation.TabIndex = 56;
+            this.CancelConfirmation.Text = "Exit";
+            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
+            this.CancelConfirmation.TextOffset = 5;
+            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
+            this.CancelConfirmation.UseVisualStyleBackColor = false;
+            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
             // 
-            // CurrentMiddleLbl
+            // ConfirmationButton
             // 
-            this.CurrentMiddleLbl.AutoSize = true;
-            this.CurrentMiddleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentMiddleLbl.Location = new System.Drawing.Point(5, 10);
-            this.CurrentMiddleLbl.Name = "CurrentMiddleLbl";
-            this.CurrentMiddleLbl.Size = new System.Drawing.Size(41, 25);
-            this.CurrentMiddleLbl.TabIndex = 62;
-            this.CurrentMiddleLbl.Text = "PC";
+            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderRadius = 0;
+            this.ConfirmationButton.BorderSize = 0;
+            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
+            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
+            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
+            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
+            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ConfirmationButton.IsToggled = false;
+            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
+            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.Name = "ConfirmationButton";
+            this.ConfirmationButton.PaddingX = 0;
+            this.ConfirmationButton.PaddingY = 0;
+            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
+            this.ConfirmationButton.TabIndex = 71;
+            this.ConfirmationButton.Text = "Confrim Transfer";
+            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
+            this.ConfirmationButton.TextOffset = 5;
+            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ConfirmationButton.UseVisualStyleBackColor = false;
+            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
             // 
-            // CurrentMemberTypeLbl
+            // TransferBtn
             // 
-            this.CurrentMemberTypeLbl.AutoSize = true;
-            this.CurrentMemberTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentMemberTypeLbl.Location = new System.Drawing.Point(3, 10);
-            this.CurrentMemberTypeLbl.Name = "CurrentMemberTypeLbl";
-            this.CurrentMemberTypeLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentMemberTypeLbl.TabIndex = 62;
-            this.CurrentMemberTypeLbl.Text = "Placeholder";
+            this.TransferBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.BorderRadius = 0;
+            this.TransferBtn.BorderSize = 0;
+            this.TransferBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.TransferBtn.FlatAppearance.BorderSize = 0;
+            this.TransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferBtn.ForeColor = System.Drawing.Color.White;
+            this.TransferBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.TransferBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.TransferBtn.ImageColor = System.Drawing.Color.White;
+            this.TransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.TransferBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferBtn.IsToggled = false;
+            this.TransferBtn.Location = new System.Drawing.Point(503, 810);
+            this.TransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.Name = "TransferBtn";
+            this.TransferBtn.PaddingX = 0;
+            this.TransferBtn.PaddingY = 0;
+            this.TransferBtn.Size = new System.Drawing.Size(255, 49);
+            this.TransferBtn.TabIndex = 31;
+            this.TransferBtn.Text = "Transfer Membership";
+            this.TransferBtn.TextColor = System.Drawing.Color.White;
+            this.TransferBtn.TextOffset = 5;
+            this.TransferBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.TransferBtn.UseVisualStyleBackColor = false;
+            this.TransferBtn.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // CurrentPlateLbl
+            // UploadButton
             // 
-            this.CurrentPlateLbl.AutoSize = true;
-            this.CurrentPlateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPlateLbl.Location = new System.Drawing.Point(3, 10);
-            this.CurrentPlateLbl.Name = "CurrentPlateLbl";
-            this.CurrentPlateLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentPlateLbl.TabIndex = 63;
-            this.CurrentPlateLbl.Text = "Placeholder";
+            this.UploadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.BorderRadius = 0;
+            this.UploadButton.BorderSize = 0;
+            this.UploadButton.ButtonImage = null;
+            this.UploadButton.FlatAppearance.BorderSize = 0;
+            this.UploadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UploadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UploadButton.ForeColor = System.Drawing.Color.White;
+            this.UploadButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.UploadButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.UploadButton.ImageColor = System.Drawing.Color.White;
+            this.UploadButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.UploadButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.UploadButton.IsToggled = false;
+            this.UploadButton.Location = new System.Drawing.Point(402, 123);
+            this.UploadButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UploadButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.UploadButton.Name = "UploadButton";
+            this.UploadButton.PaddingX = 0;
+            this.UploadButton.PaddingY = 0;
+            this.UploadButton.Size = new System.Drawing.Size(300, 37);
+            this.UploadButton.TabIndex = 49;
+            this.UploadButton.Text = "Upload Picture";
+            this.UploadButton.TextColor = System.Drawing.Color.White;
+            this.UploadButton.TextOffset = 5;
+            this.UploadButton.ToggleColor = System.Drawing.Color.Empty;
+            this.UploadButton.UseVisualStyleBackColor = false;
             // 
-            // CurrentEngineLbl
+            // ClearButton
             // 
-            this.CurrentEngineLbl.AutoSize = true;
-            this.CurrentEngineLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentEngineLbl.Location = new System.Drawing.Point(6, 11);
-            this.CurrentEngineLbl.Name = "CurrentEngineLbl";
-            this.CurrentEngineLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentEngineLbl.TabIndex = 64;
-            this.CurrentEngineLbl.Text = "Placeholder";
+            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderRadius = 0;
+            this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.ImageColor = System.Drawing.Color.White;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ClearButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ClearButton.IsToggled = false;
+            this.ClearButton.Location = new System.Drawing.Point(402, 168);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.PaddingX = 0;
+            this.ClearButton.PaddingY = 0;
+            this.ClearButton.Size = new System.Drawing.Size(300, 37);
+            this.ClearButton.TabIndex = 46;
+            this.ClearButton.Text = "Reset";
+            this.ClearButton.TextColor = System.Drawing.Color.White;
+            this.ClearButton.TextOffset = 5;
+            this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ClearButton.UseVisualStyleBackColor = false;
             // 
-            // CurrentChassisLbl
+            // TransferMembershipButton
             // 
-            this.CurrentChassisLbl.AutoSize = true;
-            this.CurrentChassisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentChassisLbl.Location = new System.Drawing.Point(3, 11);
-            this.CurrentChassisLbl.Name = "CurrentChassisLbl";
-            this.CurrentChassisLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentChassisLbl.TabIndex = 65;
-            this.CurrentChassisLbl.Text = "Placeholder";
+            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.BorderRadius = 0;
+            this.TransferMembershipButton.BorderSize = 1;
+            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
+            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
+            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
+            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferMembershipButton.IsToggled = false;
+            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
+            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferMembershipButton.Name = "TransferMembershipButton";
+            this.TransferMembershipButton.PaddingX = 0;
+            this.TransferMembershipButton.PaddingY = 0;
+            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferMembershipButton.TabIndex = 21;
+            this.TransferMembershipButton.Text = "Transfer Membership";
+            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.TextOffset = 20;
+            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.UseVisualStyleBackColor = false;
+            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
             // 
-            // CurrentBrandLbl
+            // TransferRecordsButton
             // 
-            this.CurrentBrandLbl.AutoSize = true;
-            this.CurrentBrandLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentBrandLbl.Location = new System.Drawing.Point(3, 12);
-            this.CurrentBrandLbl.Name = "CurrentBrandLbl";
-            this.CurrentBrandLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentBrandLbl.TabIndex = 65;
-            this.CurrentBrandLbl.Text = "Placeholder";
+            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.BorderRadius = 0;
+            this.TransferRecordsButton.BorderSize = 1;
+            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
+            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
+            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferRecordsButton.IsToggled = false;
+            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
+            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferRecordsButton.Name = "TransferRecordsButton";
+            this.TransferRecordsButton.PaddingX = 0;
+            this.TransferRecordsButton.PaddingY = 0;
+            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferRecordsButton.TabIndex = 20;
+            this.TransferRecordsButton.Text = "Transfer History";
+            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.TextOffset = 20;
+            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferRecordsButton.UseVisualStyleBackColor = false;
+            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
             // 
-            // panel25
+            // ManageMembersButton
             // 
-            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel25.Controls.Add(this.CurrentBirthdateLbl);
-            this.panel25.Location = new System.Drawing.Point(322, 670);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(316, 50);
-            this.panel25.TabIndex = 79;
+            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.BorderRadius = 0;
+            this.ManageMembersButton.BorderSize = 1;
+            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
+            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
+            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
+            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ManageMembersButton.IsToggled = false;
+            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
+            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.ManageMembersButton.Name = "ManageMembersButton";
+            this.ManageMembersButton.PaddingX = 0;
+            this.ManageMembersButton.PaddingY = 0;
+            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
+            this.ManageMembersButton.TabIndex = 19;
+            this.ManageMembersButton.Text = "Manage Members";
+            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.TextOffset = 20;
+            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.ManageMembersButton.UseVisualStyleBackColor = false;
+            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
-            // CurrentBirthdateLbl
+            // label46
             // 
-            this.CurrentBirthdateLbl.AutoSize = true;
-            this.CurrentBirthdateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentBirthdateLbl.Location = new System.Drawing.Point(6, 11);
-            this.CurrentBirthdateLbl.Name = "CurrentBirthdateLbl";
-            this.CurrentBirthdateLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentBirthdateLbl.TabIndex = 64;
-            this.CurrentBirthdateLbl.Text = "Placeholder";
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(24, 32);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(513, 31);
+            this.label46.TabIndex = 85;
+            this.label46.Text = "Are you sure?? OR Confirm Changes. ";
             // 
-            // CurrentModelLbl
+            // label55
             // 
-            this.CurrentModelLbl.AutoSize = true;
-            this.CurrentModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentModelLbl.Location = new System.Drawing.Point(3, 11);
-            this.CurrentModelLbl.Name = "CurrentModelLbl";
-            this.CurrentModelLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentModelLbl.TabIndex = 66;
-            this.CurrentModelLbl.Text = "Placeholder";
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(183, 339);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(165, 31);
+            this.label55.TabIndex = 86;
+            this.label55.Text = "placeholder";
             // 
-            // CurrentContactLbl
+            // label56
             // 
-            this.CurrentContactLbl.AutoSize = true;
-            this.CurrentContactLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentContactLbl.Location = new System.Drawing.Point(9, 11);
-            this.CurrentContactLbl.Name = "CurrentContactLbl";
-            this.CurrentContactLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentContactLbl.TabIndex = 65;
-            this.CurrentContactLbl.Text = "Placeholder";
-            // 
-            // OwnerSearchGrid
-            // 
-            this.OwnerSearchGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.OwnerSearchGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.OwnerSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OwnerSearchGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BodyNumber,
-            this.FirstName,
-            this.LastName});
-            this.OwnerSearchGrid.Location = new System.Drawing.Point(70, 77);
-            this.OwnerSearchGrid.Name = "OwnerSearchGrid";
-            this.OwnerSearchGrid.RowHeadersVisible = false;
-            this.OwnerSearchGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OwnerSearchGrid.Size = new System.Drawing.Size(668, 107);
-            this.OwnerSearchGrid.TabIndex = 60;
-            this.OwnerSearchGrid.Visible = false;
-            this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick);
-            this.OwnerSearchGrid.Click += new System.EventHandler(this.OwnerSearchGrid_Click);
-            this.OwnerSearchGrid.Leave += new System.EventHandler(this.OwnerSearchGrid_Leave);
-            // 
-            // BodyNumber
-            // 
-            this.BodyNumber.HeaderText = "Body No.";
-            this.BodyNumber.Name = "BodyNumber";
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(575, 340);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(165, 31);
+            this.label56.TabIndex = 87;
+            this.label56.Text = "placeholder";
             // 
             // TransferMembershipUForm
             // 
@@ -1720,11 +1878,11 @@
             this.ScrollablePanel.PerformLayout();
             this.ConfirmationPanel.ResumeLayout(false);
             this.ConfirmationPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.HolderPanel1.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).EndInit();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel22.ResumeLayout(false);
@@ -1747,13 +1905,13 @@
             this.panel17.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1768,14 +1926,19 @@
             this.panel3.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel15.ResumeLayout(false);
+            this.ConfirmationTransferPanel.ResumeLayout(false);
+            this.ConfirmationTransferPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UploadPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1910,5 +2073,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BodyNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.Panel ConfirmationTransferPanel;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private ButtonStyle CancelPanelButton;
+        private ButtonStyle SavePanelButton;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label46;
     }
 }

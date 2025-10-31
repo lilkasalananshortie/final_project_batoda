@@ -322,4 +322,10 @@
   <data name="icon_add_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_add_image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black_transfer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black_transfer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transfer_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

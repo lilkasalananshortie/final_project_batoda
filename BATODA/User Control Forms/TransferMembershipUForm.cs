@@ -21,6 +21,7 @@ namespace BATODA
             InitializeComponent();
 
             ConfirmationPanel.Hide();
+            ConfirmationTransferPanel.Hide();
 
             // test lang pang push
         }
@@ -82,7 +83,10 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            HolderPanel1.SendToBack();
             ConfirmationPanel.Show();
+            ConfirmationTransferPanel.BringToFront();
+            ConfirmationTransferPanel.Show();
         }
 
         private void HolderPanel1_Paint(object sender, PaintEventArgs e)
@@ -141,6 +145,21 @@ namespace BATODA
 
                 OwnerSearchGrid.Visible = false;
             }
+        }
+
+        private void ConfirmationTransferPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SavePanelButton_Click(object sender, EventArgs e)
+        {
+            ConfirmationTransferPanel.Hide();
+        }
+
+        private void CancelPanelButton_Click(object sender, EventArgs e)
+        {
+            ConfirmationTransferPanel.Hide();
         }
     }
 }
