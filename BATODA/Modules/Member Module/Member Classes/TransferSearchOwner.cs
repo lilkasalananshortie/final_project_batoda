@@ -26,11 +26,15 @@ namespace BATODA.Modules.Member_Module.Member_Classes
                     OwnerSearchGrid.Visible = true;
 
                     string query = @"
-                        SELECT BodyNumber, FirstName, LastName 
-                        FROM MemberInfo
-                        WHERE FirstName LIKE @search + '%' 
-                           OR LastName LIKE @search + '%' 
-                           OR CAST(BodyNumber AS VARCHAR) LIKE @search + '%'";
+                    SELECT 
+                        RIGHT('000' + CAST(BodyNumber AS VARCHAR(3)), 3) AS BodyNumber, 
+                        FirstName, 
+                        LastName 
+                    FROM MemberInfo
+                    WHERE FirstName LIKE @search + '%' 
+                       OR LastName LIKE @search + '%' 
+                       OR RIGHT('000' + CAST(BodyNumber AS VARCHAR(3)), 3) LIKE @search + '%'";
+
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@search", OwnerSearchTxt.Text.Trim());
@@ -40,8 +44,10 @@ namespace BATODA.Modules.Member_Module.Member_Classes
 
                     while (reader.Read())
                     {
-                        OwnerSearchGrid.Rows.Add(reader["BodyNumber"], reader["FirstName"], reader["LastName"]);
+                        string paddedBodyNumber = reader["BodyNumber"].ToString();
+                        OwnerSearchGrid.Rows.Add(paddedBodyNumber, reader["FirstName"].ToString(), reader["LastName"].ToString());
                     }
+
 
                     reader.Close();
                 }

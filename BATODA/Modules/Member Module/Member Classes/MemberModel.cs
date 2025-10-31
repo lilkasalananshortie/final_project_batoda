@@ -32,7 +32,6 @@ namespace BATODA.Modules.MemberModule
         public string ImagePath { get; set; }
         public DateTime DateJoined { get; set; }
 
-
         public int SuspensionDaysRemaining
         {
             get

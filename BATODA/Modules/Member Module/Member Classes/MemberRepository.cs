@@ -219,7 +219,6 @@ namespace BATODA.Modules.MemberModule
                 MessageBox.Show("Error fetching member:\n" + ex.Message,
                     "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             return null;
         }
     }

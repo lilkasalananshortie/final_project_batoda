@@ -16,7 +16,7 @@ namespace BATODA.Helpers.Database.Members
     {
         public static void FromMember(MemberModel owner, PictureBox pictureBox)
         {
-            string imagesFolder = @"C:\BSIT 1\GIT CLONES\BATODA\Modules\Member Module\Member Images\";
+            string imagesFolder = Path.Combine(Application.StartupPath, "Modules", "Member Module", "Member Images");
             string bodyNumber = owner.BodyNumber.ToString("D3");
 
             // Look for any file that starts with bodyNumber_
@@ -24,7 +24,7 @@ namespace BATODA.Helpers.Database.Members
 
             if (files.Length > 0)
             {
-                pictureBox.Image = Image.FromFile(files[0]); // take the first match
+                pictureBox.Image = Image.FromFile(files[0]); 
             }
             else
             {
