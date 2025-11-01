@@ -32,13 +32,16 @@
             this.TransferMembershipButton = new BATODA.ButtonStyle();
             this.TransferRecordsButton = new BATODA.ButtonStyle();
             this.ManageMembersButton = new BATODA.ButtonStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.TransferMembershipHistoryGrid = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferMembershipHistoryGrid)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -153,14 +156,6 @@
             this.ManageMembersButton.UseVisualStyleBackColor = false;
             this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(19, 169);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 810);
-            this.panel1.TabIndex = 20;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
@@ -192,6 +187,23 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "Transfer History";
             // 
+            // TransferMembershipHistoryGrid
+            // 
+            this.TransferMembershipHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransferMembershipHistoryGrid.Location = new System.Drawing.Point(0, 0);
+            this.TransferMembershipHistoryGrid.Name = "TransferMembershipHistoryGrid";
+            this.TransferMembershipHistoryGrid.Size = new System.Drawing.Size(1585, 810);
+            this.TransferMembershipHistoryGrid.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.TransferMembershipHistoryGrid);
+            this.panel1.Location = new System.Drawing.Point(19, 169);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1585, 810);
+            this.panel1.TabIndex = 20;
+            // 
             // TransferRecordMemberUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +221,8 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferMembershipHistoryGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -219,9 +233,10 @@
         private ButtonStyle TransferMembershipButton;
         private ButtonStyle TransferRecordsButton;
         private ButtonStyle ManageMembersButton;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView TransferMembershipHistoryGrid;
+        private System.Windows.Forms.Panel panel1;
     }
 }

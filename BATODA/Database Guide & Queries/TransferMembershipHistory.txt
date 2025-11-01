@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[TransferMembershipHistory] (
+    [TransferID]        INT           IDENTITY (1000, 1) NOT NULL,
+    [BodyNumber]        INT           NOT NULL,
+    [PastOwnerFullName] VARCHAR (100) NOT NULL,
+    [NewOwnerFullName]  VARCHAR (100) NOT NULL,
+    [ReasonForTransfer] VARCHAR (255) NULL,
+    [DateOfTransfer]    DATE          DEFAULT (getdate()) NULL,
+    PRIMARY KEY CLUSTERED ([TransferID] ASC),
+    FOREIGN KEY ([BodyNumber]) REFERENCES [dbo].[MemberInfo] ([BodyNumber])
+);

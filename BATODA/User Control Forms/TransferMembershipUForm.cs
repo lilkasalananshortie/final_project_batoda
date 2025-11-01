@@ -229,12 +229,24 @@ namespace BATODA
                     updatedMember.ImagePath = savedPath;
                 }
 
-                // Update record
                 memberRepo.UpdateMember(updatedMember);
+
+                TransferMembershipHistoryModel transferRecord = new TransferMembershipHistoryModel
+                {
+                    BodyNumber = bodyNumber,
+                    PastOwnerFullName = $"{CurrentFirstNameLbl.Text} {CurrentLastNameLbl.Text}",
+                    NewOwnerFullName = $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}",
+                    ReasonForTransfer = TransferReasonTxt.Text,
+                    DateOfTransfer = DateTime.Now
+                };
+
+                var transferRepo = new TransferMembershipHistoryRepository();
+                transferRepo.AddTransferRecord(transferRecord);
 
                 MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ConfirmationTransferPanel.Hide();
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

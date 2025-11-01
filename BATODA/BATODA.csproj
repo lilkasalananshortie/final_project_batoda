@@ -58,6 +58,8 @@
     <Compile Include="Modules\Member Module\Member Classes\SaveImageToFolder.cs" />
     <Compile Include="Modules\Member Module\Member Classes\SearchMember.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferLoadOwner.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryModel.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferSearchOwner.cs" />
     <Compile Include="UI Displays\FontFamily.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
@@ -520,7 +522,8 @@
     <None Include="Resources\icon_add_image.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DbConnectionGuide.txt" />
+    <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
+    <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
     <None Include="Resources\black_transfer.png" />
     <None Include="Resources\transfer_black.png" />

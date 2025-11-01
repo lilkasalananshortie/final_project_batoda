@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Member_Module.Member_Classes;
 
 namespace BATODA
 {
@@ -35,7 +37,13 @@ namespace BATODA
 
         private void TransferRecordMemberUForm_Load(object sender, EventArgs e)
         {
-            
+            DataGridCustom.ApplyCustomGrid(TransferMembershipHistoryGrid);
+
+            TransferMembershipHistoryRepository historyRepo = new TransferMembershipHistoryRepository();
+            var table = historyRepo.GetAllTransferRecords();
+            DataGridColumns.LoadMembershipTransferHistoryToGrid(TransferMembershipHistoryGrid, table);
         }
+
+
     }
 }

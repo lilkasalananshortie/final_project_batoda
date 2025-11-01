@@ -56,7 +56,7 @@ namespace BATODA
         private void SetupGridColumns()
         {
             string[] columnNames = { "BodyNumber", "LastName", "FirstName", "Birthdate", "MembershipType", "ContactNumber", "MemberStatus", "PenaltyLevel" };
-            string[] columnHeaders = { "Body No.", "Last Name", "First Name", "Birthdate", "Membership Type", "Contact Number", "Status", "Penalty Details" };
+            string[] columnHeaders = { "Body No.", "Last Name", "First Name", "Birthdate", "Role", "Contact Number", "Status", "Penalty Details" };
 
 
             // Disabling built-in sort to avoid confusion and unintentional sorting
