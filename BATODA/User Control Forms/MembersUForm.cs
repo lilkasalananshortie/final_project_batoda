@@ -27,9 +27,7 @@ namespace BATODA
         {
             InitializeComponent();
 
-            
-           
-            //TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
+            TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
         }
 
         private void MembersUForm_Load(object sender, EventArgs e)
@@ -251,7 +249,6 @@ namespace BATODA
 
             DataGridColumns.LoadMembersToGrid(MembersDataGrid, MemberTable);
 
-            // Show No Results panel
             if (MemberTable.Rows.Count == 0)
             {
                 NoResultsPanel.BringToFront();
@@ -315,10 +312,10 @@ namespace BATODA
 
                     if (matchingImages.Length > 0)
                     {
-                        // Load image into your View panel’s picture box
+                        // LOAD IMAGE
                         EditImagePb.Image = Image.FromFile(matchingImages[0]);
 
-                        // Store for later use in edit panel
+                        // STORE PATH SA SELECTED MEMBER IMAGE CLASS
                         SelectedMemberImage.ImagePath = matchingImages[0];
                     }
                     else
