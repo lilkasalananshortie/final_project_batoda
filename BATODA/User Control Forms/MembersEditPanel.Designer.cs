@@ -50,10 +50,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.AddFirstNameTxt = new System.Windows.Forms.TextBox();
+            this.EditFirstNameTxt = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.AddModelTxt = new System.Windows.Forms.TextBox();
+            this.EditModelTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.AddBodyNo = new System.Windows.Forms.Label();
@@ -62,16 +62,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.AddLastNameTxt = new System.Windows.Forms.TextBox();
+            this.EditLastNameTxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.AddContactNumber = new System.Windows.Forms.TextBox();
+            this.EditNumber = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.AddMiddleNameTxt = new System.Windows.Forms.TextBox();
+            this.EditMiddleTxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.EditFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.AddMemberPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel16.SuspendLayout();
@@ -276,6 +277,7 @@
             this.UploadImageBtn.TextOffset = 5;
             this.UploadImageBtn.ToggleColor = System.Drawing.Color.Empty;
             this.UploadImageBtn.UseVisualStyleBackColor = false;
+            this.UploadImageBtn.Click += new System.EventHandler(this.UploadImageBtn_Click);
             // 
             // PreviewImagePb
             // 
@@ -423,21 +425,21 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.AddFirstNameTxt);
+            this.panel8.Controls.Add(this.EditFirstNameTxt);
             this.panel8.Location = new System.Drawing.Point(35, 304);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(549, 50);
             this.panel8.TabIndex = 26;
             // 
-            // AddFirstNameTxt
+            // EditFirstNameTxt
             // 
-            this.AddFirstNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddFirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddFirstNameTxt.Location = new System.Drawing.Point(13, 12);
-            this.AddFirstNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddFirstNameTxt.Name = "AddFirstNameTxt";
-            this.AddFirstNameTxt.Size = new System.Drawing.Size(511, 24);
-            this.AddFirstNameTxt.TabIndex = 42;
+            this.EditFirstNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditFirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditFirstNameTxt.Location = new System.Drawing.Point(13, 12);
+            this.EditFirstNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EditFirstNameTxt.Name = "EditFirstNameTxt";
+            this.EditFirstNameTxt.Size = new System.Drawing.Size(511, 24);
+            this.EditFirstNameTxt.TabIndex = 42;
             // 
             // label22
             // 
@@ -452,21 +454,21 @@
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.AddModelTxt);
+            this.panel14.Controls.Add(this.EditModelTxt);
             this.panel14.Location = new System.Drawing.Point(648, 500);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(267, 50);
             this.panel14.TabIndex = 26;
             // 
-            // AddModelTxt
+            // EditModelTxt
             // 
-            this.AddModelTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddModelTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddModelTxt.Location = new System.Drawing.Point(8, 11);
-            this.AddModelTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddModelTxt.Name = "AddModelTxt";
-            this.AddModelTxt.Size = new System.Drawing.Size(254, 24);
-            this.AddModelTxt.TabIndex = 43;
+            this.EditModelTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditModelTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditModelTxt.Location = new System.Drawing.Point(8, 11);
+            this.EditModelTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EditModelTxt.Name = "EditModelTxt";
+            this.EditModelTxt.Size = new System.Drawing.Size(254, 24);
+            this.EditModelTxt.TabIndex = 43;
             // 
             // label7
             // 
@@ -540,21 +542,21 @@
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.AddLastNameTxt);
+            this.panel9.Controls.Add(this.EditLastNameTxt);
             this.panel9.Location = new System.Drawing.Point(35, 395);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(549, 50);
             this.panel9.TabIndex = 26;
             // 
-            // AddLastNameTxt
+            // EditLastNameTxt
             // 
-            this.AddLastNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddLastNameTxt.Location = new System.Drawing.Point(12, 12);
-            this.AddLastNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddLastNameTxt.Name = "AddLastNameTxt";
-            this.AddLastNameTxt.Size = new System.Drawing.Size(517, 24);
-            this.AddLastNameTxt.TabIndex = 42;
+            this.EditLastNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditLastNameTxt.Location = new System.Drawing.Point(12, 12);
+            this.EditLastNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EditLastNameTxt.Name = "EditLastNameTxt";
+            this.EditLastNameTxt.Size = new System.Drawing.Size(517, 24);
+            this.EditLastNameTxt.TabIndex = 42;
             // 
             // label12
             // 
@@ -569,21 +571,21 @@
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.AddContactNumber);
+            this.panel12.Controls.Add(this.EditNumber);
             this.panel12.Location = new System.Drawing.Point(642, 304);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(550, 50);
             this.panel12.TabIndex = 26;
             // 
-            // AddContactNumber
+            // EditNumber
             // 
-            this.AddContactNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddContactNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddContactNumber.Location = new System.Drawing.Point(12, 12);
-            this.AddContactNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddContactNumber.Name = "AddContactNumber";
-            this.AddContactNumber.Size = new System.Drawing.Size(516, 24);
-            this.AddContactNumber.TabIndex = 42;
+            this.EditNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditNumber.Location = new System.Drawing.Point(12, 12);
+            this.EditNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EditNumber.Name = "EditNumber";
+            this.EditNumber.Size = new System.Drawing.Size(516, 24);
+            this.EditNumber.TabIndex = 42;
             // 
             // label10
             // 
@@ -598,21 +600,21 @@
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.AddMiddleNameTxt);
+            this.panel10.Controls.Add(this.EditMiddleTxt);
             this.panel10.Location = new System.Drawing.Point(35, 499);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(549, 50);
             this.panel10.TabIndex = 26;
             // 
-            // AddMiddleNameTxt
+            // EditMiddleTxt
             // 
-            this.AddMiddleNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddMiddleNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMiddleNameTxt.Location = new System.Drawing.Point(12, 12);
-            this.AddMiddleNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddMiddleNameTxt.Name = "AddMiddleNameTxt";
-            this.AddMiddleNameTxt.Size = new System.Drawing.Size(512, 24);
-            this.AddMiddleNameTxt.TabIndex = 42;
+            this.EditMiddleTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditMiddleTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditMiddleTxt.Location = new System.Drawing.Point(12, 12);
+            this.EditMiddleTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EditMiddleTxt.Name = "EditMiddleTxt";
+            this.EditMiddleTxt.Size = new System.Drawing.Size(512, 24);
+            this.EditMiddleTxt.TabIndex = 42;
             // 
             // label11
             // 
@@ -643,6 +645,10 @@
             this.label5.Size = new System.Drawing.Size(126, 25);
             this.label5.TabIndex = 57;
             this.label5.Text = "Placeholder";
+            // 
+            // EditFileDialog
+            // 
+            this.EditFileDialog.FileName = "openFileDialog1";
             // 
             // MembersEditPanel
             // 
@@ -705,10 +711,10 @@
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox AddFirstNameTxt;
+        private System.Windows.Forms.TextBox EditFirstNameTxt;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox AddModelTxt;
+        private System.Windows.Forms.TextBox EditModelTxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label AddBodyNo;
@@ -716,13 +722,13 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox AddLastNameTxt;
+        private System.Windows.Forms.TextBox EditLastNameTxt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox AddContactNumber;
+        private System.Windows.Forms.TextBox EditNumber;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox AddMiddleNameTxt;
+        private System.Windows.Forms.TextBox EditMiddleTxt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label4;
@@ -730,5 +736,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.OpenFileDialog EditFileDialog;
     }
 }

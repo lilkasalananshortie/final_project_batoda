@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SortMembertTypeCmb = new System.Windows.Forms.ComboBox();
@@ -115,7 +115,7 @@
             this.ViewMemberInfoPanel = new System.Windows.Forms.Panel();
             this.label55 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.EditImagePb = new System.Windows.Forms.PictureBox();
             this.panel25 = new System.Windows.Forms.Panel();
             this.CurrentBirthdateLbl = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
@@ -180,7 +180,7 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.ViewMemberInfoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditImagePb)).BeginInit();
             this.panel25.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -256,14 +256,14 @@
             this.MembersDataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.MembersDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.MembersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.MembersDataGrid.EnableHeadersVisualStyles = false;
             this.MembersDataGrid.Location = new System.Drawing.Point(24, 134);
             this.MembersDataGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1361,7 +1361,7 @@
             this.ViewMemberInfoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ViewMemberInfoPanel.Controls.Add(this.label55);
             this.ViewMemberInfoPanel.Controls.Add(this.label46);
-            this.ViewMemberInfoPanel.Controls.Add(this.pictureBox5);
+            this.ViewMemberInfoPanel.Controls.Add(this.EditImagePb);
             this.ViewMemberInfoPanel.Controls.Add(this.panel25);
             this.ViewMemberInfoPanel.Controls.Add(this.panel19);
             this.ViewMemberInfoPanel.Controls.Add(this.label53);
@@ -1385,9 +1385,9 @@
             this.ViewMemberInfoPanel.Controls.Add(this.label49);
             this.ViewMemberInfoPanel.Controls.Add(this.GoToEditPanel);
             this.ViewMemberInfoPanel.Controls.Add(this.CloseBtn);
-            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(95, 399);
+            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(95, 265);
             this.ViewMemberInfoPanel.Name = "ViewMemberInfoPanel";
-            this.ViewMemberInfoPanel.Size = new System.Drawing.Size(1368, 461);
+            this.ViewMemberInfoPanel.Size = new System.Drawing.Size(1368, 595);
             this.ViewMemberInfoPanel.TabIndex = 57;
             // 
             // label55
@@ -1410,16 +1410,16 @@
             this.label46.TabIndex = 104;
             this.label46.Text = "Member: [PlaceHolder]";
             // 
-            // pictureBox5
+            // EditImagePb
             // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.pictureBox5.Location = new System.Drawing.Point(131, 148);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(247, 232);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 103;
-            this.pictureBox5.TabStop = false;
+            this.EditImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EditImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.EditImagePb.Location = new System.Drawing.Point(131, 148);
+            this.EditImagePb.Name = "EditImagePb";
+            this.EditImagePb.Size = new System.Drawing.Size(247, 232);
+            this.EditImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EditImagePb.TabIndex = 103;
+            this.EditImagePb.TabStop = false;
             // 
             // panel25
             // 
@@ -1865,7 +1865,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ViewMemberInfoPanel.ResumeLayout(false);
             this.ViewMemberInfoPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditImagePb)).EndInit();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel19.ResumeLayout(false);
@@ -2013,6 +2013,6 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox EditImagePb;
     }
 }

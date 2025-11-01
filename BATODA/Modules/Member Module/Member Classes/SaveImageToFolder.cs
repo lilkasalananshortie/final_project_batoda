@@ -10,7 +10,9 @@ namespace BATODA.Modules.Member_Module.Member_Classes
 {
     internal class SaveImageToFolder
     {
-        public static string Save(string sourcePath, int bodyNumber)
+
+        // TRANSFER MEMBERSHIP IMAGE SAVE (ADDING NEW IMAGE WITH UNIQUE NAME AND FORMAT)
+        public static string TransferMembershipSave(string sourcePath, int bodyNumber)
         {
             try
             { 
@@ -41,5 +43,47 @@ namespace BATODA.Modules.Member_Module.Member_Classes
                 return null;
             }
         }
+
+        // EDIT INFO OF A MEMBER (REPLACING PREVIOUS IMAGE WITH NEW ONE GAMIT YUNG SAME NAME)
+        public static string EditMemberInfo(string sourcePath, int bodyNumber)
+        {
+            try
+            {
+                string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
+
+                if (!Directory.Exists(imagesFolder))
+                    Directory.CreateDirectory(imagesFolder);
+
+                // Look for an existing image with the same body number
+                string existingImage = Directory.GetFiles(imagesFolder, $"{bodyNumber:D3}*.*").FirstOrDefault();
+
+                string destinationPath;
+
+                if (existingImage != null)
+                {
+                    // Replace existing file, keep the old full name
+                    destinationPath = existingImage;
+                }
+                else
+                {
+                    // No existing image, create a new one with bodyNumber + date format
+                    string datePart = DateTime.Now.ToString("MMMMddyyyy"); // e.g., November022025
+                    string fileName = $"{bodyNumber:D3}_{datePart}{Path.GetExtension(sourcePath)}";
+                    destinationPath = Path.Combine(imagesFolder, fileName);
+                }
+
+                // Copy and overwrite the file
+                File.Copy(sourcePath, destinationPath, true);
+
+                return destinationPath;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error replacing image: {ex.Message}", "Image Replace Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+
     }
 }

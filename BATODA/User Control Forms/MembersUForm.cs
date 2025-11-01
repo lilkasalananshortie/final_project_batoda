@@ -5,6 +5,7 @@ using System.ComponentModel.Design;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -174,7 +175,7 @@ namespace BATODA
         private void AddMemberButton_Click(object sender, EventArgs e)
         {
             ToastManager.Info("Member Search");    // testing lang 
-            GenerateNextBodyNumber.ShowNext(AddBodyNo);
+            LoadBodyNumber.ShowNext(AddBodyNo);
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
 
@@ -184,14 +185,14 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            int nextBodyNumber = GenerateNextBodyNumber.GetNextNumber(); 
+            int nextBodyNumber = LoadBodyNumber.GetNextNumber(); 
 
             MemberModel NewMember = GetMemberFromForm();
             NewMember.BodyNumber = nextBodyNumber;
 
             if (PreviewImagePb.Image != null && !string.IsNullOrEmpty(UploadImageDialog.FileName))
             {
-                string savedPath = SaveImageToFolder.Save(UploadImageDialog.FileName, nextBodyNumber);
+                string savedPath = SaveImageToFolder.TransferMembershipSave(UploadImageDialog.FileName, nextBodyNumber);
                 NewMember.ImagePath = savedPath;
             }
 
@@ -300,9 +301,39 @@ namespace BATODA
 
         private void MembersDataGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ViewMemberInfoPanel.Visible = true;
-            ViewMemberInfoPanel.BringToFront();
+            if (e.RowIndex >= 0)
+            {
+                ViewMemberInfoPanel.Visible = true;
+                ViewMemberInfoPanel.BringToFront();
+
+                try
+                {
+                    int bodyNumber = Convert.ToInt32(MembersDataGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value);
+
+                    string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
+                    string[] matchingImages = Directory.GetFiles(imagesFolder, $"{bodyNumber:D3}*.*");
+
+                    if (matchingImages.Length > 0)
+                    {
+                        // Load image into your View panel’s picture box
+                        EditImagePb.Image = Image.FromFile(matchingImages[0]);
+
+                        // Store for later use in edit panel
+                        SelectedMemberImage.ImagePath = matchingImages[0];
+                    }
+                    else
+                    {
+                        EditImagePb.Image = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
+
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {

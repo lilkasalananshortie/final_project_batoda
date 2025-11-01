@@ -170,7 +170,7 @@ namespace BATODA
                 TransferBodyNumberLbl);
 
             MemberRepository memberRepo = new MemberRepository();
-            owner = memberRepo.GetByBodyNumber(bodyNumber); // <-- assign to class field
+            owner = memberRepo.GetByBodyNumber(bodyNumber);
 
             if (owner != null)
             {
@@ -225,7 +225,7 @@ namespace BATODA
 
                 if (NewOwnerPb.Image != null && !string.IsNullOrEmpty(TransferUploadImage.FileName))
                 {
-                    string savedPath = SaveImageToFolder.Save(TransferUploadImage.FileName, bodyNumber);
+                    string savedPath = SaveImageToFolder.TransferMembershipSave(TransferUploadImage.FileName, bodyNumber);
                     updatedMember.ImagePath = savedPath;
                 }
 

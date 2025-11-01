@@ -90,7 +90,6 @@ namespace BATODA.Helpers.DataGrids
 
             dgv.CellPainting += (s, e) =>
             {
-
                 if (e.RowIndex < 0) return;
 
                 

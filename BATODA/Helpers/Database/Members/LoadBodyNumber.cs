@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace BATODA.Helpers.Database.Members
 {
-    internal class GenerateNextBodyNumber
+    internal class LoadBodyNumber
     {
         private static readonly string connectionString =
             @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True";
