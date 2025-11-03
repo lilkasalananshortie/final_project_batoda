@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.Database.Members;
 
 namespace BATODA.Modules.MemberModule
 {
@@ -194,16 +195,32 @@ namespace BATODA.Modules.MemberModule
         // --------------- DELETE MEMBERS -----------------
         public void DeleteMember(int bodyNumber)
         {
+            DateTime oldDateJoined;
+
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM MemberInfo WHERE BodyNumber = @BodyNumber";
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                con.Open();
+
+                // GET DateJoined OF SELECTED MEMBER
+
+                string selectQuery = "SELECT DateJoined FROM MemberInfo WHERE BodyNumber = @BodyNumber";
+                using (SqlCommand selectCmd = new SqlCommand(selectQuery, con))
                 {
-                    cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
-                    con.Open();
-                    cmd.ExecuteNonQuery();
+                    selectCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                    oldDateJoined = (DateTime)selectCmd.ExecuteScalar();
+                }
+
+                string deleteQuery = "DELETE FROM MemberInfo WHERE BodyNumber = @BodyNumber";
+                using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, con))
+                {
+                    deleteCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                    deleteCmd.ExecuteNonQuery();
                 }
             }
+
+            // DELETE PAST OWNER IMAGE
+            LoadOwnerImage loader = new LoadOwnerImage();
+            loader.DeletePastOwnerImage(bodyNumber, oldDateJoined);
         }
 
         public MemberModel GetByBodyNumber(int bodyNumber)

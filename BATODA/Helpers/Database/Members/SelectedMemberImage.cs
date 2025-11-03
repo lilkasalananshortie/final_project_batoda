@@ -9,5 +9,7 @@ namespace BATODA.Helpers.Database.Members
     internal static class SelectedMemberImage
     {
         public static string ImagePath { get; set; }
+        public static int BodyNumber { get; set; } 
     }
+
 }

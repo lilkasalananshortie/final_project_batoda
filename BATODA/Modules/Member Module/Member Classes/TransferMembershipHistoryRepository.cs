@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BATODA.Modules.Member_Module.Member_Classes
 {
@@ -52,6 +53,41 @@ namespace BATODA.Modules.Member_Module.Member_Classes
                 return dt;
             }
         }
+
+        // GET LAST TRANSFER DATE OF BODYNUMBER
+        public DateTime? GetLastTransferDate(int bodyNumber)
+        {
+            string query = @"SELECT TOP 1 DateOfTransfer 
+                     FROM TransferMembershipHistory 
+                     WHERE BodyNumber = @BodyNumber
+                     ORDER BY DateOfTransfer DESC";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                conn.Open();
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    DateTime lastTransferDate = Convert.ToDateTime(result);
+                    if ((DateTime.Now - lastTransferDate).TotalDays < 3)
+                    {
+                        MessageBox.Show("This body number cannot be transferred yet. Please wait 3 days after the last transfer.",
+                            "Transfer Blocked", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        return lastTransferDate; // RETURN THE DATE TO INDICATE TRANSFER BLOCKED
+                    }
+
+                    return lastTransferDate; // RETURN THE LAST TRANSFER DATE IF ALLOWED
+                }
+            }
+
+            return null; // RETURN NULL IF NO RECORD FOUND
+        }
+
+
 
     }
 }

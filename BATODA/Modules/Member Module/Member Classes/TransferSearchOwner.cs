@@ -48,7 +48,6 @@ namespace BATODA.Modules.Member_Module.Member_Classes
                         OwnerSearchGrid.Rows.Add(paddedBodyNumber, reader["FirstName"].ToString(), reader["LastName"].ToString());
                     }
 
-
                     reader.Close();
                 }
             }

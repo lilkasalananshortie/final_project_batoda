@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Helpers\Database\Members\LoadBodyNumber.cs" />
     <Compile Include="Helpers\Database\Members\LoadOwnerImage.cs" />
+    <Compile Include="Helpers\Database\Members\MemberInfoSummary.cs" />
     <Compile Include="Helpers\Database\Members\SelectedMemberImage.cs" />
     <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
     <Compile Include="Helpers\DataGrids\DataGridColumns.cs" />

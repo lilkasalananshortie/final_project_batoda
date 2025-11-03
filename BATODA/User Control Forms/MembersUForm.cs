@@ -23,12 +23,17 @@ namespace BATODA
     {
         MemberRepository MemberRepo = new MemberRepository();
 
+
         public MembersUForm()
         {
             InitializeComponent();
 
             TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
+            TotalActiveLbl.Text = MemberInfoSummary.GetActiveCount().ToString();
+            TotalInactiveLbl.Text = MemberInfoSummary.GetInactiveCount().ToString();
+            TotalSuspendedLbl.Text = MemberInfoSummary.GetSuspendedCount().ToString();
         }
+
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
@@ -286,51 +291,81 @@ namespace BATODA
 
             if (dgv.Columns[e.ColumnIndex].Name == "Edit")
             {
-                var id = dgv.Rows[e.RowIndex].Cells["BodyNumber"].Value?.ToString();
+                int bodyNumber = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["BodyNumber"].Value);
+                SelectedMemberImage.BodyNumber = bodyNumber;
+
+                string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
+                string[] matchingImages = Directory.GetFiles(imagesFolder, $"{bodyNumber:D3}*.*");
+                if (matchingImages.Length > 0)
+                    SelectedMemberImage.ImagePath = matchingImages[0];
+                else
+                    SelectedMemberImage.ImagePath = "";
+
                 DisplayClass.CloseMiniAndMain();
                 DisplayClass.ShowMini(new MembersEditPanel());
             }
+
             else if (dgv.Columns[e.ColumnIndex].Name == "Delete")
             {
-                
+                int bodyNumber = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["BodyNumber"].Value);
+
+                var confirm = MessageBox.Show(
+                    "Are you sure you want to delete this member?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (confirm == DialogResult.Yes)
+                {
+                    MemberRepository repo = new MemberRepository();
+                    repo.DeleteMember(bodyNumber);
+
+                    LoadMembersToGrid();
+                }
             }
         }
 
         private void MembersDataGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex < 0) return;
+
+            ViewMemberInfoPanel.Visible = true;
+            ViewMemberInfoPanel.BringToFront();
+
+            try
             {
-                ViewMemberInfoPanel.Visible = true;
-                ViewMemberInfoPanel.BringToFront();
+                int bodyNumber = Convert.ToInt32(MembersDataGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value);
 
-                try
+                string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
+                string[] matchingImages = Directory.GetFiles(imagesFolder, $"{bodyNumber:D3}*.*");
+
+                if (EditImagePb.Image != null)
                 {
-                    int bodyNumber = Convert.ToInt32(MembersDataGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value);
-
-                    string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
-                    string[] matchingImages = Directory.GetFiles(imagesFolder, $"{bodyNumber:D3}*.*");
-
-                    if (matchingImages.Length > 0)
-                    {
-                        // LOAD IMAGE
-                        EditImagePb.Image = Image.FromFile(matchingImages[0]);
-
-                        // STORE PATH SA SELECTED MEMBER IMAGE CLASS
-                        SelectedMemberImage.ImagePath = matchingImages[0];
-                    }
-                    else
-                    {
-                        EditImagePb.Image = null;
-                    }
+                    EditImagePb.Image.Dispose();
+                    EditImagePb.Image = null;
                 }
-                catch (Exception ex)
+
+                if (matchingImages.Length > 0)
                 {
-                    MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    using (var temp = new Bitmap(matchingImages[0]))
+                    {
+                        EditImagePb.Image = new Bitmap(temp);
+                    }
+
+                    SelectedMemberImage.ImagePath = matchingImages[0];
+                }
+                else
+                {
+                    EditImagePb.Image = null;
+                    SelectedMemberImage.ImagePath = "";
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
-
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
@@ -339,8 +374,21 @@ namespace BATODA
 
         private void GoToEditPanel_Click(object sender, EventArgs e)
         {
-            DisplayClass.CloseMiniAndMain();
-            DisplayClass.ShowMini(new MembersEditPanel());
+            // CHECK IF RETRIEVED YUNG DATA
+            if (!string.IsNullOrEmpty(SelectedMemberImage.ImagePath))
+            {
+                DisplayClass.CloseMiniAndMain();
+                DisplayClass.ShowMini(new MembersEditPanel());
+            }
+            else
+            {
+                MessageBox.Show("No member selected to edit.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void NoResultsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -93,17 +93,16 @@ namespace BATODA
             }
 
             // NEW OWNER (UPLOADED FROM BTN)
-            if (!string.IsNullOrEmpty(TransferUploadImage.FileName) && File.Exists(TransferUploadImage.FileName))
+            if (NewOwnerPb.Image != null)
             {
-                ConfirmNewImage.Image = Image.FromFile(TransferUploadImage.FileName);
+                // Make a memory copy so the original NewOwnerPb image doesn't lock any file
+                using (var temp = new Bitmap(NewOwnerPb.Image))
+                {
+                    ConfirmNewImage.Image = new Bitmap(temp);
+                }
                 ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
             }
 
-            else if (NewOwnerPb.Image != null)
-            {
-                ConfirmNewImage.Image = NewOwnerPb.Image;
-                ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
 
             HolderPanel1.SendToBack();
             ConfirmationPanel.Show();
@@ -191,10 +190,10 @@ namespace BATODA
             try
             {
                 var memberRepo = new MemberRepository();
+                var transferRepo = new TransferMembershipHistoryRepository(); // REPO FOR HISTORY
 
-                // EXTRACT DIGITS 
+                // EXTRACT DIGITS FROM LABEL
                 string digitsOnly = new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray());
-
                 if (string.IsNullOrEmpty(digitsOnly))
                 {
                     MessageBox.Show("Invalid Body Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -203,6 +202,16 @@ namespace BATODA
 
                 int bodyNumber = int.Parse(digitsOnly);
 
+                // 🔥 CHECK LAST TRANSFER DATE
+                DateTime? lastTransferDate = transferRepo.GetLastTransferDate(bodyNumber); // YOU’LL ADD THIS METHOD BELOW
+                if (lastTransferDate.HasValue && (DateTime.Now - lastTransferDate.Value).TotalDays < 3)
+                {
+                    MessageBox.Show("This member was recently transferred. Please wait 3 days before transferring again.",
+                                    "Transfer Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // CREATE UPDATED MEMBER INFO
                 MemberModel updatedMember = new MemberModel
                 {
                     BodyNumber = bodyNumber,
@@ -223,14 +232,17 @@ namespace BATODA
                     DateJoined = DateTime.Now
                 };
 
+                // SAVE NEW IMAGE IF AVAILABLE
                 if (NewOwnerPb.Image != null && !string.IsNullOrEmpty(TransferUploadImage.FileName))
                 {
                     string savedPath = SaveImageToFolder.TransferMembershipSave(TransferUploadImage.FileName, bodyNumber);
                     updatedMember.ImagePath = savedPath;
                 }
 
+                // UPDATE MEMBER DATA
                 memberRepo.UpdateMember(updatedMember);
 
+                // RECORD TRANSFER HISTORY
                 TransferMembershipHistoryModel transferRecord = new TransferMembershipHistoryModel
                 {
                     BodyNumber = bodyNumber,
@@ -240,18 +252,17 @@ namespace BATODA
                     DateOfTransfer = DateTime.Now
                 };
 
-                var transferRepo = new TransferMembershipHistoryRepository();
                 transferRepo.AddTransferRecord(transferRecord);
 
                 MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ConfirmationTransferPanel.Hide();
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
 
@@ -277,12 +288,19 @@ namespace BATODA
 
             if (TransferUploadImage.ShowDialog() == DialogResult.OK)
             {
-                NewOwnerPb.ImageLocation = TransferUploadImage.FileName;
-
+                // Load a memory copy to avoid locking the file
+                using (var temp = new Bitmap(TransferUploadImage.FileName))
+                {
+                    NewOwnerPb.Image = new Bitmap(temp);
+                }
 
                 NewOwnerPb.SizeMode = PictureBoxSizeMode.StretchImage;
-
             }
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
