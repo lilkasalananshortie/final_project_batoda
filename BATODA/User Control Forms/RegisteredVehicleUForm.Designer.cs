@@ -461,9 +461,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(28, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 24);
+            this.label1.Size = new System.Drawing.Size(187, 24);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Total Vehicle";
+            this.label1.Text = "Operational Tricycles";
             // 
             // panel3
             // 
@@ -507,9 +507,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(28, 28);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 24);
+            this.label8.Size = new System.Drawing.Size(187, 24);
             this.label8.TabIndex = 51;
-            this.label8.Text = "Total Brands";
+            this.label8.Text = "Unavailable Tricycles";
             // 
             // panel4
             // 
@@ -553,9 +553,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(28, 28);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 24);
+            this.label9.Size = new System.Drawing.Size(176, 24);
             this.label9.TabIndex = 54;
-            this.label9.Text = "Active";
+            this.label9.Text = "Coding No. (Today)";
             // 
             // panel5
             // 
@@ -599,9 +599,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(28, 28);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 24);
+            this.label13.Size = new System.Drawing.Size(96, 24);
             this.label13.TabIndex = 57;
-            this.label13.Text = "Inactive";
+            this.label13.Text = "Date/Time";
             // 
             // RegisteredVehicleUForm
             // 
