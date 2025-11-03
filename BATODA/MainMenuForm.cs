@@ -175,6 +175,9 @@ namespace BATODA
 
         }
 
-       
+        private void TopPanelText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

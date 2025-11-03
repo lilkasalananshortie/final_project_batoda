@@ -15,6 +15,7 @@ namespace BATODA
         public TransferVehicleUForm()
         {
             InitializeComponent();
+        }
           
 
 
