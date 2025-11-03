@@ -328,6 +328,9 @@
   <data name="transfer_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transfer_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BambangIUFBBTODA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BambangIUFBBTODA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blurred_bgc_tofa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\e54768b4-e600-438c-8aa2-2b13fa67169b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
