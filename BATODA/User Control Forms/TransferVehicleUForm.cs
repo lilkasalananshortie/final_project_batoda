@@ -15,10 +15,7 @@ namespace BATODA
         public TransferVehicleUForm()
         {
             InitializeComponent();
-            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
-            DisplayClass.SetPlaceholder(NewTeicycleTextBox, "Enter Tricycle Brand");
-            DisplayClass.SetPlaceholder(NewPlateNoTextBox, "Enter Tricycle Plate Number");
-            DisplayClass.SetPlaceholder(ReasonForChangeTextBox, "Enter Change Description");
+          
 
 
 
