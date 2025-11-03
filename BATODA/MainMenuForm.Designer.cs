@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.TopBarPanel = new System.Windows.Forms.Panel();
             this.CalendarButton = new BATODA.ButtonStyle();
             this.NotificationButton = new BATODA.ButtonStyle();
@@ -49,10 +48,12 @@
             this.CalendarBtn = new BATODA.ButtonStyle();
             this.SettingsButton = new BATODA.ButtonStyle();
             this.DisplayPanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
             this.NotificationPanel.SuspendLayout();
             this.NavBarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -61,21 +62,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 152);
             this.panel1.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(221, 55);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "BATODA";
             // 
             // TopBarPanel
             // 
@@ -470,6 +461,16 @@
             this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
             this.DisplayPanel.TabIndex = 5;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.BambangIUFBBTODA;
+            this.pictureBox2.Location = new System.Drawing.Point(-15, -3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(323, 153);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,12 +490,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.TopBarPanel.ResumeLayout(false);
             this.TopBarPanel.PerformLayout();
             this.NotificationPanel.ResumeLayout(false);
             this.NotificationPanel.PerformLayout();
             this.NavBarPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -507,7 +508,6 @@
         private System.Windows.Forms.Panel CalendarXAccoutnContainerPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
         private ButtonStyle HomeButton;
         private ButtonStyle RegisteredVehiclesButton;
         private ButtonStyle AssistanceLogButton;
@@ -520,5 +520,6 @@
         private System.Windows.Forms.Panel DisplayPanel;
         private ButtonStyle MembersMainButton;
         private ButtonStyle CalendarBtn;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
