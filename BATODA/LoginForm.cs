@@ -67,6 +67,11 @@ namespace BATODA
             base.OnShown(e);
             this.ActiveControl = null; 
         }
+
+        private void LoginPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
