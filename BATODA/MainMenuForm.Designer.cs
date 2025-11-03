@@ -188,7 +188,7 @@
             // 
             this.TopPanelText.AutoSize = true;
             this.TopPanelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TopPanelText.Location = new System.Drawing.Point(20, 10);
+            this.TopPanelText.Location = new System.Drawing.Point(12, 15);
             this.TopPanelText.Name = "TopPanelText";
             this.TopPanelText.Size = new System.Drawing.Size(410, 55);
             this.TopPanelText.TabIndex = 0;
