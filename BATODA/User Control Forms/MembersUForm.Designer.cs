@@ -1393,9 +1393,9 @@
             this.ViewMemberInfoPanel.Controls.Add(this.label49);
             this.ViewMemberInfoPanel.Controls.Add(this.GoToEditPanel);
             this.ViewMemberInfoPanel.Controls.Add(this.CloseBtn);
-            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(187, 122);
+            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(690, 122);
             this.ViewMemberInfoPanel.Name = "ViewMemberInfoPanel";
-            this.ViewMemberInfoPanel.Size = new System.Drawing.Size(1253, 631);
+            this.ViewMemberInfoPanel.Size = new System.Drawing.Size(750, 631);
             this.ViewMemberInfoPanel.TabIndex = 57;
             // 
             // label16

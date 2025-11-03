@@ -66,7 +66,7 @@ namespace BATODA
 
                 case "Vehicles":
                     DisplayClass.SetActive(RegisteredVehiclesButton);
-                    DisplayClass.ShowMain(new RegisteredVehicleUForm());
+                    DisplayClass.ShowMain(new TricycleUForm());
                     TopPanelText.Text = "MANAGE VEHICLE";
                     break;
 
@@ -113,7 +113,7 @@ namespace BATODA
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Vehicles");
-            DisplayClass.ShowMain(new RegisteredVehicleUForm());
+            DisplayClass.ShowMain(new TricycleUForm());
             TopPanelText.Text = "MANAGE VEHICLE";
         }
 

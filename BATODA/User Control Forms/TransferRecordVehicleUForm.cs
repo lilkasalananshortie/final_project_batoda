@@ -24,7 +24,7 @@ namespace BATODA
 
         private void RegisteredVehicleButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMain(new RegisteredVehicleUForm());
+            DisplayClass.ShowMain(new TricycleUForm());
         }
 
         private void TransferVehicleButton_Click(object sender, EventArgs e)
