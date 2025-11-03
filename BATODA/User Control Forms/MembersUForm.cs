@@ -390,5 +390,14 @@ namespace BATODA
         {
 
         }
+
+        private void SearchTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; 
+                ApplySearchButton_Click(sender, e); 
+            }
+        }
     }
 }
