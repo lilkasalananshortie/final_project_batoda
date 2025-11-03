@@ -527,6 +527,8 @@
     <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\10c6a328-a614-491f-8faf-c210e2039674.jpg" />
+    <None Include="Resources\e54768b4-e600-438c-8aa2-2b13fa67169b.jpg" />
     <None Include="Resources\black_transfer.png" />
     <None Include="Resources\transfer_black.png" />
   </ItemGroup>

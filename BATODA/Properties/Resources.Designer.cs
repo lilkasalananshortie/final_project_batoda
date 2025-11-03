@@ -223,6 +223,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blurred_bgc_tofa {
+            get {
+                object obj = ResourceManager.GetObject("blurred_bgc_tofa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brand {
             get {
                 object obj = ResourceManager.GetObject("brand", resourceCulture);
@@ -726,6 +736,16 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap trisokol {
             get {
                 object obj = ResourceManager.GetObject("trisokol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unblur_bgc_toda {
+            get {
+                object obj = ResourceManager.GetObject("unblur_bgc_toda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
