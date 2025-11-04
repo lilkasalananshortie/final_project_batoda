@@ -110,12 +110,6 @@
     <Compile Include="UI Displays\ButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="User Control Forms\CalendarContainerUForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control Forms\CalendarContainerUForm.Designer.cs">
-      <DependentUpon>CalendarContainerUForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="User Control Forms\CalendarUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,9 +232,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI Displays\ButtonStyle.resx">
       <DependentUpon>ButtonStyle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Control Forms\CalendarContainerUForm.resx">
-      <DependentUpon>CalendarContainerUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\CalendarUForm.resx">
       <DependentUpon>CalendarUForm.cs</DependentUpon>

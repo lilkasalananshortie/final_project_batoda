@@ -15,8 +15,8 @@ namespace BATODA
     public partial class CalendarUForm : UserControl
     {
 
-        static int month, year;
-        private DateTime dateTime = DateTime.Now;
+        public static int month, year;
+        private static DateTime dateTime = DateTime.Now;
         public CalendarUForm()
         {
             InitializeComponent();
@@ -29,32 +29,52 @@ namespace BATODA
 
         public void calendarDays()
         {
-
             month = dateTime.Month;
             year = dateTime.Year;
-
             string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            lbDate.Text = monthName + " " + year;
+            lbDate.Text = $"{monthName} {year}";
 
             DateTime monthStart = new DateTime(year, month, 1);
-            int days = DateTime.DaysInMonth(year, month);
-            int wholeweek = (int)monthStart.DayOfWeek + 1;
+            int daysInMonth = DateTime.DaysInMonth(year, month);
 
-            for (int i = 1; i < wholeweek; i++)
+            // Previous month info
+            int prevMonth = (month == 1) ? 12 : month - 1;
+            int prevYear = (month == 1) ? year - 1 : year;
+            int prevMonthDays = DateTime.DaysInMonth(prevYear, prevMonth);
+            int startDayOfWeek = (int)monthStart.DayOfWeek; 
+            DayContainer.Controls.Clear();
+
+            
+            for (int i = startDayOfWeek - 1; i >= 0; i--)
             {
-                CalendarContainerUForm calendar = new CalendarContainerUForm();
-                //  calendar.days(i);
-                DayContainer.Controls.Add(calendar);
+                DaysUForm prevDay = new DaysUForm();
+                prevDay.days(prevMonthDays - i, prevMonth, prevYear);
+                prevDay.BackColor = Color.LightGray;
+                DayContainer.Controls.Add(prevDay);
             }
 
-            for (int i = 1; i <= days; i++)
+
+            for (int i = 1; i <= daysInMonth; i++)
             {
-                DaysUForm daysUForm = new DaysUForm();
-                daysUForm.days(i);
-                DayContainer.Controls.Add(daysUForm);
+                DaysUForm currentDay = new DaysUForm();
+                currentDay.days(i, month, year);
+                DayContainer.Controls.Add(currentDay);
             }
 
+            // fill all remaining cells 
+            int totalCells = DayContainer.Controls.Count;
+            int nextMonthDaysToAdd = 42 - totalCells;
+            int nextMonth = (month == 12) ? 1 : month + 1;
+            int nextYear = (month == 12) ? year + 1 : year;
 
+            for (int i = 1; i <= nextMonthDaysToAdd; i++)
+            {
+                DaysUForm nextDay = new DaysUForm();
+                nextDay.days(i, nextMonth, nextYear);
+                nextDay.BackColor = Color.LightGray;
+                DayContainer.Controls.Add(nextDay);
+            
+            }
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -89,9 +109,6 @@ namespace BATODA
             calendarDays();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

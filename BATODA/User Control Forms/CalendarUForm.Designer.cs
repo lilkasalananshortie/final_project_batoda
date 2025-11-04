@@ -39,21 +39,24 @@
             this.lbDate = new System.Windows.Forms.Label();
             this.nextButton = new BATODA.ButtonStyle();
             this.previousButton = new BATODA.ButtonStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DayContainer
             // 
-            this.DayContainer.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.DayContainer.Location = new System.Drawing.Point(8, 150);
+            this.DayContainer.BackColor = System.Drawing.Color.White;
+            this.DayContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DayContainer.Location = new System.Drawing.Point(-1, 98);
             this.DayContainer.Name = "DayContainer";
-            this.DayContainer.Size = new System.Drawing.Size(1175, 750);
+            this.DayContainer.Size = new System.Drawing.Size(1158, 740);
             this.DayContainer.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 117);
+            this.label1.Location = new System.Drawing.Point(49, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 24);
             this.label1.TabIndex = 1;
@@ -63,7 +66,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(223, 117);
+            this.label2.Location = new System.Drawing.Point(217, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 24);
             this.label2.TabIndex = 2;
@@ -73,7 +76,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(540, 117);
+            this.label3.Location = new System.Drawing.Point(534, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 24);
             this.label3.TabIndex = 4;
@@ -83,7 +86,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(715, 117);
+            this.label4.Location = new System.Drawing.Point(709, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 24);
             this.label4.TabIndex = 3;
@@ -93,7 +96,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(893, 117);
+            this.label5.Location = new System.Drawing.Point(887, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 24);
             this.label5.TabIndex = 6;
@@ -103,7 +106,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(385, 117);
+            this.label6.Location = new System.Drawing.Point(379, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 24);
             this.label6.TabIndex = 5;
@@ -113,19 +116,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1049, 117);
+            this.label7.Location = new System.Drawing.Point(1043, 65);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 24);
             this.label7.TabIndex = 7;
             this.label7.Text = "Saturday";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // lbDate
             // 
             this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.Location = new System.Drawing.Point(8, 56);
+            this.lbDate.Location = new System.Drawing.Point(155, 4);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(1175, 34);
+            this.lbDate.Size = new System.Drawing.Size(847, 34);
             this.lbDate.TabIndex = 8;
             this.lbDate.Text = "MONTHYEAR";
             this.lbDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,7 +148,7 @@
             this.nextButton.ImagePosition = new System.Drawing.Point(10, 0);
             this.nextButton.ImageSize = new System.Drawing.Size(24, 24);
             this.nextButton.IsToggled = false;
-            this.nextButton.Location = new System.Drawing.Point(1012, 918);
+            this.nextButton.Location = new System.Drawing.Point(1001, 7);
             this.nextButton.MouseDownColor = System.Drawing.Color.Black;
             this.nextButton.Name = "nextButton";
             this.nextButton.PaddingX = 0;
@@ -176,7 +178,7 @@
             this.previousButton.ImagePosition = new System.Drawing.Point(10, 0);
             this.previousButton.ImageSize = new System.Drawing.Size(24, 24);
             this.previousButton.IsToggled = false;
-            this.previousButton.Location = new System.Drawing.Point(856, 918);
+            this.previousButton.Location = new System.Drawing.Point(5, 7);
             this.previousButton.MouseDownColor = System.Drawing.Color.Black;
             this.previousButton.Name = "previousButton";
             this.previousButton.PaddingX = 0;
@@ -190,27 +192,39 @@
             this.previousButton.UseVisualStyleBackColor = false;
             this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbDate);
+            this.panel1.Controls.Add(this.nextButton);
+            this.panel1.Controls.Add(this.DayContainer);
+            this.panel1.Controls.Add(this.previousButton);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1158, 840);
+            this.panel1.TabIndex = 11;
+            // 
             // CalendarUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
-            this.Controls.Add(this.nextButton);
-            this.Controls.Add(this.previousButton);
-            this.Controls.Add(this.lbDate);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DayContainer);
+            this.Controls.Add(this.panel1);
             this.Name = "CalendarUForm";
-            this.Size = new System.Drawing.Size(1360, 1016);
+            this.Size = new System.Drawing.Size(1557, 1060);
             this.Load += new System.EventHandler(this.CalendarUForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -227,5 +241,6 @@
         private System.Windows.Forms.Label lbDate;
         private ButtonStyle previousButton;
         private ButtonStyle nextButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
