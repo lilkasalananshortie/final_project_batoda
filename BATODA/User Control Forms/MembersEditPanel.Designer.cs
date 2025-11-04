@@ -53,6 +53,7 @@
             this.EditFirstNameTxt = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.EditModelLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.EditBodyNoPreviewLbl = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.EditPlateNoLbl = new System.Windows.Forms.Label();
             this.EditFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.EditModelLbl = new System.Windows.Forms.Label();
             this.AddMemberPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel16.SuspendLayout();
@@ -270,7 +270,7 @@
             this.UploadImageBtn.Name = "UploadImageBtn";
             this.UploadImageBtn.PaddingX = 0;
             this.UploadImageBtn.PaddingY = 0;
-            this.UploadImageBtn.Size = new System.Drawing.Size(256, 37);
+            this.UploadImageBtn.Size = new System.Drawing.Size(280, 37);
             this.UploadImageBtn.TabIndex = 52;
             this.UploadImageBtn.Text = "Upload Picture";
             this.UploadImageBtn.TextColor = System.Drawing.Color.White;
@@ -314,7 +314,7 @@
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.PaddingX = 0;
             this.ResetButton.PaddingY = 0;
-            this.ResetButton.Size = new System.Drawing.Size(256, 37);
+            this.ResetButton.Size = new System.Drawing.Size(280, 37);
             this.ResetButton.TabIndex = 50;
             this.ResetButton.Text = "Reset";
             this.ResetButton.TextColor = System.Drawing.Color.White;
@@ -459,6 +459,17 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(267, 50);
             this.panel14.TabIndex = 26;
+            // 
+            // EditModelLbl
+            // 
+            this.EditModelLbl.AutoSize = true;
+            this.EditModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditModelLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.EditModelLbl.Location = new System.Drawing.Point(12, 11);
+            this.EditModelLbl.Name = "EditModelLbl";
+            this.EditModelLbl.Size = new System.Drawing.Size(126, 25);
+            this.EditModelLbl.TabIndex = 58;
+            this.EditModelLbl.Text = "Placeholder";
             // 
             // label7
             // 
@@ -639,17 +650,6 @@
             // EditFileDialog
             // 
             this.EditFileDialog.FileName = "openFileDialog1";
-            // 
-            // EditModelLbl
-            // 
-            this.EditModelLbl.AutoSize = true;
-            this.EditModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditModelLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.EditModelLbl.Location = new System.Drawing.Point(12, 11);
-            this.EditModelLbl.Name = "EditModelLbl";
-            this.EditModelLbl.Size = new System.Drawing.Size(126, 25);
-            this.EditModelLbl.TabIndex = 58;
-            this.EditModelLbl.Text = "Placeholder";
             // 
             // MembersEditPanel
             // 

@@ -229,7 +229,7 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(1312, 90);
+            this.ApplySearchButton.Location = new System.Drawing.Point(1344, 90);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
@@ -262,7 +262,7 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1426, 90);
+            this.ClearButton.Location = new System.Drawing.Point(1458, 90);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
@@ -281,16 +281,16 @@
             // 
             this.TricycleGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.TricycleGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TricycleGrid.Location = new System.Drawing.Point(47, 134);
+            this.TricycleGrid.Location = new System.Drawing.Point(21, 134);
             this.TricycleGrid.Name = "TricycleGrid";
-            this.TricycleGrid.Size = new System.Drawing.Size(1482, 504);
+            this.TricycleGrid.Size = new System.Drawing.Size(1539, 504);
             this.TricycleGrid.TabIndex = 34;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1275, 13);
+            this.label6.Location = new System.Drawing.Point(1307, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 32;
@@ -300,7 +300,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1009, 13);
+            this.label4.Location = new System.Drawing.Point(1041, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 31;
@@ -310,7 +310,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(739, 13);
+            this.label5.Location = new System.Drawing.Point(771, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 20);
             this.label5.TabIndex = 30;
@@ -335,13 +335,13 @@
             this.ApplyearchButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.ApplyearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyearchButton.IsToggled = false;
-            this.ApplyearchButton.Location = new System.Drawing.Point(545, 93);
+            this.ApplyearchButton.Location = new System.Drawing.Point(543, 88);
             this.ApplyearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyearchButton.Name = "ApplyearchButton";
             this.ApplyearchButton.PaddingX = 0;
             this.ApplyearchButton.PaddingY = 0;
-            this.ApplyearchButton.Size = new System.Drawing.Size(115, 33);
+            this.ApplyearchButton.Size = new System.Drawing.Size(115, 35);
             this.ApplyearchButton.TabIndex = 28;
             this.ApplyearchButton.Text = "Search";
             this.ApplyearchButton.TextColor = System.Drawing.Color.White;
@@ -357,7 +357,7 @@
             this.StatusComboBox.Items.AddRange(new object[] {
             "Operational",
             "Unavailable"});
-            this.StatusComboBox.Location = new System.Drawing.Point(1275, 37);
+            this.StatusComboBox.Location = new System.Drawing.Point(1307, 37);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(250, 33);
@@ -367,7 +367,7 @@
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(1009, 37);
+            this.OrderComboBox.Location = new System.Drawing.Point(1041, 37);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
             this.OrderComboBox.Size = new System.Drawing.Size(250, 33);
@@ -377,7 +377,7 @@
             // 
             this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(739, 37);
+            this.MemberTypeComboBox.Location = new System.Drawing.Point(771, 37);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
             this.MemberTypeComboBox.Size = new System.Drawing.Size(250, 33);
@@ -387,7 +387,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 13);
+            this.label2.Location = new System.Drawing.Point(17, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 23;
@@ -398,9 +398,9 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Location = new System.Drawing.Point(45, 40);
+            this.panel6.Location = new System.Drawing.Point(21, 40);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(613, 41);
+            this.panel6.Size = new System.Drawing.Size(637, 41);
             this.panel6.TabIndex = 38;
             // 
             // SearchTextBox

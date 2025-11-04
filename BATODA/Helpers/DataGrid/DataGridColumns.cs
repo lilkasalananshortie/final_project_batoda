@@ -58,6 +58,28 @@ namespace BATODA.Helpers.DataGrids
             }
         }
 
+        public static void LoadTransferHistoryToGrid(DataGridView grid, DataTable table)
+        {
+            grid.DataSource = table;
+
+            grid.Columns["TransferID"].Visible = false;
+            grid.Columns["BodyNumber"].HeaderText = "Body Number";
+            grid.Columns["FullName"].HeaderText = "Owner Name";
+            grid.Columns["ProcessType"].HeaderText = "Process Type";
+            grid.Columns["ReasonForTransfer"].HeaderText = "Reason";
+            grid.Columns["DateTransferred"].HeaderText = "Date";
+
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            foreach (DataGridViewColumn col in grid.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
+
+
         public static void LoadTricyclesToGrid(DataGridView grid, DataTable table)
         {
             grid.DataSource = null;
