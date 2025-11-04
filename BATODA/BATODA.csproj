@@ -46,13 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Database\Tricycle\LoadTricycleTable.cs" />
+    <Compile Include="Helpers\DataGrid\DataGridColumns.cs" />
+    <Compile Include="Helpers\DataGrid\DataGridCustom.cs" />
     <Compile Include="Helpers\Database\Members\LoadBodyNumber.cs" />
     <Compile Include="Helpers\Database\Members\LoadOwnerImage.cs" />
     <Compile Include="Helpers\Database\Members\MemberInfoSummary.cs" />
     <Compile Include="Helpers\Database\Members\SelectedMemberImage.cs" />
     <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
-    <Compile Include="Helpers\DataGrids\DataGridColumns.cs" />
-    <Compile Include="Helpers\DataGrids\DataGridCustom.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberSort.cs" />
@@ -63,6 +64,9 @@
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferSearchOwner.cs" />
+    <Compile Include="Modules\Tricycle Module\Tricycle Classes\SearchTricycle.cs" />
+    <Compile Include="Modules\Tricycle Module\Tricycle Classes\TricycleModel.cs" />
+    <Compile Include="Modules\Tricycle Module\Tricycle Classes\TricycleRepository.cs" />
     <Compile Include="UI Displays\FontFamily.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
       <SubType>Form</SubType>
@@ -173,11 +177,11 @@
     <Compile Include="UI Displays\DisplayClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User Control Forms\RegisteredVehicleUForm.cs">
+    <Compile Include="User Control Forms\TricycleUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control Forms\RegisteredVehicleUForm.Designer.cs">
-      <DependentUpon>RegisteredVehicleUForm.cs</DependentUpon>
+    <Compile Include="User Control Forms\TricycleUForm.Designer.cs">
+      <DependentUpon>TricycleUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control Forms\SettingsUForm.cs">
       <SubType>UserControl</SubType>
@@ -273,8 +277,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="User Control Forms\RegisteredVehicleUForm.resx">
-      <DependentUpon>RegisteredVehicleUForm.cs</DependentUpon>
+    <EmbeddedResource Include="User Control Forms\TricycleUForm.resx">
+      <DependentUpon>TricycleUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\SettingsUForm.resx">
       <DependentUpon>SettingsUForm.cs</DependentUpon>

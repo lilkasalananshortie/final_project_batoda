@@ -15,12 +15,16 @@ namespace BATODA
         public AssistanceRequestUForm()
         {
             InitializeComponent();
-            ResultPanel.Hide();
-            
+
+            ConfirmationPanel.Hide();
+
 
 
         }
+        private void AssistanceRequestUForm_Load(object sender, EventArgs e)
+        {
 
+        }
         private void AssistanceHomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new AssistanceLogUForm());
@@ -36,22 +40,45 @@ namespace BATODA
             DisplayClass.ShowMain(new ARHUForm());
         }
 
-        private void AssistanceRequestUForm_Load(object sender, EventArgs e)
-        {
 
-        }
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            ResultPanel.Hide();
+
             SaveButton.Enabled = true;
 
         }
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            ResultPanel.Show();
-            ResultPanel.BringToFront();
+
             SaveButton.Enabled = false;
 
+        }
+
+        private void TicketConfirmButton_Click(object sender, EventArgs e)
+        {
+            ConfirmationPanel.Hide();
+        }
+        public void AddTicketBox()
+        {
+            Panel TicketBox = new Panel();
+            TicketBox.Size = new Size(250, 200);
+            TicketBox.BackColor = Color.LightGray;
+            TicketBox.BorderStyle = BorderStyle.FixedSingle;
+            TicketBox.Margin = new Padding(10);
+
+            Label TrackingNumber = new Label();
+            TrackingNumber.Text = "Tracking Number: SAMPLE";
+            TrackingNumber.Dock = DockStyle.Fill;
+            TrackingNumber.TextAlign = ContentAlignment.MiddleCenter;
+
+            TicketBox.Controls.Add(TrackingNumber);
+            TicketFlowLayoutPanel.Controls.Add(TicketBox);
+        }
+
+
+        private void CreateTicketPanel_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            AddTicketBox();
         }
     }
 }
