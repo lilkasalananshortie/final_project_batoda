@@ -1,0 +1,10 @@
+﻿CREATE TABLE TransferTricycleHistory (
+    TransferID INT IDENTITY(1000,1) PRIMARY KEY,
+    BodyNumber INT NOT NULL,
+    FullName VARCHAR(100) NOT NULL,
+    ProcessType VARCHAR(50) NOT NULL,
+    ReasonForTransfer VARCHAR(255),
+    DateTransferred DATE DEFAULT CAST(GETDATE() AS DATE);
+    CONSTRAINT FK_TransferTricycleHistory_MemberInfo
+        FOREIGN KEY (BodyNumber) REFERENCES MemberInfo(BodyNumber)
+);

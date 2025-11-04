@@ -36,9 +36,12 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TransferTricHistoryGrid = new System.Windows.Forms.DataGridView();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferTricHistoryGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -186,11 +189,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.TransferTricHistoryGrid);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(19, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1585, 642);
             this.panel1.TabIndex = 48;
+            // 
+            // TransferTricHistoryGrid
+            // 
+            this.TransferTricHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransferTricHistoryGrid.Location = new System.Drawing.Point(1, 0);
+            this.TransferTricHistoryGrid.Name = "TransferTricHistoryGrid";
+            this.TransferTricHistoryGrid.Size = new System.Drawing.Size(1582, 639);
+            this.TransferTricHistoryGrid.TabIndex = 3;
+            this.TransferTricHistoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // TransferRecordVehicleUForm
             // 
@@ -208,6 +221,8 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TransferTricHistoryGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,5 +237,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView TransferTricHistoryGrid;
     }
 }

@@ -63,8 +63,10 @@
     <Compile Include="Modules\Member Module\Member Classes\TransferLoadOwner.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryRepository.cs" />
-    <Compile Include="Modules\Member Module\Member Classes\TransferSearchOwner.cs" />
+    <Compile Include="Modules\Member Module\Member Classes\TransferMemberSearchOwner.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\SearchTricycle.cs" />
+    <Compile Include="Modules\Tricycle Module\Tricycle Classes\TransferTricLoadOwner.cs" />
+    <Compile Include="Modules\Tricycle Module\Tricycle Classes\TransferTricSearchOwner.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TricycleModel.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TricycleRepository.cs" />
     <Compile Include="UI Displays\FontFamily.cs" />
@@ -521,6 +523,7 @@
   <ItemGroup>
     <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
+    <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
     <None Include="Resources\chevron_12143821.png" />
     <None Include="Resources\BambangIUFBBTODA.png" />

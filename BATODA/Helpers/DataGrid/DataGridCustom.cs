@@ -25,6 +25,20 @@ namespace BATODA.Helpers.DataGrids
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            dgv.AllowUserToResizeRows = false;
+            dgv.AllowUserToResizeColumns = false;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgv.ColumnHeadersHeight = 40;
+
+            foreach (DataGridViewColumn col in dgv.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            // Make cells read-only
+            dgv.ReadOnly = true;
+
+
             dgv.DefaultCellStyle.BackColor = Color.White;
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 230, 230);
@@ -34,6 +48,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.Font = new Font("Microsoft Sans Serif", 18, FontStyle.Regular);
             dgv.RowTemplate.Height = 70;
             dgv.MultiSelect = false;
+
 
             dgv.EnableHeadersVisualStyles = false;
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(173, 46, 36);
@@ -191,6 +206,7 @@ namespace BATODA.Helpers.DataGrids
                     e.Handled = true;
                 }
             };
+
             dgv.NewRowNeeded += (s, e) =>
             {
                 if (dgv.Columns.Contains("Edit"))

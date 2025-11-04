@@ -180,8 +180,8 @@ namespace BATODA.Modules.MemberModule
                     cmd.Parameters.AddWithValue("@TaxBalance", member.TaxBalance);
                     cmd.Parameters.AddWithValue("@MemberStatus", member.MemberStatus);
                     cmd.Parameters.AddWithValue("@PenaltyLevel", member.PenaltyLevel);
-                    cmd.Parameters.AddWithValue("@SuspensionDays", 0);  // reset after transfer
-                    cmd.Parameters.AddWithValue("@DaysRemaining", 0);   // reset after transfer
+                    cmd.Parameters.AddWithValue("@SuspensionDays", 0);  
+                    cmd.Parameters.AddWithValue("@DaysRemaining", 0);   
                     cmd.Parameters.AddWithValue("@DateJoined", member.DateJoined);
 
 
