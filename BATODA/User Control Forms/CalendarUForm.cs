@@ -20,6 +20,11 @@ namespace BATODA
         public CalendarUForm()
         {
             InitializeComponent();
+
+            AddEventPanel.Hide();
+            CheckAttendancePanel.Hide();
+
+            
         }
 
         private void CalendarUForm_Load(object sender, EventArgs e)
@@ -93,6 +98,32 @@ namespace BATODA
             calendarDays();
         }
 
+        private void CancelEventButton_Click(object sender, EventArgs e)
+        {
+            AddEventPanel.Hide();
+        }
+
+        private void SaveEventButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckAttendanceButton_Click(object sender, EventArgs e)
+        {
+            CheckAttendancePanel.Show();
+            CheckAttendancePanel.BringToFront();
+        }
+
+        private void EditEventButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveAttendanceButton_Click(object sender, EventArgs e)
+        {
+            CheckAttendancePanel.Hide();
+        }
+
         private void previousButton_Click(object sender, EventArgs e)
         {
             DayContainer.Controls.Clear();
@@ -109,6 +140,6 @@ namespace BATODA
             calendarDays();
         }
 
-        
+       
     }
 }

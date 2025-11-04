@@ -21,6 +21,8 @@ namespace BATODA.User_Control_Forms
         public DaysUForm()
         {
             InitializeComponent();
+            this.Click += DaysUForm_Click;
+            this.DoubleClick += DaysUForm_DoubleClick;
         }
 
         private void DaysUForm_Load(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace BATODA.User_Control_Forms
         {
             lbDays.Text = daysCount.ToString();
             day = daysCount;
+
 
             int displayMonth = (customMonth != 0) ? customMonth : CalendarUForm.month;
             int displayYear = (customYear != 0) ? customYear : CalendarUForm.year;
@@ -63,6 +66,28 @@ namespace BATODA.User_Control_Forms
                     }
                 };
                 this.Invalidate();
+            }
+        }
+
+        private void DaysUForm_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void DaysUForm_DoubleClick(object sender, EventArgs e)
+        {
+            Control parent = this.Parent;
+
+            while (parent != null && !(parent is CalendarUForm))
+            {
+                parent = parent.Parent;
+            }
+
+            if (parent is CalendarUForm calendar)
+            {
+                calendar.   AddEventPanel.Visible = true;
+                calendar.AddEventPanel.BringToFront();
             }
         }
     }
