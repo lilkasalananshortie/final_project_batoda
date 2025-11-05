@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace BATODA
 
             TextStatusPanel.Show();
             TextStatusPanel.BringToFront();
+            NonMemberSelectedPanel.Hide();
 
         }
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
@@ -61,76 +63,151 @@ namespace BATODA
         public void AddTicketBox()
         {
             Panel TicketBox = new Panel();
-            TicketBox.Size = new Size(250, 200);
+            TicketBox.Size = new Size(280, 220);
             TicketBox.BackColor = Color.LightGray;
             TicketBox.BorderStyle = BorderStyle.FixedSingle;
             TicketBox.Margin = new Padding(10);
             TicketBox.Cursor = Cursors.Hand;
+           
 
-            Label TrackingNumber = new Label();
-            TrackingNumber.Text = "Tracking Number: SAMPLE";
-            TrackingNumber.Dock = DockStyle.Top;
-            TrackingNumber.Height = 40;
-            TrackingNumber.TextAlign = ContentAlignment.MiddleCenter;
-            TicketBox.Controls.Add(TrackingNumber);
+            TicketBox.Tag = false;
+            int y = 10;
+
+            Label lblTracking = new Label()
+            {
+                Text = "Tracking Number: SAMPLE",
+                Location = new Point(10, y),
+                AutoSize = true,
+                Font = new Font("Segoe UI", 9, FontStyle.Bold)
+            };
+            y += 25;
+
+            PictureBox picMember = new PictureBox()
+            {
+                Location = new Point(10, y),
+                Size = new Size(80, 80),
+                BorderStyle = BorderStyle.FixedSingle,
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                BackColor = Color.LightGray
+            };
+
+            Label lblName = new Label()
+            {
+                Text = "Full Name: Mhaku Jose Manalili",
+                Location = new Point(100, y + 5),
+                AutoSize = true
+            };
+            y += 25;
+
+            Label lblAid = new Label()
+            {
+                Text = "Type of Aid: Medical",
+                Location = new Point(100, y + 25),
+                AutoSize = true
+            };
+            y += 25;
+
+            Label lblDate = new Label()
+            {
+                Text = "Date Requested: 2025-11-05",
+                Location = new Point(100, y + 45),
+                AutoSize = true
+            };
 
             
+            Label lblRequestedBy = new Label()
+            {
+                Text = "Requested by: Member blah blah",
+                Location = new Point(10, 150),
+                AutoSize = true,
+                Tag = "ExpandInfo",
+                Visible = false
+            };
+
+            Label lblAmount = new Label()
+            {
+                Text = "Amount: ₱1000",
+                Location = new Point(10, 175),
+                AutoSize = true,
+                Tag = "ExpandInfo",
+                Visible = false
+            };
+
+            Label lblAssistanceThru = new Label()
+            {
+                Text = "Assistance Thru: Cash",
+                Location = new Point(10, 200),
+                AutoSize = true,
+                Tag = "ExpandInfo",
+                Visible = false
+            };
+
+            Label lblContactNum = new Label()
+            {
+                Text = "Contact Num: 09123456789",
+                Location = new Point(10, 225),
+                AutoSize = true,
+                Tag = "ExpandInfo",
+                Visible = false
+            };
+
+            Button approveBtn = new Button()
+            {
+                Text = "Approve",
+                Size = new Size(100, 35),
+                Location = new Point(20, 260),
+                Visible = false,
+                Tag = "ExpandInfo"
+            };
+
+            Button rejectBtn = new Button()
+            {
+                Text = "Reject",
+                Size = new Size(100, 35),
+                Location = new Point(130, 260),
+                Visible = false,
+                Tag = "ExpandInfo"
+            };
+
+            TicketBox.Controls.Add(lblTracking);
+            TicketBox.Controls.Add(picMember);
+            TicketBox.Controls.Add(lblName);
+            TicketBox.Controls.Add(lblAid);
+            TicketBox.Controls.Add(lblDate);
+            TicketBox.Controls.Add(lblRequestedBy);
+            TicketBox.Controls.Add(lblAmount);
+            TicketBox.Controls.Add(lblAssistanceThru);
+            TicketBox.Controls.Add(lblContactNum);
+            TicketBox.Controls.Add(approveBtn);
+            TicketBox.Controls.Add(rejectBtn);
+
             TicketBox.Click += TicketBox_Click;
 
             TicketFlowLayoutPanel.Controls.Add(TicketBox);
         }
+
         private void TicketBox_Click(object sender, EventArgs e)
         {
             Panel panel = sender as Panel;
             if (panel == null) return;
 
+            bool isExpanded = (bool)panel.Tag;
+            isExpanded = !isExpanded;
+            panel.Tag = isExpanded;
 
-            if (panel.Height > 200)
+            panel.Height = isExpanded ? 320 : 220;
+
+            
+            foreach (Control control in panel.Controls)
             {
-                panel.Height = 200;
-                panel.Controls.Clear();
-
-                Label TrackingNumber = new Label();
-                TrackingNumber.Text = "Tracking Number: SAMPLE";
-                TrackingNumber.Dock = DockStyle.Top;
-                TrackingNumber.Height = 40;
-                TrackingNumber.TextAlign = ContentAlignment.MiddleCenter;
-                panel.Controls.Add(TrackingNumber);
-                return;
+                if (control.Tag != null && control.Tag.ToString() == "ExpandInfo")
+                {
+                    control.Visible = isExpanded;
+                }
             }
-
-
-            panel.Height = 300;
-            panel.Controls.Clear();
-
-
-            Label info = new Label();
-            info.Text = "Tracking Number: SAMPLE";
-            info.Dock = DockStyle.Top;
-            info.Height = 40;
-            info.TextAlign = ContentAlignment.MiddleCenter;
-
-            Label name = new Label();
-            name.Text = "Name: SAMPLE NAME";
-            name.Dock = DockStyle.Top;
-            name.Height = 50;
-            name.TextAlign = ContentAlignment.MiddleCenter;
-
-            Button approveBtn = new Button();
-            approveBtn.Text = "Approve";
-            approveBtn.Size = new Size(100, 40);
-            approveBtn.Location = new Point(20, 250);
-
-            Button rejectBtn = new Button();
-            rejectBtn.Text = "Reject";
-            rejectBtn.Size = new Size(100, 40);
-            rejectBtn.Location = new Point(130, 250);
-
-            panel.Controls.Add(name);
-            panel.Controls.Add(approveBtn);
-            panel.Controls.Add(rejectBtn);
-            panel.Controls.Add(info);
         }
+
+
 
 
         private void CreateTicketPanel_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -168,5 +245,13 @@ namespace BATODA
         {
             DisplayClass.ClearInputs(this);
         }
+
+        private void RequestedByComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = RequestedByComboBox.SelectedItem?.ToString();
+            NonMemberSelectedPanel.Visible = selectedItem != "Member";
+        }
+
+       
     }
 }
