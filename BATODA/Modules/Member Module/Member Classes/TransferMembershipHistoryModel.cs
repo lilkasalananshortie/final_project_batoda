@@ -14,5 +14,6 @@ namespace BATODA.Modules.Member_Module.Member_Classes
         public string NewOwnerFullName { get; set; }
         public string ReasonForTransfer { get; set; }
         public DateTime DateOfTransfer { get; set; }
+
     }
 }

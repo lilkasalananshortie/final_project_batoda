@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Tricycle_Module.Tricycle_Classes;
 
 namespace BATODA
 {
@@ -15,8 +17,19 @@ namespace BATODA
         public TransferRecordVehicleUForm()
         {
             InitializeComponent();
-
+            LoadTransferHistoryToGrid();
         }
+
+        private void LoadTransferHistoryToGrid()
+        {
+            TricycleRepository repo = new TricycleRepository();
+            DataTable history = repo.LoadTransferHistory();
+            TransferTricHistoryGrid.DataSource = history;
+
+            DataGridColumns.LoadTransferHistoryToGrid(TransferTricHistoryGrid, history);
+            DataGridCustom.ApplyCustomGrid(TransferTricHistoryGrid);
+        }
+
         private void TransferRecordVehicleUForm_Load(object sender, EventArgs e)
         {
             
@@ -37,6 +50,9 @@ namespace BATODA
             DisplayClass.ShowMain(new TransferRecordVehicleUForm());
         }
 
-      
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

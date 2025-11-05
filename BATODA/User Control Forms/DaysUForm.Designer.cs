@@ -46,9 +46,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lbDays);
             this.Name = "DaysUForm";
-            this.Size = new System.Drawing.Size(161, 119);
+            this.Size = new System.Drawing.Size(159, 117);
             this.Load += new System.EventHandler(this.DaysUForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

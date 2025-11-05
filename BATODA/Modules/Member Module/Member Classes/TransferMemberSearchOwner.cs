@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BATODA.Modules.Member_Module.Member_Classes
 {
-    internal class TransferSearchOwner
+    public class TransferMemberSearchOwner
     {
         private static readonly string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True";
         public void SearchOwner(TextBox OwnerSearchTxt, DataGridView OwnerSearchGrid)

@@ -29,17 +29,16 @@ namespace BATODA
             List<TricycleModel> tricycles = repo.GetAllTricycles();
 
             DataTable table = new DataTable();
-            table.Columns.Add("BodyNumber");
-            table.Columns.Add("LastName");
-            table.Columns.Add("FirstName");
-            table.Columns.Add("TricycleBrand");
-            table.Columns.Add("TricModel");
-            table.Columns.Add("PlateNumber");
-            table.Columns.Add("EngineNumber");
-            table.Columns.Add("ChassisNumber");
+            table.Columns.Add("Body No.");
+            table.Columns.Add("Last Name");
+            table.Columns.Add("First Name");
+            table.Columns.Add("Brand");
+            table.Columns.Add("Model");
+            table.Columns.Add("Plate No.");
+            table.Columns.Add("Engine No.");
+            table.Columns.Add("Chassis No.");
             table.Columns.Add("Availability");
 
-            // Fill rows
             foreach (var t in tricycles)
             {
                 table.Rows.Add(
@@ -51,15 +50,18 @@ namespace BATODA
                     t.PlateNumber,
                     t.EngineNumber,
                     t.ChassisNumber,
-                    t.Availability 
+                    t.Availability
                 );
             }
 
             TricycleGrid.DataSource = table;
             DataGridCustom.AddEditButtonOnly(TricycleGrid);
+
+            foreach (DataGridViewColumn col in TricycleGrid.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
-
-
 
         private void RegisteredVehicleUForm_Load(object sender, EventArgs e)
         {

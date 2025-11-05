@@ -121,7 +121,7 @@ namespace BATODA
             if (e.KeyCode == Keys.Enter)
             {
                 OwnerSearchGrid.Visible = true;
-                TransferSearchOwner search = new TransferSearchOwner();
+                TransferMemberSearchOwner search = new TransferMemberSearchOwner();
                 search.SearchOwner(OwnerSearchTxt, OwnerSearchGrid);
                 OwnerSearchGrid.Focus();
                 e.SuppressKeyPress = true;
