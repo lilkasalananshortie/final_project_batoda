@@ -30,7 +30,6 @@
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
             this.ARHButton = new BATODA.ButtonStyle();
-            this.AssistanceHomeButton = new BATODA.ButtonStyle();
             this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -46,7 +45,6 @@
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.ARHButton);
-            this.MembersTopPanel.Controls.Add(this.AssistanceHomeButton);
             this.MembersTopPanel.Controls.Add(this.AssistanceRequestButton);
             this.MembersTopPanel.Location = new System.Drawing.Point(14, 14);
             this.MembersTopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -72,13 +70,13 @@
             this.ARHButton.ImagePosition = new System.Drawing.Point(95, 0);
             this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
             this.ARHButton.IsToggled = false;
-            this.ARHButton.Location = new System.Drawing.Point(1065, 5);
+            this.ARHButton.Location = new System.Drawing.Point(771, 5);
             this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.ARHButton.Name = "ARHButton";
             this.ARHButton.PaddingX = 0;
             this.ARHButton.PaddingY = 0;
-            this.ARHButton.Size = new System.Drawing.Size(525, 49);
+            this.ARHButton.Size = new System.Drawing.Size(819, 49);
             this.ARHButton.TabIndex = 21;
             this.ARHButton.Text = "Approved Request History";
             this.ARHButton.TextColor = System.Drawing.Color.Black;
@@ -86,39 +84,6 @@
             this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
             this.ARHButton.UseVisualStyleBackColor = false;
             this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
-            // 
-            // AssistanceHomeButton
-            // 
-            this.AssistanceHomeButton.BackColor = System.Drawing.Color.White;
-            this.AssistanceHomeButton.BackgroundColor = System.Drawing.Color.White;
-            this.AssistanceHomeButton.BorderColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.BorderRadius = 0;
-            this.AssistanceHomeButton.BorderSize = 1;
-            this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
-            this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
-            this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.AssistanceHomeButton.HoverColor = System.Drawing.Color.Silver;
-            this.AssistanceHomeButton.ImageColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(117, 0);
-            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.AssistanceHomeButton.IsToggled = false;
-            this.AssistanceHomeButton.Location = new System.Drawing.Point(5, 5);
-            this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceHomeButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.AssistanceHomeButton.Name = "AssistanceHomeButton";
-            this.AssistanceHomeButton.PaddingX = 0;
-            this.AssistanceHomeButton.PaddingY = 0;
-            this.AssistanceHomeButton.Size = new System.Drawing.Size(525, 49);
-            this.AssistanceHomeButton.TabIndex = 20;
-            this.AssistanceHomeButton.Text = "Assistance Dashboard";
-            this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.TextOffset = 20;
-            this.AssistanceHomeButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.UseVisualStyleBackColor = false;
-            this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
             // 
             // AssistanceRequestButton
             // 
@@ -138,13 +103,13 @@
             this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(145, 0);
             this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
             this.AssistanceRequestButton.IsToggled = false;
-            this.AssistanceRequestButton.Location = new System.Drawing.Point(535, 5);
+            this.AssistanceRequestButton.Location = new System.Drawing.Point(4, 5);
             this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.AssistanceRequestButton.Name = "AssistanceRequestButton";
             this.AssistanceRequestButton.PaddingX = 0;
             this.AssistanceRequestButton.PaddingY = 0;
-            this.AssistanceRequestButton.Size = new System.Drawing.Size(525, 49);
+            this.AssistanceRequestButton.Size = new System.Drawing.Size(761, 49);
             this.AssistanceRequestButton.TabIndex = 19;
             this.AssistanceRequestButton.Text = "Assistance Request";
             this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
@@ -214,7 +179,6 @@
         #endregion
         private System.Windows.Forms.Panel MembersTopPanel;
         private ButtonStyle ARHButton;
-        private ButtonStyle AssistanceHomeButton;
         private ButtonStyle AssistanceRequestButton;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox7;

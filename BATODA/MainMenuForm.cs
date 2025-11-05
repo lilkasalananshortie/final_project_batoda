@@ -120,7 +120,7 @@ namespace BATODA
         private void AssistanceLogButton_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Assistance"); 
-            DisplayClass.ShowMain(new AssistanceLogUForm());
+            DisplayClass.ShowMain(new AssistanceRequestUForm());
             TopPanelText.Text = "MANAGE ASSISTANCE";
         }
         private void FinanceButton_Click(object sender, EventArgs e)

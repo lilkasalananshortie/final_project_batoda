@@ -30,7 +30,6 @@
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
             this.ARHButton = new BATODA.ButtonStyle();
-            this.AssistanceHomeButton = new BATODA.ButtonStyle();
             this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -64,6 +63,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.AssistanceHomeButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -125,39 +125,6 @@
             this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
             this.ARHButton.UseVisualStyleBackColor = false;
             this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
-            // 
-            // AssistanceHomeButton
-            // 
-            this.AssistanceHomeButton.BackColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.BorderColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.BorderRadius = 0;
-            this.AssistanceHomeButton.BorderSize = 1;
-            this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
-            this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
-            this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.AssistanceHomeButton.HoverColor = System.Drawing.Color.Silver;
-            this.AssistanceHomeButton.ImageColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(117, 0);
-            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.AssistanceHomeButton.IsToggled = false;
-            this.AssistanceHomeButton.Location = new System.Drawing.Point(5, 5);
-            this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceHomeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.AssistanceHomeButton.Name = "AssistanceHomeButton";
-            this.AssistanceHomeButton.PaddingX = 0;
-            this.AssistanceHomeButton.PaddingY = 0;
-            this.AssistanceHomeButton.Size = new System.Drawing.Size(525, 49);
-            this.AssistanceHomeButton.TabIndex = 20;
-            this.AssistanceHomeButton.Text = "Assistance Dashboard";
-            this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceHomeButton.TextOffset = 20;
-            this.AssistanceHomeButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.AssistanceHomeButton.UseVisualStyleBackColor = false;
-            this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
             // 
             // AssistanceRequestButton
             // 
@@ -439,7 +406,7 @@
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Location = new System.Drawing.Point(1189, 93);
+            this.panel5.Location = new System.Drawing.Point(1189, 97);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(350, 150);
             this.panel5.TabIndex = 30;
@@ -485,7 +452,7 @@
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(821, 93);
+            this.panel4.Location = new System.Drawing.Point(821, 97);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(350, 150);
             this.panel4.TabIndex = 29;
@@ -531,7 +498,7 @@
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Location = new System.Drawing.Point(453, 93);
+            this.panel3.Location = new System.Drawing.Point(453, 97);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(350, 150);
             this.panel3.TabIndex = 28;
@@ -577,7 +544,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(84, 93);
+            this.panel2.Location = new System.Drawing.Point(84, 97);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(350, 150);
             this.panel2.TabIndex = 27;
@@ -615,6 +582,39 @@
             this.label4.Size = new System.Drawing.Size(126, 24);
             this.label4.TabIndex = 48;
             this.label4.Text = "Total Request";
+            // 
+            // AssistanceHomeButton
+            // 
+            this.AssistanceHomeButton.BackColor = System.Drawing.Color.LightGray;
+            this.AssistanceHomeButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.AssistanceHomeButton.BorderColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.BorderRadius = 0;
+            this.AssistanceHomeButton.BorderSize = 1;
+            this.AssistanceHomeButton.ButtonImage = global::BATODA.Properties.Resources.pending_assistance;
+            this.AssistanceHomeButton.FlatAppearance.BorderSize = 0;
+            this.AssistanceHomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AssistanceHomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceHomeButton.ForeColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.AssistanceHomeButton.HoverColor = System.Drawing.Color.Silver;
+            this.AssistanceHomeButton.ImageColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.ImagePosition = new System.Drawing.Point(117, 0);
+            this.AssistanceHomeButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.AssistanceHomeButton.IsToggled = false;
+            this.AssistanceHomeButton.Location = new System.Drawing.Point(5, 5);
+            this.AssistanceHomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AssistanceHomeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.AssistanceHomeButton.Name = "AssistanceHomeButton";
+            this.AssistanceHomeButton.PaddingX = 0;
+            this.AssistanceHomeButton.PaddingY = 0;
+            this.AssistanceHomeButton.Size = new System.Drawing.Size(525, 49);
+            this.AssistanceHomeButton.TabIndex = 20;
+            this.AssistanceHomeButton.Text = "Assistance Dashboard";
+            this.AssistanceHomeButton.TextColor = System.Drawing.Color.Black;
+            this.AssistanceHomeButton.TextOffset = 20;
+            this.AssistanceHomeButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.AssistanceHomeButton.UseVisualStyleBackColor = false;
+            this.AssistanceHomeButton.Click += new System.EventHandler(this.AssistanceHomeButton_Click);
             // 
             // AssistanceLogUForm
             // 
@@ -659,7 +659,6 @@
         #endregion
         private System.Windows.Forms.Panel MembersTopPanel;
         private ButtonStyle ARHButton;
-        private ButtonStyle AssistanceHomeButton;
         private ButtonStyle AssistanceRequestButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
@@ -693,5 +692,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private ButtonStyle AssistanceHomeButton;
     }
 }
