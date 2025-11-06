@@ -377,5 +377,10 @@ namespace BATODA
         {
 
         }
+
+        private void CreateTicketPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
