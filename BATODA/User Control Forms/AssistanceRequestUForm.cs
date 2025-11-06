@@ -327,5 +327,55 @@ namespace BATODA
         {
 
         }
+
+        private void FillUpFormPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel27_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmationPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BodyNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TicketFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Cerate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FillUpFormPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
