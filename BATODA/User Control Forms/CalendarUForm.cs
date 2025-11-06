@@ -212,7 +212,6 @@ namespace BATODA
             CalendarEvent ev = clickedPanel.Tag as CalendarEvent;
             if (ev == null) return;
 
-            // Collapse others first
             foreach (Control ctrl in EventsOverviewFlowLayoutPanel.Controls)
             {
                 if (ctrl is Panel pnl && pnl != clickedPanel && pnl.Height > 70)
@@ -260,7 +259,7 @@ namespace BATODA
                 Tag = "Expanded"
             };
 
-            // Align buttons to the right bottom corner
+           
             int marginRight = 20;
             int marginBottom = 15;
             btnCancel.Location = new Point(clickedPanel.Width - btnCancel.Width - marginRight, clickedPanel.Height - btnCancel.Height - marginBottom);
@@ -324,7 +323,7 @@ namespace BATODA
             panel.Controls.Add(lblInfo);
             panel.Controls.Add(lblDate);
 
-            // Insert new completed events on top
+          
             PastEventFlowLayoutPanel.Controls.Add(panel);
             PastEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
         }

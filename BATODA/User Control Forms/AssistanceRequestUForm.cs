@@ -73,13 +73,24 @@ namespace BATODA
 
             int y = 10;
 
+            Panel HeaderPanel = new Panel()
+            {
+                Size = new Size(298, 30),
+                Location = new Point(1, 1),
+                BackColor = Color.LightGray
+            };
+
             Label lblTracking = new Label()
             {
                 Text = "Tracking Number: SAMPLE",
-                Location = new Point(10, y),
+                Location = new Point(10, 7),
                 AutoSize = true,
                 Font = new Font("Segoe UI", 9, FontStyle.Bold)
+
             };
+            HeaderPanel.Controls.Add(lblTracking);
+
+           
             y += 25;
 
             PictureBox picMember = new PictureBox()
@@ -115,8 +126,16 @@ namespace BATODA
                 AutoSize = true
             };
 
-            
-            int expandY = picMember.Bottom + 8;
+            Label lblStatus = new Label()
+            {
+                Text = "Status: Pending",
+                Location = new Point(rightX, y + 80),
+                AutoSize = true,
+                
+            };
+
+
+            int expandY = picMember.Bottom + 19;
 
             Label lblRequestedBy = new Label()
             {
@@ -151,16 +170,6 @@ namespace BATODA
             Label lblContactNum = new Label()
             {
                 Text = "Contact Num: 09123456789",
-                Location = new Point(10, expandY),
-                AutoSize = true,
-                Tag = "ExpandInfo",
-                Visible = false
-            };
-            expandY += 22;
-
-            Label lblStatus = new Label()
-            {
-                Text = "Status: Pending",
                 Location = new Point(10, expandY),
                 AutoSize = true,
                 Tag = "ExpandInfo",
@@ -205,7 +214,54 @@ namespace BATODA
                 Tag = "ExpandInfo"
             };
 
-            
+            Button releaseBtn = new Button()
+            {
+                Text = "Release",
+                Size = new Size(80, 30),
+                Location = new Point(200, 260),
+                Visible = false,
+                
+            };
+
+            approveBtn.Click += (s, e) =>
+            {
+                Panel parent = ((Button)s).Parent as Panel;
+                HeaderPanel.BackColor = Color.LightGreen;
+                lblTracking.BringToFront();
+                lblTracking.BackColor = Color.LightGreen;
+                lblStatus.Text = "Status: Approved";
+                releaseBtn.Visible = true;
+                releaseBtn.Show();
+                approveBtn.Hide();
+                cancelBtn.Hide();
+                rejectBtn.Hide();
+
+            };
+
+            rejectBtn.Click += (s, e) =>
+            {
+                Panel parent = ((Button)s).Parent as Panel;
+                HeaderPanel.BackColor = Color.LightCoral;
+                lblTracking.BackColor = Color.LightCoral;
+                lblTracking.BringToFront();
+                lblStatus.Text = "Status: Rejected";
+            };
+
+            cancelBtn.Click += (s, e) =>
+            {
+                Panel parent = ((Button)s).Parent as Panel;
+                HeaderPanel.BackColor = Color.LightGray;
+                lblTracking.BackColor = Color.LightGray;
+                lblTracking.BringToFront();
+                lblStatus.Text = "Status: Canceled";
+            };
+
+            releaseBtn.Click += (s, e) =>
+            {
+                Panel parent = ((Button)s).Parent as Panel;
+                parent.Hide();
+            };
+            TicketBox.Controls.Add(HeaderPanel);
             TicketBox.Controls.Add(lblTracking);
             TicketBox.Controls.Add(picMember);
             TicketBox.Controls.Add(lblName);
@@ -220,6 +276,10 @@ namespace BATODA
             TicketBox.Controls.Add(approveBtn);
             TicketBox.Controls.Add(rejectBtn);
             TicketBox.Controls.Add(cancelBtn);
+            TicketBox.Controls.Add(releaseBtn);
+
+            lblTracking.BringToFront();
+            lblTracking.BackColor = Color.LightGray;
 
             TicketBox.Click += TicketBox_Click;
 
@@ -410,6 +470,11 @@ namespace BATODA
         }
 
         private void FillUpFormPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TicketFlowLayoutPanel_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
