@@ -525,6 +525,8 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\circle %281%29.png" />
+    <None Include="Resources\circle.png" />
     <None Include="Resources\chevron_12143821.png" />
     <None Include="Resources\BambangIUFBBTODA.png" />
     <None Include="Resources\10c6a328-a614-491f-8faf-c210e2039674.jpg" />

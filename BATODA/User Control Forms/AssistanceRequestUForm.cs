@@ -23,6 +23,10 @@ namespace BATODA
             TextStatusPanel.BringToFront();
             NonMemberSelectedPanel.Hide();
 
+
+            StyleDataGrid(AssistanceLogDataGrid);
+            LoadSampleLogs();
+
         }
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
@@ -30,7 +34,11 @@ namespace BATODA
             DisplayClass.SetPlaceholder(AidTypeComboBox,"Select Aid Type");
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(SortComboBox, "Date");
+
+
         }
+
+
         private void AssistanceHomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new AssistanceLogUForm());
@@ -47,13 +55,6 @@ namespace BATODA
         }
 
 
-        private void ConfirmButton_Click(object sender, EventArgs e)
-        {
-
-           
-
-        }
-       
 
         private void TicketConfirmButton_Click(object sender, EventArgs e)
         {
@@ -64,9 +65,9 @@ namespace BATODA
         {
             Panel TicketBox = new Panel();
             TicketBox.Size = new Size(280, 220);
-            TicketBox.BackColor = Color.LightGray;
+            TicketBox.BackColor = Color.White;
             TicketBox.BorderStyle = BorderStyle.FixedSingle;
-            TicketBox.Margin = new Padding(10);
+            TicketBox.Margin = new Padding(5);
             TicketBox.Cursor = Cursors.Hand;
            
 
@@ -226,20 +227,7 @@ namespace BATODA
             ConfirmationPanel.BringToFront();
             FillUpFormPanel.Hide();
         }
-        
 
-
-
-        private void BodyNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
-        private void TicketFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
@@ -252,6 +240,92 @@ namespace BATODA
             NonMemberSelectedPanel.Visible = selectedItem != "Member";
         }
 
-       
+
+        private void StyleDataGrid(DataGridView dgv)
+        {
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersVisible = false;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.ReadOnly = true;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.BackgroundColor = Color.WhiteSmoke;
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgv.BorderStyle = BorderStyle.FixedSingle;
+
+            // ✅ Main style
+            dgv.DefaultCellStyle = new DataGridViewCellStyle
+            {
+                Font = new Font("Segoe UI", 9.5f),
+                ForeColor = Color.FromArgb(40, 40, 40),
+                BackColor = Color.White,
+                Padding = new Padding(12, 10, 12, 10),
+                SelectionBackColor = Color.White,
+                SelectionForeColor = Color.Black,
+                WrapMode = DataGridViewTriState.True
+            };
+
+            dgv.RowTemplate.DefaultCellStyle = dgv.DefaultCellStyle;
+            dgv.RowTemplate.Height = 80;
+
+
+            //  Custom Log UI
+            dgv.CellPainting += (s, e) =>
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    e.PaintBackground(e.CellBounds, true);
+                    e.PaintContent(e.CellBounds);
+
+                    Rectangle rect = e.CellBounds;
+                    rect.Inflate(-1, -1);
+
+                    using (Pen borderPen = new Pen(Color.LightGray, 1))
+                        e.Graphics.DrawRectangle(borderPen, rect);
+
+                    e.Handled = true;
+                }
+            };
+
+            // padding between rows
+            dgv.RowPostPaint += (s, e) =>
+            {
+                using (Brush brush = new SolidBrush(dgv.BackgroundColor))
+                {
+                    e.Graphics.FillRectangle(brush,
+                        new Rectangle(0, e.RowBounds.Bottom, dgv.Width, 8));
+                }
+            };
+        }
+
+        private void LoadSampleLogs()
+        {
+            AssistanceLogDataGrid.Columns.Clear();
+            AssistanceLogDataGrid.Rows.Clear();
+            AssistanceLogDataGrid.Columns.Add("Message", "Message");
+
+            AssistanceLogDataGrid.Rows.Add(
+                "🕒  ASSISTANCE_REQUEST_ADD\nNew assistance request submitted for ₱0.03.\nNov 5, 10:39 PM"
+            );
+            AssistanceLogDataGrid.Rows.Add(
+                "🕒  ASSISTANCE_REQUEST_UPDATE\nAssistance request details updated.\nNov 5, 10:32 PM"
+            );
+            AssistanceLogDataGrid.Rows.Add(
+                "🕒  ASSISTANCE_REQUEST_APPROVED\nAssistance request approved successfully.\nNov 5, 10:27 PM"
+            );
+            AssistanceLogDataGrid.Rows.Add(
+                "🕒  ASSISTANCE_REQUEST_DECLINED\nAssistance request declined for amount ₱0.\nNov 5, 10:24 PM"
+            );
+
+            AssistanceLogDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void AssistanceLogDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

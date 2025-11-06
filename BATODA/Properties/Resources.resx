@@ -151,8 +151,8 @@
   <data name="descending" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="total_paid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\total paid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Add_Image_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sadasdasdasdasdasd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="brand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,17 +175,14 @@
   <data name="add_event" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add event.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transfer_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transfer_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="filter_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filter off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="due" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\due.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add_Image_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sadasdasdasdasdasd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="total_paid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\total paid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Request_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Request icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +217,8 @@
   <data name="actuvity_log" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actuvity_log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="assistance_log_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assistance log nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="decline_request" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\decline request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,6 +238,9 @@
   <data name="ascending" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ascending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="overdue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\overdue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="paid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -252,6 +252,9 @@
   </data>
   <data name="transfer-data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transfer-data.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="total_request" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\total request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="up_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\up-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,8 +274,8 @@
   <data name="active_member" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\active member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="total_request" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\total request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="transfer_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="members_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\members nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -282,6 +285,9 @@
   </data>
   <data name="tab_members_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tab members icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pictures\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,14 +307,11 @@
   <data name="change_vehicle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\change vehicle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="assistance_log_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assistance log nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tricycle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tricycle icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,10 +337,13 @@
   <data name="down_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\down-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="overdue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\overdue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="chevron_12143821" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chevron_12143821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circle (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
