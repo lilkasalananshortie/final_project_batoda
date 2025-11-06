@@ -64,14 +64,13 @@ namespace BATODA
         public void AddTicketBox()
         {
             Panel TicketBox = new Panel();
-            TicketBox.Size = new Size(280, 220);
+            TicketBox.Size = new Size(300, 150);
             TicketBox.BackColor = Color.White;
             TicketBox.BorderStyle = BorderStyle.FixedSingle;
             TicketBox.Margin = new Padding(5);
             TicketBox.Cursor = Cursors.Hand;
-           
-
             TicketBox.Tag = false;
+
             int y = 10;
 
             Label lblTracking = new Label()
@@ -92,71 +91,98 @@ namespace BATODA
                 BackColor = Color.LightGray
             };
 
+            
+            int rightX = picMember.Right + 10;
+
             Label lblName = new Label()
             {
                 Text = "Full Name: Mhaku Jose Manalili",
-                Location = new Point(100, y + 5),
+                Location = new Point(rightX, y + 5),
                 AutoSize = true
             };
-            y += 25;
 
             Label lblAid = new Label()
             {
                 Text = "Type of Aid: Medical",
-                Location = new Point(100, y + 25),
+                Location = new Point(rightX, y + 30),
                 AutoSize = true
             };
-            y += 25;
 
             Label lblDate = new Label()
             {
                 Text = "Date Requested: 2025-11-05",
-                Location = new Point(100, y + 45),
+                Location = new Point(rightX, y + 55),
                 AutoSize = true
             };
 
             
+            int expandY = picMember.Bottom + 8;
+
             Label lblRequestedBy = new Label()
             {
                 Text = "Requested by: Member blah blah",
-                Location = new Point(10, 150),
+                Location = new Point(10, expandY),
                 AutoSize = true,
                 Tag = "ExpandInfo",
                 Visible = false
             };
+            expandY += 22;
 
             Label lblAmount = new Label()
             {
                 Text = "Amount: ₱1000",
-                Location = new Point(10, 175),
+                Location = new Point(10, expandY),
                 AutoSize = true,
                 Tag = "ExpandInfo",
                 Visible = false
             };
+            expandY += 22;
 
             Label lblAssistanceThru = new Label()
             {
                 Text = "Assistance Thru: Cash",
-                Location = new Point(10, 200),
+                Location = new Point(10, expandY),
                 AutoSize = true,
                 Tag = "ExpandInfo",
                 Visible = false
             };
+            expandY += 22;
 
             Label lblContactNum = new Label()
             {
                 Text = "Contact Num: 09123456789",
-                Location = new Point(10, 225),
+                Location = new Point(10, expandY),
                 AutoSize = true,
                 Tag = "ExpandInfo",
                 Visible = false
             };
+            expandY += 22;
+
+            Label lblStatus = new Label()
+            {
+                Text = "Status: Pending",
+                Location = new Point(10, expandY),
+                AutoSize = true,
+                Tag = "ExpandInfo",
+                Visible = false
+            };
+            expandY += 22;
+
+            Label dateNeeded = new Label()
+            {
+                Text = "Date Needed: SAMPLE",
+                Location = new Point(10, expandY),
+                AutoSize = true,
+                Tag = "ExpandInfo",
+                Visible = false
+            };
+            expandY += 34;
 
             Button approveBtn = new Button()
             {
                 Text = "Approve",
-                Size = new Size(100, 35),
-                Location = new Point(20, 260),
+                Size = new Size(80, 30),
+                Location = new Point(10, expandY),
                 Visible = false,
                 Tag = "ExpandInfo"
             };
@@ -164,12 +190,22 @@ namespace BATODA
             Button rejectBtn = new Button()
             {
                 Text = "Reject",
-                Size = new Size(100, 35),
-                Location = new Point(130, 260),
+                Size = new Size(80, 30),
+                Location = new Point(105, expandY),
                 Visible = false,
                 Tag = "ExpandInfo"
             };
 
+            Button cancelBtn = new Button()
+            {
+                Text = "Cancel",
+                Size = new Size(80, 30),
+                Location = new Point(200, expandY),
+                Visible = false,
+                Tag = "ExpandInfo"
+            };
+
+            
             TicketBox.Controls.Add(lblTracking);
             TicketBox.Controls.Add(picMember);
             TicketBox.Controls.Add(lblName);
@@ -179,8 +215,11 @@ namespace BATODA
             TicketBox.Controls.Add(lblAmount);
             TicketBox.Controls.Add(lblAssistanceThru);
             TicketBox.Controls.Add(lblContactNum);
+            TicketBox.Controls.Add(lblStatus);
+            TicketBox.Controls.Add(dateNeeded);
             TicketBox.Controls.Add(approveBtn);
             TicketBox.Controls.Add(rejectBtn);
+            TicketBox.Controls.Add(cancelBtn);
 
             TicketBox.Click += TicketBox_Click;
 
@@ -196,9 +235,8 @@ namespace BATODA
             isExpanded = !isExpanded;
             panel.Tag = isExpanded;
 
-            panel.Height = isExpanded ? 320 : 220;
+            panel.Height = isExpanded ? 330 : 150;
 
-            
             foreach (Control control in panel.Controls)
             {
                 if (control.Tag != null && control.Tag.ToString() == "ExpandInfo")
@@ -207,8 +245,6 @@ namespace BATODA
                 }
             }
         }
-
-
 
 
         private void CreateTicketPanel_MouseDoubleClick(object sender, MouseEventArgs e)
