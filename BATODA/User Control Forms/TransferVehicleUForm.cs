@@ -74,7 +74,6 @@ namespace BATODA
             string bodyNumberStr = OwnerSearchGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value?.ToString();
             if (string.IsNullOrEmpty(bodyNumberStr)) return;
 
-            // extract digits (in case grid has "003" or " 003 ")
             string digitsOnly = new string(bodyNumberStr.Where(char.IsDigit).ToArray());
             if (!int.TryParse(digitsOnly, out int bodyNumber)) return;
 
@@ -91,7 +90,6 @@ namespace BATODA
                 EngineTxt,
                 ModelTxt);
 
-            // Force D3 format on the label (this ensures it always shows 003, 030, etc.)
             BodyNumberLbl.Text = bodyNumber.ToString("D3");
 
             OwnerSearchGrid.Visible = false;

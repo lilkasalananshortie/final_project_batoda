@@ -1,0 +1,7 @@
+﻿CREATE TABLE BatodaFunds (
+    FundID INT IDENTITY(1,1) PRIMARY KEY,
+    CashAmount DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    GCashAmount DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    TotalAmount AS (CashAmount + GCashAmount),
+    LastUpdated DATETIME DEFAULT GETDATE()
+);

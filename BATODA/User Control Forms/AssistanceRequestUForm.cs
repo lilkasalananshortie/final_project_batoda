@@ -8,9 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrid;
+using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+
 
 namespace BATODA
-{
+{   
     public partial class AssistanceRequestUForm : UserControl
     {
         public AssistanceRequestUForm()
@@ -30,8 +33,8 @@ namespace BATODA
         }
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
-            DisplayClass.SetPlaceholder(BodyNumber,"Search Body Number");
-            DisplayClass.SetPlaceholder(AidTypeComboBox,"Select Aid Type");
+
+            DisplayClass.SetPlaceholder(TypeOfAidCmb,"Select Aid Type");
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(SortComboBox, "Date");
 
@@ -306,15 +309,14 @@ namespace BATODA
             }
         }
 
-
         private void CreateTicketPanel_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             AddTicketBox();
             TextStatusPanel.Hide();
             FillUpFormPanel.Show();
             FillUpFormPanel.BringToFront();
-            
-
+            TicketIdlbl.Text = "TR-"+Ticket.GetNextTicketID().ToString();
+            DateCreatedLbl.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
         private void SubmitTicket_Click(object sender, EventArgs e)
@@ -332,7 +334,7 @@ namespace BATODA
 
         private void RequestedByComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedItem = RequestedByComboBox.SelectedItem?.ToString();
+            string selectedItem = ReqAssistanceThruCmb.SelectedItem?.ToString();
             NonMemberSelectedPanel.Visible = selectedItem != "Member";
         }
 
@@ -476,6 +478,55 @@ namespace BATODA
 
         private void TicketFlowLayoutPanel_Paint_1(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReqSearchTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ReqSearchGrid.Visible = true;
+                RequestSearchOwner search = new RequestSearchOwner();
+                search.SearchOwner(ReqSearchTxt, ReqSearchGrid);
+                SearchResults.SetupSearchGrid(ReqSearchGrid);
+                ReqSearchGrid.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void ReqSearchGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            string bodyNumberStr = ReqSearchGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value?.ToString();
+            if (string.IsNullOrEmpty(bodyNumberStr)) return;
+
+            string digitsOnly = new string(bodyNumberStr.Where(char.IsDigit).ToArray());
+            if (!int.TryParse(digitsOnly, out int bodyNumber)) return;
+
+            AssistanceLoadMember loader = new AssistanceLoadMember();
+            loader.LoadMemberDetails(digitsOnly,
+                ReqBodyNoLbl,
+                ReqMembTypeLbl,
+                ReqFirstNameTxt,
+                ReqMiddleTxt,       
+                ReqLastNameTxt,
+                ReqContactLbl);
+
+            ReqBodyNoLbl.Text = bodyNumber.ToString("D3");
+
+            ReqSearchGrid.Visible = false;
+            MessageBox.Show("Clicked row: " + bodyNumberStr);
 
         }
     }
