@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrid;
+using BATODA.Modules.Assistance_Request_Module;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
 using BATODA.Modules.MemberModule;
 
@@ -18,9 +19,11 @@ namespace BATODA
 {   
     public partial class AssistanceRequestUForm : UserControl
     {
+        private AddTicketBox ticketHelper;
         public AssistanceRequestUForm()
         {
             InitializeComponent();
+            ticketHelper = new AddTicketBox(TicketFlowLayoutPanel);
             FillUpFormPanel.Hide();
             ConfirmationPanel.Hide();
 
@@ -34,10 +37,59 @@ namespace BATODA
         }
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
+            LoadAllTickets();
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(SortComboBox, "Date");
 
 
+        }
+
+        private void LoadAllTickets()
+        {
+            TicketFlowLayoutPanel.Controls.Clear(); 
+            AssistanceRepository repo = new AssistanceRepository();
+            List<TicketModel> tickets = repo.GetAllRequests();
+
+            foreach (TicketModel ticket in tickets)
+            {
+                ticketHelper.CreateTicketBox(
+                    trackingNumber: "TR-" + ticket.TicketID,
+                    fullName: ticket.FullName,
+                    typeOfAid: ticket.TypeOfAid,
+                    dateRequested: ticket.DateRequested.ToString("MM-dd-yyyy hh:mm tt"),
+                    status: ticket.RequestStatus,
+                    requestedBy: ticket.RequestedBy,
+                    amount: "₱" + ticket.RequestedAmount.ToString("N2"),
+                    assistanceThru: ticket.AssistanceThru,
+                    contactNum: ticket.ContactNumber,
+                    dateNeeded: ticket.TargetDate.ToString("MM-dd-yyyy")
+                );
+            }
+        }
+
+        private void TransferToDisplayPanel()
+        {
+            ConfNameLbl.Text = ReqFirstNameTxt.Text + " " + ReqLastNameTxt.Text;
+            ConfTypeOfAid.Text = ReqAssistanceThruCmb.Text;
+            ConfDateCreatedLbl.Text = DateCreatedLbl.Text;
+            ConfTicketIdLbl.Text = TicketIdlbl.Text;
+            ConfDateNeededLbl.Text = DateNeededPicker.Text;
+            ConfBodyNumLbl.Text = ReqBodyNoLbl.Text;
+            ConfMopLbl.Text = ReqAssistanceThruCmb.Text;
+            ConfReqByLbl.Text = RequestByCmb.Text;
+            ConfContactLbl.Text = ReqContactLbl.Text;
+            ConfAmountLbl.Text = ReqAmountTxt.Text;
+
+            if (ReqAssistanceThruCmb.Text == "GCASH")
+            {
+                ConfGcashNoLbl.Text = ReqGcashNumTxt.Text; 
+            }
+            else
+            {
+                ConfGcashNoLbl.Text = "XXXXXXXXXXX"; 
+            }
+
+            ConfPreviewImage.Image = MemberImagePb.Image;
         }
 
 
@@ -60,232 +112,44 @@ namespace BATODA
 
         private void TicketConfirmButton_Click(object sender, EventArgs e)
         {
-            
+            AssistanceModel data = new AssistanceModel
+            {
+                FullName = ConfNameLbl.Text,
+                BodyNumber = int.Parse(ReqBodyNoLbl.Text),
+                ContactNumber = ReqContactLbl.Text,
+                TypeOfAid = TypeOfAidCmb.Text,
+                RequestedBy = RequestByCmb.Text,
+                RequestedAmount = decimal.Parse(ReqAmountTxt.Text),
+                AssistanceThru = ReqAssistanceThruCmb.Text,
+                GcashNumber = ReqGcashNumTxt.Text,
+                DateRequested = DateTime.Parse(DateCreatedLbl.Text),
+                TargetDate = DateTime.Parse(DateNeededPicker.Text)
+                // DEFAULT PENDING STATUS SA TABLE
+            };
+
+            AssistanceRepository repo = new AssistanceRepository();
+            repo.AddRequest(data);
+
+            List<TicketModel> tickets = repo.GetAllRequests();
+            TicketFlowLayoutPanel.Controls.Clear();
+
+            foreach (TicketModel ticket in tickets)
+            {
+                ticketHelper.CreateTicketBox(
+                    trackingNumber: "TR-" + ticket.TicketID,
+                    fullName: ticket.FullName,
+                    typeOfAid: ticket.TypeOfAid,
+                    dateRequested: ticket.DateRequested.ToString("MM-dd-yyyy hh:mm tt"),
+                    status: ticket.RequestStatus,
+                    requestedBy: ticket.RequestedBy,
+                    amount: "₱" + ticket.RequestedAmount.ToString("N2"),
+                    assistanceThru: ticket.AssistanceThru,
+                    contactNum: ticket.ContactNumber,
+                    dateNeeded: ticket.TargetDate.ToString("MM-dd-yyyy")
+                );
+            }
+
             ConfirmationPanel.Hide();
-        }
-        public void AddTicketBox()
-        {
-            Panel TicketBox = new Panel();
-            TicketBox.Size = new Size(300, 150);
-            TicketBox.BackColor = Color.White;
-            TicketBox.BorderStyle = BorderStyle.FixedSingle;
-            TicketBox.Margin = new Padding(5);
-            TicketBox.Cursor = Cursors.Hand;
-            TicketBox.Tag = false;
-
-            int y = 10;
-
-            Panel HeaderPanel = new Panel()
-            {
-                Size = new Size(298, 30),
-                Location = new Point(1, 1),
-                BackColor = Color.LightGray
-            };
-
-            Label lblTracking = new Label()
-            {
-                Text = "Tracking Number: SAMPLE",
-                Location = new Point(10, 7),
-                AutoSize = true,
-                Font = new Font("Segoe UI", 9, FontStyle.Bold)
-
-            };
-            HeaderPanel.Controls.Add(lblTracking);
-
-           
-            y += 25;
-
-            PictureBox picMember = new PictureBox()
-            {
-                Location = new Point(10, y),
-                Size = new Size(80, 80),
-                BorderStyle = BorderStyle.FixedSingle,
-                SizeMode = PictureBoxSizeMode.StretchImage,
-                BackColor = Color.LightGray
-            };
-
-            
-            int rightX = picMember.Right + 10;
-
-            Label lblName = new Label()
-            {
-                Text = "Full Name: Mhaku Jose Manalili",
-                Location = new Point(rightX, y + 5),
-                AutoSize = true
-            };
-
-            Label lblAid = new Label()
-            {
-                Text = "Type of Aid: Medical",
-                Location = new Point(rightX, y + 30),
-                AutoSize = true
-            };
-
-            Label lblDate = new Label()
-            {
-                Text = "Date Requested: 2025-11-05",
-                Location = new Point(rightX, y + 55),
-                AutoSize = true
-            };
-
-            Label lblStatus = new Label()
-            {
-                Text = "Status: Pending",
-                Location = new Point(rightX, y + 80),
-                AutoSize = true,
-                
-            };
-
-
-            int expandY = picMember.Bottom + 19;
-
-            Label lblRequestedBy = new Label()
-            {
-                Text = "Requested by: Member blah blah",
-                Location = new Point(10, expandY),
-                AutoSize = true,
-                Tag = "ExpandInfo",
-                Visible = false
-            };
-            expandY += 22;
-
-            Label lblAmount = new Label()
-            {
-                Text = "Amount: ₱1000",
-                Location = new Point(10, expandY),
-                AutoSize = true,
-                Tag = "ExpandInfo",
-                Visible = false
-            };
-            expandY += 22;
-
-            Label lblAssistanceThru = new Label()
-            {
-                Text = "Assistance Thru: Cash",
-                Location = new Point(10, expandY),
-                AutoSize = true,
-                Tag = "ExpandInfo",
-                Visible = false
-            };
-            expandY += 22;
-
-            Label lblContactNum = new Label()
-            {
-                Text = "Contact Num: 09123456789",
-                Location = new Point(10, expandY),
-                AutoSize = true,
-                Tag = "ExpandInfo",
-                Visible = false
-            };
-            expandY += 22;
-
-            Label dateNeeded = new Label()
-            {
-                Text = "Date Needed: SAMPLE",
-                Location = new Point(10, expandY),
-                AutoSize = true,
-                Tag = "ExpandInfo",
-                Visible = false
-            };
-            expandY += 34;
-
-            Button approveBtn = new Button()
-            {
-                Text = "Approve",
-                Size = new Size(80, 30),
-                Location = new Point(10, expandY),
-                Visible = false,
-                Tag = "ExpandInfo"
-            };
-
-            Button rejectBtn = new Button()
-            {
-                Text = "Reject",
-                Size = new Size(80, 30),
-                Location = new Point(105, expandY),
-                Visible = false,
-                Tag = "ExpandInfo"
-            };
-
-            Button cancelBtn = new Button()
-            {
-                Text = "Cancel",
-                Size = new Size(80, 30),
-                Location = new Point(200, expandY),
-                Visible = false,
-                Tag = "ExpandInfo"
-            };
-
-            Button releaseBtn = new Button()
-            {
-                Text = "Release",
-                Size = new Size(80, 30),
-                Location = new Point(200, 260),
-                Visible = false,
-                
-            };
-
-            approveBtn.Click += (s, e) =>
-            {
-                Panel parent = ((Button)s).Parent as Panel;
-                HeaderPanel.BackColor = Color.LightGreen;
-                lblTracking.BringToFront();
-                lblTracking.BackColor = Color.LightGreen;
-                lblStatus.Text = "Status: Approved";
-                releaseBtn.Visible = true;
-                releaseBtn.Show();
-                approveBtn.Hide();
-                cancelBtn.Hide();
-                rejectBtn.Hide();
-
-            };
-
-            rejectBtn.Click += (s, e) =>
-            {
-                Panel parent = ((Button)s).Parent as Panel;
-                HeaderPanel.BackColor = Color.LightCoral;
-                lblTracking.BackColor = Color.LightCoral;
-                lblTracking.BringToFront();
-                lblStatus.Text = "Status: Rejected";
-            };
-
-            cancelBtn.Click += (s, e) =>
-            {
-                Panel parent = ((Button)s).Parent as Panel;
-                HeaderPanel.BackColor = Color.LightGray;
-                lblTracking.BackColor = Color.LightGray;
-                lblTracking.BringToFront();
-                lblStatus.Text = "Status: Canceled";
-            };
-
-            releaseBtn.Click += (s, e) =>
-            {
-                Panel parent = ((Button)s).Parent as Panel;
-                parent.Hide();
-            };
-            TicketBox.Controls.Add(HeaderPanel);
-            TicketBox.Controls.Add(lblTracking);
-            TicketBox.Controls.Add(picMember);
-            TicketBox.Controls.Add(lblName);
-            TicketBox.Controls.Add(lblAid);
-            TicketBox.Controls.Add(lblDate);
-            TicketBox.Controls.Add(lblRequestedBy);
-            TicketBox.Controls.Add(lblAmount);
-            TicketBox.Controls.Add(lblAssistanceThru);
-            TicketBox.Controls.Add(lblContactNum);
-            TicketBox.Controls.Add(lblStatus);
-            TicketBox.Controls.Add(dateNeeded);
-            TicketBox.Controls.Add(approveBtn);
-            TicketBox.Controls.Add(rejectBtn);
-            TicketBox.Controls.Add(cancelBtn);
-            TicketBox.Controls.Add(releaseBtn);
-
-            lblTracking.BringToFront();
-            lblTracking.BackColor = Color.LightGray;
-
-            TicketBox.Click += TicketBox_Click;
-
-            TicketFlowLayoutPanel.Controls.Add(TicketBox);
         }
 
         private void TicketBox_Click(object sender, EventArgs e)
@@ -310,16 +174,17 @@ namespace BATODA
 
         private void CreateTicketPanel_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            AddTicketBox();
+            //AddTicketBox();
             TextStatusPanel.Hide();
             FillUpFormPanel.Show();
             FillUpFormPanel.BringToFront();
             TicketIdlbl.Text = "TR-"+Ticket.GetNextTicketID().ToString();
-            DateCreatedLbl.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            DateCreatedLbl.Text = DateTime.Now.ToString("MM-dd-yyyy hh:mm tt");
         }
 
         private void SubmitTicket_Click(object sender, EventArgs e)
         {
+            TransferToDisplayPanel();
             ConfirmationPanel.Show();
             ConfirmationPanel.BringToFront();
             FillUpFormPanel.Hide();
@@ -549,6 +414,9 @@ namespace BATODA
             }
             else
             {
+                NonMemberSelectedPanel.BackColor = Color.Gainsboro;
+                ReqGcashNumTxt.BackColor = Color.Gainsboro;
+                ReqGcashNumTxt.Text = "XXXXXXXXXXX";
                 ReqGcashNumTxt.Enabled = false;
             }
 
@@ -557,6 +425,18 @@ namespace BATODA
         private void CreateTicketPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void UploadProofBtn_Click(object sender, EventArgs e)
+        {
+            OpenProof.Title = "Select an Image";
+            OpenProof.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (OpenProof.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = Path.GetFileName(OpenProof.FileName);
+                ReqFileTxt.Text = fileName;
+            }
         }
     }
 }

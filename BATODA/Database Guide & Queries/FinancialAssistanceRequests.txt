@@ -1,15 +1,18 @@
 ﻿CREATE TABLE FinancialAssistanceRequests (
-    TicketID INT IDENTITY(100,1) PRIMARY KEY,  -- starts at 100
+    TicketID INT IDENTITY(100,1) PRIMARY KEY,  
+    FullName VARCHAR(100) NOT NULL,
     BodyNumber INT NOT NULL,
-    RequestedBy VARCHAR(50) NOT NULL,
+    ContactNumber VARCHAR(11) NOT NULL,
     TypeOfAid VARCHAR(100) NOT NULL,
-    AssistanceThru VARCHAR(50) NOT NULL,
+    RequestedBy VARCHAR(50) NOT NULL,
     RequestedAmount DECIMAL(10,2) NOT NULL,
+    AssistanceThru VARCHAR(50) NOT NULL,
+    GcashNumber VARCHAR(11) NOT NULL,
+    DateRequested DATETIME DEFAULT GETDATE(),
     TargetDate DATE NOT NULL,
     RequestStatus VARCHAR(20) DEFAULT 'Pending',
-    DateRequested DATETIME DEFAULT GETDATE(),
-    GcashNumber VARCHAR(11) NOT NULL,
-    
+
     CONSTRAINT CK_GcashNumber_Length CHECK (LEN(GcashNumber) = 11),
-    FOREIGN KEY (BodyNumber) REFERENCES MemberInfo(BodyNumber)
+    FOREIGN KEY (BodyNumber) REFERENCES MemberInfo(BodyNumber),
+    FOREIGN KEY (ContactNumber) REFERENCES MemberInfo(ContactNumber)
 );

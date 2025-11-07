@@ -55,10 +55,13 @@
     <Compile Include="Helpers\Database\Members\SelectedMemberImage.cs" />
     <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
     <Compile Include="Helpers\DataGrid\SearchResults.cs" />
+    <Compile Include="Modules\Assistance Request Module\Assistance Classes\AddTicketBox.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceLoadMember.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceModel.cs" />
+    <Compile Include="Modules\Assistance Request Module\Assistance Classes\TicketRepository.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\Ticket.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\RequestSearchOwner.cs" />
+    <Compile Include="Modules\Assistance Request Module\Assistance Classes\TicketModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberSort.cs" />
