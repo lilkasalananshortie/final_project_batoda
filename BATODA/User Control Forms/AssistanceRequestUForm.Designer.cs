@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.ARHButton = new BATODA.ButtonStyle();
-            this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ApplyButton = new BATODA.ButtonStyle();
             this.SortComboBox = new System.Windows.Forms.ComboBox();
             this.AssistanceTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.ApplySearchButton = new BATODA.ButtonStyle();
             this.panel20 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -48,11 +44,55 @@
             this.label53 = new System.Windows.Forms.Label();
             this.Cerate = new System.Windows.Forms.Label();
             this.FillUpFormPanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ReqSearchGrid = new System.Windows.Forms.DataGridView();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.ReqSearchTxt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.DateNeededPicker = new System.Windows.Forms.DateTimePicker();
+            this.label54 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ReqMembTypeLbl = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.NonMemberSelectedPanel = new System.Windows.Forms.Panel();
+            this.ReqGcashNumTxt = new System.Windows.Forms.TextBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.ReqContactLbl = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.ReqAssistanceThruCmb = new System.Windows.Forms.ComboBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.ReqAmountTxt = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.RequestByCmb = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.ReqFileTxt = new System.Windows.Forms.Label();
+            this.UploadProofBtn = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.ReqLastNameTxt = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.ReqMiddleTxt = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ReqFirstNameTxt = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.ReqBodyNoLbl = new System.Windows.Forms.Label();
+            this.MemberImagePb = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.TicketIdlbl = new System.Windows.Forms.Label();
             this.DateCreatedLbl = new System.Windows.Forms.Label();
-            this.SubmitTicket = new BATODA.ButtonStyle();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
@@ -87,7 +127,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.TicketConfirmButton = new BATODA.ButtonStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.TicketFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -109,52 +148,13 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.ReqSearchTxt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.DateNeededPicker = new System.Windows.Forms.DateTimePicker();
-            this.label54 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.ReqMembTypeLbl = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.NonMemberSelectedPanel = new System.Windows.Forms.Panel();
-            this.ReqGcashNumTxt = new System.Windows.Forms.TextBox();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.ReqContactLbl = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.ReqAssistanceThruCmb = new System.Windows.Forms.ComboBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.ReqAmountTxt = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.RequestByCmb = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.TypeOfAidCmb = new System.Windows.Forms.ComboBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.ReqFileTxt = new System.Windows.Forms.Label();
-            this.UploadProofBtn = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.ReqLastNameTxt = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.ReqMiddleTxt = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ReqFirstNameTxt = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.ReqBodyNoLbl = new System.Windows.Forms.Label();
-            this.MemberImagePb = new System.Windows.Forms.PictureBox();
-            this.ReqSearchGrid = new System.Windows.Forms.DataGridView();
+            this.ApplyButton = new BATODA.ButtonStyle();
+            this.ApplySearchButton = new BATODA.ButtonStyle();
+            this.SubmitTicket = new BATODA.ButtonStyle();
+            this.TicketConfirmButton = new BATODA.ButtonStyle();
+            this.ARHButton = new BATODA.ButtonStyle();
+            this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -165,6 +165,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel3.SuspendLayout();
             this.FillUpFormPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).BeginInit();
+            this.panel28.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.NonMemberSelectedPanel.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberImagePb)).BeginInit();
             this.ConfirmationPanel.SuspendLayout();
             this.panel31.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -185,22 +201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel28.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.NonMemberSelectedPanel.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberImagePb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -214,72 +214,6 @@
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 25;
-            // 
-            // ARHButton
-            // 
-            this.ARHButton.BackColor = System.Drawing.Color.White;
-            this.ARHButton.BackgroundColor = System.Drawing.Color.White;
-            this.ARHButton.BorderColor = System.Drawing.Color.Black;
-            this.ARHButton.BorderRadius = 0;
-            this.ARHButton.BorderSize = 1;
-            this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.ARHButton.FlatAppearance.BorderSize = 0;
-            this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ARHButton.ForeColor = System.Drawing.Color.Black;
-            this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.ARHButton.HoverColor = System.Drawing.Color.Silver;
-            this.ARHButton.ImageColor = System.Drawing.Color.Black;
-            this.ARHButton.ImagePosition = new System.Drawing.Point(255, 0);
-            this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ARHButton.IsToggled = false;
-            this.ARHButton.Location = new System.Drawing.Point(800, 5);
-            this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.ARHButton.Name = "ARHButton";
-            this.ARHButton.PaddingX = 0;
-            this.ARHButton.PaddingY = 0;
-            this.ARHButton.Size = new System.Drawing.Size(788, 49);
-            this.ARHButton.TabIndex = 21;
-            this.ARHButton.Text = "Approved Request History";
-            this.ARHButton.TextColor = System.Drawing.Color.Black;
-            this.ARHButton.TextOffset = 20;
-            this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.ARHButton.UseVisualStyleBackColor = false;
-            this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
-            // 
-            // AssistanceRequestButton
-            // 
-            this.AssistanceRequestButton.BackColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.BorderRadius = 0;
-            this.AssistanceRequestButton.BorderSize = 1;
-            this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
-            this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
-            this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;
-            this.AssistanceRequestButton.ImageColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(265, 0);
-            this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.AssistanceRequestButton.IsToggled = false;
-            this.AssistanceRequestButton.Location = new System.Drawing.Point(6, 5);
-            this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.AssistanceRequestButton.Name = "AssistanceRequestButton";
-            this.AssistanceRequestButton.PaddingX = 0;
-            this.AssistanceRequestButton.PaddingY = 0;
-            this.AssistanceRequestButton.Size = new System.Drawing.Size(788, 49);
-            this.AssistanceRequestButton.TabIndex = 19;
-            this.AssistanceRequestButton.Text = "Add New Request";
-            this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.TextOffset = 20;
-            this.AssistanceRequestButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.UseVisualStyleBackColor = false;
-            this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
             // 
             // panel1
             // 
@@ -299,38 +233,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1588, 1004);
             this.panel1.TabIndex = 26;
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplyButton.BorderRadius = 0;
-            this.ApplyButton.BorderSize = 0;
-            this.ApplyButton.ButtonImage = null;
-            this.ApplyButton.FlatAppearance.BorderSize = 0;
-            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyButton.ForeColor = System.Drawing.Color.White;
-            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1449, 21);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.PaddingX = 0;
-            this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(112, 33);
-            this.ApplyButton.TabIndex = 59;
-            this.ApplyButton.Text = "Apply Filter";
-            this.ApplyButton.TextColor = System.Drawing.Color.White;
-            this.ApplyButton.TextOffset = 20;
-            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.UseVisualStyleBackColor = false;
             // 
             // SortComboBox
             // 
@@ -354,38 +256,6 @@
             this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
             this.AssistanceTypeComboBox.Size = new System.Drawing.Size(155, 33);
             this.AssistanceTypeComboBox.TabIndex = 57;
-            // 
-            // ApplySearchButton
-            // 
-            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplySearchButton.BorderRadius = 0;
-            this.ApplySearchButton.BorderSize = 0;
-            this.ApplySearchButton.ButtonImage = null;
-            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
-            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
-            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(930, 21);
-            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.Name = "ApplySearchButton";
-            this.ApplySearchButton.PaddingX = 0;
-            this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(101, 33);
-            this.ApplySearchButton.TabIndex = 56;
-            this.ApplySearchButton.Text = "Search";
-            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextOffset = 0;
-            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ApplySearchButton.UseVisualStyleBackColor = false;
             // 
             // panel20
             // 
@@ -456,6 +326,7 @@
             this.CreateTicketPanel.Name = "CreateTicketPanel";
             this.CreateTicketPanel.Size = new System.Drawing.Size(336, 260);
             this.CreateTicketPanel.TabIndex = 47;
+            this.CreateTicketPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CreateTicketPanel_Paint);
             this.CreateTicketPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.CreateTicketPanel_MouseDoubleClick);
             // 
             // pictureBox9
@@ -545,6 +416,509 @@
             this.FillUpFormPanel.TabIndex = 50;
             this.FillUpFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FillUpFormPanel_Paint_1);
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(280, 424);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(109, 20);
+            this.label8.TabIndex = 201;
+            this.label8.Text = "GCASH No.  *";
+            // 
+            // ReqSearchGrid
+            // 
+            this.ReqSearchGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReqSearchGrid.Location = new System.Drawing.Point(278, 177);
+            this.ReqSearchGrid.Name = "ReqSearchGrid";
+            this.ReqSearchGrid.Size = new System.Drawing.Size(489, 53);
+            this.ReqSearchGrid.TabIndex = 200;
+            this.ReqSearchGrid.Visible = false;
+            this.ReqSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReqSearchGrid_CellClick);
+            // 
+            // panel28
+            // 
+            this.panel28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel28.BackColor = System.Drawing.Color.White;
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel28.Controls.Add(this.ReqSearchTxt);
+            this.panel28.Location = new System.Drawing.Point(278, 144);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(489, 35);
+            this.panel28.TabIndex = 182;
+            // 
+            // ReqSearchTxt
+            // 
+            this.ReqSearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ReqSearchTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqSearchTxt.Location = new System.Drawing.Point(7, 7);
+            this.ReqSearchTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ReqSearchTxt.Name = "ReqSearchTxt";
+            this.ReqSearchTxt.Size = new System.Drawing.Size(460, 19);
+            this.ReqSearchTxt.TabIndex = 29;
+            this.ReqSearchTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ReqSearchTxt_KeyDown);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(275, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 20);
+            this.label7.TabIndex = 180;
+            this.label7.Text = "Search a member :";
+            // 
+            // panel34
+            // 
+            this.panel34.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel34.BackColor = System.Drawing.Color.White;
+            this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel34.Controls.Add(this.DateNeededPicker);
+            this.panel34.Location = new System.Drawing.Point(531, 524);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(235, 34);
+            this.panel34.TabIndex = 199;
+            // 
+            // DateNeededPicker
+            // 
+            this.DateNeededPicker.AllowDrop = true;
+            this.DateNeededPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateNeededPicker.CalendarForeColor = System.Drawing.Color.IndianRed;
+            this.DateNeededPicker.CalendarMonthBackground = System.Drawing.Color.IndianRed;
+            this.DateNeededPicker.Location = new System.Drawing.Point(7, 6);
+            this.DateNeededPicker.Name = "DateNeededPicker";
+            this.DateNeededPicker.Size = new System.Drawing.Size(216, 20);
+            this.DateNeededPicker.TabIndex = 95;
+            // 
+            // label54
+            // 
+            this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(527, 499);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(219, 20);
+            this.label54.TabIndex = 198;
+            this.label54.Text = "Date Needed * (On or Before)";
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel13.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.ReqMembTypeLbl);
+            this.panel13.Location = new System.Drawing.Point(532, 229);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(235, 34);
+            this.panel13.TabIndex = 197;
+            // 
+            // ReqMembTypeLbl
+            // 
+            this.ReqMembTypeLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqMembTypeLbl.AutoSize = true;
+            this.ReqMembTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqMembTypeLbl.Location = new System.Drawing.Point(3, 7);
+            this.ReqMembTypeLbl.Name = "ReqMembTypeLbl";
+            this.ReqMembTypeLbl.Size = new System.Drawing.Size(49, 20);
+            this.ReqMembTypeLbl.TabIndex = 174;
+            this.ReqMembTypeLbl.Text = "TEST";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(528, 205);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(113, 20);
+            this.label28.TabIndex = 196;
+            this.label28.Text = "Member Type :";
+            // 
+            // NonMemberSelectedPanel
+            // 
+            this.NonMemberSelectedPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NonMemberSelectedPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.NonMemberSelectedPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NonMemberSelectedPanel.Controls.Add(this.ReqGcashNumTxt);
+            this.NonMemberSelectedPanel.Location = new System.Drawing.Point(283, 448);
+            this.NonMemberSelectedPanel.Name = "NonMemberSelectedPanel";
+            this.NonMemberSelectedPanel.Size = new System.Drawing.Size(223, 35);
+            this.NonMemberSelectedPanel.TabIndex = 195;
+            // 
+            // ReqGcashNumTxt
+            // 
+            this.ReqGcashNumTxt.BackColor = System.Drawing.Color.Gainsboro;
+            this.ReqGcashNumTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ReqGcashNumTxt.Enabled = false;
+            this.ReqGcashNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqGcashNumTxt.Location = new System.Drawing.Point(6, 7);
+            this.ReqGcashNumTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ReqGcashNumTxt.Name = "ReqGcashNumTxt";
+            this.ReqGcashNumTxt.Size = new System.Drawing.Size(202, 19);
+            this.ReqGcashNumTxt.TabIndex = 176;
+            this.ReqGcashNumTxt.Text = "Not required";
+            // 
+            // panel14
+            // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel14.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel14.Controls.Add(this.ReqContactLbl);
+            this.panel14.Location = new System.Drawing.Point(284, 300);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(221, 35);
+            this.panel14.TabIndex = 187;
+            // 
+            // ReqContactLbl
+            // 
+            this.ReqContactLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqContactLbl.AutoSize = true;
+            this.ReqContactLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqContactLbl.Location = new System.Drawing.Point(7, 6);
+            this.ReqContactLbl.Name = "ReqContactLbl";
+            this.ReqContactLbl.Size = new System.Drawing.Size(49, 20);
+            this.ReqContactLbl.TabIndex = 174;
+            this.ReqContactLbl.Text = "TEST";
+            // 
+            // label57
+            // 
+            this.label57.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(282, 352);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(133, 20);
+            this.label57.TabIndex = 194;
+            this.label57.Text = "Assistance Thru *";
+            // 
+            // panel23
+            // 
+            this.panel23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel23.BackColor = System.Drawing.Color.White;
+            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel23.Controls.Add(this.ReqAssistanceThruCmb);
+            this.panel23.Location = new System.Drawing.Point(284, 374);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(222, 35);
+            this.panel23.TabIndex = 193;
+            // 
+            // ReqAssistanceThruCmb
+            // 
+            this.ReqAssistanceThruCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReqAssistanceThruCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqAssistanceThruCmb.FormattingEnabled = true;
+            this.ReqAssistanceThruCmb.Items.AddRange(new object[] {
+            "Cash",
+            "GCASH"});
+            this.ReqAssistanceThruCmb.Location = new System.Drawing.Point(5, 3);
+            this.ReqAssistanceThruCmb.Name = "ReqAssistanceThruCmb";
+            this.ReqAssistanceThruCmb.Size = new System.Drawing.Size(211, 28);
+            this.ReqAssistanceThruCmb.TabIndex = 0;
+            this.ReqAssistanceThruCmb.SelectedIndexChanged += new System.EventHandler(this.ReqAssistanceThruCmb_SelectedIndexChanged);
+            // 
+            // label56
+            // 
+            this.label56.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(527, 426);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(131, 20);
+            this.label56.TabIndex = 192;
+            this.label56.Text = "Amount Needed*";
+            // 
+            // panel22
+            // 
+            this.panel22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel22.BackColor = System.Drawing.Color.White;
+            this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel22.Controls.Add(this.label21);
+            this.panel22.Controls.Add(this.ReqAmountTxt);
+            this.panel22.Location = new System.Drawing.Point(531, 448);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(235, 35);
+            this.panel22.TabIndex = 185;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(4, 7);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 20);
+            this.label21.TabIndex = 175;
+            this.label21.Text = "PHP";
+            // 
+            // ReqAmountTxt
+            // 
+            this.ReqAmountTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ReqAmountTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqAmountTxt.Location = new System.Drawing.Point(46, 7);
+            this.ReqAmountTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ReqAmountTxt.Name = "ReqAmountTxt";
+            this.ReqAmountTxt.Size = new System.Drawing.Size(173, 19);
+            this.ReqAmountTxt.TabIndex = 28;
+            // 
+            // label55
+            // 
+            this.label55.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(280, 499);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(120, 20);
+            this.label55.TabIndex = 191;
+            this.label55.Text = "Requested By *";
+            // 
+            // panel21
+            // 
+            this.panel21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel21.BackColor = System.Drawing.Color.White;
+            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Controls.Add(this.RequestByCmb);
+            this.panel21.Location = new System.Drawing.Point(283, 522);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(222, 35);
+            this.panel21.TabIndex = 188;
+            // 
+            // RequestByCmb
+            // 
+            this.RequestByCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RequestByCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RequestByCmb.FormattingEnabled = true;
+            this.RequestByCmb.Items.AddRange(new object[] {
+            "Member",
+            "Family",
+            "Relative"});
+            this.RequestByCmb.Location = new System.Drawing.Point(3, 3);
+            this.RequestByCmb.Name = "RequestByCmb";
+            this.RequestByCmb.Size = new System.Drawing.Size(215, 28);
+            this.RequestByCmb.TabIndex = 0;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(280, 277);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(101, 20);
+            this.label35.TabIndex = 190;
+            this.label35.Text = "Contact No : ";
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.TypeOfAidCmb);
+            this.panel9.Location = new System.Drawing.Point(531, 300);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(235, 35);
+            this.panel9.TabIndex = 186;
+            // 
+            // label41
+            // 
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(527, 277);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(94, 20);
+            this.label41.TabIndex = 189;
+            this.label41.Text = "Type of Aid*";
+            // 
+            // panel15
+            // 
+            this.panel15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.ReqFileTxt);
+            this.panel15.Controls.Add(this.UploadProofBtn);
+            this.panel15.Location = new System.Drawing.Point(532, 374);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(235, 35);
+            this.panel15.TabIndex = 184;
+            // 
+            // ReqFileTxt
+            // 
+            this.ReqFileTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqFileTxt.AutoSize = true;
+            this.ReqFileTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqFileTxt.Location = new System.Drawing.Point(5, 6);
+            this.ReqFileTxt.Name = "ReqFileTxt";
+            this.ReqFileTxt.Size = new System.Drawing.Size(53, 20);
+            this.ReqFileTxt.TabIndex = 175;
+            this.ReqFileTxt.Text = "No file";
+            // 
+            // UploadProofBtn
+            // 
+            this.UploadProofBtn.Location = new System.Drawing.Point(155, 3);
+            this.UploadProofBtn.Name = "UploadProofBtn";
+            this.UploadProofBtn.Size = new System.Drawing.Size(73, 26);
+            this.UploadProofBtn.TabIndex = 172;
+            this.UploadProofBtn.Text = "Open files";
+            this.UploadProofBtn.UseVisualStyleBackColor = true;
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel12.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.ReqLastNameTxt);
+            this.panel12.Location = new System.Drawing.Point(40, 448);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(220, 35);
+            this.panel12.TabIndex = 183;
+            // 
+            // ReqLastNameTxt
+            // 
+            this.ReqLastNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqLastNameTxt.AutoSize = true;
+            this.ReqLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqLastNameTxt.Location = new System.Drawing.Point(4, 7);
+            this.ReqLastNameTxt.Name = "ReqLastNameTxt";
+            this.ReqLastNameTxt.Size = new System.Drawing.Size(49, 20);
+            this.ReqLastNameTxt.TabIndex = 173;
+            this.ReqLastNameTxt.Text = "TEST";
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel11.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.ReqMiddleTxt);
+            this.panel11.Location = new System.Drawing.Point(39, 522);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(222, 35);
+            this.panel11.TabIndex = 181;
+            // 
+            // ReqMiddleTxt
+            // 
+            this.ReqMiddleTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqMiddleTxt.AutoSize = true;
+            this.ReqMiddleTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqMiddleTxt.Location = new System.Drawing.Point(4, 6);
+            this.ReqMiddleTxt.Name = "ReqMiddleTxt";
+            this.ReqMiddleTxt.Size = new System.Drawing.Size(49, 20);
+            this.ReqMiddleTxt.TabIndex = 174;
+            this.ReqMiddleTxt.Text = "TEST";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.ReqFirstNameTxt);
+            this.panel2.Location = new System.Drawing.Point(39, 374);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(221, 35);
+            this.panel2.TabIndex = 179;
+            // 
+            // ReqFirstNameTxt
+            // 
+            this.ReqFirstNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqFirstNameTxt.AutoSize = true;
+            this.ReqFirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqFirstNameTxt.Location = new System.Drawing.Point(5, 6);
+            this.ReqFirstNameTxt.Name = "ReqFirstNameTxt";
+            this.ReqFirstNameTxt.Size = new System.Drawing.Size(49, 20);
+            this.ReqFirstNameTxt.TabIndex = 172;
+            this.ReqFirstNameTxt.Text = "TEST";
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(528, 352);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(111, 20);
+            this.label27.TabIndex = 177;
+            this.label27.Text = "Submit Proof *";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(36, 426);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(94, 20);
+            this.label38.TabIndex = 176;
+            this.label38.Text = "Last Name :";
+            // 
+            // label39
+            // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(36, 499);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(109, 20);
+            this.label39.TabIndex = 175;
+            this.label39.Text = "Middle Name :";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(36, 353);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(94, 20);
+            this.label40.TabIndex = 174;
+            this.label40.Text = "First Name :";
+            // 
+            // label42
+            // 
+            this.label42.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(279, 206);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(111, 20);
+            this.label42.TabIndex = 173;
+            this.label42.Text = "Body Number*";
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel10.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.ReqBodyNoLbl);
+            this.panel10.Location = new System.Drawing.Point(284, 229);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(219, 34);
+            this.panel10.TabIndex = 172;
+            // 
+            // ReqBodyNoLbl
+            // 
+            this.ReqBodyNoLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReqBodyNoLbl.AutoSize = true;
+            this.ReqBodyNoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqBodyNoLbl.Location = new System.Drawing.Point(6, 6);
+            this.ReqBodyNoLbl.Name = "ReqBodyNoLbl";
+            this.ReqBodyNoLbl.Size = new System.Drawing.Size(49, 20);
+            this.ReqBodyNoLbl.TabIndex = 173;
+            this.ReqBodyNoLbl.Text = "TEST";
+            // 
+            // MemberImagePb
+            // 
+            this.MemberImagePb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MemberImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MemberImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.MemberImagePb.Location = new System.Drawing.Point(39, 126);
+            this.MemberImagePb.Name = "MemberImagePb";
+            this.MemberImagePb.Size = new System.Drawing.Size(218, 209);
+            this.MemberImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MemberImagePb.TabIndex = 178;
+            this.MemberImagePb.TabStop = false;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -580,39 +954,6 @@
             this.DateCreatedLbl.Size = new System.Drawing.Size(143, 29);
             this.DateCreatedLbl.TabIndex = 51;
             this.DateCreatedLbl.Text = "Placeholder";
-            // 
-            // SubmitTicket
-            // 
-            this.SubmitTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.BorderRadius = 0;
-            this.SubmitTicket.BorderSize = 0;
-            this.SubmitTicket.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.SubmitTicket.FlatAppearance.BorderSize = 0;
-            this.SubmitTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubmitTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitTicket.ForeColor = System.Drawing.Color.White;
-            this.SubmitTicket.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.SubmitTicket.HoverColor = System.Drawing.Color.DarkRed;
-            this.SubmitTicket.ImageColor = System.Drawing.Color.White;
-            this.SubmitTicket.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SubmitTicket.ImageSize = new System.Drawing.Size(32, 32);
-            this.SubmitTicket.IsToggled = false;
-            this.SubmitTicket.Location = new System.Drawing.Point(581, 614);
-            this.SubmitTicket.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SubmitTicket.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.Name = "SubmitTicket";
-            this.SubmitTicket.PaddingX = 0;
-            this.SubmitTicket.PaddingY = 0;
-            this.SubmitTicket.Size = new System.Drawing.Size(204, 40);
-            this.SubmitTicket.TabIndex = 50;
-            this.SubmitTicket.Text = "Submit Ticket";
-            this.SubmitTicket.TextColor = System.Drawing.Color.White;
-            this.SubmitTicket.TextOffset = 5;
-            this.SubmitTicket.ToggleColor = System.Drawing.Color.Empty;
-            this.SubmitTicket.UseVisualStyleBackColor = false;
-            this.SubmitTicket.Click += new System.EventHandler(this.SubmitTicket_Click);
             // 
             // label36
             // 
@@ -993,39 +1334,6 @@
             this.label29.TabIndex = 51;
             this.label29.Text = "Placeholder";
             // 
-            // TicketConfirmButton
-            // 
-            this.TicketConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.BorderRadius = 0;
-            this.TicketConfirmButton.BorderSize = 0;
-            this.TicketConfirmButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.TicketConfirmButton.FlatAppearance.BorderSize = 0;
-            this.TicketConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TicketConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TicketConfirmButton.ForeColor = System.Drawing.Color.White;
-            this.TicketConfirmButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.TicketConfirmButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.TicketConfirmButton.ImageColor = System.Drawing.Color.White;
-            this.TicketConfirmButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.TicketConfirmButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TicketConfirmButton.IsToggled = false;
-            this.TicketConfirmButton.Location = new System.Drawing.Point(609, 494);
-            this.TicketConfirmButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TicketConfirmButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.Name = "TicketConfirmButton";
-            this.TicketConfirmButton.PaddingX = 0;
-            this.TicketConfirmButton.PaddingY = 0;
-            this.TicketConfirmButton.Size = new System.Drawing.Size(225, 55);
-            this.TicketConfirmButton.TabIndex = 50;
-            this.TicketConfirmButton.Text = "Confirm Ticket";
-            this.TicketConfirmButton.TextColor = System.Drawing.Color.White;
-            this.TicketConfirmButton.TextOffset = 5;
-            this.TicketConfirmButton.ToggleColor = System.Drawing.Color.Empty;
-            this.TicketConfirmButton.UseVisualStyleBackColor = false;
-            this.TicketConfirmButton.Click += new System.EventHandler(this.TicketConfirmButton_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1261,522 +1569,215 @@
             this.label48.TabIndex = 48;
             this.label48.Text = "Total Request";
             // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(280, 424);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 20);
-            this.label8.TabIndex = 201;
-            this.label8.Text = "GCASH No.  *";
-            // 
-            // panel28
-            // 
-            this.panel28.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel28.BackColor = System.Drawing.Color.White;
-            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel28.Controls.Add(this.ReqSearchTxt);
-            this.panel28.Location = new System.Drawing.Point(278, 144);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(489, 35);
-            this.panel28.TabIndex = 182;
-            // 
-            // ReqSearchTxt
-            // 
-            this.ReqSearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ReqSearchTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqSearchTxt.Location = new System.Drawing.Point(7, 7);
-            this.ReqSearchTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ReqSearchTxt.Name = "ReqSearchTxt";
-            this.ReqSearchTxt.Size = new System.Drawing.Size(460, 19);
-            this.ReqSearchTxt.TabIndex = 29;
-            this.ReqSearchTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ReqSearchTxt_KeyDown);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(275, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 20);
-            this.label7.TabIndex = 180;
-            this.label7.Text = "Search a member :";
-            // 
-            // panel34
-            // 
-            this.panel34.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel34.BackColor = System.Drawing.Color.White;
-            this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel34.Controls.Add(this.DateNeededPicker);
-            this.panel34.Location = new System.Drawing.Point(531, 524);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(235, 34);
-            this.panel34.TabIndex = 199;
-            // 
-            // DateNeededPicker
-            // 
-            this.DateNeededPicker.AllowDrop = true;
-            this.DateNeededPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateNeededPicker.CalendarForeColor = System.Drawing.Color.IndianRed;
-            this.DateNeededPicker.CalendarMonthBackground = System.Drawing.Color.IndianRed;
-            this.DateNeededPicker.Location = new System.Drawing.Point(7, 6);
-            this.DateNeededPicker.Name = "DateNeededPicker";
-            this.DateNeededPicker.Size = new System.Drawing.Size(216, 20);
-            this.DateNeededPicker.TabIndex = 95;
-            // 
-            // label54
-            // 
-            this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(527, 499);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(219, 20);
-            this.label54.TabIndex = 198;
-            this.label54.Text = "Date Needed * (On or Before)";
-            // 
-            // panel13
-            // 
-            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel13.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.ReqMembTypeLbl);
-            this.panel13.Location = new System.Drawing.Point(532, 229);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(235, 34);
-            this.panel13.TabIndex = 197;
-            // 
-            // ReqMembTypeLbl
-            // 
-            this.ReqMembTypeLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqMembTypeLbl.AutoSize = true;
-            this.ReqMembTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqMembTypeLbl.Location = new System.Drawing.Point(3, 7);
-            this.ReqMembTypeLbl.Name = "ReqMembTypeLbl";
-            this.ReqMembTypeLbl.Size = new System.Drawing.Size(49, 20);
-            this.ReqMembTypeLbl.TabIndex = 174;
-            this.ReqMembTypeLbl.Text = "TEST";
-            // 
-            // label28
-            // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(528, 205);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(113, 20);
-            this.label28.TabIndex = 196;
-            this.label28.Text = "Member Type :";
-            // 
-            // NonMemberSelectedPanel
-            // 
-            this.NonMemberSelectedPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NonMemberSelectedPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.NonMemberSelectedPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NonMemberSelectedPanel.Controls.Add(this.ReqGcashNumTxt);
-            this.NonMemberSelectedPanel.Location = new System.Drawing.Point(283, 448);
-            this.NonMemberSelectedPanel.Name = "NonMemberSelectedPanel";
-            this.NonMemberSelectedPanel.Size = new System.Drawing.Size(223, 35);
-            this.NonMemberSelectedPanel.TabIndex = 195;
-            // 
-            // ReqGcashNumTxt
-            // 
-            this.ReqGcashNumTxt.BackColor = System.Drawing.Color.Gainsboro;
-            this.ReqGcashNumTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ReqGcashNumTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqGcashNumTxt.Location = new System.Drawing.Point(6, 7);
-            this.ReqGcashNumTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ReqGcashNumTxt.Name = "ReqGcashNumTxt";
-            this.ReqGcashNumTxt.Size = new System.Drawing.Size(202, 19);
-            this.ReqGcashNumTxt.TabIndex = 176;
-            this.ReqGcashNumTxt.Text = "09";
-            this.ReqGcashNumTxt.Visible = false;
-            // 
-            // panel14
-            // 
-            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel14.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.ReqContactLbl);
-            this.panel14.Location = new System.Drawing.Point(284, 300);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(221, 35);
-            this.panel14.TabIndex = 187;
-            // 
-            // ReqContactLbl
-            // 
-            this.ReqContactLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqContactLbl.AutoSize = true;
-            this.ReqContactLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqContactLbl.Location = new System.Drawing.Point(7, 6);
-            this.ReqContactLbl.Name = "ReqContactLbl";
-            this.ReqContactLbl.Size = new System.Drawing.Size(49, 20);
-            this.ReqContactLbl.TabIndex = 174;
-            this.ReqContactLbl.Text = "TEST";
-            // 
-            // label57
-            // 
-            this.label57.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(282, 352);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(133, 20);
-            this.label57.TabIndex = 194;
-            this.label57.Text = "Assistance Thru *";
-            // 
-            // panel23
-            // 
-            this.panel23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel23.BackColor = System.Drawing.Color.White;
-            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel23.Controls.Add(this.ReqAssistanceThruCmb);
-            this.panel23.Location = new System.Drawing.Point(284, 374);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(222, 35);
-            this.panel23.TabIndex = 193;
-            // 
-            // ReqAssistanceThruCmb
-            // 
-            this.ReqAssistanceThruCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReqAssistanceThruCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqAssistanceThruCmb.FormattingEnabled = true;
-            this.ReqAssistanceThruCmb.Items.AddRange(new object[] {
-            "Cash",
-            "GCASH"});
-            this.ReqAssistanceThruCmb.Location = new System.Drawing.Point(5, 3);
-            this.ReqAssistanceThruCmb.Name = "ReqAssistanceThruCmb";
-            this.ReqAssistanceThruCmb.Size = new System.Drawing.Size(211, 28);
-            this.ReqAssistanceThruCmb.TabIndex = 0;
-            // 
-            // label56
-            // 
-            this.label56.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(527, 426);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(131, 20);
-            this.label56.TabIndex = 192;
-            this.label56.Text = "Amount Needed*";
-            // 
-            // panel22
-            // 
-            this.panel22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel22.BackColor = System.Drawing.Color.White;
-            this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel22.Controls.Add(this.label21);
-            this.panel22.Controls.Add(this.ReqAmountTxt);
-            this.panel22.Location = new System.Drawing.Point(531, 448);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(235, 35);
-            this.panel22.TabIndex = 185;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(4, 7);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 20);
-            this.label21.TabIndex = 175;
-            this.label21.Text = "PHP";
-            // 
-            // ReqAmountTxt
-            // 
-            this.ReqAmountTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ReqAmountTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqAmountTxt.Location = new System.Drawing.Point(46, 7);
-            this.ReqAmountTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ReqAmountTxt.Name = "ReqAmountTxt";
-            this.ReqAmountTxt.Size = new System.Drawing.Size(173, 19);
-            this.ReqAmountTxt.TabIndex = 28;
-            // 
-            // label55
-            // 
-            this.label55.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(280, 499);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(120, 20);
-            this.label55.TabIndex = 191;
-            this.label55.Text = "Requested By *";
-            // 
-            // panel21
-            // 
-            this.panel21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel21.BackColor = System.Drawing.Color.White;
-            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel21.Controls.Add(this.RequestByCmb);
-            this.panel21.Location = new System.Drawing.Point(283, 522);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(222, 35);
-            this.panel21.TabIndex = 188;
-            // 
-            // RequestByCmb
-            // 
-            this.RequestByCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RequestByCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RequestByCmb.FormattingEnabled = true;
-            this.RequestByCmb.Items.AddRange(new object[] {
-            "Member",
-            "Family",
-            "Relative"});
-            this.RequestByCmb.Location = new System.Drawing.Point(3, 3);
-            this.RequestByCmb.Name = "RequestByCmb";
-            this.RequestByCmb.Size = new System.Drawing.Size(215, 28);
-            this.RequestByCmb.TabIndex = 0;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(280, 277);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(101, 20);
-            this.label35.TabIndex = 190;
-            this.label35.Text = "Contact No : ";
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.TypeOfAidCmb);
-            this.panel9.Location = new System.Drawing.Point(531, 300);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(235, 35);
-            this.panel9.TabIndex = 186;
-            // 
             // TypeOfAidCmb
             // 
             this.TypeOfAidCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TypeOfAidCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TypeOfAidCmb.FormattingEnabled = true;
             this.TypeOfAidCmb.Items.AddRange(new object[] {
-            "Death",
-            "Burial",
-            "Hospital",
-            "Accident"});
-            this.TypeOfAidCmb.Location = new System.Drawing.Point(4, 4);
+            "Member",
+            "Family",
+            "Relative"});
+            this.TypeOfAidCmb.Location = new System.Drawing.Point(4, 5);
             this.TypeOfAidCmb.Name = "TypeOfAidCmb";
-            this.TypeOfAidCmb.Size = new System.Drawing.Size(225, 24);
-            this.TypeOfAidCmb.TabIndex = 0;
+            this.TypeOfAidCmb.Size = new System.Drawing.Size(226, 24);
+            this.TypeOfAidCmb.TabIndex = 1;
             // 
-            // label41
+            // ApplyButton
             // 
-            this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(527, 277);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(94, 20);
-            this.label41.TabIndex = 189;
-            this.label41.Text = "Type of Aid*";
+            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplyButton.BorderRadius = 0;
+            this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.ButtonImage = null;
+            this.ApplyButton.FlatAppearance.BorderSize = 0;
+            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.ForeColor = System.Drawing.Color.White;
+            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplyButton.IsToggled = false;
+            this.ApplyButton.Location = new System.Drawing.Point(1449, 21);
+            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.PaddingX = 0;
+            this.ApplyButton.PaddingY = 0;
+            this.ApplyButton.Size = new System.Drawing.Size(112, 33);
+            this.ApplyButton.TabIndex = 59;
+            this.ApplyButton.Text = "Apply Filter";
+            this.ApplyButton.TextColor = System.Drawing.Color.White;
+            this.ApplyButton.TextOffset = 20;
+            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.UseVisualStyleBackColor = false;
             // 
-            // panel15
+            // ApplySearchButton
             // 
-            this.panel15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel15.BackColor = System.Drawing.Color.White;
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.ReqFileTxt);
-            this.panel15.Controls.Add(this.UploadProofBtn);
-            this.panel15.Location = new System.Drawing.Point(532, 374);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(235, 35);
-            this.panel15.TabIndex = 184;
+            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplySearchButton.BorderRadius = 0;
+            this.ApplySearchButton.BorderSize = 0;
+            this.ApplySearchButton.ButtonImage = null;
+            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
+            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
+            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplySearchButton.IsToggled = false;
+            this.ApplySearchButton.Location = new System.Drawing.Point(930, 21);
+            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.Name = "ApplySearchButton";
+            this.ApplySearchButton.PaddingX = 0;
+            this.ApplySearchButton.PaddingY = 0;
+            this.ApplySearchButton.Size = new System.Drawing.Size(101, 33);
+            this.ApplySearchButton.TabIndex = 56;
+            this.ApplySearchButton.Text = "Search";
+            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
+            this.ApplySearchButton.TextOffset = 0;
+            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ApplySearchButton.UseVisualStyleBackColor = false;
             // 
-            // ReqFileTxt
+            // SubmitTicket
             // 
-            this.ReqFileTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqFileTxt.AutoSize = true;
-            this.ReqFileTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqFileTxt.Location = new System.Drawing.Point(5, 6);
-            this.ReqFileTxt.Name = "ReqFileTxt";
-            this.ReqFileTxt.Size = new System.Drawing.Size(53, 20);
-            this.ReqFileTxt.TabIndex = 175;
-            this.ReqFileTxt.Text = "No file";
+            this.SubmitTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.BorderRadius = 0;
+            this.SubmitTicket.BorderSize = 0;
+            this.SubmitTicket.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.SubmitTicket.FlatAppearance.BorderSize = 0;
+            this.SubmitTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitTicket.ForeColor = System.Drawing.Color.White;
+            this.SubmitTicket.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SubmitTicket.HoverColor = System.Drawing.Color.DarkRed;
+            this.SubmitTicket.ImageColor = System.Drawing.Color.White;
+            this.SubmitTicket.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SubmitTicket.ImageSize = new System.Drawing.Size(32, 32);
+            this.SubmitTicket.IsToggled = false;
+            this.SubmitTicket.Location = new System.Drawing.Point(581, 614);
+            this.SubmitTicket.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SubmitTicket.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.Name = "SubmitTicket";
+            this.SubmitTicket.PaddingX = 0;
+            this.SubmitTicket.PaddingY = 0;
+            this.SubmitTicket.Size = new System.Drawing.Size(204, 40);
+            this.SubmitTicket.TabIndex = 50;
+            this.SubmitTicket.Text = "Submit Ticket";
+            this.SubmitTicket.TextColor = System.Drawing.Color.White;
+            this.SubmitTicket.TextOffset = 5;
+            this.SubmitTicket.ToggleColor = System.Drawing.Color.Empty;
+            this.SubmitTicket.UseVisualStyleBackColor = false;
+            this.SubmitTicket.Click += new System.EventHandler(this.SubmitTicket_Click);
             // 
-            // UploadProofBtn
+            // TicketConfirmButton
             // 
-            this.UploadProofBtn.Location = new System.Drawing.Point(155, 3);
-            this.UploadProofBtn.Name = "UploadProofBtn";
-            this.UploadProofBtn.Size = new System.Drawing.Size(73, 26);
-            this.UploadProofBtn.TabIndex = 172;
-            this.UploadProofBtn.Text = "Open files";
-            this.UploadProofBtn.UseVisualStyleBackColor = true;
+            this.TicketConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.BorderRadius = 0;
+            this.TicketConfirmButton.BorderSize = 0;
+            this.TicketConfirmButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.TicketConfirmButton.FlatAppearance.BorderSize = 0;
+            this.TicketConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TicketConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketConfirmButton.ForeColor = System.Drawing.Color.White;
+            this.TicketConfirmButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.TicketConfirmButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.TicketConfirmButton.ImageColor = System.Drawing.Color.White;
+            this.TicketConfirmButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.TicketConfirmButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TicketConfirmButton.IsToggled = false;
+            this.TicketConfirmButton.Location = new System.Drawing.Point(609, 494);
+            this.TicketConfirmButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TicketConfirmButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.Name = "TicketConfirmButton";
+            this.TicketConfirmButton.PaddingX = 0;
+            this.TicketConfirmButton.PaddingY = 0;
+            this.TicketConfirmButton.Size = new System.Drawing.Size(225, 55);
+            this.TicketConfirmButton.TabIndex = 50;
+            this.TicketConfirmButton.Text = "Confirm Ticket";
+            this.TicketConfirmButton.TextColor = System.Drawing.Color.White;
+            this.TicketConfirmButton.TextOffset = 5;
+            this.TicketConfirmButton.ToggleColor = System.Drawing.Color.Empty;
+            this.TicketConfirmButton.UseVisualStyleBackColor = false;
+            this.TicketConfirmButton.Click += new System.EventHandler(this.TicketConfirmButton_Click);
             // 
-            // panel12
+            // ARHButton
             // 
-            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel12.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.ReqLastNameTxt);
-            this.panel12.Location = new System.Drawing.Point(40, 448);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(220, 35);
-            this.panel12.TabIndex = 183;
+            this.ARHButton.BackColor = System.Drawing.Color.White;
+            this.ARHButton.BackgroundColor = System.Drawing.Color.White;
+            this.ARHButton.BorderColor = System.Drawing.Color.Black;
+            this.ARHButton.BorderRadius = 0;
+            this.ARHButton.BorderSize = 1;
+            this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.ARHButton.FlatAppearance.BorderSize = 0;
+            this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARHButton.ForeColor = System.Drawing.Color.Black;
+            this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ARHButton.HoverColor = System.Drawing.Color.Silver;
+            this.ARHButton.ImageColor = System.Drawing.Color.Black;
+            this.ARHButton.ImagePosition = new System.Drawing.Point(255, 0);
+            this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ARHButton.IsToggled = false;
+            this.ARHButton.Location = new System.Drawing.Point(800, 5);
+            this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.ARHButton.Name = "ARHButton";
+            this.ARHButton.PaddingX = 0;
+            this.ARHButton.PaddingY = 0;
+            this.ARHButton.Size = new System.Drawing.Size(788, 49);
+            this.ARHButton.TabIndex = 21;
+            this.ARHButton.Text = "Approved Request History";
+            this.ARHButton.TextColor = System.Drawing.Color.Black;
+            this.ARHButton.TextOffset = 20;
+            this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.ARHButton.UseVisualStyleBackColor = false;
+            this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
             // 
-            // ReqLastNameTxt
+            // AssistanceRequestButton
             // 
-            this.ReqLastNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqLastNameTxt.AutoSize = true;
-            this.ReqLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqLastNameTxt.Location = new System.Drawing.Point(4, 7);
-            this.ReqLastNameTxt.Name = "ReqLastNameTxt";
-            this.ReqLastNameTxt.Size = new System.Drawing.Size(49, 20);
-            this.ReqLastNameTxt.TabIndex = 173;
-            this.ReqLastNameTxt.Text = "TEST";
-            // 
-            // panel11
-            // 
-            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel11.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.ReqMiddleTxt);
-            this.panel11.Location = new System.Drawing.Point(39, 522);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(222, 35);
-            this.panel11.TabIndex = 181;
-            // 
-            // ReqMiddleTxt
-            // 
-            this.ReqMiddleTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqMiddleTxt.AutoSize = true;
-            this.ReqMiddleTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqMiddleTxt.Location = new System.Drawing.Point(4, 6);
-            this.ReqMiddleTxt.Name = "ReqMiddleTxt";
-            this.ReqMiddleTxt.Size = new System.Drawing.Size(49, 20);
-            this.ReqMiddleTxt.TabIndex = 174;
-            this.ReqMiddleTxt.Text = "TEST";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.ReqFirstNameTxt);
-            this.panel2.Location = new System.Drawing.Point(39, 374);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 35);
-            this.panel2.TabIndex = 179;
-            // 
-            // ReqFirstNameTxt
-            // 
-            this.ReqFirstNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqFirstNameTxt.AutoSize = true;
-            this.ReqFirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqFirstNameTxt.Location = new System.Drawing.Point(5, 6);
-            this.ReqFirstNameTxt.Name = "ReqFirstNameTxt";
-            this.ReqFirstNameTxt.Size = new System.Drawing.Size(49, 20);
-            this.ReqFirstNameTxt.TabIndex = 172;
-            this.ReqFirstNameTxt.Text = "TEST";
-            // 
-            // label27
-            // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(528, 352);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(135, 20);
-            this.label27.TabIndex = 177;
-            this.label27.Text = "Upload ID/Proof : ";
-            // 
-            // label38
-            // 
-            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(36, 426);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(94, 20);
-            this.label38.TabIndex = 176;
-            this.label38.Text = "Last Name :";
-            // 
-            // label39
-            // 
-            this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(36, 499);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(109, 20);
-            this.label39.TabIndex = 175;
-            this.label39.Text = "Middle Name :";
-            // 
-            // label40
-            // 
-            this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(36, 353);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(94, 20);
-            this.label40.TabIndex = 174;
-            this.label40.Text = "First Name :";
-            // 
-            // label42
-            // 
-            this.label42.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(279, 206);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(111, 20);
-            this.label42.TabIndex = 173;
-            this.label42.Text = "Body Number*";
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel10.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.ReqBodyNoLbl);
-            this.panel10.Location = new System.Drawing.Point(284, 229);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(219, 34);
-            this.panel10.TabIndex = 172;
-            // 
-            // ReqBodyNoLbl
-            // 
-            this.ReqBodyNoLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqBodyNoLbl.AutoSize = true;
-            this.ReqBodyNoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqBodyNoLbl.Location = new System.Drawing.Point(6, 6);
-            this.ReqBodyNoLbl.Name = "ReqBodyNoLbl";
-            this.ReqBodyNoLbl.Size = new System.Drawing.Size(49, 20);
-            this.ReqBodyNoLbl.TabIndex = 173;
-            this.ReqBodyNoLbl.Text = "TEST";
-            // 
-            // MemberImagePb
-            // 
-            this.MemberImagePb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MemberImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MemberImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.MemberImagePb.Location = new System.Drawing.Point(39, 126);
-            this.MemberImagePb.Name = "MemberImagePb";
-            this.MemberImagePb.Size = new System.Drawing.Size(218, 209);
-            this.MemberImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.MemberImagePb.TabIndex = 178;
-            this.MemberImagePb.TabStop = false;
-            // 
-            // ReqSearchGrid
-            // 
-            this.ReqSearchGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReqSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ReqSearchGrid.Location = new System.Drawing.Point(278, 177);
-            this.ReqSearchGrid.Name = "ReqSearchGrid";
-            this.ReqSearchGrid.Size = new System.Drawing.Size(489, 53);
-            this.ReqSearchGrid.TabIndex = 200;
-            this.ReqSearchGrid.Visible = false;
-            this.ReqSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReqSearchGrid_CellClick);
+            this.AssistanceRequestButton.BackColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.BorderRadius = 0;
+            this.AssistanceRequestButton.BorderSize = 1;
+            this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
+            this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
+            this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;
+            this.AssistanceRequestButton.ImageColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(265, 0);
+            this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.AssistanceRequestButton.IsToggled = false;
+            this.AssistanceRequestButton.Location = new System.Drawing.Point(6, 5);
+            this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.AssistanceRequestButton.Name = "AssistanceRequestButton";
+            this.AssistanceRequestButton.PaddingX = 0;
+            this.AssistanceRequestButton.PaddingY = 0;
+            this.AssistanceRequestButton.Size = new System.Drawing.Size(788, 49);
+            this.AssistanceRequestButton.TabIndex = 19;
+            this.AssistanceRequestButton.Text = "Add New Request";
+            this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.TextOffset = 20;
+            this.AssistanceRequestButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.UseVisualStyleBackColor = false;
+            this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
             // 
             // AssistanceRequestUForm
             // 
@@ -1808,6 +1809,32 @@
             this.panel3.ResumeLayout(false);
             this.FillUpFormPanel.ResumeLayout(false);
             this.FillUpFormPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).EndInit();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.NonMemberSelectedPanel.ResumeLayout(false);
+            this.NonMemberSelectedPanel.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberImagePb)).EndInit();
             this.ConfirmationPanel.ResumeLayout(false);
             this.ConfirmationPanel.PerformLayout();
             this.panel31.ResumeLayout(false);
@@ -1842,32 +1869,6 @@
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.NonMemberSelectedPanel.ResumeLayout(false);
-            this.NonMemberSelectedPanel.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberImagePb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1983,7 +1984,6 @@
         private System.Windows.Forms.ComboBox RequestByCmb;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.ComboBox TypeOfAidCmb;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label ReqFileTxt;
@@ -2003,5 +2003,6 @@
         private System.Windows.Forms.Label ReqBodyNoLbl;
         private System.Windows.Forms.PictureBox MemberImagePb;
         private System.Windows.Forms.DataGridView ReqSearchGrid;
+        private System.Windows.Forms.ComboBox TypeOfAidCmb;
     }
 }

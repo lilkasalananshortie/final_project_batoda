@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrid;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+using BATODA.Modules.MemberModule;
 
 
 namespace BATODA
@@ -24,7 +26,6 @@ namespace BATODA
 
             TextStatusPanel.Show();
             TextStatusPanel.BringToFront();
-            NonMemberSelectedPanel.Hide();
 
 
             StyleDataGrid(AssistanceLogDataGrid);
@@ -33,8 +34,6 @@ namespace BATODA
         }
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
-
-            DisplayClass.SetPlaceholder(TypeOfAidCmb,"Select Aid Type");
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(SortComboBox, "Date");
 
@@ -525,8 +524,38 @@ namespace BATODA
 
             ReqBodyNoLbl.Text = bodyNumber.ToString("D3");
 
+            MemberModel member = new MemberModel
+            {
+                BodyNumber = bodyNumber
+            };
+
+            LoadOwnerImage.FromMember(member, MemberImagePb);
+
+
             ReqSearchGrid.Visible = false;
             MessageBox.Show("Clicked row: " + bodyNumberStr);
+
+        }
+
+        private void ReqAssistanceThruCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ReqAssistanceThruCmb.SelectedItem != null &&
+                    ReqAssistanceThruCmb.SelectedItem.ToString() == "GCASH")
+            {
+                ReqGcashNumTxt.Text = "09";
+                NonMemberSelectedPanel.BackColor = Color.White;
+                ReqGcashNumTxt.BackColor = Color.White;
+                ReqGcashNumTxt.Enabled = true;
+            }
+            else
+            {
+                ReqGcashNumTxt.Enabled = false;
+            }
+
+        }
+
+        private void CreateTicketPanel_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

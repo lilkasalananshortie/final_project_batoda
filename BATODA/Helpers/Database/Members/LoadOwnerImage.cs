@@ -19,17 +19,15 @@ namespace BATODA.Helpers.Database.Members
             string ImagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
             string bodyNumber = owner.BodyNumber.ToString("D3");
 
-            // Look for any file that starts with bodyNumber_
             string[] files = Directory.GetFiles(ImagesFolder, $"{bodyNumber}_*.*");
 
             try
             {
                 if (files.Length > 0)
                 {
-                    // Load as memory copy to avoid locking the file
+                    // SAVE HERE TO AVOID LOCK
                     using (var temp = new Bitmap(files[0]))
                     {
-                        // Dispose previous image safely
                         pictureBox.Image?.Dispose();
                         pictureBox.Image = new Bitmap(temp);
                     }
@@ -67,7 +65,6 @@ namespace BATODA.Helpers.Database.Members
             {
                 string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
 
-                // Construct the pattern to match only the past owner's image
                 string filePattern = $"{bodyNumber:D3}_{oldDateJoined:MMMMddyyyy}.*";
 
                 string[] filesToDelete = Directory.GetFiles(imagesFolder, filePattern);
