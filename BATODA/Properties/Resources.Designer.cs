@@ -293,6 +293,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_module {
+            get {
+                object obj = ResourceManager.GetObject("calendar_module", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap change_vehicle {
             get {
                 object obj = ResourceManager.GetObject("change_vehicle", resourceCulture);
@@ -373,6 +383,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_hover {
+            get {
+                object obj = ResourceManager.GetObject("delete_hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap descending {
             get {
                 object obj = ResourceManager.GetObject("descending", resourceCulture);
@@ -416,6 +436,16 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_hover {
+            get {
+                object obj = ResourceManager.GetObject("edit_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

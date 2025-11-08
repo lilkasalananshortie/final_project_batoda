@@ -544,6 +544,9 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\delete_hover.png" />
+    <None Include="Resources\edit_hover.png" />
+    <None Include="Resources\calendar_module.png" />
     <None Include="Resources\Action_Log.png" />
     <None Include="Resources\ActivityLog_cancelled.png" />
     <None Include="Resources\ActivityLog_rejected.png" />

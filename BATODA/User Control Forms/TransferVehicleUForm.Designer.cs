@@ -33,8 +33,6 @@
             this.RegisteredVehicleButton = new BATODA.ButtonStyle();
             this.TransferVehicleButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.buttonStyle1 = new BATODA.ButtonStyle();
             this.panel12 = new System.Windows.Forms.Panel();
             this.MemberTypeLbl = new System.Windows.Forms.Label();
@@ -74,16 +72,17 @@
             this.ModelTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.VehicOwnerSearch = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.BodyNumberLbl = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.VehicOwnerSearch = new System.Windows.Forms.TextBox();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -99,6 +98,7 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,28 +249,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1138, 743);
             this.panel1.TabIndex = 23;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.transfer;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 88;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(102, 22);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(256, 37);
-            this.label18.TabIndex = 87;
-            this.label18.Text = "Change Vehicle";
             // 
             // buttonStyle1
             // 
@@ -706,6 +684,16 @@
             this.panel7.Size = new System.Drawing.Size(642, 38);
             this.panel7.TabIndex = 89;
             // 
+            // VehicOwnerSearch
+            // 
+            this.VehicOwnerSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.VehicOwnerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VehicOwnerSearch.Location = new System.Drawing.Point(5, 6);
+            this.VehicOwnerSearch.Name = "VehicOwnerSearch";
+            this.VehicOwnerSearch.Size = new System.Drawing.Size(594, 22);
+            this.VehicOwnerSearch.TabIndex = 44;
+            this.VehicOwnerSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
@@ -758,6 +746,28 @@
             this.label15.TabIndex = 109;
             this.label15.Text = "Body No. *";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.transfer;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 88;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(102, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(256, 37);
+            this.label18.TabIndex = 87;
+            this.label18.Text = "Change Vehicle";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -769,16 +779,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1216, 848);
             this.panel5.TabIndex = 24;
-            // 
-            // VehicOwnerSearch
-            // 
-            this.VehicOwnerSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.VehicOwnerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VehicOwnerSearch.Location = new System.Drawing.Point(5, 6);
-            this.VehicOwnerSearch.Name = "VehicOwnerSearch";
-            this.VehicOwnerSearch.Size = new System.Drawing.Size(594, 22);
-            this.VehicOwnerSearch.TabIndex = 44;
-            this.VehicOwnerSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // TransferVehicleUForm
             // 
@@ -794,7 +794,6 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -821,6 +820,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);

@@ -409,14 +409,14 @@
             this.CalendarBtn.BorderColor = System.Drawing.Color.Red;
             this.CalendarBtn.BorderRadius = 0;
             this.CalendarBtn.BorderSize = 0;
-            this.CalendarBtn.ButtonImage = global::BATODA.Properties.Resources.total_request;
+            this.CalendarBtn.ButtonImage = global::BATODA.Properties.Resources.calendar_module;
             this.CalendarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalendarBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.CalendarBtn.HoverBorderColor = System.Drawing.Color.Black;
             this.CalendarBtn.HoverColor = System.Drawing.Color.Silver;
-            this.CalendarBtn.ImageColor = System.Drawing.Color.Black;
+            this.CalendarBtn.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.CalendarBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CalendarBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.CalendarBtn.ImageSize = new System.Drawing.Size(36, 36);
             this.CalendarBtn.IsToggled = false;
             this.CalendarBtn.Location = new System.Drawing.Point(3, 566);
             this.CalendarBtn.MouseDownColor = System.Drawing.Color.LightGray;

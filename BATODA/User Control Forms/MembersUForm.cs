@@ -70,6 +70,7 @@ namespace BATODA
                 MembersDataGrid.Columns.Add(columnNames[i], columnHeaders[i]);
                 MembersDataGrid.Columns[columnNames[i]].SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+
         }
 
         private void LoadMembersToGrid()
@@ -147,34 +148,7 @@ namespace BATODA
 
 
 
-        private void StatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MemberTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OrderComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-        private void ManageMembersButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void AddMemberButton_Click(object sender, EventArgs e)
         {
             ToastManager.Info("Member Search");    // testing lang 
@@ -217,11 +191,6 @@ namespace BATODA
             AddMemberPanel.Visible = false;
             AddMemberButton.Enabled = true;
             SearchBtn.Enabled = true;
-
-        }
-
-        private void AddMemberPanel_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -275,11 +244,6 @@ namespace BATODA
                 PreviewImagePb.ImageLocation = UploadImageDialog.FileName;
                 PreviewImagePb.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-        }
-
-        private void panel16_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void MembersDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -384,11 +348,6 @@ namespace BATODA
             {
                 MessageBox.Show("No member selected to edit.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void NoResultsPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void SearchTxt_KeyDown(object sender, KeyEventArgs e)

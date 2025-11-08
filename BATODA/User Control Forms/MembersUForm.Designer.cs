@@ -207,7 +207,6 @@
             this.SearchTxt.Name = "SearchTxt";
             this.SearchTxt.Size = new System.Drawing.Size(558, 24);
             this.SearchTxt.TabIndex = 4;
-            this.SearchTxt.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             this.SearchTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTxt_KeyDown);
             // 
             // SortMembertTypeCmb
@@ -219,7 +218,6 @@
             this.SortMembertTypeCmb.Name = "SortMembertTypeCmb";
             this.SortMembertTypeCmb.Size = new System.Drawing.Size(250, 33);
             this.SortMembertTypeCmb.TabIndex = 6;
-            this.SortMembertTypeCmb.SelectedIndexChanged += new System.EventHandler(this.MemberTypeComboBox_SelectedIndexChanged);
             // 
             // SortOrderCmb
             // 
@@ -230,7 +228,6 @@
             this.SortOrderCmb.Name = "SortOrderCmb";
             this.SortOrderCmb.Size = new System.Drawing.Size(250, 33);
             this.SortOrderCmb.TabIndex = 8;
-            this.SortOrderCmb.SelectedIndexChanged += new System.EventHandler(this.OrderComboBox_SelectedIndexChanged);
             // 
             // SortStatusCmb
             // 
@@ -241,7 +238,6 @@
             this.SortStatusCmb.Name = "SortStatusCmb";
             this.SortStatusCmb.Size = new System.Drawing.Size(250, 33);
             this.SortStatusCmb.TabIndex = 9;
-            this.SortStatusCmb.SelectedIndexChanged += new System.EventHandler(this.StatusComboBox_SelectedIndexChanged);
             // 
             // MembersDataGrid
             // 
@@ -391,7 +387,6 @@
             this.ManageMembersButton.TextOffset = 20;
             this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
-            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
             // label4
             // 
@@ -425,9 +420,7 @@
             this.AddMemberPanel.Location = new System.Drawing.Point(154, 93);
             this.AddMemberPanel.Name = "AddMemberPanel";
             this.AddMemberPanel.Size = new System.Drawing.Size(1288, 767);
-            this.AddMemberPanel.TabIndex = 22;
-            this.AddMemberPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddMemberPanel_Paint);
-            // 
+            this.AddMemberPanel.TabIndex = 22;            // 
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -462,7 +455,6 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(1229, 593);
             this.panel16.TabIndex = 28;
-            this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
             // 
             // BirthdatePicker
             // 
@@ -1002,7 +994,6 @@
             this.NoResultsPanel.Size = new System.Drawing.Size(1522, 100);
             this.NoResultsPanel.TabIndex = 53;
             this.NoResultsPanel.Visible = false;
-            this.NoResultsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.NoResultsPanel_Paint);
             // 
             // label14
             // 

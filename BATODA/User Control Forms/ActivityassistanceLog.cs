@@ -20,7 +20,7 @@ namespace BATODA.User_Control_Forms
             LabelRequestAction.Text = ActionTitle;
             LabelRequestInfo.Text = ActionInfo;
 
-            // Set status icon/color
+           
             switch (status.ToLower())
             {
                 case "success":
@@ -37,7 +37,7 @@ namespace BATODA.User_Control_Forms
 
             this.BackColor = Color.White;
             this.Padding = new Padding(5);
-            this.Margin = new Padding(0, 0, 0, 5); // spacing between cards
+            this.Margin = new Padding(0, 0, 0, 5);
             this.BorderStyle = BorderStyle.FixedSingle;
         }
     }

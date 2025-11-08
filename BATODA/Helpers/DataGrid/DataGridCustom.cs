@@ -58,73 +58,65 @@ namespace BATODA.Helpers.DataGrids
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
         }
 
+        //edit button with hover effect =)
         public static void AddEditButtonOnly(DataGridView dgv)
         {
             if (dgv == null) return;
 
             if (dgv.Columns.Contains("Edit"))
                 dgv.Columns.Remove("Edit");
-            if (dgv.Columns.Contains("Delete"))
-                dgv.Columns.Remove("Delete");
 
-            var baseColor = Color.FromArgb(173, 46, 36);
-            var hoverColor = ControlPaint.Dark(baseColor, 0.2f);
-
-            var editButton = new DataGridViewButtonColumn
+            var editColumn = new DataGridViewImageColumn
             {
                 Name = "Edit",
                 HeaderText = "Edit",
-                Text = "Edit",
-                UseColumnTextForButtonValue = true,
-                Width = 80,
-                FlatStyle = FlatStyle.Flat
+                Image = Properties.Resources.edit,
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 40 
             };
 
-            dgv.Columns.Add(editButton);
+            dgv.Columns.Add(editColumn);
+            editColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            editColumn.DefaultCellStyle.Padding = new Padding(20);
 
-            dgv.DataBindingComplete += (s, e) =>
+          
+            int hoveredRow = -1;
+
+           
+            dgv.CellMouseEnter += (s, e) =>
             {
-                if (dgv.Columns.Contains("Edit"))
-                    editButton.DisplayIndex = dgv.Columns.Count - 1;
+                if (e.RowIndex < 0 || e.ColumnIndex != dgv.Columns["Edit"].Index) return;
+                hoveredRow = e.RowIndex;
+                dgv.InvalidateCell(e.ColumnIndex, e.RowIndex); 
+            };
+
+            dgv.CellMouseLeave += (s, e) =>
+            {
+                if (e.RowIndex < 0 || e.ColumnIndex != dgv.Columns["Edit"].Index) return;
+                hoveredRow = -1;
+                dgv.InvalidateCell(e.ColumnIndex, e.RowIndex);
             };
 
             dgv.CellPainting += (s, e) =>
             {
-                if (e.RowIndex < 0 || e.RowIndex == dgv.NewRowIndex) return;
+                if (e.RowIndex < 0 || e.ColumnIndex != dgv.Columns["Edit"].Index) return;
 
-                if (e.ColumnIndex == dgv.Columns["Edit"].Index)
-                {
-                    e.PaintBackground(e.CellBounds, false);
+                e.PaintBackground(e.CellBounds, true);
 
-                    var mousePos = dgv.PointToClient(Control.MousePosition);
-                    bool isHover = e.CellBounds.Contains(mousePos);
+                bool isHover = e.RowIndex == hoveredRow;
 
-                    var fillColor = isHover ? hoverColor : baseColor;
+                Image img = isHover ? Properties.Resources.edit_hover : Properties.Resources.edit;
 
-                    using (var brush = new SolidBrush(fillColor))
-                        e.Graphics.FillRectangle(brush, e.CellBounds);
+                int targetSize = 30; 
+                int x = e.CellBounds.X + (e.CellBounds.Width - targetSize) / 2;
+                int y = e.CellBounds.Y + (e.CellBounds.Height - targetSize) / 2;
 
-                    TextRenderer.DrawText(
-                        e.Graphics,
-                        e.Value?.ToString(),
-                        e.CellStyle.Font,
-                        e.CellBounds,
-                        Color.White,
-                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
-                    );
-
-                    e.Handled = true;
-                }
-            };
-
-            dgv.NewRowNeeded += (s, e) =>
-            {
-                if (dgv.Columns.Contains("Edit"))
-                    dgv["Edit", dgv.NewRowIndex].ReadOnly = true;
+                e.Graphics.DrawImage(img, x, y, targetSize, targetSize);
+                e.Handled = true;
             };
         }
 
-
+        // with hover na rin =)
         public static void AddActionButtons(DataGridView dgv)
         {
             if (dgv == null) return;
@@ -134,87 +126,82 @@ namespace BATODA.Helpers.DataGrids
             if (dgv.Columns.Contains("Delete"))
                 dgv.Columns.Remove("Delete");
 
-            var baseColor = Color.FromArgb(173, 46, 36);
-            var hoverColor = ControlPaint.Dark(baseColor, 0.2f);
-
-            var editButton = new DataGridViewButtonColumn
+            var editColumn = new DataGridViewImageColumn
             {
                 Name = "Edit",
                 HeaderText = "Edit",
-                Text = "Edit",
-                UseColumnTextForButtonValue = true,
-                Width = 80,
-                FlatStyle = FlatStyle.Flat
+                Image = Properties.Resources.edit,
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 40
             };
 
-            var deleteButton = new DataGridViewButtonColumn
+            var deleteColumn = new DataGridViewImageColumn
             {
                 Name = "Delete",
                 HeaderText = "Delete",
-                Text = "Delete",
-                UseColumnTextForButtonValue = true,
-                Width = 80,
-                FlatStyle = FlatStyle.Flat
+                Image = Properties.Resources.delete, 
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                Width = 40
             };
 
-            dgv.Columns.Add(editButton);
-            dgv.Columns.Add(deleteButton);
+            dgv.Columns.Add(editColumn);
+            dgv.Columns.Add(deleteColumn);
 
-            dgv.DataBindingComplete += (s, e) =>
+         
+            foreach (DataGridViewColumn col in new[] { editColumn, deleteColumn })
             {
-                if (dgv.Columns.Contains("Edit") && dgv.Columns.Contains("Delete"))
+                col.DefaultCellStyle.Padding = new Padding(20); 
+                col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+
+            // Track hovered row and column
+            int hoveredRow = -1;
+            int hoveredCol = -1;
+
+            dgv.CellMouseEnter += (s, e) =>
+            {
+                if (e.RowIndex < 0) return;
+                if (e.ColumnIndex == dgv.Columns["Edit"].Index || e.ColumnIndex == dgv.Columns["Delete"].Index)
                 {
-                    editButton.DisplayIndex = dgv.Columns.Count - 2;
-                    deleteButton.DisplayIndex = dgv.Columns.Count - 1;
+                    hoveredRow = e.RowIndex;
+                    hoveredCol = e.ColumnIndex;
+                    dgv.InvalidateCell(e.ColumnIndex, e.RowIndex);
                 }
             };
 
+            dgv.CellMouseLeave += (s, e) =>
+            {
+                if (e.RowIndex < 0) return;
+                if (e.ColumnIndex == hoveredCol)
+                {
+                    hoveredRow = -1;
+                    hoveredCol = -1;
+                    dgv.InvalidateCell(e.ColumnIndex, e.RowIndex);
+                }
+            };
 
             dgv.CellPainting += (s, e) =>
             {
                 if (e.RowIndex < 0) return;
-
-                
-                if (e.RowIndex == dgv.NewRowIndex)
-                {
-                    e.Handled = true;
+                if (e.ColumnIndex != dgv.Columns["Edit"].Index && e.ColumnIndex != dgv.Columns["Delete"].Index)
                     return;
-                }
 
+                e.PaintBackground(e.CellBounds, true);
 
-                if (e.ColumnIndex == dgv.Columns["Edit"].Index || e.ColumnIndex == dgv.Columns["Delete"].Index)
-                {
-                    e.PaintBackground(e.CellBounds, false);
+                bool isHover = e.RowIndex == hoveredRow && e.ColumnIndex == hoveredCol;
+                Image img = e.ColumnIndex == dgv.Columns["Edit"].Index
+                    ? (isHover ? Properties.Resources.edit_hover : Properties.Resources.edit)
+                    : (isHover ? Properties.Resources.delete_hover : Properties.Resources.delete);
 
-                    var mousePos = dgv.PointToClient(Control.MousePosition);
-                    bool isHover = e.CellBounds.Contains(mousePos);
+                int targetSize = 30;
+                int x = e.CellBounds.X + (e.CellBounds.Width - targetSize) / 2;
+                int y = e.CellBounds.Y + (e.CellBounds.Height - targetSize) / 2;
 
-                    var fillColor = isHover ? hoverColor : baseColor;
-
-                    using (var brush = new SolidBrush(fillColor))
-                        e.Graphics.FillRectangle(brush, e.CellBounds);
-
-                    TextRenderer.DrawText(  
-                        e.Graphics,
-                        e.Value?.ToString(),
-                        e.CellStyle.Font,
-                        e.CellBounds,
-                        Color.White,
-                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
-                    );
-
-                    e.Handled = true;
-                }
-            };
-
-            dgv.NewRowNeeded += (s, e) =>
-            {
-                if (dgv.Columns.Contains("Edit"))
-                    dgv["Edit", dgv.NewRowIndex].ReadOnly = true;
-                if (dgv.Columns.Contains("Delete"))
-                    dgv["Delete", dgv.NewRowIndex].ReadOnly = true;
+                e.Graphics.DrawImage(img, x, y, targetSize, targetSize);
+                e.Handled = true;
             };
         }
+
     }
 }
 
