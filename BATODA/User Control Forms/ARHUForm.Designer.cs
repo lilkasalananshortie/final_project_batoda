@@ -35,9 +35,12 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AssistanceHistoryGrid = new System.Windows.Forms.DataGridView();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AssistanceHistoryGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -152,10 +155,19 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.AssistanceHistoryGrid);
             this.panel1.Location = new System.Drawing.Point(19, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1585, 796);
             this.panel1.TabIndex = 50;
+            // 
+            // AssistanceHistoryGrid
+            // 
+            this.AssistanceHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AssistanceHistoryGrid.Location = new System.Drawing.Point(0, -3);
+            this.AssistanceHistoryGrid.Name = "AssistanceHistoryGrid";
+            this.AssistanceHistoryGrid.Size = new System.Drawing.Size(1590, 796);
+            this.AssistanceHistoryGrid.TabIndex = 0;
             // 
             // ARHUForm
             // 
@@ -168,10 +180,13 @@
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "ARHUForm";
             this.Size = new System.Drawing.Size(1896, 992);
+            this.Load += new System.EventHandler(this.ARHUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AssistanceHistoryGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +199,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView AssistanceHistoryGrid;
     }
 }

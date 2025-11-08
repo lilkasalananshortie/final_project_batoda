@@ -37,7 +37,7 @@
             // 
             // PictureBoxStatus
             // 
-            this.PictureBoxStatus.Location = new System.Drawing.Point(9, 12);
+            this.PictureBoxStatus.Location = new System.Drawing.Point(9, 8);
             this.PictureBoxStatus.Name = "PictureBoxStatus";
             this.PictureBoxStatus.Size = new System.Drawing.Size(57, 50);
             this.PictureBoxStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -48,7 +48,7 @@
             // 
             this.LabelRequestAction.AutoSize = true;
             this.LabelRequestAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRequestAction.Location = new System.Drawing.Point(72, 13);
+            this.LabelRequestAction.Location = new System.Drawing.Point(72, 9);
             this.LabelRequestAction.Name = "LabelRequestAction";
             this.LabelRequestAction.Size = new System.Drawing.Size(52, 18);
             this.LabelRequestAction.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.LabelRequestInfo.AutoSize = true;
             this.LabelRequestInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRequestInfo.Location = new System.Drawing.Point(72, 36);
+            this.LabelRequestInfo.Location = new System.Drawing.Point(72, 32);
             this.LabelRequestInfo.Name = "LabelRequestInfo";
             this.LabelRequestInfo.Size = new System.Drawing.Size(44, 16);
             this.LabelRequestInfo.TabIndex = 1;
@@ -84,7 +84,7 @@
             this.Controls.Add(this.LabelRequestAction);
             this.Controls.Add(this.PictureBoxStatus);
             this.Name = "ActivityassistanceLog";
-            this.Size = new System.Drawing.Size(318, 79);
+            this.Size = new System.Drawing.Size(318, 67);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStatus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

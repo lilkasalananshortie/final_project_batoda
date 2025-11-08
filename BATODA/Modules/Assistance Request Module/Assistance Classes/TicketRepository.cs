@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+using System.Windows.Forms;
 
 namespace BATODA.Modules.Assistance_Request_Module
 {
@@ -43,6 +44,60 @@ namespace BATODA.Modules.Assistance_Request_Module
                 }
             }
         }
+        public void UpdateRequestStatus(int ticketID, string newStatus)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string updateQuery = "UPDATE FinancialAssistanceRequests SET RequestStatus = @Status WHERE TicketID = @TicketID";
+                using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Status", newStatus);
+                    cmd.Parameters.AddWithValue("@TicketID", ticketID);
+                    cmd.ExecuteNonQuery();
+                }
+
+                string insertHistory = "INSERT INTO AssistanceActionHistory (TicketID) VALUES (@TicketID)";
+                using (SqlCommand cmd = new SqlCommand(insertHistory, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TicketID", ticketID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public void LoadData(DataGridView grid)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string query = @"SELECT 
+                    CONCAT('TR-', f.TicketID) AS TicketID,
+                    RIGHT('000' + CAST(f.BodyNumber AS VARCHAR(3)), 3) AS BodyNumber,
+                    f.FullName,
+                    f.ContactNumber,
+                    f.TypeOfAid,
+                    f.RequestedBy,
+                    f.RequestedAmount,
+                    f.AssistanceThru,
+                    f.GcashNumber,
+                    f.DateRequested,
+                    f.RequestStatus,
+                    h.ActionDate
+                 FROM FinancialAssistanceRequests f
+                 LEFT JOIN AssistanceActionHistory h
+                    ON f.TicketID = h.TicketID
+                 ORDER BY h.ActionDate DESC";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                grid.DataSource = dt;
+            }
+        }
+
 
         public List<TicketModel> GetAllRequests()
         {
@@ -80,20 +135,6 @@ namespace BATODA.Modules.Assistance_Request_Module
             return tickets;
         }
 
-        public void UpdateRequestStatus(int ticketID, string newStatus)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "UPDATE FinancialAssistanceRequests SET RequestStatus = @Status WHERE TicketID = @TicketID";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Status", newStatus);
-                    cmd.Parameters.AddWithValue("@TicketID", ticketID);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
 
     }
 }

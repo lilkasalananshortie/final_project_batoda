@@ -78,8 +78,6 @@ namespace BATODA.Helpers.DataGrids
             }
         }
 
-
-
         public static void LoadTricyclesToGrid(DataGridView grid, DataTable table)
         {
             grid.DataSource = null;
@@ -121,9 +119,5 @@ namespace BATODA.Helpers.DataGrids
                 );
             }
         }
-
-
-
-
     }
 }

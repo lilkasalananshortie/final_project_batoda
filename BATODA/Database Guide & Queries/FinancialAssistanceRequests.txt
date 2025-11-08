@@ -16,3 +16,4 @@
     FOREIGN KEY (BodyNumber) REFERENCES MemberInfo(BodyNumber),
     FOREIGN KEY (ContactNumber) REFERENCES MemberInfo(ContactNumber)
 );
+??

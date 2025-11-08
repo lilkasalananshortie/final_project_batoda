@@ -1,0 +1,7 @@
+﻿CREATE TABLE AssistanceActionHistory (
+    LogID INT IDENTITY(1,1) PRIMARY KEY,
+    TicketID INT NOT NULL,                     
+    ActionDate DATETIME DEFAULT GETDATE(),      
+
+    FOREIGN KEY (TicketID) REFERENCES FinancialAssistanceRequests(TicketID)
+);

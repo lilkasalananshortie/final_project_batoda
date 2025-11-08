@@ -59,6 +59,8 @@
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AddTicketBox.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceLoadMember.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceModel.cs" />
+    <Compile Include="Modules\Assistance Request Module\Assistance Classes\GmailSender.cs" />
+    <Compile Include="Modules\Assistance Request Module\Assistance Classes\LoadAssistanceHistory.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\TicketRepository.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\Ticket.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\RequestSearchOwner.cs" />
@@ -539,6 +541,7 @@
     <None Include="Resources\icon_add_image.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database Guide &amp; Queries\AssistanceHistory.txt" />
     <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
     <Content Include="Database Guide &amp; Queries\BatodaFunds.txt" />
     <Content Include="Database Guide &amp; Queries\FinancialAssistanceRequests.txt" />

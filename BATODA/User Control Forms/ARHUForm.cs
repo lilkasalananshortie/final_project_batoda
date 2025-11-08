@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BATODA.Modules.Assistance_Request_Module;
+using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+using BATODA.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrids;
 
 namespace BATODA
 {
@@ -31,5 +35,25 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new ARHUForm());
         }
+        private void ARHUForm_Load(object sender, EventArgs e)
+        {
+            AssistanceRepository loader = new AssistanceRepository();
+            DataGridCustom.ApplyCustomGrid(AssistanceHistoryGrid);
+            loader.LoadData(AssistanceHistoryGrid);
+            AssistanceHistoryGrid.Columns["TicketID"].HeaderText = "Ticket ID";
+            AssistanceHistoryGrid.Columns["BodyNumber"].HeaderText = "Body No.";
+            AssistanceHistoryGrid.Columns["FullName"].HeaderText = "Name";
+            AssistanceHistoryGrid.Columns["ContactNumber"].HeaderText = "Contact No.";
+            AssistanceHistoryGrid.Columns["TypeOfAid"].HeaderText = "Type of Aid";
+            AssistanceHistoryGrid.Columns["RequestedBy"].HeaderText = "Requested By";
+            AssistanceHistoryGrid.Columns["RequestedAmount"].HeaderText = "Amount";
+            AssistanceHistoryGrid.Columns["AssistanceThru"].HeaderText = "Transfer Thru";
+            AssistanceHistoryGrid.Columns["GcashNumber"].HeaderText = "Gcash No.";
+            AssistanceHistoryGrid.Columns["DateRequested"].HeaderText = "Date Requested";
+            AssistanceHistoryGrid.Columns["RequestStatus"].HeaderText = "Status";
+            AssistanceHistoryGrid.Columns["ActionDate"].HeaderText = "Update Date";
+
+        }
+
     }
 }

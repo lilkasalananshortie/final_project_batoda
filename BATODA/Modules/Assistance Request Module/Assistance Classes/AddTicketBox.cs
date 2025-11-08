@@ -1,12 +1,17 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
+﻿using BATODA.Modules.Assistance_Request_Module;
+using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
 using BATODA.User_Control_Forms;
+using System;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 public class AddTicketBox
 {
     private FlowLayoutPanel TicketFlowLayoutPanel;
     private FlowLayoutPanel ActivityLogFlowLayoutPanel;
+    AssistanceRepository repo = new AssistanceRepository();
+
 
     public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel)
     {
@@ -92,6 +97,7 @@ public class AddTicketBox
             Location = new Point(rightX, y + 80),
             AutoSize = true
         };
+
 
         int expandY = picMember.Bottom + 19;
 
@@ -180,9 +186,6 @@ public class AddTicketBox
             Visible = false
         };
 
-       
-
-
         approveBtn.Click += (s, e) =>
         {
             Panel parent = ((Button)s).Parent as Panel;
@@ -190,6 +193,10 @@ public class AddTicketBox
             lblTracking.BringToFront();
             lblTracking.BackColor = Color.LightGreen;
             lblStatus.Text = "Status: Approved";
+            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
+            AssistanceRepository repo = new AssistanceRepository();
+            repo.UpdateRequestStatus(ticketID, "Approved");
             releaseBtn.Visible = true;
             releaseBtn.Show();
             approveBtn.Hide();
@@ -207,6 +214,10 @@ public class AddTicketBox
             lblTracking.BackColor = Color.LightCoral;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Rejected";
+            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
+            AssistanceRepository repo = new AssistanceRepository();
+            repo.UpdateRequestStatus(ticketID, "Rejected");
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
@@ -225,6 +236,10 @@ public class AddTicketBox
             lblTracking.BackColor = Color.LightGray;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Canceled";
+            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
+            AssistanceRepository repo = new AssistanceRepository();
+            repo.UpdateRequestStatus(ticketID, "Rejected");
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
@@ -258,6 +273,27 @@ public class AddTicketBox
         TicketBox.Controls.Add(cancelBtn);
         TicketBox.Controls.Add(releaseBtn);
 
+        if (status == "Approved")
+        {
+            HeaderPanel.BackColor = Color.LightGreen;
+            lblTracking.BackColor = Color.LightGreen;
+
+            releaseBtn.Visible = true;       // only release
+            approveBtn.Visible = false;
+            rejectBtn.Visible = false;
+            cancelBtn.Visible = false;
+        }
+        else if (status == "Rejected" || status == "Canceled")
+        {
+            HeaderPanel.BackColor = (status == "Rejected") ? Color.LightCoral : Color.LightGray;
+            lblTracking.BackColor = HeaderPanel.BackColor;
+
+            releaseBtn.Visible = false;
+            approveBtn.Visible = false;
+            rejectBtn.Visible = false;
+            cancelBtn.Visible = false;
+        }
+
 
         lblTracking.BringToFront();
         lblTracking.BackColor = Color.LightGray;
@@ -282,10 +318,39 @@ public class AddTicketBox
         {
             if (control.Tag != null && control.Tag.ToString() == "ExpandInfo")
             {
-                control.Visible = isExpanded;
+                if (!isExpanded)
+                {
+                    control.Visible = false;
+                    continue;
+                }
+
+                if (control is Button btn)
+                {
+                    Label lblStatus = panel.Controls.OfType<Label>()
+                        .FirstOrDefault(l => l.Text.StartsWith("Status:"));
+                    string status = lblStatus?.Text.Replace("Status:", "").Trim() ?? "";
+
+                    if (status == "Approved")
+                    {
+                        control.Visible = btn.Text == "Release"; 
+                    }
+                    else if (status == "Rejected" || status == "Canceled")
+                    {
+                        control.Visible = false; 
+                    }
+                    else
+                    {
+                        control.Visible = btn.Text == "Approve" || btn.Text == "Reject" || btn.Text == "Cancel";
+                    }
+                }
+                else
+                {
+                    control.Visible = isExpanded;
+                }
             }
         }
     }
+
 
     private void AddActivityLog(string actionTitle, string actionInfo, string status)
     {

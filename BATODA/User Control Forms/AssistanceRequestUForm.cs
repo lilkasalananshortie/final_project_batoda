@@ -125,6 +125,24 @@ namespace BATODA
                 // DEFAULT PENDING STATUS SA TABLE
             };
 
+
+            GmailSender GmailSend = new GmailSender();
+            GmailSend.SendAssistanceEmail(
+                recipientEmail: "recipient@example.com",
+                fullName: data.FullName,
+                bodyNumber: data.BodyNumber.ToString("D3"), 
+                typeOfAid: data.TypeOfAid,
+                requestedBy: data.RequestedBy,
+                amount: "₱" + data.RequestedAmount.ToString("N2"),
+                assistanceThru: data.AssistanceThru,
+                gcashNumber: data.GcashNumber,
+                dateRequested: data.DateRequested.ToString("MM-dd-yyyy hh:mm tt"),
+                targetDate: data.TargetDate.ToString("MM-dd-yyyy"),
+                status: "Pending",  
+                proofFilePath: ReqFileTxt.Text  
+            );
+
+
             AssistanceRepository repo = new AssistanceRepository();
             repo.AddRequest(data);
 
@@ -235,7 +253,6 @@ namespace BATODA
 
 
             ReqSearchGrid.Visible = false;
-            MessageBox.Show("Clicked row: " + bodyNumberStr);
 
         }
 
