@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrid;
 using BATODA.UI_Displays;
 
 namespace BATODA
@@ -16,6 +17,8 @@ namespace BATODA
         public FinanceUForm()
         {
             InitializeComponent();
+            TaxHandler.Initialize(ButawDataGrid);
+            TaxHandler.LoadSampleData(ButawDataGrid);
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(PaymentStatusComboBox, "Status", "Paid", "Unpaid", "Overdue");
             DisplayClass.SetPlaceholder(YearComboBox, "Year", "2025", "2024");
@@ -33,9 +36,21 @@ namespace BATODA
             DisplayClass.ShowMain(new FinanceUForm());
         }
 
-        
+        private void btnPaid_Click(object sender, EventArgs e)
+        {
+            TaxHandler.SetMode("Paid");
+        }
+        private void btnOverdue_Click(object sender, EventArgs e)
+        {
+            TaxHandler.SetMode("Overdue");
+        }
+        private void btnDue_Click(object sender, EventArgs e)
+        {
+            TaxHandler.SetMode("Due");
+        }
 
-        
+
+
 
         private void MembershipRenewalButton_Click_1(object sender, EventArgs e)
         {

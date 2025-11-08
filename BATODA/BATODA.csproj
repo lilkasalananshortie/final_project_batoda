@@ -55,6 +55,7 @@
     <Compile Include="Helpers\Database\Members\SelectedMemberImage.cs" />
     <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
     <Compile Include="Helpers\DataGrid\SearchResults.cs" />
+    <Compile Include="Helpers\DataGrid\TaxHandler.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AddTicketBox.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceLoadMember.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceModel.cs" />
@@ -544,6 +545,7 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\circle-dashed.png" />
     <None Include="Resources\delete_hover.png" />
     <None Include="Resources\edit_hover.png" />
     <None Include="Resources\calendar_module.png" />
