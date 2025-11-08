@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.ARHButton = new BATODA.ButtonStyle();
-            this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CreateTicketPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.FillUpFormPanel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.ReqSearchGrid = new System.Windows.Forms.DataGridView();
@@ -83,7 +88,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.TicketIdlbl = new System.Windows.Forms.Label();
             this.DateCreatedLbl = new System.Windows.Forms.Label();
-            this.SubmitTicket = new BATODA.ButtonStyle();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
@@ -119,24 +123,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.ConfTicketIdLbl = new System.Windows.Forms.Label();
             this.ConfDateCreatedLbl = new System.Windows.Forms.Label();
-            this.TicketConfirmButton = new BATODA.ButtonStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.ApplyButton = new BATODA.ButtonStyle();
             this.SortComboBox = new System.Windows.Forms.ComboBox();
             this.AssistanceTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.ApplySearchButton = new BATODA.ButtonStyle();
             this.panel20 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.AssistanceLogDataGrid = new System.Windows.Forms.DataGridView();
-            this.CreateTicketPanel = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label53 = new System.Windows.Forms.Label();
-            this.Cerate = new System.Windows.Forms.Label();
+            this.FLPActivityLog = new System.Windows.Forms.FlowLayoutPanel();
             this.TicketFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TextStatusPanel = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
@@ -157,8 +151,20 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.OpenProof = new System.Windows.Forms.OpenFileDialog();
+            this.CreateTicketCancelBtn = new BATODA.ButtonStyle();
+            this.SubmitTicket = new BATODA.ButtonStyle();
+            this.TicketConfirmButton = new BATODA.ButtonStyle();
+            this.ApplyButton = new BATODA.ButtonStyle();
+            this.ApplySearchButton = new BATODA.ButtonStyle();
+            this.ARHButton = new BATODA.ButtonStyle();
+            this.AssistanceRequestButton = new BATODA.ButtonStyle();
+            this.ConfirmationPanelCancelBtn = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.CreateTicketPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.FillUpFormPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).BeginInit();
             this.panel28.SuspendLayout();
@@ -188,11 +194,6 @@
             this.panel32.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AssistanceLogDataGrid)).BeginInit();
-            this.CreateTicketPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel3.SuspendLayout();
             this.TicketFlowLayoutPanel.SuspendLayout();
             this.TextStatusPanel.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -217,94 +218,111 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 25;
             // 
-            // ARHButton
-            // 
-            this.ARHButton.BackColor = System.Drawing.Color.White;
-            this.ARHButton.BackgroundColor = System.Drawing.Color.White;
-            this.ARHButton.BorderColor = System.Drawing.Color.Black;
-            this.ARHButton.BorderRadius = 0;
-            this.ARHButton.BorderSize = 1;
-            this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.ARHButton.FlatAppearance.BorderSize = 0;
-            this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ARHButton.ForeColor = System.Drawing.Color.Black;
-            this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.ARHButton.HoverColor = System.Drawing.Color.Silver;
-            this.ARHButton.ImageColor = System.Drawing.Color.Black;
-            this.ARHButton.ImagePosition = new System.Drawing.Point(255, 0);
-            this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ARHButton.IsToggled = false;
-            this.ARHButton.Location = new System.Drawing.Point(800, 5);
-            this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.ARHButton.Name = "ARHButton";
-            this.ARHButton.PaddingX = 0;
-            this.ARHButton.PaddingY = 0;
-            this.ARHButton.Size = new System.Drawing.Size(788, 49);
-            this.ARHButton.TabIndex = 21;
-            this.ARHButton.Text = "Approved Request History";
-            this.ARHButton.TextColor = System.Drawing.Color.Black;
-            this.ARHButton.TextOffset = 20;
-            this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.ARHButton.UseVisualStyleBackColor = false;
-            this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
-            // 
-            // AssistanceRequestButton
-            // 
-            this.AssistanceRequestButton.BackColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.BorderRadius = 0;
-            this.AssistanceRequestButton.BorderSize = 1;
-            this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
-            this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
-            this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;
-            this.AssistanceRequestButton.ImageColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(265, 0);
-            this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.AssistanceRequestButton.IsToggled = false;
-            this.AssistanceRequestButton.Location = new System.Drawing.Point(6, 5);
-            this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.AssistanceRequestButton.Name = "AssistanceRequestButton";
-            this.AssistanceRequestButton.PaddingX = 0;
-            this.AssistanceRequestButton.PaddingY = 0;
-            this.AssistanceRequestButton.Size = new System.Drawing.Size(788, 49);
-            this.AssistanceRequestButton.TabIndex = 19;
-            this.AssistanceRequestButton.Text = "Add New Request";
-            this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
-            this.AssistanceRequestButton.TextOffset = 20;
-            this.AssistanceRequestButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.AssistanceRequestButton.UseVisualStyleBackColor = false;
-            this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.FillUpFormPanel);
             this.panel1.Controls.Add(this.ConfirmationPanel);
+            this.panel1.Controls.Add(this.CreateTicketPanel);
+            this.panel1.Controls.Add(this.panel30);
+            this.panel1.Controls.Add(this.FillUpFormPanel);
             this.panel1.Controls.Add(this.ApplyButton);
             this.panel1.Controls.Add(this.SortComboBox);
             this.panel1.Controls.Add(this.AssistanceTypeComboBox);
             this.panel1.Controls.Add(this.ApplySearchButton);
             this.panel1.Controls.Add(this.panel20);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.CreateTicketPanel);
+            this.panel1.Controls.Add(this.FLPActivityLog);
             this.panel1.Controls.Add(this.TicketFlowLayoutPanel);
             this.panel1.Location = new System.Drawing.Point(9, 265);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1588, 1004);
             this.panel1.TabIndex = 26;
             // 
+            // CreateTicketPanel
+            // 
+            this.CreateTicketPanel.BackColor = System.Drawing.Color.White;
+            this.CreateTicketPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CreateTicketPanel.Controls.Add(this.pictureBox1);
+            this.CreateTicketPanel.Controls.Add(this.label12);
+            this.CreateTicketPanel.Controls.Add(this.label6);
+            this.CreateTicketPanel.Location = new System.Drawing.Point(22, 17);
+            this.CreateTicketPanel.Name = "CreateTicketPanel";
+            this.CreateTicketPanel.Size = new System.Drawing.Size(333, 96);
+            this.CreateTicketPanel.TabIndex = 55;
+            this.CreateTicketPanel.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.circle;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.label12.Location = new System.Drawing.Point(118, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(149, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "*Double Click To Create*";
+            this.label12.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.label6.Location = new System.Drawing.Point(87, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(228, 33);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Create a Ticket";
+            this.label6.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel30.Controls.Add(this.pictureBox8);
+            this.panel30.Controls.Add(this.label16);
+            this.panel30.Location = new System.Drawing.Point(19, 125);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(339, 71);
+            this.panel30.TabIndex = 65;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::BATODA.Properties.Resources.Action_Log;
+            this.pictureBox8.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(75, 15);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(205, 42);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Action Log";
+            // 
             // FillUpFormPanel
             // 
             this.FillUpFormPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FillUpFormPanel.Controls.Add(this.CreateTicketCancelBtn);
             this.FillUpFormPanel.Controls.Add(this.label8);
             this.FillUpFormPanel.Controls.Add(this.ReqSearchGrid);
             this.FillUpFormPanel.Controls.Add(this.panel28);
@@ -345,8 +363,7 @@
             this.FillUpFormPanel.Location = new System.Drawing.Point(568, 144);
             this.FillUpFormPanel.Name = "FillUpFormPanel";
             this.FillUpFormPanel.Size = new System.Drawing.Size(808, 681);
-            this.FillUpFormPanel.TabIndex = 50;
-            this.FillUpFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FillUpFormPanel_Paint_1);
+            this.FillUpFormPanel.TabIndex = 0;
             // 
             // label8
             // 
@@ -901,39 +918,6 @@
             this.DateCreatedLbl.TabIndex = 51;
             this.DateCreatedLbl.Text = "Placeholder";
             // 
-            // SubmitTicket
-            // 
-            this.SubmitTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.BorderRadius = 0;
-            this.SubmitTicket.BorderSize = 0;
-            this.SubmitTicket.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.SubmitTicket.FlatAppearance.BorderSize = 0;
-            this.SubmitTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubmitTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitTicket.ForeColor = System.Drawing.Color.White;
-            this.SubmitTicket.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.SubmitTicket.HoverColor = System.Drawing.Color.DarkRed;
-            this.SubmitTicket.ImageColor = System.Drawing.Color.White;
-            this.SubmitTicket.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SubmitTicket.ImageSize = new System.Drawing.Size(32, 32);
-            this.SubmitTicket.IsToggled = false;
-            this.SubmitTicket.Location = new System.Drawing.Point(581, 614);
-            this.SubmitTicket.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SubmitTicket.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SubmitTicket.Name = "SubmitTicket";
-            this.SubmitTicket.PaddingX = 0;
-            this.SubmitTicket.PaddingY = 0;
-            this.SubmitTicket.Size = new System.Drawing.Size(204, 40);
-            this.SubmitTicket.TabIndex = 50;
-            this.SubmitTicket.Text = "Submit Ticket";
-            this.SubmitTicket.TextColor = System.Drawing.Color.White;
-            this.SubmitTicket.TextOffset = 5;
-            this.SubmitTicket.ToggleColor = System.Drawing.Color.Empty;
-            this.SubmitTicket.UseVisualStyleBackColor = false;
-            this.SubmitTicket.Click += new System.EventHandler(this.SubmitTicket_Click);
-            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -957,6 +941,7 @@
             // ConfirmationPanel
             // 
             this.ConfirmationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConfirmationPanel.Controls.Add(this.ConfirmationPanelCancelBtn);
             this.ConfirmationPanel.Controls.Add(this.label9);
             this.ConfirmationPanel.Controls.Add(this.panel29);
             this.ConfirmationPanel.Controls.Add(this.panel27);
@@ -987,7 +972,6 @@
             this.ConfirmationPanel.Name = "ConfirmationPanel";
             this.ConfirmationPanel.Size = new System.Drawing.Size(869, 508);
             this.ConfirmationPanel.TabIndex = 45;
-            this.ConfirmationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ConfirmationPanel_Paint);
             // 
             // label9
             // 
@@ -1337,39 +1321,6 @@
             this.ConfDateCreatedLbl.TabIndex = 51;
             this.ConfDateCreatedLbl.Text = "Placeholder";
             // 
-            // TicketConfirmButton
-            // 
-            this.TicketConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.BorderRadius = 0;
-            this.TicketConfirmButton.BorderSize = 0;
-            this.TicketConfirmButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.TicketConfirmButton.FlatAppearance.BorderSize = 0;
-            this.TicketConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TicketConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TicketConfirmButton.ForeColor = System.Drawing.Color.White;
-            this.TicketConfirmButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.TicketConfirmButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.TicketConfirmButton.ImageColor = System.Drawing.Color.White;
-            this.TicketConfirmButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.TicketConfirmButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TicketConfirmButton.IsToggled = false;
-            this.TicketConfirmButton.Location = new System.Drawing.Point(639, 448);
-            this.TicketConfirmButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TicketConfirmButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TicketConfirmButton.Name = "TicketConfirmButton";
-            this.TicketConfirmButton.PaddingX = 0;
-            this.TicketConfirmButton.PaddingY = 0;
-            this.TicketConfirmButton.Size = new System.Drawing.Size(195, 42);
-            this.TicketConfirmButton.TabIndex = 50;
-            this.TicketConfirmButton.Text = "Confirm Ticket";
-            this.TicketConfirmButton.TextColor = System.Drawing.Color.White;
-            this.TicketConfirmButton.TextOffset = 5;
-            this.TicketConfirmButton.ToggleColor = System.Drawing.Color.Empty;
-            this.TicketConfirmButton.UseVisualStyleBackColor = false;
-            this.TicketConfirmButton.Click += new System.EventHandler(this.TicketConfirmButton_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1389,38 +1340,6 @@
             this.label10.Size = new System.Drawing.Size(126, 29);
             this.label10.TabIndex = 49;
             this.label10.Text = "Ticket ID : ";
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplyButton.BorderRadius = 0;
-            this.ApplyButton.BorderSize = 0;
-            this.ApplyButton.ButtonImage = null;
-            this.ApplyButton.FlatAppearance.BorderSize = 0;
-            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyButton.ForeColor = System.Drawing.Color.White;
-            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1449, 21);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.PaddingX = 0;
-            this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(112, 33);
-            this.ApplyButton.TabIndex = 59;
-            this.ApplyButton.Text = "Apply Filter";
-            this.ApplyButton.TextColor = System.Drawing.Color.White;
-            this.ApplyButton.TextOffset = 20;
-            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.UseVisualStyleBackColor = false;
             // 
             // SortComboBox
             // 
@@ -1444,38 +1363,6 @@
             this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
             this.AssistanceTypeComboBox.Size = new System.Drawing.Size(155, 33);
             this.AssistanceTypeComboBox.TabIndex = 57;
-            // 
-            // ApplySearchButton
-            // 
-            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplySearchButton.BorderRadius = 0;
-            this.ApplySearchButton.BorderSize = 0;
-            this.ApplySearchButton.ButtonImage = null;
-            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
-            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
-            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(930, 21);
-            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.Name = "ApplySearchButton";
-            this.ApplySearchButton.PaddingX = 0;
-            this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(101, 33);
-            this.ApplySearchButton.TabIndex = 56;
-            this.ApplySearchButton.Text = "Search";
-            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextOffset = 0;
-            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ApplySearchButton.UseVisualStyleBackColor = false;
             // 
             // panel20
             // 
@@ -1508,87 +1395,17 @@
             this.pictureBox7.TabIndex = 45;
             this.pictureBox7.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // FLPActivityLog
             // 
-            this.flowLayoutPanel1.Controls.Add(this.label16);
-            this.flowLayoutPanel1.Controls.Add(this.AssistanceLogDataGrid);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 303);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(336, 519);
-            this.flowLayoutPanel1.TabIndex = 49;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(195, 42);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Action Log";
-            // 
-            // AssistanceLogDataGrid
-            // 
-            this.AssistanceLogDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AssistanceLogDataGrid.Location = new System.Drawing.Point(3, 45);
-            this.AssistanceLogDataGrid.Name = "AssistanceLogDataGrid";
-            this.AssistanceLogDataGrid.Size = new System.Drawing.Size(333, 456);
-            this.AssistanceLogDataGrid.TabIndex = 0;
-            this.AssistanceLogDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AssistanceLogDataGrid_CellContentClick);
-            // 
-            // CreateTicketPanel
-            // 
-            this.CreateTicketPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CreateTicketPanel.Controls.Add(this.pictureBox9);
-            this.CreateTicketPanel.Controls.Add(this.panel3);
-            this.CreateTicketPanel.Controls.Add(this.Cerate);
-            this.CreateTicketPanel.Location = new System.Drawing.Point(22, 17);
-            this.CreateTicketPanel.Name = "CreateTicketPanel";
-            this.CreateTicketPanel.Size = new System.Drawing.Size(336, 260);
-            this.CreateTicketPanel.TabIndex = 47;
-            this.CreateTicketPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CreateTicketPanel_Paint);
-            this.CreateTicketPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.CreateTicketPanel_MouseDoubleClick);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::BATODA.Properties.Resources.circle__1_;
-            this.pictureBox9.Location = new System.Drawing.Point(140, 28);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 52;
-            this.pictureBox9.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkRed;
-            this.panel3.Controls.Add(this.label53);
-            this.panel3.Location = new System.Drawing.Point(68, 142);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
-            this.panel3.TabIndex = 51;
-            // 
-            // label53
-            // 
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(25, 27);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(146, 43);
-            this.label53.TabIndex = 50;
-            this.label53.Text = "** Double Click to create a ticket\r\nTOOL TIP\r\n";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Cerate
-            // 
-            this.Cerate.AutoSize = true;
-            this.Cerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cerate.ForeColor = System.Drawing.Color.White;
-            this.Cerate.Location = new System.Drawing.Point(60, 91);
-            this.Cerate.Name = "Cerate";
-            this.Cerate.Size = new System.Drawing.Size(217, 31);
-            this.Cerate.TabIndex = 49;
-            this.Cerate.Text = "Create A Ticket";
+            this.FLPActivityLog.AutoScroll = true;
+            this.FLPActivityLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FLPActivityLog.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FLPActivityLog.Location = new System.Drawing.Point(19, 193);
+            this.FLPActivityLog.Name = "FLPActivityLog";
+            this.FLPActivityLog.Padding = new System.Windows.Forms.Padding(10);
+            this.FLPActivityLog.Size = new System.Drawing.Size(339, 702);
+            this.FLPActivityLog.TabIndex = 49;
+            this.FLPActivityLog.WrapContents = false;
             // 
             // TicketFlowLayoutPanel
             // 
@@ -1601,7 +1418,6 @@
             this.TicketFlowLayoutPanel.Name = "TicketFlowLayoutPanel";
             this.TicketFlowLayoutPanel.Size = new System.Drawing.Size(1171, 831);
             this.TicketFlowLayoutPanel.TabIndex = 48;
-            this.TicketFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TicketFlowLayoutPanel_Paint_1);
             // 
             // TextStatusPanel
             // 
@@ -1809,6 +1625,262 @@
             // 
             this.OpenProof.FileName = "openFileDialog1";
             // 
+            // CreateTicketCancelBtn
+            // 
+            this.CreateTicketCancelBtn.BackColor = System.Drawing.Color.White;
+            this.CreateTicketCancelBtn.BackgroundColor = System.Drawing.Color.White;
+            this.CreateTicketCancelBtn.BorderColor = System.Drawing.Color.Black;
+            this.CreateTicketCancelBtn.BorderRadius = 0;
+            this.CreateTicketCancelBtn.BorderSize = 1;
+            this.CreateTicketCancelBtn.ButtonImage = null;
+            this.CreateTicketCancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateTicketCancelBtn.ForeColor = System.Drawing.Color.Black;
+            this.CreateTicketCancelBtn.HoverBorderColor = System.Drawing.Color.Empty;
+            this.CreateTicketCancelBtn.HoverColor = System.Drawing.Color.WhiteSmoke;
+            this.CreateTicketCancelBtn.ImageColor = System.Drawing.Color.Black;
+            this.CreateTicketCancelBtn.ImagePosition = new System.Drawing.Point(10, 0);
+            this.CreateTicketCancelBtn.ImageSize = new System.Drawing.Size(24, 24);
+            this.CreateTicketCancelBtn.IsToggled = false;
+            this.CreateTicketCancelBtn.Location = new System.Drawing.Point(477, 614);
+            this.CreateTicketCancelBtn.MouseDownColor = System.Drawing.Color.White;
+            this.CreateTicketCancelBtn.Name = "CreateTicketCancelBtn";
+            this.CreateTicketCancelBtn.PaddingX = 0;
+            this.CreateTicketCancelBtn.PaddingY = 0;
+            this.CreateTicketCancelBtn.Size = new System.Drawing.Size(106, 40);
+            this.CreateTicketCancelBtn.TabIndex = 202;
+            this.CreateTicketCancelBtn.Text = "Cancel";
+            this.CreateTicketCancelBtn.TextColor = System.Drawing.Color.Black;
+            this.CreateTicketCancelBtn.TextOffset = 20;
+            this.CreateTicketCancelBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.CreateTicketCancelBtn.UseVisualStyleBackColor = false;
+            this.CreateTicketCancelBtn.Click += new System.EventHandler(this.CreateTicketCancelBtn_Click);
+            // 
+            // SubmitTicket
+            // 
+            this.SubmitTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.BorderRadius = 0;
+            this.SubmitTicket.BorderSize = 0;
+            this.SubmitTicket.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.SubmitTicket.FlatAppearance.BorderSize = 0;
+            this.SubmitTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitTicket.ForeColor = System.Drawing.Color.White;
+            this.SubmitTicket.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SubmitTicket.HoverColor = System.Drawing.Color.DarkRed;
+            this.SubmitTicket.ImageColor = System.Drawing.Color.White;
+            this.SubmitTicket.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SubmitTicket.ImageSize = new System.Drawing.Size(24, 24);
+            this.SubmitTicket.IsToggled = false;
+            this.SubmitTicket.Location = new System.Drawing.Point(589, 614);
+            this.SubmitTicket.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SubmitTicket.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SubmitTicket.Name = "SubmitTicket";
+            this.SubmitTicket.PaddingX = 0;
+            this.SubmitTicket.PaddingY = 0;
+            this.SubmitTicket.Size = new System.Drawing.Size(187, 40);
+            this.SubmitTicket.TabIndex = 50;
+            this.SubmitTicket.Text = "Submit Ticket";
+            this.SubmitTicket.TextColor = System.Drawing.Color.White;
+            this.SubmitTicket.TextOffset = 5;
+            this.SubmitTicket.ToggleColor = System.Drawing.Color.Empty;
+            this.SubmitTicket.UseVisualStyleBackColor = false;
+            this.SubmitTicket.Click += new System.EventHandler(this.SubmitTicket_Click);
+            // 
+            // TicketConfirmButton
+            // 
+            this.TicketConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.BorderRadius = 0;
+            this.TicketConfirmButton.BorderSize = 0;
+            this.TicketConfirmButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.TicketConfirmButton.FlatAppearance.BorderSize = 0;
+            this.TicketConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TicketConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketConfirmButton.ForeColor = System.Drawing.Color.White;
+            this.TicketConfirmButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.TicketConfirmButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.TicketConfirmButton.ImageColor = System.Drawing.Color.White;
+            this.TicketConfirmButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.TicketConfirmButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TicketConfirmButton.IsToggled = false;
+            this.TicketConfirmButton.Location = new System.Drawing.Point(639, 448);
+            this.TicketConfirmButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TicketConfirmButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TicketConfirmButton.Name = "TicketConfirmButton";
+            this.TicketConfirmButton.PaddingX = 0;
+            this.TicketConfirmButton.PaddingY = 0;
+            this.TicketConfirmButton.Size = new System.Drawing.Size(195, 42);
+            this.TicketConfirmButton.TabIndex = 50;
+            this.TicketConfirmButton.Text = "Confirm Ticket";
+            this.TicketConfirmButton.TextColor = System.Drawing.Color.White;
+            this.TicketConfirmButton.TextOffset = 5;
+            this.TicketConfirmButton.ToggleColor = System.Drawing.Color.Empty;
+            this.TicketConfirmButton.UseVisualStyleBackColor = false;
+            this.TicketConfirmButton.Click += new System.EventHandler(this.TicketConfirmButton_Click);
+            // 
+            // ApplyButton
+            // 
+            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplyButton.BorderRadius = 0;
+            this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.ButtonImage = null;
+            this.ApplyButton.FlatAppearance.BorderSize = 0;
+            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.ForeColor = System.Drawing.Color.White;
+            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplyButton.IsToggled = false;
+            this.ApplyButton.Location = new System.Drawing.Point(1449, 21);
+            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.PaddingX = 0;
+            this.ApplyButton.PaddingY = 0;
+            this.ApplyButton.Size = new System.Drawing.Size(112, 33);
+            this.ApplyButton.TabIndex = 59;
+            this.ApplyButton.Text = "Apply Filter";
+            this.ApplyButton.TextColor = System.Drawing.Color.White;
+            this.ApplyButton.TextOffset = 20;
+            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.UseVisualStyleBackColor = false;
+            // 
+            // ApplySearchButton
+            // 
+            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplySearchButton.BorderRadius = 0;
+            this.ApplySearchButton.BorderSize = 0;
+            this.ApplySearchButton.ButtonImage = null;
+            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
+            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
+            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplySearchButton.IsToggled = false;
+            this.ApplySearchButton.Location = new System.Drawing.Point(930, 21);
+            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.Name = "ApplySearchButton";
+            this.ApplySearchButton.PaddingX = 0;
+            this.ApplySearchButton.PaddingY = 0;
+            this.ApplySearchButton.Size = new System.Drawing.Size(101, 33);
+            this.ApplySearchButton.TabIndex = 56;
+            this.ApplySearchButton.Text = "Search";
+            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
+            this.ApplySearchButton.TextOffset = 0;
+            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ApplySearchButton.UseVisualStyleBackColor = false;
+            // 
+            // ARHButton
+            // 
+            this.ARHButton.BackColor = System.Drawing.Color.White;
+            this.ARHButton.BackgroundColor = System.Drawing.Color.White;
+            this.ARHButton.BorderColor = System.Drawing.Color.Black;
+            this.ARHButton.BorderRadius = 0;
+            this.ARHButton.BorderSize = 1;
+            this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.ARHButton.FlatAppearance.BorderSize = 0;
+            this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ARHButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ARHButton.ForeColor = System.Drawing.Color.Black;
+            this.ARHButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ARHButton.HoverColor = System.Drawing.Color.Silver;
+            this.ARHButton.ImageColor = System.Drawing.Color.Black;
+            this.ARHButton.ImagePosition = new System.Drawing.Point(255, 0);
+            this.ARHButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ARHButton.IsToggled = false;
+            this.ARHButton.Location = new System.Drawing.Point(800, 5);
+            this.ARHButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ARHButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.ARHButton.Name = "ARHButton";
+            this.ARHButton.PaddingX = 0;
+            this.ARHButton.PaddingY = 0;
+            this.ARHButton.Size = new System.Drawing.Size(788, 49);
+            this.ARHButton.TabIndex = 21;
+            this.ARHButton.Text = "Approved Request History";
+            this.ARHButton.TextColor = System.Drawing.Color.Black;
+            this.ARHButton.TextOffset = 20;
+            this.ARHButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.ARHButton.UseVisualStyleBackColor = false;
+            this.ARHButton.Click += new System.EventHandler(this.ARHButton_Click);
+            // 
+            // AssistanceRequestButton
+            // 
+            this.AssistanceRequestButton.BackColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.BorderColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.BorderRadius = 0;
+            this.AssistanceRequestButton.BorderSize = 1;
+            this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
+            this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
+            this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AssistanceRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceRequestButton.ForeColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.AssistanceRequestButton.HoverColor = System.Drawing.Color.Silver;
+            this.AssistanceRequestButton.ImageColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.ImagePosition = new System.Drawing.Point(265, 0);
+            this.AssistanceRequestButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.AssistanceRequestButton.IsToggled = false;
+            this.AssistanceRequestButton.Location = new System.Drawing.Point(6, 5);
+            this.AssistanceRequestButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AssistanceRequestButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.AssistanceRequestButton.Name = "AssistanceRequestButton";
+            this.AssistanceRequestButton.PaddingX = 0;
+            this.AssistanceRequestButton.PaddingY = 0;
+            this.AssistanceRequestButton.Size = new System.Drawing.Size(788, 49);
+            this.AssistanceRequestButton.TabIndex = 19;
+            this.AssistanceRequestButton.Text = "Add New Request";
+            this.AssistanceRequestButton.TextColor = System.Drawing.Color.Black;
+            this.AssistanceRequestButton.TextOffset = 20;
+            this.AssistanceRequestButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.AssistanceRequestButton.UseVisualStyleBackColor = false;
+            this.AssistanceRequestButton.Click += new System.EventHandler(this.AssistanceRequestButton_Click);
+            // 
+            // ConfirmationPanelCancelBtn
+            // 
+            this.ConfirmationPanelCancelBtn.BackColor = System.Drawing.Color.White;
+            this.ConfirmationPanelCancelBtn.BackgroundColor = System.Drawing.Color.White;
+            this.ConfirmationPanelCancelBtn.BorderColor = System.Drawing.Color.Black;
+            this.ConfirmationPanelCancelBtn.BorderRadius = 0;
+            this.ConfirmationPanelCancelBtn.BorderSize = 1;
+            this.ConfirmationPanelCancelBtn.ButtonImage = null;
+            this.ConfirmationPanelCancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmationPanelCancelBtn.ForeColor = System.Drawing.Color.Black;
+            this.ConfirmationPanelCancelBtn.HoverBorderColor = System.Drawing.Color.Black;
+            this.ConfirmationPanelCancelBtn.HoverColor = System.Drawing.Color.WhiteSmoke;
+            this.ConfirmationPanelCancelBtn.ImageColor = System.Drawing.Color.Black;
+            this.ConfirmationPanelCancelBtn.ImagePosition = new System.Drawing.Point(10, 0);
+            this.ConfirmationPanelCancelBtn.ImageSize = new System.Drawing.Size(24, 24);
+            this.ConfirmationPanelCancelBtn.IsToggled = false;
+            this.ConfirmationPanelCancelBtn.Location = new System.Drawing.Point(527, 448);
+            this.ConfirmationPanelCancelBtn.MouseDownColor = System.Drawing.Color.White;
+            this.ConfirmationPanelCancelBtn.Name = "ConfirmationPanelCancelBtn";
+            this.ConfirmationPanelCancelBtn.PaddingX = 0;
+            this.ConfirmationPanelCancelBtn.PaddingY = 0;
+            this.ConfirmationPanelCancelBtn.Size = new System.Drawing.Size(106, 40);
+            this.ConfirmationPanelCancelBtn.TabIndex = 184;
+            this.ConfirmationPanelCancelBtn.Text = "Cancel";
+            this.ConfirmationPanelCancelBtn.TextColor = System.Drawing.Color.Black;
+            this.ConfirmationPanelCancelBtn.TextOffset = 20;
+            this.ConfirmationPanelCancelBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.ConfirmationPanelCancelBtn.UseVisualStyleBackColor = false;
+            this.ConfirmationPanelCancelBtn.Click += new System.EventHandler(this.ConfirmationPanelCancelBtn_Click);
+            // 
             // AssistanceRequestUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1827,6 +1899,12 @@
             this.Load += new System.EventHandler(this.AssistanceRequestUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.CreateTicketPanel.ResumeLayout(false);
+            this.CreateTicketPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.FillUpFormPanel.ResumeLayout(false);
             this.FillUpFormPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).EndInit();
@@ -1876,13 +1954,6 @@
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AssistanceLogDataGrid)).EndInit();
-            this.CreateTicketPanel.ResumeLayout(false);
-            this.CreateTicketPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.TicketFlowLayoutPanel.ResumeLayout(false);
             this.TextStatusPanel.ResumeLayout(false);
             this.TextStatusPanel.PerformLayout();
@@ -1915,12 +1986,8 @@
         private System.Windows.Forms.Label ConfTicketIdLbl;
         private System.Windows.Forms.Label ConfDateCreatedLbl;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel CreateTicketPanel;
-        private System.Windows.Forms.Label Cerate;
         private System.Windows.Forms.FlowLayoutPanel TicketFlowLayoutPanel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView AssistanceLogDataGrid;
         private System.Windows.Forms.Panel FillUpFormPanel;
         private System.Windows.Forms.Label TicketIdlbl;
         private System.Windows.Forms.Label DateCreatedLbl;
@@ -1952,9 +2019,6 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label ConfDateNeededLbl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
@@ -2035,5 +2099,14 @@
         private System.Windows.Forms.Label ConfGcashNoLbl;
         private System.Windows.Forms.Label ConfAmountLbl;
         private System.Windows.Forms.OpenFileDialog OpenProof;
+        private System.Windows.Forms.Panel panel30;
+        public System.Windows.Forms.FlowLayoutPanel FLPActivityLog;
+        private System.Windows.Forms.Panel CreateTicketPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private ButtonStyle CreateTicketCancelBtn;
+        private ButtonStyle ConfirmationPanelCancelBtn;
     }
 }

@@ -13,6 +13,7 @@ using BATODA.Helpers.DataGrid;
 using BATODA.Modules.Assistance_Request_Module;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
 using BATODA.Modules.MemberModule;
+using BATODA.User_Control_Forms;
 
 
 namespace BATODA
@@ -20,19 +21,16 @@ namespace BATODA
     public partial class AssistanceRequestUForm : UserControl
     {
         private AddTicketBox ticketHelper;
+
         public AssistanceRequestUForm()
         {
             InitializeComponent();
-            ticketHelper = new AddTicketBox(TicketFlowLayoutPanel);
+            ticketHelper = new AddTicketBox(TicketFlowLayoutPanel, FLPActivityLog);
             FillUpFormPanel.Hide();
             ConfirmationPanel.Hide();
 
             TextStatusPanel.Show();
             TextStatusPanel.BringToFront();
-
-
-            StyleDataGrid(AssistanceLogDataGrid);
-            LoadSampleLogs();
 
         }
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
@@ -172,15 +170,7 @@ namespace BATODA
             }
         }
 
-        private void CreateTicketPanel_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            //AddTicketBox();
-            TextStatusPanel.Hide();
-            FillUpFormPanel.Show();
-            FillUpFormPanel.BringToFront();
-            TicketIdlbl.Text = "TR-"+Ticket.GetNextTicketID().ToString();
-            DateCreatedLbl.Text = DateTime.Now.ToString("MM-dd-yyyy hh:mm tt");
-        }
+       
 
         private void SubmitTicket_Click(object sender, EventArgs e)
         {
@@ -200,159 +190,6 @@ namespace BATODA
         {
             string selectedItem = ReqAssistanceThruCmb.SelectedItem?.ToString();
             NonMemberSelectedPanel.Visible = selectedItem != "Member";
-        }
-
-
-        private void StyleDataGrid(DataGridView dgv)
-        {
-            dgv.EnableHeadersVisualStyles = false;
-            dgv.ColumnHeadersVisible = false;
-            dgv.RowHeadersVisible = false;
-            dgv.AllowUserToAddRows = false;
-            dgv.AllowUserToResizeRows = false;
-            dgv.ReadOnly = true;
-            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgv.BackgroundColor = Color.WhiteSmoke;
-            dgv.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            dgv.BorderStyle = BorderStyle.FixedSingle;
-
-            // ✅ Main style
-            dgv.DefaultCellStyle = new DataGridViewCellStyle
-            {
-                Font = new Font("Segoe UI", 9.5f),
-                ForeColor = Color.FromArgb(40, 40, 40),
-                BackColor = Color.White,
-                Padding = new Padding(12, 10, 12, 10),
-                SelectionBackColor = Color.White,
-                SelectionForeColor = Color.Black,
-                WrapMode = DataGridViewTriState.True
-            };
-
-            dgv.RowTemplate.DefaultCellStyle = dgv.DefaultCellStyle;
-            dgv.RowTemplate.Height = 80;
-
-
-            //  Custom Log UI
-            dgv.CellPainting += (s, e) =>
-            {
-                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-                {
-                    e.PaintBackground(e.CellBounds, true);
-                    e.PaintContent(e.CellBounds);
-
-                    Rectangle rect = e.CellBounds;
-                    rect.Inflate(-1, -1);
-
-                    using (Pen borderPen = new Pen(Color.LightGray, 1))
-                        e.Graphics.DrawRectangle(borderPen, rect);
-
-                    e.Handled = true;
-                }
-            };
-
-            // padding between rows
-            dgv.RowPostPaint += (s, e) =>
-            {
-                using (Brush brush = new SolidBrush(dgv.BackgroundColor))
-                {
-                    e.Graphics.FillRectangle(brush,
-                        new Rectangle(0, e.RowBounds.Bottom, dgv.Width, 8));
-                }
-            };
-        }
-
-        private void LoadSampleLogs()
-        {
-            AssistanceLogDataGrid.Columns.Clear();
-            AssistanceLogDataGrid.Rows.Clear();
-            AssistanceLogDataGrid.Columns.Add("Message", "Message");
-
-            AssistanceLogDataGrid.Rows.Add(
-                "🕒  ASSISTANCE_REQUEST_ADD\nNew assistance request submitted for ₱0.03.\nNov 5, 10:39 PM"
-            );
-            AssistanceLogDataGrid.Rows.Add(
-                "🕒  ASSISTANCE_REQUEST_UPDATE\nAssistance request details updated.\nNov 5, 10:32 PM"
-            );
-            AssistanceLogDataGrid.Rows.Add(
-                "🕒  ASSISTANCE_REQUEST_APPROVED\nAssistance request approved successfully.\nNov 5, 10:27 PM"
-            );
-            AssistanceLogDataGrid.Rows.Add(
-                "🕒  ASSISTANCE_REQUEST_DECLINED\nAssistance request declined for amount ₱0.\nNov 5, 10:24 PM"
-            );
-
-            AssistanceLogDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
-
-        private void AssistanceLogDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FillUpFormPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel27_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ConfirmationPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void BodyNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TicketFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Cerate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FillUpFormPanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void TicketFlowLayoutPanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label40_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ReqSearchTxt_KeyDown(object sender, KeyEventArgs e)
@@ -422,11 +259,7 @@ namespace BATODA
 
         }
 
-        private void CreateTicketPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         private void UploadProofBtn_Click(object sender, EventArgs e)
         {
             OpenProof.Title = "Select an Image";
@@ -437,6 +270,28 @@ namespace BATODA
                 string fileName = Path.GetFileName(OpenProof.FileName);
                 ReqFileTxt.Text = fileName;
             }
+        }
+
+        private void CreateTicketPanel_DoubleClick(object sender, EventArgs e)
+        {
+            //AddTicketBox();
+            TextStatusPanel.Hide();
+            FillUpFormPanel.Show();
+            FillUpFormPanel.BringToFront();
+            TicketIdlbl.Text = "TR-" + Ticket.GetNextTicketID().ToString();
+            DateCreatedLbl.Text = DateTime.Now.ToString("MM-dd-yyyy hh:mm tt");
+
+
+        }
+
+        private void CreateTicketCancelBtn_Click(object sender, EventArgs e)
+        {
+            FillUpFormPanel.Hide();
+        }
+
+        private void ConfirmationPanelCancelBtn_Click(object sender, EventArgs e)
+        {
+            ConfirmationPanel.Hide();
         }
     }
 }

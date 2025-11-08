@@ -91,6 +91,12 @@
     <Compile Include="User Control Forms\AccountUForm.Designer.cs">
       <DependentUpon>AccountUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control Forms\ActivityassistanceLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\ActivityassistanceLog.Designer.cs">
+      <DependentUpon>ActivityassistanceLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control Forms\ARHUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\AccountUForm.resx">
       <DependentUpon>AccountUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\ActivityassistanceLog.resx">
+      <DependentUpon>ActivityassistanceLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\ARHUForm.resx">
       <DependentUpon>ARHUForm.cs</DependentUpon>
@@ -535,6 +544,10 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\Action_Log.png" />
+    <None Include="Resources\ActivityLog_cancelled.png" />
+    <None Include="Resources\ActivityLog_rejected.png" />
+    <None Include="Resources\approved.png" />
     <None Include="Resources\circle %281%29.png" />
     <None Include="Resources\circle.png" />
     <None Include="Resources\chevron_12143821.png" />

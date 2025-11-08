@@ -63,6 +63,16 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Action_Log {
+            get {
+                object obj = ResourceManager.GetObject("Action_Log", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap active_member {
             get {
                 object obj = ResourceManager.GetObject("active_member", resourceCulture);
@@ -76,6 +86,36 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap active_vehicle {
             get {
                 object obj = ResourceManager.GetObject("active_vehicle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ActivityLog_Approved {
+            get {
+                object obj = ResourceManager.GetObject("ActivityLog_Approved", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ActivityLog_canceled {
+            get {
+                object obj = ResourceManager.GetObject("ActivityLog_canceled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ActivityLog_rejected {
+            get {
+                object obj = ResourceManager.GetObject("ActivityLog_rejected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

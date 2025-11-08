@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BATODA.User_Control_Forms;
 
 public class AddTicketBox
 {
     private FlowLayoutPanel TicketFlowLayoutPanel;
+    private FlowLayoutPanel ActivityLogFlowLayoutPanel;
 
-    public AddTicketBox(FlowLayoutPanel panel)
+    public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel)
     {
         TicketFlowLayoutPanel = panel;
+        ActivityLogFlowLayoutPanel = activityLogPanel;
     }
 
     public void CreateTicketBox
@@ -177,6 +180,9 @@ public class AddTicketBox
             Visible = false
         };
 
+       
+
+
         approveBtn.Click += (s, e) =>
         {
             Panel parent = ((Button)s).Parent as Panel;
@@ -189,6 +195,9 @@ public class AddTicketBox
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
+
+            AddActivityLog("Request Approved", $"Assistance request {trackingNumber} approved", "Success");
+
         };
 
         rejectBtn.Click += (s, e) =>
@@ -198,6 +207,15 @@ public class AddTicketBox
             lblTracking.BackColor = Color.LightCoral;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Rejected";
+            approveBtn.Hide();
+            cancelBtn.Hide();
+            rejectBtn.Hide();
+
+            AddActivityLog("Request Rejected", $"Assistance request {trackingNumber} rejected", "Failed");
+
+            
+            parent.Hide();
+
         };
 
         cancelBtn.Click += (s, e) =>
@@ -207,6 +225,13 @@ public class AddTicketBox
             lblTracking.BackColor = Color.LightGray;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Canceled";
+            approveBtn.Hide();
+            cancelBtn.Hide();
+            rejectBtn.Hide();
+            parent.Hide();
+
+            AddActivityLog("Request Canceled", $"Assistance request {trackingNumber} canceled", "canceled");
+
         };
 
         releaseBtn.Click += (s, e) =>
@@ -214,6 +239,7 @@ public class AddTicketBox
             Panel parent = ((Button)s).Parent as Panel;
             parent.Hide();
         };
+
 
         TicketBox.Controls.Add(HeaderPanel);
         TicketBox.Controls.Add(lblTracking);
@@ -231,6 +257,7 @@ public class AddTicketBox
         TicketBox.Controls.Add(rejectBtn);
         TicketBox.Controls.Add(cancelBtn);
         TicketBox.Controls.Add(releaseBtn);
+
 
         lblTracking.BringToFront();
         lblTracking.BackColor = Color.LightGray;
@@ -259,4 +286,17 @@ public class AddTicketBox
             }
         }
     }
+
+    private void AddActivityLog(string actionTitle, string actionInfo, string status)
+    {
+        string timestamp = DateTime.Now.ToString("hh:mm tt"); 
+
+        ActivityassistanceLog logCard = new ActivityassistanceLog(timestamp, actionTitle, actionInfo, status);
+
+        ActivityLogFlowLayoutPanel.Controls.Add(logCard);
+        ActivityLogFlowLayoutPanel.Controls.SetChildIndex(logCard, 0);
+
+        ActivityLogFlowLayoutPanel.ScrollControlIntoView(logCard);
+    }
+
 }
