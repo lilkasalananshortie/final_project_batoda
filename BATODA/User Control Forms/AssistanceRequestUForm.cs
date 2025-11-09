@@ -128,7 +128,7 @@ namespace BATODA
 
             GmailSender GmailSend = new GmailSender();
             GmailSend.SendAssistanceEmail(
-                recipientEmail: "recipient@example.com",
+                recipientEmail: "manalilimhak@gmail.com",
                 fullName: data.FullName,
                 bodyNumber: data.BodyNumber.ToString("D3"), 
                 typeOfAid: data.TypeOfAid,

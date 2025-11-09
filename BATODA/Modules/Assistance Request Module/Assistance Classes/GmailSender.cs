@@ -1,6 +1,8 @@
-﻿using System.Net;
-using System.Net.Mail;
+﻿using System;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
+using System.Windows.Forms;
 
 namespace BATODA.Modules.Assistance_Request_Module.Assistance_Classes
 {
@@ -20,40 +22,51 @@ namespace BATODA.Modules.Assistance_Request_Module.Assistance_Classes
             string status,
             string proofFilePath)
         {
-            string body = $@"
-            <html>
-            <body>
-                <h2>Assistance Request Details</h2>
-                <p><b>Full Name:</b> {fullName}</p>
-                <p><b>Body Number:</b> {bodyNumber}</p>
-                <p><b>Type of Aid:</b> {typeOfAid}</p>
-                <p><b>Requested By:</b> {requestedBy}</p>
-                <p><b>Amount:</b> {amount}</p>
-                <p><b>Assistance Thru:</b> {assistanceThru}</p>
-                <p><b>Gcash Number:</b> {gcashNumber}</p>
-                <p><b>Date Requested:</b> {dateRequested}</p>
-                <p><b>Target Date:</b> {targetDate}</p>
-                <p><b>Status:</b> {status}</p>
-                <p>Attached is the proof of request.</p>
-            </body>
-            </html>";
-
-            MailMessage mail = new MailMessage();
-            mail.To.Add(recipientEmail);
-            mail.Subject = "Assistance Request Submission";
-            mail.Body = body;
-            mail.IsBodyHtml = true;
-
-            if (File.Exists(proofFilePath))
+            try
             {
-                Attachment attachment = new Attachment(proofFilePath);
-                mail.Attachments.Add(attachment);
-            }
+                string body = $@"
+                <html>
+                <body>
+                    <h2>Assistance Request Details</h2>
+                    <p><b>Full Name:</b> {fullName}</p>
+                    <p><b>Body Number:</b> {bodyNumber}</p>
+                    <p><b>Type of Aid:</b> {typeOfAid}</p>
+                    <p><b>Requested By:</b> {requestedBy}</p>
+                    <p><b>Amount:</b> {amount}</p>
+                    <p><b>Assistance Thru:</b> {assistanceThru}</p>
+                    <p><b>Gcash Number:</b> {gcashNumber}</p>
+                    <p><b>Date Requested:</b> {dateRequested}</p>
+                    <p><b>Target Date:</b> {targetDate}</p>
+                    <p><b>Status:</b> {status}</p>
+                    <p>Attached is the proof of request.</p>
+                </body>
+                </html>";
 
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new NetworkCredential("your_email@gmail.com", "your_password");
-            smtp.EnableSsl = true;
-            smtp.Send(mail);
+                using (MailMessage mail = new MailMessage())
+                {
+                    mail.From = new MailAddress("markaronedc@gmail.com", "BATODA Assistance System");
+                    mail.To.Add(recipientEmail);
+                    mail.Subject = "Assistance Request Submission";
+                    mail.Body = body;
+                    mail.IsBodyHtml = true;
+
+                    if (File.Exists(proofFilePath))
+                        mail.Attachments.Add(new Attachment(proofFilePath));
+
+                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtp.Credentials = new NetworkCredential("markaronedc@gmail.com", "joyztgyuzszcehja");
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+                    }
+                }
+
+                MessageBox.Show("Email sent successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error sending email: " + ex.Message);
+            }
         }
     }
 }
