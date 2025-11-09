@@ -54,6 +54,7 @@
     <Compile Include="Helpers\Database\Members\MemberInfoSummary.cs" />
     <Compile Include="Helpers\Database\Members\SelectedMemberImage.cs" />
     <Compile Include="Helpers\Database\Members\TotalMembers.cs" />
+    <Compile Include="Helpers\DataGrid\MembershipRenewalHandler.cs" />
     <Compile Include="Helpers\DataGrid\SearchResults.cs" />
     <Compile Include="Helpers\DataGrid\TaxHandler.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AddTicketBox.cs" />
