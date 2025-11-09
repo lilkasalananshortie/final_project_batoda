@@ -1,19 +1,22 @@
-﻿using System;
+﻿using BATODA.Helpers.Database.Members;
+using BATODA.Helpers.DataGrid;
+using BATODA.Modules; 
+using BATODA.Modules.Assistance_Request_Module;
+using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+using BATODA.Modules.MemberModule;
+using BATODA.User_Control_Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.Database.Members;
-using BATODA.Helpers.DataGrid;
-using BATODA.Modules.Assistance_Request_Module;
-using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
-using BATODA.Modules.MemberModule;
-using BATODA.User_Control_Forms;
+
 
 
 namespace BATODA
@@ -25,28 +28,72 @@ namespace BATODA
         public AssistanceRequestUForm()
         {
             InitializeComponent();
+
             ticketHelper = new AddTicketBox(TicketFlowLayoutPanel, FLPActivityLog);
+
+
             FillUpFormPanel.Hide();
             ConfirmationPanel.Hide();
 
             TextStatusPanel.Show();
             TextStatusPanel.BringToFront();
 
+            ticketHelper.LoadActivityLogs();
         }
+
+        //private void LoadActionLogs()
+        //{
+        //    using (SqlConnection conn = new SqlConnection("your connection string here"))
+        //    {
+        //        conn.Open();
+        //        string query = "SELECT * FROM AssistanceActionLog ORDER BY ActionDate DESC";
+        //        using (SqlCommand cmd = new SqlCommand(query, conn))
+        //        using (SqlDataReader reader = cmd.ExecuteReader())
+        //        {
+        //            FLPActivityLog.Controls.Clear(); // clear previous images to avoid duplicates
+
+        //            while (reader.Read())
+        //            {
+        //                string status = reader["RequestStatus"].ToString();
+
+        //                Image img;
+        //                if (status == "approved")
+        //                    img = Properties.Resources.ApprovedImage;
+        //                else if (status == "rejected")
+        //                    img = Properties.Resources.RejectedImage;
+        //                else
+        //                    img = Properties.Resources.PendingImage;
+
+        //                PictureBox pb = new PictureBox
+        //                {
+        //                    Image = img,
+        //                    SizeMode = PictureBoxSizeMode.StretchImage,
+        //                    Width = 50,
+        //                    Height = 50
+        //                };
+
+        //                FLPActivityLog.Controls.Add(pb); // FLPActivityLog is your FlowLayoutPanel for logs
+        //            }
+        //        }
+        //    }
+        //}
+
+
+
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
             LoadAllTickets();
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(SortComboBox, "Date");
 
-
         }
 
         private void LoadAllTickets()
         {
-            TicketFlowLayoutPanel.Controls.Clear(); 
+            TicketFlowLayoutPanel.Controls.Clear();
+
             AssistanceRepository repo = new AssistanceRepository();
-            List<TicketModel> tickets = repo.GetAllRequests();
+            List<TicketModel> tickets = repo.GetAllRequests(); 
 
             foreach (TicketModel ticket in tickets)
             {
@@ -64,6 +111,7 @@ namespace BATODA
                 );
             }
         }
+
 
         private void TransferToDisplayPanel()
         {

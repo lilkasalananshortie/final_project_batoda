@@ -2,6 +2,8 @@
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
 using BATODA.User_Control_Forms;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,24 +14,23 @@ public class AddTicketBox
     private FlowLayoutPanel ActivityLogFlowLayoutPanel;
     AssistanceRepository repo = new AssistanceRepository();
 
-
     public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel)
     {
         TicketFlowLayoutPanel = panel;
         ActivityLogFlowLayoutPanel = activityLogPanel;
     }
 
-    public void CreateTicketBox
-    (string trackingNumber,
-    string fullName,
-    string typeOfAid,
-    string dateRequested,
-    string status,
-    string requestedBy,
-    string amount,
-    string assistanceThru,
-    string contactNum,
-    string dateNeeded)
+    public void CreateTicketBox(
+        string trackingNumber,
+        string fullName,
+        string typeOfAid,
+        string dateRequested,
+        string status,
+        string requestedBy,
+        string amount,
+        string assistanceThru,
+        string contactNum,
+        string dateNeeded)
     {
         Panel TicketBox = new Panel();
         TicketBox.Size = new Size(300, 150);
@@ -97,7 +98,6 @@ public class AddTicketBox
             Location = new Point(rightX, y + 80),
             AutoSize = true
         };
-
 
         int expandY = picMember.Bottom + 19;
 
@@ -194,17 +194,13 @@ public class AddTicketBox
             lblTracking.BackColor = Color.LightGreen;
             lblStatus.Text = "Status: Approved";
             int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
-
-            AssistanceRepository repo = new AssistanceRepository();
             repo.UpdateRequestStatus(ticketID, "Approved");
             releaseBtn.Visible = true;
-            releaseBtn.Show();
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
 
             AddActivityLog("Request Approved", $"Assistance request {trackingNumber} approved", "Success");
-
         };
 
         rejectBtn.Click += (s, e) =>
@@ -215,18 +211,13 @@ public class AddTicketBox
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Rejected";
             int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
-
-            AssistanceRepository repo = new AssistanceRepository();
             repo.UpdateRequestStatus(ticketID, "Rejected");
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
 
             AddActivityLog("Request Rejected", $"Assistance request {trackingNumber} rejected", "Failed");
-
-            
             parent.Hide();
-
         };
 
         cancelBtn.Click += (s, e) =>
@@ -237,16 +228,13 @@ public class AddTicketBox
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Canceled";
             int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
-
-            AssistanceRepository repo = new AssistanceRepository();
-            repo.UpdateRequestStatus(ticketID, "Rejected");
+            repo.UpdateRequestStatus(ticketID, "Canceled");
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
+
+            AddActivityLog("Request Canceled", $"Assistance request {trackingNumber} canceled", "Canceled");
             parent.Hide();
-
-            AddActivityLog("Request Canceled", $"Assistance request {trackingNumber} canceled", "canceled");
-
         };
 
         releaseBtn.Click += (s, e) =>
@@ -254,7 +242,6 @@ public class AddTicketBox
             Panel parent = ((Button)s).Parent as Panel;
             parent.Hide();
         };
-
 
         TicketBox.Controls.Add(HeaderPanel);
         TicketBox.Controls.Add(lblTracking);
@@ -277,23 +264,13 @@ public class AddTicketBox
         {
             HeaderPanel.BackColor = Color.LightGreen;
             lblTracking.BackColor = Color.LightGreen;
-
-            releaseBtn.Visible = true;       // only release
-            approveBtn.Visible = false;
-            rejectBtn.Visible = false;
-            cancelBtn.Visible = false;
+            releaseBtn.Visible = true;
         }
         else if (status == "Rejected" || status == "Canceled")
         {
             HeaderPanel.BackColor = (status == "Rejected") ? Color.LightCoral : Color.LightGray;
             lblTracking.BackColor = HeaderPanel.BackColor;
-
-            releaseBtn.Visible = false;
-            approveBtn.Visible = false;
-            rejectBtn.Visible = false;
-            cancelBtn.Visible = false;
         }
-
 
         lblTracking.BringToFront();
         lblTracking.BackColor = Color.LightGray;
@@ -331,37 +308,48 @@ public class AddTicketBox
                     string status = lblStatus?.Text.Replace("Status:", "").Trim() ?? "";
 
                     if (status == "Approved")
-                    {
-                        control.Visible = btn.Text == "Release"; 
-                    }
+                        control.Visible = btn.Text == "Release";
                     else if (status == "Rejected" || status == "Canceled")
-                    {
-                        control.Visible = false; 
-                    }
+                        control.Visible = false;
                     else
-                    {
                         control.Visible = btn.Text == "Approve" || btn.Text == "Reject" || btn.Text == "Cancel";
-                    }
                 }
                 else
-                {
                     control.Visible = isExpanded;
-                }
             }
         }
     }
 
+    // ----------------- Activity Log Methods Applied -----------------
 
     private void AddActivityLog(string actionTitle, string actionInfo, string status)
     {
-        string timestamp = DateTime.Now.ToString("hh:mm tt"); 
+        string timestamp = DateTime.Now.ToString("hh:mm tt");
+        repo.InsertActionLog(actionTitle, actionInfo);
 
         ActivityassistanceLog logCard = new ActivityassistanceLog(timestamp, actionTitle, actionInfo, status);
-
         ActivityLogFlowLayoutPanel.Controls.Add(logCard);
         ActivityLogFlowLayoutPanel.Controls.SetChildIndex(logCard, 0);
-
         ActivityLogFlowLayoutPanel.ScrollControlIntoView(logCard);
+    }
+
+    public void LoadActivityLogs()
+    {
+        ActivityLogFlowLayoutPanel.Controls.Clear(); // clear old logs
+
+        var logs = repo.GetAllActionLogs();
+
+        foreach (var log in logs)
+        {
+            ActivityassistanceLog logCard = new ActivityassistanceLog(
+                log.DateDisplay,
+                log.RequestAction,
+                log.ActionDescription,
+                log.Status // now must be correct from DB
+            );
+
+            ActivityLogFlowLayoutPanel.Controls.Add(logCard);
+        }
     }
 
 }

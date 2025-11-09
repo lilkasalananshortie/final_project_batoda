@@ -1,0 +1,11 @@
+CREATE TABLE AssistanceActionLog (
+    ActionID INT IDENTITY(1,1) PRIMARY KEY,
+    RequestAction VARCHAR(50),
+    ActionDescription VARCHAR(255),
+    ActionDate DATETIME
+);
+
+-- AFTER NIYO ILAGAY YAN, ETO NAMANG NASA BABA MEDJO NAGUGULUHAN PA KO --
+
+ALTER TABLE AssistanceActionLog
+ADD RequestStatus VARCHAR(20) DEFAULT 'pending';

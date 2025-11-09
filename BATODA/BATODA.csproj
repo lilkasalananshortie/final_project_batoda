@@ -57,6 +57,7 @@
     <Compile Include="Helpers\DataGrid\MembershipRenewalHandler.cs" />
     <Compile Include="Helpers\DataGrid\SearchResults.cs" />
     <Compile Include="Helpers\DataGrid\TaxHandler.cs" />
+    <Compile Include="Modules\Assistance Request Module\Assistance Classes\ActionLogModel.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AddTicketBox.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceLoadMember.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\AssistanceModel.cs" />
@@ -542,6 +543,7 @@
     <None Include="Resources\icon_add_image.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database Guide &amp; Queries\AssistanceActionLog.txt" />
     <Content Include="Database Guide &amp; Queries\AssistanceHistory.txt" />
     <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
     <Content Include="Database Guide &amp; Queries\BatodaFunds.txt" />
