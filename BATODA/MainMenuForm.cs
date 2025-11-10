@@ -23,12 +23,29 @@ namespace BATODA
             DisplayPanel.Dock = DockStyle.Fill;
             NotificationPanel.Visible = false;
             CalendarXAccoutnContainerPanel.Visible = false;
-
-          
-
         }
+
+        private Timer clockTimer;
+
+        private void SetupClock()
+        {
+            clockTimer = new Timer();
+            clockTimer.Interval = 1000; 
+            clockTimer.Tick += ClockTimer_Tick;
+            clockTimer.Start();
+        }
+
+        private void ClockTimer_Tick(object sender, EventArgs e)
+        {
+            MainTime.Text = DateTime.Now.ToString("hh:mm tt"); 
+        }
+
+
         private void DashboardForm_Load(object sender, EventArgs e)
         {
+            SetupClock();
+            MainDate.Text = DateTime.Now.ToString("MMMM dd, yyyy (dddd)");
+
             this.ActiveControl = null;
             DisplayClass.ShowMain(new DashboardUForm(this));
             TopPanelText.Text = "DASHBOARD";
@@ -45,6 +62,8 @@ namespace BATODA
             );
 
             DisplayClass.SetActive(HomeButton);
+
+         
 
         }
 

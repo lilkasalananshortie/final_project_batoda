@@ -65,31 +65,46 @@ namespace BATODA.Modules.Assistance_Request_Module
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = @"SELECT 
-                CONCAT('TR-', f.TicketID) AS TicketID,
-                RIGHT('000' + CAST(f.BodyNumber AS VARCHAR(3)), 3) AS BodyNumber,
-                f.FullName,
-                f.ContactNumber,
-                f.TypeOfAid,
-                f.RequestedBy,
-                f.RequestedAmount,
-                f.AssistanceThru,
-                f.GcashNumber,
-                f.DateRequested,
-                f.RequestStatus,
-                h.ActionDate
-             FROM FinancialAssistanceRequests f
-             LEFT JOIN AssistanceActionLog h
-                ON f.TicketID = h.TicketID
-             ORDER BY h.ActionDate DESC";
+                string query = @"
+                SELECT 
+                    CONCAT('TR-', f.TicketID) AS TicketID,
+                    RIGHT('000' + CAST(f.BodyNumber AS VARCHAR(3)), 3) AS BodyNumber,
+                    f.FullName,
+                    f.ContactNumber,
+                    f.TypeOfAid,
+                    f.RequestedBy,
+                    f.RequestedAmount,
+                    f.AssistanceThru,
+                    f.GcashNumber,
+                    f.DateRequested,
+                    f.RequestStatus,
+                    h.ActionDate
+                FROM FinancialAssistanceRequests f
+                LEFT JOIN AssistanceActionHistory h
+                    ON f.TicketID = h.TicketID
+                ORDER BY h.ActionDate DESC";
 
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
                 grid.DataSource = dt;
+
+                grid.Columns["TicketID"].HeaderText = "Tracking No.";
+                grid.Columns["BodyNumber"].HeaderText = "Body No.";
+                grid.Columns["FullName"].HeaderText = "Full Name";
+                grid.Columns["ContactNumber"].HeaderText = "Contact No.";
+                grid.Columns["TypeOfAid"].HeaderText = "Aid";
+                grid.Columns["RequestedBy"].HeaderText = "Requested By";
+                grid.Columns["RequestedAmount"].HeaderText = "Amount";
+                grid.Columns["AssistanceThru"].HeaderText = "Method";
+                grid.Columns["GcashNumber"].HeaderText = "Gcash No.";
+                grid.Columns["DateRequested"].HeaderText = "Date Req.";
+                grid.Columns["RequestStatus"].HeaderText = "Status";
+                grid.Columns["ActionDate"].HeaderText = "Action Date";
             }
         }
+
 
 
         public void InsertActionLog(string requestAction, string actionDescription)
@@ -159,7 +174,7 @@ namespace BATODA.Modules.Assistance_Request_Module
                             RequestAction = reader["RequestAction"].ToString(),
                             ActionDescription = reader["ActionDescription"].ToString(),
                             Date = date,
-                            Status = reader["RequestStatus"].ToString(),  // fixed column name
+                            Status = reader["RequestStatus"].ToString(),
                             DateDisplay = FormatDateDisplay(date)
                         });
                     }
@@ -168,8 +183,6 @@ namespace BATODA.Modules.Assistance_Request_Module
 
             return logs;
         }
-
-
 
         private string FormatDateDisplay(DateTime date)
         {

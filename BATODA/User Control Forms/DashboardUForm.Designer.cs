@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.TotalMembersLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,17 +37,17 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.PenalizedLbl = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.CodingNoLbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.PendingReqLbl = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -93,7 +93,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.TotalMembersLbl);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -102,15 +102,15 @@
             this.panel1.Size = new System.Drawing.Size(523, 153);
             this.panel1.TabIndex = 0;
             // 
-            // label8
+            // TotalMembersLbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(98, 67);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 55);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "618";
+            this.TotalMembersLbl.AutoSize = true;
+            this.TotalMembersLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalMembersLbl.Location = new System.Drawing.Point(98, 67);
+            this.TotalMembersLbl.Name = "TotalMembersLbl";
+            this.TotalMembersLbl.Size = new System.Drawing.Size(108, 55);
+            this.TotalMembersLbl.TabIndex = 4;
+            this.TotalMembersLbl.Text = "618";
             // 
             // pictureBox1
             // 
@@ -178,7 +178,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.PenalizedLbl);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(1077, 13);
@@ -186,15 +186,15 @@
             this.panel3.Size = new System.Drawing.Size(523, 153);
             this.panel3.TabIndex = 2;
             // 
-            // label10
+            // PenalizedLbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(114, 78);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 55);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "618";
+            this.PenalizedLbl.AutoSize = true;
+            this.PenalizedLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PenalizedLbl.Location = new System.Drawing.Point(114, 78);
+            this.PenalizedLbl.Name = "PenalizedLbl";
+            this.PenalizedLbl.Size = new System.Drawing.Size(108, 55);
+            this.PenalizedLbl.TabIndex = 8;
+            this.PenalizedLbl.Text = "618";
             // 
             // pictureBox6
             // 
@@ -239,7 +239,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.CodingNoLbl);
             this.panel5.Controls.Add(this.pictureBox2);
             this.panel5.Controls.Add(this.label5);
             this.panel5.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -248,15 +248,15 @@
             this.panel5.Size = new System.Drawing.Size(523, 153);
             this.panel5.TabIndex = 3;
             // 
-            // label9
+            // CodingNoLbl
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(114, 67);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 55);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "618";
+            this.CodingNoLbl.AutoSize = true;
+            this.CodingNoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodingNoLbl.Location = new System.Drawing.Point(37, 67);
+            this.CodingNoLbl.Name = "CodingNoLbl";
+            this.CodingNoLbl.Size = new System.Drawing.Size(254, 55);
+            this.CodingNoLbl.TabIndex = 5;
+            this.CodingNoLbl.Text = "XX1 / XX2";
             // 
             // pictureBox2
             // 
@@ -282,7 +282,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label13);
+            this.panel6.Controls.Add(this.PendingReqLbl);
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Controls.Add(this.label6);
             this.panel6.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -291,15 +291,15 @@
             this.panel6.Size = new System.Drawing.Size(523, 153);
             this.panel6.TabIndex = 4;
             // 
-            // label13
+            // PendingReqLbl
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(98, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(108, 55);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "618";
+            this.PendingReqLbl.AutoSize = true;
+            this.PendingReqLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PendingReqLbl.Location = new System.Drawing.Point(98, 67);
+            this.PendingReqLbl.Name = "PendingReqLbl";
+            this.PendingReqLbl.Size = new System.Drawing.Size(108, 55);
+            this.PendingReqLbl.TabIndex = 5;
+            this.PendingReqLbl.Text = "618";
             // 
             // pictureBox3
             // 
@@ -729,11 +729,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label TotalMembersLbl;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label PenalizedLbl;
+        private System.Windows.Forms.Label CodingNoLbl;
+        private System.Windows.Forms.Label PendingReqLbl;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label14;

@@ -25,19 +25,17 @@ namespace BATODA.User_Control_Forms
 
             switch (normalizedStatus)
             {
-                case "success":
-                case "approved": 
+                case "request approved":
                     PictureBoxStatus.Image = Properties.Resources.ActivityLog_Approved;
                     break;
-                case "failed":
-                case "rejected":
+                case "request rejected":
                     PictureBoxStatus.Image = Properties.Resources.ActivityLog_rejected;
                     break;
                 case "canceled":
                     PictureBoxStatus.Image = Properties.Resources.ActivityLog_canceled;
                     break;
-
             }
+
 
             this.BackColor = Color.White;
             this.Padding = new Padding(5);

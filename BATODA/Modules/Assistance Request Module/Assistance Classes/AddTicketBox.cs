@@ -200,7 +200,7 @@ public class AddTicketBox
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog("Request Approved", $"Assistance request {trackingNumber} approved", "Success");
+            AddActivityLog("Request Approved", $"Assistance request {trackingNumber} approved", "request approved");
         };
 
         rejectBtn.Click += (s, e) =>
@@ -216,7 +216,7 @@ public class AddTicketBox
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog("Request Rejected", $"Assistance request {trackingNumber} rejected", "Failed");
+            AddActivityLog("Request Rejected", $"Assistance request {trackingNumber} rejected", "request rejected");
             parent.Hide();
         };
 
@@ -233,7 +233,7 @@ public class AddTicketBox
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog("Request Canceled", $"Assistance request {trackingNumber} canceled", "Canceled");
+            AddActivityLog("Request Canceled", $"Assistance request {trackingNumber} canceled", "canceled");
             parent.Hide();
         };
 
@@ -335,21 +335,36 @@ public class AddTicketBox
 
     public void LoadActivityLogs()
     {
-        ActivityLogFlowLayoutPanel.Controls.Clear(); // clear old logs
+        ActivityLogFlowLayoutPanel.Controls.Clear();
 
         var logs = repo.GetAllActionLogs();
 
         foreach (var log in logs)
         {
+            string action = (log.RequestAction ?? "").Trim();
+            string statusForImage;
+
+            if (action.Equals("Request Approved", StringComparison.OrdinalIgnoreCase))
+                statusForImage = "request approved";  // <-- match switch
+            else if (action.Equals("Request Rejected", StringComparison.OrdinalIgnoreCase))
+                statusForImage = "request rejected";  // <-- match switch
+            else if (action.Equals("Request Canceled", StringComparison.OrdinalIgnoreCase))
+                statusForImage = "canceled";          // <-- match switch
+            else
+                statusForImage = "unknown";
+
             ActivityassistanceLog logCard = new ActivityassistanceLog(
                 log.DateDisplay,
                 log.RequestAction,
                 log.ActionDescription,
-                log.Status // now must be correct from DB
+                statusForImage
             );
 
             ActivityLogFlowLayoutPanel.Controls.Add(logCard);
         }
+
+
     }
+
 
 }

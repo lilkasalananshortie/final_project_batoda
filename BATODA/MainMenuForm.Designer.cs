@@ -49,6 +49,8 @@
             this.CalendarBtn = new BATODA.ButtonStyle();
             this.SettingsButton = new BATODA.ButtonStyle();
             this.DisplayPanel = new System.Windows.Forms.Panel();
+            this.MainDate = new System.Windows.Forms.Label();
+            this.MainTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.TopBarPanel.SuspendLayout();
@@ -81,6 +83,8 @@
             // TopBarPanel
             // 
             this.TopBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.TopBarPanel.Controls.Add(this.MainTime);
+            this.TopBarPanel.Controls.Add(this.MainDate);
             this.TopBarPanel.Controls.Add(this.CalendarButton);
             this.TopBarPanel.Controls.Add(this.NotificationButton);
             this.TopBarPanel.Controls.Add(this.AccountButton);
@@ -109,7 +113,7 @@
             this.CalendarButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.CalendarButton.ImageSize = new System.Drawing.Size(24, 24);
             this.CalendarButton.IsToggled = false;
-            this.CalendarButton.Location = new System.Drawing.Point(1443, 30);
+            this.CalendarButton.Location = new System.Drawing.Point(856, 36);
             this.CalendarButton.MouseDownColor = System.Drawing.Color.White;
             this.CalendarButton.Name = "CalendarButton";
             this.CalendarButton.PaddingX = 10;
@@ -140,7 +144,7 @@
             this.NotificationButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.NotificationButton.ImageSize = new System.Drawing.Size(24, 24);
             this.NotificationButton.IsToggled = false;
-            this.NotificationButton.Location = new System.Drawing.Point(1331, 30);
+            this.NotificationButton.Location = new System.Drawing.Point(744, 36);
             this.NotificationButton.MouseDownColor = System.Drawing.Color.White;
             this.NotificationButton.Name = "NotificationButton";
             this.NotificationButton.PaddingX = 10;
@@ -171,7 +175,7 @@
             this.AccountButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.AccountButton.ImageSize = new System.Drawing.Size(24, 24);
             this.AccountButton.IsToggled = false;
-            this.AccountButton.Location = new System.Drawing.Point(1219, 30);
+            this.AccountButton.Location = new System.Drawing.Point(632, 36);
             this.AccountButton.MouseDownColor = System.Drawing.Color.White;
             this.AccountButton.Name = "AccountButton";
             this.AccountButton.PaddingX = 10;
@@ -200,9 +204,9 @@
             // 
             this.NotificationPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.NotificationPanel.Controls.Add(this.label2);
-            this.NotificationPanel.Location = new System.Drawing.Point(1378, 80);
+            this.NotificationPanel.Location = new System.Drawing.Point(1378, 96);
             this.NotificationPanel.Name = "NotificationPanel";
-            this.NotificationPanel.Size = new System.Drawing.Size(366, 334);
+            this.NotificationPanel.Size = new System.Drawing.Size(366, 318);
             this.NotificationPanel.TabIndex = 0;
             // 
             // label2
@@ -472,6 +476,28 @@
             this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
             this.DisplayPanel.TabIndex = 5;
             // 
+            // MainDate
+            // 
+            this.MainDate.AutoSize = true;
+            this.MainDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainDate.Location = new System.Drawing.Point(1133, 11);
+            this.MainDate.Name = "MainDate";
+            this.MainDate.Size = new System.Drawing.Size(179, 33);
+            this.MainDate.TabIndex = 7;
+            this.MainDate.Text = "Loading . . .";
+            this.MainDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // MainTime
+            // 
+            this.MainTime.AutoSize = true;
+            this.MainTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainTime.Location = new System.Drawing.Point(1133, 48);
+            this.MainTime.Name = "MainTime";
+            this.MainTime.Size = new System.Drawing.Size(179, 33);
+            this.MainTime.TabIndex = 8;
+            this.MainTime.Text = "Loading . . .";
+            this.MainTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,5 +548,7 @@
         private ButtonStyle MembersMainButton;
         private ButtonStyle CalendarBtn;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label MainDate;
+        private System.Windows.Forms.Label MainTime;
     }
 }
