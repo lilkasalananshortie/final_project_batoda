@@ -71,7 +71,6 @@ namespace BATODA.Helpers.Data
 
         public static void UpdatePaymentInDB(int bodyNumber, int year, int month, string status)
         {
-            // Ensure status is valid for DB
             string dbStatus;
             switch (status)
             {
@@ -81,7 +80,7 @@ namespace BATODA.Helpers.Data
                     dbStatus = status;
                     break;
                 default:
-                    dbStatus = "Due"; // default fallback
+                    dbStatus = "Due";
                     break;
             }
 
@@ -133,9 +132,5 @@ namespace BATODA.Helpers.Data
                 }
             }
         }
-
-
-
-
     }
 }

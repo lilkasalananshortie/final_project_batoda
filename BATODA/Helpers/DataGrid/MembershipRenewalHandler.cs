@@ -15,8 +15,6 @@ namespace BATODA.Helpers.DataGrid
 
         public static void Initialize(DataGridView dgv)
         {
-            
-
             dgv.BorderStyle = BorderStyle.None;
             dgv.BackgroundColor = Color.White;
             dgv.RowHeadersVisible = false;
@@ -185,11 +183,6 @@ namespace BATODA.Helpers.DataGrid
 
             e.Handled = true;
         }
-
-
-
-
-
 
         // SAMPLE LANG ULIT TO PWEDE BURAHIN PARA LANG MA VISUALIZE YUNG DATAGRID
         public static List<MemberModel> GetSelectedMembers(DataGridView dgv)
