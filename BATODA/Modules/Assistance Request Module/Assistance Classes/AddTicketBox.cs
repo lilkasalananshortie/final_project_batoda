@@ -14,6 +14,9 @@ public class AddTicketBox
     private FlowLayoutPanel ActivityLogFlowLayoutPanel;
     AssistanceRepository repo = new AssistanceRepository();
 
+    // added field to track currently expanded box
+    private Panel expandedPanel = null;
+
     public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel)
     {
         TicketFlowLayoutPanel = panel;
@@ -280,15 +283,19 @@ public class AddTicketBox
         TicketFlowLayoutPanel.Controls.Add(TicketBox);
     }
 
+    // your TicketBox_Click + one-panel-only logic
     private void TicketBox_Click(object sender, EventArgs e)
     {
         Panel panel = sender as Panel;
         if (panel == null) return;
 
+        // ✅ block if another is open
+        if (expandedPanel != null && expandedPanel != panel)
+            return;
+
         bool isExpanded = (bool)panel.Tag;
         isExpanded = !isExpanded;
         panel.Tag = isExpanded;
-
         panel.Height = isExpanded ? 330 : 150;
 
         foreach (Control control in panel.Controls)
@@ -318,7 +325,11 @@ public class AddTicketBox
                     control.Visible = isExpanded;
             }
         }
+
+        // ✅ update expanded tracker
+        expandedPanel = isExpanded ? panel : null;
     }
+
 
     // ----------------- Activity Log Methods Applied -----------------
 

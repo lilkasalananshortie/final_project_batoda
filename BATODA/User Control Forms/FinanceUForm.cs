@@ -18,15 +18,27 @@ namespace BATODA
         {
             InitializeComponent();
             TaxHandler.Initialize(ButawDataGrid);
-            TaxHandler.LoadSampleData(ButawDataGrid);
+
+            int selectedYear = 2025;
+            TaxHandler.LoadMemberPayments(ButawDataGrid, selectedYear);
+
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(PaymentStatusComboBox, "Status", "Paid", "Unpaid", "Overdue");
             DisplayClass.SetPlaceholder(YearComboBox, "Year", "2025", "2024");
-            DisplayClass.SetPlaceholder(SortComboBox, "Sort By" , "Body Number", "Name");
+            DisplayClass.SetPlaceholder(SortComboBox, "Sort By", "Body Number", "Name");
 
             TaxHandler.SetViewPanel(ViewPanel);
-
         }
+
+        private void YearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(YearComboBox.Text, out int year))
+            {
+                TaxHandler.LoadMemberPayments(ButawDataGrid, year);
+            }
+        }
+
+
 
         private void FinanceUForm_Load(object sender, EventArgs e)
         {

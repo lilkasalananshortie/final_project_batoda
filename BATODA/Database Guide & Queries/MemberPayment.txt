@@ -1,0 +1,9 @@
+CREATE TABLE MemberPayment (
+    PaymentID INT IDENTITY(1,1) PRIMARY KEY,
+    BodyNumber INT NOT NULL FOREIGN KEY REFERENCES MemberInfo(BodyNumber),
+    Year INT NOT NULL,
+    Month TINYINT NOT NULL,         -- 1 = January, 12 = December
+    Amount DECIMAL(10,2) NOT NULL,
+    PaymentDate DATE NULL,
+    Status VARCHAR(20) CHECK (Status IN ('Paid', 'Due', 'Overdue'))
+);

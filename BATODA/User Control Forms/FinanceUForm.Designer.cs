@@ -29,15 +29,26 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
+            this.MembershipRenewalButton = new BATODA.ButtonStyle();
+            this.RenewalHistoryButton = new BATODA.ButtonStyle();
+            this.FinanceButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ApplyButton = new BATODA.ButtonStyle();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.ClearButton = new BATODA.ButtonStyle();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ButawDataGrid = new System.Windows.Forms.DataGridView();
+            this.ApplySearchButton = new BATODA.ButtonStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,57 +59,46 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.ViewPanel = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.MembershipRenewalButton = new BATODA.ButtonStyle();
-            this.RenewalHistoryButton = new BATODA.ButtonStyle();
-            this.FinanceButton = new BATODA.ButtonStyle();
-            this.ApplyButton = new BATODA.ButtonStyle();
-            this.ClearButton = new BATODA.ButtonStyle();
-            this.ApplySearchButton = new BATODA.ButtonStyle();
-            this.label18 = new System.Windows.Forms.Label();
+            this.ViewPanel = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ButawDataGrid)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.ViewPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButawDataGrid)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.ViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -114,6 +114,108 @@
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 19;
+            // 
+            // MembershipRenewalButton
+            // 
+            this.MembershipRenewalButton.BackColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.BorderRadius = 0;
+            this.MembershipRenewalButton.BorderSize = 1;
+            this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
+            this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
+            this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MembershipRenewalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembershipRenewalButton.ForeColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.MembershipRenewalButton.HoverColor = System.Drawing.Color.Silver;
+            this.MembershipRenewalButton.ImageColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(130, 0);
+            this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.MembershipRenewalButton.IsToggled = false;
+            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 5);
+            this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MembershipRenewalButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.MembershipRenewalButton.Name = "MembershipRenewalButton";
+            this.MembershipRenewalButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.MembershipRenewalButton.PaddingX = 0;
+            this.MembershipRenewalButton.PaddingY = 0;
+            this.MembershipRenewalButton.Size = new System.Drawing.Size(525, 49);
+            this.MembershipRenewalButton.TabIndex = 21;
+            this.MembershipRenewalButton.Text = "Membership Renewal";
+            this.MembershipRenewalButton.TextColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.TextOffset = 20;
+            this.MembershipRenewalButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.MembershipRenewalButton.UseVisualStyleBackColor = false;
+            this.MembershipRenewalButton.Click += new System.EventHandler(this.MembershipRenewalButton_Click_1);
+            // 
+            // RenewalHistoryButton
+            // 
+            this.RenewalHistoryButton.BackColor = System.Drawing.Color.White;
+            this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.White;
+            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.BorderRadius = 0;
+            this.RenewalHistoryButton.BorderSize = 1;
+            this.RenewalHistoryButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.RenewalHistoryButton.FlatAppearance.BorderSize = 0;
+            this.RenewalHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RenewalHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RenewalHistoryButton.ForeColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.RenewalHistoryButton.HoverColor = System.Drawing.Color.Silver;
+            this.RenewalHistoryButton.ImageColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(155, 0);
+            this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.RenewalHistoryButton.IsToggled = false;
+            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 5);
+            this.RenewalHistoryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RenewalHistoryButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.RenewalHistoryButton.Name = "RenewalHistoryButton";
+            this.RenewalHistoryButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.RenewalHistoryButton.PaddingX = 0;
+            this.RenewalHistoryButton.PaddingY = 0;
+            this.RenewalHistoryButton.Size = new System.Drawing.Size(525, 49);
+            this.RenewalHistoryButton.TabIndex = 20;
+            this.RenewalHistoryButton.Text = "Renewal History";
+            this.RenewalHistoryButton.TextColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.TextOffset = 20;
+            this.RenewalHistoryButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.RenewalHistoryButton.UseVisualStyleBackColor = false;
+            this.RenewalHistoryButton.Click += new System.EventHandler(this.RenewalHistoryButton_Click);
+            // 
+            // FinanceButton
+            // 
+            this.FinanceButton.BackColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.BorderColor = System.Drawing.Color.Black;
+            this.FinanceButton.BorderRadius = 0;
+            this.FinanceButton.BorderSize = 1;
+            this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
+            this.FinanceButton.FlatAppearance.BorderSize = 0;
+            this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceButton.ForeColor = System.Drawing.Color.Black;
+            this.FinanceButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.FinanceButton.HoverColor = System.Drawing.Color.Silver;
+            this.FinanceButton.ImageColor = System.Drawing.Color.Black;
+            this.FinanceButton.ImagePosition = new System.Drawing.Point(180, 0);
+            this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.FinanceButton.IsToggled = false;
+            this.FinanceButton.Location = new System.Drawing.Point(5, 5);
+            this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FinanceButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.FinanceButton.Name = "FinanceButton";
+            this.FinanceButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.FinanceButton.PaddingX = 0;
+            this.FinanceButton.PaddingY = 0;
+            this.FinanceButton.Size = new System.Drawing.Size(525, 49);
+            this.FinanceButton.TabIndex = 19;
+            this.FinanceButton.Text = "Finance";
+            this.FinanceButton.TextColor = System.Drawing.Color.Black;
+            this.FinanceButton.TextOffset = 20;
+            this.FinanceButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.UseVisualStyleBackColor = false;
+            this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
             // panel1
             // 
@@ -137,6 +239,39 @@
             this.panel1.Size = new System.Drawing.Size(1573, 661);
             this.panel1.TabIndex = 22;
             // 
+            // ApplyButton
+            // 
+            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
+            this.ApplyButton.BorderRadius = 0;
+            this.ApplyButton.BorderSize = 0;
+            this.ApplyButton.ButtonImage = null;
+            this.ApplyButton.FlatAppearance.BorderSize = 0;
+            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyButton.ForeColor = System.Drawing.Color.White;
+            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplyButton.IsToggled = false;
+            this.ApplyButton.Location = new System.Drawing.Point(1312, 90);
+            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.Name = "ApplyButton";
+            this.ApplyButton.PaddingX = 0;
+            this.ApplyButton.PaddingY = 0;
+            this.ApplyButton.Size = new System.Drawing.Size(108, 33);
+            this.ApplyButton.TabIndex = 50;
+            this.ApplyButton.Text = "Apply Filter";
+            this.ApplyButton.TextColor = System.Drawing.Color.White;
+            this.ApplyButton.TextOffset = 20;
+            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyButton.UseVisualStyleBackColor = false;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
@@ -149,17 +284,47 @@
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(47, 134);
+            this.panel7.Location = new System.Drawing.Point(24, 134);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1482, 75);
+            this.panel7.Size = new System.Drawing.Size(1520, 62);
             this.panel7.TabIndex = 46;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::BATODA.Properties.Resources.paid;
+            this.pictureBox10.Location = new System.Drawing.Point(1049, 18);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 54;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::BATODA.Properties.Resources.due;
+            this.pictureBox9.Location = new System.Drawing.Point(1349, 18);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 53;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::BATODA.Properties.Resources.overdue;
+            this.pictureBox8.Location = new System.Drawing.Point(1195, 18);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 52;
+            this.pictureBox8.TabStop = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1384, 26);
+            this.label17.Location = new System.Drawing.Point(1384, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 20);
             this.label17.TabIndex = 51;
@@ -170,7 +335,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1230, 26);
+            this.label16.Location = new System.Drawing.Point(1230, 22);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 20);
             this.label16.TabIndex = 50;
@@ -181,21 +346,64 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1084, 26);
+            this.label15.Location = new System.Drawing.Point(1084, 22);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 20);
             this.label15.TabIndex = 49;
             this.label15.Text = "- Paid";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BATODA.Properties.Resources.Request_icon;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 12);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(62, 21);
+            this.label7.Location = new System.Drawing.Point(62, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(391, 31);
             this.label7.TabIndex = 43;
             this.label7.Text = "Tax (Butaw Overview) - 2025";
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderColor = System.Drawing.Color.Red;
+            this.ClearButton.BorderRadius = 0;
+            this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.ImageColor = System.Drawing.Color.Black;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ClearButton.IsToggled = false;
+            this.ClearButton.Location = new System.Drawing.Point(1426, 90);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.PaddingX = 0;
+            this.ClearButton.PaddingY = 0;
+            this.ClearButton.Size = new System.Drawing.Size(103, 33);
+            this.ClearButton.TabIndex = 51;
+            this.ClearButton.Text = "Clear Filter";
+            this.ClearButton.TextColor = System.Drawing.Color.White;
+            this.ClearButton.TextOffset = 20;
+            this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click_1);
             // 
             // panel6
             // 
@@ -220,6 +428,17 @@
             this.SearchTextBox.TabIndex = 28;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 40;
+            this.pictureBox4.TabStop = false;
+            // 
             // ButawDataGrid
             // 
             this.ButawDataGrid.AllowUserToAddRows = false;
@@ -228,11 +447,44 @@
             this.ButawDataGrid.AllowUserToResizeRows = false;
             this.ButawDataGrid.BackgroundColor = System.Drawing.Color.DarkGray;
             this.ButawDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ButawDataGrid.Location = new System.Drawing.Point(47, 208);
+            this.ButawDataGrid.Location = new System.Drawing.Point(24, 196);
             this.ButawDataGrid.Name = "ButawDataGrid";
             this.ButawDataGrid.ReadOnly = true;
-            this.ButawDataGrid.Size = new System.Drawing.Size(1482, 341);
+            this.ButawDataGrid.Size = new System.Drawing.Size(1520, 445);
             this.ButawDataGrid.TabIndex = 44;
+            // 
+            // ApplySearchButton
+            // 
+            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.BorderRadius = 0;
+            this.ApplySearchButton.BorderSize = 0;
+            this.ApplySearchButton.ButtonImage = null;
+            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
+            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
+            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
+            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplySearchButton.IsToggled = false;
+            this.ApplySearchButton.Location = new System.Drawing.Point(545, 93);
+            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.Name = "ApplySearchButton";
+            this.ApplySearchButton.PaddingX = 22;
+            this.ApplySearchButton.PaddingY = 0;
+            this.ApplySearchButton.Size = new System.Drawing.Size(115, 33);
+            this.ApplySearchButton.TabIndex = 39;
+            this.ApplySearchButton.Text = "Search";
+            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
+            this.ApplySearchButton.TextOffset = 0;
+            this.ApplySearchButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplySearchButton.UseVisualStyleBackColor = false;
+            this.ApplySearchButton.Click += new System.EventHandler(this.ApplySearchButton_Click);
             // 
             // label6
             // 
@@ -341,6 +593,18 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "Total Butaw This Year";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.bag_3257422;
+            this.pictureBox1.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -374,6 +638,18 @@
             this.label8.Size = new System.Drawing.Size(146, 24);
             this.label8.TabIndex = 48;
             this.label8.Text = "Paid This Month";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.total_paid;
+            this.pictureBox2.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // panel4
             // 
@@ -409,6 +685,18 @@
             this.label9.TabIndex = 48;
             this.label9.Text = "Total Due";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Image = global::BATODA.Properties.Resources.total_due;
+            this.pictureBox3.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
@@ -443,6 +731,18 @@
             this.label10.TabIndex = 48;
             this.label10.Text = "Payment Overdue";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Image = global::BATODA.Properties.Resources.total_overdue;
+            this.pictureBox6.Location = new System.Drawing.Point(258, 38);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(75, 75);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            // 
             // ViewPanel
             // 
             this.ViewPanel.BackColor = System.Drawing.Color.White;
@@ -458,53 +758,43 @@
             this.ViewPanel.TabIndex = 27;
             this.ViewPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewPanel_Paint);
             // 
-            // pictureBox6
+            // panel8
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Image = global::BATODA.Properties.Resources.total_overdue;
-            this.pictureBox6.Location = new System.Drawing.Point(258, 38);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 1;
-            this.pictureBox6.TabStop = false;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel8.Location = new System.Drawing.Point(24, 74);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1520, 3);
+            this.panel8.TabIndex = 88;
             // 
-            // pictureBox3
+            // pictureBox11
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Image = global::BATODA.Properties.Resources.total_due;
-            this.pictureBox3.Location = new System.Drawing.Point(258, 38);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox11.Image = global::BATODA.Properties.Resources.bag_3257422;
+            this.pictureBox11.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 46;
+            this.pictureBox11.TabStop = false;
             // 
-            // pictureBox2
+            // label18
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Image = global::BATODA.Properties.Resources.total_paid;
-            this.pictureBox2.Location = new System.Drawing.Point(258, 38);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(251, 21);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(168, 31);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "Placeholder";
             // 
-            // pictureBox1
+            // label3
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.bag_3257422;
-            this.pictureBox1.Location = new System.Drawing.Point(258, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(58, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 31);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Tax Details - ";
             // 
             // pictureBox5
             // 
@@ -518,296 +808,6 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::BATODA.Properties.Resources.paid;
-            this.pictureBox10.Location = new System.Drawing.Point(1049, 22);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 54;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::BATODA.Properties.Resources.due;
-            this.pictureBox9.Location = new System.Drawing.Point(1349, 22);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 53;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::BATODA.Properties.Resources.overdue;
-            this.pictureBox8.Location = new System.Drawing.Point(1195, 22);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 52;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::BATODA.Properties.Resources.Request_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 16);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 40;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::BATODA.Properties.Resources.bag_3257422;
-            this.pictureBox11.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 46;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 31);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Tax Details - ";
-            // 
-            // MembershipRenewalButton
-            // 
-            this.MembershipRenewalButton.BackColor = System.Drawing.Color.White;
-            this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.White;
-            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.BorderRadius = 0;
-            this.MembershipRenewalButton.BorderSize = 1;
-            this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
-            this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
-            this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MembershipRenewalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MembershipRenewalButton.ForeColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.MembershipRenewalButton.HoverColor = System.Drawing.Color.Silver;
-            this.MembershipRenewalButton.ImageColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(130, 0);
-            this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.MembershipRenewalButton.IsToggled = false;
-            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 5);
-            this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MembershipRenewalButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.MembershipRenewalButton.Name = "MembershipRenewalButton";
-            this.MembershipRenewalButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.MembershipRenewalButton.PaddingX = 0;
-            this.MembershipRenewalButton.PaddingY = 0;
-            this.MembershipRenewalButton.Size = new System.Drawing.Size(525, 49);
-            this.MembershipRenewalButton.TabIndex = 21;
-            this.MembershipRenewalButton.Text = "Membership Renewal";
-            this.MembershipRenewalButton.TextColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.TextOffset = 20;
-            this.MembershipRenewalButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.MembershipRenewalButton.UseVisualStyleBackColor = false;
-            this.MembershipRenewalButton.Click += new System.EventHandler(this.MembershipRenewalButton_Click_1);
-            // 
-            // RenewalHistoryButton
-            // 
-            this.RenewalHistoryButton.BackColor = System.Drawing.Color.White;
-            this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.White;
-            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.BorderRadius = 0;
-            this.RenewalHistoryButton.BorderSize = 1;
-            this.RenewalHistoryButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.RenewalHistoryButton.FlatAppearance.BorderSize = 0;
-            this.RenewalHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RenewalHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RenewalHistoryButton.ForeColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.RenewalHistoryButton.HoverColor = System.Drawing.Color.Silver;
-            this.RenewalHistoryButton.ImageColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(155, 0);
-            this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.RenewalHistoryButton.IsToggled = false;
-            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 5);
-            this.RenewalHistoryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RenewalHistoryButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.RenewalHistoryButton.Name = "RenewalHistoryButton";
-            this.RenewalHistoryButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.RenewalHistoryButton.PaddingX = 0;
-            this.RenewalHistoryButton.PaddingY = 0;
-            this.RenewalHistoryButton.Size = new System.Drawing.Size(525, 49);
-            this.RenewalHistoryButton.TabIndex = 20;
-            this.RenewalHistoryButton.Text = "Renewal History";
-            this.RenewalHistoryButton.TextColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.TextOffset = 20;
-            this.RenewalHistoryButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.RenewalHistoryButton.UseVisualStyleBackColor = false;
-            this.RenewalHistoryButton.Click += new System.EventHandler(this.RenewalHistoryButton_Click);
-            // 
-            // FinanceButton
-            // 
-            this.FinanceButton.BackColor = System.Drawing.Color.LightGray;
-            this.FinanceButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.FinanceButton.BorderColor = System.Drawing.Color.Black;
-            this.FinanceButton.BorderRadius = 0;
-            this.FinanceButton.BorderSize = 1;
-            this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
-            this.FinanceButton.FlatAppearance.BorderSize = 0;
-            this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinanceButton.ForeColor = System.Drawing.Color.Black;
-            this.FinanceButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.FinanceButton.HoverColor = System.Drawing.Color.Silver;
-            this.FinanceButton.ImageColor = System.Drawing.Color.Black;
-            this.FinanceButton.ImagePosition = new System.Drawing.Point(180, 0);
-            this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.FinanceButton.IsToggled = false;
-            this.FinanceButton.Location = new System.Drawing.Point(5, 5);
-            this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.FinanceButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.FinanceButton.Name = "FinanceButton";
-            this.FinanceButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.FinanceButton.PaddingX = 0;
-            this.FinanceButton.PaddingY = 0;
-            this.FinanceButton.Size = new System.Drawing.Size(525, 49);
-            this.FinanceButton.TabIndex = 19;
-            this.FinanceButton.Text = "Finance";
-            this.FinanceButton.TextColor = System.Drawing.Color.Black;
-            this.FinanceButton.TextOffset = 20;
-            this.FinanceButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.FinanceButton.UseVisualStyleBackColor = false;
-            this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplyButton.BorderRadius = 0;
-            this.ApplyButton.BorderSize = 0;
-            this.ApplyButton.ButtonImage = null;
-            this.ApplyButton.FlatAppearance.BorderSize = 0;
-            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyButton.ForeColor = System.Drawing.Color.White;
-            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1312, 90);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.PaddingX = 0;
-            this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(108, 33);
-            this.ApplyButton.TabIndex = 50;
-            this.ApplyButton.Text = "Apply Filter";
-            this.ApplyButton.TextColor = System.Drawing.Color.White;
-            this.ApplyButton.TextOffset = 20;
-            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.UseVisualStyleBackColor = false;
-            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderColor = System.Drawing.Color.Red;
-            this.ClearButton.BorderRadius = 0;
-            this.ClearButton.BorderSize = 0;
-            this.ClearButton.ButtonImage = null;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.ImageColor = System.Drawing.Color.Black;
-            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1426, 90);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.PaddingX = 0;
-            this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(103, 33);
-            this.ClearButton.TabIndex = 51;
-            this.ClearButton.Text = "Clear Filter";
-            this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextOffset = 20;
-            this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.UseVisualStyleBackColor = false;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click_1);
-            // 
-            // ApplySearchButton
-            // 
-            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderRadius = 0;
-            this.ApplySearchButton.BorderSize = 0;
-            this.ApplySearchButton.ButtonImage = null;
-            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
-            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
-            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(545, 93);
-            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.Name = "ApplySearchButton";
-            this.ApplySearchButton.PaddingX = 22;
-            this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(115, 33);
-            this.ApplySearchButton.TabIndex = 39;
-            this.ApplySearchButton.Text = "Search";
-            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextOffset = 0;
-            this.ApplySearchButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.UseVisualStyleBackColor = false;
-            this.ApplySearchButton.Click += new System.EventHandler(this.ApplySearchButton_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(251, 21);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(168, 31);
-            this.label18.TabIndex = 45;
-            this.label18.Text = "Placeholder";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel8.Location = new System.Drawing.Point(24, 74);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1520, 3);
-            this.panel8.TabIndex = 88;
-            // 
             // FinanceUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -819,8 +819,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.MembersTopPanel);
-            this.Controls.Add(this.ViewPanel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ViewPanel);
             this.Name = "FinanceUForm";
             this.Size = new System.Drawing.Size(1841, 940);
             this.Load += new System.EventHandler(this.FinanceUForm_Load);
@@ -829,30 +829,30 @@
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ButawDataGrid)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.ViewPanel.ResumeLayout(false);
-            this.ViewPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButawDataGrid)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.ViewPanel.ResumeLayout(false);
+            this.ViewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

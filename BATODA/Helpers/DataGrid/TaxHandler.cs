@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BATODA.Helpers.Data;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -12,6 +13,18 @@ namespace BATODA.Helpers.DataGrid
     {
         private static string CurrentMode = "None";
         private static Panel ViewPanelReference;
+
+        private static string GetDefaultStatus(int year, int month)
+        {
+            DateTime today = DateTime.Today;
+
+            if (year < today.Year || (year == today.Year && month < today.Month))
+                return "Overdue"; // PAST
+            else if (year == today.Year && month == today.Month)
+                return "Due"; // CURRENT
+            else
+                return "None"; // FUTURE
+        }
 
         public static void Initialize(DataGridView dgv)
         {
@@ -96,7 +109,6 @@ namespace BATODA.Helpers.DataGrid
             var column = dgv.Columns[e.ColumnIndex];
             if (column.Name == "View")
             {
-                // Show the panel using the reference
                 ViewPanelReference?.Show();
             }
         }
@@ -108,16 +120,13 @@ namespace BATODA.Helpers.DataGrid
             if (e.RowIndex < 0 || e.ColumnIndex < 3) return;
 
             var cell = dgv.Rows[e.RowIndex].Cells[e.ColumnIndex];
-            if (cell.OwningColumn.HeaderText == "View")
-                return;
+            if (cell.OwningColumn.HeaderText == "View") return;
 
             string current = cell.Tag as string ?? "None";
             string next;
 
             if (CurrentMode != "None")
-            {
                 next = CurrentMode;
-            }
             else
             {
                 switch (current)
@@ -131,87 +140,105 @@ namespace BATODA.Helpers.DataGrid
 
             switch (next)
             {
-                case "Paid":
-                    cell.Value = Properties.Resources.paid;
-                    break;
-                case "Due":
-                    cell.Value = Properties.Resources.due;
-                    break;
-                case "Overdue":
-                    cell.Value = Properties.Resources.overdue;
-                    break;
-                default:
-                    cell.Value = Properties.Resources.circle_finance;
-                    break;
+                case "Paid": cell.Value = Properties.Resources.paid; break;
+                case "Due": cell.Value = Properties.Resources.due; break;
+                case "Overdue": cell.Value = Properties.Resources.overdue; break;
+                default: cell.Value = Properties.Resources.circle_finance; break;
             }
-
             cell.Tag = next;
+
+            int bodyNumber = int.Parse(dgv.Rows[e.RowIndex].Cells["BodyNo"].Value.ToString());
+            int year = CurrentYear;
+            int month = e.ColumnIndex - 2;
+
+            FinanceRepository.UpdatePaymentInDB(bodyNumber, year, month, next);
+
         }
 
 
         // SAMPLE LANG TO PWEDE DELETE IF EVER ND KAILANGAN 
-        public static void LoadSampleData(DataGridView dgv)
+        private static int CurrentYear = DateTime.Today.Year;
+        public static void LoadMemberPayments(DataGridView dgv, int year)
         {
+            CurrentYear = year;
 
             dgv.Rows.Clear();
             dgv.Columns.Clear();
+
             dgv.Columns.Add("BodyNo", "Body No.");
             dgv.Columns.Add("MemberName", "Member Name");
             dgv.Columns.Add("Summary", "Summary");
-            dgv.Columns["BodyNo"].Width = 100;
-            dgv.Columns["MemberName"].Width = 300;
-            dgv.Columns["Summary"].Width = 450;
+        
 
-
-            string[] months =
-            {
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-            };
-
+            string[] months = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
             foreach (string m in months)
             {
-                var monthCol = new DataGridViewImageColumn
+                dgv.Columns.Add(new DataGridViewImageColumn
                 {
                     HeaderText = m,
                     Name = m,
                     ImageLayout = DataGridViewImageCellLayout.Zoom,
                     Width = 40
-                };
-                dgv.Columns.Add(monthCol);
+                });
             }
 
-            var viewCol = new DataGridViewButtonColumn
+            dgv.Columns.Add(new DataGridViewButtonColumn
             {
                 HeaderText = "View",
                 Text = "👁",
                 UseColumnTextForButtonValue = true,
                 Name = "View",
                 Width = 20
-            };
-            dgv.Columns.Add(viewCol);
+            });
+            var queries = new FinanceRepository();
+            var members = queries.GetAllMembers();
+            var payments = queries.GetPaymentsByYear(year);
 
+            DateTime today = DateTime.Today;
 
-
-            for (int i = 1; i <= 4; i++)
+            foreach (var member in members)
             {
-                dgv.Rows.Add($"00{i}", "Mark Arone M. Dela Cruz", "7/12");
-            }
+                int rowIndex = dgv.Rows.Add(member.BodyNumber.ToString("D3"), member.FullName, "0/12");
 
-
-
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
-                for (int i = 3; i < dgv.Columns.Count - 1; i++)
+                for (int i = 1; i <= 12; i++) // LOOP EACH MONTH
                 {
-                    row.Cells[i].Value = Properties.Resources.circle_finance;
-                    row.Cells[i].Tag = "None";
+                    var payment = payments.Find(p => p.BodyNumber == member.BodyNumber && p.Month == i); // FIND PAYMENT FOR MEMBER AND MONTH
+                    string statusToUse;
+
+                    if (payment.BodyNumber != 0) // IF PAYMENT EXISTS
+                    {
+                        statusToUse = (year == today.Year && i > today.Month) ? "None" : payment.Status;
+
+                        switch (statusToUse) // SET IMAGE BASED ON STATUS
+                        {
+                            case "Paid": dgv.Rows[rowIndex].Cells[i + 2].Value = Properties.Resources.paid; break;
+                            case "Due": dgv.Rows[rowIndex].Cells[i + 2].Value = Properties.Resources.due; break;
+                            case "Overdue": dgv.Rows[rowIndex].Cells[i + 2].Value = Properties.Resources.overdue; break;
+                            default: dgv.Rows[rowIndex].Cells[i + 2].Value = Properties.Resources.circle_finance; break;
+                        }
+                        dgv.Rows[rowIndex].Cells[i + 2].Tag = statusToUse; // STORE STATUS IN TAG
+
+                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, i, statusToUse); // SAVE
+                    }
+                    else // IF NO PAYMENT FOUND
+                    {
+                        var defaultStatus = GetDefaultStatus(year, i); // DETERMINE DEFAULT STATUS (PAST/CURRENT/FUTURE)
+                        if (year == today.Year && i > today.Month) defaultStatus = "None";
+
+                        switch (defaultStatus) // SET IMAGE BASED ON DEFAULT STATUS
+                        {
+                            case "Overdue": dgv.Rows[rowIndex].Cells[i + 2].Value = Properties.Resources.overdue; break;
+                            case "Due": dgv.Rows[rowIndex].Cells[i + 2].Value = Properties.Resources.due; break;
+                            default: dgv.Rows[rowIndex].Cells[i + 2].Value = Properties.Resources.circle_finance; break;
+                        }
+                        dgv.Rows[rowIndex].Cells[i + 2].Tag = defaultStatus; // STORE DEFAULT STATUS IN TAG
+
+                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, i, defaultStatus); // SAVE DEFAULT STATUS TO DB
+                    }
                 }
             }
-
             Initialize(dgv);
         }
-
 
     }
 }

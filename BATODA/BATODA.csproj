@@ -68,6 +68,7 @@
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\Ticket.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\RequestSearchOwner.cs" />
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\TicketModel.cs" />
+    <Compile Include="Modules\Finance Module\Finance Classes\FinanceRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberSort.cs" />
@@ -549,6 +550,7 @@
     <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
     <Content Include="Database Guide &amp; Queries\BatodaFunds.txt" />
     <Content Include="Database Guide &amp; Queries\FinancialAssistanceRequests.txt" />
+    <Content Include="Database Guide &amp; Queries\MemberPayment.txt" />
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
