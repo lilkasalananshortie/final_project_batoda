@@ -50,11 +50,17 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.EventLocationTextBox = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.StatusComboBox = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.NoteTextBox = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.EvenTittleTextBox = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.EventTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.EventTypeComboBox = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -76,24 +82,20 @@
             this.SaveAttendanceButton = new BATODA.ButtonStyle();
             this.label71 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.PastEventFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.EvenTittleTextBox = new System.Windows.Forms.TextBox();
-            this.StatusComboBox = new System.Windows.Forms.TextBox();
-            this.EventLocationTextBox = new System.Windows.Forms.TextBox();
-            this.NoteTextBox = new System.Windows.Forms.TextBox();
-            this.EventTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EventsOverviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.PastEventFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.AddEventPanel.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
@@ -443,6 +445,14 @@
             this.panel27.Size = new System.Drawing.Size(400, 50);
             this.panel27.TabIndex = 4;
             // 
+            // EventLocationTextBox
+            // 
+            this.EventLocationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventLocationTextBox.Location = new System.Drawing.Point(5, 9);
+            this.EventLocationTextBox.Name = "EventLocationTextBox";
+            this.EventLocationTextBox.Size = new System.Drawing.Size(389, 31);
+            this.EventLocationTextBox.TabIndex = 1;
+            // 
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -451,6 +461,14 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(400, 50);
             this.panel14.TabIndex = 4;
+            // 
+            // StatusComboBox
+            // 
+            this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusComboBox.Location = new System.Drawing.Point(5, 9);
+            this.StatusComboBox.Name = "StatusComboBox";
+            this.StatusComboBox.Size = new System.Drawing.Size(389, 31);
+            this.StatusComboBox.TabIndex = 1;
             // 
             // panel16
             // 
@@ -461,6 +479,14 @@
             this.panel16.Size = new System.Drawing.Size(400, 147);
             this.panel16.TabIndex = 4;
             // 
+            // NoteTextBox
+            // 
+            this.NoteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoteTextBox.Location = new System.Drawing.Point(2, 9);
+            this.NoteTextBox.Name = "NoteTextBox";
+            this.NoteTextBox.Size = new System.Drawing.Size(389, 31);
+            this.NoteTextBox.TabIndex = 1;
+            // 
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -470,13 +496,30 @@
             this.panel15.Size = new System.Drawing.Size(400, 50);
             this.panel15.TabIndex = 4;
             // 
+            // EvenTittleTextBox
+            // 
+            this.EvenTittleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EvenTittleTextBox.Location = new System.Drawing.Point(6, 12);
+            this.EvenTittleTextBox.Name = "EvenTittleTextBox";
+            this.EvenTittleTextBox.Size = new System.Drawing.Size(389, 31);
+            this.EvenTittleTextBox.TabIndex = 0;
+            // 
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.EventTimePicker);
             this.panel13.Location = new System.Drawing.Point(457, 138);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(400, 50);
             this.panel13.TabIndex = 4;
+            // 
+            // EventTimePicker
+            // 
+            this.EventTimePicker.Location = new System.Drawing.Point(5, 12);
+            this.EventTimePicker.Name = "EventTimePicker";
+            this.EventTimePicker.Size = new System.Drawing.Size(307, 26);
+            this.EventTimePicker.TabIndex = 0;
+            this.EventTimePicker.Value = new System.DateTime(2025, 11, 11, 20, 30, 0, 0);
             // 
             // panel11
             // 
@@ -486,6 +529,20 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(400, 50);
             this.panel11.TabIndex = 4;
+            // 
+            // EventTypeComboBox
+            // 
+            this.EventTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventTypeComboBox.FormattingEnabled = true;
+            this.EventTypeComboBox.Items.AddRange(new object[] {
+            "Meeting",
+            "Task",
+            "Reminder",
+            "Relief"});
+            this.EventTypeComboBox.Location = new System.Drawing.Point(6, 8);
+            this.EventTypeComboBox.Name = "EventTypeComboBox";
+            this.EventTypeComboBox.Size = new System.Drawing.Size(324, 33);
+            this.EventTypeComboBox.TabIndex = 0;
             // 
             // panel10
             // 
@@ -735,6 +792,14 @@
             this.panel9.Size = new System.Drawing.Size(1159, 511);
             this.panel9.TabIndex = 7;
             // 
+            // PastEventFlowLayoutPanel
+            // 
+            this.PastEventFlowLayoutPanel.AutoScroll = true;
+            this.PastEventFlowLayoutPanel.Location = new System.Drawing.Point(4, 80);
+            this.PastEventFlowLayoutPanel.Name = "PastEventFlowLayoutPanel";
+            this.PastEventFlowLayoutPanel.Size = new System.Drawing.Size(550, 426);
+            this.PastEventFlowLayoutPanel.TabIndex = 3;
+            // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -765,47 +830,6 @@
             this.panel22.Size = new System.Drawing.Size(588, 430);
             this.panel22.TabIndex = 1;
             // 
-            // EvenTittleTextBox
-            // 
-            this.EvenTittleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EvenTittleTextBox.Location = new System.Drawing.Point(6, 12);
-            this.EvenTittleTextBox.Name = "EvenTittleTextBox";
-            this.EvenTittleTextBox.Size = new System.Drawing.Size(389, 31);
-            this.EvenTittleTextBox.TabIndex = 0;
-            // 
-            // StatusComboBox
-            // 
-            this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusComboBox.Location = new System.Drawing.Point(5, 9);
-            this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(389, 31);
-            this.StatusComboBox.TabIndex = 1;
-            // 
-            // EventLocationTextBox
-            // 
-            this.EventLocationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventLocationTextBox.Location = new System.Drawing.Point(5, 9);
-            this.EventLocationTextBox.Name = "EventLocationTextBox";
-            this.EventLocationTextBox.Size = new System.Drawing.Size(389, 31);
-            this.EventLocationTextBox.TabIndex = 1;
-            // 
-            // NoteTextBox
-            // 
-            this.NoteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoteTextBox.Location = new System.Drawing.Point(2, 9);
-            this.NoteTextBox.Name = "NoteTextBox";
-            this.NoteTextBox.Size = new System.Drawing.Size(389, 31);
-            this.NoteTextBox.TabIndex = 1;
-            // 
-            // EventTypeComboBox
-            // 
-            this.EventTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventTypeComboBox.FormattingEnabled = true;
-            this.EventTypeComboBox.Location = new System.Drawing.Point(6, 8);
-            this.EventTypeComboBox.Name = "EventTypeComboBox";
-            this.EventTypeComboBox.Size = new System.Drawing.Size(324, 33);
-            this.EventTypeComboBox.TabIndex = 0;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -835,14 +859,6 @@
             this.EventsOverviewFlowLayoutPanel.Size = new System.Drawing.Size(433, 657);
             this.EventsOverviewFlowLayoutPanel.TabIndex = 14;
             // 
-            // PastEventFlowLayoutPanel
-            // 
-            this.PastEventFlowLayoutPanel.AutoScroll = true;
-            this.PastEventFlowLayoutPanel.Location = new System.Drawing.Point(4, 80);
-            this.PastEventFlowLayoutPanel.Name = "PastEventFlowLayoutPanel";
-            this.PastEventFlowLayoutPanel.Size = new System.Drawing.Size(550, 426);
-            this.PastEventFlowLayoutPanel.TabIndex = 3;
-            // 
             // CalendarUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -870,6 +886,7 @@
             this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -957,5 +974,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel EventsOverviewFlowLayoutPanel;
         private System.Windows.Forms.FlowLayoutPanel PastEventFlowLayoutPanel;
+        private System.Windows.Forms.DateTimePicker EventTimePicker;
     }
 }

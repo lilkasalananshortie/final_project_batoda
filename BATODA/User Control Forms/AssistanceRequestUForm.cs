@@ -20,7 +20,7 @@ using System.Windows.Forms;
 
 
 namespace BATODA
-{   
+{
     public partial class AssistanceRequestUForm : UserControl
     {
         private AddTicketBox ticketHelper;
@@ -93,7 +93,7 @@ namespace BATODA
             TicketFlowLayoutPanel.Controls.Clear();
 
             AssistanceRepository repo = new AssistanceRepository();
-            List<TicketModel> tickets = repo.GetAllRequests(); 
+            List<TicketModel> tickets = repo.GetAllRequests();
 
             foreach (TicketModel ticket in tickets)
             {
@@ -128,11 +128,11 @@ namespace BATODA
 
             if (ReqAssistanceThruCmb.Text == "GCASH")
             {
-                ConfGcashNoLbl.Text = ReqGcashNumTxt.Text; 
+                ConfGcashNoLbl.Text = ReqGcashNumTxt.Text;
             }
             else
             {
-                ConfGcashNoLbl.Text = "XXXXXXXXXXX"; 
+                ConfGcashNoLbl.Text = "XXXXXXXXXXX";
             }
 
             ConfPreviewImage.Image = MemberImagePb.Image;
@@ -178,7 +178,7 @@ namespace BATODA
             GmailSend.SendAssistanceEmail(
                 recipientEmail: "manalilimhak@gmail.com",
                 fullName: data.FullName,
-                bodyNumber: data.BodyNumber.ToString("D3"), 
+                bodyNumber: data.BodyNumber.ToString("D3"),
                 typeOfAid: data.TypeOfAid,
                 requestedBy: data.RequestedBy,
                 amount: "₱" + data.RequestedAmount.ToString("N2"),
@@ -186,8 +186,8 @@ namespace BATODA
                 gcashNumber: data.GcashNumber,
                 dateRequested: data.DateRequested.ToString("MM-dd-yyyy hh:mm tt"),
                 targetDate: data.TargetDate.ToString("MM-dd-yyyy"),
-                status: "Pending",  
-                proofFilePath: ReqFileTxt.Text  
+                status: "Pending",
+                proofFilePath: ReqFileTxt.Text
             );
 
 
@@ -236,7 +236,7 @@ namespace BATODA
             }
         }
 
-       
+
 
         private void SubmitTicket_Click(object sender, EventArgs e)
         {
@@ -286,7 +286,7 @@ namespace BATODA
                 ReqBodyNoLbl,
                 ReqMembTypeLbl,
                 ReqFirstNameTxt,
-                ReqMiddleTxt,       
+                ReqMiddleTxt,
                 ReqLastNameTxt,
                 ReqContactLbl);
 
@@ -324,7 +324,7 @@ namespace BATODA
 
         }
 
-       
+
         private void UploadProofBtn_Click(object sender, EventArgs e)
         {
             OpenProof.Title = "Select an Image";
