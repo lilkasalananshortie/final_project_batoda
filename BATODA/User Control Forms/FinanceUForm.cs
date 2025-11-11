@@ -24,11 +24,13 @@ namespace BATODA
             DisplayClass.SetPlaceholder(YearComboBox, "Year", "2025", "2024");
             DisplayClass.SetPlaceholder(SortComboBox, "Sort By" , "Body Number", "Name");
 
+            TaxHandler.SetViewPanel(ViewPanel);
+
         }
 
         private void FinanceUForm_Load(object sender, EventArgs e)
         {
-
+            ViewPanel.Hide();
         }
 
         private void FinanceButton_Click(object sender, EventArgs e)
@@ -103,6 +105,16 @@ namespace BATODA
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ViewPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ViewPanel.Hide();
         }
     }
 }

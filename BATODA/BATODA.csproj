@@ -552,6 +552,10 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\unchecked.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\circle_finance.png" />
     <None Include="Resources\circle-dashed.png" />
     <None Include="Resources\delete_hover.png" />
     <None Include="Resources\edit_hover.png" />

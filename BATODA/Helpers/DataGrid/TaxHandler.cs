@@ -11,6 +11,7 @@ namespace BATODA.Helpers.DataGrid
     public static class TaxHandler
     {
         private static string CurrentMode = "None";
+        private static Panel ViewPanelReference;
 
         public static void Initialize(DataGridView dgv)
         {
@@ -41,14 +42,65 @@ namespace BATODA.Helpers.DataGrid
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
 
+            dgv.CellClick -= Dgv_CellClick;
+            dgv.CellClick += Dgv_CellClick;
             dgv.CellDoubleClick -= Dgv_CellDoubleClick;
             dgv.CellDoubleClick += Dgv_CellDoubleClick;
+            dgv.CellPainting -= Dgv_CellPainting;
+            dgv.CellPainting += Dgv_CellPainting;
+
         }
+
+        private static void Dgv_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            var dgv = sender as DataGridView;
+
+           
+            if (e.RowIndex < 0 || e.ColumnIndex < 3 || e.ColumnIndex == dgv.Columns["View"].Index)
+                return;
+
+            if (dgv.Columns[e.ColumnIndex] is DataGridViewImageColumn)
+            {
+                e.PaintBackground(e.CellBounds, true);
+
+                Image img = e.Value as Image;
+                if (img != null)
+                {
+                    int targetSize = 35;
+                    int x = e.CellBounds.X + (e.CellBounds.Width - targetSize) / 2;
+                    int y = e.CellBounds.Y + (e.CellBounds.Height - targetSize) / 2;
+
+                    e.Graphics.DrawImage(img, x, y, targetSize, targetSize);
+                }
+
+                e.Handled = true;
+            }
+        }
+
 
         public static void SetMode(string mode)
         {
             CurrentMode = mode;
         }
+
+        public static void SetViewPanel(Panel panel)
+        {
+            ViewPanelReference = panel;
+        }
+        private static void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var dgv = sender as DataGridView;
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+
+            var column = dgv.Columns[e.ColumnIndex];
+            if (column.Name == "View")
+            {
+                // Show the panel using the reference
+                ViewPanelReference?.Show();
+            }
+        }
+
 
         private static void Dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,7 +141,7 @@ namespace BATODA.Helpers.DataGrid
                     cell.Value = Properties.Resources.overdue;
                     break;
                 default:
-                    cell.Value = Properties.Resources.circle_dashed;
+                    cell.Value = Properties.Resources.circle_finance;
                     break;
             }
 
@@ -152,13 +204,15 @@ namespace BATODA.Helpers.DataGrid
             {
                 for (int i = 3; i < dgv.Columns.Count - 1; i++)
                 {
-                    row.Cells[i].Value = Properties.Resources.circle_dashed;
+                    row.Cells[i].Value = Properties.Resources.circle_finance;
                     row.Cells[i].Tag = "None";
                 }
             }
 
             Initialize(dgv);
         }
+
+
     }
 }
 

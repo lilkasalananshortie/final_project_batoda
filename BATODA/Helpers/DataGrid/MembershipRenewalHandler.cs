@@ -27,7 +27,6 @@ namespace BATODA.Helpers.DataGrid
             dgv.AllowUserToResizeColumns = false;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgv.ColumnHeadersHeight = 40;
-            dgv.ReadOnly = true;
             dgv.MultiSelect = false;
             dgv.ReadOnly = false;
 
@@ -43,16 +42,27 @@ namespace BATODA.Helpers.DataGrid
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
 
+          
+            dgv.CellClick -= Dgv_CellClick;
+            dgv.CellClick += Dgv_CellClick;
+
+            dgv.CellPainting -= Dgv_CellPainting;
+            dgv.CellPainting += Dgv_CellPainting;
+
+
             dgv.Columns.Clear();
 
-            dgv.Columns.Add(new DataGridViewCheckBoxColumn
+            var selectColumn = new DataGridViewImageColumn
             {
                 Name = "SelectMember",
                 HeaderText = "",
-                Width = 50,
-                FillWeight = 10,
-                FlatStyle = FlatStyle.Flat
-            });
+                ImageLayout = DataGridViewImageCellLayout.Zoom,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.None,
+                Width = 40  
+            };
+
+            dgv.Columns.Add(selectColumn);
+
 
             dgv.Columns.Add("BodyNumber", "Body Number");
             dgv.Columns.Add("FullName", "Full Name");
@@ -61,7 +71,7 @@ namespace BATODA.Helpers.DataGrid
             dgv.Columns.Add("PlateNumber", "Plate No.");
             dgv.Columns.Add("ExpiryDate", "Expiry Date");
 
-            dgv.RowTemplate.Height = 70;
+            dgv.RowTemplate.Height = 50;
         }
         /*
          * 
@@ -76,26 +86,36 @@ namespace BATODA.Helpers.DataGrid
 
             var sampleData = new[]
             {
-        new { BodyNumber = 101, FullName = "Manalili, Mhaku", MembershipType = "Driver", ContactNumber = "09171234567", PlateNumber = "ABC-123",  ExpiryDate = DateTime.Now.AddDays(-3).ToShortDateString() },
-        new { BodyNumber = 102, FullName = "Dela Cruz, Mark Arone", MembershipType = "Operator", ContactNumber = "09981234567", PlateNumber = "XYZ-456", ExpiryDate = DateTime.Now.AddDays(-5).ToShortDateString() },
-        new { BodyNumber = 103, FullName = "Dulalia, Rod", MembershipType = "Driver", ContactNumber = "09281234567", PlateNumber = "LMN-789", ExpiryDate = DateTime.Now.AddDays(-2).ToShortDateString() }
-    };
+                new { BodyNumber = 101, FullName = "Manalili, Mhaku", MembershipType = "Driver", ContactNumber = "09171234567", PlateNumber = "ABC-123",  ExpiryDate = DateTime.Now.AddDays(-3).ToShortDateString() },
+                new { BodyNumber = 102, FullName = "Dela Cruz, Mark Arone", MembershipType = "Operator", ContactNumber = "09981234567", PlateNumber = "XYZ-456", ExpiryDate = DateTime.Now.AddDays(-5).ToShortDateString() },
+                new { BodyNumber = 103, FullName = "Dulalia, Rod", MembershipType = "Driver", ContactNumber = "09281234567", PlateNumber = "LMN-789", ExpiryDate = DateTime.Now.AddDays(-2).ToShortDateString() }
+            };
 
             foreach (var m in sampleData)
             {
-                dgv.Rows.Add(false, m.BodyNumber, m.FullName, m.MembershipType, m.ContactNumber, m.PlateNumber, m.ExpiryDate);
+                dgv.Rows.Add
+                (
+                    Properties.Resources._unchecked, 
+                    m.BodyNumber,
+                    m.FullName,
+                    m.MembershipType,
+                    m.ContactNumber,
+                    m.PlateNumber,
+                    m.ExpiryDate
+                );
+                dgv.Rows[dgv.Rows.Count - 1].Cells["SelectMember"].Tag = "NotSelected";
             }
         }
 
         public static void LoadSelectedMemberInfo(
-    Panel confirmationPanel,
-    Label bodyNumberLabel,
-    Label plateNumberLabel,
-    Label fullNameLabel,
-    Label contactNoLabel,
-    Label membershipTypeLabel,
-    PictureBox previewImagePb,
-    DataGridView dgv)
+             Panel confirmationPanel,
+             Label bodyNumberLabel,
+             Label plateNumberLabel,
+             Label fullNameLabel,
+             Label contactNoLabel,
+             Label membershipTypeLabel,
+             PictureBox previewImagePb,
+             DataGridView dgv)
         {
             if (dgv.CurrentRow == null) return;
 
@@ -114,6 +134,61 @@ namespace BATODA.Helpers.DataGrid
             confirmationPanel.Visible = true;
         }
 
+        private static void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var dgv = sender as DataGridView;
+            if (e.RowIndex < 0) return;
+
+            if (dgv.Columns[e.ColumnIndex].Name == "SelectMember")
+            {
+                var cell = dgv.Rows[e.RowIndex].Cells["SelectMember"];
+
+                bool isSelected = (cell.Tag as string) == "Selected";
+
+                if (isSelected)
+                {
+                    cell.Value = Properties.Resources._unchecked;
+                    cell.Tag = "NotSelected";
+                }
+                else
+                {
+                    cell.Value = Properties.Resources._checked;
+                    cell.Tag = "Selected";
+                }
+            }
+        }
+
+
+        private static void Dgv_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            var dgv = sender as DataGridView;
+
+            if (e.ColumnIndex < 0 || e.RowIndex < 0)
+                return;
+
+            if (dgv.Columns[e.ColumnIndex].Name != "SelectMember")
+                return;
+
+            e.PaintBackground(e.CellBounds, true);
+
+            Image img = e.Value as Image;
+            if (img != null)
+            {
+                int targetSize = 20;        
+                int padding = 10;           
+
+                int x = e.CellBounds.X + padding;
+                int y = e.CellBounds.Y + (e.CellBounds.Height - targetSize) / 2;
+
+                e.Graphics.DrawImage(img, x, y, targetSize, targetSize);
+            }
+
+            e.Handled = true;
+        }
+
+
+
+
 
 
         // SAMPLE LANG ULIT TO PWEDE BURAHIN PARA LANG MA VISUALIZE YUNG DATAGRID
@@ -123,7 +198,7 @@ namespace BATODA.Helpers.DataGrid
 
             foreach (DataGridViewRow row in dgv.Rows)
             {
-                bool isChecked = row.Cells["SelectMember"].Value != null && Convert.ToBoolean(row.Cells["SelectMember"].Value);
+                bool isChecked = row.Cells["SelectMember"].Tag?.ToString() == "Selected";
 
                 if (isChecked)
                 {

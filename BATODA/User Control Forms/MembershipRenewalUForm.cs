@@ -60,7 +60,7 @@ namespace BATODA
 
             foreach (DataGridViewRow row in ExpiredMembersDataGridView.Rows)
             {
-                bool isChecked = Convert.ToBoolean(row.Cells["SelectMember"].Value ?? false);
+                bool isChecked = row.Cells["SelectMember"].Tag?.ToString() == "Selected";
                 if (isChecked)
                 {
                     nextRow = row;
@@ -84,8 +84,12 @@ namespace BATODA
             PreviewImagePb.Image = null;
             ConfirmationRenewPanel.Visible = true;
 
-            nextRow.Cells["SelectMember"].Value = false;
+            // Unselect after showing
+            var cell = nextRow.Cells["SelectMember"];
+            cell.Value = Properties.Resources._unchecked;
+            cell.Tag = "NotSelected";
         }
+
 
 
 

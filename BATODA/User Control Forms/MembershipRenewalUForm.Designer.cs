@@ -67,6 +67,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -277,7 +279,10 @@
             // 
             // ConfirmationRenewPanel
             // 
-            this.ConfirmationRenewPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ConfirmationRenewPanel.BackColor = System.Drawing.Color.White;
+            this.ConfirmationRenewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConfirmationRenewPanel.Controls.Add(this.panel11);
+            this.ConfirmationRenewPanel.Controls.Add(this.panel10);
             this.ConfirmationRenewPanel.Controls.Add(this.panel9);
             this.ConfirmationRenewPanel.Controls.Add(this.label16);
             this.ConfirmationRenewPanel.Controls.Add(this.label14);
@@ -295,9 +300,9 @@
             this.ConfirmationRenewPanel.Controls.Add(this.label1);
             this.ConfirmationRenewPanel.Controls.Add(this.CancelRenewalButton);
             this.ConfirmationRenewPanel.Controls.Add(this.RenewButton);
-            this.ConfirmationRenewPanel.Location = new System.Drawing.Point(186, 100);
+            this.ConfirmationRenewPanel.Location = new System.Drawing.Point(377, 209);
             this.ConfirmationRenewPanel.Name = "ConfirmationRenewPanel";
-            this.ConfirmationRenewPanel.Size = new System.Drawing.Size(862, 558);
+            this.ConfirmationRenewPanel.Size = new System.Drawing.Size(862, 463);
             this.ConfirmationRenewPanel.TabIndex = 36;
             // 
             // panel9
@@ -305,9 +310,9 @@
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.MembershipTypeLabel);
-            this.panel9.Location = new System.Drawing.Point(481, 320);
+            this.panel9.Location = new System.Drawing.Point(655, 251);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(195, 41);
+            this.panel9.Size = new System.Drawing.Size(180, 41);
             this.panel9.TabIndex = 62;
             // 
             // MembershipTypeLabel
@@ -323,10 +328,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(482, 292);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(652, 226);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(199, 25);
+            this.label16.Size = new System.Drawing.Size(149, 20);
             this.label16.TabIndex = 63;
             this.label16.Text = "Membership Type";
             // 
@@ -335,7 +340,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label14.Location = new System.Drawing.Point(675, 66);
+            this.label14.Location = new System.Drawing.Point(698, 28);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(137, 25);
             this.label14.TabIndex = 55;
@@ -345,7 +350,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(504, 66);
+            this.label13.Location = new System.Drawing.Point(527, 28);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(172, 25);
             this.label13.TabIndex = 61;
@@ -356,9 +361,9 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.PlateNumberLabel);
-            this.panel8.Location = new System.Drawing.Point(481, 171);
+            this.panel8.Location = new System.Drawing.Point(464, 165);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(170, 41);
+            this.panel8.Size = new System.Drawing.Size(180, 41);
             this.panel8.TabIndex = 59;
             // 
             // PlateNumberLabel
@@ -374,10 +379,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(482, 143);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(462, 141);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(154, 25);
+            this.label12.Size = new System.Drawing.Size(117, 20);
             this.label12.TabIndex = 60;
             this.label12.Text = "Plate Number";
             // 
@@ -386,9 +391,9 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.ContactNoLabel);
-            this.panel5.Location = new System.Drawing.Point(276, 320);
+            this.panel5.Location = new System.Drawing.Point(655, 165);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(170, 41);
+            this.panel5.Size = new System.Drawing.Size(180, 41);
             this.panel5.TabIndex = 57;
             // 
             // ContactNoLabel
@@ -404,10 +409,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(277, 292);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(653, 141);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(181, 25);
+            this.label10.Size = new System.Drawing.Size(139, 20);
             this.label10.TabIndex = 58;
             this.label10.Text = "Contact Number";
             // 
@@ -416,9 +421,9 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.FullNameLabel);
-            this.panel4.Location = new System.Drawing.Point(276, 245);
+            this.panel4.Location = new System.Drawing.Point(275, 251);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(334, 41);
+            this.panel4.Size = new System.Drawing.Size(369, 41);
             this.panel4.TabIndex = 55;
             // 
             // FullNameLabel
@@ -434,10 +439,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(277, 217);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(273, 226);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 25);
+            this.label8.Size = new System.Drawing.Size(89, 20);
             this.label8.TabIndex = 56;
             this.label8.Text = "Full Name";
             // 
@@ -446,9 +451,9 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.BodyNumberLabel);
-            this.panel3.Location = new System.Drawing.Point(276, 171);
+            this.panel3.Location = new System.Drawing.Point(275, 165);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 41);
+            this.panel3.Size = new System.Drawing.Size(180, 41);
             this.panel3.TabIndex = 35;
             // 
             // BodyNumberLabel
@@ -464,10 +469,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(277, 143);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(273, 141);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 25);
+            this.label4.Size = new System.Drawing.Size(116, 20);
             this.label4.TabIndex = 53;
             this.label4.Text = "Body Number";
             // 
@@ -476,7 +481,7 @@
             this.PreviewImagePb.BackColor = System.Drawing.Color.White;
             this.PreviewImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PreviewImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.PreviewImagePb.Location = new System.Drawing.Point(23, 143);
+            this.PreviewImagePb.Location = new System.Drawing.Point(23, 114);
             this.PreviewImagePb.Name = "PreviewImagePb";
             this.PreviewImagePb.Size = new System.Drawing.Size(230, 218);
             this.PreviewImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -521,7 +526,7 @@
             this.CancelRenewalButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.CancelRenewalButton.ImageSize = new System.Drawing.Size(24, 24);
             this.CancelRenewalButton.IsToggled = false;
-            this.CancelRenewalButton.Location = new System.Drawing.Point(607, 507);
+            this.CancelRenewalButton.Location = new System.Drawing.Point(607, 406);
             this.CancelRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelRenewalButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CancelRenewalButton.Name = "CancelRenewalButton";
@@ -554,7 +559,7 @@
             this.RenewButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.RenewButton.ImageSize = new System.Drawing.Size(24, 24);
             this.RenewButton.IsToggled = false;
-            this.RenewButton.Location = new System.Drawing.Point(733, 507);
+            this.RenewButton.Location = new System.Drawing.Point(733, 406);
             this.RenewButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RenewButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.RenewButton.Name = "RenewButton";
@@ -584,7 +589,7 @@
             this.ExpiredMembersDataGridView.AllowUserToResizeColumns = false;
             this.ExpiredMembersDataGridView.AllowUserToResizeRows = false;
             this.ExpiredMembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ExpiredMembersDataGridView.Location = new System.Drawing.Point(14, 13);
+            this.ExpiredMembersDataGridView.Location = new System.Drawing.Point(14, 12);
             this.ExpiredMembersDataGridView.Name = "ExpiredMembersDataGridView";
             this.ExpiredMembersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ExpiredMembersDataGridView.Size = new System.Drawing.Size(1485, 595);
@@ -662,6 +667,22 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 50;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel10.Location = new System.Drawing.Point(20, 70);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(820, 3);
+            this.panel10.TabIndex = 88;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel11.Location = new System.Drawing.Point(20, 375);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(820, 3);
+            this.panel11.TabIndex = 89;
             // 
             // MembershipRenewalUForm
             // 
@@ -744,5 +765,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
     }
 }
