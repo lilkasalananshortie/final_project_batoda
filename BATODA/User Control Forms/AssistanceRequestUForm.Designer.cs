@@ -69,13 +69,6 @@
             this.TicketConfirmButton = new BATODA.ButtonStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.CreateTicketPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.FillUpFormPanel = new System.Windows.Forms.Panel();
             this.CreateTicketCancelBtn = new BATODA.ButtonStyle();
             this.label8 = new System.Windows.Forms.Label();
@@ -131,10 +124,16 @@
             this.SubmitTicket = new BATODA.ButtonStyle();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
+            this.CreateTicketPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.ApplyButton = new BATODA.ButtonStyle();
             this.SortComboBox = new System.Windows.Forms.ComboBox();
             this.AssistanceTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.ApplySearchButton = new BATODA.ButtonStyle();
             this.panel20 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -159,6 +158,7 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.OpenProof = new System.Windows.Forms.OpenFileDialog();
+            this.buttonStyle1 = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ConfirmationPanel.SuspendLayout();
@@ -171,10 +171,6 @@
             this.panel25.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panel32.SuspendLayout();
-            this.CreateTicketPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.FillUpFormPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).BeginInit();
             this.panel28.SuspendLayout();
@@ -192,6 +188,10 @@
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberImagePb)).BeginInit();
+            this.CreateTicketPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.TicketFlowLayoutPanel.SuspendLayout();
@@ -288,6 +288,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.buttonStyle1);
             this.panel1.Controls.Add(this.ConfirmationPanel);
             this.panel1.Controls.Add(this.FillUpFormPanel);
             this.panel1.Controls.Add(this.CreateTicketPanel);
@@ -295,7 +296,6 @@
             this.panel1.Controls.Add(this.ApplyButton);
             this.panel1.Controls.Add(this.SortComboBox);
             this.panel1.Controls.Add(this.AssistanceTypeComboBox);
-            this.panel1.Controls.Add(this.ApplySearchButton);
             this.panel1.Controls.Add(this.panel20);
             this.panel1.Controls.Add(this.FLPActivityLog);
             this.panel1.Controls.Add(this.TicketFlowLayoutPanel);
@@ -769,87 +769,6 @@
             this.label10.Size = new System.Drawing.Size(126, 29);
             this.label10.TabIndex = 49;
             this.label10.Text = "Ticket ID : ";
-            // 
-            // CreateTicketPanel
-            // 
-            this.CreateTicketPanel.BackColor = System.Drawing.Color.White;
-            this.CreateTicketPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CreateTicketPanel.Controls.Add(this.pictureBox1);
-            this.CreateTicketPanel.Controls.Add(this.label12);
-            this.CreateTicketPanel.Controls.Add(this.label6);
-            this.CreateTicketPanel.Location = new System.Drawing.Point(22, 17);
-            this.CreateTicketPanel.Name = "CreateTicketPanel";
-            this.CreateTicketPanel.Size = new System.Drawing.Size(333, 96);
-            this.CreateTicketPanel.TabIndex = 55;
-            this.CreateTicketPanel.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.circle;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.label12.Location = new System.Drawing.Point(118, 65);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "*Double Click To Create*";
-            this.label12.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.label6.Location = new System.Drawing.Point(87, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 33);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Create a Ticket";
-            this.label6.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel30.Controls.Add(this.pictureBox8);
-            this.panel30.Controls.Add(this.label16);
-            this.panel30.Location = new System.Drawing.Point(19, 125);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(339, 71);
-            this.panel30.TabIndex = 65;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::BATODA.Properties.Resources.Action_Log;
-            this.pictureBox8.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 2;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(75, 15);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(205, 42);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Action Log";
             // 
             // FillUpFormPanel
             // 
@@ -1533,6 +1452,88 @@
             this.label37.TabIndex = 49;
             this.label37.Text = "Ticket ID : ";
             // 
+            // CreateTicketPanel
+            // 
+            this.CreateTicketPanel.BackColor = System.Drawing.Color.MistyRose;
+            this.CreateTicketPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CreateTicketPanel.Controls.Add(this.pictureBox1);
+            this.CreateTicketPanel.Controls.Add(this.label12);
+            this.CreateTicketPanel.Controls.Add(this.label6);
+            this.CreateTicketPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateTicketPanel.Location = new System.Drawing.Point(22, 17);
+            this.CreateTicketPanel.Name = "CreateTicketPanel";
+            this.CreateTicketPanel.Size = new System.Drawing.Size(333, 96);
+            this.CreateTicketPanel.TabIndex = 55;
+            this.CreateTicketPanel.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.circle;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(119, 59);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(149, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "*Double Click To Create*";
+            this.label12.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(87, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(228, 33);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Create a Ticket";
+            this.label6.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel30.Controls.Add(this.pictureBox8);
+            this.panel30.Controls.Add(this.label16);
+            this.panel30.Location = new System.Drawing.Point(19, 125);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(339, 71);
+            this.panel30.TabIndex = 65;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::BATODA.Properties.Resources.Action_Log;
+            this.pictureBox8.Location = new System.Drawing.Point(17, 13);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(40, 41);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(62, 16);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(180, 37);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Action Log";
+            // 
             // ApplyButton
             // 
             this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -1551,7 +1552,7 @@
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1449, 21);
+            this.ApplyButton.Location = new System.Drawing.Point(1333, 16);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.Name = "ApplyButton";
@@ -1559,7 +1560,7 @@
             this.ApplyButton.PaddingY = 0;
             this.ApplyButton.Size = new System.Drawing.Size(112, 33);
             this.ApplyButton.TabIndex = 59;
-            this.ApplyButton.Text = "Apply Filter";
+            this.ApplyButton.Text = "Clear";
             this.ApplyButton.TextColor = System.Drawing.Color.White;
             this.ApplyButton.TextOffset = 20;
             this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -1572,7 +1573,7 @@
             this.SortComboBox.Items.AddRange(new object[] {
             "Oldest",
             "Newest"});
-            this.SortComboBox.Location = new System.Drawing.Point(1288, 20);
+            this.SortComboBox.Location = new System.Drawing.Point(1168, 17);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SortComboBox.Name = "SortComboBox";
             this.SortComboBox.Size = new System.Drawing.Size(155, 33);
@@ -1582,43 +1583,11 @@
             // 
             this.AssistanceTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceTypeComboBox.FormattingEnabled = true;
-            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(1127, 20);
+            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(1008, 17);
             this.AssistanceTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
             this.AssistanceTypeComboBox.Size = new System.Drawing.Size(155, 33);
             this.AssistanceTypeComboBox.TabIndex = 57;
-            // 
-            // ApplySearchButton
-            // 
-            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplySearchButton.BorderRadius = 0;
-            this.ApplySearchButton.BorderSize = 0;
-            this.ApplySearchButton.ButtonImage = null;
-            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
-            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
-            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(930, 21);
-            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.Name = "ApplySearchButton";
-            this.ApplySearchButton.PaddingX = 0;
-            this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(101, 33);
-            this.ApplySearchButton.TabIndex = 56;
-            this.ApplySearchButton.Text = "Search";
-            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextOffset = 0;
-            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ApplySearchButton.UseVisualStyleBackColor = false;
             // 
             // panel20
             // 
@@ -1627,24 +1596,24 @@
             this.panel20.Controls.Add(this.pictureBox7);
             this.panel20.Location = new System.Drawing.Point(390, 17);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(530, 41);
+            this.panel20.Size = new System.Drawing.Size(453, 41);
             this.panel20.TabIndex = 63;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(44, 7);
+            this.SearchTextBox.Location = new System.Drawing.Point(6, 8);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(454, 24);
+            this.SearchTextBox.Size = new System.Drawing.Size(399, 24);
             this.SearchTextBox.TabIndex = 41;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox7.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(412, 4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(32, 32);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1881,6 +1850,38 @@
             // 
             this.OpenProof.FileName = "openFileDialog1";
             // 
+            // buttonStyle1
+            // 
+            this.buttonStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.BorderColor = System.Drawing.Color.Red;
+            this.buttonStyle1.BorderRadius = 0;
+            this.buttonStyle1.BorderSize = 0;
+            this.buttonStyle1.ButtonImage = null;
+            this.buttonStyle1.FlatAppearance.BorderSize = 0;
+            this.buttonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStyle1.ForeColor = System.Drawing.Color.White;
+            this.buttonStyle1.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle1.HoverColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle1.ImageColor = System.Drawing.Color.Black;
+            this.buttonStyle1.ImagePosition = new System.Drawing.Point(10, 8);
+            this.buttonStyle1.ImageSize = new System.Drawing.Size(24, 24);
+            this.buttonStyle1.IsToggled = false;
+            this.buttonStyle1.Location = new System.Drawing.Point(1449, 16);
+            this.buttonStyle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonStyle1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.Name = "buttonStyle1";
+            this.buttonStyle1.PaddingX = 0;
+            this.buttonStyle1.PaddingY = 0;
+            this.buttonStyle1.Size = new System.Drawing.Size(112, 33);
+            this.buttonStyle1.TabIndex = 66;
+            this.buttonStyle1.Text = "Apply Filter";
+            this.buttonStyle1.TextColor = System.Drawing.Color.White;
+            this.buttonStyle1.TextOffset = 20;
+            this.buttonStyle1.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.UseVisualStyleBackColor = false;
+            // 
             // AssistanceRequestUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1918,12 +1919,6 @@
             this.panel26.PerformLayout();
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
-            this.CreateTicketPanel.ResumeLayout(false);
-            this.CreateTicketPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel30.ResumeLayout(false);
-            this.panel30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.FillUpFormPanel.ResumeLayout(false);
             this.FillUpFormPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReqSearchGrid)).EndInit();
@@ -1951,6 +1946,12 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberImagePb)).EndInit();
+            this.CreateTicketPanel.ResumeLayout(false);
+            this.CreateTicketPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -2015,7 +2016,6 @@
         private ButtonStyle ApplyButton;
         private System.Windows.Forms.ComboBox SortComboBox;
         private System.Windows.Forms.ComboBox AssistanceTypeComboBox;
-        private ButtonStyle ApplySearchButton;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -2108,5 +2108,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private ButtonStyle CreateTicketCancelBtn;
         private ButtonStyle ConfirmationPanelCancelBtn;
+        private ButtonStyle buttonStyle1;
     }
 }
