@@ -39,6 +39,18 @@ CREATE TABLE MemberInfo (
     DateJoined DATE DEFAULT GETDATE()
 );
 
+----------- add THIS ---------------
+ALTER TABLE MemberInfo
+ADD RenewalStatus VARCHAR(10) CHECK (RenewalStatus IN ('Renewed', 'Expired')) DEFAULT 'Renewed';
+
+UPDATE MemberInfo
+SET RenewalStatus = 
+    CASE 
+        WHEN DATEDIFF(YEAR, DateJoined, GETDATE()) >= 1 THEN 'Expired'
+        ELSE 'Renewed'
+    END;
+
+
 INSERT INTO MemberInfo 
 (MembershipType, LastName, FirstName, MiddleInitial, Birthdate, TricycleBrand, TricycleModel, ContactNumber, ChassisNumber, EngineNumber, PlateNumber, TaxBalance, MemberStatus, PenaltyLevel, SuspensionDays, DaysRemaining, DateJoined)
 VALUES

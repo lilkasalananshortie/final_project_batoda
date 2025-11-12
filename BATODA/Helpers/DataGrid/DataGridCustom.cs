@@ -35,7 +35,6 @@ namespace BATODA.Helpers.DataGrids
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-            // Make cells read-only
             dgv.ReadOnly = true;
 
 
@@ -57,6 +56,61 @@ namespace BATODA.Helpers.DataGrids
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
         }
+
+        public static void FinanceMultiSelectCustomGrid(DataGridView dgv)
+        {
+            if (dgv == null) return;
+
+            dgv.Rows.Clear();
+            dgv.Columns.Clear();
+
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.AllowUserToResizeColumns = false;
+
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.MultiSelect = true;
+            dgv.ReadOnly = true;
+
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgv.ColumnHeadersHeight = 40;
+
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(173, 46, 36);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
+
+            dgv.DefaultCellStyle.BackColor = Color.White;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 230, 230);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.RowTemplate.Height = 50;
+
+
+            var colBodyNo = new DataGridViewTextBoxColumn();
+            colBodyNo.Name = "BodyNo";
+            colBodyNo.HeaderText = "Body No.";
+            colBodyNo.Width = 100; 
+            colBodyNo.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            var colFullName = new DataGridViewTextBoxColumn();
+            colFullName.Name = "FullName";
+            colFullName.HeaderText = "Member Name";
+            colFullName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colFullName.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.Columns.Add(colBodyNo);
+            dgv.Columns.Add(colFullName);
+        }
+
+
 
         //edit button with hover effect =)
         public static void AddEditButtonOnly(DataGridView dgv)

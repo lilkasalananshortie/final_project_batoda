@@ -13,6 +13,8 @@ namespace BATODA.Helpers.DataGrid
     {
         private static string CurrentMode = "None";
         private static Panel ViewPanelReference;
+        private static int CurrentYear = DateTime.Today.Year;
+
 
         private static string GetDefaultStatus(int year, int month)
         {
@@ -155,9 +157,37 @@ namespace BATODA.Helpers.DataGrid
 
         }
 
+        public static void EnsureYearRecords(int year)
+        {
+            var repo = new FinanceRepository();
+            var members = repo.GetAllMembers();
+            var payments = repo.GetPaymentsByYear(year);
+
+            foreach (var member in members)
+            {
+                for (int month = 1; month <= 12; month++)
+                {
+                    bool exists = payments.Any(p => p.BodyNumber == member.BodyNumber && p.Month == month);
+                    if (!exists)
+                    {
+                        // Insert default 'None' or status based on date
+                        string defaultStatus = TaxHandler.GetDefaultStatus(year, month);
+                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, month, defaultStatus);
+                    }
+                }
+            }
+        }
+
+        public static void LoadCurrentYear(DataGridView dgv)
+        {
+            int currentYear = DateTime.Today.Year;
+            EnsureYearRecords(currentYear);
+            LoadMemberPayments(dgv, currentYear);
+        }
+
 
         // SAMPLE LANG TO PWEDE DELETE IF EVER ND KAILANGAN 
-        private static int CurrentYear = DateTime.Today.Year;
+
         public static void LoadMemberPayments(DataGridView dgv, int year)
         {
             CurrentYear = year;
@@ -199,6 +229,8 @@ namespace BATODA.Helpers.DataGrid
             foreach (var member in members)
             {
                 int rowIndex = dgv.Rows.Add(member.BodyNumber.ToString("D3"), member.FullName, "0/12");
+                int paidCount = queries.GetPaidMonthsCount(member.BodyNumber, year);
+                dgv.Rows[rowIndex].Cells["Summary"].Value = $"{paidCount}/12";
 
                 for (int i = 1; i <= 12; i++) // LOOP EACH MONTH
                 {

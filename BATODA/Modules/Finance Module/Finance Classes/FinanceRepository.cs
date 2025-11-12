@@ -132,5 +132,21 @@ namespace BATODA.Helpers.Data
                 }
             }
         }
+
+        public int GetPaidMonthsCount(int bodyNumber, int year)
+        {
+            int count = 0;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM MemberPayment WHERE BodyNumber=@BodyNumber AND Year=@Year AND Status='Paid'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                cmd.Parameters.AddWithValue("@Year", year);
+                count = (int)cmd.ExecuteScalar();
+            }
+            return count;
+        }
+
     }
 }
