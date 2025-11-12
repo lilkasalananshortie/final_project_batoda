@@ -78,6 +78,23 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.RenewSelectedPanelHolder = new System.Windows.Forms.Panel();
+            this.SaveStateButton = new BATODA.ButtonStyle();
+            this.CancelStateButton = new BATODA.ButtonStyle();
+            this.MassChangeButton = new BATODA.ButtonStyle();
+            this.MassChangeSelectionPanel = new System.Windows.Forms.Panel();
+            this.SelectedPanel = new System.Windows.Forms.Panel();
+            this.MassSelectionDataGriView = new System.Windows.Forms.DataGridView();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.SaveMassChangeButton = new BATODA.ButtonStyle();
+            this.CancelMassChangeButton = new BATODA.ButtonStyle();
+            this.FlowLayoutSelectedPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonStyle3 = new BATODA.ButtonStyle();
+            this.buttonStyle4 = new BATODA.ButtonStyle();
+            this.label20 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -99,6 +116,12 @@
             this.ViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.RenewSelectedPanelHolder.SuspendLayout();
+            this.MassChangeSelectionPanel.SuspendLayout();
+            this.SelectedPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MassSelectionDataGriView)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -221,6 +244,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.SelectedPanel);
+            this.panel1.Controls.Add(this.MassChangeSelectionPanel);
+            this.panel1.Controls.Add(this.RenewSelectedPanelHolder);
             this.panel1.Controls.Add(this.ApplyButton);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.ClearButton);
@@ -276,6 +302,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.MassChangeButton);
             this.panel7.Controls.Add(this.pictureBox10);
             this.panel7.Controls.Add(this.pictureBox9);
             this.panel7.Controls.Add(this.pictureBox8);
@@ -292,7 +319,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::BATODA.Properties.Resources.paid;
-            this.pictureBox10.Location = new System.Drawing.Point(1049, 18);
+            this.pictureBox10.Location = new System.Drawing.Point(942, 18);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(28, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -302,7 +329,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::BATODA.Properties.Resources.due;
-            this.pictureBox9.Location = new System.Drawing.Point(1349, 18);
+            this.pictureBox9.Location = new System.Drawing.Point(1242, 18);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(28, 28);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -312,7 +339,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::BATODA.Properties.Resources.overdue;
-            this.pictureBox8.Location = new System.Drawing.Point(1195, 18);
+            this.pictureBox8.Location = new System.Drawing.Point(1088, 18);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(28, 28);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -324,7 +351,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1384, 22);
+            this.label17.Location = new System.Drawing.Point(1277, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 20);
             this.label17.TabIndex = 51;
@@ -335,7 +362,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1230, 22);
+            this.label16.Location = new System.Drawing.Point(1123, 22);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 20);
             this.label16.TabIndex = 50;
@@ -346,7 +373,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1084, 22);
+            this.label15.Location = new System.Drawing.Point(977, 22);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 20);
             this.label15.TabIndex = 49;
@@ -808,6 +835,325 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // RenewSelectedPanelHolder
+            // 
+            this.RenewSelectedPanelHolder.Controls.Add(this.CancelStateButton);
+            this.RenewSelectedPanelHolder.Controls.Add(this.SaveStateButton);
+            this.RenewSelectedPanelHolder.Location = new System.Drawing.Point(24, 591);
+            this.RenewSelectedPanelHolder.Name = "RenewSelectedPanelHolder";
+            this.RenewSelectedPanelHolder.Size = new System.Drawing.Size(1520, 50);
+            this.RenewSelectedPanelHolder.TabIndex = 52;
+            // 
+            // SaveStateButton
+            // 
+            this.SaveStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.BorderColor = System.Drawing.Color.Red;
+            this.SaveStateButton.BorderRadius = 0;
+            this.SaveStateButton.BorderSize = 0;
+            this.SaveStateButton.ButtonImage = null;
+            this.SaveStateButton.FlatAppearance.BorderSize = 0;
+            this.SaveStateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveStateButton.ForeColor = System.Drawing.Color.White;
+            this.SaveStateButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SaveStateButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.SaveStateButton.ImageColor = System.Drawing.Color.Black;
+            this.SaveStateButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.SaveStateButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SaveStateButton.IsToggled = false;
+            this.SaveStateButton.Location = new System.Drawing.Point(1398, 9);
+            this.SaveStateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveStateButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.Name = "SaveStateButton";
+            this.SaveStateButton.PaddingX = 0;
+            this.SaveStateButton.PaddingY = 0;
+            this.SaveStateButton.Size = new System.Drawing.Size(111, 33);
+            this.SaveStateButton.TabIndex = 53;
+            this.SaveStateButton.Text = "Save Changes";
+            this.SaveStateButton.TextColor = System.Drawing.Color.White;
+            this.SaveStateButton.TextOffset = 20;
+            this.SaveStateButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.UseVisualStyleBackColor = false;
+            // 
+            // CancelStateButton
+            // 
+            this.CancelStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.BorderColor = System.Drawing.Color.Red;
+            this.CancelStateButton.BorderRadius = 0;
+            this.CancelStateButton.BorderSize = 0;
+            this.CancelStateButton.ButtonImage = null;
+            this.CancelStateButton.FlatAppearance.BorderSize = 0;
+            this.CancelStateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelStateButton.ForeColor = System.Drawing.Color.White;
+            this.CancelStateButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelStateButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelStateButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelStateButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CancelStateButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CancelStateButton.IsToggled = false;
+            this.CancelStateButton.Location = new System.Drawing.Point(1271, 9);
+            this.CancelStateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelStateButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.Name = "CancelStateButton";
+            this.CancelStateButton.PaddingX = 0;
+            this.CancelStateButton.PaddingY = 0;
+            this.CancelStateButton.Size = new System.Drawing.Size(119, 33);
+            this.CancelStateButton.TabIndex = 54;
+            this.CancelStateButton.Text = "Cancel";
+            this.CancelStateButton.TextColor = System.Drawing.Color.White;
+            this.CancelStateButton.TextOffset = 20;
+            this.CancelStateButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.UseVisualStyleBackColor = false;
+            // 
+            // MassChangeButton
+            // 
+            this.MassChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.BorderColor = System.Drawing.Color.Red;
+            this.MassChangeButton.BorderRadius = 0;
+            this.MassChangeButton.BorderSize = 0;
+            this.MassChangeButton.ButtonImage = null;
+            this.MassChangeButton.FlatAppearance.BorderSize = 0;
+            this.MassChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MassChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MassChangeButton.ForeColor = System.Drawing.Color.White;
+            this.MassChangeButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.MassChangeButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.MassChangeButton.ImageColor = System.Drawing.Color.Black;
+            this.MassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.MassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.MassChangeButton.IsToggled = false;
+            this.MassChangeButton.Location = new System.Drawing.Point(1332, 14);
+            this.MassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.Name = "MassChangeButton";
+            this.MassChangeButton.PaddingX = 0;
+            this.MassChangeButton.PaddingY = 0;
+            this.MassChangeButton.Size = new System.Drawing.Size(176, 33);
+            this.MassChangeButton.TabIndex = 53;
+            this.MassChangeButton.Text = "MASS CHANGE???";
+            this.MassChangeButton.TextColor = System.Drawing.Color.White;
+            this.MassChangeButton.TextOffset = 20;
+            this.MassChangeButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.UseVisualStyleBackColor = false;
+            this.MassChangeButton.Click += new System.EventHandler(this.MassChangeButton_Click);
+            // 
+            // MassChangeSelectionPanel
+            // 
+            this.MassChangeSelectionPanel.Controls.Add(this.panel11);
+            this.MassChangeSelectionPanel.Controls.Add(this.MassSelectionDataGriView);
+            this.MassChangeSelectionPanel.Location = new System.Drawing.Point(183, 3);
+            this.MassChangeSelectionPanel.Name = "MassChangeSelectionPanel";
+            this.MassChangeSelectionPanel.Size = new System.Drawing.Size(553, 635);
+            this.MassChangeSelectionPanel.TabIndex = 53;
+            // 
+            // SelectedPanel
+            // 
+            this.SelectedPanel.Controls.Add(this.panel9);
+            this.SelectedPanel.Controls.Add(this.FlowLayoutSelectedPanel);
+            this.SelectedPanel.Controls.Add(this.CancelMassChangeButton);
+            this.SelectedPanel.Controls.Add(this.SaveMassChangeButton);
+            this.SelectedPanel.Location = new System.Drawing.Point(746, 45);
+            this.SelectedPanel.Name = "SelectedPanel";
+            this.SelectedPanel.Size = new System.Drawing.Size(342, 530);
+            this.SelectedPanel.TabIndex = 54;
+            // 
+            // MassSelectionDataGriView
+            // 
+            this.MassSelectionDataGriView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MassSelectionDataGriView.Location = new System.Drawing.Point(15, 80);
+            this.MassSelectionDataGriView.Name = "MassSelectionDataGriView";
+            this.MassSelectionDataGriView.Size = new System.Drawing.Size(525, 532);
+            this.MassSelectionDataGriView.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.panel11.Controls.Add(this.label19);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(553, 53);
+            this.panel11.TabIndex = 1;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(11, 17);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(135, 20);
+            this.label19.TabIndex = 30;
+            this.label19.Text = "Search Member";
+            // 
+            // SaveMassChangeButton
+            // 
+            this.SaveMassChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveMassChangeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveMassChangeButton.BorderColor = System.Drawing.Color.Red;
+            this.SaveMassChangeButton.BorderRadius = 0;
+            this.SaveMassChangeButton.BorderSize = 0;
+            this.SaveMassChangeButton.ButtonImage = null;
+            this.SaveMassChangeButton.FlatAppearance.BorderSize = 0;
+            this.SaveMassChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveMassChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveMassChangeButton.ForeColor = System.Drawing.Color.White;
+            this.SaveMassChangeButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SaveMassChangeButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.SaveMassChangeButton.ImageColor = System.Drawing.Color.Black;
+            this.SaveMassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.SaveMassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SaveMassChangeButton.IsToggled = false;
+            this.SaveMassChangeButton.Location = new System.Drawing.Point(221, 482);
+            this.SaveMassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveMassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveMassChangeButton.Name = "SaveMassChangeButton";
+            this.SaveMassChangeButton.PaddingX = 0;
+            this.SaveMassChangeButton.PaddingY = 0;
+            this.SaveMassChangeButton.Size = new System.Drawing.Size(108, 33);
+            this.SaveMassChangeButton.TabIndex = 51;
+            this.SaveMassChangeButton.Text = "Save Changes";
+            this.SaveMassChangeButton.TextColor = System.Drawing.Color.White;
+            this.SaveMassChangeButton.TextOffset = 20;
+            this.SaveMassChangeButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveMassChangeButton.UseVisualStyleBackColor = false;
+            // 
+            // CancelMassChangeButton
+            // 
+            this.CancelMassChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelMassChangeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelMassChangeButton.BorderColor = System.Drawing.Color.Red;
+            this.CancelMassChangeButton.BorderRadius = 0;
+            this.CancelMassChangeButton.BorderSize = 0;
+            this.CancelMassChangeButton.ButtonImage = null;
+            this.CancelMassChangeButton.FlatAppearance.BorderSize = 0;
+            this.CancelMassChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelMassChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelMassChangeButton.ForeColor = System.Drawing.Color.White;
+            this.CancelMassChangeButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelMassChangeButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelMassChangeButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelMassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CancelMassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CancelMassChangeButton.IsToggled = false;
+            this.CancelMassChangeButton.Location = new System.Drawing.Point(107, 482);
+            this.CancelMassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelMassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelMassChangeButton.Name = "CancelMassChangeButton";
+            this.CancelMassChangeButton.PaddingX = 0;
+            this.CancelMassChangeButton.PaddingY = 0;
+            this.CancelMassChangeButton.Size = new System.Drawing.Size(108, 33);
+            this.CancelMassChangeButton.TabIndex = 52;
+            this.CancelMassChangeButton.Text = "Cancel";
+            this.CancelMassChangeButton.TextColor = System.Drawing.Color.White;
+            this.CancelMassChangeButton.TextOffset = 20;
+            this.CancelMassChangeButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelMassChangeButton.UseVisualStyleBackColor = false;
+            // 
+            // FlowLayoutSelectedPanel
+            // 
+            this.FlowLayoutSelectedPanel.Location = new System.Drawing.Point(4, 57);
+            this.FlowLayoutSelectedPanel.Name = "FlowLayoutSelectedPanel";
+            this.FlowLayoutSelectedPanel.Size = new System.Drawing.Size(335, 407);
+            this.FlowLayoutSelectedPanel.TabIndex = 53;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.panel9.Controls.Add(this.label20);
+            this.panel9.Controls.Add(this.flowLayoutPanel1);
+            this.panel9.Controls.Add(this.buttonStyle3);
+            this.panel9.Controls.Add(this.buttonStyle4);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(342, 51);
+            this.panel9.TabIndex = 55;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 177);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(335, 287);
+            this.flowLayoutPanel1.TabIndex = 53;
+            // 
+            // buttonStyle3
+            // 
+            this.buttonStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle3.BorderColor = System.Drawing.Color.Red;
+            this.buttonStyle3.BorderRadius = 0;
+            this.buttonStyle3.BorderSize = 0;
+            this.buttonStyle3.ButtonImage = null;
+            this.buttonStyle3.FlatAppearance.BorderSize = 0;
+            this.buttonStyle3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStyle3.ForeColor = System.Drawing.Color.White;
+            this.buttonStyle3.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle3.HoverColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle3.ImageColor = System.Drawing.Color.Black;
+            this.buttonStyle3.ImagePosition = new System.Drawing.Point(10, 8);
+            this.buttonStyle3.ImageSize = new System.Drawing.Size(24, 24);
+            this.buttonStyle3.IsToggled = false;
+            this.buttonStyle3.Location = new System.Drawing.Point(107, 482);
+            this.buttonStyle3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonStyle3.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle3.Name = "buttonStyle3";
+            this.buttonStyle3.PaddingX = 0;
+            this.buttonStyle3.PaddingY = 0;
+            this.buttonStyle3.Size = new System.Drawing.Size(108, 33);
+            this.buttonStyle3.TabIndex = 52;
+            this.buttonStyle3.Text = "Apply Filter";
+            this.buttonStyle3.TextColor = System.Drawing.Color.White;
+            this.buttonStyle3.TextOffset = 20;
+            this.buttonStyle3.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle3.UseVisualStyleBackColor = false;
+            // 
+            // buttonStyle4
+            // 
+            this.buttonStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle4.BorderColor = System.Drawing.Color.Red;
+            this.buttonStyle4.BorderRadius = 0;
+            this.buttonStyle4.BorderSize = 0;
+            this.buttonStyle4.ButtonImage = null;
+            this.buttonStyle4.FlatAppearance.BorderSize = 0;
+            this.buttonStyle4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStyle4.ForeColor = System.Drawing.Color.White;
+            this.buttonStyle4.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle4.HoverColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle4.ImageColor = System.Drawing.Color.Black;
+            this.buttonStyle4.ImagePosition = new System.Drawing.Point(10, 8);
+            this.buttonStyle4.ImageSize = new System.Drawing.Size(24, 24);
+            this.buttonStyle4.IsToggled = false;
+            this.buttonStyle4.Location = new System.Drawing.Point(221, 482);
+            this.buttonStyle4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonStyle4.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle4.Name = "buttonStyle4";
+            this.buttonStyle4.PaddingX = 0;
+            this.buttonStyle4.PaddingY = 0;
+            this.buttonStyle4.Size = new System.Drawing.Size(108, 33);
+            this.buttonStyle4.TabIndex = 51;
+            this.buttonStyle4.Text = "Apply Filter";
+            this.buttonStyle4.TextColor = System.Drawing.Color.White;
+            this.buttonStyle4.TextOffset = 20;
+            this.buttonStyle4.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle4.UseVisualStyleBackColor = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(14, 16);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(149, 20);
+            this.label20.TabIndex = 31;
+            this.label20.Text = "Selected Member";
+            // 
             // FinanceUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -853,6 +1199,14 @@
             this.ViewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.RenewSelectedPanelHolder.ResumeLayout(false);
+            this.MassChangeSelectionPanel.ResumeLayout(false);
+            this.SelectedPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MassSelectionDataGriView)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -908,5 +1262,22 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel RenewSelectedPanelHolder;
+        private ButtonStyle CancelStateButton;
+        private ButtonStyle SaveStateButton;
+        private ButtonStyle MassChangeButton;
+        private System.Windows.Forms.Panel SelectedPanel;
+        private System.Windows.Forms.Panel MassChangeSelectionPanel;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.DataGridView MassSelectionDataGriView;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutSelectedPanel;
+        private ButtonStyle CancelMassChangeButton;
+        private ButtonStyle SaveMassChangeButton;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private ButtonStyle buttonStyle3;
+        private ButtonStyle buttonStyle4;
     }
 }

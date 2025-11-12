@@ -116,7 +116,7 @@ namespace BATODA.Helpers.DataGrid
 
         private static void Dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var dgv = sender as DataGridView;
+            var dgv = sender as DataGridView;         
             if (e.RowIndex < 0 || e.ColumnIndex < 3) return;
 
             var cell = dgv.Rows[e.RowIndex].Cells[e.ColumnIndex];

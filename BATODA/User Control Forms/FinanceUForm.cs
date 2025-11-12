@@ -43,6 +43,9 @@ namespace BATODA
         private void FinanceUForm_Load(object sender, EventArgs e)
         {
             ViewPanel.Hide();
+            RenewSelectedPanelHolder.Hide();
+            SelectedPanel.Hide();
+            MassChangeSelectionPanel.Hide();
         }
 
         private void FinanceButton_Click(object sender, EventArgs e)
@@ -127,6 +130,12 @@ namespace BATODA
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             ViewPanel.Hide();
+        }
+
+        private void MassChangeButton_Click(object sender, EventArgs e)
+        {
+            MassChangeSelectionPanel.Show();
+            SelectedPanel.Show();
         }
     }
 }
