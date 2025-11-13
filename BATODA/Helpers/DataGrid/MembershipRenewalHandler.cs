@@ -59,6 +59,7 @@ namespace BATODA.Helpers.DataGrid
             };
 
             dgv.Columns.Add(selectColumn);
+
             dgv.Columns.Add("BodyNumber", "Body No.");
             dgv.Columns.Add("FullName", "Full Name");
             dgv.Columns.Add("MembershipType", "Role");

@@ -36,7 +36,7 @@ namespace BATODA
                 {
                     int rowIndex = RenewalGrid.Rows.Add(
                         Properties.Resources._unchecked,
-                        r.BodyNumber,
+                        r.BodyNumber.ToString("D3"),
                         r.FullName,
                         r.MembershipType,
                         r.ContactNumber,
@@ -54,25 +54,14 @@ namespace BATODA
             }
         }
 
-
-        private string GetRenewalStatus(DateTime expiry)
-        {
-            DateTime today = DateTime.Today;
-            if (expiry < today) return "Expired";
-            if (expiry == today) return "Due Today";
-            if ((expiry - today).TotalDays <= 30) return "Due Soon";
-            return "Renewed";
-        }
-
-
         private void MembershipRenewalUForm_Load(object sender, EventArgs e)
         {
-            RenewalRepository repo = new RenewalRepository();
-            MembershipRenewalHandler.Initialize(RenewalGrid);
-            var renewals = repo.GetAllRenewals();
-            MessageBox.Show($"Found {renewals.Count} renewals");
+            LoadRenewalGrid();
 
+            var renewalsCount = new RenewalRepository().GetAllRenewals().Count;
+            MessageBox.Show($"Found {renewalsCount} renewals");
         }
+
 
         private void FinanceButton_Click(object sender, EventArgs e)
         {
