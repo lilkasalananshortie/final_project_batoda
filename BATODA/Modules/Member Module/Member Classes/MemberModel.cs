@@ -33,7 +33,8 @@ namespace BATODA.Modules.MemberModule
         public DateTime DateJoined { get; set; }
         public int SuspensionDays { get; set; }
         public int DaysRemaining { get; set; }
-
+        public DateTime ExpiryDate { get; set; }      
+        public string RenewalStatus { get; set; }    
 
         public int SuspensionDaysRemaining
         {

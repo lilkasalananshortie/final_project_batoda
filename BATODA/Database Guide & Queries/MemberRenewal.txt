@@ -1,7 +1,7 @@
 CREATE TABLE MemberRenewal (
     RenewalID INT IDENTITY(1,1) PRIMARY KEY,
     BodyNumber INT NOT NULL,
-    DateJoined DATE NOT NULL,  -- copy MemberInfo == conflict kasi not PK
-    ExpiryDate AS DATEADD(YEAR, 1, DateJoined) PERSISTED,
+    DateRenewed DATE NOT NULL,  -- copy MemberInfo == conflict kasi not PK
+    ExpiryDate AS DATEADD(YEAR, 1, DateRenewed) PERSISTED,
     FOREIGN KEY (BodyNumber) REFERENCES MemberInfo(BodyNumber)
 );

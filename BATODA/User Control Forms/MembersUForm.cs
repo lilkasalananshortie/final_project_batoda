@@ -1,4 +1,11 @@
-﻿using System;
+﻿using BATODA.Helpers.Database.Members;
+using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Assistance_Request_Module.Renewal_Classes;
+using BATODA.Modules.Member_Module.Member_Classes;
+using BATODA.Modules.MemberModule;
+using BATODA.UI_Displays;
+using BATODA.User_Control_Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -10,12 +17,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.Database.Members;
-using BATODA.Helpers.DataGrids;
-using BATODA.Modules.Member_Module.Member_Classes;
-using BATODA.Modules.MemberModule;
-using BATODA.UI_Displays;
-using BATODA.User_Control_Forms;
 
 namespace BATODA
 {
@@ -175,6 +176,9 @@ namespace BATODA
 
             var MemberRepo = new MemberRepository();
             MemberRepo.AddMember(NewMember);
+
+            var renewalRepo = new RenewalRepository();
+            renewalRepo.AddRenewal(NewMember.BodyNumber);
 
             ToastManager.Success("New Member Added Successfully!");
             LoadMembersToGrid();

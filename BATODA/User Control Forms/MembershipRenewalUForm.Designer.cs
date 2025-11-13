@@ -38,6 +38,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.RenewSelectedButton = new BATODA.ButtonStyle();
             this.ConfirmationRenewPanel = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.MembershipTypeLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -56,19 +58,15 @@
             this.BodyNumberLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.PreviewImagePb = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.CancelRenewalButton = new BATODA.ButtonStyle();
             this.RenewButton = new BATODA.ButtonStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ExpiredMembersDataGridView = new System.Windows.Forms.DataGridView();
+            this.RenewalGrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.ApplySearchButton = new BATODA.ButtonStyle();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -81,7 +79,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExpiredMembersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -204,26 +202,26 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(41, 38);
+            this.panel6.Location = new System.Drawing.Point(14, 39);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(576, 41);
+            this.panel6.Size = new System.Drawing.Size(464, 41);
             this.panel6.TabIndex = 34;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(46, 11);
+            this.SearchTextBox.Location = new System.Drawing.Point(9, 8);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(558, 24);
+            this.SearchTextBox.Size = new System.Drawing.Size(401, 24);
             this.SearchTextBox.TabIndex = 4;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(418, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 27);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,7 +236,6 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.ApplySearchButton);
             this.panel1.Location = new System.Drawing.Point(14, 159);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1590, 767);
@@ -262,13 +259,13 @@
             this.RenewSelectedButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.RenewSelectedButton.ImageSize = new System.Drawing.Size(24, 24);
             this.RenewSelectedButton.IsToggled = false;
-            this.RenewSelectedButton.Location = new System.Drawing.Point(1272, 63);
+            this.RenewSelectedButton.Location = new System.Drawing.Point(1368, 48);
             this.RenewSelectedButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RenewSelectedButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.RenewSelectedButton.Name = "RenewSelectedButton";
             this.RenewSelectedButton.PaddingX = 20;
             this.RenewSelectedButton.PaddingY = 0;
-            this.RenewSelectedButton.Size = new System.Drawing.Size(269, 33);
+            this.RenewSelectedButton.Size = new System.Drawing.Size(202, 33);
             this.RenewSelectedButton.TabIndex = 37;
             this.RenewSelectedButton.Text = "Renew Selected";
             this.RenewSelectedButton.TextColor = System.Drawing.Color.White;
@@ -296,21 +293,36 @@
             this.ConfirmationRenewPanel.Controls.Add(this.panel3);
             this.ConfirmationRenewPanel.Controls.Add(this.label4);
             this.ConfirmationRenewPanel.Controls.Add(this.PreviewImagePb);
-            this.ConfirmationRenewPanel.Controls.Add(this.label3);
             this.ConfirmationRenewPanel.Controls.Add(this.label1);
             this.ConfirmationRenewPanel.Controls.Add(this.CancelRenewalButton);
             this.ConfirmationRenewPanel.Controls.Add(this.RenewButton);
-            this.ConfirmationRenewPanel.Location = new System.Drawing.Point(377, 209);
+            this.ConfirmationRenewPanel.Location = new System.Drawing.Point(377, 133);
             this.ConfirmationRenewPanel.Name = "ConfirmationRenewPanel";
-            this.ConfirmationRenewPanel.Size = new System.Drawing.Size(862, 463);
+            this.ConfirmationRenewPanel.Size = new System.Drawing.Size(862, 441);
             this.ConfirmationRenewPanel.TabIndex = 36;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel11.Location = new System.Drawing.Point(20, 359);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(820, 3);
+            this.panel11.TabIndex = 89;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel10.Location = new System.Drawing.Point(20, 70);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(820, 3);
+            this.panel10.TabIndex = 88;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.MembershipTypeLabel);
-            this.panel9.Location = new System.Drawing.Point(655, 251);
+            this.panel9.Location = new System.Drawing.Point(655, 243);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(180, 41);
             this.panel9.TabIndex = 62;
@@ -329,7 +341,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(652, 226);
+            this.label16.Location = new System.Drawing.Point(652, 218);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(149, 20);
             this.label16.TabIndex = 63;
@@ -361,7 +373,7 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.PlateNumberLabel);
-            this.panel8.Location = new System.Drawing.Point(464, 165);
+            this.panel8.Location = new System.Drawing.Point(464, 157);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(180, 41);
             this.panel8.TabIndex = 59;
@@ -380,7 +392,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(462, 141);
+            this.label12.Location = new System.Drawing.Point(462, 133);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(117, 20);
             this.label12.TabIndex = 60;
@@ -391,7 +403,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.ContactNoLabel);
-            this.panel5.Location = new System.Drawing.Point(655, 165);
+            this.panel5.Location = new System.Drawing.Point(655, 157);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(180, 41);
             this.panel5.TabIndex = 57;
@@ -410,7 +422,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(653, 141);
+            this.label10.Location = new System.Drawing.Point(653, 133);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(139, 20);
             this.label10.TabIndex = 58;
@@ -421,7 +433,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.FullNameLabel);
-            this.panel4.Location = new System.Drawing.Point(275, 251);
+            this.panel4.Location = new System.Drawing.Point(275, 243);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(369, 41);
             this.panel4.TabIndex = 55;
@@ -440,7 +452,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(273, 226);
+            this.label8.Location = new System.Drawing.Point(273, 218);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 20);
             this.label8.TabIndex = 56;
@@ -451,7 +463,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.BodyNumberLabel);
-            this.panel3.Location = new System.Drawing.Point(275, 165);
+            this.panel3.Location = new System.Drawing.Point(275, 157);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(180, 41);
             this.panel3.TabIndex = 35;
@@ -470,7 +482,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(273, 141);
+            this.label4.Location = new System.Drawing.Point(273, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 20);
             this.label4.TabIndex = 53;
@@ -481,32 +493,12 @@
             this.PreviewImagePb.BackColor = System.Drawing.Color.White;
             this.PreviewImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PreviewImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.PreviewImagePb.Location = new System.Drawing.Point(23, 114);
+            this.PreviewImagePb.Location = new System.Drawing.Point(23, 106);
             this.PreviewImagePb.Name = "PreviewImagePb";
             this.PreviewImagePb.Size = new System.Drawing.Size(230, 218);
             this.PreviewImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PreviewImagePb.TabIndex = 52;
             this.PreviewImagePb.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(213, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 25);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Placeholder";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 25);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Renew Member :";
             // 
             // CancelRenewalButton
             // 
@@ -526,7 +518,7 @@
             this.CancelRenewalButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.CancelRenewalButton.ImageSize = new System.Drawing.Size(24, 24);
             this.CancelRenewalButton.IsToggled = false;
-            this.CancelRenewalButton.Location = new System.Drawing.Point(607, 406);
+            this.CancelRenewalButton.Location = new System.Drawing.Point(612, 387);
             this.CancelRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelRenewalButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CancelRenewalButton.Name = "CancelRenewalButton";
@@ -559,7 +551,7 @@
             this.RenewButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.RenewButton.ImageSize = new System.Drawing.Size(24, 24);
             this.RenewButton.IsToggled = false;
-            this.RenewButton.Location = new System.Drawing.Point(733, 406);
+            this.RenewButton.Location = new System.Drawing.Point(729, 387);
             this.RenewButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RenewButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.RenewButton.Name = "RenewButton";
@@ -577,65 +569,33 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.ExpiredMembersDataGridView);
-            this.panel2.Location = new System.Drawing.Point(41, 127);
+            this.panel2.Controls.Add(this.RenewalGrid);
+            this.panel2.Location = new System.Drawing.Point(14, 86);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1517, 624);
+            this.panel2.Size = new System.Drawing.Size(1556, 663);
             this.panel2.TabIndex = 35;
             // 
-            // ExpiredMembersDataGridView
+            // RenewalGrid
             // 
-            this.ExpiredMembersDataGridView.AllowUserToAddRows = false;
-            this.ExpiredMembersDataGridView.AllowUserToResizeColumns = false;
-            this.ExpiredMembersDataGridView.AllowUserToResizeRows = false;
-            this.ExpiredMembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ExpiredMembersDataGridView.Location = new System.Drawing.Point(14, 12);
-            this.ExpiredMembersDataGridView.Name = "ExpiredMembersDataGridView";
-            this.ExpiredMembersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ExpiredMembersDataGridView.Size = new System.Drawing.Size(1485, 595);
-            this.ExpiredMembersDataGridView.TabIndex = 0;
+            this.RenewalGrid.AllowUserToAddRows = false;
+            this.RenewalGrid.AllowUserToResizeColumns = false;
+            this.RenewalGrid.AllowUserToResizeRows = false;
+            this.RenewalGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RenewalGrid.Location = new System.Drawing.Point(16, 12);
+            this.RenewalGrid.Name = "RenewalGrid";
+            this.RenewalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.RenewalGrid.Size = new System.Drawing.Size(1525, 637);
+            this.RenewalGrid.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 11);
+            this.label2.Location = new System.Drawing.Point(10, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 25);
             this.label2.TabIndex = 29;
             this.label2.Text = "Search Member";
-            // 
-            // ApplySearchButton
-            // 
-            this.ApplySearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.BorderRadius = 0;
-            this.ApplySearchButton.BorderSize = 0;
-            this.ApplySearchButton.ButtonImage = null;
-            this.ApplySearchButton.FlatAppearance.BorderSize = 0;
-            this.ApplySearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplySearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplySearchButton.ForeColor = System.Drawing.Color.White;
-            this.ApplySearchButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplySearchButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(507, 87);
-            this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplySearchButton.Name = "ApplySearchButton";
-            this.ApplySearchButton.PaddingX = 20;
-            this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(111, 33);
-            this.ApplySearchButton.TabIndex = 30;
-            this.ApplySearchButton.Text = "Search";
-            this.ApplySearchButton.TextColor = System.Drawing.Color.White;
-            this.ApplySearchButton.TextOffset = 20;
-            this.ApplySearchButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ApplySearchButton.UseVisualStyleBackColor = false;
             // 
             // pictureBox7
             // 
@@ -668,21 +628,15 @@
             this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 50;
             // 
-            // panel10
+            // label1
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel10.Location = new System.Drawing.Point(20, 70);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(820, 3);
-            this.panel10.TabIndex = 88;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel11.Location = new System.Drawing.Point(20, 375);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(820, 3);
-            this.panel11.TabIndex = 89;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(333, 25);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Member Renewal Confirmation";
             // 
             // MembershipRenewalUForm
             // 
@@ -716,7 +670,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ExpiredMembersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -730,7 +684,6 @@
         private ButtonStyle RenewalHistoryButton;
         private ButtonStyle MembershipRenewalButton;
         private System.Windows.Forms.Panel MembersTopPanel;
-        private ButtonStyle ApplySearchButton;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -739,13 +692,11 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridView ExpiredMembersDataGridView;
+        private System.Windows.Forms.DataGridView RenewalGrid;
         private System.Windows.Forms.Panel ConfirmationRenewPanel;
         private ButtonStyle RenewSelectedButton;
         private ButtonStyle CancelRenewalButton;
         private ButtonStyle RenewButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label PlateNumberLabel;
@@ -767,5 +718,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label1;
     }
 }

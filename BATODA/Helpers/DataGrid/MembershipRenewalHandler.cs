@@ -40,37 +40,36 @@ namespace BATODA.Helpers.DataGrid
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
 
-          
             dgv.CellClick -= Dgv_CellClick;
             dgv.CellClick += Dgv_CellClick;
 
             dgv.CellPainting -= Dgv_CellPainting;
             dgv.CellPainting += Dgv_CellPainting;
 
-
             dgv.Columns.Clear();
 
+            // Checkbox column
             var selectColumn = new DataGridViewImageColumn
             {
                 Name = "SelectMember",
                 HeaderText = "",
                 ImageLayout = DataGridViewImageCellLayout.Zoom,
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.None,
-                Width = 40  
+                Width = 40
             };
 
             dgv.Columns.Add(selectColumn);
-
-
-            dgv.Columns.Add("BodyNumber", "Body Number");
+            dgv.Columns.Add("BodyNumber", "Body No.");
             dgv.Columns.Add("FullName", "Full Name");
-            dgv.Columns.Add("MembershipType", "Type");
-            dgv.Columns.Add("ContactNumber", "Contact");
-            dgv.Columns.Add("PlateNumber", "Plate No.");
+            dgv.Columns.Add("MembershipType", "Role");
+            dgv.Columns.Add("ContactNumber", "Contact No.");
+            dgv.Columns.Add("DateRenewed", "Date Renewed");
             dgv.Columns.Add("ExpiryDate", "Expiry Date");
+            dgv.Columns.Add("RenewalStatus", "Status");
 
             dgv.RowTemplate.Height = 50;
         }
+
         /*
          * 
          * LAHAT NG NASA BABA NG COMMENT NA TO PWEDE ALISIN AT PALITAN NG ACTUAL DB FETCH LOGIC
@@ -78,59 +77,35 @@ namespace BATODA.Helpers.DataGrid
          */
 
         //PWEDE ALISIN TO PAG MAY ACTUAL DATA NA DITO PAPASOK DB FETCH LOGC
-        public static void LoadRenewalMembers(DataGridView dgv)
-        {
-            dgv.Rows.Clear();
-
-            var sampleData = new[]
-            {
-                new { BodyNumber = 101, FullName = "Manalili, Mhaku", MembershipType = "Driver", ContactNumber = "09171234567", PlateNumber = "ABC-123",  ExpiryDate = DateTime.Now.AddDays(-3).ToShortDateString() },
-                new { BodyNumber = 102, FullName = "Dela Cruz, Mark Arone", MembershipType = "Operator", ContactNumber = "09981234567", PlateNumber = "XYZ-456", ExpiryDate = DateTime.Now.AddDays(-5).ToShortDateString() },
-                new { BodyNumber = 103, FullName = "Dulalia, Rod", MembershipType = "Driver", ContactNumber = "09281234567", PlateNumber = "LMN-789", ExpiryDate = DateTime.Now.AddDays(-2).ToShortDateString() }
-            };
-
-            foreach (var m in sampleData)
-            {
-                dgv.Rows.Add
-                (
-                    Properties.Resources._unchecked, 
-                    m.BodyNumber,
-                    m.FullName,
-                    m.MembershipType,
-                    m.ContactNumber,
-                    m.PlateNumber,
-                    m.ExpiryDate
-                );
-                dgv.Rows[dgv.Rows.Count - 1].Cells["SelectMember"].Tag = "NotSelected";
-            }
-        }
 
         public static void LoadSelectedMemberInfo(
-             Panel confirmationPanel,
-             Label bodyNumberLabel,
-             Label plateNumberLabel,
-             Label fullNameLabel,
-             Label contactNoLabel,
-             Label membershipTypeLabel,
-             PictureBox previewImagePb,
-             DataGridView dgv)
+            Panel confirmationPanel,
+            Label bodyNumberLabel,
+            Label fullNameLabel,
+            Label contactNoLabel,
+            Label membershipTypeLabel,
+            Label dateJoinedLabel,
+            Label expiryDateLabel,
+            Label renewalStatusLabel,
+            DataGridView dgv)
         {
             if (dgv.CurrentRow == null) return;
 
             bodyNumberLabel.Text = dgv.CurrentRow.Cells["BodyNumber"].Value?.ToString() ?? "";
-            plateNumberLabel.Text = dgv.CurrentRow.Cells["PlateNumber"].Value?.ToString() ?? "";
             fullNameLabel.Text = dgv.CurrentRow.Cells["FullName"].Value?.ToString() ?? "";
             contactNoLabel.Text = dgv.CurrentRow.Cells["ContactNumber"].Value?.ToString() ?? "";
             membershipTypeLabel.Text = dgv.CurrentRow.Cells["MembershipType"].Value?.ToString() ?? "";
-
-            if (previewImagePb != null)
-            {
-                previewImagePb.Image = Properties.Resources.icon_add_image;
-                previewImagePb.SizeMode = PictureBoxSizeMode.Zoom;
-            }
+            dateJoinedLabel.Text = dgv.CurrentRow.Cells["DateJoined"].Value != DBNull.Value
+                ? Convert.ToDateTime(dgv.CurrentRow.Cells["DateJoined"].Value).ToShortDateString()
+                : "";
+            expiryDateLabel.Text = dgv.CurrentRow.Cells["ExpiryDate"].Value != DBNull.Value
+                ? Convert.ToDateTime(dgv.CurrentRow.Cells["ExpiryDate"].Value).ToShortDateString()
+                : "";
+            renewalStatusLabel.Text = dgv.CurrentRow.Cells["RenewalStatus"].Value?.ToString() ?? "";
 
             confirmationPanel.Visible = true;
         }
+
 
         private static void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -195,24 +170,31 @@ namespace BATODA.Helpers.DataGrid
 
                 if (isChecked)
                 {
-                    string[] nameParts = row.Cells["FullName"].Value.ToString().Split(',');
-                    string lastName = nameParts[0].Trim();
-                    string firstName = nameParts.Length > 1 ? nameParts[1].Trim() : "";
+                    string fullName = row.Cells["FullName"].Value?.ToString() ?? "";
+                    string[] nameParts = fullName.Split(' ');
+                    string firstName = nameParts.Length > 0 ? nameParts[0] : "";
+                    string lastName = nameParts.Length > 1 ? string.Join(" ", nameParts.Skip(1)) : "";
 
                     selected.Add(new MemberModel
                     {
                         BodyNumber = Convert.ToInt32(row.Cells["BodyNumber"].Value),
                         FirstName = firstName,
                         LastName = lastName,
-                        MembershipType = row.Cells["MembershipType"].Value.ToString(),
-                        ContactNumber = row.Cells["ContactNumber"].Value.ToString(),
-                        PlateNumber = row.Cells["PlateNumber"].Value.ToString(),
-                        
+                        MembershipType = row.Cells["MembershipType"].Value?.ToString() ?? "",
+                        ContactNumber = row.Cells["ContactNumber"].Value?.ToString() ?? "",
+                        DateJoined = row.Cells["DateJoined"].Value != DBNull.Value
+                                     ? Convert.ToDateTime(row.Cells["DateJoined"].Value)
+                                     : DateTime.MinValue,
+                        ExpiryDate = row.Cells["ExpiryDate"].Value != DBNull.Value
+                                     ? Convert.ToDateTime(row.Cells["ExpiryDate"].Value)
+                                     : DateTime.MinValue,
+                        RenewalStatus = row.Cells["RenewalStatus"].Value?.ToString() ?? ""
                     });
                 }
             }
 
             return selected;
         }
+
     }
 }
