@@ -419,7 +419,6 @@ namespace BATODA
 
                 MessageBox.Show("Penalty added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Reload member info and grid
                 LoadMemberOverview(bodyNumber);
                 LoadMembersToGrid();
             }
