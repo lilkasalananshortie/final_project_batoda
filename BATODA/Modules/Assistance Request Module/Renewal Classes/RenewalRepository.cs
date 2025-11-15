@@ -56,11 +56,11 @@ namespace BATODA.Modules.Assistance_Request_Module.Renewal_Classes
         public void AddRenewal(int bodyNumber)
         {
             string query = @"
-INSERT INTO MemberRenewal (BodyNumber, DateRenewed, ExpiryDate)
-SELECT BodyNumber, DateJoined, DATEADD(YEAR, 1, DateJoined)
-FROM MemberInfo
-WHERE BodyNumber = @BodyNumber;
-";
+        INSERT INTO MemberRenewal (BodyNumber, DateRenewed)
+        SELECT BodyNumber, DateJoined
+        FROM MemberInfo
+        WHERE BodyNumber = @BodyNumber;
+    ";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -70,6 +70,7 @@ WHERE BodyNumber = @BodyNumber;
                 cmd.ExecuteNonQuery();
             }
         }
+
 
 
     }

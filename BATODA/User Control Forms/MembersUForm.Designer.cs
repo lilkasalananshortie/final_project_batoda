@@ -116,8 +116,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.EditRoleLbl = new System.Windows.Forms.Label();
-            this.EditMemberNameLbl = new System.Windows.Forms.Label();
             this.EditImagePb = new System.Windows.Forms.PictureBox();
             this.panel25 = new System.Windows.Forms.Panel();
             this.CurrentBirthdateLbl = new System.Windows.Forms.Label();
@@ -125,18 +123,12 @@
             this.CurrentMemberTypeLbl = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.CurrentFirstNameLbl = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.CurrentLastNameLbl = new System.Windows.Forms.Label();
+            this.CurrentNameLbl = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.CurrentModelLbl = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.CurrentEngineLbl = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.CurrentMiddleLbl = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.CurrentPlateLbl = new System.Windows.Forms.Label();
@@ -153,6 +145,11 @@
             this.label49 = new System.Windows.Forms.Label();
             this.GoToEditPanel = new BATODA.ButtonStyle();
             this.CloseBtn = new BATODA.ButtonStyle();
+            this.AddPenaltyBtn = new BATODA.ButtonStyle();
+            this.BodyNumLbl = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.CurrentBirthdayLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MembersDataGrid)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
@@ -188,14 +185,13 @@
             this.panel25.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel22.SuspendLayout();
-            this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchTxt
@@ -1357,22 +1353,20 @@
             // 
             this.ViewMemberInfoPanel.BackColor = System.Drawing.Color.White;
             this.ViewMemberInfoPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ViewMemberInfoPanel.Controls.Add(this.panel21);
+            this.ViewMemberInfoPanel.Controls.Add(this.label20);
+            this.ViewMemberInfoPanel.Controls.Add(this.BodyNumLbl);
+            this.ViewMemberInfoPanel.Controls.Add(this.AddPenaltyBtn);
             this.ViewMemberInfoPanel.Controls.Add(this.label16);
             this.ViewMemberInfoPanel.Controls.Add(this.panel30);
-            this.ViewMemberInfoPanel.Controls.Add(this.EditRoleLbl);
-            this.ViewMemberInfoPanel.Controls.Add(this.EditMemberNameLbl);
             this.ViewMemberInfoPanel.Controls.Add(this.EditImagePb);
             this.ViewMemberInfoPanel.Controls.Add(this.panel25);
             this.ViewMemberInfoPanel.Controls.Add(this.panel19);
             this.ViewMemberInfoPanel.Controls.Add(this.label53);
             this.ViewMemberInfoPanel.Controls.Add(this.panel22);
-            this.ViewMemberInfoPanel.Controls.Add(this.panel21);
             this.ViewMemberInfoPanel.Controls.Add(this.panel20);
-            this.ViewMemberInfoPanel.Controls.Add(this.label52);
             this.ViewMemberInfoPanel.Controls.Add(this.label43);
-            this.ViewMemberInfoPanel.Controls.Add(this.label51);
             this.ViewMemberInfoPanel.Controls.Add(this.panel23);
-            this.ViewMemberInfoPanel.Controls.Add(this.panel24);
             this.ViewMemberInfoPanel.Controls.Add(this.label44);
             this.ViewMemberInfoPanel.Controls.Add(this.panel26);
             this.ViewMemberInfoPanel.Controls.Add(this.panel27);
@@ -1385,16 +1379,17 @@
             this.ViewMemberInfoPanel.Controls.Add(this.label49);
             this.ViewMemberInfoPanel.Controls.Add(this.GoToEditPanel);
             this.ViewMemberInfoPanel.Controls.Add(this.CloseBtn);
-            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(617, 122);
+            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(213, 122);
             this.ViewMemberInfoPanel.Name = "ViewMemberInfoPanel";
-            this.ViewMemberInfoPanel.Size = new System.Drawing.Size(823, 631);
+            this.ViewMemberInfoPanel.Size = new System.Drawing.Size(987, 576);
             this.ViewMemberInfoPanel.TabIndex = 57;
+            this.ViewMemberInfoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewMemberInfoPanel_Paint);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(684, 408);
+            this.label16.Location = new System.Drawing.Point(626, 369);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(174, 25);
             this.label16.TabIndex = 107;
@@ -1413,39 +1408,19 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(41, 19);
+            this.label18.Location = new System.Drawing.Point(24, 14);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(355, 46);
             this.label18.TabIndex = 1;
             this.label18.Text = "Member Overview";
             // 
-            // EditRoleLbl
-            // 
-            this.EditRoleLbl.AutoSize = true;
-            this.EditRoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditRoleLbl.Location = new System.Drawing.Point(80, 474);
-            this.EditRoleLbl.Name = "EditRoleLbl";
-            this.EditRoleLbl.Size = new System.Drawing.Size(217, 31);
-            this.EditRoleLbl.TabIndex = 105;
-            this.EditRoleLbl.Text = "Driver/Operator";
-            // 
-            // EditMemberNameLbl
-            // 
-            this.EditMemberNameLbl.AutoSize = true;
-            this.EditMemberNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditMemberNameLbl.Location = new System.Drawing.Point(26, 186);
-            this.EditMemberNameLbl.Name = "EditMemberNameLbl";
-            this.EditMemberNameLbl.Size = new System.Drawing.Size(312, 31);
-            this.EditMemberNameLbl.TabIndex = 104;
-            this.EditMemberNameLbl.Text = "Member: [PlaceHolder]";
-            // 
             // EditImagePb
             // 
             this.EditImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EditImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.EditImagePb.Location = new System.Drawing.Point(63, 226);
+            this.EditImagePb.Location = new System.Drawing.Point(61, 158);
             this.EditImagePb.Name = "EditImagePb";
-            this.EditImagePb.Size = new System.Drawing.Size(247, 232);
+            this.EditImagePb.Size = new System.Drawing.Size(214, 199);
             this.EditImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EditImagePb.TabIndex = 103;
             this.EditImagePb.TabStop = false;
@@ -1454,16 +1429,17 @@
             // 
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel25.Controls.Add(this.CurrentBirthdateLbl);
-            this.panel25.Location = new System.Drawing.Point(687, 440);
+            this.panel25.Location = new System.Drawing.Point(629, 401);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(316, 50);
+            this.panel25.Size = new System.Drawing.Size(304, 41);
             this.panel25.TabIndex = 100;
             // 
             // CurrentBirthdateLbl
             // 
             this.CurrentBirthdateLbl.AutoSize = true;
             this.CurrentBirthdateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentBirthdateLbl.Location = new System.Drawing.Point(6, 11);
+            this.CurrentBirthdateLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentBirthdateLbl.Location = new System.Drawing.Point(6, 7);
             this.CurrentBirthdateLbl.Name = "CurrentBirthdateLbl";
             this.CurrentBirthdateLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentBirthdateLbl.TabIndex = 64;
@@ -1473,16 +1449,17 @@
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.CurrentMemberTypeLbl);
-            this.panel19.Location = new System.Drawing.Point(389, 240);
+            this.panel19.Location = new System.Drawing.Point(331, 223);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(287, 50);
+            this.panel19.Size = new System.Drawing.Size(277, 41);
             this.panel19.TabIndex = 96;
             // 
             // CurrentMemberTypeLbl
             // 
             this.CurrentMemberTypeLbl.AutoSize = true;
             this.CurrentMemberTypeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentMemberTypeLbl.Location = new System.Drawing.Point(3, 10);
+            this.CurrentMemberTypeLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentMemberTypeLbl.Location = new System.Drawing.Point(3, 7);
             this.CurrentMemberTypeLbl.Name = "CurrentMemberTypeLbl";
             this.CurrentMemberTypeLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentMemberTypeLbl.TabIndex = 62;
@@ -1492,142 +1469,87 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(384, 115);
+            this.label53.Location = new System.Drawing.Point(326, 106);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(130, 25);
+            this.label53.Size = new System.Drawing.Size(129, 25);
             this.label53.TabIndex = 83;
-            this.label53.Text = "First Name *";
+            this.label53.Text = "Full Name  *";
             // 
             // panel22
             // 
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel22.Controls.Add(this.CurrentFirstNameLbl);
-            this.panel22.Location = new System.Drawing.Point(389, 141);
+            this.panel22.Controls.Add(this.CurrentNameLbl);
+            this.panel22.Location = new System.Drawing.Point(331, 136);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(258, 50);
+            this.panel22.Size = new System.Drawing.Size(353, 41);
             this.panel22.TabIndex = 82;
             // 
-            // CurrentFirstNameLbl
+            // CurrentNameLbl
             // 
-            this.CurrentFirstNameLbl.AutoSize = true;
-            this.CurrentFirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentFirstNameLbl.Location = new System.Drawing.Point(3, 10);
-            this.CurrentFirstNameLbl.Name = "CurrentFirstNameLbl";
-            this.CurrentFirstNameLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentFirstNameLbl.TabIndex = 60;
-            this.CurrentFirstNameLbl.Text = "Placeholder";
-            // 
-            // panel21
-            // 
-            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel21.Controls.Add(this.CurrentLastNameLbl);
-            this.panel21.Location = new System.Drawing.Point(658, 141);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(262, 50);
-            this.panel21.TabIndex = 84;
-            // 
-            // CurrentLastNameLbl
-            // 
-            this.CurrentLastNameLbl.AutoSize = true;
-            this.CurrentLastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentLastNameLbl.Location = new System.Drawing.Point(9, 10);
-            this.CurrentLastNameLbl.Name = "CurrentLastNameLbl";
-            this.CurrentLastNameLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentLastNameLbl.TabIndex = 61;
-            this.CurrentLastNameLbl.Text = "Placeholder";
+            this.CurrentNameLbl.AutoSize = true;
+            this.CurrentNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentNameLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentNameLbl.Location = new System.Drawing.Point(3, 7);
+            this.CurrentNameLbl.Name = "CurrentNameLbl";
+            this.CurrentNameLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentNameLbl.TabIndex = 60;
+            this.CurrentNameLbl.Text = "Placeholder";
             // 
             // panel20
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.CurrentModelLbl);
-            this.panel20.Location = new System.Drawing.Point(389, 541);
+            this.panel20.Location = new System.Drawing.Point(331, 488);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(287, 50);
+            this.panel20.Size = new System.Drawing.Size(273, 41);
             this.panel20.TabIndex = 95;
             // 
             // CurrentModelLbl
             // 
             this.CurrentModelLbl.AutoSize = true;
             this.CurrentModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentModelLbl.Location = new System.Drawing.Point(3, 11);
+            this.CurrentModelLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentModelLbl.Location = new System.Drawing.Point(3, 8);
             this.CurrentModelLbl.Name = "CurrentModelLbl";
             this.CurrentModelLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentModelLbl.TabIndex = 66;
             this.CurrentModelLbl.Text = "Placeholder";
             // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(653, 115);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(129, 25);
-            this.label52.TabIndex = 85;
-            this.label52.Text = "Last Name *";
-            // 
             // label43
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(682, 311);
+            this.label43.Location = new System.Drawing.Point(624, 281);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(174, 25);
             this.label43.TabIndex = 99;
             this.label43.Text = "Engine Number *";
             // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(925, 116);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(47, 25);
-            this.label51.TabIndex = 87;
-            this.label51.Text = "M.I.";
-            // 
             // panel23
             // 
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel23.Controls.Add(this.CurrentEngineLbl);
-            this.panel23.Location = new System.Drawing.Point(687, 339);
+            this.panel23.Location = new System.Drawing.Point(629, 311);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(316, 50);
+            this.panel23.Size = new System.Drawing.Size(304, 41);
             this.panel23.TabIndex = 98;
             // 
             // CurrentEngineLbl
             // 
             this.CurrentEngineLbl.AutoSize = true;
             this.CurrentEngineLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentEngineLbl.Location = new System.Drawing.Point(6, 11);
+            this.CurrentEngineLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentEngineLbl.Location = new System.Drawing.Point(6, 8);
             this.CurrentEngineLbl.Name = "CurrentEngineLbl";
             this.CurrentEngineLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentEngineLbl.TabIndex = 64;
             this.CurrentEngineLbl.Text = "Placeholder";
             // 
-            // panel24
-            // 
-            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel24.Controls.Add(this.CurrentMiddleLbl);
-            this.panel24.Location = new System.Drawing.Point(929, 142);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(77, 50);
-            this.panel24.TabIndex = 86;
-            // 
-            // CurrentMiddleLbl
-            // 
-            this.CurrentMiddleLbl.AutoSize = true;
-            this.CurrentMiddleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentMiddleLbl.Location = new System.Drawing.Point(5, 10);
-            this.CurrentMiddleLbl.Name = "CurrentMiddleLbl";
-            this.CurrentMiddleLbl.Size = new System.Drawing.Size(41, 25);
-            this.CurrentMiddleLbl.TabIndex = 62;
-            this.CurrentMiddleLbl.Text = "PC";
-            // 
             // label44
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(384, 311);
+            this.label44.Location = new System.Drawing.Point(326, 281);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(184, 25);
             this.label44.TabIndex = 102;
@@ -1637,16 +1559,17 @@
             // 
             this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel26.Controls.Add(this.CurrentPlateLbl);
-            this.panel26.Location = new System.Drawing.Point(687, 240);
+            this.panel26.Location = new System.Drawing.Point(629, 223);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(316, 50);
+            this.panel26.Size = new System.Drawing.Size(304, 41);
             this.panel26.TabIndex = 88;
             // 
             // CurrentPlateLbl
             // 
             this.CurrentPlateLbl.AutoSize = true;
             this.CurrentPlateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPlateLbl.Location = new System.Drawing.Point(3, 10);
+            this.CurrentPlateLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentPlateLbl.Location = new System.Drawing.Point(3, 7);
             this.CurrentPlateLbl.Name = "CurrentPlateLbl";
             this.CurrentPlateLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentPlateLbl.TabIndex = 63;
@@ -1656,16 +1579,17 @@
             // 
             this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel27.Controls.Add(this.CurrentChassisLbl);
-            this.panel27.Location = new System.Drawing.Point(389, 339);
+            this.panel27.Location = new System.Drawing.Point(331, 311);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(287, 50);
+            this.panel27.Size = new System.Drawing.Size(277, 41);
             this.panel27.TabIndex = 101;
             // 
             // CurrentChassisLbl
             // 
             this.CurrentChassisLbl.AutoSize = true;
             this.CurrentChassisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentChassisLbl.Location = new System.Drawing.Point(3, 11);
+            this.CurrentChassisLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentChassisLbl.Location = new System.Drawing.Point(3, 8);
             this.CurrentChassisLbl.Name = "CurrentChassisLbl";
             this.CurrentChassisLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentChassisLbl.TabIndex = 65;
@@ -1675,7 +1599,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(682, 212);
+            this.label50.Location = new System.Drawing.Point(624, 192);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(156, 25);
             this.label50.TabIndex = 89;
@@ -1685,7 +1609,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(384, 212);
+            this.label45.Location = new System.Drawing.Point(326, 192);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(158, 25);
             this.label45.TabIndex = 97;
@@ -1695,16 +1619,17 @@
             // 
             this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel28.Controls.Add(this.CurrentContactLbl);
-            this.panel28.Location = new System.Drawing.Point(687, 541);
+            this.panel28.Location = new System.Drawing.Point(629, 488);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(316, 50);
+            this.panel28.Size = new System.Drawing.Size(304, 41);
             this.panel28.TabIndex = 90;
             // 
             // CurrentContactLbl
             // 
             this.CurrentContactLbl.AutoSize = true;
             this.CurrentContactLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentContactLbl.Location = new System.Drawing.Point(9, 11);
+            this.CurrentContactLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentContactLbl.Location = new System.Drawing.Point(9, 8);
             this.CurrentContactLbl.Name = "CurrentContactLbl";
             this.CurrentContactLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentContactLbl.TabIndex = 65;
@@ -1714,7 +1639,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(384, 513);
+            this.label47.Location = new System.Drawing.Point(326, 457);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(85, 25);
             this.label47.TabIndex = 94;
@@ -1724,16 +1649,17 @@
             // 
             this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel29.Controls.Add(this.CurrentBrandLbl);
-            this.panel29.Location = new System.Drawing.Point(389, 440);
+            this.panel29.Location = new System.Drawing.Point(331, 401);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(287, 50);
+            this.panel29.Size = new System.Drawing.Size(277, 41);
             this.panel29.TabIndex = 92;
             // 
             // CurrentBrandLbl
             // 
             this.CurrentBrandLbl.AutoSize = true;
             this.CurrentBrandLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentBrandLbl.Location = new System.Drawing.Point(3, 12);
+            this.CurrentBrandLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentBrandLbl.Location = new System.Drawing.Point(3, 7);
             this.CurrentBrandLbl.Name = "CurrentBrandLbl";
             this.CurrentBrandLbl.Size = new System.Drawing.Size(126, 25);
             this.CurrentBrandLbl.TabIndex = 65;
@@ -1743,7 +1669,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(384, 408);
+            this.label48.Location = new System.Drawing.Point(326, 369);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(150, 25);
             this.label48.TabIndex = 93;
@@ -1753,7 +1679,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(682, 513);
+            this.label49.Location = new System.Drawing.Point(624, 457);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(181, 25);
             this.label49.TabIndex = 91;
@@ -1777,13 +1703,13 @@
             this.GoToEditPanel.ImagePosition = new System.Drawing.Point(20, 0);
             this.GoToEditPanel.ImageSize = new System.Drawing.Size(32, 32);
             this.GoToEditPanel.IsToggled = false;
-            this.GoToEditPanel.Location = new System.Drawing.Point(1043, 123);
+            this.GoToEditPanel.Location = new System.Drawing.Point(63, 373);
             this.GoToEditPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GoToEditPanel.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.GoToEditPanel.Name = "GoToEditPanel";
             this.GoToEditPanel.PaddingX = 0;
             this.GoToEditPanel.PaddingY = 0;
-            this.GoToEditPanel.Size = new System.Drawing.Size(178, 45);
+            this.GoToEditPanel.Size = new System.Drawing.Size(212, 43);
             this.GoToEditPanel.TabIndex = 36;
             this.GoToEditPanel.Text = "Edit Member";
             this.GoToEditPanel.TextColor = System.Drawing.Color.White;
@@ -1810,13 +1736,13 @@
             this.CloseBtn.ImagePosition = new System.Drawing.Point(20, 0);
             this.CloseBtn.ImageSize = new System.Drawing.Size(32, 32);
             this.CloseBtn.IsToggled = false;
-            this.CloseBtn.Location = new System.Drawing.Point(1043, 174);
+            this.CloseBtn.Location = new System.Drawing.Point(63, 476);
             this.CloseBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CloseBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.PaddingX = 0;
             this.CloseBtn.PaddingY = 0;
-            this.CloseBtn.Size = new System.Drawing.Size(178, 45);
+            this.CloseBtn.Size = new System.Drawing.Size(212, 43);
             this.CloseBtn.TabIndex = 35;
             this.CloseBtn.Text = "Cancel";
             this.CloseBtn.TextColor = System.Drawing.Color.White;
@@ -1824,6 +1750,79 @@
             this.CloseBtn.ToggleColor = System.Drawing.Color.Empty;
             this.CloseBtn.UseVisualStyleBackColor = false;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            // 
+            // AddPenaltyBtn
+            // 
+            this.AddPenaltyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.BorderRadius = 0;
+            this.AddPenaltyBtn.BorderSize = 0;
+            this.AddPenaltyBtn.ButtonImage = global::BATODA.Properties.Resources.exit;
+            this.AddPenaltyBtn.FlatAppearance.BorderSize = 0;
+            this.AddPenaltyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddPenaltyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddPenaltyBtn.ForeColor = System.Drawing.Color.White;
+            this.AddPenaltyBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.AddPenaltyBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.AddPenaltyBtn.ImageColor = System.Drawing.Color.Black;
+            this.AddPenaltyBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.AddPenaltyBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.AddPenaltyBtn.IsToggled = false;
+            this.AddPenaltyBtn.Location = new System.Drawing.Point(63, 424);
+            this.AddPenaltyBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddPenaltyBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.Name = "AddPenaltyBtn";
+            this.AddPenaltyBtn.PaddingX = 0;
+            this.AddPenaltyBtn.PaddingY = 0;
+            this.AddPenaltyBtn.Size = new System.Drawing.Size(212, 44);
+            this.AddPenaltyBtn.TabIndex = 109;
+            this.AddPenaltyBtn.Text = "Penalty";
+            this.AddPenaltyBtn.TextColor = System.Drawing.Color.White;
+            this.AddPenaltyBtn.TextOffset = 5;
+            this.AddPenaltyBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.AddPenaltyBtn.UseVisualStyleBackColor = false;
+            this.AddPenaltyBtn.Click += new System.EventHandler(this.AddPenaltyBtn_Click);
+            // 
+            // BodyNumLbl
+            // 
+            this.BodyNumLbl.AutoSize = true;
+            this.BodyNumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyNumLbl.Location = new System.Drawing.Point(46, 114);
+            this.BodyNumLbl.Name = "BodyNumLbl";
+            this.BodyNumLbl.Size = new System.Drawing.Size(242, 33);
+            this.BodyNumLbl.TabIndex = 110;
+            this.BodyNumLbl.Text = "BATODA - (100)";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(695, 106);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(112, 25);
+            this.label20.TabIndex = 111;
+            this.label20.Text = "Birthdate *";
+            // 
+            // panel21
+            // 
+            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Controls.Add(this.CurrentBirthdayLbl);
+            this.panel21.Location = new System.Drawing.Point(700, 136);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(233, 41);
+            this.panel21.TabIndex = 83;
+            // 
+            // CurrentBirthdayLbl
+            // 
+            this.CurrentBirthdayLbl.AutoSize = true;
+            this.CurrentBirthdayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBirthdayLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentBirthdayLbl.Location = new System.Drawing.Point(3, 7);
+            this.CurrentBirthdayLbl.Name = "CurrentBirthdayLbl";
+            this.CurrentBirthdayLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentBirthdayLbl.TabIndex = 60;
+            this.CurrentBirthdayLbl.Text = "Placeholder";
             // 
             // MembersUForm
             // 
@@ -1903,14 +1902,10 @@
             this.panel19.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
             this.panel27.ResumeLayout(false);
@@ -1919,6 +1914,8 @@
             this.panel28.PerformLayout();
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2015,18 +2012,12 @@
         private System.Windows.Forms.Label CurrentMemberTypeLbl;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Label CurrentFirstNameLbl;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label CurrentLastNameLbl;
+        private System.Windows.Forms.Label CurrentNameLbl;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label CurrentModelLbl;
-        private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Label CurrentEngineLbl;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Label CurrentMiddleLbl;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label CurrentPlateLbl;
@@ -2041,12 +2032,15 @@
         private System.Windows.Forms.Label CurrentBrandLbl;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label EditRoleLbl;
-        private System.Windows.Forms.Label EditMemberNameLbl;
         private System.Windows.Forms.PictureBox EditImagePb;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label BodyNumLbl;
+        private ButtonStyle AddPenaltyBtn;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label CurrentBirthdayLbl;
+        private System.Windows.Forms.Label label20;
     }
 }

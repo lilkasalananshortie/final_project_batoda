@@ -51,7 +51,8 @@ namespace BATODA
 
             DataGridCustom.AddActionButtons(MembersDataGrid);
             DataGridCustom.ApplyCustomGrid(MembersDataGrid);
-            
+
+
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
@@ -305,6 +306,10 @@ namespace BATODA
             {
                 int bodyNumber = Convert.ToInt32(MembersDataGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value);
 
+                // Load member overview
+                LoadMemberOverview(bodyNumber);
+
+                // Load member image
                 string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
                 string[] matchingImages = Directory.GetFiles(imagesFolder, $"{bodyNumber:D3}*.*");
 
@@ -320,7 +325,6 @@ namespace BATODA
                     {
                         EditImagePb.Image = new Bitmap(temp);
                     }
-
                     SelectedMemberImage.ImagePath = matchingImages[0];
                 }
                 else
@@ -331,9 +335,10 @@ namespace BATODA
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
@@ -362,5 +367,64 @@ namespace BATODA
                 ApplySearchButton_Click(sender, e); 
             }
         }
+
+        private void LoadMemberOverview(int bodyNumber)
+        {
+            var repo = new MemberRepository();
+            var member = repo.MemberOverview(bodyNumber); 
+
+            if (member != null)
+            {
+                BodyNumLbl.Text = "BATODA - " + "(" + member.BodyNumber.ToString("D3") + ")";
+                CurrentNameLbl.Text = $"{member.FirstName} {member.MiddleInitial}. {member.LastName}";
+                CurrentBirthdayLbl.Text = member.Birthdate.ToString("MM-dd-yyyy");
+                CurrentContactLbl.Text = member.ContactNumber;
+                CurrentMemberTypeLbl.Text = member.MembershipType;
+                CurrentBrandLbl.Text = member.TricycleBrand;
+                CurrentModelLbl.Text = member.TricycleModel;
+                CurrentChassisLbl.Text = member.ChassisNumber;
+                CurrentEngineLbl.Text = member.EngineNumber;
+                CurrentPlateLbl.Text = member.PlateNumber;
+
+                AddPenaltyBtn.Text = member.PenaltyLevel == 3 ? "Suspend" : "Add Penalty";
+            }
+        }
+
+        private void ViewMemberInfoPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AddPenaltyBtn_Click(object sender, EventArgs e)
+        {
+            if (MembersDataGrid.SelectedRows.Count == 0) return;
+
+            int bodyNumber = Convert.ToInt32(MembersDataGrid.SelectedRows[0].Cells["BodyNumber"].Value);
+
+            var repo = new MemberRepository();
+            var member = repo.MemberOverview(bodyNumber);
+
+            if (member == null) return;
+
+            var confirm = MessageBox.Show(
+                $"Are you sure you want to add a penalty to {member.FirstName} {member.MiddleInitial}. {member.LastName}?",
+                "Confirm Penalty",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirm == DialogResult.Yes)
+            {
+                repo.IncrementPenaltyLevel(bodyNumber);
+
+                MessageBox.Show("Penalty added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Reload member info and grid
+                LoadMemberOverview(bodyNumber);
+                LoadMembersToGrid();
+            }
+        }
+
+
     }
 }

@@ -1308,6 +1308,7 @@
             // OwnerSearchGrid
             // 
             this.OwnerSearchGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OwnerSearchGrid.BackgroundColor = System.Drawing.Color.White;
             this.OwnerSearchGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.OwnerSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OwnerSearchGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1318,7 +1319,7 @@
             this.OwnerSearchGrid.Name = "OwnerSearchGrid";
             this.OwnerSearchGrid.RowHeadersVisible = false;
             this.OwnerSearchGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OwnerSearchGrid.Size = new System.Drawing.Size(668, 64);
+            this.OwnerSearchGrid.Size = new System.Drawing.Size(668, 85);
             this.OwnerSearchGrid.TabIndex = 60;
             this.OwnerSearchGrid.Visible = false;
             this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick);

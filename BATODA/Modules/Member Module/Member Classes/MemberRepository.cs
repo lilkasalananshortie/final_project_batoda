@@ -257,5 +257,74 @@ namespace BATODA.Modules.MemberModule
             }
             return null;
         }
+
+        public MemberModel MemberOverview(int bodyNumber)
+        {
+            string query = @"
+                SELECT 
+                    FirstName,
+                    LastName,
+                    MiddleInitial,
+                    MembershipType,
+                    Birthdate,
+                    ContactNumber,
+                    TricycleBrand,
+                    TricycleModel,
+                    ChassisNumber,
+                    EngineNumber,
+                    PlateNumber
+                FROM MemberInfo
+                WHERE BodyNumber = @BodyNumber;
+            ";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new MemberModel
+                        {
+                            BodyNumber = bodyNumber,
+                            FirstName = reader["FirstName"].ToString(),
+                            LastName = reader["LastName"].ToString(),
+                            MiddleInitial = reader["MiddleInitial"].ToString(),
+                            MembershipType = reader["MembershipType"].ToString(),
+                            Birthdate = Convert.ToDateTime(reader["Birthdate"]),
+                            ContactNumber = reader["ContactNumber"].ToString(),
+                            TricycleBrand = reader["TricycleBrand"].ToString(),
+                            TricycleModel = reader["TricycleModel"].ToString(),
+                            ChassisNumber = reader["ChassisNumber"].ToString(),
+                            EngineNumber = reader["EngineNumber"].ToString(),
+                            PlateNumber = reader["PlateNumber"].ToString()
+                        };
+                    }
+                }
+            }
+            return null;
+        }
+
+        public void IncrementPenaltyLevel(int bodyNumber)
+        {
+            string query = @"
+            UPDATE MemberInfo
+            SET PenaltyLevel = CASE WHEN PenaltyLevel < 3 THEN PenaltyLevel + 1 ELSE PenaltyLevel END,
+            DaysRemaining = CASE WHEN PenaltyLevel = 2 THEN SuspensionDays ELSE DaysRemaining END
+            WHERE BodyNumber = @BodyNumber;
+            ";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
     }
 }
