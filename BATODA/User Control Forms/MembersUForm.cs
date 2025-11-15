@@ -306,10 +306,8 @@ namespace BATODA
             {
                 int bodyNumber = Convert.ToInt32(MembersDataGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value);
 
-                // Load member overview
                 LoadMemberOverview(bodyNumber);
 
-                // Load member image
                 string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
                 string[] matchingImages = Directory.GetFiles(imagesFolder, $"{bodyNumber:D3}*.*");
 
