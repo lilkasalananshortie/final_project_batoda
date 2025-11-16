@@ -64,7 +64,6 @@ namespace BATODA.Helpers.Database.Members
                                 MemberStatus = reader["MemberStatus"].ToString(),
                                 PenaltyLevel = reader["PenaltyLevel"] != DBNull.Value ? Convert.ToInt32(reader["PenaltyLevel"]) : 0,
                                 SuspensionDays = reader["SuspensionDays"] != DBNull.Value ? Convert.ToInt32(reader["SuspensionDays"]) : 0,
-                                DaysRemaining = reader["DaysRemaining"] != DBNull.Value ? Convert.ToInt32(reader["DaysRemaining"]) : 0,
                                 DateJoined = (DateTime)reader["DateJoined"]
                             };
                         }

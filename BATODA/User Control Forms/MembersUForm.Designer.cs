@@ -113,6 +113,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.UploadImageDialog = new System.Windows.Forms.OpenFileDialog();
             this.ViewMemberInfoPanel = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.CurrentBirthdayLbl = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.BodyNumLbl = new System.Windows.Forms.Label();
+            this.AddPenaltyBtn = new BATODA.ButtonStyle();
             this.label16 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -145,11 +150,6 @@
             this.label49 = new System.Windows.Forms.Label();
             this.GoToEditPanel = new BATODA.ButtonStyle();
             this.CloseBtn = new BATODA.ButtonStyle();
-            this.AddPenaltyBtn = new BATODA.ButtonStyle();
-            this.BodyNumLbl = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.CurrentBirthdayLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MembersDataGrid)).BeginInit();
             this.MembersTopPanel.SuspendLayout();
             this.AddMemberPanel.SuspendLayout();
@@ -180,6 +180,7 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.ViewMemberInfoPanel.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.panel30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EditImagePb)).BeginInit();
             this.panel25.SuspendLayout();
@@ -191,7 +192,6 @@
             this.panel27.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
-            this.panel21.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchTxt
@@ -1385,6 +1385,79 @@
             this.ViewMemberInfoPanel.TabIndex = 57;
             this.ViewMemberInfoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewMemberInfoPanel_Paint);
             // 
+            // panel21
+            // 
+            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Controls.Add(this.CurrentBirthdayLbl);
+            this.panel21.Location = new System.Drawing.Point(700, 136);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(233, 41);
+            this.panel21.TabIndex = 83;
+            // 
+            // CurrentBirthdayLbl
+            // 
+            this.CurrentBirthdayLbl.AutoSize = true;
+            this.CurrentBirthdayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentBirthdayLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.CurrentBirthdayLbl.Location = new System.Drawing.Point(3, 7);
+            this.CurrentBirthdayLbl.Name = "CurrentBirthdayLbl";
+            this.CurrentBirthdayLbl.Size = new System.Drawing.Size(126, 25);
+            this.CurrentBirthdayLbl.TabIndex = 60;
+            this.CurrentBirthdayLbl.Text = "Placeholder";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(695, 106);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(112, 25);
+            this.label20.TabIndex = 111;
+            this.label20.Text = "Birthdate *";
+            // 
+            // BodyNumLbl
+            // 
+            this.BodyNumLbl.AutoSize = true;
+            this.BodyNumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyNumLbl.Location = new System.Drawing.Point(46, 114);
+            this.BodyNumLbl.Name = "BodyNumLbl";
+            this.BodyNumLbl.Size = new System.Drawing.Size(242, 33);
+            this.BodyNumLbl.TabIndex = 110;
+            this.BodyNumLbl.Text = "BATODA - (100)";
+            // 
+            // AddPenaltyBtn
+            // 
+            this.AddPenaltyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.BorderRadius = 0;
+            this.AddPenaltyBtn.BorderSize = 0;
+            this.AddPenaltyBtn.ButtonImage = global::BATODA.Properties.Resources.exit;
+            this.AddPenaltyBtn.FlatAppearance.BorderSize = 0;
+            this.AddPenaltyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddPenaltyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddPenaltyBtn.ForeColor = System.Drawing.Color.White;
+            this.AddPenaltyBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.AddPenaltyBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.AddPenaltyBtn.ImageColor = System.Drawing.Color.Black;
+            this.AddPenaltyBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.AddPenaltyBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.AddPenaltyBtn.IsToggled = false;
+            this.AddPenaltyBtn.Location = new System.Drawing.Point(63, 424);
+            this.AddPenaltyBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddPenaltyBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.Name = "AddPenaltyBtn";
+            this.AddPenaltyBtn.PaddingX = 0;
+            this.AddPenaltyBtn.PaddingY = 0;
+            this.AddPenaltyBtn.Size = new System.Drawing.Size(212, 44);
+            this.AddPenaltyBtn.TabIndex = 109;
+            this.AddPenaltyBtn.Text = "Penalty";
+            this.AddPenaltyBtn.TextColor = System.Drawing.Color.White;
+            this.AddPenaltyBtn.TextOffset = 5;
+            this.AddPenaltyBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.AddPenaltyBtn.UseVisualStyleBackColor = false;
+            this.AddPenaltyBtn.Click += new System.EventHandler(this.AddPenaltyBtn_Click);
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -1751,79 +1824,6 @@
             this.CloseBtn.UseVisualStyleBackColor = false;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
-            // AddPenaltyBtn
-            // 
-            this.AddPenaltyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddPenaltyBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddPenaltyBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddPenaltyBtn.BorderRadius = 0;
-            this.AddPenaltyBtn.BorderSize = 0;
-            this.AddPenaltyBtn.ButtonImage = global::BATODA.Properties.Resources.exit;
-            this.AddPenaltyBtn.FlatAppearance.BorderSize = 0;
-            this.AddPenaltyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddPenaltyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddPenaltyBtn.ForeColor = System.Drawing.Color.White;
-            this.AddPenaltyBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.AddPenaltyBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.AddPenaltyBtn.ImageColor = System.Drawing.Color.Black;
-            this.AddPenaltyBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.AddPenaltyBtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.AddPenaltyBtn.IsToggled = false;
-            this.AddPenaltyBtn.Location = new System.Drawing.Point(63, 424);
-            this.AddPenaltyBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddPenaltyBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddPenaltyBtn.Name = "AddPenaltyBtn";
-            this.AddPenaltyBtn.PaddingX = 0;
-            this.AddPenaltyBtn.PaddingY = 0;
-            this.AddPenaltyBtn.Size = new System.Drawing.Size(212, 44);
-            this.AddPenaltyBtn.TabIndex = 109;
-            this.AddPenaltyBtn.Text = "Penalty";
-            this.AddPenaltyBtn.TextColor = System.Drawing.Color.White;
-            this.AddPenaltyBtn.TextOffset = 5;
-            this.AddPenaltyBtn.ToggleColor = System.Drawing.Color.Empty;
-            this.AddPenaltyBtn.UseVisualStyleBackColor = false;
-            this.AddPenaltyBtn.Click += new System.EventHandler(this.AddPenaltyBtn_Click);
-            // 
-            // BodyNumLbl
-            // 
-            this.BodyNumLbl.AutoSize = true;
-            this.BodyNumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyNumLbl.Location = new System.Drawing.Point(46, 114);
-            this.BodyNumLbl.Name = "BodyNumLbl";
-            this.BodyNumLbl.Size = new System.Drawing.Size(242, 33);
-            this.BodyNumLbl.TabIndex = 110;
-            this.BodyNumLbl.Text = "BATODA - (100)";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(695, 106);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(112, 25);
-            this.label20.TabIndex = 111;
-            this.label20.Text = "Birthdate *";
-            // 
-            // panel21
-            // 
-            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel21.Controls.Add(this.CurrentBirthdayLbl);
-            this.panel21.Location = new System.Drawing.Point(700, 136);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(233, 41);
-            this.panel21.TabIndex = 83;
-            // 
-            // CurrentBirthdayLbl
-            // 
-            this.CurrentBirthdayLbl.AutoSize = true;
-            this.CurrentBirthdayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentBirthdayLbl.ForeColor = System.Drawing.Color.DimGray;
-            this.CurrentBirthdayLbl.Location = new System.Drawing.Point(3, 7);
-            this.CurrentBirthdayLbl.Name = "CurrentBirthdayLbl";
-            this.CurrentBirthdayLbl.Size = new System.Drawing.Size(126, 25);
-            this.CurrentBirthdayLbl.TabIndex = 60;
-            this.CurrentBirthdayLbl.Text = "Placeholder";
-            // 
             // MembersUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -1893,6 +1893,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ViewMemberInfoPanel.ResumeLayout(false);
             this.ViewMemberInfoPanel.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EditImagePb)).EndInit();
@@ -1914,8 +1916,6 @@
             this.panel28.PerformLayout();
             this.panel29.ResumeLayout(false);
             this.panel29.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
             this.ResumeLayout(false);
 
         }

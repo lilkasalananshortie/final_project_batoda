@@ -24,17 +24,20 @@ namespace BATODA.Modules.MemberModule
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = @"SELECT 
-                            BodyNumber, 
-                            LastName, 
-                            FirstName, 
-                            MiddleInitial, 
-                            Birthdate, 
-                            MembershipType, 
-                            ContactNumber,
-                            MemberStatus, 
-                            PenaltyLevel 
-                         FROM MemberInfo
-                         ORDER BY BodyNumber DESC";
+                    BodyNumber, 
+                    LastName, 
+                    FirstName, 
+                    MiddleInitial, 
+                    Birthdate, 
+                    MembershipType, 
+                    ContactNumber,
+                    MemberStatus, 
+                    PenaltyLevel,
+                    SuspensionDays,
+                    SuspensionStart
+                FROM MemberInfo
+                ORDER BY BodyNumber DESC
+                ";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -45,7 +48,6 @@ namespace BATODA.Modules.MemberModule
                     {
                         members.Add(new MemberModel
                         {
-                            // modelvar = reader[db col]
                             BodyNumber = (int)reader["BodyNumber"],
                             LastName = reader["LastName"].ToString(),
                             FirstName = reader["FirstName"].ToString(),
@@ -54,8 +56,11 @@ namespace BATODA.Modules.MemberModule
                             MembershipType = reader["MembershipType"].ToString(),
                             ContactNumber = reader["ContactNumber"].ToString(),
                             MemberStatus = reader["MemberStatus"].ToString(),
-                            PenaltyLevel = (int)reader["PenaltyLevel"]
+                            PenaltyLevel = (int)reader["PenaltyLevel"],
+                            SuspensionDays = reader["SuspensionDays"] != DBNull.Value ? Convert.ToInt32(reader["SuspensionDays"]) : 0,
+                            SuspensionStartDate = reader["SuspensionStart"] != DBNull.Value ? (DateTime?)Convert.ToDateTime(reader["SuspensionStart"]) : null
                         });
+
                     }
                 }
             }
@@ -310,10 +315,18 @@ namespace BATODA.Modules.MemberModule
         public void IncrementPenaltyLevel(int bodyNumber)
         {
             string query = @"
-            UPDATE MemberInfo
-            SET PenaltyLevel = CASE WHEN PenaltyLevel < 3 THEN PenaltyLevel + 1 ELSE PenaltyLevel END,
-            DaysRemaining = CASE WHEN PenaltyLevel = 2 THEN SuspensionDays ELSE DaysRemaining END
-            WHERE BodyNumber = @BodyNumber;
+            DECLARE @CurrentLevel INT;
+            SELECT @CurrentLevel = PenaltyLevel FROM MemberInfo WHERE BodyNumber = @BodyNumber;
+
+            IF (@CurrentLevel < 3)
+            BEGIN
+                UPDATE MemberInfo
+                SET 
+                    PenaltyLevel = PenaltyLevel + 1,
+                    SuspensionDays = CASE WHEN PenaltyLevel + 1 = 3 THEN 24 ELSE SuspensionDays END,
+                    SuspensionStart = CASE WHEN PenaltyLevel + 1 = 3 THEN GETDATE() ELSE SuspensionStart END
+                WHERE BodyNumber = @BodyNumber;
+            END
             ";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -324,6 +337,41 @@ namespace BATODA.Modules.MemberModule
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public void UpdateSuspensionHours()
+        {
+            string query = @"
+        UPDATE MemberInfo
+        SET 
+            SuspensionDays = CASE 
+                                WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) > 0
+                                THEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE())
+                                ELSE 0
+                              END,
+            PenaltyLevel = CASE
+                            WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) <= 0
+                            THEN 0
+                            ELSE PenaltyLevel
+                          END,
+            SuspensionStart = CASE
+                                WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) <= 0
+                                THEN NULL
+                                ELSE SuspensionStart
+                              END
+        WHERE PenaltyLevel = 3;
+    ";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+
+
+
 
 
     }

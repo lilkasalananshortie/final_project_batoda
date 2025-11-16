@@ -50,6 +50,19 @@ SET RenewalStatus =
         ELSE 'Renewed'
     END;
 
+--------------- REMOVE THIS, NEW TO ------------------
+ALTER TABLE MemberInfo
+DROP CONSTRAINT DF__MemberInf__DaysR__5441852A;
+
+ALTER TABLE MemberInfo
+DROP COLUMN DaysRemaining;
+
+-------------- ADD THIS NEW -----------------
+ALTER TABLE MemberInfo
+ADD SuspensionStart DATETIME NULL;
+
+
+
 
 INSERT INTO MemberInfo 
 (MembershipType, LastName, FirstName, MiddleInitial, Birthdate, TricycleBrand, TricycleModel, ContactNumber, ChassisNumber, EngineNumber, PlateNumber, TaxBalance, MemberStatus, PenaltyLevel, SuspensionDays, DaysRemaining, DateJoined)

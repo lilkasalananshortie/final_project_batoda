@@ -32,22 +32,57 @@ namespace BATODA.Modules.MemberModule
         public string ImagePath { get; set; }
         public DateTime DateJoined { get; set; }
         public int SuspensionDays { get; set; }
-        public int DaysRemaining { get; set; }
-        public DateTime ExpiryDate { get; set; }      
-        public string RenewalStatus { get; set; }    
+        public DateTime? SuspensionStartDate { get; set; }
 
-        public int SuspensionDaysRemaining
+        public DateTime ExpiryDate { get; set; }      
+        public string RenewalStatus { get; set; }
+
+        public int SuspensionHoursRemaining
         {
             get
             {
-                if (PenaltyLevel == 3)
+                if (PenaltyLevel == 3 && SuspensionStartDate.HasValue)
                 {
-                    int remaining = 7 - PenaltyCount;
-                    return remaining < 0 ? 0 : remaining;
+                    double hoursLeft = SuspensionDays - (DateTime.Now - SuspensionStartDate.Value).TotalHours;
+                    return hoursLeft <= 0 ? 0 : (int)Math.Ceiling(hoursLeft);
                 }
                 return 0;
             }
         }
+
+        public void ApplyPenalty()
+        {
+            if (PenaltyLevel < 3)
+            {
+                PenaltyLevel += 1;
+
+                if (PenaltyLevel == 3)
+                {
+                    SuspensionDays = 24; // 24 HOURS
+                    SuspensionStartDate = DateTime.Now;
+                }
+            }
+        }
+
+        public void UpdateSuspensionStatus()
+        {
+            if (PenaltyLevel == 3 && SuspensionStartDate.HasValue)
+            {
+                double hoursPassed = (DateTime.Now - SuspensionStartDate.Value).TotalHours;
+                if (hoursPassed >= SuspensionDays)
+                {
+                    PenaltyLevel = 0;
+                    SuspensionDays = 0;
+                    SuspensionStartDate = null;
+                }
+            }
+        }
+
+
+
+
+
+
 
 
     }

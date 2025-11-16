@@ -75,13 +75,17 @@ namespace BATODA
 
         }
 
+
+
         private void LoadMembersToGrid()
         {
+            MemberRepo.UpdateSuspensionHours();
             MembersDataGrid.Rows.Clear();
             var members = MemberRepo.GetAllMembers();
 
             foreach (var m in members)
             {
+                m.UpdateSuspensionStatus();
                 string penaltyDisplay;
 
                 if (m.PenaltyLevel == 0)
@@ -98,14 +102,14 @@ namespace BATODA
                 }
                 else if (m.PenaltyLevel == 3)
                 {
-                    penaltyDisplay = $"Remaining {m.SuspensionDaysRemaining} days of Suspension";
+                    penaltyDisplay = $"Remaining {m.SuspensionHoursRemaining} hours of Suspension";
                 }
                 else
                 {
                     penaltyDisplay = "Unknown";
                 }
 
-                string bodyNumFormatted = m.BodyNumber.ToString("D3"); // formats 1 -> 001
+                string bodyNumFormatted = m.BodyNumber.ToString("D3"); 
 
                 MembersDataGrid.Rows.Add(
                     bodyNumFormatted,
@@ -373,6 +377,7 @@ namespace BATODA
 
             if (member != null)
             {
+                member.UpdateSuspensionStatus();
                 BodyNumLbl.Text = "BATODA - " + "(" + member.BodyNumber.ToString("D3") + ")";
                 CurrentNameLbl.Text = $"{member.FirstName} {member.MiddleInitial}. {member.LastName}";
                 CurrentBirthdayLbl.Text = member.Birthdate.ToString("MM-dd-yyyy");
@@ -398,7 +403,6 @@ namespace BATODA
             if (MembersDataGrid.SelectedRows.Count == 0) return;
 
             int bodyNumber = Convert.ToInt32(MembersDataGrid.SelectedRows[0].Cells["BodyNumber"].Value);
-
             var repo = new MemberRepository();
             var member = repo.MemberOverview(bodyNumber);
 
@@ -414,13 +418,15 @@ namespace BATODA
             if (confirm == DialogResult.Yes)
             {
                 repo.IncrementPenaltyLevel(bodyNumber);
-
                 MessageBox.Show("Penalty added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                repo.UpdateSuspensionHours();
 
                 LoadMemberOverview(bodyNumber);
                 LoadMembersToGrid();
             }
         }
+
 
 
     }
