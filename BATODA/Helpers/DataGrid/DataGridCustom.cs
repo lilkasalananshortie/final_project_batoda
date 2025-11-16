@@ -33,6 +33,7 @@ namespace BATODA.Helpers.DataGrids
             foreach (DataGridViewColumn col in dgv.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
             dgv.ReadOnly = true;
@@ -186,29 +187,29 @@ namespace BATODA.Helpers.DataGrids
                 HeaderText = "Edit",
                 Image = Properties.Resources.edit,
                 ImageLayout = DataGridViewImageCellLayout.Zoom,
-                Width = 40
+                Width = 70, 
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.None
             };
 
             var deleteColumn = new DataGridViewImageColumn
             {
                 Name = "Delete",
                 HeaderText = "Delete",
-                Image = Properties.Resources.delete, 
+                Image = Properties.Resources.delete,
                 ImageLayout = DataGridViewImageCellLayout.Zoom,
-                Width = 40
+                Width = 70, 
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.None
             };
 
             dgv.Columns.Add(editColumn);
             dgv.Columns.Add(deleteColumn);
 
-         
             foreach (DataGridViewColumn col in new[] { editColumn, deleteColumn })
             {
-                col.DefaultCellStyle.Padding = new Padding(20); 
+                col.DefaultCellStyle.Padding = new Padding(5);
                 col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
-            // Track hovered row and column
             int hoveredRow = -1;
             int hoveredCol = -1;
 
@@ -255,6 +256,7 @@ namespace BATODA.Helpers.DataGrids
                 e.Handled = true;
             };
         }
+
 
     }
 }

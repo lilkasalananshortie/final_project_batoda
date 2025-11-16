@@ -160,5 +160,25 @@ namespace BATODA.User_Control_Forms
                 EditMemberTypeLbl.Text = member.MembershipType;
             }
         }
+
+        private void EditPlateNoLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel16_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -39,7 +39,6 @@
             this.RenewSelectedButton = new BATODA.ButtonStyle();
             this.ConfirmationRenewPanel = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.MembershipTypeLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.BodyNumberLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.PreviewImagePb = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.CancelRenewalButton = new BATODA.ButtonStyle();
             this.RenewButton = new BATODA.ButtonStyle();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -66,7 +66,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -309,14 +309,6 @@
             this.panel11.Size = new System.Drawing.Size(820, 3);
             this.panel11.TabIndex = 89;
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel10.Location = new System.Drawing.Point(20, 70);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(820, 3);
-            this.panel10.TabIndex = 88;
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
@@ -500,6 +492,16 @@
             this.PreviewImagePb.TabIndex = 52;
             this.PreviewImagePb.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(333, 25);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Member Renewal Confirmation";
+            // 
             // CancelRenewalButton
             // 
             this.CancelRenewalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -628,15 +630,13 @@
             this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 50;
             // 
-            // label1
+            // panel10
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 25);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Member Renewal Confirmation";
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel10.Location = new System.Drawing.Point(20, 70);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(820, 3);
+            this.panel10.TabIndex = 88;
             // 
             // MembershipRenewalUForm
             // 
@@ -717,7 +717,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel10;
     }
 }

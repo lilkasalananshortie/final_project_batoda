@@ -49,9 +49,8 @@ namespace BATODA
             SetupGridColumns();
             LoadMembersToGrid();
 
-            DataGridCustom.AddActionButtons(MembersDataGrid);
             DataGridCustom.ApplyCustomGrid(MembersDataGrid);
-
+            DataGridCustom.AddActionButtons(MembersDataGrid);
 
 
             AddMemberPanel.Visible = false;
