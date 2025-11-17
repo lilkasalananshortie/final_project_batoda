@@ -33,14 +33,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TopBarPanel = new System.Windows.Forms.Panel();
-            this.CalendarButton = new BATODA.ButtonStyle();
-            this.NotificationButton = new BATODA.ButtonStyle();
-            this.AccountButton = new BATODA.ButtonStyle();
+            this.MainTime = new System.Windows.Forms.Label();
+            this.MainDate = new System.Windows.Forms.Label();
+            this.SubTopPanel = new System.Windows.Forms.Label();
             this.TopPanelText = new System.Windows.Forms.Label();
             this.NotificationPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
             this.NavBarPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.DisplayPanel = new System.Windows.Forms.Panel();
+            this.CalendarButton = new BATODA.ButtonStyle();
+            this.NotificationButton = new BATODA.ButtonStyle();
+            this.AccountButton = new BATODA.ButtonStyle();
             this.HomeButton = new BATODA.ButtonStyle();
             this.MembersMainButton = new BATODA.ButtonStyle();
             this.RegisteredVehiclesButton = new BATODA.ButtonStyle();
@@ -48,9 +52,6 @@
             this.FinanceButton = new BATODA.ButtonStyle();
             this.CalendarBtn = new BATODA.ButtonStyle();
             this.SettingsButton = new BATODA.ButtonStyle();
-            this.DisplayPanel = new System.Windows.Forms.Panel();
-            this.MainDate = new System.Windows.Forms.Label();
-            this.MainTime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.TopBarPanel.SuspendLayout();
@@ -88,114 +89,59 @@
             this.TopBarPanel.Controls.Add(this.CalendarButton);
             this.TopBarPanel.Controls.Add(this.NotificationButton);
             this.TopBarPanel.Controls.Add(this.AccountButton);
+            this.TopBarPanel.Controls.Add(this.SubTopPanel);
             this.TopBarPanel.Controls.Add(this.TopPanelText);
             this.TopBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopBarPanel.Location = new System.Drawing.Point(300, 0);
             this.TopBarPanel.Name = "TopBarPanel";
-            this.TopBarPanel.Size = new System.Drawing.Size(1526, 90);
+            this.TopBarPanel.Size = new System.Drawing.Size(1624, 90);
             this.TopBarPanel.TabIndex = 3;
             this.TopBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopBarPanel_Paint);
             // 
-            // CalendarButton
+            // MainTime
             // 
-            this.CalendarButton.BackColor = System.Drawing.Color.White;
-            this.CalendarButton.BackgroundColor = System.Drawing.Color.White;
-            this.CalendarButton.BorderColor = System.Drawing.Color.Red;
-            this.CalendarButton.BorderRadius = 0;
-            this.CalendarButton.BorderSize = 0;
-            this.CalendarButton.ButtonImage = null;
-            this.CalendarButton.FlatAppearance.BorderSize = 0;
-            this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalendarButton.ForeColor = System.Drawing.Color.Black;
-            this.CalendarButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.CalendarButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.CalendarButton.ImageColor = System.Drawing.Color.Black;
-            this.CalendarButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.CalendarButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CalendarButton.IsToggled = false;
-            this.CalendarButton.Location = new System.Drawing.Point(856, 36);
-            this.CalendarButton.MouseDownColor = System.Drawing.Color.White;
-            this.CalendarButton.Name = "CalendarButton";
-            this.CalendarButton.PaddingX = 10;
-            this.CalendarButton.PaddingY = 5;
-            this.CalendarButton.Size = new System.Drawing.Size(106, 40);
-            this.CalendarButton.TabIndex = 6;
-            this.CalendarButton.Text = "Calendar";
-            this.CalendarButton.TextColor = System.Drawing.Color.Black;
-            this.CalendarButton.TextOffset = 8;
-            this.CalendarButton.ToggleColor = System.Drawing.Color.DarkGray;
-            this.CalendarButton.UseVisualStyleBackColor = false;
-            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
+            this.MainTime.AutoSize = true;
+            this.MainTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainTime.ForeColor = System.Drawing.Color.White;
+            this.MainTime.Location = new System.Drawing.Point(1531, 64);
+            this.MainTime.Name = "MainTime";
+            this.MainTime.Size = new System.Drawing.Size(80, 20);
+            this.MainTime.TabIndex = 8;
+            this.MainTime.Text = "00:00AM";
+            this.MainTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // NotificationButton
+            // MainDate
             // 
-            this.NotificationButton.BackColor = System.Drawing.Color.White;
-            this.NotificationButton.BackgroundColor = System.Drawing.Color.White;
-            this.NotificationButton.BorderColor = System.Drawing.Color.Red;
-            this.NotificationButton.BorderRadius = 0;
-            this.NotificationButton.BorderSize = 0;
-            this.NotificationButton.ButtonImage = null;
-            this.NotificationButton.FlatAppearance.BorderSize = 0;
-            this.NotificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotificationButton.ForeColor = System.Drawing.Color.Black;
-            this.NotificationButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.NotificationButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.NotificationButton.ImageColor = System.Drawing.Color.Black;
-            this.NotificationButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.NotificationButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.NotificationButton.IsToggled = false;
-            this.NotificationButton.Location = new System.Drawing.Point(744, 36);
-            this.NotificationButton.MouseDownColor = System.Drawing.Color.White;
-            this.NotificationButton.Name = "NotificationButton";
-            this.NotificationButton.PaddingX = 10;
-            this.NotificationButton.PaddingY = 5;
-            this.NotificationButton.Size = new System.Drawing.Size(106, 40);
-            this.NotificationButton.TabIndex = 5;
-            this.NotificationButton.Text = "Notification";
-            this.NotificationButton.TextColor = System.Drawing.Color.Black;
-            this.NotificationButton.TextOffset = 8;
-            this.NotificationButton.ToggleColor = System.Drawing.Color.DarkGray;
-            this.NotificationButton.UseVisualStyleBackColor = false;
-            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
+            this.MainDate.AutoSize = true;
+            this.MainDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainDate.ForeColor = System.Drawing.Color.White;
+            this.MainDate.Location = new System.Drawing.Point(1368, 39);
+            this.MainDate.Name = "MainDate";
+            this.MainDate.Size = new System.Drawing.Size(103, 20);
+            this.MainDate.TabIndex = 7;
+            this.MainDate.Text = "Loading . . .";
+            this.MainDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // AccountButton
+            // SubTopPanel
             // 
-            this.AccountButton.BackColor = System.Drawing.Color.White;
-            this.AccountButton.BackgroundColor = System.Drawing.Color.White;
-            this.AccountButton.BorderColor = System.Drawing.Color.Red;
-            this.AccountButton.BorderRadius = 0;
-            this.AccountButton.BorderSize = 0;
-            this.AccountButton.ButtonImage = null;
-            this.AccountButton.FlatAppearance.BorderSize = 0;
-            this.AccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AccountButton.ForeColor = System.Drawing.Color.Black;
-            this.AccountButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.AccountButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.AccountButton.ImageColor = System.Drawing.Color.Black;
-            this.AccountButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.AccountButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.AccountButton.IsToggled = false;
-            this.AccountButton.Location = new System.Drawing.Point(632, 36);
-            this.AccountButton.MouseDownColor = System.Drawing.Color.White;
-            this.AccountButton.Name = "AccountButton";
-            this.AccountButton.PaddingX = 10;
-            this.AccountButton.PaddingY = 5;
-            this.AccountButton.Size = new System.Drawing.Size(106, 40);
-            this.AccountButton.TabIndex = 4;
-            this.AccountButton.Text = "Account";
-            this.AccountButton.TextColor = System.Drawing.Color.Black;
-            this.AccountButton.TextOffset = 8;
-            this.AccountButton.ToggleColor = System.Drawing.Color.DarkGray;
-            this.AccountButton.UseVisualStyleBackColor = false;
-            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
+            this.SubTopPanel.AutoSize = true;
+            this.SubTopPanel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubTopPanel.ForeColor = System.Drawing.Color.White;
+            this.SubTopPanel.Location = new System.Drawing.Point(27, 57);
+            this.SubTopPanel.Name = "SubTopPanel";
+            this.SubTopPanel.Size = new System.Drawing.Size(345, 21);
+            this.SubTopPanel.TabIndex = 0;
+            this.SubTopPanel.Text = "Here’s what’s happening with your organization.";
+            this.SubTopPanel.Click += new System.EventHandler(this.TopPanelText_Click);
             // 
             // TopPanelText
             // 
             this.TopPanelText.AutoSize = true;
-            this.TopPanelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TopPanelText.Location = new System.Drawing.Point(26, 17);
+            this.TopPanelText.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TopPanelText.ForeColor = System.Drawing.Color.White;
+            this.TopPanelText.Location = new System.Drawing.Point(23, 19);
             this.TopPanelText.Name = "TopPanelText";
-            this.TopPanelText.Size = new System.Drawing.Size(422, 55);
+            this.TopPanelText.Size = new System.Drawing.Size(325, 45);
             this.TopPanelText.TabIndex = 0;
             this.TopPanelText.Text = "BAMBANG TODA";
             this.TopPanelText.Click += new System.EventHandler(this.TopPanelText_Click);
@@ -242,6 +188,107 @@
             this.NavBarPanel.Name = "NavBarPanel";
             this.NavBarPanel.Size = new System.Drawing.Size(300, 1000);
             this.NavBarPanel.TabIndex = 1;
+            // 
+            // DisplayPanel
+            // 
+            this.DisplayPanel.BackColor = System.Drawing.Color.Silver;
+            this.DisplayPanel.Location = new System.Drawing.Point(322, 522);
+            this.DisplayPanel.Name = "DisplayPanel";
+            this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
+            this.DisplayPanel.TabIndex = 5;
+            // 
+            // CalendarButton
+            // 
+            this.CalendarButton.BackColor = System.Drawing.Color.White;
+            this.CalendarButton.BackgroundColor = System.Drawing.Color.White;
+            this.CalendarButton.BorderColor = System.Drawing.Color.Red;
+            this.CalendarButton.BorderRadius = 0;
+            this.CalendarButton.BorderSize = 0;
+            this.CalendarButton.ButtonImage = null;
+            this.CalendarButton.FlatAppearance.BorderSize = 0;
+            this.CalendarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalendarButton.ForeColor = System.Drawing.Color.Black;
+            this.CalendarButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.CalendarButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.CalendarButton.ImageColor = System.Drawing.Color.Black;
+            this.CalendarButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CalendarButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CalendarButton.IsToggled = false;
+            this.CalendarButton.Location = new System.Drawing.Point(999, 27);
+            this.CalendarButton.MouseDownColor = System.Drawing.Color.White;
+            this.CalendarButton.Name = "CalendarButton";
+            this.CalendarButton.PaddingX = 10;
+            this.CalendarButton.PaddingY = 5;
+            this.CalendarButton.Size = new System.Drawing.Size(106, 40);
+            this.CalendarButton.TabIndex = 6;
+            this.CalendarButton.Text = "Calendar";
+            this.CalendarButton.TextColor = System.Drawing.Color.Black;
+            this.CalendarButton.TextOffset = 8;
+            this.CalendarButton.ToggleColor = System.Drawing.Color.DarkGray;
+            this.CalendarButton.UseVisualStyleBackColor = false;
+            this.CalendarButton.Click += new System.EventHandler(this.CalendarButton_Click);
+            // 
+            // NotificationButton
+            // 
+            this.NotificationButton.BackColor = System.Drawing.Color.White;
+            this.NotificationButton.BackgroundColor = System.Drawing.Color.White;
+            this.NotificationButton.BorderColor = System.Drawing.Color.Red;
+            this.NotificationButton.BorderRadius = 0;
+            this.NotificationButton.BorderSize = 0;
+            this.NotificationButton.ButtonImage = null;
+            this.NotificationButton.FlatAppearance.BorderSize = 0;
+            this.NotificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotificationButton.ForeColor = System.Drawing.Color.Black;
+            this.NotificationButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.NotificationButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.NotificationButton.ImageColor = System.Drawing.Color.Black;
+            this.NotificationButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.NotificationButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.NotificationButton.IsToggled = false;
+            this.NotificationButton.Location = new System.Drawing.Point(887, 27);
+            this.NotificationButton.MouseDownColor = System.Drawing.Color.White;
+            this.NotificationButton.Name = "NotificationButton";
+            this.NotificationButton.PaddingX = 10;
+            this.NotificationButton.PaddingY = 5;
+            this.NotificationButton.Size = new System.Drawing.Size(106, 40);
+            this.NotificationButton.TabIndex = 5;
+            this.NotificationButton.Text = "Notification";
+            this.NotificationButton.TextColor = System.Drawing.Color.Black;
+            this.NotificationButton.TextOffset = 8;
+            this.NotificationButton.ToggleColor = System.Drawing.Color.DarkGray;
+            this.NotificationButton.UseVisualStyleBackColor = false;
+            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
+            // 
+            // AccountButton
+            // 
+            this.AccountButton.BackColor = System.Drawing.Color.White;
+            this.AccountButton.BackgroundColor = System.Drawing.Color.White;
+            this.AccountButton.BorderColor = System.Drawing.Color.Red;
+            this.AccountButton.BorderRadius = 0;
+            this.AccountButton.BorderSize = 0;
+            this.AccountButton.ButtonImage = null;
+            this.AccountButton.FlatAppearance.BorderSize = 0;
+            this.AccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccountButton.ForeColor = System.Drawing.Color.Black;
+            this.AccountButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.AccountButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.AccountButton.ImageColor = System.Drawing.Color.Black;
+            this.AccountButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.AccountButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.AccountButton.IsToggled = false;
+            this.AccountButton.Location = new System.Drawing.Point(775, 27);
+            this.AccountButton.MouseDownColor = System.Drawing.Color.White;
+            this.AccountButton.Name = "AccountButton";
+            this.AccountButton.PaddingX = 10;
+            this.AccountButton.PaddingY = 5;
+            this.AccountButton.Size = new System.Drawing.Size(106, 40);
+            this.AccountButton.TabIndex = 4;
+            this.AccountButton.Text = "Account";
+            this.AccountButton.TextColor = System.Drawing.Color.Black;
+            this.AccountButton.TextOffset = 8;
+            this.AccountButton.ToggleColor = System.Drawing.Color.DarkGray;
+            this.AccountButton.UseVisualStyleBackColor = false;
+            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
             // 
             // HomeButton
             // 
@@ -468,43 +515,13 @@
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
-            // DisplayPanel
-            // 
-            this.DisplayPanel.BackColor = System.Drawing.Color.Silver;
-            this.DisplayPanel.Location = new System.Drawing.Point(322, 522);
-            this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
-            this.DisplayPanel.TabIndex = 5;
-            // 
-            // MainDate
-            // 
-            this.MainDate.AutoSize = true;
-            this.MainDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainDate.Location = new System.Drawing.Point(1133, 11);
-            this.MainDate.Name = "MainDate";
-            this.MainDate.Size = new System.Drawing.Size(179, 33);
-            this.MainDate.TabIndex = 7;
-            this.MainDate.Text = "Loading . . .";
-            this.MainDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // MainTime
-            // 
-            this.MainTime.AutoSize = true;
-            this.MainTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainTime.Location = new System.Drawing.Point(1133, 48);
-            this.MainTime.Name = "MainTime";
-            this.MainTime.Size = new System.Drawing.Size(179, 33);
-            this.MainTime.TabIndex = 8;
-            this.MainTime.Text = "Loading . . .";
-            this.MainTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1826, 1000);
+            this.ClientSize = new System.Drawing.Size(1924, 1000);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);
@@ -550,5 +567,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label MainDate;
         private System.Windows.Forms.Label MainTime;
+        private System.Windows.Forms.Label SubTopPanel;
     }
 }

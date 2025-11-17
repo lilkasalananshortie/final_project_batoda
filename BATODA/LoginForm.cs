@@ -61,6 +61,9 @@ namespace BATODA
             DisplayClass.SetPlaceholder(PasswordTextBox, "Password");
 
             this.ActiveControl = null;
+
+           
+
         }
         protected override void OnShown(EventArgs e)
         {
@@ -71,6 +74,16 @@ namespace BATODA
         private void LoginPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public class TransparentTextBox : TextBox
+        {
+            public TransparentTextBox()
+            {
+                SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+                BackColor = Color.Transparent;
+                BorderStyle = BorderStyle.None;
+            }
         }
     }
 }

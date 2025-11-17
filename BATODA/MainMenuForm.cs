@@ -49,6 +49,7 @@ namespace BATODA
             this.ActiveControl = null;
             DisplayClass.ShowMain(new DashboardUForm(this));
             TopPanelText.Text = "DASHBOARD";
+            SubTopPanel.Text = "Here’s what’s happening with your organization.";
 
             DisplayClass.Register
             (
@@ -119,7 +120,9 @@ namespace BATODA
         {
             ActivateMainButton("Dashboard");
             DisplayClass.ShowMain(new DashboardUForm(this));
-            TopPanelText.Text = "DASHBOARD"; 
+            TopPanelText.Text = "DASHBOARD";
+            SubTopPanel.Text = "Here’s what’s happening with your organization.";
+
         }
 
         private void MembersMainButton_Click(object sender, EventArgs e)
@@ -127,6 +130,8 @@ namespace BATODA
             ActivateMainButton("Members");
             DisplayClass.ShowMain(new MembersUForm());
             TopPanelText.Text = "MEMBER MANAGEMENT";
+            SubTopPanel.Text = "Manage member Registrations, transfers and information";
+
         }
 
         private void RegisteredVehiclesButton_Click(object sender, EventArgs e)
@@ -134,6 +139,8 @@ namespace BATODA
             ActivateMainButton("Vehicles");
             DisplayClass.ShowMain(new TricycleUForm());
             TopPanelText.Text = "MANAGE VEHICLE";
+            SubTopPanel.Text = "Manage Vehicle Registrations, transfers and information";
+
         }
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
@@ -141,18 +148,24 @@ namespace BATODA
             ActivateMainButton("Assistance"); 
             DisplayClass.ShowMain(new AssistanceRequestUForm());
             TopPanelText.Text = "MANAGE ASSISTANCE";
+            SubTopPanel.Text = "Manage member assistance request and approvals.";
+
         }
         private void FinanceButton_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Finance");
             DisplayClass.ShowMain(new FinanceUForm());
             TopPanelText.Text = "FINANCE MANAGEMENT";
+            SubTopPanel.Text = "Track member tax payments (Butaw) and membership renewal status";
+
         }
         private void CalendarBtn_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Calendar");
             DisplayClass.ShowMain(new CalendarUForm());
             TopPanelText.Text = "CALENDAR";
+            SubTopPanel.Text = "Create and manage your upcoming events.";
+
 
         }
 
@@ -161,6 +174,8 @@ namespace BATODA
             ActivateMainButton("Settings");
             DisplayClass.ShowMain(new SettingsUForm());
             TopPanelText.Text = "SETTINGS";
+            SubTopPanel.Text = "Backup/Restore your organizations data ";
+
         }
         //THIS PART IS FOR CALENDAR AND ACCOUNT BUTTONS NEED PA AYUSIN LOGIC KAPAG TINOGLE BUTTON CLOSE OR MAY IN BUILT CLOSE BTN
         private void AccountButton_Click(object sender, EventArgs e)
