@@ -1,4 +1,5 @@
-﻿using BATODA.Helpers.Database.Members;
+﻿using BATODA.Helpers.Data;
+using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Assistance_Request_Module.Renewal_Classes;
 using BATODA.Modules.Member_Module.Member_Classes;
@@ -40,6 +41,7 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
+            var repo = new FinanceRepository();
 
             DisplayClass.SetPlaceholder(SearchTxt, "Search Member");
             DisplayClass.SetPlaceholder(SortStatusCmb, "Status", "Active", "Inactive");
@@ -48,6 +50,7 @@ namespace BATODA
             DataGridCustom.ApplyCustomGrid(MembersDataGrid);
 
             MembersDataGrid.AutoGenerateColumns = false;
+            repo.UpdateAllTaxBalances();
             SetupGridColumns();
             LoadMembersToGrid();
 
@@ -76,8 +79,6 @@ namespace BATODA
 
         }
 
-
-
         private void LoadMembersToGrid()
         {
             MemberRepo.UpdateSuspensionHours();
@@ -86,7 +87,6 @@ namespace BATODA
 
             foreach (var m in members)
             {
-                m.UpdateSuspensionStatus();
                 string penaltyDisplay;
 
                 if (m.PenaltyLevel == 0)
@@ -103,14 +103,14 @@ namespace BATODA
                 }
                 else if (m.PenaltyLevel == 3)
                 {
-                    penaltyDisplay = $"Remaining {m.SuspensionHoursRemaining} hours of Suspension";
+                    penaltyDisplay = $"Remaining {m.SuspensionDays} Hours of Suspension";
                 }
                 else
                 {
                     penaltyDisplay = "Unknown";
                 }
 
-                string bodyNumFormatted = m.BodyNumber.ToString("D3"); 
+                string bodyNumFormatted = m.BodyNumber.ToString("D3");
 
                 MembersDataGrid.Rows.Add(
                     bodyNumFormatted,
@@ -378,7 +378,6 @@ namespace BATODA
 
             if (member != null)
             {
-                member.UpdateSuspensionStatus();
                 BodyNumLbl.Text = "BATODA - " + "(" + member.BodyNumber.ToString("D3") + ")";
                 CurrentNameLbl.Text = $"{member.FirstName} {member.MiddleInitial}. {member.LastName}";
                 CurrentBirthdayLbl.Text = member.Birthdate.ToString("MM-dd-yyyy");

@@ -50,7 +50,6 @@ namespace BATODA.Modules.Assistance_Request_Module
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-
                 string updateQuery = "UPDATE FinancialAssistanceRequests SET RequestStatus = @Status WHERE TicketID = @TicketID";
                 using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
                 {
@@ -60,6 +59,7 @@ namespace BATODA.Modules.Assistance_Request_Module
                 }
             }
         }
+
 
         public void LoadData(DataGridView grid)
         {
@@ -107,20 +107,25 @@ namespace BATODA.Modules.Assistance_Request_Module
 
 
 
-        public void InsertActionLog(string requestAction, string actionDescription)
+        public void InsertActionLog(int ticketID, string actionTitle, string actionInfo)
         {
-            string query = "INSERT INTO AssistanceActionLog (RequestAction, ActionDescription, ActionDate) " +
-                           "VALUES (@action, @desc, @date)";
             using (SqlConnection conn = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@action", requestAction);
-                cmd.Parameters.AddWithValue("@desc", actionDescription);
-                cmd.Parameters.AddWithValue("@date", DateTime.Now);
-                conn.Open();
-                cmd.ExecuteNonQuery();
+                string query = @"
+            INSERT INTO AssistanceActionHistory (TicketID, ActionDate)
+            VALUES (@TicketID, @ActionDate)";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@TicketID", ticketID);
+                    cmd.Parameters.AddWithValue("@ActionDate", DateTime.Now);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
+
         public List<TicketModel> GetAllRequests()
         {
             List<TicketModel> tickets = new List<TicketModel>();

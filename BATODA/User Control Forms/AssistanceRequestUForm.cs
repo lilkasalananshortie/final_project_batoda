@@ -41,45 +41,6 @@ namespace BATODA
             ticketHelper.LoadActivityLogs();
         }
 
-        //private void LoadActionLogs()
-        //{
-        //    using (SqlConnection conn = new SqlConnection("your connection string here"))
-        //    {
-        //        conn.Open();
-        //        string query = "SELECT * FROM AssistanceActionLog ORDER BY ActionDate DESC";
-        //        using (SqlCommand cmd = new SqlCommand(query, conn))
-        //        using (SqlDataReader reader = cmd.ExecuteReader())
-        //        {
-        //            FLPActivityLog.Controls.Clear(); // clear previous images to avoid duplicates
-
-        //            while (reader.Read())
-        //            {
-        //                string status = reader["RequestStatus"].ToString();
-
-        //                Image img;
-        //                if (status == "approved")
-        //                    img = Properties.Resources.ApprovedImage;
-        //                else if (status == "rejected")
-        //                    img = Properties.Resources.RejectedImage;
-        //                else
-        //                    img = Properties.Resources.PendingImage;
-
-        //                PictureBox pb = new PictureBox
-        //                {
-        //                    Image = img,
-        //                    SizeMode = PictureBoxSizeMode.StretchImage,
-        //                    Width = 50,
-        //                    Height = 50
-        //                };
-
-        //                FLPActivityLog.Controls.Add(pb); // FLPActivityLog is your FlowLayoutPanel for logs
-        //            }
-        //        }
-        //    }
-        //}
-
-
-
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
             LoadAllTickets();
@@ -236,8 +197,6 @@ namespace BATODA
             }
         }
 
-
-
         private void SubmitTicket_Click(object sender, EventArgs e)
         {
             TransferToDisplayPanel();
@@ -246,12 +205,10 @@ namespace BATODA
             FillUpFormPanel.Hide();
         }
 
-
         private void ClearButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ClearInputs(this);
         }
-
         private void RequestedByComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedItem = ReqAssistanceThruCmb.SelectedItem?.ToString();
