@@ -33,6 +33,8 @@ namespace BATODA
             TotalActiveLbl.Text = MemberInfoSummary.GetActiveCount().ToString();
             TotalInactiveLbl.Text = MemberInfoSummary.GetInactiveCount().ToString();
             TotalSuspendedLbl.Text = MemberInfoSummary.GetSuspendedCount().ToString();
+            
+           
         }
 
 
@@ -426,7 +428,9 @@ namespace BATODA
             }
         }
 
+        private void label17_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
