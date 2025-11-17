@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrid;
 using BATODA.User_Control_Forms;
 
 namespace BATODA
@@ -34,11 +36,27 @@ namespace BATODA
         public CalendarUForm()
         {
             InitializeComponent();
-
+            AttendanceHandler.ApplyCustomGridWithCheckbox(AttendanceMembersDataGridView);
             AddEventPanel.Hide();
             CheckAttendancePanel.Hide();
+            
+            LoadSampleData();//PAKI DELETE PAG DINELETE YUNG METHOD PARA NO ERROR <--ARONE 
         }
+        //ETONG METHOD NA TO PA DELETE <--ARONE 
+        private void LoadSampleData()
+        {
+            AttendanceMembersDataGridView.Rows.Clear();
 
+            // Sample data
+            AttendanceMembersDataGridView.Rows.Add(false, "001", "John Doe");
+            AttendanceMembersDataGridView.Rows.Add(true, "002", "Jane Smith");
+            AttendanceMembersDataGridView.Rows.Add(false, "003", "Robert Johnson");
+            AttendanceMembersDataGridView.Rows.Add(true, "004", "Emily Davis");
+            AttendanceMembersDataGridView.Rows.Add(false, "005", "Michael Wilson");
+            AttendanceMembersDataGridView.Rows.Add(true, "006", "Sarah Brown");
+            AttendanceMembersDataGridView.Rows.Add(false, "007", "David Taylor");
+            AttendanceMembersDataGridView.Rows.Add(true, "008", "Lisa Anderson");
+        }
         private void CalendarUForm_Load(object sender, EventArgs e)
         {
             month = dateTime.Month;
@@ -380,10 +398,15 @@ namespace BATODA
             {
                 ev.Status = "Done";
                 UpdateEventInDayCell(ev);
-                MoveToPastEvents(ev, true);
+               MoveToPastEvents(ev, true); // <-- NEED IBAHIN TO PRE KAPAG PAPASOK MO NA YUNG SA LOGIC NG ATTENDANCE <-- ARONE
                 EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
+                //IIBAHIN TO DEPENDE KUNG PAANO MO GAGAWIN YUNG ATTENDANCE <--ARONE
+                CheckAttendancePanel.Show();
+                SaveAttendanceButton.Show();
+
+
             };
 
             btnCancel.Click += (s, args) =>
@@ -519,8 +542,11 @@ namespace BATODA
 
         private void CheckAttendanceButton_Click(object sender, EventArgs e)
         {
+          
             CheckAttendancePanel.Show();
             CheckAttendancePanel.BringToFront();
+
+           
         }
 
         private void EditEventButton_Click(object sender, EventArgs e)
@@ -548,7 +574,10 @@ namespace BATODA
 
         private void SaveAttendanceButton_Click(object sender, EventArgs e)
         {
+           
+            
             CheckAttendancePanel.Hide();
+            
         }
 
         private void previousButton_Click(object sender, EventArgs e)
