@@ -113,7 +113,6 @@ namespace BATODA
             }
 
             BodyNumberLabel.Text = nextRow.Cells["BodyNumber"].Value?.ToString() ?? "";
-            PlateNumberLabel.Text = nextRow.Cells["PlateNumber"].Value?.ToString() ?? "";
             FullNameLabel.Text = nextRow.Cells["FullName"].Value?.ToString() ?? "";
             ContactNoLabel.Text = nextRow.Cells["ContactNumber"].Value?.ToString() ?? "";
             MembershipTypeLabel.Text = nextRow.Cells["MembershipType"].Value?.ToString() ?? "";

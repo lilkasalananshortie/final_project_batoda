@@ -60,7 +60,7 @@ namespace BATODA.Modules.Assistance_Request_Module.Renewal_Classes
         SELECT BodyNumber, DateJoined
         FROM MemberInfo
         WHERE BodyNumber = @BodyNumber;
-    ";
+        ";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))

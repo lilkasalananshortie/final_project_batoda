@@ -157,26 +157,39 @@ namespace BATODA.Helpers.DataGrid
 
         }
 
+
+
         public static void EnsureYearRecords(int year)
         {
             var repo = new FinanceRepository();
             var members = repo.GetAllMembers();
             var payments = repo.GetPaymentsByYear(year);
+            DateTime today = DateTime.Today;
 
             foreach (var member in members)
             {
                 for (int month = 1; month <= 12; month++)
                 {
                     bool exists = payments.Any(p => p.BodyNumber == member.BodyNumber && p.Month == month);
+                    string status = TaxHandler.GetDefaultStatus(year, month);
+
                     if (!exists)
                     {
-                        // Insert default 'None' or status based on date
-                        string defaultStatus = TaxHandler.GetDefaultStatus(year, month);
-                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, month, defaultStatus);
+                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, month, status);
+                    }
+                    else
+                    {
+                        var payment = payments.First(p => p.BodyNumber == member.BodyNumber && p.Month == month);
+                        if (year < today.Year || (year == today.Year && month < today.Month))
+                        {
+                            if (payment.Status != "Paid")
+                                FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, month, "Overdue");
+                        }
                     }
                 }
             }
         }
+
 
         public static void LoadCurrentYear(DataGridView dgv)
         {

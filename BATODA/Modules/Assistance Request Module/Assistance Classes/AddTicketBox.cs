@@ -14,7 +14,6 @@ public class AddTicketBox
     private FlowLayoutPanel ActivityLogFlowLayoutPanel;
     AssistanceRepository repo = new AssistanceRepository();
 
-    // added field to track currently expanded box
     private Panel expandedPanel = null;
 
     public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel)
@@ -22,38 +21,34 @@ public class AddTicketBox
         TicketFlowLayoutPanel = panel;
         ActivityLogFlowLayoutPanel = activityLogPanel;
     }
+
     public void CreateTicketBox(
-        string trackingNumber,
-        string fullName,
-        string typeOfAid,
-        string dateRequested,
-        string status,
-        string requestedBy,
-        string amount,
-        string assistanceThru,
-        string contactNum,
-        string dateNeeded)
+    string trackingNumber,
+    string fullName,
+    string typeOfAid,
+    string dateRequested,
+    string status,
+    string requestedBy,
+    string amount,
+    string assistanceThru,
+    string contactNum,
+    string dateNeeded)
     {
-        Panel TicketBox = new Panel()
-        {
-            Size = new Size(300, 150),
-            BackColor = Color.WhiteSmoke,
-            BorderStyle = BorderStyle.FixedSingle,
-            Margin = new Padding(5),
-            Cursor = Cursors.Hand,
-            Tag = false
-        };
+        Panel TicketBox = new Panel();
+        TicketBox.Size = new Size(300, 150);
+        TicketBox.BackColor = Color.White;
+        TicketBox.BorderStyle = BorderStyle.FixedSingle;
+        TicketBox.Margin = new Padding(5);
+        TicketBox.Cursor = Cursors.Hand;
+        TicketBox.Tag = false;
 
         int y = 10;
 
-        // Header
         Panel HeaderPanel = new Panel()
         {
             Size = new Size(298, 30),
             Location = new Point(1, 1),
-            BackColor = (status == "Approved") ? Color.LightGreen :
-                        (status == "Rejected") ? Color.LightCoral :
-                        Color.LightGray
+            BackColor = Color.LightGray
         };
 
         Label lblTracking = new Label()
@@ -61,14 +56,12 @@ public class AddTicketBox
             Text = "Tracking Number: " + trackingNumber,
             Location = new Point(10, 7),
             AutoSize = true,
-            BackColor = HeaderPanel.BackColor,
-            Font = new Font("Microsoft Sans Serif", 11, FontStyle.Bold)
+            Font = new Font("Segoe UI", 9, FontStyle.Bold)
         };
         HeaderPanel.Controls.Add(lblTracking);
 
         y += 25;
 
-        // Picture
         PictureBox picMember = new PictureBox()
         {
             Location = new Point(10, y),
@@ -84,32 +77,28 @@ public class AddTicketBox
         {
             Text = "Full Name: " + fullName,
             Location = new Point(rightX, y + 5),
-            AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9)
+            AutoSize = true
         };
 
         Label lblAid = new Label()
         {
             Text = "Type of Aid: " + typeOfAid,
             Location = new Point(rightX, y + 30),
-            AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9)
+            AutoSize = true
         };
 
         Label lblDate = new Label()
         {
             Text = "Date Requested: " + dateRequested,
             Location = new Point(rightX, y + 55),
-            AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9)
+            AutoSize = true
         };
 
         Label lblStatus = new Label()
         {
             Text = "Status: " + status,
             Location = new Point(rightX, y + 80),
-            AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9)
+            AutoSize = true
         };
 
         int expandY = picMember.Bottom + 19;
@@ -119,7 +108,6 @@ public class AddTicketBox
             Text = "Requested by: " + requestedBy,
             Location = new Point(10, expandY),
             AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo",
             Visible = false
         };
@@ -130,7 +118,6 @@ public class AddTicketBox
             Text = "Amount: " + amount,
             Location = new Point(10, expandY),
             AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo",
             Visible = false
         };
@@ -141,7 +128,6 @@ public class AddTicketBox
             Text = "Assistance Thru: " + assistanceThru,
             Location = new Point(10, expandY),
             AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo",
             Visible = false
         };
@@ -152,7 +138,6 @@ public class AddTicketBox
             Text = "Contact Num: " + contactNum,
             Location = new Point(10, expandY),
             AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo",
             Visible = false
         };
@@ -163,111 +148,119 @@ public class AddTicketBox
             Text = "Date Needed: " + dateNeeded,
             Location = new Point(10, expandY),
             AutoSize = true,
-            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo",
             Visible = false
         };
+        expandY += 34;
 
-        // Buttons (DECLARED BEFORE USE)
-        Button approveBtn = new Button() { Text = "Approve", Location = new Point(10, expandY + 25), Size = new Size(80, 30) };
-        Button rejectBtn = new Button() { Text = "Reject", Location = new Point(105, expandY + 25), Size = new Size(80, 30) };
-        Button cancelBtn = new Button() { Text = "Cancel", Location = new Point(200, expandY + 25), Size = new Size(80, 30) };
-        Button releaseBtn = new Button() { Text = "Release", Location = new Point(220, expandY + 25), Size = new Size(80, 30), Visible = false };
+        Button approveBtn = new Button()
+        {
+            Text = "Approve",
+            Size = new Size(80, 30),
+            Location = new Point(10, expandY),
+            Visible = false,
+            Tag = "ExpandInfo"
+        };
 
-        // Button events
+        Button rejectBtn = new Button()
+        {
+            Text = "Reject",
+            Size = new Size(80, 30),
+            Location = new Point(105, expandY),
+            Visible = false,
+            Tag = "ExpandInfo"
+        };
+
+        Button cancelBtn = new Button()
+        {
+            Text = "Cancel",
+            Size = new Size(80, 30),
+            Location = new Point(200, expandY),
+            Visible = false,
+            Tag = "ExpandInfo"
+        };
+
+        Button releaseBtn = new Button()
+        {
+            Text = "Release",
+            Size = new Size(80, 30),
+            Location = new Point(200, 260),
+            Visible = false
+        };
+
+        int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
         approveBtn.Click += (s, e) =>
         {
-            if (expandedPanel == TicketBox) expandedPanel = null;
-
+            Panel parent = ((Button)s).Parent as Panel;
             HeaderPanel.BackColor = Color.LightGreen;
-            lblTracking.BackColor = Color.LightGreen;
             lblTracking.BringToFront();
+            lblTracking.BackColor = Color.LightGreen;
             lblStatus.Text = "Status: Approved";
-
-            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
             repo.UpdateRequestStatus(ticketID, "Approved");
-
+            releaseBtn.Visible = true;
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
-            releaseBtn.Visible = true;
 
-            AddActivityLog("Request Approved",
-                           $"Assistance request {trackingNumber} approved",
-                           "request approved");
+            AddActivityLog(ticketID, "Request Approved", $"Assistance request {trackingNumber} approved", "request approved");
         };
 
         rejectBtn.Click += (s, e) =>
         {
-            if (expandedPanel == TicketBox) expandedPanel = null;
-
+            Panel parent = ((Button)s).Parent as Panel;
             HeaderPanel.BackColor = Color.LightCoral;
             lblTracking.BackColor = Color.LightCoral;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Rejected";
-
-            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
             repo.UpdateRequestStatus(ticketID, "Rejected");
-
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog("Request Rejected",
-                           $"Assistance request {trackingNumber} rejected",
-                           "request rejected");
-
-            TicketBox.Hide();
+            AddActivityLog(ticketID, "Request Rejected", $"Assistance request {trackingNumber} rejected", "request rejected");
+            parent.Hide();
         };
 
         cancelBtn.Click += (s, e) =>
         {
-            if (expandedPanel == TicketBox) expandedPanel = null;
-
+            Panel parent = ((Button)s).Parent as Panel;
             HeaderPanel.BackColor = Color.LightGray;
             lblTracking.BackColor = Color.LightGray;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Canceled";
-
-            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
             repo.UpdateRequestStatus(ticketID, "Canceled");
-
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog("Request Canceled",
-                           $"Assistance request {trackingNumber} canceled",
-                           "canceled");
-
-            TicketBox.Hide();
+            AddActivityLog(ticketID, "Request Canceled", $"Assistance request {trackingNumber} canceled", "canceled");
+            parent.Hide();
         };
 
         releaseBtn.Click += (s, e) =>
         {
-            if (expandedPanel == TicketBox) expandedPanel = null;
-            TicketBox.Hide();
+            Panel parent = ((Button)s).Parent as Panel;
+            parent.Hide();
         };
 
-        // Add controls to panel
         TicketBox.Controls.Add(HeaderPanel);
         TicketBox.Controls.Add(lblTracking);
         TicketBox.Controls.Add(picMember);
         TicketBox.Controls.Add(lblName);
         TicketBox.Controls.Add(lblAid);
         TicketBox.Controls.Add(lblDate);
-        TicketBox.Controls.Add(lblStatus);
         TicketBox.Controls.Add(lblRequestedBy);
         TicketBox.Controls.Add(lblAmount);
         TicketBox.Controls.Add(lblAssistanceThru);
         TicketBox.Controls.Add(lblContactNum);
+        TicketBox.Controls.Add(lblStatus);
         TicketBox.Controls.Add(dateNeededLbl);
         TicketBox.Controls.Add(approveBtn);
         TicketBox.Controls.Add(rejectBtn);
         TicketBox.Controls.Add(cancelBtn);
         TicketBox.Controls.Add(releaseBtn);
 
-        // Initial status colors
         if (status == "Approved")
         {
             HeaderPanel.BackColor = Color.LightGreen;
@@ -281,103 +274,74 @@ public class AddTicketBox
         }
 
         lblTracking.BringToFront();
+        lblTracking.BackColor = Color.LightGray;
+
         TicketBox.Click += TicketBox_Click;
 
         TicketFlowLayoutPanel.Controls.Add(TicketBox);
     }
 
 
+    // your TicketBox_Click + one-panel-only logic
     private void TicketBox_Click(object sender, EventArgs e)
     {
         Panel panel = sender as Panel;
-        if (panel == null)
+        if (panel == null) return;
+
+        // ✅ block if another is open
+        if (expandedPanel != null && expandedPanel != panel)
             return;
 
-        // close previous panel
-        if (expandedPanel != null && expandedPanel != panel)
+        bool isExpanded = (bool)panel.Tag;
+        isExpanded = !isExpanded;
+        panel.Tag = isExpanded;
+        panel.Height = isExpanded ? 330 : 150;
+
+        foreach (Control control in panel.Controls)
         {
-            CollapsePanel(expandedPanel);
-            expandedPanel = null;
-        }
-
-        bool expand = !(bool)panel.Tag;
-
-        if (expand)
-        {
-            ExpandPanel(panel);
-            expandedPanel = panel;
-        }
-        else
-        {
-            CollapsePanel(panel);
-            expandedPanel = null;
-        }
-    }
-
-    private void ExpandPanel(Panel panel)
-    {
-        panel.Tag = true;
-        panel.Height = 330;
-
-        Label lblStatus = panel.Controls.OfType<Label>()
-            .FirstOrDefault(l => l.Text.StartsWith("Status:"));
-
-        string status = lblStatus.Text.Replace("Status:", "").Trim();
-
-        foreach (Control c in panel.Controls)
-        {
-            if (c.Tag != null && c.Tag.ToString() == "ExpandInfo")
+            if (control.Tag != null && control.Tag.ToString() == "ExpandInfo")
             {
-                if (c is Button btn)
+                if (!isExpanded)
                 {
+                    control.Visible = false;
+                    continue;
+                }
+
+                if (control is Button btn)
+                {
+                    Label lblStatus = panel.Controls.OfType<Label>()
+                        .FirstOrDefault(l => l.Text.StartsWith("Status:"));
+                    string status = lblStatus?.Text.Replace("Status:", "").Trim() ?? "";
+
                     if (status == "Approved")
-                    {
-                        c.Visible = btn.Text == "Release";
-                    }
+                        control.Visible = btn.Text == "Release";
                     else if (status == "Rejected" || status == "Canceled")
-                    {
-                        c.Visible = false;
-                    }
+                        control.Visible = false;
                     else
-                    {
-                        c.Visible = btn.Text == "Approve" ||
-                                    btn.Text == "Reject" ||
-                                    btn.Text == "Cancel";
-                    }
+                        control.Visible = btn.Text == "Approve" || btn.Text == "Reject" || btn.Text == "Cancel";
                 }
                 else
-                {
-                    c.Visible = true;
-                }
+                    control.Visible = isExpanded;
             }
         }
-    }
 
-    private void CollapsePanel(Panel panel)
-    {
-        panel.Tag = false;
-        panel.Height = 150;
-
-        foreach (Control c in panel.Controls)
-        {
-            if (c.Tag != null && c.Tag.ToString() == "ExpandInfo")
-                c.Visible = false;
-        }
+        expandedPanel = isExpanded ? panel : null;
     }
 
 
     // ----------------- Activity Log Methods Applied -----------------
 
-    private void AddActivityLog(string actionTitle, string actionInfo, string status)
+    private void AddActivityLog(int ticketID, string actionTitle, string actionInfo, string status)
     {
-        string timestamp = DateTime.Now.ToString("hh:mm tt");
-        repo.InsertActionLog(actionTitle, actionInfo);
+        repo.InsertActionLog(ticketID, actionTitle, actionInfo);
 
+        string timestamp = DateTime.Now.ToString("hh:mm tt");
         ActivityassistanceLog logCard = new ActivityassistanceLog(timestamp, actionTitle, actionInfo, status);
         ActivityLogFlowLayoutPanel.Controls.Add(logCard);
         ActivityLogFlowLayoutPanel.Controls.SetChildIndex(logCard, 0);
         ActivityLogFlowLayoutPanel.ScrollControlIntoView(logCard);
     }
+
 
     public void LoadActivityLogs()
     {
@@ -391,11 +355,11 @@ public class AddTicketBox
             string statusForImage;
 
             if (action.Equals("Request Approved", StringComparison.OrdinalIgnoreCase))
-                statusForImage = "request approved";  // <-- match switch
+                statusForImage = "request approved"; 
             else if (action.Equals("Request Rejected", StringComparison.OrdinalIgnoreCase))
-                statusForImage = "request rejected";  // <-- match switch
+                statusForImage = "request rejected";  
             else if (action.Equals("Request Canceled", StringComparison.OrdinalIgnoreCase))
-                statusForImage = "canceled";          // <-- match switch
+                statusForImage = "canceled";         
             else
                 statusForImage = "unknown";
 

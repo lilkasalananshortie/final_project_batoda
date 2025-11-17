@@ -37,18 +37,6 @@ namespace BATODA.Modules.MemberModule
         public DateTime ExpiryDate { get; set; }      
         public string RenewalStatus { get; set; }
 
-        public int SuspensionHoursRemaining
-        {
-            get
-            {
-                if (PenaltyLevel == 3 && SuspensionStartDate.HasValue)
-                {
-                    double hoursLeft = SuspensionDays - (DateTime.Now - SuspensionStartDate.Value).TotalHours;
-                    return hoursLeft <= 0 ? 0 : (int)Math.Ceiling(hoursLeft);
-                }
-                return 0;
-            }
-        }
 
         public void ApplyPenalty()
         {
@@ -63,27 +51,6 @@ namespace BATODA.Modules.MemberModule
                 }
             }
         }
-
-        public void UpdateSuspensionStatus()
-        {
-            if (PenaltyLevel == 3 && SuspensionStartDate.HasValue)
-            {
-                double hoursPassed = (DateTime.Now - SuspensionStartDate.Value).TotalHours;
-                if (hoursPassed >= SuspensionDays)
-                {
-                    PenaltyLevel = 0;
-                    SuspensionDays = 0;
-                    SuspensionStartDate = null;
-                }
-            }
-        }
-
-
-
-
-
-
-
 
     }
 }

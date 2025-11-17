@@ -44,12 +44,12 @@ namespace BATODA
             AssistanceHistoryGrid.Columns["BodyNumber"].HeaderText = "Body No.";
             AssistanceHistoryGrid.Columns["FullName"].HeaderText = "Name";
             AssistanceHistoryGrid.Columns["ContactNumber"].HeaderText = "Contact No.";
-            AssistanceHistoryGrid.Columns["TypeOfAid"].HeaderText = "Type of Aid";
+            AssistanceHistoryGrid.Columns["TypeOfAid"].HeaderText = "Aid";
             AssistanceHistoryGrid.Columns["RequestedBy"].HeaderText = "Requested By";
             AssistanceHistoryGrid.Columns["RequestedAmount"].HeaderText = "Amount";
             AssistanceHistoryGrid.Columns["AssistanceThru"].HeaderText = "Transfer Thru";
             AssistanceHistoryGrid.Columns["GcashNumber"].HeaderText = "Gcash No.";
-            AssistanceHistoryGrid.Columns["DateRequested"].HeaderText = "Date Requested";
+            AssistanceHistoryGrid.Columns["DateRequested"].HeaderText = "Date Req.";
             AssistanceHistoryGrid.Columns["RequestStatus"].HeaderText = "Status";
             AssistanceHistoryGrid.Columns["ActionDate"].HeaderText = "Update Date";
 
