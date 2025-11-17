@@ -32,16 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.TransferMembershipButton = new BATODA.ButtonStyle();
-            this.TransferRecordsButton = new BATODA.ButtonStyle();
-            this.ManageMembersButton = new BATODA.ButtonStyle();
             this.ScrollablePanel = new System.Windows.Forms.Panel();
             this.ConfirmationTransferPanel = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.ConfirmNewImage = new System.Windows.Forms.PictureBox();
             this.ConfirmCurrentImage = new System.Windows.Forms.PictureBox();
-            this.CancelPanelButton = new BATODA.ButtonStyle();
-            this.FinalSaveTransferBtn = new BATODA.ButtonStyle();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
@@ -58,8 +53,6 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.PlaceholderFname = new System.Windows.Forms.Label();
-            this.CancelConfirmation = new BATODA.ButtonStyle();
-            this.ConfirmationButton = new BATODA.ButtonStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -118,17 +111,19 @@
             this.BodyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TransferBtn = new BATODA.ButtonStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.TransferContactTxt = new System.Windows.Forms.TextBox();
-            this.TransferBirthdatePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TransferBodyNumberLbl = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
+            this.NewOwnerPb = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.TransferUploadImage = new System.Windows.Forms.OpenFileDialog();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.TransferContactTxt = new System.Windows.Forms.TextBox();
+            this.TransferBirthdatePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -149,22 +144,28 @@
             this.TransferChassisTxt = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.TransferPlateTxt = new System.Windows.Forms.TextBox();
-            this.TransferUploadBtn = new BATODA.ButtonStyle();
             this.label11 = new System.Windows.Forms.Label();
-            this.NewOwnerPb = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.ClearButton = new BATODA.ButtonStyle();
             this.panel13 = new System.Windows.Forms.Panel();
             this.TransferEngineTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.TransferReasonTxt = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TransferBtn = new BATODA.ButtonStyle();
+            this.TransferUploadBtn = new BATODA.ButtonStyle();
+            this.ClearButton = new BATODA.ButtonStyle();
+            this.CancelPanelButton = new BATODA.ButtonStyle();
+            this.FinalSaveTransferBtn = new BATODA.ButtonStyle();
+            this.CancelConfirmation = new BATODA.ButtonStyle();
+            this.ConfirmationButton = new BATODA.ButtonStyle();
+            this.TransferMembershipButton = new BATODA.ButtonStyle();
+            this.TransferRecordsButton = new BATODA.ButtonStyle();
+            this.ManageMembersButton = new BATODA.ButtonStyle();
             this.label23 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.TransferMemberTypeCmb = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.TransferUploadImage = new System.Windows.Forms.OpenFileDialog();
+            this.panel27 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
             this.ScrollablePanel.SuspendLayout();
             this.ConfirmationTransferPanel.SuspendLayout();
@@ -191,10 +192,11 @@
             this.panel17.SuspendLayout();
             this.panel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).BeginInit();
-            this.panel12.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewOwnerPb)).BeginInit();
+            this.panel12.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -202,7 +204,6 @@
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NewOwnerPb)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
@@ -238,115 +239,16 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 19;
             // 
-            // TransferMembershipButton
-            // 
-            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.BorderRadius = 0;
-            this.TransferMembershipButton.BorderSize = 1;
-            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
-            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
-            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
-            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferMembershipButton.IsToggled = false;
-            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
-            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferMembershipButton.Name = "TransferMembershipButton";
-            this.TransferMembershipButton.PaddingX = 0;
-            this.TransferMembershipButton.PaddingY = 0;
-            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferMembershipButton.TabIndex = 21;
-            this.TransferMembershipButton.Text = "Transfer Membership";
-            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.TextOffset = 20;
-            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.UseVisualStyleBackColor = false;
-            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
-            // 
-            // TransferRecordsButton
-            // 
-            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.BorderRadius = 0;
-            this.TransferRecordsButton.BorderSize = 1;
-            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
-            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
-            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferRecordsButton.IsToggled = false;
-            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
-            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferRecordsButton.Name = "TransferRecordsButton";
-            this.TransferRecordsButton.PaddingX = 0;
-            this.TransferRecordsButton.PaddingY = 0;
-            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferRecordsButton.TabIndex = 20;
-            this.TransferRecordsButton.Text = "Transfer History";
-            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.TextOffset = 20;
-            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferRecordsButton.UseVisualStyleBackColor = false;
-            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
-            // 
-            // ManageMembersButton
-            // 
-            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.BorderRadius = 0;
-            this.ManageMembersButton.BorderSize = 1;
-            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
-            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
-            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
-            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ManageMembersButton.IsToggled = false;
-            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
-            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.ManageMembersButton.Name = "ManageMembersButton";
-            this.ManageMembersButton.PaddingX = 0;
-            this.ManageMembersButton.PaddingY = 0;
-            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
-            this.ManageMembersButton.TabIndex = 19;
-            this.ManageMembersButton.Text = "Manage Members";
-            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.TextOffset = 20;
-            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.ManageMembersButton.UseVisualStyleBackColor = false;
-            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
-            // 
             // ScrollablePanel
             // 
             this.ScrollablePanel.AutoScroll = true;
             this.ScrollablePanel.BackColor = System.Drawing.Color.White;
             this.ScrollablePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ScrollablePanel.Controls.Add(this.HolderPanel1);
             this.ScrollablePanel.Controls.Add(this.ConfirmationTransferPanel);
             this.ScrollablePanel.Controls.Add(this.ConfirmationPanel);
             this.ScrollablePanel.Controls.Add(this.pictureBox3);
             this.ScrollablePanel.Controls.Add(this.label3);
-            this.ScrollablePanel.Controls.Add(this.HolderPanel1);
             this.ScrollablePanel.Location = new System.Drawing.Point(14, 85);
             this.ScrollablePanel.Name = "ScrollablePanel";
             this.ScrollablePanel.Size = new System.Drawing.Size(1585, 1013);
@@ -397,72 +299,6 @@
             this.ConfirmCurrentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ConfirmCurrentImage.TabIndex = 49;
             this.ConfirmCurrentImage.TabStop = false;
-            // 
-            // CancelPanelButton
-            // 
-            this.CancelPanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelPanelButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelPanelButton.BorderRadius = 0;
-            this.CancelPanelButton.BorderSize = 0;
-            this.CancelPanelButton.ButtonImage = global::BATODA.Properties.Resources.delete;
-            this.CancelPanelButton.FlatAppearance.BorderSize = 0;
-            this.CancelPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelPanelButton.ForeColor = System.Drawing.Color.White;
-            this.CancelPanelButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CancelPanelButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.CancelPanelButton.ImageColor = System.Drawing.Color.Black;
-            this.CancelPanelButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CancelPanelButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.CancelPanelButton.IsToggled = false;
-            this.CancelPanelButton.Location = new System.Drawing.Point(200, 337);
-            this.CancelPanelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelPanelButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelPanelButton.Name = "CancelPanelButton";
-            this.CancelPanelButton.PaddingX = 0;
-            this.CancelPanelButton.PaddingY = 0;
-            this.CancelPanelButton.Size = new System.Drawing.Size(165, 45);
-            this.CancelPanelButton.TabIndex = 33;
-            this.CancelPanelButton.Text = "Cancel";
-            this.CancelPanelButton.TextColor = System.Drawing.Color.White;
-            this.CancelPanelButton.TextOffset = 5;
-            this.CancelPanelButton.ToggleColor = System.Drawing.Color.Empty;
-            this.CancelPanelButton.UseVisualStyleBackColor = false;
-            this.CancelPanelButton.Click += new System.EventHandler(this.CancelPanelButton_Click);
-            // 
-            // FinalSaveTransferBtn
-            // 
-            this.FinalSaveTransferBtn.BackColor = System.Drawing.Color.Green;
-            this.FinalSaveTransferBtn.BackgroundColor = System.Drawing.Color.Green;
-            this.FinalSaveTransferBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.FinalSaveTransferBtn.BorderRadius = 0;
-            this.FinalSaveTransferBtn.BorderSize = 0;
-            this.FinalSaveTransferBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.FinalSaveTransferBtn.FlatAppearance.BorderSize = 0;
-            this.FinalSaveTransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinalSaveTransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinalSaveTransferBtn.ForeColor = System.Drawing.Color.White;
-            this.FinalSaveTransferBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.FinalSaveTransferBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.FinalSaveTransferBtn.ImageColor = System.Drawing.Color.White;
-            this.FinalSaveTransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.FinalSaveTransferBtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.FinalSaveTransferBtn.IsToggled = false;
-            this.FinalSaveTransferBtn.Location = new System.Drawing.Point(380, 336);
-            this.FinalSaveTransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.FinalSaveTransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.FinalSaveTransferBtn.Name = "FinalSaveTransferBtn";
-            this.FinalSaveTransferBtn.PaddingX = 0;
-            this.FinalSaveTransferBtn.PaddingY = 0;
-            this.FinalSaveTransferBtn.Size = new System.Drawing.Size(165, 45);
-            this.FinalSaveTransferBtn.TabIndex = 32;
-            this.FinalSaveTransferBtn.Text = "Save";
-            this.FinalSaveTransferBtn.TextColor = System.Drawing.Color.White;
-            this.FinalSaveTransferBtn.TextOffset = 5;
-            this.FinalSaveTransferBtn.ToggleColor = System.Drawing.Color.Empty;
-            this.FinalSaveTransferBtn.UseVisualStyleBackColor = false;
-            this.FinalSaveTransferBtn.Click += new System.EventHandler(this.SavePanelButton_Click);
             // 
             // panel26
             // 
@@ -649,72 +485,6 @@
             this.PlaceholderFname.Size = new System.Drawing.Size(126, 25);
             this.PlaceholderFname.TabIndex = 72;
             this.PlaceholderFname.Text = "Placeholder";
-            // 
-            // CancelConfirmation
-            // 
-            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderRadius = 0;
-            this.CancelConfirmation.BorderSize = 0;
-            this.CancelConfirmation.ButtonImage = null;
-            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
-            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
-            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
-            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
-            this.CancelConfirmation.IsToggled = false;
-            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
-            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.Name = "CancelConfirmation";
-            this.CancelConfirmation.PaddingX = 0;
-            this.CancelConfirmation.PaddingY = 0;
-            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
-            this.CancelConfirmation.TabIndex = 56;
-            this.CancelConfirmation.Text = "Exit";
-            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
-            this.CancelConfirmation.TextOffset = 5;
-            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
-            this.CancelConfirmation.UseVisualStyleBackColor = false;
-            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
-            // 
-            // ConfirmationButton
-            // 
-            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderRadius = 0;
-            this.ConfirmationButton.BorderSize = 0;
-            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
-            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
-            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
-            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
-            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ConfirmationButton.IsToggled = false;
-            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
-            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.Name = "ConfirmationButton";
-            this.ConfirmationButton.PaddingX = 0;
-            this.ConfirmationButton.PaddingY = 0;
-            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
-            this.ConfirmationButton.TabIndex = 71;
-            this.ConfirmationButton.Text = "Confrim Transfer";
-            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
-            this.ConfirmationButton.TextOffset = 5;
-            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ConfirmationButton.UseVisualStyleBackColor = false;
-            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
             // 
             // label15
             // 
@@ -1266,44 +1036,46 @@
             // panel24
             // 
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel24.Controls.Add(this.OwnerSearchGrid);
+            this.panel24.Controls.Add(this.panel27);
             this.panel24.Controls.Add(this.TransferBtn);
-            this.panel24.Controls.Add(this.label7);
-            this.panel24.Controls.Add(this.label41);
+            this.panel24.Controls.Add(this.label23);
+            this.panel24.Controls.Add(this.TransferReasonTxt);
             this.panel24.Controls.Add(this.panel12);
+            this.panel24.Controls.Add(this.label4);
+            this.panel24.Controls.Add(this.panel15);
             this.panel24.Controls.Add(this.TransferBirthdatePicker);
-            this.panel24.Controls.Add(this.panel1);
-            this.panel24.Controls.Add(this.panel7);
             this.panel24.Controls.Add(this.label8);
             this.panel24.Controls.Add(this.label5);
-            this.panel24.Controls.Add(this.panel8);
-            this.panel24.Controls.Add(this.panel4);
-            this.panel24.Controls.Add(this.panel9);
-            this.panel24.Controls.Add(this.label6);
-            this.panel24.Controls.Add(this.label9);
-            this.panel24.Controls.Add(this.panel2);
-            this.panel24.Controls.Add(this.label10);
-            this.panel24.Controls.Add(this.label14);
-            this.panel24.Controls.Add(this.panel10);
-            this.panel24.Controls.Add(this.panel3);
-            this.panel24.Controls.Add(this.panel11);
-            this.panel24.Controls.Add(this.TransferUploadBtn);
-            this.panel24.Controls.Add(this.label11);
-            this.panel24.Controls.Add(this.NewOwnerPb);
             this.panel24.Controls.Add(this.label12);
-            this.panel24.Controls.Add(this.ClearButton);
+            this.panel24.Controls.Add(this.panel4);
+            this.panel24.Controls.Add(this.label7);
+            this.panel24.Controls.Add(this.label14);
+            this.panel24.Controls.Add(this.panel3);
+            this.panel24.Controls.Add(this.label6);
+            this.panel24.Controls.Add(this.panel9);
             this.panel24.Controls.Add(this.panel13);
+            this.panel24.Controls.Add(this.panel2);
             this.panel24.Controls.Add(this.label13);
-            this.panel24.Controls.Add(this.TransferReasonTxt);
+            this.panel24.Controls.Add(this.panel8);
+            this.panel24.Controls.Add(this.label10);
             this.panel24.Controls.Add(this.label22);
-            this.panel24.Controls.Add(this.label23);
-            this.panel24.Controls.Add(this.panel15);
-            this.panel24.Controls.Add(this.label4);
-            this.panel24.Location = new System.Drawing.Point(685, 13);
+            this.panel24.Controls.Add(this.label41);
+            this.panel24.Controls.Add(this.panel11);
+            this.panel24.Controls.Add(this.label9);
+            this.panel24.Controls.Add(this.label11);
+            this.panel24.Controls.Add(this.panel10);
+            this.panel24.Controls.Add(this.panel1);
+            this.panel24.Controls.Add(this.panel7);
+            this.panel24.Controls.Add(this.TransferUploadBtn);
+            this.panel24.Controls.Add(this.NewOwnerPb);
+            this.panel24.Controls.Add(this.ClearButton);
+            this.panel24.Controls.Add(this.OwnerSearchGrid);
+            this.panel24.Location = new System.Drawing.Point(690, 13);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(807, 878);
             this.panel24.TabIndex = 87;
             this.panel24.Click += new System.EventHandler(this.panel24_Click);
+            this.panel24.Paint += new System.Windows.Forms.PaintEventHandler(this.panel24_Paint);
             // 
             // OwnerSearchGrid
             // 
@@ -1315,11 +1087,11 @@
             this.BodyNumber,
             this.FirstName,
             this.LastName});
-            this.OwnerSearchGrid.Location = new System.Drawing.Point(70, 77);
+            this.OwnerSearchGrid.Location = new System.Drawing.Point(275, 81);
             this.OwnerSearchGrid.Name = "OwnerSearchGrid";
             this.OwnerSearchGrid.RowHeadersVisible = false;
             this.OwnerSearchGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OwnerSearchGrid.Size = new System.Drawing.Size(668, 85);
+            this.OwnerSearchGrid.Size = new System.Drawing.Size(518, 46);
             this.OwnerSearchGrid.TabIndex = 60;
             this.OwnerSearchGrid.Visible = false;
             this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick);
@@ -1341,6 +1113,400 @@
             this.LastName.HeaderText = "Last Name";
             this.LastName.Name = "LastName";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(275, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(286, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Search current owner\'s name/body no.*";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(270, 179);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(115, 20);
+            this.label41.TabIndex = 59;
+            this.label41.Text = "Body Number *";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.TransferBodyNumberLbl);
+            this.panel1.Location = new System.Drawing.Point(274, 207);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(252, 35);
+            this.panel1.TabIndex = 58;
+            // 
+            // TransferBodyNumberLbl
+            // 
+            this.TransferBodyNumberLbl.AutoSize = true;
+            this.TransferBodyNumberLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferBodyNumberLbl.Location = new System.Drawing.Point(8, 7);
+            this.TransferBodyNumberLbl.Name = "TransferBodyNumberLbl";
+            this.TransferBodyNumberLbl.Size = new System.Drawing.Size(191, 20);
+            this.TransferBodyNumberLbl.TabIndex = 53;
+            this.TransferBodyNumberLbl.Text = "Auto-generated body no.*";
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.pictureBox2);
+            this.panel7.Controls.Add(this.OwnerSearchTxt);
+            this.panel7.Location = new System.Drawing.Point(275, 43);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(518, 38);
+            this.panel7.TabIndex = 28;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
+            this.pictureBox2.Location = new System.Drawing.Point(487, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Size = new System.Drawing.Size(22, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
+            // OwnerSearchTxt
+            // 
+            this.OwnerSearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OwnerSearchTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OwnerSearchTxt.Location = new System.Drawing.Point(5, 6);
+            this.OwnerSearchTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OwnerSearchTxt.Name = "OwnerSearchTxt";
+            this.OwnerSearchTxt.Size = new System.Drawing.Size(476, 24);
+            this.OwnerSearchTxt.TabIndex = 42;
+            this.OwnerSearchTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OwnerSearchTxt_KeyDown);
+            // 
+            // NewOwnerPb
+            // 
+            this.NewOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewOwnerPb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.NewOwnerPb.Location = new System.Drawing.Point(15, 15);
+            this.NewOwnerPb.Name = "NewOwnerPb";
+            this.NewOwnerPb.Size = new System.Drawing.Size(247, 232);
+            this.NewOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.NewOwnerPb.TabIndex = 48;
+            this.NewOwnerPb.TabStop = false;
+            // 
+            // TransferUploadImage
+            // 
+            this.TransferUploadImage.FileName = "openFileDialog1";
+            this.TransferUploadImage.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.TransferContactTxt);
+            this.panel12.Location = new System.Drawing.Point(14, 444);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(383, 35);
+            this.panel12.TabIndex = 69;
+            // 
+            // TransferContactTxt
+            // 
+            this.TransferContactTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferContactTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferContactTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferContactTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferContactTxt.Name = "TransferContactTxt";
+            this.TransferContactTxt.Size = new System.Drawing.Size(294, 19);
+            this.TransferContactTxt.TabIndex = 42;
+            // 
+            // TransferBirthdatePicker
+            // 
+            this.TransferBirthdatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferBirthdatePicker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TransferBirthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferBirthdatePicker.Location = new System.Drawing.Point(412, 448);
+            this.TransferBirthdatePicker.MaxDate = new System.DateTime(2999, 12, 31, 0, 0, 0, 0);
+            this.TransferBirthdatePicker.Name = "TransferBirthdatePicker";
+            this.TransferBirthdatePicker.Size = new System.Drawing.Size(377, 26);
+            this.TransferBirthdatePicker.TabIndex = 82;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(275, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 20);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "First Name *";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(410, 419);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 20);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Birthdate *";
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.TransferFirstNameTxt);
+            this.panel8.Location = new System.Drawing.Point(275, 127);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(215, 35);
+            this.panel8.TabIndex = 58;
+            // 
+            // TransferFirstNameTxt
+            // 
+            this.TransferFirstNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferFirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferFirstNameTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferFirstNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferFirstNameTxt.Name = "TransferFirstNameTxt";
+            this.TransferFirstNameTxt.Size = new System.Drawing.Size(200, 19);
+            this.TransferFirstNameTxt.TabIndex = 42;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.TransferModelTxt);
+            this.panel4.Location = new System.Drawing.Point(541, 367);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(252, 35);
+            this.panel4.TabIndex = 73;
+            // 
+            // TransferModelTxt
+            // 
+            this.TransferModelTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferModelTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferModelTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferModelTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferModelTxt.Name = "TransferModelTxt";
+            this.TransferModelTxt.Size = new System.Drawing.Size(238, 19);
+            this.TransferModelTxt.TabIndex = 42;
+            this.TransferModelTxt.TextChanged += new System.EventHandler(this.TransferModelTxt_TextChanged);
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.TransferLastNameTxt);
+            this.panel9.Location = new System.Drawing.Point(501, 127);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(215, 35);
+            this.panel9.TabIndex = 61;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // TransferLastNameTxt
+            // 
+            this.TransferLastNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferLastNameTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferLastNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferLastNameTxt.Name = "TransferLastNameTxt";
+            this.TransferLastNameTxt.Size = new System.Drawing.Size(200, 19);
+            this.TransferLastNameTxt.TabIndex = 42;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(536, 259);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 20);
+            this.label6.TabIndex = 78;
+            this.label6.Text = "Tricycle Brand *";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(501, 99);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 20);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Last Name *";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.TransferBrandTxt);
+            this.panel2.Location = new System.Drawing.Point(541, 287);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(252, 35);
+            this.panel2.TabIndex = 77;
+            // 
+            // TransferBrandTxt
+            // 
+            this.TransferBrandTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferBrandTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferBrandTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferBrandTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferBrandTxt.Name = "TransferBrandTxt";
+            this.TransferBrandTxt.Size = new System.Drawing.Size(238, 19);
+            this.TransferBrandTxt.TabIndex = 42;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(725, 99);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 20);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "M.I.";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(278, 337);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(135, 20);
+            this.label14.TabIndex = 80;
+            this.label14.Text = "Chassis Number *";
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.TransferMiddleTxt);
+            this.panel10.Location = new System.Drawing.Point(727, 127);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(66, 35);
+            this.panel10.TabIndex = 63;
+            // 
+            // TransferMiddleTxt
+            // 
+            this.TransferMiddleTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferMiddleTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMiddleTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferMiddleTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferMiddleTxt.Name = "TransferMiddleTxt";
+            this.TransferMiddleTxt.Size = new System.Drawing.Size(54, 19);
+            this.TransferMiddleTxt.TabIndex = 42;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.TransferChassisTxt);
+            this.panel3.Location = new System.Drawing.Point(280, 367);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(252, 35);
+            this.panel3.TabIndex = 79;
+            // 
+            // TransferChassisTxt
+            // 
+            this.TransferChassisTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferChassisTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferChassisTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferChassisTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferChassisTxt.Name = "TransferChassisTxt";
+            this.TransferChassisTxt.Size = new System.Drawing.Size(238, 19);
+            this.TransferChassisTxt.TabIndex = 42;
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.TransferPlateTxt);
+            this.panel11.Location = new System.Drawing.Point(275, 287);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(252, 35);
+            this.panel11.TabIndex = 65;
+            // 
+            // TransferPlateTxt
+            // 
+            this.TransferPlateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferPlateTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferPlateTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferPlateTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferPlateTxt.Name = "TransferPlateTxt";
+            this.TransferPlateTxt.Size = new System.Drawing.Size(238, 19);
+            this.TransferPlateTxt.TabIndex = 42;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(270, 259);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 20);
+            this.label11.TabIndex = 67;
+            this.label11.Text = "Plate Number *";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(9, 419);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 20);
+            this.label12.TabIndex = 70;
+            this.label12.Text = "Contact Number *";
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.TransferEngineTxt);
+            this.panel13.Location = new System.Drawing.Point(14, 367);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(252, 35);
+            this.panel13.TabIndex = 71;
+            // 
+            // TransferEngineTxt
+            // 
+            this.TransferEngineTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferEngineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferEngineTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferEngineTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferEngineTxt.Name = "TransferEngineTxt";
+            this.TransferEngineTxt.Size = new System.Drawing.Size(238, 19);
+            this.TransferEngineTxt.TabIndex = 42;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 339);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(129, 20);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Engine Number *";
+            // 
+            // TransferReasonTxt
+            // 
+            this.TransferReasonTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TransferReasonTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferReasonTxt.Location = new System.Drawing.Point(14, 524);
+            this.TransferReasonTxt.Multiline = true;
+            this.TransferReasonTxt.Name = "TransferReasonTxt";
+            this.TransferReasonTxt.Size = new System.Drawing.Size(779, 122);
+            this.TransferReasonTxt.TabIndex = 68;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(539, 339);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(62, 20);
+            this.label22.TabIndex = 74;
+            this.label22.Text = "Model *";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 496);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 20);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Reason For Transfer *";
+            // 
             // TransferBtn
             // 
             this.TransferBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -1359,314 +1525,19 @@
             this.TransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
             this.TransferBtn.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferBtn.IsToggled = false;
-            this.TransferBtn.Location = new System.Drawing.Point(503, 810);
+            this.TransferBtn.Location = new System.Drawing.Point(538, 683);
             this.TransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.TransferBtn.Name = "TransferBtn";
             this.TransferBtn.PaddingX = 0;
             this.TransferBtn.PaddingY = 0;
             this.TransferBtn.Size = new System.Drawing.Size(255, 49);
-            this.TransferBtn.TabIndex = 31;
+            this.TransferBtn.TabIndex = 59;
             this.TransferBtn.Text = "Transfer Membership";
             this.TransferBtn.TextColor = System.Drawing.Color.White;
             this.TransferBtn.TextOffset = 5;
             this.TransferBtn.ToggleColor = System.Drawing.Color.Empty;
             this.TransferBtn.UseVisualStyleBackColor = false;
-            this.TransferBtn.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(388, 25);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Search current owner\'s name/body no.*";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(397, 224);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(156, 25);
-            this.label41.TabIndex = 59;
-            this.label41.Text = "Body Number *";
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.TransferContactTxt);
-            this.panel12.Location = new System.Drawing.Point(462, 740);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(323, 50);
-            this.panel12.TabIndex = 38;
-            // 
-            // TransferContactTxt
-            // 
-            this.TransferContactTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferContactTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferContactTxt.Location = new System.Drawing.Point(14, 12);
-            this.TransferContactTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferContactTxt.Name = "TransferContactTxt";
-            this.TransferContactTxt.Size = new System.Drawing.Size(294, 24);
-            this.TransferContactTxt.TabIndex = 42;
-            // 
-            // TransferBirthdatePicker
-            // 
-            this.TransferBirthdatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferBirthdatePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TransferBirthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferBirthdatePicker.Location = new System.Drawing.Point(462, 671);
-            this.TransferBirthdatePicker.MaxDate = new System.DateTime(2999, 12, 31, 0, 0, 0, 0);
-            this.TransferBirthdatePicker.Name = "TransferBirthdatePicker";
-            this.TransferBirthdatePicker.Size = new System.Drawing.Size(323, 26);
-            this.TransferBirthdatePicker.TabIndex = 57;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.TransferBodyNumberLbl);
-            this.panel1.Location = new System.Drawing.Point(402, 252);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 50);
-            this.panel1.TabIndex = 58;
-            // 
-            // TransferBodyNumberLbl
-            // 
-            this.TransferBodyNumberLbl.AutoSize = true;
-            this.TransferBodyNumberLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferBodyNumberLbl.Location = new System.Drawing.Point(8, 11);
-            this.TransferBodyNumberLbl.Name = "TransferBodyNumberLbl";
-            this.TransferBodyNumberLbl.Size = new System.Drawing.Size(227, 24);
-            this.TransferBodyNumberLbl.TabIndex = 53;
-            this.TransferBodyNumberLbl.Text = "Auto-generated body no.*";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Controls.Add(this.OwnerSearchTxt);
-            this.panel7.Location = new System.Drawing.Point(70, 43);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(668, 38);
-            this.panel7.TabIndex = 28;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox2.Location = new System.Drawing.Point(635, 1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Size = new System.Drawing.Size(22, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
-            // 
-            // OwnerSearchTxt
-            // 
-            this.OwnerSearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OwnerSearchTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OwnerSearchTxt.Location = new System.Drawing.Point(5, 6);
-            this.OwnerSearchTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OwnerSearchTxt.Name = "OwnerSearchTxt";
-            this.OwnerSearchTxt.Size = new System.Drawing.Size(612, 24);
-            this.OwnerSearchTxt.TabIndex = 42;
-            this.OwnerSearchTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OwnerSearchTxt_KeyDown);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 357);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 25);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "First Name *";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(457, 642);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 25);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Birthdate *";
-            // 
-            // panel8
-            // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.TransferFirstNameTxt);
-            this.panel8.Location = new System.Drawing.Point(27, 385);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(311, 50);
-            this.panel8.TabIndex = 30;
-            // 
-            // TransferFirstNameTxt
-            // 
-            this.TransferFirstNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferFirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferFirstNameTxt.Location = new System.Drawing.Point(11, 12);
-            this.TransferFirstNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferFirstNameTxt.Name = "TransferFirstNameTxt";
-            this.TransferFirstNameTxt.Size = new System.Drawing.Size(289, 24);
-            this.TransferFirstNameTxt.TabIndex = 42;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.TransferModelTxt);
-            this.panel4.Location = new System.Drawing.Point(608, 575);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(177, 50);
-            this.panel4.TabIndex = 43;
-            // 
-            // TransferModelTxt
-            // 
-            this.TransferModelTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferModelTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferModelTxt.Location = new System.Drawing.Point(12, 12);
-            this.TransferModelTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferModelTxt.Name = "TransferModelTxt";
-            this.TransferModelTxt.Size = new System.Drawing.Size(148, 24);
-            this.TransferModelTxt.TabIndex = 42;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.TransferLastNameTxt);
-            this.panel9.Location = new System.Drawing.Point(360, 385);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(310, 50);
-            this.panel9.TabIndex = 32;
-            // 
-            // TransferLastNameTxt
-            // 
-            this.TransferLastNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferLastNameTxt.Location = new System.Drawing.Point(7, 12);
-            this.TransferLastNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferLastNameTxt.Name = "TransferLastNameTxt";
-            this.TransferLastNameTxt.Size = new System.Drawing.Size(290, 24);
-            this.TransferLastNameTxt.TabIndex = 42;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(534, 451);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 25);
-            this.label6.TabIndex = 53;
-            this.label6.Text = "Tricycle Brand *";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(355, 357);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 25);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Last Name *";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.TransferBrandTxt);
-            this.panel2.Location = new System.Drawing.Point(539, 479);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 50);
-            this.panel2.TabIndex = 52;
-            // 
-            // TransferBrandTxt
-            // 
-            this.TransferBrandTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferBrandTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferBrandTxt.Location = new System.Drawing.Point(10, 12);
-            this.TransferBrandTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferBrandTxt.Name = "TransferBrandTxt";
-            this.TransferBrandTxt.Size = new System.Drawing.Size(226, 24);
-            this.TransferBrandTxt.TabIndex = 42;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(685, 357);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 25);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "M.I.";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(313, 547);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(184, 25);
-            this.label14.TabIndex = 55;
-            this.label14.Text = "Chassis Number *";
-            // 
-            // panel10
-            // 
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.TransferMiddleTxt);
-            this.panel10.Location = new System.Drawing.Point(690, 385);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(95, 50);
-            this.panel10.TabIndex = 34;
-            // 
-            // TransferMiddleTxt
-            // 
-            this.TransferMiddleTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferMiddleTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferMiddleTxt.Location = new System.Drawing.Point(7, 12);
-            this.TransferMiddleTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferMiddleTxt.Name = "TransferMiddleTxt";
-            this.TransferMiddleTxt.Size = new System.Drawing.Size(80, 24);
-            this.TransferMiddleTxt.TabIndex = 42;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.TransferChassisTxt);
-            this.panel3.Location = new System.Drawing.Point(318, 575);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(277, 50);
-            this.panel3.TabIndex = 54;
-            // 
-            // TransferChassisTxt
-            // 
-            this.TransferChassisTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferChassisTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferChassisTxt.Location = new System.Drawing.Point(12, 12);
-            this.TransferChassisTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferChassisTxt.Name = "TransferChassisTxt";
-            this.TransferChassisTxt.Size = new System.Drawing.Size(249, 24);
-            this.TransferChassisTxt.TabIndex = 42;
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.TransferPlateTxt);
-            this.panel11.Location = new System.Drawing.Point(251, 479);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(269, 50);
-            this.panel11.TabIndex = 36;
-            // 
-            // TransferPlateTxt
-            // 
-            this.TransferPlateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferPlateTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferPlateTxt.Location = new System.Drawing.Point(12, 12);
-            this.TransferPlateTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferPlateTxt.Name = "TransferPlateTxt";
-            this.TransferPlateTxt.Size = new System.Drawing.Size(245, 24);
-            this.TransferPlateTxt.TabIndex = 42;
             // 
             // TransferUploadBtn
             // 
@@ -1686,13 +1557,13 @@
             this.TransferUploadBtn.ImagePosition = new System.Drawing.Point(20, 0);
             this.TransferUploadBtn.ImageSize = new System.Drawing.Size(32, 32);
             this.TransferUploadBtn.IsToggled = false;
-            this.TransferUploadBtn.Location = new System.Drawing.Point(402, 123);
+            this.TransferUploadBtn.Location = new System.Drawing.Point(15, 251);
             this.TransferUploadBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TransferUploadBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.TransferUploadBtn.Name = "TransferUploadBtn";
             this.TransferUploadBtn.PaddingX = 0;
             this.TransferUploadBtn.PaddingY = 0;
-            this.TransferUploadBtn.Size = new System.Drawing.Size(300, 37);
+            this.TransferUploadBtn.Size = new System.Drawing.Size(247, 37);
             this.TransferUploadBtn.TabIndex = 49;
             this.TransferUploadBtn.Text = "Upload Picture";
             this.TransferUploadBtn.TextColor = System.Drawing.Color.White;
@@ -1700,37 +1571,6 @@
             this.TransferUploadBtn.ToggleColor = System.Drawing.Color.Empty;
             this.TransferUploadBtn.UseVisualStyleBackColor = false;
             this.TransferUploadBtn.Click += new System.EventHandler(this.TransferUploadBtn_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(246, 451);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 25);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Plate Number *";
-            // 
-            // NewOwnerPb
-            // 
-            this.NewOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NewOwnerPb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.NewOwnerPb.Location = new System.Drawing.Point(130, 99);
-            this.NewOwnerPb.Name = "NewOwnerPb";
-            this.NewOwnerPb.Size = new System.Drawing.Size(247, 232);
-            this.NewOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.NewOwnerPb.TabIndex = 48;
-            this.NewOwnerPb.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(457, 711);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(181, 25);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Contact Number *";
             // 
             // ClearButton
             // 
@@ -1750,13 +1590,13 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.ClearButton.ImageSize = new System.Drawing.Size(32, 32);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(402, 168);
+            this.ClearButton.Location = new System.Drawing.Point(15, 293);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.PaddingX = 0;
             this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(300, 37);
+            this.ClearButton.Size = new System.Drawing.Size(247, 37);
             this.ClearButton.TabIndex = 46;
             this.ClearButton.Text = "Reset";
             this.ClearButton.TextColor = System.Drawing.Color.White;
@@ -1764,102 +1604,277 @@
             this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
             this.ClearButton.UseVisualStyleBackColor = false;
             // 
-            // panel13
+            // CancelPanelButton
             // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.TransferEngineTxt);
-            this.panel13.Location = new System.Drawing.Point(27, 575);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(276, 50);
-            this.panel13.TabIndex = 40;
+            this.CancelPanelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.BorderRadius = 0;
+            this.CancelPanelButton.BorderSize = 0;
+            this.CancelPanelButton.ButtonImage = global::BATODA.Properties.Resources.delete;
+            this.CancelPanelButton.FlatAppearance.BorderSize = 0;
+            this.CancelPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelPanelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelPanelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelPanelButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelPanelButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelPanelButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelPanelButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CancelPanelButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.CancelPanelButton.IsToggled = false;
+            this.CancelPanelButton.Location = new System.Drawing.Point(200, 337);
+            this.CancelPanelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelPanelButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelPanelButton.Name = "CancelPanelButton";
+            this.CancelPanelButton.PaddingX = 0;
+            this.CancelPanelButton.PaddingY = 0;
+            this.CancelPanelButton.Size = new System.Drawing.Size(165, 45);
+            this.CancelPanelButton.TabIndex = 33;
+            this.CancelPanelButton.Text = "Cancel";
+            this.CancelPanelButton.TextColor = System.Drawing.Color.White;
+            this.CancelPanelButton.TextOffset = 5;
+            this.CancelPanelButton.ToggleColor = System.Drawing.Color.Empty;
+            this.CancelPanelButton.UseVisualStyleBackColor = false;
+            this.CancelPanelButton.Click += new System.EventHandler(this.CancelPanelButton_Click);
             // 
-            // TransferEngineTxt
+            // FinalSaveTransferBtn
             // 
-            this.TransferEngineTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferEngineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferEngineTxt.Location = new System.Drawing.Point(12, 12);
-            this.TransferEngineTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferEngineTxt.Name = "TransferEngineTxt";
-            this.TransferEngineTxt.Size = new System.Drawing.Size(179, 24);
-            this.TransferEngineTxt.TabIndex = 42;
+            this.FinalSaveTransferBtn.BackColor = System.Drawing.Color.Green;
+            this.FinalSaveTransferBtn.BackgroundColor = System.Drawing.Color.Green;
+            this.FinalSaveTransferBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.FinalSaveTransferBtn.BorderRadius = 0;
+            this.FinalSaveTransferBtn.BorderSize = 0;
+            this.FinalSaveTransferBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.FinalSaveTransferBtn.FlatAppearance.BorderSize = 0;
+            this.FinalSaveTransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinalSaveTransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinalSaveTransferBtn.ForeColor = System.Drawing.Color.White;
+            this.FinalSaveTransferBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.FinalSaveTransferBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.FinalSaveTransferBtn.ImageColor = System.Drawing.Color.White;
+            this.FinalSaveTransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.FinalSaveTransferBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.FinalSaveTransferBtn.IsToggled = false;
+            this.FinalSaveTransferBtn.Location = new System.Drawing.Point(380, 336);
+            this.FinalSaveTransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FinalSaveTransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.FinalSaveTransferBtn.Name = "FinalSaveTransferBtn";
+            this.FinalSaveTransferBtn.PaddingX = 0;
+            this.FinalSaveTransferBtn.PaddingY = 0;
+            this.FinalSaveTransferBtn.Size = new System.Drawing.Size(165, 45);
+            this.FinalSaveTransferBtn.TabIndex = 32;
+            this.FinalSaveTransferBtn.Text = "Save";
+            this.FinalSaveTransferBtn.TextColor = System.Drawing.Color.White;
+            this.FinalSaveTransferBtn.TextOffset = 5;
+            this.FinalSaveTransferBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.FinalSaveTransferBtn.UseVisualStyleBackColor = false;
+            this.FinalSaveTransferBtn.Click += new System.EventHandler(this.SavePanelButton_Click);
             // 
-            // label13
+            // CancelConfirmation
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(22, 547);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(174, 25);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Engine Number *";
+            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderRadius = 0;
+            this.CancelConfirmation.BorderSize = 0;
+            this.CancelConfirmation.ButtonImage = null;
+            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
+            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
+            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
+            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
+            this.CancelConfirmation.IsToggled = false;
+            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
+            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.Name = "CancelConfirmation";
+            this.CancelConfirmation.PaddingX = 0;
+            this.CancelConfirmation.PaddingY = 0;
+            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
+            this.CancelConfirmation.TabIndex = 56;
+            this.CancelConfirmation.Text = "Exit";
+            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
+            this.CancelConfirmation.TextOffset = 5;
+            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
+            this.CancelConfirmation.UseVisualStyleBackColor = false;
+            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
             // 
-            // TransferReasonTxt
+            // ConfirmationButton
             // 
-            this.TransferReasonTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TransferReasonTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferReasonTxt.Location = new System.Drawing.Point(27, 670);
-            this.TransferReasonTxt.Multiline = true;
-            this.TransferReasonTxt.Name = "TransferReasonTxt";
-            this.TransferReasonTxt.Size = new System.Drawing.Size(420, 189);
-            this.TransferReasonTxt.TabIndex = 37;
+            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderRadius = 0;
+            this.ConfirmationButton.BorderSize = 0;
+            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
+            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
+            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
+            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
+            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ConfirmationButton.IsToggled = false;
+            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
+            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.Name = "ConfirmationButton";
+            this.ConfirmationButton.PaddingX = 0;
+            this.ConfirmationButton.PaddingY = 0;
+            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
+            this.ConfirmationButton.TabIndex = 71;
+            this.ConfirmationButton.Text = "Confrim Transfer";
+            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
+            this.ConfirmationButton.TextOffset = 5;
+            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ConfirmationButton.UseVisualStyleBackColor = false;
+            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
             // 
-            // label22
+            // TransferMembershipButton
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(603, 547);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(85, 25);
-            this.label22.TabIndex = 43;
-            this.label22.Text = "Model *";
+            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.BorderRadius = 0;
+            this.TransferMembershipButton.BorderSize = 1;
+            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
+            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
+            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
+            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferMembershipButton.IsToggled = false;
+            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
+            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferMembershipButton.Name = "TransferMembershipButton";
+            this.TransferMembershipButton.PaddingX = 0;
+            this.TransferMembershipButton.PaddingY = 0;
+            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferMembershipButton.TabIndex = 21;
+            this.TransferMembershipButton.Text = "Transfer Membership";
+            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.TextOffset = 20;
+            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.UseVisualStyleBackColor = false;
+            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
+            // 
+            // TransferRecordsButton
+            // 
+            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.BorderRadius = 0;
+            this.TransferRecordsButton.BorderSize = 1;
+            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
+            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
+            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferRecordsButton.IsToggled = false;
+            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
+            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferRecordsButton.Name = "TransferRecordsButton";
+            this.TransferRecordsButton.PaddingX = 0;
+            this.TransferRecordsButton.PaddingY = 0;
+            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferRecordsButton.TabIndex = 20;
+            this.TransferRecordsButton.Text = "Transfer History";
+            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.TextOffset = 20;
+            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferRecordsButton.UseVisualStyleBackColor = false;
+            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
+            // 
+            // ManageMembersButton
+            // 
+            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.BorderRadius = 0;
+            this.ManageMembersButton.BorderSize = 1;
+            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
+            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
+            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
+            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ManageMembersButton.IsToggled = false;
+            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
+            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.ManageMembersButton.Name = "ManageMembersButton";
+            this.ManageMembersButton.PaddingX = 0;
+            this.ManageMembersButton.PaddingY = 0;
+            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
+            this.ManageMembersButton.TabIndex = 19;
+            this.ManageMembersButton.Text = "Manage Members";
+            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.TextOffset = 20;
+            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.ManageMembersButton.UseVisualStyleBackColor = false;
+            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(22, 451);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(539, 179);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(158, 25);
-            this.label23.TabIndex = 45;
+            this.label23.Size = new System.Drawing.Size(115, 20);
+            this.label23.TabIndex = 78;
             this.label23.Text = "Member Type *";
             // 
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.TransferMemberTypeCmb);
-            this.panel15.Location = new System.Drawing.Point(27, 479);
+            this.panel15.Location = new System.Drawing.Point(541, 207);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(202, 50);
-            this.panel15.TabIndex = 44;
+            this.panel15.Size = new System.Drawing.Size(252, 35);
+            this.panel15.TabIndex = 77;
             // 
             // TransferMemberTypeCmb
             // 
             this.TransferMemberTypeCmb.BackColor = System.Drawing.Color.White;
             this.TransferMemberTypeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TransferMemberTypeCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMemberTypeCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMemberTypeCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferMemberTypeCmb.Items.AddRange(new object[] {
             "Driver",
             "Operator"});
-            this.TransferMemberTypeCmb.Location = new System.Drawing.Point(7, 9);
+            this.TransferMemberTypeCmb.Location = new System.Drawing.Point(8, 3);
             this.TransferMemberTypeCmb.Name = "TransferMemberTypeCmb";
-            this.TransferMemberTypeCmb.Size = new System.Drawing.Size(184, 33);
+            this.TransferMemberTypeCmb.Size = new System.Drawing.Size(237, 28);
             this.TransferMemberTypeCmb.TabIndex = 3;
             // 
-            // label4
+            // panel27
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 642);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 25);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Reason For Transfer *";
-            // 
-            // TransferUploadImage
-            // 
-            this.TransferUploadImage.FileName = "openFileDialog1";
-            this.TransferUploadImage.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel27.Location = new System.Drawing.Point(15, 665);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(770, 3);
+            this.panel27.TabIndex = 88;
             // 
             // TransferMembershipUForm
             // 
@@ -1917,13 +1932,14 @@
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NewOwnerPb)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1938,7 +1954,6 @@
             this.panel3.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NewOwnerPb)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -1962,43 +1977,11 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox OwnerSearchTxt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox TransferFirstNameTxt;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox TransferLastNameTxt;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox TransferMiddleTxt;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox TransferPlateTxt;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox TransferEngineTxt;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.ComboBox TransferMemberTypeCmb;
-        private ButtonStyle TransferBtn;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TransferReasonTxt;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox NewOwnerPb;
         private ButtonStyle ClearButton;
         private System.Windows.Forms.ToolTip toolTip1;
         private ButtonStyle TransferUploadBtn;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox TransferBrandTxt;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox TransferChassisTxt;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox TransferModelTxt;
         private System.Windows.Forms.Panel ConfirmationPanel;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -2028,12 +2011,9 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.DateTimePicker TransferBirthdatePicker;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label TransferBodyNumberLbl;
-        private System.Windows.Forms.TextBox TransferContactTxt;
         private System.Windows.Forms.PictureBox CurrentOwnerPb;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label42;
@@ -2085,5 +2065,41 @@
         private System.Windows.Forms.OpenFileDialog TransferUploadImage;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label46;
+        private ButtonStyle TransferBtn;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TextBox TransferContactTxt;
+        private System.Windows.Forms.DateTimePicker TransferBirthdatePicker;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox TransferFirstNameTxt;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox TransferModelTxt;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox TransferLastNameTxt;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox TransferBrandTxt;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox TransferMiddleTxt;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox TransferChassisTxt;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.TextBox TransferPlateTxt;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.TextBox TransferEngineTxt;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox TransferReasonTxt;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.ComboBox TransferMemberTypeCmb;
+        private System.Windows.Forms.Panel panel27;
     }
 }
