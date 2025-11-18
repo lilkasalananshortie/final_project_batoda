@@ -14,8 +14,6 @@ public class AddTicketBox
     private FlowLayoutPanel ActivityLogFlowLayoutPanel;
     AssistanceRepository repo = new AssistanceRepository();
 
-    private Panel expandedPanel = null;
-
     public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel)
     {
         TicketFlowLayoutPanel = panel;
@@ -23,16 +21,16 @@ public class AddTicketBox
     }
 
     public void CreateTicketBox(
-    string trackingNumber,
-    string fullName,
-    string typeOfAid,
-    string dateRequested,
-    string status,
-    string requestedBy,
-    string amount,
-    string assistanceThru,
-    string contactNum,
-    string dateNeeded)
+        string trackingNumber,
+        string fullName,
+        string typeOfAid,
+        string dateRequested,
+        string status,
+        string requestedBy,
+        string amount,
+        string assistanceThru,
+        string contactNum,
+        string dateNeeded)
     {
         Panel TicketBox = new Panel();
         TicketBox.Size = new Size(300, 150);
@@ -188,7 +186,6 @@ public class AddTicketBox
             Visible = false
         };
 
-        int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
 
         approveBtn.Click += (s, e) =>
         {
@@ -197,14 +194,22 @@ public class AddTicketBox
             lblTracking.BringToFront();
             lblTracking.BackColor = Color.LightGreen;
             lblStatus.Text = "Status: Approved";
+
+            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
             repo.UpdateRequestStatus(ticketID, "Approved");
+
+            repo.UpdateActionDate(ticketID);
             releaseBtn.Visible = true;
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog(ticketID, "Request Approved", $"Assistance request {trackingNumber} approved", "request approved");
+            AddActivityLog("Request Approved", $"Assistance request {trackingNumber} approved", "request approved");
+
+
         };
+
 
         rejectBtn.Click += (s, e) =>
         {
@@ -213,14 +218,16 @@ public class AddTicketBox
             lblTracking.BackColor = Color.LightCoral;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Rejected";
+            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
             repo.UpdateRequestStatus(ticketID, "Rejected");
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog(ticketID, "Request Rejected", $"Assistance request {trackingNumber} rejected", "request rejected");
+            AddActivityLog("Request Rejected", $"Assistance request {trackingNumber} rejected", "request rejected");
             parent.Hide();
         };
+
 
         cancelBtn.Click += (s, e) =>
         {
@@ -229,12 +236,13 @@ public class AddTicketBox
             lblTracking.BackColor = Color.LightGray;
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Canceled";
+            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
             repo.UpdateRequestStatus(ticketID, "Canceled");
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
 
-            AddActivityLog(ticketID, "Request Canceled", $"Assistance request {trackingNumber} canceled", "canceled");
+            AddActivityLog("Request Canceled", $"Assistance request {trackingNumber} canceled", "canceled");
             parent.Hide();
         };
 
@@ -282,19 +290,16 @@ public class AddTicketBox
     }
 
 
-    // your TicketBox_Click + one-panel-only logic
+
     private void TicketBox_Click(object sender, EventArgs e)
     {
         Panel panel = sender as Panel;
         if (panel == null) return;
 
-        // ✅ block if another is open
-        if (expandedPanel != null && expandedPanel != panel)
-            return;
-
         bool isExpanded = (bool)panel.Tag;
         isExpanded = !isExpanded;
         panel.Tag = isExpanded;
+
         panel.Height = isExpanded ? 330 : 150;
 
         foreach (Control control in panel.Controls)
@@ -324,24 +329,20 @@ public class AddTicketBox
                     control.Visible = isExpanded;
             }
         }
-
-        expandedPanel = isExpanded ? panel : null;
     }
-
 
     // ----------------- Activity Log Methods Applied -----------------
 
-    private void AddActivityLog(int ticketID, string actionTitle, string actionInfo, string status)
+    private void AddActivityLog(string actionTitle, string actionInfo, string status)
     {
-        repo.InsertActionLog(ticketID, actionTitle, actionInfo);
-
         string timestamp = DateTime.Now.ToString("hh:mm tt");
+        repo.InsertActionLog(actionTitle, actionInfo);
+
         ActivityassistanceLog logCard = new ActivityassistanceLog(timestamp, actionTitle, actionInfo, status);
         ActivityLogFlowLayoutPanel.Controls.Add(logCard);
         ActivityLogFlowLayoutPanel.Controls.SetChildIndex(logCard, 0);
         ActivityLogFlowLayoutPanel.ScrollControlIntoView(logCard);
     }
-
 
     public void LoadActivityLogs()
     {
@@ -355,11 +356,11 @@ public class AddTicketBox
             string statusForImage;
 
             if (action.Equals("Request Approved", StringComparison.OrdinalIgnoreCase))
-                statusForImage = "request approved"; 
+                statusForImage = "request approved";  
             else if (action.Equals("Request Rejected", StringComparison.OrdinalIgnoreCase))
                 statusForImage = "request rejected";  
             else if (action.Equals("Request Canceled", StringComparison.OrdinalIgnoreCase))
-                statusForImage = "canceled";         
+                statusForImage = "canceled";          
             else
                 statusForImage = "unknown";
 
