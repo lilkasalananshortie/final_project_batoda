@@ -61,7 +61,7 @@ namespace BATODA.Modules.Assistance_Request_Module
             }
         }
 
-        public void LoadData(DataGridView grid)
+        public void LoadTicketHistory(DataGridView grid) //LoadTicketHistory
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -166,7 +166,12 @@ namespace BATODA.Modules.Assistance_Request_Module
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM FinancialAssistanceRequests ORDER BY BodyNumber";
+                string query = @"
+                SELECT * 
+                FROM FinancialAssistanceRequests
+                WHERE RequestStatus IN ('Pending','Approved')
+                ORDER BY BodyNumber";
+
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {

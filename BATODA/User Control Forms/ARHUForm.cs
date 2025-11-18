@@ -39,7 +39,7 @@ namespace BATODA
         {
             AssistanceRepository loader = new AssistanceRepository();
             DataGridCustom.ApplyCustomGrid(AssistanceHistoryGrid);
-            loader.LoadData(AssistanceHistoryGrid);
+            loader.LoadTicketHistory(AssistanceHistoryGrid);
             AssistanceHistoryGrid.Columns["TicketID"].HeaderText = "Ticket ID";
             AssistanceHistoryGrid.Columns["BodyNumber"].HeaderText = "Body No.";
             AssistanceHistoryGrid.Columns["FullName"].HeaderText = "Name";
