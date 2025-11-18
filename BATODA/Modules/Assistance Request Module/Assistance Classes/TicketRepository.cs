@@ -61,7 +61,7 @@ namespace BATODA.Modules.Assistance_Request_Module
             }
         }
 
-        public void LoadTicketHistory(DataGridView grid) //LoadTicketHistory
+        public void LoadTicketHistory(DataGridView grid)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -141,8 +141,6 @@ namespace BATODA.Modules.Assistance_Request_Module
             }
         }
 
-
-
         public void InsertActionLog(string requestAction, string actionDescription)
         {
             string query = "INSERT INTO AssistanceActionLog (RequestAction, ActionDescription, ActionDate) " +
@@ -157,7 +155,6 @@ namespace BATODA.Modules.Assistance_Request_Module
                 cmd.ExecuteNonQuery();
             }
         }
-
 
         public List<TicketModel> GetAllRequests()
         {
@@ -194,7 +191,6 @@ namespace BATODA.Modules.Assistance_Request_Module
                     }
                 }
             }
-
             return tickets;
         }
 

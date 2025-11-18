@@ -43,7 +43,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 230, 230);
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
-            dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
+            dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
 
             dgv.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
             dgv.RowTemplate.Height = 70;

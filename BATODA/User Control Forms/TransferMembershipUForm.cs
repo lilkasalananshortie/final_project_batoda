@@ -118,14 +118,14 @@ namespace BATODA
         
         private void OwnerSearchTxt_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                OwnerSearchGrid.Visible = true;
-                TransferMemberSearchOwner search = new TransferMemberSearchOwner();
-                search.SearchOwner(OwnerSearchTxt, OwnerSearchGrid);
-                OwnerSearchGrid.Focus();
-                e.SuppressKeyPress = true;
-            }
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    OwnerSearchGrid.Visible = true;
+            //    TransferMemberSearchOwner search = new TransferMemberSearchOwner();
+            //    search.SearchOwner(OwnerSearchTxt, OwnerSearchGrid);
+            //    OwnerSearchGrid.Focus();
+            //    e.SuppressKeyPress = true;
+            //}
         }
 
         private void OwnerSearchGrid_Leave(object sender, EventArgs e)
@@ -192,7 +192,6 @@ namespace BATODA
                 var memberRepo = new MemberRepository();
                 var transferRepo = new TransferMembershipHistoryRepository(); // REPO FOR HISTORY
 
-                // EXTRACT DIGITS FROM LABEL
                 string digitsOnly = new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray());
                 if (string.IsNullOrEmpty(digitsOnly))
                 {
@@ -202,8 +201,8 @@ namespace BATODA
 
                 int bodyNumber = int.Parse(digitsOnly);
 
-                // 🔥 CHECK LAST TRANSFER DATE
-                DateTime? lastTransferDate = transferRepo.GetLastTransferDate(bodyNumber); // YOU’LL ADD THIS METHOD BELOW
+                // CHECK LAST TRANSFER DATE
+                DateTime? lastTransferDate = transferRepo.GetLastTransferDate(bodyNumber);
                 if (lastTransferDate.HasValue && (DateTime.Now - lastTransferDate.Value).TotalDays < 3)
                 {
                     MessageBox.Show("This member was recently transferred. Please wait 3 days before transferring again.",
@@ -331,6 +330,96 @@ namespace BATODA
         private void TransferModelTxt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TransferUploadBtn_Click_1(object sender, EventArgs e)
+        {
+            TransferUploadImage.Title = "Select an Image";
+            TransferUploadImage.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (TransferUploadImage.ShowDialog() == DialogResult.OK)
+            {
+                using (var temp = new Bitmap(TransferUploadImage.FileName))
+                {
+                    NewOwnerPb.Image = new Bitmap(temp);
+                }
+
+                NewOwnerPb.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void OwnerSearchTxt_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                OwnerSearchGrid.Visible = true;
+                TransferMemberSearchOwner search = new TransferMemberSearchOwner();
+                search.SearchOwner(OwnerSearchTxt, OwnerSearchGrid);
+                OwnerSearchGrid.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void OwnerSearchGrid_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            string bodyNumberStr = OwnerSearchGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value?.ToString();
+            if (string.IsNullOrEmpty(bodyNumberStr)) return;
+
+            if (!int.TryParse(bodyNumberStr, out int bodyNumber)) return;
+
+            TransferLoadOwner loader = new TransferLoadOwner();
+            loader.LoadOwnerDetails(bodyNumberStr,
+                CurrentBodyNumberLbl,
+                CurrentFirstNameLbl,
+                CurrentLastNameLbl,
+                CurrentMiddleLbl,
+                CurrentMemberTypeLbl,
+                CurrentPlateLbl,
+                CurrentChassisLbl,
+                CurrentEngineLbl,
+                CurrentBrandLbl,
+                CurrentModelLbl,
+                CurrentBirthdateLbl,
+                CurrentContactLbl,
+                TransferBodyNumberLbl);
+
+            MemberRepository memberRepo = new MemberRepository();
+            owner = memberRepo.GetByBodyNumber(bodyNumber);
+
+            if (owner != null)
+            {
+                LoadOwnerImage.FromMember(owner, CurrentOwnerPb);
+            }
+
+            OwnerSearchGrid.Visible = false;
+        }
+
+        private void TransferBtn_Click(object sender, EventArgs e)
+        {
+            // CURRENT OWNER
+            if (owner != null)
+            {
+                LoadOwnerImage.FromMember(owner, ConfirmCurrentImage);
+            }
+
+            // NEW OWNER (UPLOADED FROM BTN)
+            if (NewOwnerPb.Image != null)
+            {
+                // Make a memory copy so the original NewOwnerPb image doesn't lock any file
+                using (var temp = new Bitmap(NewOwnerPb.Image))
+                {
+                    ConfirmNewImage.Image = new Bitmap(temp);
+                }
+                ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+
+
+            HolderPanel1.SendToBack();
+            ConfirmationPanel.Show();
+            ConfirmationTransferPanel.BringToFront();
+            ConfirmationTransferPanel.Show();
         }
     }
 }
