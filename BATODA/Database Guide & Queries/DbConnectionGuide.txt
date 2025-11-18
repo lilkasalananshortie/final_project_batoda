@@ -44,7 +44,7 @@ ALTER TABLE MemberInfo
 ADD RenewalStatus VARCHAR(10) CHECK (RenewalStatus IN ('Renewed', 'Expired')) DEFAULT 'Renewed';
 
 UPDATE MemberInfo
-SET RenewalStatus = 
+SET RenewalStatus =     
     CASE 
         WHEN DATEDIFF(YEAR, DateJoined, GETDATE()) >= 1 THEN 'Expired'
         ELSE 'Renewed'

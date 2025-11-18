@@ -198,8 +198,8 @@ public class AddTicketBox
             int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
 
             repo.UpdateRequestStatus(ticketID, "Approved");
-
             repo.UpdateActionDate(ticketID);
+
             releaseBtn.Visible = true;
             approveBtn.Hide();
             cancelBtn.Hide();
@@ -219,7 +219,10 @@ public class AddTicketBox
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Rejected";
             int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
             repo.UpdateRequestStatus(ticketID, "Rejected");
+            repo.UpdateActionDate(ticketID);
+
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
@@ -237,7 +240,10 @@ public class AddTicketBox
             lblTracking.BringToFront();
             lblStatus.Text = "Status: Canceled";
             int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
             repo.UpdateRequestStatus(ticketID, "Canceled");
+            repo.UpdateActionDate(ticketID);
+
             approveBtn.Hide();
             cancelBtn.Hide();
             rejectBtn.Hide();
@@ -249,6 +255,21 @@ public class AddTicketBox
         releaseBtn.Click += (s, e) =>
         {
             Panel parent = ((Button)s).Parent as Panel;
+            HeaderPanel.BackColor = Color.LightGray;
+            lblTracking.BackColor = Color.LightGray;
+            lblTracking.BringToFront();
+            lblStatus.Text = "Status: Released";
+            int ticketID = Convert.ToInt32(trackingNumber.Replace("TR-", ""));
+
+            repo.UpdateRequestStatus(ticketID, "Released");
+            repo.UpdateActionDate(ticketID);
+
+            approveBtn.Hide();
+            cancelBtn.Hide();
+            rejectBtn.Hide();
+            releaseBtn.Hide();
+
+            AddActivityLog("Request Released", $"Assistance request {trackingNumber} released", "released");
             parent.Hide();
         };
 

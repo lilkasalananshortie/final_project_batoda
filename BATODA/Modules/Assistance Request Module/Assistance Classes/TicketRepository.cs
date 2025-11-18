@@ -110,19 +110,36 @@ namespace BATODA.Modules.Assistance_Request_Module
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = @"
-            UPDATE AssistanceActionHistory
-            SET ActionDate = GETDATE()
-            WHERE TicketID = @TicketID";
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                string check = "SELECT COUNT(*) FROM AssistanceActionHistory WHERE TicketID = @TicketID";
+                using (SqlCommand chk = new SqlCommand(check, conn))
                 {
-                    cmd.Parameters.AddWithValue("@TicketID", ticketID);
-                    cmd.ExecuteNonQuery();
+                    chk.Parameters.AddWithValue("@TicketID", ticketID);
+                    int exists = (int)chk.ExecuteScalar();
+
+                    if (exists == 0)
+                    {
+                        string insert = @"INSERT INTO AssistanceActionHistory (TicketID, ActionDate)
+                                  VALUES (@TicketID, GETDATE())";
+                        using (SqlCommand ins = new SqlCommand(insert, conn))
+                        {
+                            ins.Parameters.AddWithValue("@TicketID", ticketID);
+                            ins.ExecuteNonQuery();
+                        }
+                        return;
+                    }
+                }
+
+                string update = @"UPDATE AssistanceActionHistory
+                          SET ActionDate = GETDATE()
+                          WHERE TicketID = @TicketID";
+                using (SqlCommand upd = new SqlCommand(update, conn))
+                {
+                    upd.Parameters.AddWithValue("@TicketID", ticketID);
+                    upd.ExecuteNonQuery();
                 }
             }
         }
-
 
 
 
