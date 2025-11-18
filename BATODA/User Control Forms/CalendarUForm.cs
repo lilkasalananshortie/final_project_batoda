@@ -23,7 +23,7 @@ namespace BATODA
         private Panel selectedEventPanel = null;
 
         //WAG IBAHINNESS
-        private const int EventPanelWidth = 425;
+        private const int EventPanelWidth = 420;
         private const int EventPanelHeight = 70;
         private const int EventPanelMargin = 5;
         private const int EventLabelHeight = 20;
@@ -360,7 +360,7 @@ namespace BATODA
 
         private void ExpandPanel(Panel panel, CalendarEvent ev)
         {
-            panel.Height = 200;
+            panel.Height = 150;
 
             Label lblDescription = new Label
             {
@@ -398,22 +398,17 @@ namespace BATODA
             {
                 ev.Status = "Done";
                 UpdateEventInDayCell(ev);
-               MoveToPastEvents(ev, true); // <-- NEED IBAHIN TO PRE KAPAG PAPASOK MO NA YUNG SA LOGIC NG ATTENDANCE <-- ARONE
+               MoveToPreviousEvents(ev, true); // <-- NEED IBAHIN TO PRE KAPAG PAPASOK MO NA YUNG SA LOGIC NG ATTENDANCE <-- ARONE
                 EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
-                //IIBAHIN TO DEPENDE KUNG PAANO MO GAGAWIN YUNG ATTENDANCE <--ARONE
-                CheckAttendancePanel.Show();
-                SaveAttendanceButton.Show();
-
-
             };
 
             btnCancel.Click += (s, args) =>
             {
                 ev.Status = "Canceled";
                 UpdateEventInDayCell(ev);
-                MoveToPastEvents(ev, false);
+                MoveToPreviousEvents(ev, false);
                 EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
@@ -423,11 +418,23 @@ namespace BATODA
             panel.Controls.Add(btnDone);
             panel.Controls.Add(btnCancel);
         }
-        //MOVE TO PAST EVENTS PANEL
-        private void MoveToPastEvents(CalendarEvent ev, bool isDone)
+
+        private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
+        {
+            CheckAttendancePanel.Location = PreviousEventPanel.Location;
+            CheckAttendancePanel.Show();
+            CheckAttendancePanel.BringToFront();
+            PreviousEventPanel.Hide();
+        }
+
+
+
+       
+        //MOVE TO PREVIOUS EVENTS PANEL
+        private void MoveToPreviousEvents(CalendarEvent ev, bool isDone)
         {
             Panel panel = new Panel();
-            panel.Size = new Size(EventPanelWidth, EventPanelHeight);
+            panel.Size = new Size(410, EventPanelHeight);
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Margin = new Padding(EventPanelMargin);
             panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
@@ -461,8 +468,10 @@ namespace BATODA
             panel.Controls.Add(lblInfo);
             panel.Controls.Add(lblDate);
 
-            PastEventFlowLayoutPanel.Controls.Add(panel);
-            PastEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
+            DoneEventFlowLayoutPanel.Controls.Add(panel);
+            DoneEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
+
+            panel.DoubleClick += DoneEventPanel_DoubleClick;
         }
         //ADDING OF EVENT LABEL TO DAY CELL IN CALENDAR NOW CAN ADD MULTIPLE EVENTS IN THE SAME DAY 
         private void AddEventToDayCell(CalendarEvent ev)
@@ -574,10 +583,8 @@ namespace BATODA
 
         private void SaveAttendanceButton_Click(object sender, EventArgs e)
         {
-           
-            
-            CheckAttendancePanel.Hide();
-            
+            CheckAttendancePanel.Hide();   
+            PreviousEventPanel.Show();
         }
 
         private void previousButton_Click(object sender, EventArgs e)
@@ -603,6 +610,16 @@ namespace BATODA
             selectedDate = date;
             AddEventPanel.Show();
             AddEventPanel.BringToFront();
+        }
+
+        private void EvenTittleTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckAttendancePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

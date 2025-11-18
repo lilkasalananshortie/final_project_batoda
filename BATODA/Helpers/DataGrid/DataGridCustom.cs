@@ -33,7 +33,7 @@ namespace BATODA.Helpers.DataGrids
             foreach (DataGridViewColumn col in dgv.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
-                col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
             dgv.ReadOnly = true;
@@ -45,7 +45,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
 
-            dgv.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Regular);
+            dgv.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
             dgv.RowTemplate.Height = 70;
             dgv.MultiSelect = false;
 
@@ -53,7 +53,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.EnableHeadersVisualStyles = false;
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(173, 46, 36);
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13, FontStyle.Regular);
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
         }
@@ -132,7 +132,7 @@ namespace BATODA.Helpers.DataGrids
 
             dgv.Columns.Add(editColumn);
             editColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            editColumn.DefaultCellStyle.Padding = new Padding(20);
+            editColumn.DefaultCellStyle.Padding = new Padding(5);
 
           
             int hoveredRow = -1;
@@ -162,7 +162,7 @@ namespace BATODA.Helpers.DataGrids
 
                 Image img = isHover ? Properties.Resources.edit_hover : Properties.Resources.edit;
 
-                int targetSize = 30; 
+                int targetSize = 20; 
                 int x = e.CellBounds.X + (e.CellBounds.Width - targetSize) / 2;
                 int y = e.CellBounds.Y + (e.CellBounds.Height - targetSize) / 2;
 

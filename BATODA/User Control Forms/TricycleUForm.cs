@@ -28,6 +28,7 @@ namespace BATODA
             TricycleRepository repo = new TricycleRepository();
             List<TricycleModel> tricycles = repo.GetAllTricycles();
 
+
             DataTable table = new DataTable();
             table.Columns.Add("Body No.");
             table.Columns.Add("Last Name");

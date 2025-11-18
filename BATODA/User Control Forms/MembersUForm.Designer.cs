@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.SortMembertTypeCmb = new System.Windows.Forms.ComboBox();
             this.SortOrderCmb = new System.Windows.Forms.ComboBox();
@@ -243,14 +243,14 @@
             this.MembersDataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.MembersDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.MembersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.MembersDataGrid.EnableHeadersVisualStyles = false;
             this.MembersDataGrid.Location = new System.Drawing.Point(24, 134);
             this.MembersDataGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -415,7 +415,7 @@
             this.AddMemberPanel.Controls.Add(this.CancelButton);
             this.AddMemberPanel.Location = new System.Drawing.Point(154, 109);
             this.AddMemberPanel.Name = "AddMemberPanel";
-            this.AddMemberPanel.Size = new System.Drawing.Size(1158, 654);
+            this.AddMemberPanel.Size = new System.Drawing.Size(1158, 618);
             this.AddMemberPanel.TabIndex = 22;
             // 
             // panel16
@@ -458,7 +458,7 @@
             // 
             this.BirthdatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BirthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthdatePicker.Location = new System.Drawing.Point(549, 334);
+            this.BirthdatePicker.Location = new System.Drawing.Point(552, 328);
             this.BirthdatePicker.MaxDate = new System.DateTime(2999, 12, 31, 0, 0, 0, 0);
             this.BirthdatePicker.Name = "BirthdatePicker";
             this.BirthdatePicker.Size = new System.Drawing.Size(267, 26);
@@ -468,7 +468,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(579, 292);
+            this.label25.Location = new System.Drawing.Point(549, 296);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(84, 20);
             this.label25.TabIndex = 53;
@@ -554,7 +554,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(278, 300);
+            this.label3.Location = new System.Drawing.Point(281, 296);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 20);
             this.label3.TabIndex = 30;
@@ -564,7 +564,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(282, 138);
+            this.label24.Location = new System.Drawing.Point(285, 130);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(115, 20);
             this.label24.TabIndex = 31;
@@ -574,7 +574,7 @@
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.AddChassisNumberTxt);
-            this.panel17.Location = new System.Drawing.Point(814, 253);
+            this.panel17.Location = new System.Drawing.Point(817, 244);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(256, 35);
             this.panel17.TabIndex = 28;
@@ -593,7 +593,7 @@
             // 
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel18.Controls.Add(this.AddEngineNumberTxt);
-            this.panel18.Location = new System.Drawing.Point(283, 335);
+            this.panel18.Location = new System.Drawing.Point(286, 324);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(256, 35);
             this.panel18.TabIndex = 29;
@@ -612,7 +612,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(837, 52);
+            this.label23.Location = new System.Drawing.Point(840, 48);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(115, 20);
             this.label23.TabIndex = 27;
@@ -623,7 +623,7 @@
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.AddMemberTypeCmb);
             this.panel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel15.Location = new System.Drawing.Point(838, 80);
+            this.panel15.Location = new System.Drawing.Point(841, 76);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(230, 35);
             this.panel15.TabIndex = 26;
@@ -645,7 +645,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(282, 52);
+            this.label8.Location = new System.Drawing.Point(285, 48);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 20);
             this.label8.TabIndex = 27;
@@ -655,7 +655,7 @@
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.AddFirstNameTxt);
-            this.panel8.Location = new System.Drawing.Point(283, 80);
+            this.panel8.Location = new System.Drawing.Point(286, 76);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(230, 35);
             this.panel8.TabIndex = 26;
@@ -674,7 +674,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(546, 224);
+            this.label22.Location = new System.Drawing.Point(549, 215);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(62, 20);
             this.label22.TabIndex = 27;
@@ -684,7 +684,7 @@
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.AddModelTxt);
-            this.panel14.Location = new System.Drawing.Point(548, 253);
+            this.panel14.Location = new System.Drawing.Point(551, 244);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(256, 35);
             this.panel14.TabIndex = 26;
@@ -703,7 +703,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(813, 223);
+            this.label7.Location = new System.Drawing.Point(816, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 20);
             this.label7.TabIndex = 27;
@@ -713,7 +713,7 @@
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.AddBodyNo);
-            this.panel7.Location = new System.Drawing.Point(283, 165);
+            this.panel7.Location = new System.Drawing.Point(286, 157);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(256, 35);
             this.panel7.TabIndex = 26;
@@ -732,7 +732,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(281, 224);
+            this.label13.Location = new System.Drawing.Point(284, 215);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(108, 20);
             this.label13.TabIndex = 27;
@@ -742,7 +742,7 @@
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.AddTricycleBrand);
-            this.panel13.Location = new System.Drawing.Point(283, 253);
+            this.panel13.Location = new System.Drawing.Point(286, 244);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(256, 35);
             this.panel13.TabIndex = 26;
@@ -761,7 +761,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(521, 52);
+            this.label9.Location = new System.Drawing.Point(524, 48);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 20);
             this.label9.TabIndex = 27;
@@ -771,7 +771,7 @@
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.AddLastNameTxt);
-            this.panel9.Location = new System.Drawing.Point(522, 80);
+            this.panel9.Location = new System.Drawing.Point(525, 76);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(230, 35);
             this.panel9.TabIndex = 26;
@@ -790,7 +790,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(548, 136);
+            this.label12.Location = new System.Drawing.Point(551, 128);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(135, 20);
             this.label12.TabIndex = 27;
@@ -800,7 +800,7 @@
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.AddContactNumber);
-            this.panel12.Location = new System.Drawing.Point(549, 165);
+            this.panel12.Location = new System.Drawing.Point(552, 157);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(256, 35);
             this.panel12.TabIndex = 26;
@@ -819,7 +819,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(774, 59);
+            this.label10.Location = new System.Drawing.Point(777, 55);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 20);
             this.label10.TabIndex = 27;
@@ -829,7 +829,7 @@
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.AddMiddleNameTxt);
-            this.panel10.Location = new System.Drawing.Point(762, 80);
+            this.panel10.Location = new System.Drawing.Point(765, 76);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(66, 35);
             this.panel10.TabIndex = 26;
@@ -848,7 +848,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(814, 136);
+            this.label11.Location = new System.Drawing.Point(817, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 20);
             this.label11.TabIndex = 27;
@@ -858,7 +858,7 @@
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.AddPlateNumberTxt);
-            this.panel11.Location = new System.Drawing.Point(815, 165);
+            this.panel11.Location = new System.Drawing.Point(818, 157);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(255, 35);
             this.panel11.TabIndex = 26;
@@ -912,7 +912,7 @@
             this.AddMemberBtn.ImagePosition = new System.Drawing.Point(20, 0);
             this.AddMemberBtn.ImageSize = new System.Drawing.Size(24, 24);
             this.AddMemberBtn.IsToggled = false;
-            this.AddMemberBtn.Location = new System.Drawing.Point(936, 565);
+            this.AddMemberBtn.Location = new System.Drawing.Point(936, 537);
             this.AddMemberBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddMemberBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.AddMemberBtn.Name = "AddMemberBtn";
@@ -945,7 +945,7 @@
             this.CancelButton.ImagePosition = new System.Drawing.Point(30, 0);
             this.CancelButton.ImageSize = new System.Drawing.Size(24, 24);
             this.CancelButton.IsToggled = false;
-            this.CancelButton.Location = new System.Drawing.Point(782, 565);
+            this.CancelButton.Location = new System.Drawing.Point(782, 537);
             this.CancelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CancelButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.CancelButton.Name = "CancelButton";
