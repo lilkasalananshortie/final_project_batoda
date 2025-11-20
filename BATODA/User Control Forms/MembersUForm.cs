@@ -41,7 +41,7 @@ namespace BATODA
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
-            var repo = new FinanceRepository();
+            var repo = new TaxRepository();
 
             DisplayClass.SetPlaceholder(SearchTxt, "Search Member");
             DisplayClass.SetPlaceholder(SortStatusCmb, "Status", "Active", "Inactive");

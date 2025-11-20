@@ -2,12 +2,7 @@
 using BATODA.Modules.Assistance_Request_Module.Renewal_Classes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BATODA
@@ -18,10 +13,9 @@ namespace BATODA
         {
             InitializeComponent();
             MembershipRenewalHandler.Initialize(RenewalGrid);
-            LoadRenewalGrid(); 
+            LoadRenewalGrid();
             ConfirmationRenewPanel.Hide();
         }
-
 
         private void LoadRenewalGrid()
         {
@@ -54,43 +48,17 @@ namespace BATODA
             }
         }
 
-        private void MembershipRenewalUForm_Load(object sender, EventArgs e)
-        {
-            LoadRenewalGrid();
-
-            var renewalsCount = new RenewalRepository().GetAllRenewals().Count;
-            MessageBox.Show($"Found {renewalsCount} renewals");
-        }
-
-
-        private void FinanceButton_Click(object sender, EventArgs e)
-        {
-            DisplayClass.ShowMain(new FinanceUForm());
-        }
-
-        private void MembershipRenewalButton_Click_1(object sender, EventArgs e)
-        {
-            DisplayClass.ShowMain(new MembershipRenewalUForm());
-
-        }
-
-        private void RenewalHistoryButton_Click(object sender, EventArgs e)
-        {
-            DisplayClass.ShowMain(new ButawUForm());
-        }
-
-       
         private void ExpiredMembersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == RenewalGrid.Columns["SelectMember"].Index && e.RowIndex >= 0)
             {
                 var selected = MembershipRenewalHandler.GetSelectedMembers(RenewalGrid);
-
                 ConfirmationRenewPanel.Visible = selected.Count > 0;
-
-                ConfirmationRenewPanel.Text = string.Join(", ", selected.Select(m => m.LastName));
+                ConfirmationRenewPanel.Text = string.Join(", ", selected.Select(m => m.BodyNumber));
             }
         }
+
+
         private void ShowNextCheckedMember()
         {
             DataGridViewRow nextRow = null;
@@ -125,13 +93,9 @@ namespace BATODA
             cell.Tag = "NotSelected";
         }
 
-
-
-
         private void RenewButton_Click(object sender, EventArgs e)
         {
-            if (RenewalGrid.CurrentRow == null)
-                return;
+            if (RenewalGrid.CurrentRow == null) return;
 
             var currentBodyNumber = BodyNumberLabel.Text;
 
@@ -147,8 +111,6 @@ namespace BATODA
             ShowNextCheckedMember();
         }
 
-
-
         private void CancelRenewalButton_Click(object sender, EventArgs e)
         {
             ShowNextCheckedMember();
@@ -156,9 +118,22 @@ namespace BATODA
 
         private void RenewSelectedButton_Click(object sender, EventArgs e)
         {
-            ShowNextCheckedMember();
+            var selectedMembers = MembershipRenewalHandler.GetSelectedMembers(RenewalGrid);
+            List<int> selectedBodyNumbers = new List<int>();
 
+            foreach (var member in selectedMembers)
+            {
+                selectedBodyNumbers.Add(member.BodyNumber);
+            }
+
+            if (selectedBodyNumbers.Count == 0) return;
+
+            var repo = new RenewalRepository();
+            repo.RenewMembers(selectedBodyNumbers);
+
+            MessageBox.Show("Selected members have been renewed.");
+            LoadRenewalGrid();
         }
+
     }
-    
 }

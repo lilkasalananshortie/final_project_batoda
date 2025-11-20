@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BATODA.Modules.Assistance_Request_Module.Renewal_Classes;
+using BATODA.Modules.MemberModule;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Modules.MemberModule;
 
 
 namespace BATODA.Helpers.DataGrid
@@ -161,9 +162,9 @@ namespace BATODA.Helpers.DataGrid
         }
 
         // SAMPLE LANG ULIT TO PWEDE BURAHIN PARA LANG MA VISUALIZE YUNG DATAGRID
-        public static List<MemberModel> GetSelectedMembers(DataGridView dgv)
+        public static List<MemberRenewalModel> GetSelectedMembers(DataGridView dgv)
         {
-            List<MemberModel> selected = new List<MemberModel>();
+            List<MemberRenewalModel> selected = new List<MemberRenewalModel>();
 
             foreach (DataGridViewRow row in dgv.Rows)
             {
@@ -172,23 +173,30 @@ namespace BATODA.Helpers.DataGrid
                 if (isChecked)
                 {
                     string fullName = row.Cells["FullName"].Value?.ToString() ?? "";
-                    string[] nameParts = fullName.Split(' ');
-                    string firstName = nameParts.Length > 0 ? nameParts[0] : "";
-                    string lastName = nameParts.Length > 1 ? string.Join(" ", nameParts.Skip(1)) : "";
 
-                    selected.Add(new MemberModel
+                    DateTime? dateRenewed = null;
+                    DateTime tempDate;
+                    if (row.Cells["DateRenewed"].Value != null &&
+                        DateTime.TryParse(row.Cells["DateRenewed"].Value.ToString(), out tempDate))
+                    {
+                        dateRenewed = tempDate;
+                    }
+
+                    DateTime? expiryDate = null;
+                    if (row.Cells["ExpiryDate"].Value != null &&
+                        DateTime.TryParse(row.Cells["ExpiryDate"].Value.ToString(), out tempDate))
+                    {
+                        expiryDate = tempDate;
+                    }
+
+                    selected.Add(new MemberRenewalModel
                     {
                         BodyNumber = Convert.ToInt32(row.Cells["BodyNumber"].Value),
-                        FirstName = firstName,
-                        LastName = lastName,
+                        FullName = fullName,
                         MembershipType = row.Cells["MembershipType"].Value?.ToString() ?? "",
                         ContactNumber = row.Cells["ContactNumber"].Value?.ToString() ?? "",
-                        DateJoined = row.Cells["DateJoined"].Value != DBNull.Value
-                                     ? Convert.ToDateTime(row.Cells["DateJoined"].Value)
-                                     : DateTime.MinValue,
-                        ExpiryDate = row.Cells["ExpiryDate"].Value != DBNull.Value
-                                     ? Convert.ToDateTime(row.Cells["ExpiryDate"].Value)
-                                     : DateTime.MinValue,
+                        DateRenewed = dateRenewed,
+                        ExpiryDate = expiryDate,
                         RenewalStatus = row.Cells["RenewalStatus"].Value?.ToString() ?? ""
                     });
                 }
@@ -196,6 +204,8 @@ namespace BATODA.Helpers.DataGrid
 
             return selected;
         }
+
+
 
     }
 }

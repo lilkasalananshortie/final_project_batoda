@@ -153,7 +153,7 @@ namespace BATODA.Helpers.DataGrid
             int year = CurrentYear;
             int month = e.ColumnIndex - 2;
 
-            FinanceRepository.UpdatePaymentInDB(bodyNumber, year, month, next);
+            TaxRepository.UpdatePaymentInDB(bodyNumber, year, month, next);
 
         }
 
@@ -161,7 +161,7 @@ namespace BATODA.Helpers.DataGrid
 
         public static void EnsureYearRecords(int year)
         {
-            var repo = new FinanceRepository();
+            var repo = new TaxRepository();
             var members = repo.GetAllMembers();
             var payments = repo.GetPaymentsByYear(year);
             DateTime today = DateTime.Today;
@@ -175,7 +175,7 @@ namespace BATODA.Helpers.DataGrid
 
                     if (!exists)
                     {
-                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, month, status);
+                        TaxRepository.UpdatePaymentInDB(member.BodyNumber, year, month, status);
                     }
                     else
                     {
@@ -183,7 +183,7 @@ namespace BATODA.Helpers.DataGrid
                         if (year < today.Year || (year == today.Year && month < today.Month))
                         {
                             if (payment.Status != "Paid")
-                                FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, month, "Overdue");
+                                TaxRepository.UpdatePaymentInDB(member.BodyNumber, year, month, "Overdue");
                         }
                     }
                 }
@@ -233,7 +233,7 @@ namespace BATODA.Helpers.DataGrid
                 Name = "View",
                 Width = 20
             });
-            var queries = new FinanceRepository();
+            var queries = new TaxRepository();
             var members = queries.GetAllMembers();
             var payments = queries.GetPaymentsByYear(year);
 
@@ -263,7 +263,7 @@ namespace BATODA.Helpers.DataGrid
                         }
                         dgv.Rows[rowIndex].Cells[i + 2].Tag = statusToUse; // STORE STATUS IN TAG
 
-                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, i, statusToUse); // SAVE
+                        TaxRepository.UpdatePaymentInDB(member.BodyNumber, year, i, statusToUse); // SAVE
                     }
                     else // IF NO PAYMENT FOUND
                     {
@@ -278,7 +278,7 @@ namespace BATODA.Helpers.DataGrid
                         }
                         dgv.Rows[rowIndex].Cells[i + 2].Tag = defaultStatus; // STORE DEFAULT STATUS IN TAG
 
-                        FinanceRepository.UpdatePaymentInDB(member.BodyNumber, year, i, defaultStatus); // SAVE DEFAULT STATUS TO DB
+                        TaxRepository.UpdatePaymentInDB(member.BodyNumber, year, i, defaultStatus); // SAVE DEFAULT STATUS TO DB
                     }
                 }
             }

@@ -39,6 +39,7 @@
             this.RenewSelectedButton = new BATODA.ButtonStyle();
             this.ConfirmationRenewPanel = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.MembershipTypeLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -128,7 +128,6 @@
             this.MembershipRenewalButton.TextOffset = 20;
             this.MembershipRenewalButton.ToggleColor = System.Drawing.Color.Empty;
             this.MembershipRenewalButton.UseVisualStyleBackColor = false;
-            this.MembershipRenewalButton.Click += new System.EventHandler(this.MembershipRenewalButton_Click_1);
             // 
             // RenewalHistoryButton
             // 
@@ -161,7 +160,6 @@
             this.RenewalHistoryButton.TextOffset = 20;
             this.RenewalHistoryButton.ToggleColor = System.Drawing.Color.Empty;
             this.RenewalHistoryButton.UseVisualStyleBackColor = false;
-            this.RenewalHistoryButton.Click += new System.EventHandler(this.RenewalHistoryButton_Click);
             // 
             // FinanceButton
             // 
@@ -194,7 +192,6 @@
             this.FinanceButton.TextOffset = 20;
             this.FinanceButton.ToggleColor = System.Drawing.Color.LightGray;
             this.FinanceButton.UseVisualStyleBackColor = false;
-            this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
             // panel6
             // 
@@ -232,10 +229,10 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.RenewSelectedButton);
-            this.panel1.Controls.Add(this.ConfirmationRenewPanel);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.ConfirmationRenewPanel);
             this.panel1.Location = new System.Drawing.Point(14, 159);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1590, 767);
@@ -308,6 +305,14 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(820, 3);
             this.panel11.TabIndex = 89;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel10.Location = new System.Drawing.Point(20, 70);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(820, 3);
+            this.panel10.TabIndex = 88;
             // 
             // panel9
             // 
@@ -630,14 +635,6 @@
             this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 50;
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel10.Location = new System.Drawing.Point(20, 70);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(820, 3);
-            this.panel10.TabIndex = 88;
-            // 
             // MembershipRenewalUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -649,7 +646,6 @@
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "MembershipRenewalUForm";
             this.Size = new System.Drawing.Size(1752, 944);
-            this.Load += new System.EventHandler(this.MembershipRenewalUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

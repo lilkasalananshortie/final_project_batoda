@@ -71,6 +71,44 @@ namespace BATODA.Modules.Assistance_Request_Module.Renewal_Classes
             }
         }
 
+        public void RenewMembers(List<int> bodyNumbers)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                foreach (int bodyNumber in bodyNumbers)
+                {
+                    string checkStatusQuery = "SELECT RenewalStatus FROM MemberInfo WHERE BodyNumber=@BodyNumber";
+                    SqlCommand checkStatusCmd = new SqlCommand(checkStatusQuery, con);
+                    checkStatusCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                    string currentStatus = (string)checkStatusCmd.ExecuteScalar();
+
+                    if (currentStatus == "Renewed")
+                        continue; 
+
+
+                    string updateStatusQuery = "UPDATE MemberInfo SET RenewalStatus='Renewed' WHERE BodyNumber=@BodyNumber";
+                    SqlCommand updateStatusCmd = new SqlCommand(updateStatusQuery, con);
+                    updateStatusCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                    updateStatusCmd.ExecuteNonQuery();
+
+
+                    string checkRenewalQuery = "SELECT COUNT(*) FROM MemberRenewal WHERE BodyNumber=@BodyNumber";
+                    SqlCommand checkRenewalCmd = new SqlCommand(checkRenewalQuery, con);
+                    checkRenewalCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                    int count = (int)checkRenewalCmd.ExecuteScalar();
+
+                    if (count == 0)
+                    {
+                        string insertRenewalQuery = "INSERT INTO MemberRenewal (BodyNumber, DateRenewed) VALUES (@BodyNumber, GETDATE())";
+                        SqlCommand insertRenewalCmd = new SqlCommand(insertRenewalQuery, con);
+                        insertRenewalCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                        insertRenewalCmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
 
 
     }

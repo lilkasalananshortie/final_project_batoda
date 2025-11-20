@@ -36,9 +36,13 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.FinancHistoryCmb = new System.Windows.Forms.ComboBox();
+            this.RenewalHistoryGrid = new System.Windows.Forms.DataGridView();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RenewalHistoryGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -157,6 +161,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.FinancHistoryCmb);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Location = new System.Drawing.Point(19, 94);
@@ -180,17 +185,38 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(62, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 31);
+            this.label7.Size = new System.Drawing.Size(350, 31);
             this.label7.TabIndex = 43;
-            this.label7.Text = "History";
+            this.label7.Text = "Renewal Payment History";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.RenewalHistoryGrid);
             this.panel1.Location = new System.Drawing.Point(19, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1585, 743);
             this.panel1.TabIndex = 50;
+            // 
+            // FinancHistoryCmb
+            // 
+            this.FinancHistoryCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinancHistoryCmb.FormattingEnabled = true;
+            this.FinancHistoryCmb.Items.AddRange(new object[] {
+            "Renewal Payments",
+            "Butaw Payments"});
+            this.FinancHistoryCmb.Location = new System.Drawing.Point(1368, 21);
+            this.FinancHistoryCmb.Name = "FinancHistoryCmb";
+            this.FinancHistoryCmb.Size = new System.Drawing.Size(192, 28);
+            this.FinancHistoryCmb.TabIndex = 45;
+            // 
+            // RenewalHistoryGrid
+            // 
+            this.RenewalHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RenewalHistoryGrid.Location = new System.Drawing.Point(0, 0);
+            this.RenewalHistoryGrid.Name = "RenewalHistoryGrid";
+            this.RenewalHistoryGrid.Size = new System.Drawing.Size(1585, 743);
+            this.RenewalHistoryGrid.TabIndex = 0;
             // 
             // ButawUForm
             // 
@@ -207,6 +233,8 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RenewalHistoryGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +248,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox FinancHistoryCmb;
+        private System.Windows.Forms.DataGridView RenewalHistoryGrid;
     }
 }

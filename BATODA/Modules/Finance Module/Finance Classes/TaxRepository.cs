@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 
 namespace BATODA.Helpers.Data
 {
-    public class FinanceRepository
+    public class TaxRepository
     {
         private readonly string connectionString;
 
-        public FinanceRepository()
+        public TaxRepository()
         {
             connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True";
         }
@@ -215,11 +215,6 @@ namespace BATODA.Helpers.Data
                 }
             }
         }
-
-
-
-
-
 
         public int GetPaidMonthsCount(int bodyNumber, int year)
         {

@@ -164,9 +164,9 @@
             // AssistanceHistoryGrid
             // 
             this.AssistanceHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AssistanceHistoryGrid.Location = new System.Drawing.Point(0, -3);
+            this.AssistanceHistoryGrid.Location = new System.Drawing.Point(2, 1);
             this.AssistanceHistoryGrid.Name = "AssistanceHistoryGrid";
-            this.AssistanceHistoryGrid.Size = new System.Drawing.Size(1590, 796);
+            this.AssistanceHistoryGrid.Size = new System.Drawing.Size(1582, 792);
             this.AssistanceHistoryGrid.TabIndex = 0;
             // 
             // ARHUForm

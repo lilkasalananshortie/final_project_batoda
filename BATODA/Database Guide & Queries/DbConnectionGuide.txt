@@ -52,7 +52,7 @@ SET RenewalStatus =
 
 --------------- REMOVE THIS, NEW TO ------------------
 ALTER TABLE MemberInfo
-DROP CONSTRAINT DF__MemberInf__DaysR__5441852A;
+DROP CONSTRAINT DF__MemberInf__DaysR__5441852A; (Copy numbeer depende sa kung anong lalabas na number sa inyo)
 
 ALTER TABLE MemberInfo
 DROP COLUMN DaysRemaining;

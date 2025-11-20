@@ -47,7 +47,7 @@ namespace BATODA
 
             DataGridCustom.FinanceMultiSelectCustomGrid(MassSelectGrid);
 
-            var repo = new FinanceRepository();
+            var repo = new TaxRepository();
             var members = repo.GetAllMembers();
 
             foreach (var member in members)
@@ -268,7 +268,7 @@ namespace BATODA
             int year = int.Parse(MultiYear.SelectedItem.ToString());
             string action = MultiAction.SelectedItem.ToString();
 
-            var repo = new FinanceRepository();
+            var repo = new TaxRepository();
 
             //LOOP THROUGH SELECTED MEMBERS
             foreach (DataGridViewRow row in MassSelectGrid.SelectedRows)
@@ -276,7 +276,7 @@ namespace BATODA
                 int bodyNumber = int.Parse(row.Cells["BodyNo"].Value.ToString());
 
                 //UPDATE OR INSERT PAYMENT IN DB
-                FinanceRepository.UpdatePaymentInDB(bodyNumber, year, month, action);
+                TaxRepository.UpdatePaymentInDB(bodyNumber, year, month, action);
             }
 
             //SHOW SUCCESS AND RELOAD GRID
