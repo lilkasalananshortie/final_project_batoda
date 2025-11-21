@@ -54,7 +54,8 @@ public class AddTicketBox
             Text = "Tracking Number: " + trackingNumber,
             Location = new Point(10, 7),
             AutoSize = true,
-            Font = new Font("Segoe UI", 9, FontStyle.Bold)
+            Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold)
+
         };
         HeaderPanel.Controls.Add(lblTracking);
 
@@ -75,28 +76,32 @@ public class AddTicketBox
         {
             Text = "Full Name: " + fullName,
             Location = new Point(rightX, y + 5),
-            AutoSize = true
+            AutoSize = true,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
 
         Label lblAid = new Label()
         {
             Text = "Type of Aid: " + typeOfAid,
             Location = new Point(rightX, y + 30),
-            AutoSize = true
+            AutoSize = true,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
 
         Label lblDate = new Label()
         {
             Text = "Date Requested: " + dateRequested,
             Location = new Point(rightX, y + 55),
-            AutoSize = true
+            AutoSize = true,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
 
         Label lblStatus = new Label()
         {
             Text = "Status: " + status,
             Location = new Point(rightX, y + 80),
-            AutoSize = true
+            AutoSize = true,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
 
         int expandY = picMember.Bottom + 19;
@@ -107,7 +112,8 @@ public class AddTicketBox
             Location = new Point(10, expandY),
             AutoSize = true,
             Tag = "ExpandInfo",
-            Visible = false
+            Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
         expandY += 22;
 
@@ -117,7 +123,8 @@ public class AddTicketBox
             Location = new Point(10, expandY),
             AutoSize = true,
             Tag = "ExpandInfo",
-            Visible = false
+            Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
         expandY += 22;
 
@@ -127,7 +134,8 @@ public class AddTicketBox
             Location = new Point(10, expandY),
             AutoSize = true,
             Tag = "ExpandInfo",
-            Visible = false
+            Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
         expandY += 22;
 
@@ -137,7 +145,8 @@ public class AddTicketBox
             Location = new Point(10, expandY),
             AutoSize = true,
             Tag = "ExpandInfo",
-            Visible = false
+            Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
         expandY += 22;
 
@@ -147,7 +156,8 @@ public class AddTicketBox
             Location = new Point(10, expandY),
             AutoSize = true,
             Tag = "ExpandInfo",
-            Visible = false
+            Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9)
         };
         expandY += 34;
 
@@ -157,6 +167,7 @@ public class AddTicketBox
             Size = new Size(80, 30),
             Location = new Point(10, expandY),
             Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo"
         };
 
@@ -166,6 +177,7 @@ public class AddTicketBox
             Size = new Size(80, 30),
             Location = new Point(105, expandY),
             Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo"
         };
 
@@ -175,6 +187,7 @@ public class AddTicketBox
             Size = new Size(80, 30),
             Location = new Point(200, expandY),
             Visible = false,
+            Font = new Font("Microsoft Sans Serif", 9),
             Tag = "ExpandInfo"
         };
 
@@ -183,6 +196,7 @@ public class AddTicketBox
             Text = "Release",
             Size = new Size(80, 30),
             Location = new Point(200, 260),
+            Font = new Font("Microsoft Sans Serif", 9),
             Visible = false
         };
 

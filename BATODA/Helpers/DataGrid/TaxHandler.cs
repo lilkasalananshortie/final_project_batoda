@@ -14,6 +14,8 @@ namespace BATODA.Helpers.DataGrid
         private static string CurrentMode = "None";
         private static Panel ViewPanelReference;
         private static int CurrentYear = DateTime.Today.Year;
+        private static Panel ReceiptContainerPanel;
+
 
 
         private static string GetDefaultStatus(int year, int month)
@@ -57,8 +59,7 @@ namespace BATODA.Helpers.DataGrid
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
 
-            dgv.CellClick -= Dgv_CellClick;
-            dgv.CellClick += Dgv_CellClick;
+          
             dgv.CellDoubleClick -= Dgv_CellDoubleClick;
             dgv.CellDoubleClick += Dgv_CellDoubleClick;
             dgv.CellPainting -= Dgv_CellPainting;
@@ -102,19 +103,7 @@ namespace BATODA.Helpers.DataGrid
         {
             ViewPanelReference = panel;
         }
-        private static void Dgv_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var dgv = sender as DataGridView;
-            if (e.RowIndex < 0 || e.ColumnIndex < 0)
-                return;
-
-            var column = dgv.Columns[e.ColumnIndex];
-            if (column.Name == "View")
-            {
-                ViewPanelReference?.Show();
-            }
-        }
-
+       
 
         private static void Dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -285,6 +274,7 @@ namespace BATODA.Helpers.DataGrid
             Initialize(dgv);
         }
 
+       
     }
 }
 
