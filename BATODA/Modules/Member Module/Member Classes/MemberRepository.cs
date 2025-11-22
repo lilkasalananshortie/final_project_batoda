@@ -222,12 +222,6 @@ namespace BATODA.Modules.MemberModule
             }
         }
 
-
-
-
-
-
-
         // --------------- DELETE MEMBERS -----------------
         public void DeleteMember(int bodyNumber)
         {

@@ -21,6 +21,11 @@ namespace BATODA
         private CalendarEvent editingEvent;
         private readonly object eventLock = new object();
         private Panel selectedEventPanel = null;
+        private Panel previousEventSelectedPanel = null;
+        private Panel selectedPastEventPanel = null;
+
+
+
 
         //WAG IBAHINNESS
         private const int EventPanelWidth = 420;
@@ -408,7 +413,7 @@ namespace BATODA
             {
                 ev.Status = "Canceled";
                 UpdateEventInDayCell(ev);
-                MoveToPreviousEvents(ev, false);
+                //MoveToPreviousEvents(ev, false);
                 EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
@@ -421,6 +426,8 @@ namespace BATODA
 
         private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
         {
+            previousEventSelectedPanel = sender as Panel;
+
             CheckAttendancePanel.Location = PreviousEventPanel.Location;
             CheckAttendancePanel.Show();
             CheckAttendancePanel.BringToFront();
@@ -473,6 +480,8 @@ namespace BATODA
 
             panel.DoubleClick += DoneEventPanel_DoubleClick;
         }
+
+
         //ADDING OF EVENT LABEL TO DAY CELL IN CALENDAR NOW CAN ADD MULTIPLE EVENTS IN THE SAME DAY 
         private void AddEventToDayCell(CalendarEvent ev)
         {
@@ -581,9 +590,23 @@ namespace BATODA
             }
         }
 
+
+        //di pa tapos
         private void SaveAttendanceButton_Click(object sender, EventArgs e)
         {
-            CheckAttendancePanel.Hide();   
+            CheckAttendancePanel.Hide();
+
+            if (previousEventSelectedPanel != null)
+            {
+                selectedPastEventPanel = previousEventSelectedPanel;
+                PreviousEventPanel.Controls.Remove(selectedPastEventPanel);
+                selectedPastEventPanel.Width = 550;
+                PastEventFlowLayoutPanel.Controls.Add(selectedPastEventPanel);
+                PastEventFlowLayoutPanel.Controls.SetChildIndex(selectedPastEventPanel, 0);
+                previousEventSelectedPanel = null;
+                selectedPastEventPanel = null;
+            }
+
             PreviousEventPanel.Show();
         }
 
@@ -612,13 +635,47 @@ namespace BATODA
             AddEventPanel.BringToFront();
         }
 
-        private void EvenTittleTextBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void CheckAttendancePanel_Paint(object sender, PaintEventArgs e)
+        //try palang to
+        private void MoveToPastEvents(CalendarEvent ev, bool isDone)
         {
+            Panel panel = new Panel();
+            panel.Size = new Size(540, EventPanelHeight);
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            panel.Margin = new Padding(EventPanelMargin);
+            panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
+
+            Label lblTitle = new Label
+            {
+                Text = ev.Title,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                Location = new Point(10, 5),
+                AutoSize = true
+            };
+
+            Label lblInfo = new Label
+            {
+                Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
+                Font = new Font("Segoe UI", 8),
+                Location = new Point(10, 25),
+                AutoSize = true
+            };
+
+            Label lblDate = new Label
+            {
+                Text = ev.Date.ToString("MMMM d, yyyy"),
+                Font = new Font("Segoe UI", 8, FontStyle.Italic),
+                ForeColor = Color.Black,
+                Location = new Point(10, 45),
+                AutoSize = true
+            };
+
+            panel.Controls.Add(lblTitle);
+            panel.Controls.Add(lblInfo);
+            panel.Controls.Add(lblDate);
+
+            DoneEventFlowLayoutPanel.Controls.Add(panel);
+            DoneEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
 
         }
     }

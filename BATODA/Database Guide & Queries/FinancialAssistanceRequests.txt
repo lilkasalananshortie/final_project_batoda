@@ -16,11 +16,11 @@
     FOREIGN KEY (BodyNumber) REFERENCES MemberInfo(BodyNumber),
     FOREIGN KEY (ContactNumber) REFERENCES MemberInfo(ContactNumber)
 );
-??
+
 
 ---------------------------------- NEW =================================
 
 ALTER TABLE FinancialAssistanceRequests ADD IsActive BIT DEFAULT 1;
 
 ALTER TABLE FinancialAssistanceRequests
-DROP CONSTRAINT FK__Financial__Conta__395884C4;
+DROP CONSTRAINT FK__Financial__Conta__4B7734FF;

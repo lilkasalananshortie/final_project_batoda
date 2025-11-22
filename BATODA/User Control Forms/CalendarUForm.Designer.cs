@@ -66,19 +66,20 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.PreviousEventPanel = new System.Windows.Forms.Panel();
+            this.DoneEventFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
             this.CheckAttendancePanel = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label72 = new System.Windows.Forms.Label();
             this.AttendanceMembersDataGridView = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label72 = new System.Windows.Forms.Label();
             this.SaveAttendanceButton = new BATODA.ButtonStyle();
             this.label71 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -89,7 +90,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EventsOverviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.DoneEventFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.AddEventPanel.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -103,11 +103,11 @@
             this.PreviousEventPanel.SuspendLayout();
             this.panel18.SuspendLayout();
             this.CheckAttendancePanel.SuspendLayout();
+            this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceMembersDataGridView)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            this.panel17.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -510,7 +510,6 @@
             this.EvenTittleTextBox.Name = "EvenTittleTextBox";
             this.EvenTittleTextBox.Size = new System.Drawing.Size(386, 21);
             this.EvenTittleTextBox.TabIndex = 0;
-            this.EvenTittleTextBox.TextChanged += new System.EventHandler(this.EvenTittleTextBox_TextChanged);
             // 
             // panel13
             // 
@@ -614,6 +613,14 @@
             this.PreviousEventPanel.Size = new System.Drawing.Size(435, 627);
             this.PreviousEventPanel.TabIndex = 13;
             // 
+            // DoneEventFlowLayoutPanel
+            // 
+            this.DoneEventFlowLayoutPanel.AutoScroll = true;
+            this.DoneEventFlowLayoutPanel.Location = new System.Drawing.Point(5, 131);
+            this.DoneEventFlowLayoutPanel.Name = "DoneEventFlowLayoutPanel";
+            this.DoneEventFlowLayoutPanel.Size = new System.Drawing.Size(423, 491);
+            this.DoneEventFlowLayoutPanel.TabIndex = 7;
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -675,7 +682,27 @@
             this.CheckAttendancePanel.Name = "CheckAttendancePanel";
             this.CheckAttendancePanel.Size = new System.Drawing.Size(435, 627);
             this.CheckAttendancePanel.TabIndex = 7;
-            this.CheckAttendancePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CheckAttendancePanel_Paint);
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.panel17.Controls.Add(this.label72);
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(435, 71);
+            this.panel17.TabIndex = 2;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.BackColor = System.Drawing.Color.Transparent;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Location = new System.Drawing.Point(109, 14);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(218, 42);
+            this.label72.TabIndex = 0;
+            this.label72.Text = "Attendance";
             // 
             // AttendanceMembersDataGridView
             // 
@@ -731,27 +758,6 @@
             this.OwnerSearchTxt.Name = "OwnerSearchTxt";
             this.OwnerSearchTxt.Size = new System.Drawing.Size(355, 24);
             this.OwnerSearchTxt.TabIndex = 42;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.panel17.Controls.Add(this.label72);
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(435, 71);
-            this.panel17.TabIndex = 2;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.BackColor = System.Drawing.Color.Transparent;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.White;
-            this.label72.Location = new System.Drawing.Point(109, 14);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(218, 42);
-            this.label72.TabIndex = 0;
-            this.label72.Text = "Attendance";
             // 
             // SaveAttendanceButton
             // 
@@ -873,14 +879,6 @@
             this.EventsOverviewFlowLayoutPanel.Size = new System.Drawing.Size(433, 657);
             this.EventsOverviewFlowLayoutPanel.TabIndex = 14;
             // 
-            // DoneEventFlowLayoutPanel
-            // 
-            this.DoneEventFlowLayoutPanel.AutoScroll = true;
-            this.DoneEventFlowLayoutPanel.Location = new System.Drawing.Point(5, 131);
-            this.DoneEventFlowLayoutPanel.Name = "DoneEventFlowLayoutPanel";
-            this.DoneEventFlowLayoutPanel.Size = new System.Drawing.Size(423, 491);
-            this.DoneEventFlowLayoutPanel.TabIndex = 7;
-            // 
             // CalendarUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -920,13 +918,13 @@
             this.panel18.PerformLayout();
             this.CheckAttendancePanel.ResumeLayout(false);
             this.CheckAttendancePanel.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceMembersDataGridView)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
