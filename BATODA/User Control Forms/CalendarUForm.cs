@@ -24,9 +24,6 @@ namespace BATODA
         private Panel previousEventSelectedPanel = null;
         private Panel selectedPastEventPanel = null;
 
-
-
-
         //WAG IBAHINNESS
         private const int EventPanelWidth = 420;
         private const int EventPanelHeight = 70;
@@ -42,6 +39,7 @@ namespace BATODA
         {
             InitializeComponent();
             AttendanceHandler.ApplyCustomGridWithCheckbox(AttendanceMembersDataGridView);
+            AttendanceHandler.ApplyCustomGridWithCheckbox(AttendanceListDGV);
             AddEventPanel.Hide();
             CheckAttendancePanel.Hide();
             
@@ -78,6 +76,16 @@ namespace BATODA
             public string Description { get; set; }
             public string Location { get; set; }
             public DateTime Date { get; set; }
+
+            public List<MemberAttendance> AttendanceList { get; set; } = new List<MemberAttendance>();
+        }
+
+        //for attendance checking
+        public class MemberAttendance
+        {
+            public string MemberName { get; set; }
+            public string BodyNumber { get; set; }
+            public bool Present { get; set; }
         }
 
         public void calendarDays()
@@ -133,7 +141,6 @@ namespace BATODA
             RefreshEventIndicators();
         }
 
-       
         private void DisablePastDay(DaysUForm day)
         {
             
@@ -165,6 +172,18 @@ namespace BATODA
             {
                 month = 1;
                 year++;
+            }
+            dateTime = new DateTime(year, month, 1);
+            calendarDays();
+        }
+
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            month--;
+            if (month < 1)
+            {
+                month = 12;
+                year--;
             }
             dateTime = new DateTime(year, month, 1);
             calendarDays();
@@ -424,63 +443,7 @@ namespace BATODA
             panel.Controls.Add(btnCancel);
         }
 
-        private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
-        {
-            previousEventSelectedPanel = sender as Panel;
-
-            CheckAttendancePanel.Location = PreviousEventPanel.Location;
-            CheckAttendancePanel.Show();
-            CheckAttendancePanel.BringToFront();
-            PreviousEventPanel.Hide();
-        }
-
-
-
        
-        //MOVE TO PREVIOUS EVENTS PANEL
-        private void MoveToPreviousEvents(CalendarEvent ev, bool isDone)
-        {
-            Panel panel = new Panel();
-            panel.Size = new Size(410, EventPanelHeight);
-            panel.BorderStyle = BorderStyle.FixedSingle;
-            panel.Margin = new Padding(EventPanelMargin);
-            panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
-
-            Label lblTitle = new Label
-            {
-                Text = ev.Title,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                Location = new Point(10, 5),
-                AutoSize = true
-            };
-
-            Label lblInfo = new Label
-            {
-                Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
-                Font = new Font("Segoe UI", 8),
-                Location = new Point(10, 25),
-                AutoSize = true
-            };
-
-            Label lblDate = new Label
-            {
-                Text = ev.Date.ToString("MMMM d, yyyy"),
-                Font = new Font("Segoe UI", 8, FontStyle.Italic),
-                ForeColor = Color.Black,
-                Location = new Point(10, 45),
-                AutoSize = true
-            };
-
-            panel.Controls.Add(lblTitle);
-            panel.Controls.Add(lblInfo);
-            panel.Controls.Add(lblDate);
-
-            DoneEventFlowLayoutPanel.Controls.Add(panel);
-            DoneEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
-
-            panel.DoubleClick += DoneEventPanel_DoubleClick;
-        }
-
 
         //ADDING OF EVENT LABEL TO DAY CELL IN CALENDAR NOW CAN ADD MULTIPLE EVENTS IN THE SAME DAY 
         private void AddEventToDayCell(CalendarEvent ev)
@@ -517,6 +480,51 @@ namespace BATODA
             }
         }
 
+        //MOVE TO PREVIOUS EVENTS PANEL
+        private void MoveToPreviousEvents(CalendarEvent ev, bool isDone)
+        {
+            Panel panel = new Panel();
+            panel.Size = new Size(410, EventPanelHeight);
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            panel.Margin = new Padding(EventPanelMargin);
+            panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
+
+            panel.Tag = ev;
+
+            Label lblTitle = new Label
+            {
+                Text = ev.Title,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                Location = new Point(10, 5),
+                AutoSize = true
+            };
+
+            Label lblInfo = new Label
+            {
+                Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
+                Font = new Font("Segoe UI", 8),
+                Location = new Point(10, 25),
+                AutoSize = true
+            };
+
+            Label lblDate = new Label
+            {
+                Text = ev.Date.ToString("MMMM d, yyyy"),
+                Font = new Font("Segoe UI", 8, FontStyle.Italic),
+                ForeColor = Color.Black,
+                Location = new Point(10, 45),
+                AutoSize = true
+            };
+
+            panel.Controls.Add(lblTitle);
+            panel.Controls.Add(lblInfo);
+            panel.Controls.Add(lblDate);
+
+            DoneEventFlowLayoutPanel.Controls.Add(panel);
+            DoneEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
+
+            panel.DoubleClick += DoneEventPanel_DoubleClick;
+        }
         private void UpdateEventInDayCell(CalendarEvent ev)
         {
             foreach (Control ctrl in DayContainer.Controls)
@@ -560,11 +568,68 @@ namespace BATODA
 
         private void CheckAttendanceButton_Click(object sender, EventArgs e)
         {
-          
             CheckAttendancePanel.Show();
             CheckAttendancePanel.BringToFront();
+        }
 
-           
+        private void PastEventPanel_DoubleClick(object sender, EventArgs e)
+        {
+            selectedPastEventPanel = sender as Panel;
+            CalendarEvent ev = selectedPastEventPanel.Tag as CalendarEvent;
+
+            if (ev == null)
+                return;
+
+            LoadAttendanceIntoDGV(ev);
+        }
+
+        private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
+        {
+            previousEventSelectedPanel = sender as Panel;
+
+            CheckAttendancePanel.Location = PreviousEventPanel.Location;
+            CheckAttendancePanel.Show();
+            CheckAttendancePanel.BringToFront();
+            PreviousEventPanel.Hide();
+        }
+
+        //will save the attendance 
+        private void SaveAttendanceButton_Click(object sender, EventArgs e)
+        {
+            if (previousEventSelectedPanel == null)
+                return;
+
+            CalendarEvent ev = previousEventSelectedPanel.Tag as CalendarEvent;
+            if (ev == null)
+                return;
+
+            ev.AttendanceList = new List<MemberAttendance>();
+
+            foreach (DataGridViewRow row in AttendanceMembersDataGridView.Rows)
+            {
+                if (row.Cells[1].Value == null || row.Cells[2].Value == null)
+                    continue; // skip invalid rows
+
+                MemberAttendance member = new MemberAttendance
+                {
+                    BodyNumber = row.Cells[1].Value.ToString(),
+                    MemberName = row.Cells[2].Value.ToString(),
+                    Present = row.Cells[0].Value != null && (bool)row.Cells[0].Value
+                };
+                ev.AttendanceList.Add(member);
+            }
+
+            previousEventSelectedPanel.DoubleClick -= DoneEventPanel_DoubleClick;
+            previousEventSelectedPanel.DoubleClick -= PastEventPanel_DoubleClick;
+            previousEventSelectedPanel.Width = 535;
+            PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
+            PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
+
+            previousEventSelectedPanel.DoubleClick += PastEventPanel_DoubleClick;
+
+            PreviousEventPanel.Show();
+            PreviousEventPanel.BringToFront();
+            CheckAttendancePanel.Hide();
         }
 
         private void EditEventButton_Click(object sender, EventArgs e)
@@ -589,39 +654,6 @@ namespace BATODA
                 AddEventPanel.BringToFront();
             }
         }
-
-
-        //di pa tapos
-        private void SaveAttendanceButton_Click(object sender, EventArgs e)
-        {
-            CheckAttendancePanel.Hide();
-
-            if (previousEventSelectedPanel != null)
-            {
-                selectedPastEventPanel = previousEventSelectedPanel;
-                PreviousEventPanel.Controls.Remove(selectedPastEventPanel);
-                selectedPastEventPanel.Width = 550;
-                PastEventFlowLayoutPanel.Controls.Add(selectedPastEventPanel);
-                PastEventFlowLayoutPanel.Controls.SetChildIndex(selectedPastEventPanel, 0);
-                previousEventSelectedPanel = null;
-                selectedPastEventPanel = null;
-            }
-
-            PreviousEventPanel.Show();
-        }
-
-        private void previousButton_Click(object sender, EventArgs e)
-        {
-            month--;
-            if (month < 1)
-            {
-                month = 12;
-                year--;
-            }
-            dateTime = new DateTime(year, month, 1);
-            calendarDays();
-        }
-
         public void ShowAddEventPanel(DateTime date)
         {
             if (date.Date < DateTime.Today)
@@ -635,48 +667,25 @@ namespace BATODA
             AddEventPanel.BringToFront();
         }
 
-
-        //try palang to
-        private void MoveToPastEvents(CalendarEvent ev, bool isDone)
+        private void LoadAttendanceIntoDGV(CalendarEvent ev)
         {
-            Panel panel = new Panel();
-            panel.Size = new Size(540, EventPanelHeight);
-            panel.BorderStyle = BorderStyle.FixedSingle;
-            panel.Margin = new Padding(EventPanelMargin);
-            panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
+            AttendanceListDGV.Columns.Clear();
+            AttendanceListDGV.Rows.Clear();
 
-            Label lblTitle = new Label
+            AttendanceListDGV.Columns.Add("BodyNumber", "Body Number");
+            AttendanceListDGV.Columns.Add("MemberName", "Member Name");
+            AttendanceListDGV.Columns.Add("Status", "Status");
+
+            foreach (var member in ev.AttendanceList)
             {
-                Text = ev.Title,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                Location = new Point(10, 5),
-                AutoSize = true
-            };
-
-            Label lblInfo = new Label
-            {
-                Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
-                Font = new Font("Segoe UI", 8),
-                Location = new Point(10, 25),
-                AutoSize = true
-            };
-
-            Label lblDate = new Label
-            {
-                Text = ev.Date.ToString("MMMM d, yyyy"),
-                Font = new Font("Segoe UI", 8, FontStyle.Italic),
-                ForeColor = Color.Black,
-                Location = new Point(10, 45),
-                AutoSize = true
-            };
-
-            panel.Controls.Add(lblTitle);
-            panel.Controls.Add(lblInfo);
-            panel.Controls.Add(lblDate);
-
-            DoneEventFlowLayoutPanel.Controls.Add(panel);
-            DoneEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
-
+                AttendanceListDGV.Rows.Add(
+                    member.BodyNumber,
+                    member.MemberName,
+                    member.Present ? "Present" : "Absent"
+                );
+            }
         }
+
+      
     }
 }
