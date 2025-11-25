@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace BATODA.Helpers.Data
 {
@@ -229,6 +231,114 @@ namespace BATODA.Helpers.Data
                 count = (int)cmd.ExecuteScalar();
             }
             return count;
+        }
+
+        private string MonthName(int month)
+        {
+            return new DateTime(1, month, 1).ToString("MMMM");
+        }
+
+
+        public void LoadMemberPaymentsGrid(DataGridView dgv, int year)
+        {
+            string query = @"
+            WITH Months AS (
+                SELECT 1 AS Month UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
+                UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8
+                UNION ALL SELECT 9 UNION ALL SELECT 10 UNION ALL SELECT 11 UNION ALL SELECT 12
+            )
+            SELECT 
+                m.BodyNumber,
+                m.FirstName + ' ' + m.LastName AS FullName,
+                @Year AS Year,
+                mo.Month,
+                ISNULL(mp.Status, 
+                    CASE 
+                        WHEN mo.Month < MONTH(GETDATE()) AND @Year = YEAR(GETDATE()) THEN 'Due'
+                        ELSE NULL
+                    END
+                ) AS Status,
+                mp.PaymentDate
+            FROM MemberInfo m
+            CROSS JOIN Months mo
+            LEFT JOIN MemberPayment mp 
+                ON mp.BodyNumber = m.BodyNumber AND mp.Year = @Year AND mp.Month = mo.Month
+            ORDER BY m.BodyNumber, mo.Month;
+            ";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Year", year);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                dgv.Rows.Clear();
+                dgv.Columns.Clear();
+
+                dgv.Columns.Add("BodyNumber", "Body Number");
+                dgv.Columns.Add("FullName", "Full Name");
+                dgv.Columns.Add("Year", "Year");
+                dgv.Columns.Add("Month", "Month");
+                dgv.Columns.Add("Status", "Status");
+                dgv.Columns.Add("PaymentDate", "Date Paid");
+
+                dgv.Columns[0].Width = 60;
+                dgv.Columns[1].Width = 200;
+                dgv.Columns[2].Width = 50;
+                dgv.Columns[3].Width = 80;
+                dgv.Columns[4].Width = 100;
+                dgv.Columns[5].Width = 120;
+
+                foreach (DataGridViewColumn col in dgv.Columns)
+                {
+                    col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    dgv.Rows.Add(
+                        row["BodyNumber"] != DBNull.Value ? int.Parse(row["BodyNumber"].ToString()).ToString("D3") : null,
+                        row["FullName"],
+                        row["Year"],
+                        row["Month"] != DBNull.Value ? MonthName(int.Parse(row["Month"].ToString())) : null,
+                        row["Status"] != DBNull.Value ? row["Status"].ToString() : null,
+                        row["PaymentDate"] != DBNull.Value ? Convert.ToDateTime(row["PaymentDate"]).ToShortDateString() : null
+                    );
+                }
+            }
+        }
+
+        public List<(int Month, string Status, DateTime? PaymentDate)> GetMemberPayments(int bodyNumber, int year)
+        {
+            var list = new List<(int, string, DateTime?)>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+                    SELECT Month, Status, PaymentDate
+                    FROM MemberPayment
+                    WHERE BodyNumber = @BodyNumber AND Year = @Year
+                ";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                cmd.Parameters.AddWithValue("@Year", year);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int month = reader.GetByte(0);
+                        string status = reader.GetString(1);
+                        DateTime? date = reader.IsDBNull(2) ? (DateTime?)null : reader.GetDateTime(2);
+                        list.Add((month, status, date));
+                    }
+                }
+            }
+            return list;
         }
 
     }

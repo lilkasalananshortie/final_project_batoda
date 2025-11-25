@@ -58,6 +58,8 @@ namespace BATODA.Helpers.DataGrids
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
         }
 
+
+
         public static void FinanceMultiSelectCustomGrid(DataGridView dgv)
         {
             if (dgv == null) return;

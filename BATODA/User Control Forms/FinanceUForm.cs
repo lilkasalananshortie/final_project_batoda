@@ -85,7 +85,6 @@ namespace BATODA
             ViewPanel.Hide();
             RenewSelectedPanelHolder.Hide();
             MassChangeSelectionPanel.Hide();
-            LoadReceiptPanels();
 
         }
 
@@ -268,8 +267,6 @@ namespace BATODA
                 MessageBox.Show("Please select Month, Year, and Action first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            //GET MONTH, YEAR, AND ACTION
             int month = MultiMonth.SelectedIndex + 1;
             int year = int.Parse(MultiYear.SelectedItem.ToString());
             string action = MultiAction.SelectedItem.ToString();
@@ -303,14 +300,14 @@ namespace BATODA
             ViewReceiptPanel.Hide();
         }
 
-        public void LoadReceiptPanels()
+        public void LoadReceiptPanels(int bodyNumber, int year)
         {
             MainRecieptFlowPanel.Controls.Clear();
             string[] months = new string[]
-         {
-        "Jan","Feb","Mar","Apr","May","Jun",
-        "Jul","Aug","Sep","Oct","Nov","Dec"
-          };
+            {
+            "January","February","March","April","May","June",
+            "July","August","September","October","November","December"
+            };
 
             MainRecieptFlowPanel.WrapContents = false;
             MainRecieptFlowPanel.FlowDirection = FlowDirection.TopDown;
@@ -318,14 +315,35 @@ namespace BATODA
             MainRecieptFlowPanel.Padding = new Padding(0);
             MainRecieptFlowPanel.Margin = new Padding(0);
 
-           
+            // GET MEMBER PAYMENTS
+            var repo = new TaxRepository();
+            var payments = repo.GetMemberPayments(bodyNumber, year); // RETURN LIST OF MONTH, STATUS, DATE
+
             for (int i = 0; i < 12; i++)
             {
-                MainRecieptFlowPanel.Controls.Add(CreateReceiptPanel(i, months[i]));
+                var payment = payments.FirstOrDefault(p => p.Month == i + 1);
+                string status;
+                DateTime? date;
+
+                if (payment.Month != 0) // MEANS PAYMENT EXISTS
+                {
+                    status = payment.Status;
+                    date = payment.PaymentDate;
+                }
+                else
+                {
+                    status = "Due";
+                    date = null;
+                }
+
+
+
+                MainRecieptFlowPanel.Controls.Add(CreateReceiptPanel(i, months[i], status, date, i + 1));
             }
         }
+
         //DITO EEDIT YUNG LAMAN <--ARONE 
-        private Panel CreateReceiptPanel(int index, string monthName)
+        private Panel CreateReceiptPanel(int index, string monthName, string status, DateTime? paymentDate, int panelMonth)
         {
             Panel box = new Panel();
             box.Height = 70;
@@ -340,34 +358,63 @@ namespace BATODA
             lblMonth.Location = new Point(10, 8);
             lblMonth.AutoSize = true;
 
-          
             Label lblPaid = new Label();
-            lblPaid.Text = "Paid +60";
             lblPaid.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
             lblPaid.AutoSize = true;
             lblPaid.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblPaid.Location = new Point(box.Width - lblPaid.Width - 15, 8);
 
-        
             Label lblDate = new Label();
-            lblDate.Text = "Date Paid: 00/00/00";
             lblDate.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Regular);
             lblDate.Location = new Point(10, 35);
             lblDate.AutoSize = true;
+
+            int currentMonth = DateTime.Today.Month;
+            string statusText;
+            string dateText;
+
+            if (status == "Paid")
+            {
+                statusText = "Paid +60";
+                dateText = paymentDate.HasValue ? paymentDate.Value.ToShortDateString() : "Paid";
+                lblPaid.ForeColor = Color.Green;
+            }
+            else if (status == "Overdue")
+            {
+                statusText = "Overdue";
+                dateText = "Missed Payment";
+                lblPaid.ForeColor = Color.Red;
+            }
+            else
+            {
+                if (panelMonth > currentMonth)
+                {
+                    statusText = "Pending";
+                    dateText = "To be paid";
+                }
+                else
+                {
+                    statusText = "Due";
+                    dateText = "Missed Payment";
+                }
+            }
+
+            lblPaid.Text = statusText;
+            lblDate.Text = dateText;
 
             box.Controls.Add(lblMonth);
             box.Controls.Add(lblPaid);
             box.Controls.Add(lblDate);
 
-            
             box.Paint += (s, e) =>
             {
                 ControlPaint.DrawBorder(e.Graphics, box.ClientRectangle,
-                    Color.Red, ButtonBorderStyle.Solid);
+                    Color.Transparent, ButtonBorderStyle.Solid);
             };
 
             return box;
         }
+
 
         private void ButawDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -376,11 +423,36 @@ namespace BATODA
             var column = ButawDataGrid.Columns[e.ColumnIndex];
             if (column.Name == "View")
             {
+
+                DataGridViewCell cell = null;
+                foreach (DataGridViewCell c in ButawDataGrid.Rows[e.RowIndex].Cells)
+                {
+                    if (c.OwningColumn.Name == "BodyNo")
+                    {
+                        cell = c;
+                        break;
+                    }
+                }
+
+                if (cell == null || cell.Value == null)
+                {
+                    MessageBox.Show("BodyNumber column not found or empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string bodyStr = cell.Value.ToString().TrimStart('0'); // REMOVE LEADING ZEROS
+                if (string.IsNullOrEmpty(bodyStr)) bodyStr = "0"; 
+                if (!int.TryParse(bodyStr, out int bodyNumber))
+                {
+                    MessageBox.Show("Invalid BodyNumber value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                OverviewName.Text = ButawDataGrid.Rows[e.RowIndex].Cells[1].Value?.ToString() ?? "Unknown";
+
                 ViewReceiptPanel.Show();
                 ViewReceiptPanel.BringToFront();
-
-                LoadReceiptPanels();
+                LoadReceiptPanels(bodyNumber, selectedYear);
             }
         }
+
     }
 }

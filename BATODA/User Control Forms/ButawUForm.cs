@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BATODA.Helpers.Data;
+using BATODA.Helpers.DataGrid;
+using BATODA.Helpers.DataGrids;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,14 @@ namespace BATODA
 {
     public partial class ButawUForm : UserControl
     {
+        TaxRepository repo = new TaxRepository();
+
         public ButawUForm()
         {
             InitializeComponent();
+            
+            repo.LoadMemberPaymentsGrid(ButawGrid, DateTime.Today.Year);
+            DataGridCustom.ApplyCustomGrid(ButawGrid);
         }
 
         private void FinanceButton_Click(object sender, EventArgs e)
@@ -30,8 +38,6 @@ namespace BATODA
 
         private void RenewalHistoryButton_Click(object sender, EventArgs e)
         {
-            
-            DisplayClass.ShowMain(new ButawUForm());
 
         }
     }

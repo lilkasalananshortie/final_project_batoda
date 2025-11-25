@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.MembershipRenewalButton = new BATODA.ButtonStyle();
-            this.RenewalHistoryButton = new BATODA.ButtonStyle();
-            this.FinanceButton = new BATODA.ButtonStyle();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.FinancHistoryCmb = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.FinancHistoryCmb = new System.Windows.Forms.ComboBox();
-            this.RenewalHistoryGrid = new System.Windows.Forms.DataGridView();
+            this.ButawGrid = new System.Windows.Forms.DataGridView();
+            this.MembershipRenewalButton = new BATODA.ButtonStyle();
+            this.RenewalHistoryButton = new BATODA.ButtonStyle();
+            this.FinanceButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RenewalHistoryGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButawGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -57,6 +57,67 @@
             this.MembersTopPanel.Name = "MembersTopPanel";
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 23;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.FinancHistoryCmb);
+            this.panel7.Controls.Add(this.pictureBox7);
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Location = new System.Drawing.Point(19, 94);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1585, 75);
+            this.panel7.TabIndex = 51;
+            // 
+            // FinancHistoryCmb
+            // 
+            this.FinancHistoryCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinancHistoryCmb.FormattingEnabled = true;
+            this.FinancHistoryCmb.Items.AddRange(new object[] {
+            "Renewal Payments",
+            "Butaw Payments"});
+            this.FinancHistoryCmb.Location = new System.Drawing.Point(1368, 21);
+            this.FinancHistoryCmb.Name = "FinancHistoryCmb";
+            this.FinancHistoryCmb.Size = new System.Drawing.Size(192, 28);
+            this.FinancHistoryCmb.TabIndex = 45;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BATODA.Properties.Resources.history;
+            this.pictureBox7.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 44;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(62, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(318, 31);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Butaw Payment History";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.ButawGrid);
+            this.panel1.Location = new System.Drawing.Point(19, 169);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1585, 743);
+            this.panel1.TabIndex = 50;
+            // 
+            // ButawGrid
+            // 
+            this.ButawGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ButawGrid.Location = new System.Drawing.Point(0, 0);
+            this.ButawGrid.Name = "ButawGrid";
+            this.ButawGrid.Size = new System.Drawing.Size(1585, 743);
+            this.ButawGrid.TabIndex = 0;
             // 
             // MembershipRenewalButton
             // 
@@ -157,67 +218,6 @@
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.FinancHistoryCmb);
-            this.panel7.Controls.Add(this.pictureBox7);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(19, 94);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1585, 75);
-            this.panel7.TabIndex = 51;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::BATODA.Properties.Resources.history;
-            this.pictureBox7.Location = new System.Drawing.Point(16, 16);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 44;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(62, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(350, 31);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Renewal Payment History";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Controls.Add(this.RenewalHistoryGrid);
-            this.panel1.Location = new System.Drawing.Point(19, 169);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 743);
-            this.panel1.TabIndex = 50;
-            // 
-            // FinancHistoryCmb
-            // 
-            this.FinancHistoryCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinancHistoryCmb.FormattingEnabled = true;
-            this.FinancHistoryCmb.Items.AddRange(new object[] {
-            "Renewal Payments",
-            "Butaw Payments"});
-            this.FinancHistoryCmb.Location = new System.Drawing.Point(1368, 21);
-            this.FinancHistoryCmb.Name = "FinancHistoryCmb";
-            this.FinancHistoryCmb.Size = new System.Drawing.Size(192, 28);
-            this.FinancHistoryCmb.TabIndex = 45;
-            // 
-            // RenewalHistoryGrid
-            // 
-            this.RenewalHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RenewalHistoryGrid.Location = new System.Drawing.Point(0, 0);
-            this.RenewalHistoryGrid.Name = "RenewalHistoryGrid";
-            this.RenewalHistoryGrid.Size = new System.Drawing.Size(1585, 743);
-            this.RenewalHistoryGrid.TabIndex = 0;
-            // 
             // ButawUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,7 +234,7 @@
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.RenewalHistoryGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButawGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,6 +249,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox FinancHistoryCmb;
-        private System.Windows.Forms.DataGridView RenewalHistoryGrid;
+        private System.Windows.Forms.DataGridView ButawGrid;
     }
 }
