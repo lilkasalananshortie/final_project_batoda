@@ -26,5 +26,10 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new LogoutUForm());
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

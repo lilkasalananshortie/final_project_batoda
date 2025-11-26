@@ -577,6 +577,10 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\cloud-sharing_12986916.png" />
+    <None Include="Resources\cloud_15451038.png" />
+    <None Include="Resources\logout %281%29.png" />
+    <None Include="Resources\web-administrator.png" />
     <None Include="Resources\back.png" />
     <None Include="Resources\unchecked.png" />
     <None Include="Resources\checked.png" />
