@@ -41,6 +41,9 @@
             this.nextButton = new BATODA.ButtonStyle();
             this.previousButton = new BATODA.ButtonStyle();
             this.AddEventPanel = new System.Windows.Forms.Panel();
+            this.MapPanel = new System.Windows.Forms.Panel();
+            this.SelectPlaceBtn = new System.Windows.Forms.Button();
+            this.webViewMap = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.SaveEventButton = new BATODA.ButtonStyle();
             this.CancelEventButton = new BATODA.ButtonStyle();
             this.label47 = new System.Windows.Forms.Label();
@@ -50,14 +53,17 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.EventLocationTxt = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.ReqAttendeesCmb = new System.Windows.Forms.ComboBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.NoteTextBox = new System.Windows.Forms.TextBox();
+            this.NoteTxt = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.EventTitleTxt = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.EventTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.TimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DatePicker = new System.Windows.Forms.DateTimePicker();
             this.panel11 = new System.Windows.Forms.Panel();
             this.EventTypeCmb = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -89,14 +95,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EventsOverviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.webViewMap = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.ReqAttendeesCmb = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.SelectPlaceBtn = new System.Windows.Forms.Button();
-            this.MapPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.AddEventPanel.SuspendLayout();
+            this.MapPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webViewMap)).BeginInit();
             this.panel27.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -117,8 +119,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).BeginInit();
             this.panel20.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.webViewMap)).BeginInit();
-            this.MapPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // DayContainer
@@ -316,6 +316,39 @@
             this.AddEventPanel.Name = "AddEventPanel";
             this.AddEventPanel.Size = new System.Drawing.Size(885, 505);
             this.AddEventPanel.TabIndex = 0;
+            this.AddEventPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddEventPanel_Paint);
+            // 
+            // MapPanel
+            // 
+            this.MapPanel.Controls.Add(this.SelectPlaceBtn);
+            this.MapPanel.Controls.Add(this.webViewMap);
+            this.MapPanel.Location = new System.Drawing.Point(441, 77);
+            this.MapPanel.Name = "MapPanel";
+            this.MapPanel.Size = new System.Drawing.Size(426, 30);
+            this.MapPanel.TabIndex = 0;
+            this.MapPanel.Visible = false;
+            // 
+            // SelectPlaceBtn
+            // 
+            this.SelectPlaceBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectPlaceBtn.Location = new System.Drawing.Point(342, 49);
+            this.SelectPlaceBtn.Name = "SelectPlaceBtn";
+            this.SelectPlaceBtn.Size = new System.Drawing.Size(74, 27);
+            this.SelectPlaceBtn.TabIndex = 3;
+            this.SelectPlaceBtn.Text = "Select";
+            this.SelectPlaceBtn.UseVisualStyleBackColor = true;
+            this.SelectPlaceBtn.Click += new System.EventHandler(this.SelectPlaceBtn_Click);
+            // 
+            // webViewMap
+            // 
+            this.webViewMap.AllowExternalDrop = true;
+            this.webViewMap.CreationProperties = null;
+            this.webViewMap.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webViewMap.Location = new System.Drawing.Point(3, 4);
+            this.webViewMap.Name = "webViewMap";
+            this.webViewMap.Size = new System.Drawing.Size(418, 336);
+            this.webViewMap.TabIndex = 13;
+            this.webViewMap.ZoomFactor = 1D;
             // 
             // SaveEventButton
             // 
@@ -458,6 +491,16 @@
             this.panel27.Size = new System.Drawing.Size(400, 40);
             this.panel27.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(358, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 27);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "v";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EventLocationTxt
             // 
             this.EventLocationTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -476,24 +519,38 @@
             this.panel14.Size = new System.Drawing.Size(400, 40);
             this.panel14.TabIndex = 4;
             // 
+            // ReqAttendeesCmb
+            // 
+            this.ReqAttendeesCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReqAttendeesCmb.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqAttendeesCmb.FormattingEnabled = true;
+            this.ReqAttendeesCmb.Items.AddRange(new object[] {
+            "None",
+            "All Members",
+            "Specific Members Only"});
+            this.ReqAttendeesCmb.Location = new System.Drawing.Point(6, 4);
+            this.ReqAttendeesCmb.Name = "ReqAttendeesCmb";
+            this.ReqAttendeesCmb.Size = new System.Drawing.Size(389, 29);
+            this.ReqAttendeesCmb.TabIndex = 1;
+            // 
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel16.Controls.Add(this.NoteTextBox);
+            this.panel16.Controls.Add(this.NoteTxt);
             this.panel16.Location = new System.Drawing.Point(454, 218);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(400, 205);
             this.panel16.TabIndex = 4;
             // 
-            // NoteTextBox
+            // NoteTxt
             // 
-            this.NoteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NoteTextBox.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoteTextBox.Location = new System.Drawing.Point(5, 5);
-            this.NoteTextBox.Multiline = true;
-            this.NoteTextBox.Name = "NoteTextBox";
-            this.NoteTextBox.Size = new System.Drawing.Size(389, 199);
-            this.NoteTextBox.TabIndex = 1;
+            this.NoteTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NoteTxt.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoteTxt.Location = new System.Drawing.Point(5, 5);
+            this.NoteTxt.Multiline = true;
+            this.NoteTxt.Name = "NoteTxt";
+            this.NoteTxt.Size = new System.Drawing.Size(389, 199);
+            this.NoteTxt.TabIndex = 1;
             // 
             // panel15
             // 
@@ -516,22 +573,35 @@
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.dateTimePicker1);
-            this.panel13.Controls.Add(this.EventTimePicker);
+            this.panel13.Controls.Add(this.TimePicker);
+            this.panel13.Controls.Add(this.DatePicker);
             this.panel13.Location = new System.Drawing.Point(457, 138);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(400, 40);
             this.panel13.TabIndex = 4;
             // 
-            // EventTimePicker
+            // TimePicker
             // 
-            this.EventTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventTimePicker.Location = new System.Drawing.Point(5, 6);
-            this.EventTimePicker.Name = "EventTimePicker";
-            this.EventTimePicker.Size = new System.Drawing.Size(248, 24);
-            this.EventTimePicker.TabIndex = 0;
-            this.EventTimePicker.Value = new System.DateTime(2025, 11, 11, 20, 30, 0, 0);
+            this.TimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.TimePicker.Location = new System.Drawing.Point(260, 6);
+            this.TimePicker.Name = "TimePicker";
+            this.TimePicker.RightToLeftLayout = true;
+            this.TimePicker.ShowUpDown = true;
+            this.TimePicker.Size = new System.Drawing.Size(132, 24);
+            this.TimePicker.TabIndex = 1;
+            this.TimePicker.Value = new System.DateTime(2025, 11, 11, 20, 30, 0, 0);
+            // 
+            // DatePicker
+            // 
+            this.DatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatePicker.Location = new System.Drawing.Point(5, 6);
+            this.DatePicker.Name = "DatePicker";
+            this.DatePicker.Size = new System.Drawing.Size(248, 24);
+            this.DatePicker.TabIndex = 0;
+            this.DatePicker.Value = new System.DateTime(2025, 11, 11, 20, 30, 0, 0);
             // 
             // panel11
             // 
@@ -885,75 +955,6 @@
             this.EventsOverviewFlowLayoutPanel.Size = new System.Drawing.Size(433, 657);
             this.EventsOverviewFlowLayoutPanel.TabIndex = 14;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(260, 6);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeftLayout = true;
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(132, 24);
-            this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.Value = new System.DateTime(2025, 11, 11, 20, 30, 0, 0);
-            // 
-            // webViewMap
-            // 
-            this.webViewMap.AllowExternalDrop = true;
-            this.webViewMap.CreationProperties = null;
-            this.webViewMap.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webViewMap.Location = new System.Drawing.Point(3, 4);
-            this.webViewMap.Name = "webViewMap";
-            this.webViewMap.Size = new System.Drawing.Size(418, 336);
-            this.webViewMap.TabIndex = 13;
-            this.webViewMap.ZoomFactor = 1D;
-            // 
-            // ReqAttendeesCmb
-            // 
-            this.ReqAttendeesCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReqAttendeesCmb.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReqAttendeesCmb.FormattingEnabled = true;
-            this.ReqAttendeesCmb.Items.AddRange(new object[] {
-            "None",
-            "All Members",
-            "Specific Members Only"});
-            this.ReqAttendeesCmb.Location = new System.Drawing.Point(6, 4);
-            this.ReqAttendeesCmb.Name = "ReqAttendeesCmb";
-            this.ReqAttendeesCmb.Size = new System.Drawing.Size(389, 29);
-            this.ReqAttendeesCmb.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(358, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 27);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "v";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // SelectPlaceBtn
-            // 
-            this.SelectPlaceBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectPlaceBtn.Location = new System.Drawing.Point(342, 49);
-            this.SelectPlaceBtn.Name = "SelectPlaceBtn";
-            this.SelectPlaceBtn.Size = new System.Drawing.Size(74, 27);
-            this.SelectPlaceBtn.TabIndex = 3;
-            this.SelectPlaceBtn.Text = "Select";
-            this.SelectPlaceBtn.UseVisualStyleBackColor = true;
-            this.SelectPlaceBtn.Click += new System.EventHandler(this.SelectPlaceBtn_Click);
-            // 
-            // MapPanel
-            // 
-            this.MapPanel.Controls.Add(this.SelectPlaceBtn);
-            this.MapPanel.Controls.Add(this.webViewMap);
-            this.MapPanel.Location = new System.Drawing.Point(441, 77);
-            this.MapPanel.Name = "MapPanel";
-            this.MapPanel.Size = new System.Drawing.Size(426, 346);
-            this.MapPanel.TabIndex = 0;
-            this.MapPanel.Visible = false;
-            // 
             // CalendarUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -976,6 +977,8 @@
             this.panel1.PerformLayout();
             this.AddEventPanel.ResumeLayout(false);
             this.AddEventPanel.PerformLayout();
+            this.MapPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webViewMap)).EndInit();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             this.panel14.ResumeLayout(false);
@@ -1007,8 +1010,6 @@
             this.panel20.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.webViewMap)).EndInit();
-            this.MapPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1066,17 +1067,17 @@
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.TextBox EventTitleTxt;
         private System.Windows.Forms.TextBox EventLocationTxt;
-        private System.Windows.Forms.TextBox NoteTextBox;
+        private System.Windows.Forms.TextBox NoteTxt;
         private System.Windows.Forms.ComboBox EventTypeCmb;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel EventsOverviewFlowLayoutPanel;
         private System.Windows.Forms.FlowLayoutPanel PastEventFlowLayoutPanel;
-        private System.Windows.Forms.DateTimePicker EventTimePicker;
+        private System.Windows.Forms.DateTimePicker DatePicker;
         private System.Windows.Forms.DataGridView AttendanceMembersDataGridView;
         private System.Windows.Forms.FlowLayoutPanel DoneEventFlowLayoutPanel;
         private System.Windows.Forms.DataGridView AttendanceListDGV;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker TimePicker;
         private Microsoft.Web.WebView2.WinForms.WebView2 webViewMap;
         private System.Windows.Forms.ComboBox ReqAttendeesCmb;
         private System.Windows.Forms.Button button1;

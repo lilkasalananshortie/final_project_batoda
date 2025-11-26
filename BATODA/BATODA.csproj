@@ -96,8 +96,8 @@
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMemberSearchOwner.cs" />
-    <Compile Include="Modules\Schedule Module\Attendance\AttendanceModel.cs" />
-    <Compile Include="Modules\Schedule Module\Events\EventModel.cs" />
+    <Compile Include="Modules\Schedule Module\EventModel.cs" />
+    <Compile Include="Modules\Schedule Module\EventRepository.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\SearchTricycle.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TransferTricLoadOwner.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TransferTricSearchOwner.cs" />
@@ -569,6 +569,7 @@
     <Content Include="Database Guide &amp; Queries\AssistanceHistory.txt" />
     <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
     <Content Include="Database Guide &amp; Queries\BatodaFunds.txt" />
+    <Content Include="Database Guide &amp; Queries\EventAttendees.txt" />
     <Content Include="Database Guide &amp; Queries\FinancialAssistanceRequests.txt" />
     <Content Include="Database Guide &amp; Queries\MemberPayment.txt" />
     <Content Include="Database Guide &amp; Queries\MemberRenewal.txt" />

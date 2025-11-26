@@ -1,0 +1,8 @@
+CREATE TABLE EventAttendees (
+    AttendeeId INT IDENTITY(1,1) PRIMARY KEY,
+    EventId INT NOT NULL,
+    BodyNumber INT NOT NULL,
+    MemberName VARCHAR(100),
+    Present BIT NOT NULL,
+    CONSTRAINT FK_Event FOREIGN KEY (EventId) REFERENCES ScheduleEvents(EventId)
+);

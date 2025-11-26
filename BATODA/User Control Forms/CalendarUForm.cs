@@ -13,6 +13,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using BATODA.Modules.Schedule_Module;
+using BATODA.Repositories;
+
+
 
 namespace BATODA
 {
@@ -39,6 +43,9 @@ namespace BATODA
 
         // COORDS
         private string selectedCoords = "";
+
+        private readonly EventRepository eventRepo = new EventRepository();
+
 
         public CalendarUForm()
         {
@@ -73,47 +80,57 @@ namespace BATODA
 
         private async void CalendarUForm_Load(object sender, EventArgs e)
         {
+
+            var allEvents = eventRepo.GetAllEvents();
+            foreach (var ev in allEvents)
+            {
+                if (!events.ContainsKey(ev.Date))
+                    events[ev.Date] = new List<CalendarEvent>();
+                events[ev.Date].Add(ev);
+            }
+
+
             await webViewMap.EnsureCoreWebView2Async(null);
             webViewMap.WebMessageReceived += WebViewMap_WebMessageReceived;
             string html = @"
             <!DOCTYPE html>
             <html>
             <head>
-            <meta charset=""utf-8"" />
-            <title>OSM Click + Search</title>
-            <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
-            <link rel=""stylesheet"" href=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.css""/>
-            <link rel=""stylesheet"" href=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"" />
-            <script src=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.js""></script>
-            <script src=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js""></script>
-            <style>html, body, #map { height: 100%; margin: 0; }</style>
+                <meta charset=""utf-8"" />
+                <title>OSM Click + Search</title>
+                <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+                <link rel=""stylesheet"" href=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.css""/>
+                <link rel=""stylesheet"" href=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"" />
+                <script src=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.js""></script>
+                <script src=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js""></script>
+                <style>html, body, #map { height: 100%; margin: 0; }</style>
             </head>
             <body>
-            <div id=""map""></div>
-            <script>
-                var map = L.map('map').setView([14.5995, 120.9842], 12);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+                <div id=""map""></div>
+                <script>
+                    var map = L.map('map').setView([14.5995, 120.9842], 12);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
 
-                var marker;
+                    var marker;
 
-                // Click to place marker
-                map.on('click', function(e) {
-                    if(marker) map.removeLayer(marker);
-                    marker = L.marker(e.latlng).addTo(map);
-                    window.chrome.webview.postMessage(e.latlng.lat + ',' + e.latlng.lng);
-                });
+                    // Click to place marker
+                    map.on('click', function(e) {
+                        if(marker) map.removeLayer(marker);
+                        marker = L.marker(e.latlng).addTo(map);
+                        window.chrome.webview.postMessage(e.latlng.lat + ',' + e.latlng.lng);
+                    });
 
-                // Search box
-                L.Control.geocoder({
-                    defaultMarkGeocode: false
-                }).on('markgeocode', function(e) {
-                    var center = e.geocode.center;
-                    map.setView(center, 16);
-                    if(marker) map.removeLayer(marker);
-                    marker = L.marker(center).addTo(map);
-                    window.chrome.webview.postMessage(center.lat + ',' + center.lng);
-                }).addTo(map);
-            </script>
+                    // Search box
+                    L.Control.geocoder({
+                        defaultMarkGeocode: false
+                    }).on('markgeocode', function(e) {
+                        var center = e.geocode.center;
+                        map.setView(center, 16);
+                        if(marker) map.removeLayer(marker);
+                        marker = L.marker(center).addTo(map);
+                        window.chrome.webview.postMessage(center.lat + ',' + center.lng);
+                    }).addTo(map);
+                </script>
             </body>
             </html>
             ";
@@ -125,19 +142,6 @@ namespace BATODA
             calendarDays();
         }
 
-
-        public class CalendarEvent
-        {
-            public string Title { get; set; }
-            public string Time { get; set; }
-            public string Type { get; set; }
-            public string Status { get; set; }
-            public string Description { get; set; }
-            public string Location { get; set; }
-            public DateTime Date { get; set; }
-
-            public List<MemberAttendance> AttendanceList { get; set; } = new List<MemberAttendance>();
-        }
 
         //for attendance checking
         public class MemberAttendance
@@ -266,8 +270,8 @@ namespace BATODA
             string title = EventTitleTxt.Text.Trim();
             string type = EventTypeCmb.Text.Trim();
             string location = EventLocationTxt.Text.Trim();
-            string description = NoteTextBox.Text.Trim();
-            string time = EventTimePicker.Value.ToString("HH:mm");
+            string description = NoteTxt.Text.Trim();
+            string time = TimePicker.Value.ToString("HH:mm");
 
             lock (eventLock)
             {
@@ -280,8 +284,11 @@ namespace BATODA
                     editingEvent.Time = time;
                     editingEvent.Date = selectedDate;
 
+                    eventRepo.SaveEvent(editingEvent, reqAttendees: "", isUpdate: true, eventId: editingEvent.EventId);
+
                     UpdateEventPanel(editingEvent);
                     UpdateEventInDayCell(editingEvent);
+
                     editingEvent = null;
                     SaveEventButton.Text = "Save";
                 }
@@ -296,6 +303,8 @@ namespace BATODA
                         Time = time,
                         Date = selectedDate
                     };
+
+                    eventRepo.SaveEvent(newEvent, reqAttendees: "");
 
                     if (!events.ContainsKey(selectedDate))
                         events[selectedDate] = new List<CalendarEvent>();
@@ -312,9 +321,11 @@ namespace BATODA
             EventTitleTxt.Clear();
             EventTypeCmb.SelectedIndex = -1;
             EventLocationTxt.Clear();
-            NoteTextBox.Clear();
-            EventTimePicker.Value = DateTime.Now;
+            NoteTxt.Clear();
+            TimePicker.Value = DateTime.Now;
         }
+
+
         //ADDING OF EVENT AFTER SAVING
         private void AddEventToOverview(CalendarEvent ev)
         {
@@ -603,6 +614,7 @@ namespace BATODA
                 }
             }
         }
+
         //COLOR CODE FOR EVENT TYPES
         private Color GetEventColor(string eventType)
         {
@@ -651,28 +663,6 @@ namespace BATODA
         //will save the attendance 
         private void SaveAttendanceButton_Click(object sender, EventArgs e)
         {
-            if (previousEventSelectedPanel == null)
-                return;
-
-            CalendarEvent ev = previousEventSelectedPanel.Tag as CalendarEvent;
-            if (ev == null)
-                return;
-
-            ev.AttendanceList = new List<MemberAttendance>();
-
-            foreach (DataGridViewRow row in AttendanceMembersDataGridView.Rows)
-            {
-                if (row.Cells[1].Value == null || row.Cells[2].Value == null)
-                    continue; // skip invalid rows
-
-                MemberAttendance member = new MemberAttendance
-                {
-                    BodyNumber = row.Cells[1].Value.ToString(),
-                    MemberName = row.Cells[2].Value.ToString(),
-                    Present = row.Cells[0].Value != null && (bool)row.Cells[0].Value
-                };
-                ev.AttendanceList.Add(member);
-            }
 
             previousEventSelectedPanel.DoubleClick -= DoneEventPanel_DoubleClick;
             previousEventSelectedPanel.DoubleClick -= PastEventPanel_DoubleClick;
@@ -694,11 +684,11 @@ namespace BATODA
                 EventTitleTxt.Text = evt.Title;
                 EventTypeCmb.Text = evt.Type;
                 EventLocationTxt.Text = evt.Location;
-                NoteTextBox.Text = evt.Description;
+                NoteTxt.Text = evt.Description;
 
                 if (TimeSpan.TryParse(evt.Time, out TimeSpan time))
                 {
-                    EventTimePicker.Value = DateTime.Today.Add(time);
+                    DatePicker.Value = DateTime.Today.Add(time);
                 }
 
                 selectedDate = evt.Date;
@@ -778,5 +768,9 @@ namespace BATODA
             }
         }
 
+        private void AddEventPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
