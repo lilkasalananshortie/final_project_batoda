@@ -146,15 +146,16 @@ namespace BATODA.Helpers.Data
                     balCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
                     balCmd.ExecuteNonQuery();
                 }
-
-                // UPDATE OR INSERT PAYMENT
                 if (paymentId != null)
                 {
                     string updateQuery = "UPDATE MemberPayment SET Status=@Status, PaymentDate=@Date WHERE PaymentID=@PaymentID";
                     SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
                     updateCmd.Parameters.AddWithValue("@Status", dbStatus);
-                    updateCmd.Parameters.AddWithValue("@PaymentID", paymentId);
+
+                    // Set PaymentDate only if Paid, otherwise NULL
                     updateCmd.Parameters.AddWithValue("@Date", dbStatus == "Paid" ? (object)DateTime.Today : DBNull.Value);
+
+                    updateCmd.Parameters.AddWithValue("@PaymentID", paymentId);
                     updateCmd.ExecuteNonQuery();
                 }
                 else
@@ -169,10 +170,10 @@ namespace BATODA.Helpers.Data
                     insertCmd.Parameters.AddWithValue("@Date", dbStatus == "Paid" ? (object)DateTime.Today : DBNull.Value);
                     insertCmd.ExecuteNonQuery();
                 }
+
+
             }
         }
-
-
 
         public void UpdateAllTaxBalances()
         {

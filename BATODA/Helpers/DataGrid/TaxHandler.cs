@@ -252,7 +252,6 @@ namespace BATODA.Helpers.DataGrid
                         }
                         dgv.Rows[rowIndex].Cells[i + 2].Tag = statusToUse; // STORE STATUS IN TAG
 
-                        TaxRepository.UpdatePaymentInDB(member.BodyNumber, year, i, statusToUse); // SAVE
                     }
                     else // IF NO PAYMENT FOUND
                     {
@@ -267,7 +266,6 @@ namespace BATODA.Helpers.DataGrid
                         }
                         dgv.Rows[rowIndex].Cells[i + 2].Tag = defaultStatus; // STORE DEFAULT STATUS IN TAG
 
-                        TaxRepository.UpdatePaymentInDB(member.BodyNumber, year, i, defaultStatus); // SAVE DEFAULT STATUS TO DB
                     }
                 }
             }

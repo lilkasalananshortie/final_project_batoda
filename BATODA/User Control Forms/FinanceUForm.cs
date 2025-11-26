@@ -454,5 +454,9 @@ namespace BATODA
             }
         }
 
+        private void ButawDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

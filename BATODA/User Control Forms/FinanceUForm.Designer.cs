@@ -589,6 +589,7 @@
             this.ButawDataGrid.Size = new System.Drawing.Size(1520, 523);
             this.ButawDataGrid.TabIndex = 44;
             this.ButawDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ButawDataGrid_CellContentClick);
+            this.ButawDataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ButawDataGrid_CellDoubleClick);
             // 
             // label6
             // 
