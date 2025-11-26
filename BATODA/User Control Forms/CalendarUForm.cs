@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BATODA.Helpers.DataGrid;
+using BATODA.User_Control_Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,11 +8,11 @@ using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.DataGrid;
-using BATODA.User_Control_Forms;
+using Newtonsoft.Json;
 
 namespace BATODA
 {
@@ -35,6 +37,9 @@ namespace BATODA
         public int year;
         private DateTime dateTime = DateTime.Now;
 
+        // COORDS
+        private string selectedCoords = "";
+
         public CalendarUForm()
         {
             InitializeComponent();
@@ -45,12 +50,12 @@ namespace BATODA
             
             LoadSampleData();//PAKI DELETE PAG DINELETE YUNG METHOD PARA NO ERROR <--ARONE 
         }
+
         //ETONG METHOD NA TO PA DELETE <--ARONE 
         private void LoadSampleData()
         {
             AttendanceMembersDataGridView.Rows.Clear();
 
-            // Sample data
             AttendanceMembersDataGridView.Rows.Add(false, "001", "John Doe");
             AttendanceMembersDataGridView.Rows.Add(true, "002", "Jane Smith");
             AttendanceMembersDataGridView.Rows.Add(false, "003", "Robert Johnson");
@@ -60,12 +65,66 @@ namespace BATODA
             AttendanceMembersDataGridView.Rows.Add(false, "007", "David Taylor");
             AttendanceMembersDataGridView.Rows.Add(true, "008", "Lisa Anderson");
         }
-        private void CalendarUForm_Load(object sender, EventArgs e)
+
+        private void WebViewMap_WebMessageReceived(object sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
         {
+            selectedCoords = e.TryGetWebMessageAsString();
+        }
+
+        private async void CalendarUForm_Load(object sender, EventArgs e)
+        {
+            await webViewMap.EnsureCoreWebView2Async(null);
+            webViewMap.WebMessageReceived += WebViewMap_WebMessageReceived;
+            string html = @"
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <meta charset=""utf-8"" />
+            <title>OSM Click + Search</title>
+            <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+            <link rel=""stylesheet"" href=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.css""/>
+            <link rel=""stylesheet"" href=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"" />
+            <script src=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.js""></script>
+            <script src=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js""></script>
+            <style>html, body, #map { height: 100%; margin: 0; }</style>
+            </head>
+            <body>
+            <div id=""map""></div>
+            <script>
+                var map = L.map('map').setView([14.5995, 120.9842], 12);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+                var marker;
+
+                // Click to place marker
+                map.on('click', function(e) {
+                    if(marker) map.removeLayer(marker);
+                    marker = L.marker(e.latlng).addTo(map);
+                    window.chrome.webview.postMessage(e.latlng.lat + ',' + e.latlng.lng);
+                });
+
+                // Search box
+                L.Control.geocoder({
+                    defaultMarkGeocode: false
+                }).on('markgeocode', function(e) {
+                    var center = e.geocode.center;
+                    map.setView(center, 16);
+                    if(marker) map.removeLayer(marker);
+                    marker = L.marker(center).addTo(map);
+                    window.chrome.webview.postMessage(center.lat + ',' + center.lng);
+                }).addTo(map);
+            </script>
+            </body>
+            </html>
+            ";
+
+            webViewMap.NavigateToString(html);
+
             month = dateTime.Month;
             year = dateTime.Year;
             calendarDays();
         }
+
 
         public class CalendarEvent
         {
@@ -204,10 +263,9 @@ namespace BATODA
                 return;
             }
 
-            string title = EvenTittleTextBox.Text.Trim();
-            string type = EventTypeComboBox.Text.Trim();
-            string status = StatusComboBox.Text.Trim();
-            string location = EventLocationTextBox.Text.Trim();
+            string title = EventTitleTxt.Text.Trim();
+            string type = EventTypeCmb.Text.Trim();
+            string location = EventLocationTxt.Text.Trim();
             string description = NoteTextBox.Text.Trim();
             string time = EventTimePicker.Value.ToString("HH:mm");
 
@@ -217,7 +275,6 @@ namespace BATODA
                 {
                     editingEvent.Title = title;
                     editingEvent.Type = type;
-                    editingEvent.Status = status;
                     editingEvent.Location = location;
                     editingEvent.Description = description;
                     editingEvent.Time = time;
@@ -234,7 +291,6 @@ namespace BATODA
                     {
                         Title = title,
                         Type = type,
-                        Status = status,
                         Location = location,
                         Description = description,
                         Time = time,
@@ -253,10 +309,9 @@ namespace BATODA
 
             AddEventPanel.Hide();
 
-            EvenTittleTextBox.Clear();
-            EventTypeComboBox.SelectedIndex = -1;
-            StatusComboBox.Clear();
-            EventLocationTextBox.Clear();
+            EventTitleTxt.Clear();
+            EventTypeCmb.SelectedIndex = -1;
+            EventLocationTxt.Clear();
             NoteTextBox.Clear();
             EventTimePicker.Value = DateTime.Now;
         }
@@ -636,10 +691,9 @@ namespace BATODA
         {
             if (selectedEventPanel != null && selectedEventPanel.Tag is CalendarEvent evt)
             {
-                EvenTittleTextBox.Text = evt.Title;
-                EventTypeComboBox.Text = evt.Type;
-                StatusComboBox.Text = evt.Status;
-                EventLocationTextBox.Text = evt.Location;
+                EventTitleTxt.Text = evt.Title;
+                EventTypeCmb.Text = evt.Type;
+                EventLocationTxt.Text = evt.Location;
                 NoteTextBox.Text = evt.Description;
 
                 if (TimeSpan.TryParse(evt.Time, out TimeSpan time))
@@ -686,6 +740,43 @@ namespace BATODA
             }
         }
 
-      
+        private void DayContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MapPanel.Visible = !MapPanel.Visible;
+        }
+
+        private async void SelectPlaceBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(selectedCoords)) return;
+
+            var parts = selectedCoords.Split(',');
+            var lat = parts[0];
+            var lng = parts[1];
+
+            string url = $"https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lng}&format=json";
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("User-Agent", "BATODAApp");
+                var response = await client.GetStringAsync(url);
+                dynamic result = Newtonsoft.Json.JsonConvert.DeserializeObject(response);
+
+                if (result?.display_name != null)
+                {
+                    EventLocationTxt.Text = result.display_name;
+                    MapPanel.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Place not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
     }
 }

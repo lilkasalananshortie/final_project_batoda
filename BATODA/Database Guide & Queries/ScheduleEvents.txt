@@ -1,0 +1,10 @@
+CREATE TABLE ScheduleEvents (
+    EventId INT IDENTITY(1,1) PRIMARY KEY,
+    EventTitle VARCHAR(100) NOT NULL,
+    EventType VARCHAR(50),
+    Description VARCHAR(MAX),
+    Date DATE NOT NULL,
+    Time TIME NULL,
+    EventStatus VARCHAR(10) CHECK (EventStatus IN ('Pending', 'Done', 'Canceled')) DEFAULT 'Pending',
+    Location VARCHAR(200)
+);

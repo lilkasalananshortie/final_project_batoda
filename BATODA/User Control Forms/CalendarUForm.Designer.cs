@@ -38,7 +38,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nextButton = new BATODA.ButtonStyle();
+            this.previousButton = new BATODA.ButtonStyle();
             this.AddEventPanel = new System.Windows.Forms.Panel();
+            this.SaveEventButton = new BATODA.ButtonStyle();
+            this.CancelEventButton = new BATODA.ButtonStyle();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
@@ -46,17 +50,16 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.EventLocationTextBox = new System.Windows.Forms.TextBox();
+            this.EventLocationTxt = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.StatusComboBox = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.NoteTextBox = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.EvenTittleTextBox = new System.Windows.Forms.TextBox();
+            this.EventTitleTxt = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.EventTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.EventTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.EventTypeCmb = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -76,20 +79,22 @@
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
+            this.SaveAttendanceButton = new BATODA.ButtonStyle();
             this.label71 = new System.Windows.Forms.Label();
             this.PastEventAttendancePanel = new System.Windows.Forms.Panel();
+            this.AttendanceListDGV = new System.Windows.Forms.DataGridView();
             this.PastEventFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EventsOverviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.AttendanceListDGV = new System.Windows.Forms.DataGridView();
-            this.SaveEventButton = new BATODA.ButtonStyle();
-            this.CancelEventButton = new BATODA.ButtonStyle();
-            this.nextButton = new BATODA.ButtonStyle();
-            this.previousButton = new BATODA.ButtonStyle();
-            this.SaveAttendanceButton = new BATODA.ButtonStyle();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.webViewMap = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.ReqAttendeesCmb = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SelectPlaceBtn = new System.Windows.Forms.Button();
+            this.MapPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.AddEventPanel.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -109,9 +114,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.PastEventAttendancePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).BeginInit();
             this.panel20.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webViewMap)).BeginInit();
+            this.MapPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // DayContainer
@@ -122,6 +129,7 @@
             this.DayContainer.Name = "DayContainer";
             this.DayContainer.Size = new System.Drawing.Size(1158, 740);
             this.DayContainer.TabIndex = 0;
+            this.DayContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.DayContainer_Paint);
             // 
             // label1
             // 
@@ -223,10 +231,71 @@
             this.panel1.Size = new System.Drawing.Size(1158, 840);
             this.panel1.TabIndex = 11;
             // 
+            // nextButton
+            // 
+            this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.nextButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.nextButton.BorderColor = System.Drawing.Color.Red;
+            this.nextButton.BorderRadius = 20;
+            this.nextButton.BorderSize = 0;
+            this.nextButton.ButtonImage = null;
+            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton.ForeColor = System.Drawing.Color.White;
+            this.nextButton.HoverBorderColor = System.Drawing.Color.Empty;
+            this.nextButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.nextButton.ImageColor = System.Drawing.Color.Black;
+            this.nextButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.nextButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.nextButton.IsToggled = false;
+            this.nextButton.Location = new System.Drawing.Point(1052, 16);
+            this.nextButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.nextButton.Name = "nextButton";
+            this.nextButton.PaddingX = 0;
+            this.nextButton.PaddingY = 0;
+            this.nextButton.Size = new System.Drawing.Size(90, 25);
+            this.nextButton.TabIndex = 10;
+            this.nextButton.Text = "Next";
+            this.nextButton.TextColor = System.Drawing.Color.White;
+            this.nextButton.TextOffset = 20;
+            this.nextButton.ToggleColor = System.Drawing.Color.Silver;
+            this.nextButton.UseVisualStyleBackColor = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // previousButton
+            // 
+            this.previousButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.previousButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.previousButton.BorderColor = System.Drawing.Color.Red;
+            this.previousButton.BorderRadius = 20;
+            this.previousButton.BorderSize = 0;
+            this.previousButton.ButtonImage = null;
+            this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previousButton.ForeColor = System.Drawing.Color.White;
+            this.previousButton.HoverBorderColor = System.Drawing.Color.Empty;
+            this.previousButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.previousButton.ImageColor = System.Drawing.Color.Black;
+            this.previousButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.previousButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.previousButton.IsToggled = false;
+            this.previousButton.Location = new System.Drawing.Point(14, 16);
+            this.previousButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.previousButton.Name = "previousButton";
+            this.previousButton.PaddingX = 0;
+            this.previousButton.PaddingY = 0;
+            this.previousButton.Size = new System.Drawing.Size(90, 25);
+            this.previousButton.TabIndex = 9;
+            this.previousButton.Text = "Previous";
+            this.previousButton.TextColor = System.Drawing.Color.White;
+            this.previousButton.TextOffset = 20;
+            this.previousButton.ToggleColor = System.Drawing.Color.Silver;
+            this.previousButton.UseVisualStyleBackColor = false;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            // 
             // AddEventPanel
             // 
             this.AddEventPanel.BackColor = System.Drawing.Color.White;
             this.AddEventPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddEventPanel.Controls.Add(this.MapPanel);
             this.AddEventPanel.Controls.Add(this.SaveEventButton);
             this.AddEventPanel.Controls.Add(this.CancelEventButton);
             this.AddEventPanel.Controls.Add(this.label47);
@@ -245,8 +314,67 @@
             this.AddEventPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddEventPanel.Location = new System.Drawing.Point(124, 193);
             this.AddEventPanel.Name = "AddEventPanel";
-            this.AddEventPanel.Size = new System.Drawing.Size(885, 459);
+            this.AddEventPanel.Size = new System.Drawing.Size(885, 505);
             this.AddEventPanel.TabIndex = 0;
+            // 
+            // SaveEventButton
+            // 
+            this.SaveEventButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveEventButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveEventButton.BorderColor = System.Drawing.Color.Red;
+            this.SaveEventButton.BorderRadius = 0;
+            this.SaveEventButton.BorderSize = 0;
+            this.SaveEventButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.SaveEventButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SaveEventButton.HoverBorderColor = System.Drawing.Color.Empty;
+            this.SaveEventButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveEventButton.ImageColor = System.Drawing.Color.White;
+            this.SaveEventButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SaveEventButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SaveEventButton.IsToggled = false;
+            this.SaveEventButton.Location = new System.Drawing.Point(689, 444);
+            this.SaveEventButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveEventButton.Name = "SaveEventButton";
+            this.SaveEventButton.PaddingX = 0;
+            this.SaveEventButton.PaddingY = 0;
+            this.SaveEventButton.Size = new System.Drawing.Size(165, 45);
+            this.SaveEventButton.TabIndex = 12;
+            this.SaveEventButton.Text = "Save Event";
+            this.SaveEventButton.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.SaveEventButton.TextOffset = 10;
+            this.SaveEventButton.ToggleColor = System.Drawing.Color.Empty;
+            this.SaveEventButton.UseVisualStyleBackColor = false;
+            this.SaveEventButton.Click += new System.EventHandler(this.SaveEventButton_Click);
+            // 
+            // CancelEventButton
+            // 
+            this.CancelEventButton.BackColor = System.Drawing.Color.White;
+            this.CancelEventButton.BackgroundColor = System.Drawing.Color.White;
+            this.CancelEventButton.BorderColor = System.Drawing.Color.Black;
+            this.CancelEventButton.BorderRadius = 0;
+            this.CancelEventButton.BorderSize = 1;
+            this.CancelEventButton.ButtonImage = null;
+            this.CancelEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelEventButton.ForeColor = System.Drawing.Color.Black;
+            this.CancelEventButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.CancelEventButton.HoverColor = System.Drawing.Color.White;
+            this.CancelEventButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelEventButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.CancelEventButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CancelEventButton.IsToggled = false;
+            this.CancelEventButton.Location = new System.Drawing.Point(518, 444);
+            this.CancelEventButton.MouseDownColor = System.Drawing.Color.White;
+            this.CancelEventButton.Name = "CancelEventButton";
+            this.CancelEventButton.PaddingX = 0;
+            this.CancelEventButton.PaddingY = 0;
+            this.CancelEventButton.Size = new System.Drawing.Size(165, 45);
+            this.CancelEventButton.TabIndex = 11;
+            this.CancelEventButton.Text = "Cancel";
+            this.CancelEventButton.TextColor = System.Drawing.Color.Black;
+            this.CancelEventButton.TextOffset = 20;
+            this.CancelEventButton.ToggleColor = System.Drawing.Color.Empty;
+            this.CancelEventButton.UseVisualStyleBackColor = false;
+            this.CancelEventButton.Click += new System.EventHandler(this.CancelEventButton_Click);
             // 
             // label47
             // 
@@ -256,9 +384,9 @@
             this.label47.ForeColor = System.Drawing.Color.Black;
             this.label47.Location = new System.Drawing.Point(456, 110);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(88, 20);
+            this.label47.Size = new System.Drawing.Size(127, 20);
             this.label47.TabIndex = 0;
-            this.label47.Text = "Event Time";
+            this.label47.Text = "Event Date/Time";
             // 
             // label48
             // 
@@ -266,7 +394,7 @@
             this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.Black;
-            this.label48.Location = new System.Drawing.Point(32, 280);
+            this.label48.Location = new System.Drawing.Point(453, 195);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(127, 20);
             this.label48.TabIndex = 0;
@@ -278,11 +406,11 @@
             this.label45.BackColor = System.Drawing.Color.Transparent;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(456, 195);
+            this.label45.Location = new System.Drawing.Point(27, 360);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(56, 20);
+            this.label45.Size = new System.Drawing.Size(162, 20);
             this.label45.TabIndex = 0;
-            this.label45.Text = "Status";
+            this.label45.Text = "Required Attendees *";
             // 
             // label46
             // 
@@ -290,7 +418,7 @@
             this.label46.BackColor = System.Drawing.Color.Transparent;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(456, 280);
+            this.label46.Location = new System.Drawing.Point(26, 278);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(115, 20);
             this.label46.TabIndex = 0;
@@ -302,11 +430,11 @@
             this.label44.BackColor = System.Drawing.Color.Transparent;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(32, 195);
+            this.label44.Location = new System.Drawing.Point(27, 192);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(88, 20);
+            this.label44.Size = new System.Drawing.Size(98, 20);
             this.label44.TabIndex = 0;
-            this.label44.Text = "Event Type";
+            this.label44.Text = "Event Type *";
             // 
             // label42
             // 
@@ -314,7 +442,7 @@
             this.label42.BackColor = System.Drawing.Color.Transparent;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(32, 110);
+            this.label42.Location = new System.Drawing.Point(27, 110);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(93, 20);
             this.label42.TabIndex = 0;
@@ -323,79 +451,72 @@
             // panel27
             // 
             this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel27.Controls.Add(this.EventLocationTextBox);
-            this.panel27.Location = new System.Drawing.Point(457, 308);
+            this.panel27.Controls.Add(this.button1);
+            this.panel27.Controls.Add(this.EventLocationTxt);
+            this.panel27.Location = new System.Drawing.Point(30, 301);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(400, 40);
             this.panel27.TabIndex = 4;
             // 
-            // EventLocationTextBox
+            // EventLocationTxt
             // 
-            this.EventLocationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EventLocationTextBox.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventLocationTextBox.Location = new System.Drawing.Point(7, 8);
-            this.EventLocationTextBox.Name = "EventLocationTextBox";
-            this.EventLocationTextBox.Size = new System.Drawing.Size(389, 21);
-            this.EventLocationTextBox.TabIndex = 1;
+            this.EventLocationTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EventLocationTxt.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventLocationTxt.Location = new System.Drawing.Point(7, 8);
+            this.EventLocationTxt.Name = "EventLocationTxt";
+            this.EventLocationTxt.Size = new System.Drawing.Size(343, 21);
+            this.EventLocationTxt.TabIndex = 1;
             // 
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.StatusComboBox);
-            this.panel14.Location = new System.Drawing.Point(455, 223);
+            this.panel14.Controls.Add(this.ReqAttendeesCmb);
+            this.panel14.Location = new System.Drawing.Point(30, 383);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(400, 40);
             this.panel14.TabIndex = 4;
-            // 
-            // StatusComboBox
-            // 
-            this.StatusComboBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StatusComboBox.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusComboBox.Location = new System.Drawing.Point(7, 8);
-            this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(388, 21);
-            this.StatusComboBox.TabIndex = 1;
             // 
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Controls.Add(this.NoteTextBox);
-            this.panel16.Location = new System.Drawing.Point(33, 308);
+            this.panel16.Location = new System.Drawing.Point(454, 218);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(400, 130);
+            this.panel16.Size = new System.Drawing.Size(400, 205);
             this.panel16.TabIndex = 4;
             // 
             // NoteTextBox
             // 
             this.NoteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NoteTextBox.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NoteTextBox.Location = new System.Drawing.Point(4, 4);
+            this.NoteTextBox.Location = new System.Drawing.Point(5, 5);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
-            this.NoteTextBox.Size = new System.Drawing.Size(389, 120);
+            this.NoteTextBox.Size = new System.Drawing.Size(389, 199);
             this.NoteTextBox.TabIndex = 1;
             // 
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.EvenTittleTextBox);
-            this.panel15.Location = new System.Drawing.Point(33, 138);
+            this.panel15.Controls.Add(this.EventTitleTxt);
+            this.panel15.Location = new System.Drawing.Point(30, 138);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(400, 40);
             this.panel15.TabIndex = 4;
             // 
-            // EvenTittleTextBox
+            // EventTitleTxt
             // 
-            this.EvenTittleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EvenTittleTextBox.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EvenTittleTextBox.Location = new System.Drawing.Point(7, 8);
-            this.EvenTittleTextBox.Name = "EvenTittleTextBox";
-            this.EvenTittleTextBox.Size = new System.Drawing.Size(386, 21);
-            this.EvenTittleTextBox.TabIndex = 0;
+            this.EventTitleTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EventTitleTxt.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventTitleTxt.Location = new System.Drawing.Point(7, 8);
+            this.EventTitleTxt.Name = "EventTitleTxt";
+            this.EventTitleTxt.Size = new System.Drawing.Size(386, 21);
+            this.EventTitleTxt.TabIndex = 0;
             // 
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.dateTimePicker1);
             this.panel13.Controls.Add(this.EventTimePicker);
             this.panel13.Location = new System.Drawing.Point(457, 138);
             this.panel13.Name = "panel13";
@@ -404,37 +525,37 @@
             // 
             // EventTimePicker
             // 
-            this.EventTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventTimePicker.Location = new System.Drawing.Point(-1, 7);
+            this.EventTimePicker.Location = new System.Drawing.Point(5, 6);
             this.EventTimePicker.Name = "EventTimePicker";
-            this.EventTimePicker.Size = new System.Drawing.Size(400, 24);
+            this.EventTimePicker.Size = new System.Drawing.Size(248, 24);
             this.EventTimePicker.TabIndex = 0;
             this.EventTimePicker.Value = new System.DateTime(2025, 11, 11, 20, 30, 0, 0);
             // 
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.EventTypeComboBox);
-            this.panel11.Location = new System.Drawing.Point(33, 223);
+            this.panel11.Controls.Add(this.EventTypeCmb);
+            this.panel11.Location = new System.Drawing.Point(30, 220);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(400, 40);
             this.panel11.TabIndex = 4;
             // 
-            // EventTypeComboBox
+            // EventTypeCmb
             // 
-            this.EventTypeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EventTypeComboBox.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventTypeComboBox.FormattingEnabled = true;
-            this.EventTypeComboBox.Items.AddRange(new object[] {
+            this.EventTypeCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EventTypeCmb.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventTypeCmb.FormattingEnabled = true;
+            this.EventTypeCmb.Items.AddRange(new object[] {
             "Meeting",
             "Task",
             "Reminder",
             "Relief"});
-            this.EventTypeComboBox.Location = new System.Drawing.Point(5, 5);
-            this.EventTypeComboBox.Name = "EventTypeComboBox";
-            this.EventTypeComboBox.Size = new System.Drawing.Size(389, 29);
-            this.EventTypeComboBox.TabIndex = 0;
+            this.EventTypeCmb.Location = new System.Drawing.Point(5, 5);
+            this.EventTypeCmb.Name = "EventTypeCmb";
+            this.EventTypeCmb.Size = new System.Drawing.Size(389, 29);
+            this.EventTypeCmb.TabIndex = 0;
             // 
             // panel10
             // 
@@ -641,6 +762,36 @@
             this.OwnerSearchTxt.Size = new System.Drawing.Size(355, 24);
             this.OwnerSearchTxt.TabIndex = 42;
             // 
+            // SaveAttendanceButton
+            // 
+            this.SaveAttendanceButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveAttendanceButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveAttendanceButton.BorderColor = System.Drawing.Color.Red;
+            this.SaveAttendanceButton.BorderRadius = 0;
+            this.SaveAttendanceButton.BorderSize = 0;
+            this.SaveAttendanceButton.ButtonImage = null;
+            this.SaveAttendanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveAttendanceButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SaveAttendanceButton.HoverBorderColor = System.Drawing.Color.Empty;
+            this.SaveAttendanceButton.HoverColor = System.Drawing.Color.Red;
+            this.SaveAttendanceButton.ImageColor = System.Drawing.Color.Black;
+            this.SaveAttendanceButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.SaveAttendanceButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SaveAttendanceButton.IsToggled = false;
+            this.SaveAttendanceButton.Location = new System.Drawing.Point(319, 579);
+            this.SaveAttendanceButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveAttendanceButton.Name = "SaveAttendanceButton";
+            this.SaveAttendanceButton.PaddingX = 0;
+            this.SaveAttendanceButton.PaddingY = 0;
+            this.SaveAttendanceButton.Size = new System.Drawing.Size(105, 32);
+            this.SaveAttendanceButton.TabIndex = 0;
+            this.SaveAttendanceButton.Text = "Save";
+            this.SaveAttendanceButton.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.SaveAttendanceButton.TextOffset = 20;
+            this.SaveAttendanceButton.ToggleColor = System.Drawing.Color.Empty;
+            this.SaveAttendanceButton.UseVisualStyleBackColor = false;
+            this.SaveAttendanceButton.Click += new System.EventHandler(this.SaveAttendanceButton_Click);
+            // 
             // label71
             // 
             this.label71.AutoSize = true;
@@ -660,6 +811,18 @@
             this.PastEventAttendancePanel.Name = "PastEventAttendancePanel";
             this.PastEventAttendancePanel.Size = new System.Drawing.Size(606, 442);
             this.PastEventAttendancePanel.TabIndex = 7;
+            // 
+            // AttendanceListDGV
+            // 
+            this.AttendanceListDGV.AllowUserToAddRows = false;
+            this.AttendanceListDGV.AllowUserToDeleteRows = false;
+            this.AttendanceListDGV.AllowUserToResizeColumns = false;
+            this.AttendanceListDGV.AllowUserToResizeRows = false;
+            this.AttendanceListDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.AttendanceListDGV.Location = new System.Drawing.Point(7, 6);
+            this.AttendanceListDGV.Name = "AttendanceListDGV";
+            this.AttendanceListDGV.Size = new System.Drawing.Size(594, 426);
+            this.AttendanceListDGV.TabIndex = 30;
             // 
             // PastEventFlowLayoutPanel
             // 
@@ -722,166 +885,74 @@
             this.EventsOverviewFlowLayoutPanel.Size = new System.Drawing.Size(433, 657);
             this.EventsOverviewFlowLayoutPanel.TabIndex = 14;
             // 
-            // AttendanceListDGV
+            // dateTimePicker1
             // 
-            this.AttendanceListDGV.AllowUserToAddRows = false;
-            this.AttendanceListDGV.AllowUserToDeleteRows = false;
-            this.AttendanceListDGV.AllowUserToResizeColumns = false;
-            this.AttendanceListDGV.AllowUserToResizeRows = false;
-            this.AttendanceListDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.AttendanceListDGV.Location = new System.Drawing.Point(7, 6);
-            this.AttendanceListDGV.Name = "AttendanceListDGV";
-            this.AttendanceListDGV.Size = new System.Drawing.Size(594, 426);
-            this.AttendanceListDGV.TabIndex = 30;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(260, 6);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeftLayout = true;
+            this.dateTimePicker1.ShowUpDown = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(132, 24);
+            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.Value = new System.DateTime(2025, 11, 11, 20, 30, 0, 0);
             // 
-            // SaveEventButton
+            // webViewMap
             // 
-            this.SaveEventButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveEventButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveEventButton.BorderColor = System.Drawing.Color.Red;
-            this.SaveEventButton.BorderRadius = 0;
-            this.SaveEventButton.BorderSize = 0;
-            this.SaveEventButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.SaveEventButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.SaveEventButton.HoverBorderColor = System.Drawing.Color.Empty;
-            this.SaveEventButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveEventButton.ImageColor = System.Drawing.Color.White;
-            this.SaveEventButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SaveEventButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.SaveEventButton.IsToggled = false;
-            this.SaveEventButton.Location = new System.Drawing.Point(660, 379);
-            this.SaveEventButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveEventButton.Name = "SaveEventButton";
-            this.SaveEventButton.PaddingX = 0;
-            this.SaveEventButton.PaddingY = 0;
-            this.SaveEventButton.Size = new System.Drawing.Size(165, 45);
-            this.SaveEventButton.TabIndex = 12;
-            this.SaveEventButton.Text = "Save Event";
-            this.SaveEventButton.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.SaveEventButton.TextOffset = 10;
-            this.SaveEventButton.ToggleColor = System.Drawing.Color.Empty;
-            this.SaveEventButton.UseVisualStyleBackColor = false;
-            this.SaveEventButton.Click += new System.EventHandler(this.SaveEventButton_Click);
+            this.webViewMap.AllowExternalDrop = true;
+            this.webViewMap.CreationProperties = null;
+            this.webViewMap.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webViewMap.Location = new System.Drawing.Point(3, 4);
+            this.webViewMap.Name = "webViewMap";
+            this.webViewMap.Size = new System.Drawing.Size(418, 336);
+            this.webViewMap.TabIndex = 13;
+            this.webViewMap.ZoomFactor = 1D;
             // 
-            // CancelEventButton
+            // ReqAttendeesCmb
             // 
-            this.CancelEventButton.BackColor = System.Drawing.Color.White;
-            this.CancelEventButton.BackgroundColor = System.Drawing.Color.White;
-            this.CancelEventButton.BorderColor = System.Drawing.Color.Black;
-            this.CancelEventButton.BorderRadius = 0;
-            this.CancelEventButton.BorderSize = 1;
-            this.CancelEventButton.ButtonImage = null;
-            this.CancelEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelEventButton.ForeColor = System.Drawing.Color.Black;
-            this.CancelEventButton.HoverBorderColor = System.Drawing.Color.Black;
-            this.CancelEventButton.HoverColor = System.Drawing.Color.White;
-            this.CancelEventButton.ImageColor = System.Drawing.Color.Black;
-            this.CancelEventButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.CancelEventButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CancelEventButton.IsToggled = false;
-            this.CancelEventButton.Location = new System.Drawing.Point(489, 380);
-            this.CancelEventButton.MouseDownColor = System.Drawing.Color.White;
-            this.CancelEventButton.Name = "CancelEventButton";
-            this.CancelEventButton.PaddingX = 0;
-            this.CancelEventButton.PaddingY = 0;
-            this.CancelEventButton.Size = new System.Drawing.Size(165, 45);
-            this.CancelEventButton.TabIndex = 11;
-            this.CancelEventButton.Text = "Cancel";
-            this.CancelEventButton.TextColor = System.Drawing.Color.Black;
-            this.CancelEventButton.TextOffset = 20;
-            this.CancelEventButton.ToggleColor = System.Drawing.Color.Empty;
-            this.CancelEventButton.UseVisualStyleBackColor = false;
-            this.CancelEventButton.Click += new System.EventHandler(this.CancelEventButton_Click);
+            this.ReqAttendeesCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReqAttendeesCmb.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqAttendeesCmb.FormattingEnabled = true;
+            this.ReqAttendeesCmb.Items.AddRange(new object[] {
+            "None",
+            "All Members",
+            "Specific Members Only"});
+            this.ReqAttendeesCmb.Location = new System.Drawing.Point(6, 4);
+            this.ReqAttendeesCmb.Name = "ReqAttendeesCmb";
+            this.ReqAttendeesCmb.Size = new System.Drawing.Size(389, 29);
+            this.ReqAttendeesCmb.TabIndex = 1;
             // 
-            // nextButton
+            // button1
             // 
-            this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.nextButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.nextButton.BorderColor = System.Drawing.Color.Red;
-            this.nextButton.BorderRadius = 20;
-            this.nextButton.BorderSize = 0;
-            this.nextButton.ButtonImage = null;
-            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton.ForeColor = System.Drawing.Color.White;
-            this.nextButton.HoverBorderColor = System.Drawing.Color.Empty;
-            this.nextButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.nextButton.ImageColor = System.Drawing.Color.Black;
-            this.nextButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.nextButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.nextButton.IsToggled = false;
-            this.nextButton.Location = new System.Drawing.Point(1052, 16);
-            this.nextButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.nextButton.Name = "nextButton";
-            this.nextButton.PaddingX = 0;
-            this.nextButton.PaddingY = 0;
-            this.nextButton.Size = new System.Drawing.Size(90, 25);
-            this.nextButton.TabIndex = 10;
-            this.nextButton.Text = "Next";
-            this.nextButton.TextColor = System.Drawing.Color.White;
-            this.nextButton.TextOffset = 20;
-            this.nextButton.ToggleColor = System.Drawing.Color.Silver;
-            this.nextButton.UseVisualStyleBackColor = false;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            this.button1.Location = new System.Drawing.Point(358, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 27);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "v";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // previousButton
+            // SelectPlaceBtn
             // 
-            this.previousButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.previousButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.previousButton.BorderColor = System.Drawing.Color.Red;
-            this.previousButton.BorderRadius = 20;
-            this.previousButton.BorderSize = 0;
-            this.previousButton.ButtonImage = null;
-            this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previousButton.ForeColor = System.Drawing.Color.White;
-            this.previousButton.HoverBorderColor = System.Drawing.Color.Empty;
-            this.previousButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.previousButton.ImageColor = System.Drawing.Color.Black;
-            this.previousButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.previousButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.previousButton.IsToggled = false;
-            this.previousButton.Location = new System.Drawing.Point(14, 16);
-            this.previousButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.previousButton.Name = "previousButton";
-            this.previousButton.PaddingX = 0;
-            this.previousButton.PaddingY = 0;
-            this.previousButton.Size = new System.Drawing.Size(90, 25);
-            this.previousButton.TabIndex = 9;
-            this.previousButton.Text = "Previous";
-            this.previousButton.TextColor = System.Drawing.Color.White;
-            this.previousButton.TextOffset = 20;
-            this.previousButton.ToggleColor = System.Drawing.Color.Silver;
-            this.previousButton.UseVisualStyleBackColor = false;
-            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            this.SelectPlaceBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectPlaceBtn.Location = new System.Drawing.Point(342, 49);
+            this.SelectPlaceBtn.Name = "SelectPlaceBtn";
+            this.SelectPlaceBtn.Size = new System.Drawing.Size(74, 27);
+            this.SelectPlaceBtn.TabIndex = 3;
+            this.SelectPlaceBtn.Text = "Select";
+            this.SelectPlaceBtn.UseVisualStyleBackColor = true;
+            this.SelectPlaceBtn.Click += new System.EventHandler(this.SelectPlaceBtn_Click);
             // 
-            // SaveAttendanceButton
+            // MapPanel
             // 
-            this.SaveAttendanceButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveAttendanceButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveAttendanceButton.BorderColor = System.Drawing.Color.Red;
-            this.SaveAttendanceButton.BorderRadius = 0;
-            this.SaveAttendanceButton.BorderSize = 0;
-            this.SaveAttendanceButton.ButtonImage = null;
-            this.SaveAttendanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveAttendanceButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.SaveAttendanceButton.HoverBorderColor = System.Drawing.Color.Empty;
-            this.SaveAttendanceButton.HoverColor = System.Drawing.Color.Red;
-            this.SaveAttendanceButton.ImageColor = System.Drawing.Color.Black;
-            this.SaveAttendanceButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.SaveAttendanceButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.SaveAttendanceButton.IsToggled = false;
-            this.SaveAttendanceButton.Location = new System.Drawing.Point(319, 579);
-            this.SaveAttendanceButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveAttendanceButton.Name = "SaveAttendanceButton";
-            this.SaveAttendanceButton.PaddingX = 0;
-            this.SaveAttendanceButton.PaddingY = 0;
-            this.SaveAttendanceButton.Size = new System.Drawing.Size(105, 32);
-            this.SaveAttendanceButton.TabIndex = 0;
-            this.SaveAttendanceButton.Text = "Save";
-            this.SaveAttendanceButton.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.SaveAttendanceButton.TextOffset = 20;
-            this.SaveAttendanceButton.ToggleColor = System.Drawing.Color.Empty;
-            this.SaveAttendanceButton.UseVisualStyleBackColor = false;
-            this.SaveAttendanceButton.Click += new System.EventHandler(this.SaveAttendanceButton_Click);
+            this.MapPanel.Controls.Add(this.SelectPlaceBtn);
+            this.MapPanel.Controls.Add(this.webViewMap);
+            this.MapPanel.Location = new System.Drawing.Point(441, 77);
+            this.MapPanel.Name = "MapPanel";
+            this.MapPanel.Size = new System.Drawing.Size(426, 346);
+            this.MapPanel.TabIndex = 0;
+            this.MapPanel.Visible = false;
             // 
             // CalendarUForm
             // 
@@ -908,7 +979,6 @@
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -932,11 +1002,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.PastEventAttendancePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.webViewMap)).EndInit();
+            this.MapPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -992,11 +1064,10 @@
         private System.Windows.Forms.TextBox OwnerSearchTxt;
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.TextBox EvenTittleTextBox;
-        private System.Windows.Forms.TextBox EventLocationTextBox;
-        private System.Windows.Forms.TextBox StatusComboBox;
+        private System.Windows.Forms.TextBox EventTitleTxt;
+        private System.Windows.Forms.TextBox EventLocationTxt;
         private System.Windows.Forms.TextBox NoteTextBox;
-        private System.Windows.Forms.ComboBox EventTypeComboBox;
+        private System.Windows.Forms.ComboBox EventTypeCmb;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel EventsOverviewFlowLayoutPanel;
@@ -1005,5 +1076,11 @@
         private System.Windows.Forms.DataGridView AttendanceMembersDataGridView;
         private System.Windows.Forms.FlowLayoutPanel DoneEventFlowLayoutPanel;
         private System.Windows.Forms.DataGridView AttendanceListDGV;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webViewMap;
+        private System.Windows.Forms.ComboBox ReqAttendeesCmb;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel MapPanel;
+        private System.Windows.Forms.Button SelectPlaceBtn;
     }
 }
