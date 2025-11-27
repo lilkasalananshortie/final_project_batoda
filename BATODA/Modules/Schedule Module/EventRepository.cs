@@ -92,6 +92,22 @@ namespace BATODA.Repositories
 
             return events;
         }
+        public void UpdateEventStatus(int eventId, string status)
+        {
+            using (var conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE ScheduleEvents SET EventStatus = @Status WHERE EventId = @EventId";
+                using (var cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Status", status);
+                    cmd.Parameters.AddWithValue("@EventId", eventId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
 
     }
 }

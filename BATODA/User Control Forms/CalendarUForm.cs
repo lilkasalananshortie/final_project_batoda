@@ -55,23 +55,23 @@ namespace BATODA
             AddEventPanel.Hide();
             CheckAttendancePanel.Hide();
             
-            LoadSampleData();//PAKI DELETE PAG DINELETE YUNG METHOD PARA NO ERROR <--ARONE 
+            //LoadSampleData();//PAKI DELETE PAG DINELETE YUNG METHOD PARA NO ERROR <--ARONE 
         }
 
         //ETONG METHOD NA TO PA DELETE <--ARONE 
-        private void LoadSampleData()
-        {
-            AttendanceMembersDataGridView.Rows.Clear();
+        //private void LoadSampleData()
+        //{
+        //    AttendanceMembersDataGridView.Rows.Clear();
 
-            AttendanceMembersDataGridView.Rows.Add(false, "001", "John Doe");
-            AttendanceMembersDataGridView.Rows.Add(true, "002", "Jane Smith");
-            AttendanceMembersDataGridView.Rows.Add(false, "003", "Robert Johnson");
-            AttendanceMembersDataGridView.Rows.Add(true, "004", "Emily Davis");
-            AttendanceMembersDataGridView.Rows.Add(false, "005", "Michael Wilson");
-            AttendanceMembersDataGridView.Rows.Add(true, "006", "Sarah Brown");
-            AttendanceMembersDataGridView.Rows.Add(false, "007", "David Taylor");
-            AttendanceMembersDataGridView.Rows.Add(true, "008", "Lisa Anderson");
-        }
+        //    AttendanceMembersDataGridView.Rows.Add(false, "001", "John Doe");
+        //    AttendanceMembersDataGridView.Rows.Add(true, "002", "Jane Smith");
+        //    AttendanceMembersDataGridView.Rows.Add(false, "003", "Robert Johnson");
+        //    AttendanceMembersDataGridView.Rows.Add(true, "004", "Emily Davis");
+        //    AttendanceMembersDataGridView.Rows.Add(false, "005", "Michael Wilson");
+        //    AttendanceMembersDataGridView.Rows.Add(true, "006", "Sarah Brown");
+        //    AttendanceMembersDataGridView.Rows.Add(false, "007", "David Taylor");
+        //    AttendanceMembersDataGridView.Rows.Add(true, "008", "Lisa Anderson");
+        //}
 
         private void WebViewMap_WebMessageReceived(object sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
         {
@@ -82,13 +82,22 @@ namespace BATODA
         {
 
             var allEvents = eventRepo.GetAllEvents();
+
             foreach (var ev in allEvents)
             {
+                // ADD TO EVENTS DICTIONARY (FOR CALENDAR CELLS)
                 if (!events.ContainsKey(ev.Date))
                     events[ev.Date] = new List<CalendarEvent>();
                 events[ev.Date].Add(ev);
-            }
 
+                // ONLY ADD PENDING EVENTS TO OVERVIEW PANEL
+                if (ev.Status == "Pending")
+                    AddEventToOverview(ev);
+
+                // ADD DONE EVENTS TO DONE FLOWLAYOUT
+                if (ev.Status == "Done")
+                    MoveToPreviousEvents(ev, true); // true = Done panel
+            }
 
             await webViewMap.EnsureCoreWebView2Async(null);
             webViewMap.WebMessageReceived += WebViewMap_WebMessageReceived;
@@ -142,8 +151,6 @@ namespace BATODA
             calendarDays();
         }
 
-
-        //for attendance checking
         public class MemberAttendance
         {
             public string MemberName { get; set; }
@@ -476,6 +483,7 @@ namespace BATODA
                 Tag = "Expanded"
             };
 
+            // POSITION BUTTONS
             int marginRight = 20;
             int marginBottom = 15;
             btnCancel.Location = new Point(panel.Width - btnCancel.Width - marginRight, panel.Height - btnCancel.Height - marginBottom);
@@ -484,22 +492,25 @@ namespace BATODA
             btnDone.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
             btnCancel.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
 
+            // DONE CLICK - UPDATE STATUS IN DB AND REMOVE FROM OVERVIEW
             btnDone.Click += (s, args) =>
             {
                 ev.Status = "Done";
-                UpdateEventInDayCell(ev);
-               MoveToPreviousEvents(ev, true); // <-- NEED IBAHIN TO PRE KAPAG PAPASOK MO NA YUNG SA LOGIC NG ATTENDANCE <-- ARONE
-                EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
+                eventRepo.UpdateEventStatus(ev.EventId, "Done"); // UPDATE DATABASE
+                UpdateEventInDayCell(ev); // UPDATE CALENDAR CELL
+                MoveToPreviousEvents(ev, true); // MOVE TO DONE PANEL
+                EventsOverviewFlowLayoutPanel.Controls.Remove(panel); // REMOVE FROM OVERVIEW
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
 
+            // CANCEL CLICK - UPDATE STATUS IN DB AND REMOVE FROM OVERVIEW
             btnCancel.Click += (s, args) =>
             {
                 ev.Status = "Canceled";
-                UpdateEventInDayCell(ev);
-                //MoveToPreviousEvents(ev, false);
-                EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
+                eventRepo.UpdateEventStatus(ev.EventId, "Canceled"); // UPDATE DATABASE
+                UpdateEventInDayCell(ev); // UPDATE CALENDAR CELL
+                EventsOverviewFlowLayoutPanel.Controls.Remove(panel); // REMOVE FROM OVERVIEW
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
@@ -509,7 +520,8 @@ namespace BATODA
             panel.Controls.Add(btnCancel);
         }
 
-       
+
+
 
         //ADDING OF EVENT LABEL TO DAY CELL IN CALENDAR NOW CAN ADD MULTIPLE EVENTS IN THE SAME DAY 
         private void AddEventToDayCell(CalendarEvent ev)

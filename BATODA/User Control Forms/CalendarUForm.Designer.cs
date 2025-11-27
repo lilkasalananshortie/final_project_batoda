@@ -324,7 +324,7 @@
             this.MapPanel.Controls.Add(this.webViewMap);
             this.MapPanel.Location = new System.Drawing.Point(441, 77);
             this.MapPanel.Name = "MapPanel";
-            this.MapPanel.Size = new System.Drawing.Size(426, 30);
+            this.MapPanel.Size = new System.Drawing.Size(426, 346);
             this.MapPanel.TabIndex = 0;
             this.MapPanel.Visible = false;
             // 
