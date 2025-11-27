@@ -280,6 +280,8 @@ namespace BATODA
             string description = NoteTxt.Text.Trim();
             string time = TimePicker.Value.ToString("HH:mm");
 
+            string reqAttendees = ReqAttendeesCmb.SelectedItem?.ToString() ?? "None";
+
             lock (eventLock)
             {
                 if (editingEvent != null)
@@ -291,7 +293,8 @@ namespace BATODA
                     editingEvent.Time = time;
                     editingEvent.Date = selectedDate;
 
-                    eventRepo.SaveEvent(editingEvent, reqAttendees: "", isUpdate: true, eventId: editingEvent.EventId);
+                    //PASS VALUE INTO SAVE
+                    eventRepo.SaveEvent(editingEvent, reqAttendees, true, editingEvent.EventId);
 
                     UpdateEventPanel(editingEvent);
                     UpdateEventInDayCell(editingEvent);
@@ -311,7 +314,8 @@ namespace BATODA
                         Date = selectedDate
                     };
 
-                    eventRepo.SaveEvent(newEvent, reqAttendees: "");
+                    //PASS VALUE INTO SAVE
+                    eventRepo.SaveEvent(newEvent, reqAttendees);
 
                     if (!events.ContainsKey(selectedDate))
                         events[selectedDate] = new List<CalendarEvent>();
@@ -324,13 +328,13 @@ namespace BATODA
             }
 
             AddEventPanel.Hide();
-
             EventTitleTxt.Clear();
             EventTypeCmb.SelectedIndex = -1;
             EventLocationTxt.Clear();
             NoteTxt.Clear();
             TimePicker.Value = DateTime.Now;
         }
+
 
 
         //ADDING OF EVENT AFTER SAVING

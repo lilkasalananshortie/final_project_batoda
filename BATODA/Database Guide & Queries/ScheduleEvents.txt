@@ -8,3 +8,7 @@ CREATE TABLE ScheduleEvents (
     EventStatus VARCHAR(10) CHECK (EventStatus IN ('Pending', 'Done', 'Canceled')) DEFAULT 'Pending',
     Location VARCHAR(200)
 );
+
+------------------------
+ALTER TABLE ScheduleEvents
+ADD RequiredAttendees VARCHAR(MAX) NULL;

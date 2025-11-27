@@ -20,25 +20,25 @@ namespace BATODA.Repositories
                 if (isUpdate)
                 {
                     query = @"
-                        UPDATE ScheduleEvents
-                        SET EventTitle = @Title,
-                            EventType = @Type,
-                            Location = @Location,
-                            Description = @Description,
-                            Date = @EventDate,
-                            Time = @EventTime,
-                            EventStatus = @Status
-                        WHERE EventId = @EventId";
+                UPDATE ScheduleEvents
+                SET EventTitle = @Title,
+                    EventType = @Type,
+                    Location = @Location,
+                    Description = @Description,
+                    Date = @EventDate,
+                    Time = @EventTime,
+                    EventStatus = @Status,
+                    RequiredAttendees = @ReqAttendees    
+                WHERE EventId = @EventId";
                 }
                 else
                 {
                     query = @"
-                    INSERT INTO ScheduleEvents
-                    (EventTitle, EventType, Location, Description, Date, Time, EventStatus)
-                    VALUES
-                    (@Title, @Type, @Location, @Description, @EventDate, @EventTime, @Status)";
+                        INSERT INTO ScheduleEvents
+                        (EventTitle, EventType, Location, Description, Date, Time, EventStatus, RequiredAttendees)  
+                        VALUES
+                        (@Title, @Type, @Location, @Description, @EventDate, @EventTime, @Status, @ReqAttendees)"; 
                 }
-
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -48,8 +48,9 @@ namespace BATODA.Repositories
                     cmd.Parameters.AddWithValue("@Description", evt.Description);
                     cmd.Parameters.AddWithValue("@EventDate", evt.Date.Date);
                     cmd.Parameters.AddWithValue("@EventTime", evt.Time);
-                    cmd.Parameters.AddWithValue("@Status", evt.Status ?? "Pending"); 
+                    cmd.Parameters.AddWithValue("@Status", evt.Status ?? "Pending");
 
+                    cmd.Parameters.AddWithValue("@ReqAttendees", reqAttendees);   // ★ SAVE COMBO VALUE
 
                     if (isUpdate)
                         cmd.Parameters.AddWithValue("@EventId", eventId);
@@ -58,6 +59,7 @@ namespace BATODA.Repositories
                 }
             }
         }
+
 
         public List<CalendarEvent> GetAllEvents()
         {
