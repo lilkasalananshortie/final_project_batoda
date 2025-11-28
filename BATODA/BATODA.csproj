@@ -578,6 +578,12 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\bambang iufbbtodaa.PNG" />
+    <None Include="Resources\bambang iufbbtoda.PNG" />
+    <None Include="Resources\toda-removebg-preview %281%29.png" />
+    <None Include="Resources\toda-removebg-preview.png" />
+    <None Include="Resources\toda.png" />
+    <None Include="Resources\v915-techi-055-a.jpg" />
     <None Include="Resources\released.png" />
     <None Include="Resources\cloud-sharing_12986916.png" />
     <None Include="Resources\cloud_15451038.png" />

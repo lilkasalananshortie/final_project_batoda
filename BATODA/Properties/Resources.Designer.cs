@@ -283,6 +283,26 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bambang_iufbbtoda {
+            get {
+                object obj = ResourceManager.GetObject("bambang iufbbtoda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bambang_iufbbtodaa {
+            get {
+                object obj = ResourceManager.GetObject("bambang iufbbtodaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BambangIUFBBTODA {
             get {
                 object obj = ResourceManager.GetObject("BambangIUFBBTODA", resourceCulture);
@@ -843,6 +863,36 @@ namespace BATODA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap toda {
+            get {
+                object obj = ResourceManager.GetObject("toda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toda_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("toda-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toda_removebg_preview__1_ {
+            get {
+                object obj = ResourceManager.GetObject("toda-removebg-preview (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap total_due {
             get {
                 object obj = ResourceManager.GetObject("total_due", resourceCulture);
@@ -956,6 +1006,16 @@ namespace BATODA.Properties {
         internal static System.Drawing.Bitmap up_arrow {
             get {
                 object obj = ResourceManager.GetObject("up_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap v915_techi_055_a {
+            get {
+                object obj = ResourceManager.GetObject("v915-techi-055-a", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

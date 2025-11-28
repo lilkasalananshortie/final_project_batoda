@@ -15,13 +15,14 @@ namespace BATODA
     public partial class LoginForm : Form
     {
 
-        Timer timer = new Timer();  
+        Timer timer = new Timer();
         public LoginForm()
         {
             InitializeComponent();
             
             LoadingPanel.Visible = true;
             LoadingPanel.Dock = DockStyle.Fill;
+            LoadingPanel.BringToFront();    
             timer.Interval = 2000;
             timer.Tick += Timer_Tick;
             timer.Start();
@@ -43,18 +44,6 @@ namespace BATODA
 
         }
 
-        private void UsernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-            
-        }
-
         private void LoginForm_Load(object sender, EventArgs e)
         {
             DisplayClass.SetPlaceholder(UsernameTextBox, "Username");
@@ -62,18 +51,12 @@ namespace BATODA
 
             this.ActiveControl = null;
 
-           
 
         }
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
             this.ActiveControl = null; 
-        }
-
-        private void LoginPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         public class TransparentTextBox : TextBox
@@ -85,6 +68,9 @@ namespace BATODA
                 BorderStyle = BorderStyle.None;
             }
         }
+
+      
+
     }
 }
 
