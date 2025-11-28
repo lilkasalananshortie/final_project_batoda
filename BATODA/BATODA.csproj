@@ -63,6 +63,7 @@
     <Compile Include="Helpers\Database\Assistance\RequestsCount.cs" />
     <Compile Include="Helpers\Database\Tricycle\LoadTricycleTable.cs" />
     <Compile Include="Helpers\DataGrid\AttendanceHandler.cs" />
+    <Compile Include="Helpers\DataGrid\BackupSettings.cs" />
     <Compile Include="Helpers\DataGrid\DataGridColumns.cs" />
     <Compile Include="Helpers\DataGrid\DataGridCustom.cs" />
     <Compile Include="Helpers\Database\Members\LoadBodyNumber.cs" />

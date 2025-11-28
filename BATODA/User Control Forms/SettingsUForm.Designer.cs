@@ -40,6 +40,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.SwitchAdminPanel = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.CreateNewAdminAccountPanel = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -55,20 +64,11 @@
             this.FullnameTextbox = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.SwitchAdminPanel = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlBackupList = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BackupListDataGrid = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -78,11 +78,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.buttonStyle2 = new BATODA.ButtonStyle();
             this.BackupButton = new BATODA.ButtonStyle();
-            this.SwitchAdminCancel = new BATODA.ButtonStyle();
-            this.LoginButton = new BATODA.ButtonStyle();
             this.SwitchAdminAccountButton = new BATODA.ButtonStyle();
             this.CreateNewAdminAccountButton = new BATODA.ButtonStyle();
             this.LogOutButton = new BATODA.ButtonStyle();
+            this.SwitchAdminCancel = new BATODA.ButtonStyle();
+            this.LoginButton = new BATODA.ButtonStyle();
             this.CreateNewAdminCancelButton = new BATODA.ButtonStyle();
             this.CreateAccountButton = new BATODA.ButtonStyle();
             this.panel1.SuspendLayout();
@@ -90,20 +90,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SwitchAdminPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.CreateNewAdminAccountPanel.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.SwitchAdminPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.pnlBackupList.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackupListDataGrid)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
@@ -209,6 +209,107 @@
             this.label2.Size = new System.Drawing.Size(221, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Account Management";
+            // 
+            // SwitchAdminPanel
+            // 
+            this.SwitchAdminPanel.BackColor = System.Drawing.Color.White;
+            this.SwitchAdminPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.SwitchAdminPanel.Controls.Add(this.SwitchAdminCancel);
+            this.SwitchAdminPanel.Controls.Add(this.pictureBox6);
+            this.SwitchAdminPanel.Controls.Add(this.label8);
+            this.SwitchAdminPanel.Controls.Add(this.panel8);
+            this.SwitchAdminPanel.Controls.Add(this.PasswordTextBox);
+            this.SwitchAdminPanel.Controls.Add(this.pictureBox8);
+            this.SwitchAdminPanel.Controls.Add(this.UsernameTextBox);
+            this.SwitchAdminPanel.Controls.Add(this.pictureBox9);
+            this.SwitchAdminPanel.Controls.Add(this.panel9);
+            this.SwitchAdminPanel.Controls.Add(this.LoginButton);
+            this.SwitchAdminPanel.ForeColor = System.Drawing.Color.White;
+            this.SwitchAdminPanel.Location = new System.Drawing.Point(28, 129);
+            this.SwitchAdminPanel.Name = "SwitchAdminPanel";
+            this.SwitchAdminPanel.Size = new System.Drawing.Size(373, 452);
+            this.SwitchAdminPanel.TabIndex = 24;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::BATODA.Properties.Resources.BambangIUFBBTODA;
+            this.pictureBox6.Location = new System.Drawing.Point(60, 7);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(258, 68);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 19;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.label8.Location = new System.Drawing.Point(62, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(249, 29);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Switch Admin Account";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel8.Location = new System.Drawing.Point(73, 276);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(238, 3);
+            this.panel8.TabIndex = 15;
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.BackColor = System.Drawing.Color.White;
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.Location = new System.Drawing.Point(110, 248);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(201, 20);
+            this.PasswordTextBox.TabIndex = 7;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(67, 236);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(37, 42);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox8.TabIndex = 11;
+            this.pictureBox8.TabStop = false;
+            // 
+            // UsernameTextBox
+            // 
+            this.UsernameTextBox.BackColor = System.Drawing.Color.White;
+            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTextBox.Location = new System.Drawing.Point(110, 197);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(201, 20);
+            this.UsernameTextBox.TabIndex = 6;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(67, 189);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox9.TabIndex = 10;
+            this.pictureBox9.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel9.Location = new System.Drawing.Point(73, 225);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(238, 3);
+            this.panel9.TabIndex = 14;
             // 
             // CreateNewAdminAccountPanel
             // 
@@ -372,119 +473,18 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Create New Admin Account";
             // 
-            // SwitchAdminPanel
+            // pnlBackupList
             // 
-            this.SwitchAdminPanel.BackColor = System.Drawing.Color.White;
-            this.SwitchAdminPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.SwitchAdminPanel.Controls.Add(this.SwitchAdminCancel);
-            this.SwitchAdminPanel.Controls.Add(this.pictureBox6);
-            this.SwitchAdminPanel.Controls.Add(this.label8);
-            this.SwitchAdminPanel.Controls.Add(this.panel8);
-            this.SwitchAdminPanel.Controls.Add(this.PasswordTextBox);
-            this.SwitchAdminPanel.Controls.Add(this.pictureBox8);
-            this.SwitchAdminPanel.Controls.Add(this.UsernameTextBox);
-            this.SwitchAdminPanel.Controls.Add(this.pictureBox9);
-            this.SwitchAdminPanel.Controls.Add(this.panel9);
-            this.SwitchAdminPanel.Controls.Add(this.LoginButton);
-            this.SwitchAdminPanel.ForeColor = System.Drawing.Color.White;
-            this.SwitchAdminPanel.Location = new System.Drawing.Point(28, 129);
-            this.SwitchAdminPanel.Name = "SwitchAdminPanel";
-            this.SwitchAdminPanel.Size = new System.Drawing.Size(373, 452);
-            this.SwitchAdminPanel.TabIndex = 24;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::BATODA.Properties.Resources.BambangIUFBBTODA;
-            this.pictureBox6.Location = new System.Drawing.Point(60, 7);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(258, 68);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(62, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(249, 29);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Switch Admin Account";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel8.Location = new System.Drawing.Point(73, 276);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(238, 3);
-            this.panel8.TabIndex = 15;
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.BackColor = System.Drawing.Color.White;
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(110, 248);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(201, 20);
-            this.PasswordTextBox.TabIndex = 7;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(67, 236);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(37, 42);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
-            // 
-            // UsernameTextBox
-            // 
-            this.UsernameTextBox.BackColor = System.Drawing.Color.White;
-            this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(110, 197);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(201, 20);
-            this.UsernameTextBox.TabIndex = 6;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(67, 189);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 10;
-            this.pictureBox9.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel9.Location = new System.Drawing.Point(73, 225);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(238, 3);
-            this.panel9.TabIndex = 14;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(490, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1078, 742);
-            this.panel4.TabIndex = 23;
+            this.pnlBackupList.BackColor = System.Drawing.Color.White;
+            this.pnlBackupList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBackupList.Controls.Add(this.panel6);
+            this.pnlBackupList.Controls.Add(this.BackupListDataGrid);
+            this.pnlBackupList.Controls.Add(this.panel7);
+            this.pnlBackupList.Controls.Add(this.panel5);
+            this.pnlBackupList.Location = new System.Drawing.Point(490, 46);
+            this.pnlBackupList.Name = "pnlBackupList";
+            this.pnlBackupList.Size = new System.Drawing.Size(1078, 742);
+            this.pnlBackupList.TabIndex = 23;
             // 
             // panel6
             // 
@@ -517,7 +517,7 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Available Backups";
             // 
-            // dataGridView1
+            // BackupListDataGrid
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -526,8 +526,8 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BackupListDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.BackupListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -535,11 +535,11 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(978, 424);
-            this.dataGridView1.TabIndex = 25;
+            this.BackupListDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.BackupListDataGrid.Location = new System.Drawing.Point(57, 197);
+            this.BackupListDataGrid.Name = "BackupListDataGrid";
+            this.BackupListDataGrid.Size = new System.Drawing.Size(978, 424);
+            this.BackupListDataGrid.TabIndex = 25;
             // 
             // panel7
             // 
@@ -587,7 +587,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.BackupButton);
             this.panel5.Controls.Add(this.label4);
@@ -679,67 +679,6 @@
             this.BackupButton.UseVisualStyleBackColor = false;
             this.BackupButton.Click += new System.EventHandler(this.BackupButton_Click);
             // 
-            // SwitchAdminCancel
-            // 
-            this.SwitchAdminCancel.BackColor = System.Drawing.Color.White;
-            this.SwitchAdminCancel.BackgroundColor = System.Drawing.Color.White;
-            this.SwitchAdminCancel.BorderColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.BorderRadius = 30;
-            this.SwitchAdminCancel.BorderSize = 1;
-            this.SwitchAdminCancel.ButtonImage = null;
-            this.SwitchAdminCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SwitchAdminCancel.ForeColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.HoverBorderColor = System.Drawing.Color.White;
-            this.SwitchAdminCancel.HoverColor = System.Drawing.Color.LightGray;
-            this.SwitchAdminCancel.ImageColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.ImagePosition = new System.Drawing.Point(10, 0);
-            this.SwitchAdminCancel.ImageSize = new System.Drawing.Size(24, 24);
-            this.SwitchAdminCancel.IsToggled = false;
-            this.SwitchAdminCancel.Location = new System.Drawing.Point(111, 361);
-            this.SwitchAdminCancel.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.SwitchAdminCancel.Name = "SwitchAdminCancel";
-            this.SwitchAdminCancel.PaddingX = 0;
-            this.SwitchAdminCancel.PaddingY = 0;
-            this.SwitchAdminCancel.Size = new System.Drawing.Size(150, 40);
-            this.SwitchAdminCancel.TabIndex = 20;
-            this.SwitchAdminCancel.Text = "Cancel";
-            this.SwitchAdminCancel.TextColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.TextOffset = 20;
-            this.SwitchAdminCancel.ToggleColor = System.Drawing.Color.Empty;
-            this.SwitchAdminCancel.UseVisualStyleBackColor = false;
-            this.SwitchAdminCancel.Click += new System.EventHandler(this.SwitchAdminCancel_Click);
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BorderColor = System.Drawing.Color.White;
-            this.LoginButton.BorderRadius = 28;
-            this.LoginButton.BorderSize = 0;
-            this.LoginButton.ButtonImage = null;
-            this.LoginButton.FlatAppearance.BorderSize = 0;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.LoginButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.LoginButton.ImageColor = System.Drawing.Color.Black;
-            this.LoginButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.LoginButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.LoginButton.IsToggled = false;
-            this.LoginButton.Location = new System.Drawing.Point(66, 302);
-            this.LoginButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.PaddingX = 89;
-            this.LoginButton.PaddingY = 10;
-            this.LoginButton.Size = new System.Drawing.Size(245, 40);
-            this.LoginButton.TabIndex = 12;
-            this.LoginButton.Text = "Log In";
-            this.LoginButton.TextColor = System.Drawing.Color.White;
-            this.LoginButton.TextOffset = 0;
-            this.LoginButton.ToggleColor = System.Drawing.Color.DarkRed;
-            this.LoginButton.UseVisualStyleBackColor = false;
-            // 
             // SwitchAdminAccountButton
             // 
             this.SwitchAdminAccountButton.BackColor = System.Drawing.Color.White;
@@ -802,9 +741,10 @@
             // 
             // LogOutButton
             // 
-            this.LogOutButton.BackColor = System.Drawing.Color.Red;
-            this.LogOutButton.BackgroundColor = System.Drawing.Color.Red;
-            this.LogOutButton.BorderColor = System.Drawing.Color.Red;
+            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LogOutButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LogOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LogOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.LogOutButton.BorderRadius = 8;
             this.LogOutButton.BorderSize = 1;
             this.LogOutButton.ButtonImage = global::BATODA.Properties.Resources.logout__1_;
@@ -815,12 +755,12 @@
             this.LogOutButton.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.LogOutButton.HoverColor = System.Drawing.Color.DarkRed;
             this.LogOutButton.ImageColor = System.Drawing.Color.White;
-            this.LogOutButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.LogOutButton.ImagePosition = new System.Drawing.Point(125, 0);
             this.LogOutButton.ImageSize = new System.Drawing.Size(24, 24);
             this.LogOutButton.IsToggled = false;
             this.LogOutButton.Location = new System.Drawing.Point(33, 450);
             this.LogOutButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LogOutButton.MouseDownColor = System.Drawing.Color.Red;
+            this.LogOutButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.PaddingX = 0;
             this.LogOutButton.PaddingY = 0;
@@ -832,6 +772,67 @@
             this.LogOutButton.ToggleColor = System.Drawing.Color.Empty;
             this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
+            // SwitchAdminCancel
+            // 
+            this.SwitchAdminCancel.BackColor = System.Drawing.Color.White;
+            this.SwitchAdminCancel.BackgroundColor = System.Drawing.Color.White;
+            this.SwitchAdminCancel.BorderColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.BorderRadius = 30;
+            this.SwitchAdminCancel.BorderSize = 1;
+            this.SwitchAdminCancel.ButtonImage = null;
+            this.SwitchAdminCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SwitchAdminCancel.ForeColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.HoverBorderColor = System.Drawing.Color.White;
+            this.SwitchAdminCancel.HoverColor = System.Drawing.Color.LightGray;
+            this.SwitchAdminCancel.ImageColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.ImagePosition = new System.Drawing.Point(10, 0);
+            this.SwitchAdminCancel.ImageSize = new System.Drawing.Size(24, 24);
+            this.SwitchAdminCancel.IsToggled = false;
+            this.SwitchAdminCancel.Location = new System.Drawing.Point(111, 361);
+            this.SwitchAdminCancel.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.SwitchAdminCancel.Name = "SwitchAdminCancel";
+            this.SwitchAdminCancel.PaddingX = 0;
+            this.SwitchAdminCancel.PaddingY = 0;
+            this.SwitchAdminCancel.Size = new System.Drawing.Size(150, 40);
+            this.SwitchAdminCancel.TabIndex = 20;
+            this.SwitchAdminCancel.Text = "Cancel";
+            this.SwitchAdminCancel.TextColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.TextOffset = 20;
+            this.SwitchAdminCancel.ToggleColor = System.Drawing.Color.Empty;
+            this.SwitchAdminCancel.UseVisualStyleBackColor = false;
+            this.SwitchAdminCancel.Click += new System.EventHandler(this.SwitchAdminCancel_Click);
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BorderColor = System.Drawing.Color.White;
+            this.LoginButton.BorderRadius = 28;
+            this.LoginButton.BorderSize = 0;
+            this.LoginButton.ButtonImage = null;
+            this.LoginButton.FlatAppearance.BorderSize = 0;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.White;
+            this.LoginButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.ImageColor = System.Drawing.Color.Black;
+            this.LoginButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.LoginButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.LoginButton.IsToggled = false;
+            this.LoginButton.Location = new System.Drawing.Point(66, 302);
+            this.LoginButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.PaddingX = 89;
+            this.LoginButton.PaddingY = 10;
+            this.LoginButton.Size = new System.Drawing.Size(245, 40);
+            this.LoginButton.TabIndex = 12;
+            this.LoginButton.Text = "Log In";
+            this.LoginButton.TextColor = System.Drawing.Color.White;
+            this.LoginButton.TextOffset = 0;
+            this.LoginButton.ToggleColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.UseVisualStyleBackColor = false;
             // 
             // CreateNewAdminCancelButton
             // 
@@ -898,7 +899,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pnlBackupList);
             this.Controls.Add(this.panel1);
             this.Name = "SettingsUForm";
             this.Size = new System.Drawing.Size(1894, 990);
@@ -910,6 +911,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.SwitchAdminPanel.ResumeLayout(false);
+            this.SwitchAdminPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.CreateNewAdminAccountPanel.ResumeLayout(false);
             this.CreateNewAdminAccountPanel.PerformLayout();
             this.panel13.ResumeLayout(false);
@@ -921,16 +927,11 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.SwitchAdminPanel.ResumeLayout(false);
-            this.SwitchAdminPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panel4.ResumeLayout(false);
+            this.pnlBackupList.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackupListDataGrid)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -955,13 +956,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlBackupList;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView BackupListDataGrid;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
