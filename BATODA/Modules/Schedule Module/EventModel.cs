@@ -16,13 +16,16 @@ namespace BATODA.Modules.Schedule_Module
         public string RequiredAttendees { get; set; }
 
 
-        public List<MemberAttendance> AttendanceList { get; set; } = new List<MemberAttendance>();
+        public List<EventAttendee> AttendanceList { get; set; } = new List<EventAttendee>();
     }
 
-    public class MemberAttendance
+
+    public class EventAttendee
     {
+        public int EventId { get; set; }
+        public int BodyNumber { get; set; }
         public string MemberName { get; set; }
-        public string BodyNumber { get; set; }
-        public bool Present { get; set; }
+        public byte IsPresent { get; set; } // 0 = not required, 1 = absent, 2 = present
     }
+
 }

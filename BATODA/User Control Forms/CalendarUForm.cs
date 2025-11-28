@@ -1,5 +1,10 @@
 ﻿using BATODA.Helpers.DataGrid;
+using BATODA.Helpers.DataGrids;
+using BATODA.Modules.MemberModule;
+using BATODA.Modules.Schedule_Module;
+using BATODA.Repositories;
 using BATODA.User_Control_Forms;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,9 +17,6 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using BATODA.Modules.Schedule_Module;
-using BATODA.Repositories;
 
 
 
@@ -50,28 +52,13 @@ namespace BATODA
         public CalendarUForm()
         {
             InitializeComponent();
-            AttendanceHandler.ApplyCustomGridWithCheckbox(AttendanceMembersDataGridView);
+            AttendanceHandler.ApplyCustomGridWithCheckbox(SetAttendanceGrid);
             AttendanceHandler.ApplyCustomGridWithCheckbox(AttendanceListDGV);
             AddEventPanel.Hide();
             CheckAttendancePanel.Hide();
-            
-            //LoadSampleData();//PAKI DELETE PAG DINELETE YUNG METHOD PARA NO ERROR <--ARONE 
+            ReqAttendeesCmb.SelectedIndexChanged += ReqAttendeesCmb_SelectedIndexChanged;
+
         }
-
-        //ETONG METHOD NA TO PA DELETE <--ARONE 
-        //private void LoadSampleData()
-        //{
-        //    AttendanceMembersDataGridView.Rows.Clear();
-
-        //    AttendanceMembersDataGridView.Rows.Add(false, "001", "John Doe");
-        //    AttendanceMembersDataGridView.Rows.Add(true, "002", "Jane Smith");
-        //    AttendanceMembersDataGridView.Rows.Add(false, "003", "Robert Johnson");
-        //    AttendanceMembersDataGridView.Rows.Add(true, "004", "Emily Davis");
-        //    AttendanceMembersDataGridView.Rows.Add(false, "005", "Michael Wilson");
-        //    AttendanceMembersDataGridView.Rows.Add(true, "006", "Sarah Brown");
-        //    AttendanceMembersDataGridView.Rows.Add(false, "007", "David Taylor");
-        //    AttendanceMembersDataGridView.Rows.Add(true, "008", "Lisa Anderson");
-        //}
 
         private void WebViewMap_WebMessageReceived(object sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
         {
@@ -95,8 +82,10 @@ namespace BATODA
                     AddEventToOverview(ev);
 
                 // ADD DONE EVENTS TO DONE FLOWLAYOUT
-                if (ev.Status == "Done")
-                    MoveToPreviousEvents(ev, true); // true = Done panel
+                if (ev.Status == "Done" && !string.Equals(ev.RequiredAttendees?.Trim(), "None", StringComparison.OrdinalIgnoreCase))
+                    MoveToPreviousEvents(ev, true);
+
+
             }
 
             await webViewMap.EnsureCoreWebView2Async(null);
@@ -123,13 +112,15 @@ namespace BATODA
                     var marker;
 
                     // Click to place marker
+
                     map.on('click', function(e) {
                         if(marker) map.removeLayer(marker);
                         marker = L.marker(e.latlng).addTo(map);
                         window.chrome.webview.postMessage(e.latlng.lat + ',' + e.latlng.lng);
                     });
 
-                    // Search box
+                    // Search box       
+
                     L.Control.geocoder({
                         defaultMarkGeocode: false
                     }).on('markgeocode', function(e) {
@@ -151,12 +142,6 @@ namespace BATODA
             calendarDays();
         }
 
-        public class MemberAttendance
-        {
-            public string MemberName { get; set; }
-            public string BodyNumber { get; set; }
-            public bool Present { get; set; }
-        }
 
         public void calendarDays()
         {
@@ -279,11 +264,32 @@ namespace BATODA
             string location = EventLocationTxt.Text.Trim();
             string description = NoteTxt.Text.Trim();
             string time = TimePicker.Value.ToString("HH:mm");
-
             string reqAttendees = ReqAttendeesCmb.SelectedItem?.ToString() ?? "None";
+
+            /* SPECIFIC MEMBS ONLY == LOAD ALL MEMBERS TO SELECT FROM
+               
+                ALL MEMBERS AND NONE WILL BE PROCESSED UPON CLICKING THE EVENTS INFO
+                - CHECK ON THE SPOT FOR RequiredAttendees
+            
+                IF ALL MEMBS = ALL WILL BE RECORDED ON EventAttendees
+                IF NONE, NO RECORD*/
 
             lock (eventLock)
             {
+                List<int> selectedMembers = new List<int>();
+
+                if (reqAttendees == "Specific Members Only")
+                {
+                    for (int i = 0; i < SelectMembersGrid.Rows.Count; i++)
+                    {
+                        bool isSelected = Convert.ToBoolean(SelectMembersGrid.Rows[i].Cells[0].Value);
+                        if (isSelected)
+                        {
+                            selectedMembers.Add(int.Parse(SelectMembersGrid.Rows[i].Cells["BodyNumber"].Value.ToString()));
+                        }
+                    }
+                }
+
                 if (editingEvent != null)
                 {
                     editingEvent.Title = title;
@@ -292,9 +298,9 @@ namespace BATODA
                     editingEvent.Description = description;
                     editingEvent.Time = time;
                     editingEvent.Date = selectedDate;
+                    editingEvent.RequiredAttendees = reqAttendees;
 
-                    //PASS VALUE INTO SAVE
-                    eventRepo.SaveEvent(editingEvent, reqAttendees, true, editingEvent.EventId);
+                    eventRepo.SaveEvent(editingEvent, reqAttendees, true, editingEvent.EventId, selectedMembers);
 
                     UpdateEventPanel(editingEvent);
                     UpdateEventInDayCell(editingEvent);
@@ -311,11 +317,11 @@ namespace BATODA
                         Location = location,
                         Description = description,
                         Time = time,
-                        Date = selectedDate
+                        Date = selectedDate,
+                        RequiredAttendees = reqAttendees
                     };
 
-                    //PASS VALUE INTO SAVE
-                    eventRepo.SaveEvent(newEvent, reqAttendees);
+                    eventRepo.SaveEvent(newEvent, reqAttendees, false, 0, selectedMembers);
 
                     if (!events.ContainsKey(selectedDate))
                         events[selectedDate] = new List<CalendarEvent>();
@@ -334,7 +340,6 @@ namespace BATODA
             NoteTxt.Clear();
             TimePicker.Value = DateTime.Now;
         }
-
 
 
         //ADDING OF EVENT AFTER SAVING
@@ -669,12 +674,42 @@ namespace BATODA
         private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
         {
             previousEventSelectedPanel = sender as Panel;
+            CalendarEvent ev = previousEventSelectedPanel.Tag as CalendarEvent;
+
+            if (ev == null)
+                return;
+
+            SetAttendanceGrid.Rows.Clear();
+            SetAttendanceGrid.Columns.Clear();
+
+            SetAttendanceGrid.Columns.Add(new DataGridViewCheckBoxColumn { HeaderText = "", Width = 30 });
+            SetAttendanceGrid.Columns.Add("BodyNumber", "Body Number");
+            SetAttendanceGrid.Columns.Add("MemberName", "Member Name");
+
+            if (ev.RequiredAttendees == "All Members")
+            {
+                var repo = new MemberRepository();
+                var allMembers = repo.GetAllMembers();
+
+                foreach (var m in allMembers)
+                {
+                    string fullName = $"{m.LastName}, {m.FirstName} {m.MiddleInitial}";
+                    SetAttendanceGrid.Rows.Add(false, m.BodyNumber.ToString("D3"), fullName);
+                }
+            }
+            else if (ev.RequiredAttendees == "None")
+            {
+                PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
+                PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
+            }
 
             CheckAttendancePanel.Location = PreviousEventPanel.Location;
             CheckAttendancePanel.Show();
             CheckAttendancePanel.BringToFront();
             PreviousEventPanel.Hide();
         }
+
+
 
         //will save the attendance 
         private void SaveAttendanceButton_Click(object sender, EventArgs e)
@@ -741,10 +776,11 @@ namespace BATODA
                 AttendanceListDGV.Rows.Add(
                     member.BodyNumber,
                     member.MemberName,
-                    member.Present ? "Present" : "Absent"
+                    member.IsPresent == 2 ? "Present" : "Absent"
                 );
             }
         }
+
 
         private void DayContainer_Paint(object sender, PaintEventArgs e)
         {
@@ -784,7 +820,69 @@ namespace BATODA
             }
         }
 
+        private void ReqAttendeesCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ReqAttendeesCmb.SelectedItem != null &&
+                ReqAttendeesCmb.SelectedItem.ToString() == "Specific Members Only")
+            {
+                DataGridCustom.ApplyCustomGrid(SelectMembersGrid);
+                SpecificMembsPanel.Visible = true;
+                LoadAllMembersToSelectMembersGrid();
+            }
+            else
+            {
+                SpecificMembsPanel.Visible = false;
+            }
+        }
+
+        private void LoadAllMembersToSelectMembersGrid()
+        {
+            SelectMembersGrid.Rows.Clear();
+            SelectMembersGrid.Columns.Clear();
+
+            DataGridViewCheckBoxColumn checkCol = new DataGridViewCheckBoxColumn();
+            checkCol.HeaderText = "";
+            checkCol.Width = 30;
+            SelectMembersGrid.Columns.Add(checkCol);
+
+            SelectMembersGrid.Columns.Add("BodyNumber", "Body Number");
+
+            SelectMembersGrid.Columns.Add("FullName", "Full Name");
+
+            var repo = new MemberRepository();
+            var members = repo.GetAllMembers();
+
+            foreach (var m in members)
+            {
+                string bodyNumberFormatted = m.BodyNumber.ToString("D3");
+                string fullName = $"{m.LastName}, {m.FirstName} {m.MiddleInitial}";
+                SelectMembersGrid.Rows.Add(false, bodyNumberFormatted, fullName);
+            }
+        }
+
+        private List<(int BodyNumber, string MemberName)> GetSelectedMembers()
+        {
+            var selected = new List<(int, string)>();
+            foreach (DataGridViewRow row in SelectMembersGrid.Rows)
+            {
+                if (row.Cells[0].Value is bool isChecked && isChecked)
+                {
+                    int bodyNumber = int.Parse(row.Cells["BodyNumber"].Value.ToString());
+                    string memberName = row.Cells["FullName"].Value.ToString();
+                    selected.Add((bodyNumber, memberName));
+                }
+            }
+            return selected;
+        }
+
+
+
         private void AddEventPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SelectMembersGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -10,7 +10,8 @@ namespace BATODA.Repositories
     {
         private readonly string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True";
 
-        public void SaveEvent(CalendarEvent evt, string reqAttendees, bool isUpdate = false, int eventId = 0)
+        // MODIFYED SaveEvent TO HANDLE SELECTED MEMBERS
+        public void SaveEvent(CalendarEvent evt, string reqAttendees, bool isUpdate = false, int eventId = 0, List<int> selectedMembers = null)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -20,26 +21,29 @@ namespace BATODA.Repositories
                 if (isUpdate)
                 {
                     query = @"
-                UPDATE ScheduleEvents
-                SET EventTitle = @Title,
-                    EventType = @Type,
-                    Location = @Location,
-                    Description = @Description,
-                    Date = @EventDate,
-                    Time = @EventTime,
-                    EventStatus = @Status,
-                    RequiredAttendees = @ReqAttendees    
-                WHERE EventId = @EventId";
+                    UPDATE ScheduleEvents
+                    SET EventTitle = @Title,
+                        EventType = @Type,
+                        Location = @Location,
+                        Description = @Description,
+                        Date = @EventDate,
+                        Time = @EventTime,
+                        EventStatus = @Status,
+                        RequiredAttendees = @ReqAttendees    
+                    WHERE EventId = @EventId";
                 }
                 else
                 {
+                    // INSERT NEW EVENT AND GET GENERATED ID
                     query = @"
-                        INSERT INTO ScheduleEvents
-                        (EventTitle, EventType, Location, Description, Date, Time, EventStatus, RequiredAttendees)  
-                        VALUES
-                        (@Title, @Type, @Location, @Description, @EventDate, @EventTime, @Status, @ReqAttendees)"; 
+                INSERT INTO ScheduleEvents
+                (EventTitle, EventType, Location, Description, Date, Time, EventStatus, RequiredAttendees)  
+                VALUES
+                (@Title, @Type, @Location, @Description, @EventDate, @EventTime, @Status, @ReqAttendees); 
+                SELECT SCOPE_IDENTITY();";
                 }
 
+                int savedEventId;
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Title", evt.Title);
@@ -49,13 +53,35 @@ namespace BATODA.Repositories
                     cmd.Parameters.AddWithValue("@EventDate", evt.Date.Date);
                     cmd.Parameters.AddWithValue("@EventTime", evt.Time);
                     cmd.Parameters.AddWithValue("@Status", evt.Status ?? "Pending");
-
-                    cmd.Parameters.AddWithValue("@ReqAttendees", reqAttendees);   // ★ SAVE COMBO VALUE
+                    cmd.Parameters.AddWithValue("@ReqAttendees", reqAttendees);
 
                     if (isUpdate)
+                    {
                         cmd.Parameters.AddWithValue("@EventId", eventId);
+                        cmd.ExecuteNonQuery();
+                        savedEventId = eventId;
+                    }
+                    else
+                    {
+                        savedEventId = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
 
-                    cmd.ExecuteNonQuery();
+                // SAVE SPECIFIC MEMBERS IF PROVIDED
+                if (selectedMembers != null && selectedMembers.Count > 0)
+                {
+                    foreach (var bodyNumber in selectedMembers)
+                    {
+                        using (SqlCommand cmd = new SqlCommand(@"
+                    INSERT INTO EventAttendees (EventId, BodyNumber, MemberName, Present)
+                    VALUES (@EventId, @BodyNumber, @MemberName, 0)", conn))
+                        {
+                            cmd.Parameters.AddWithValue("@EventId", savedEventId);
+                            cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                            cmd.Parameters.AddWithValue("@MemberName", ""); // CAN FETCH NAME IF NEEDED
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
                 }
             }
         }
@@ -104,6 +130,25 @@ namespace BATODA.Repositories
                 {
                     cmd.Parameters.AddWithValue("@Status", status);
                     cmd.Parameters.AddWithValue("@EventId", eventId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        /* -------------------------------------- ATTENDEES ----------------------------------------*/
+        public void AllMembersRequired(EventAttendee attendee)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"INSERT INTO EventAttendees (EventId, BodyNumber, MemberName, IsPresent)
+                         VALUES (@EventId, @BodyNumber, @MemberName, @IsPresent)";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@EventId", attendee.EventId);
+                    cmd.Parameters.AddWithValue("@BodyNumber", attendee.BodyNumber);
+                    cmd.Parameters.AddWithValue("@MemberName", attendee.MemberName);
+                    cmd.Parameters.AddWithValue("@IsPresent", attendee.IsPresent);
                     cmd.ExecuteNonQuery();
                 }
             }
