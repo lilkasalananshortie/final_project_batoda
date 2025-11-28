@@ -13,6 +13,8 @@ namespace BATODA.Modules.Schedule_Module
         public string Location { get; set; }
         public DateTime Date { get; set; }
         public int EventId { get; set; }
+        public string RequiredAttendees { get; set; }
+
 
         public List<MemberAttendance> AttendanceList { get; set; } = new List<MemberAttendance>();
     }
