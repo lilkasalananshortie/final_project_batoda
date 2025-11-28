@@ -82,7 +82,7 @@ namespace BATODA.Helpers.DataGrid
                 Image img = e.Value as Image;
                 if (img != null)
                 {
-                    int targetSize = 35;
+                    int targetSize = 30;
                     int x = e.CellBounds.X + (e.CellBounds.Width - targetSize) / 2;
                     int y = e.CellBounds.Y + (e.CellBounds.Height - targetSize) / 2;
 

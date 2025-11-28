@@ -34,6 +34,9 @@ namespace BATODA.User_Control_Forms
                 case "canceled":
                     PictureBoxStatus.Image = Properties.Resources.ActivityLog_canceled;
                     break;
+                case "released":
+                    PictureBoxStatus.Image = Properties.Resources.released; 
+                    break;
             }
 
 
