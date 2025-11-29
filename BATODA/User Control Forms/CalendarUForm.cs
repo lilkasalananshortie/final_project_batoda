@@ -77,17 +77,63 @@ namespace BATODA
                     events[ev.Date] = new List<CalendarEvent>();
                 events[ev.Date].Add(ev);
 
-                // ONLY ADD PENDING EVENTS TO OVERVIEW PANEL
+                // PENDING EVENTS
                 if (ev.Status == "Pending")
                     AddEventToOverview(ev);
 
+                // DONE: All / Specific members
                 if (ev.Status == "Done" &&
                     (ev.RequiredAttendees == "All Members" || ev.RequiredAttendees == "Specific Members Only"))
                 {
                     MoveToPreviousEvents(ev, true);
                 }
 
+                // DONE: None (go straight to PastEventFlowLayoutPanel)
+                if (ev.Status == "Done" &&
+                    ev.RequiredAttendees == "None")
+                {
+                    Panel panel = new Panel();
+                    panel.Size = new Size(410, EventPanelHeight);
+                    panel.BorderStyle = BorderStyle.FixedSingle;
+                    panel.Margin = new Padding(EventPanelMargin);
+                    panel.BackColor = Color.LightGreen; // done color
 
+                    panel.Tag = ev;
+
+                    Label lblTitle = new Label
+                    {
+                        Text = ev.Title,
+                        Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                        Location = new Point(10, 5),
+                        AutoSize = true
+                    };
+
+                    Label lblInfo = new Label
+                    {
+                        Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
+                        Font = new Font("Segoe UI", 8),
+                        Location = new Point(10, 25),
+                        AutoSize = true
+                    };
+
+                    Label lblDate = new Label
+                    {
+                        Text = ev.Date.ToString("MMMM d, yyyy"),
+                        Font = new Font("Segoe UI", 8, FontStyle.Italic),
+                        ForeColor = Color.Black,
+                        Location = new Point(10, 45),
+                        AutoSize = true
+                    };
+
+                    panel.Controls.Add(lblTitle);
+                    panel.Controls.Add(lblInfo);
+                    panel.Controls.Add(lblDate);
+
+                    PastEventFlowLayoutPanel.Controls.Add(panel);
+                    PastEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
+
+                    panel.DoubleClick += PastEventPanel_DoubleClick;
+                }
             }
 
             await webViewMap.EnsureCoreWebView2Async(null);
@@ -511,10 +557,12 @@ namespace BATODA
                 eventRepo.UpdateEventStatus(ev.EventId, "Done");
                 UpdateEventInDayCell(ev);
 
+                EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
+
                 if (ev.RequiredAttendees != "None")
                     MoveToPreviousEvents(ev, true);
-
-                EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
+                else
+                    PastEventFlowLayoutPanel.Controls.Add(panel);
 
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
