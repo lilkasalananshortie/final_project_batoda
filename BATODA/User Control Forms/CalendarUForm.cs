@@ -81,9 +81,11 @@ namespace BATODA
                 if (ev.Status == "Pending")
                     AddEventToOverview(ev);
 
-                // ADD DONE EVENTS TO DONE FLOWLAYOUT
-                if (ev.Status == "Done" && !string.Equals(ev.RequiredAttendees?.Trim(), "None", StringComparison.OrdinalIgnoreCase))
+                if (ev.Status == "Done" &&
+                    (ev.RequiredAttendees == "All Members" || ev.RequiredAttendees == "Specific Members Only"))
+                {
                     MoveToPreviousEvents(ev, true);
+                }
 
 
             }
@@ -321,7 +323,8 @@ namespace BATODA
                         RequiredAttendees = reqAttendees
                     };
 
-                    eventRepo.SaveEvent(newEvent, reqAttendees, false, 0, selectedMembers);
+                    int savedId = eventRepo.SaveEvent(newEvent, reqAttendees, false, 0, selectedMembers);
+                    newEvent.EventId = savedId;
 
                     if (!events.ContainsKey(selectedDate))
                         events[selectedDate] = new List<CalendarEvent>();
@@ -505,13 +508,18 @@ namespace BATODA
             btnDone.Click += (s, args) =>
             {
                 ev.Status = "Done";
-                eventRepo.UpdateEventStatus(ev.EventId, "Done"); // UPDATE DATABASE
-                UpdateEventInDayCell(ev); // UPDATE CALENDAR CELL
-                MoveToPreviousEvents(ev, true); // MOVE TO DONE PANEL
-                EventsOverviewFlowLayoutPanel.Controls.Remove(panel); // REMOVE FROM OVERVIEW
+                eventRepo.UpdateEventStatus(ev.EventId, "Done");
+                UpdateEventInDayCell(ev);
+
+                if (ev.RequiredAttendees != "None")
+                    MoveToPreviousEvents(ev, true);
+
+                EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
+
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
+
 
             // CANCEL CLICK - UPDATE STATUS IN DB AND REMOVE FROM OVERVIEW
             btnCancel.Click += (s, args) =>
