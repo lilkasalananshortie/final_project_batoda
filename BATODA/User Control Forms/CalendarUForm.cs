@@ -753,6 +753,11 @@ namespace BATODA
                     SetAttendanceGrid.Rows.Add(false, m.BodyNumber.ToString("D3"), fullName);
                 }
             }
+            else if (ev.RequiredAttendees == "Specific Members Only")
+            {
+                // Do NOT load any members yet
+                // Grid stays empty for now
+            }
             else if (ev.RequiredAttendees == "None")
             {
                 PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
@@ -764,6 +769,7 @@ namespace BATODA
             CheckAttendancePanel.BringToFront();
             PreviousEventPanel.Hide();
         }
+
 
 
 
