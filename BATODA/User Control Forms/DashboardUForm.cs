@@ -68,7 +68,7 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new MembersUForm());
             _mainForm.ActivateMainButton("Members");
-        }
+        }   
 
         private void QuickActionTransferMemberButton_Click(object sender, EventArgs e)
         {
@@ -85,7 +85,7 @@ namespace BATODA
 
         private void QuickActionReviewActionButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMain(new AssistanceLogUForm());
+            DisplayClass.ShowMain(new AssistanceRequestUForm());
             _mainForm.ActivateMainButton("Assistance");
 
         }

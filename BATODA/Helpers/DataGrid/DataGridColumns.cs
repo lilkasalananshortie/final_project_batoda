@@ -71,7 +71,7 @@ namespace BATODA.Helpers.DataGrids
 
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+            
             foreach (DataGridViewColumn col in grid.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;

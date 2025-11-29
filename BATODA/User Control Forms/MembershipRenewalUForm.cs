@@ -135,5 +135,16 @@ namespace BATODA
             LoadRenewalGrid();
         }
 
+       
+
+        private void FinanceButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new FinanceUForm());
+        }
+
+        private void RenewalHistoryButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new ButawUForm());
+        }
     }
 }

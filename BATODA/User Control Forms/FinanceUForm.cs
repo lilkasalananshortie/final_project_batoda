@@ -82,16 +82,12 @@ namespace BATODA
         {
             LoadYears();
             LoadMassSelectGrid();
-            ViewPanel.Hide();
             RenewSelectedPanelHolder.Hide();
             MassChangeSelectionPanel.Hide();
 
         }
 
-        private void FinanceButton_Click(object sender, EventArgs e)
-        {
-            DisplayClass.ShowMain(new FinanceUForm());
-        }
+        
 
         private void btnPaid_Click(object sender, EventArgs e)
         {
@@ -169,7 +165,6 @@ namespace BATODA
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            ViewPanel.Hide();
         }
 
         private void MassChangeButton_Click(object sender, EventArgs e)
@@ -455,6 +450,11 @@ namespace BATODA
         }
 
         private void ButawDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
 
         }

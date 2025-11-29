@@ -32,6 +32,7 @@
             this.ARHButton = new BATODA.ButtonStyle();
             this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonStyle1 = new BATODA.ButtonStyle();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
             this.ConfirmationPanelCancelBtn = new BATODA.ButtonStyle();
             this.label9 = new System.Windows.Forms.Label();
@@ -158,7 +159,6 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.OpenProof = new System.Windows.Forms.OpenFileDialog();
-            this.buttonStyle1 = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ConfirmationPanel.SuspendLayout();
@@ -303,6 +303,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1588, 1004);
             this.panel1.TabIndex = 26;
+            // 
+            // buttonStyle1
+            // 
+            this.buttonStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.BorderColor = System.Drawing.Color.Red;
+            this.buttonStyle1.BorderRadius = 0;
+            this.buttonStyle1.BorderSize = 0;
+            this.buttonStyle1.ButtonImage = null;
+            this.buttonStyle1.FlatAppearance.BorderSize = 0;
+            this.buttonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStyle1.ForeColor = System.Drawing.Color.White;
+            this.buttonStyle1.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle1.HoverColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle1.ImageColor = System.Drawing.Color.Black;
+            this.buttonStyle1.ImagePosition = new System.Drawing.Point(10, 8);
+            this.buttonStyle1.ImageSize = new System.Drawing.Size(24, 24);
+            this.buttonStyle1.IsToggled = false;
+            this.buttonStyle1.Location = new System.Drawing.Point(1449, 16);
+            this.buttonStyle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonStyle1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.Name = "buttonStyle1";
+            this.buttonStyle1.PaddingX = 0;
+            this.buttonStyle1.PaddingY = 0;
+            this.buttonStyle1.Size = new System.Drawing.Size(112, 33);
+            this.buttonStyle1.TabIndex = 66;
+            this.buttonStyle1.Text = "Apply Filter";
+            this.buttonStyle1.TextColor = System.Drawing.Color.White;
+            this.buttonStyle1.TextOffset = 20;
+            this.buttonStyle1.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.UseVisualStyleBackColor = false;
             // 
             // ConfirmationPanel
             // 
@@ -1603,7 +1635,7 @@
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(6, 8);
+            this.SearchTextBox.Location = new System.Drawing.Point(42, 8);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(399, 24);
@@ -1613,7 +1645,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox7.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox7.Location = new System.Drawing.Point(412, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(32, 32);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1849,38 +1881,6 @@
             // OpenProof
             // 
             this.OpenProof.FileName = "openFileDialog1";
-            // 
-            // buttonStyle1
-            // 
-            this.buttonStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.BorderColor = System.Drawing.Color.Red;
-            this.buttonStyle1.BorderRadius = 0;
-            this.buttonStyle1.BorderSize = 0;
-            this.buttonStyle1.ButtonImage = null;
-            this.buttonStyle1.FlatAppearance.BorderSize = 0;
-            this.buttonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle1.ForeColor = System.Drawing.Color.White;
-            this.buttonStyle1.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.buttonStyle1.HoverColor = System.Drawing.Color.DarkRed;
-            this.buttonStyle1.ImageColor = System.Drawing.Color.Black;
-            this.buttonStyle1.ImagePosition = new System.Drawing.Point(10, 8);
-            this.buttonStyle1.ImageSize = new System.Drawing.Size(24, 24);
-            this.buttonStyle1.IsToggled = false;
-            this.buttonStyle1.Location = new System.Drawing.Point(1449, 16);
-            this.buttonStyle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.Name = "buttonStyle1";
-            this.buttonStyle1.PaddingX = 0;
-            this.buttonStyle1.PaddingY = 0;
-            this.buttonStyle1.Size = new System.Drawing.Size(112, 33);
-            this.buttonStyle1.TabIndex = 66;
-            this.buttonStyle1.Text = "Apply Filter";
-            this.buttonStyle1.TextColor = System.Drawing.Color.White;
-            this.buttonStyle1.TextOffset = 20;
-            this.buttonStyle1.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.UseVisualStyleBackColor = false;
             // 
             // AssistanceRequestUForm
             // 
