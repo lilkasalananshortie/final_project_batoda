@@ -91,7 +91,7 @@ namespace BATODA
 
                 if (m.PenaltyLevel == 0)
                 {
-                    penaltyDisplay = "None";
+                    penaltyDisplay = "";
                 }
                 else if (m.PenaltyLevel == 1)
                 {
@@ -229,6 +229,13 @@ namespace BATODA
         private void ApplySearchButton_Click(object sender, EventArgs e)
         {
             string SearchText = SearchTxt.Text.Trim();
+
+            if (string.IsNullOrEmpty(SearchText))
+            {
+                MessageBox.Show("Search input cannot be empty.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             DataTable MemberTable = SearchMembers.Find(SearchText);
 
             DataGridColumns.LoadMembersToGrid(MembersDataGrid, MemberTable);
@@ -243,6 +250,7 @@ namespace BATODA
                 NoResultsPanel.Visible = false;
             }
         }
+
 
         private void UploadButton_Click(object sender, EventArgs e)
         {
@@ -366,10 +374,18 @@ namespace BATODA
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; 
-                ApplySearchButton_Click(sender, e); 
+                e.SuppressKeyPress = true;
+
+                if (string.IsNullOrWhiteSpace(SearchTxt.Text))
+                {
+                    MessageBox.Show("Search input cannot be empty.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                ApplySearchButton_Click(sender, e);
             }
         }
+
 
         private void LoadMemberOverview(int bodyNumber)
         {
@@ -417,6 +433,21 @@ namespace BATODA
 
             if (confirm == DialogResult.Yes)
             {
+
+                var latestMember = repo.MemberOverview(bodyNumber);
+
+                if (latestMember.PenaltyLevel == 3)
+                {
+                    MessageBox.Show(
+                        $"{latestMember.FirstName} {latestMember.MiddleInitial}. {latestMember.LastName} is already under suspension (24 hours).",
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+
+                    return;
+                }
+
                 repo.IncrementPenaltyLevel(bodyNumber);
                 MessageBox.Show("Penalty added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -426,6 +457,9 @@ namespace BATODA
                 LoadMembersToGrid();
             }
         }
+
+
+
 
         private void label17_Click(object sender, EventArgs e)
         {

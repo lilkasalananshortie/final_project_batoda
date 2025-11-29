@@ -289,21 +289,23 @@ namespace BATODA.Modules.MemberModule
         public MemberModel MemberOverview(int bodyNumber)
         {
             string query = @"
-                SELECT 
-                    FirstName,
-                    LastName,
-                    MiddleInitial,
-                    MembershipType,
-                    Birthdate,
-                    ContactNumber,
-                    TricycleBrand,
-                    TricycleModel,
-                    ChassisNumber,
-                    EngineNumber,
-                    PlateNumber
-                FROM MemberInfo
-                WHERE BodyNumber = @BodyNumber;
-            ";
+        SELECT 
+            FirstName,
+            LastName,
+            MiddleInitial,
+            MembershipType,
+            Birthdate,
+            ContactNumber,
+            TricycleBrand,
+            TricycleModel,
+            ChassisNumber,
+            EngineNumber,
+            PlateNumber,
+            PenaltyLevel,
+            SuspensionDays
+        FROM MemberInfo
+        WHERE BodyNumber = @BodyNumber;
+    ";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -327,13 +329,16 @@ namespace BATODA.Modules.MemberModule
                             TricycleModel = reader["TricycleModel"].ToString(),
                             ChassisNumber = reader["ChassisNumber"].ToString(),
                             EngineNumber = reader["EngineNumber"].ToString(),
-                            PlateNumber = reader["PlateNumber"].ToString()
+                            PlateNumber = reader["PlateNumber"].ToString(),
+                            PenaltyLevel = reader["PenaltyLevel"] != DBNull.Value ? Convert.ToInt32(reader["PenaltyLevel"]) : 0,
+                            SuspensionDays = reader["SuspensionDays"] != DBNull.Value ? Convert.ToInt32(reader["SuspensionDays"]) : 0
                         };
                     }
                 }
             }
             return null;
         }
+
 
         public void IncrementPenaltyLevel(int bodyNumber)
         {
