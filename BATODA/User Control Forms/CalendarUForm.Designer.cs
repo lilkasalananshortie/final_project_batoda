@@ -752,7 +752,7 @@
             this.PreviousEventPanel.Controls.Add(this.panel18);
             this.PreviousEventPanel.Location = new System.Drawing.Point(1167, 741);
             this.PreviousEventPanel.Name = "PreviousEventPanel";
-            this.PreviousEventPanel.Size = new System.Drawing.Size(436, 398);
+            this.PreviousEventPanel.Size = new System.Drawing.Size(436, 574);
             this.PreviousEventPanel.TabIndex = 13;
             // 
             // DoneEventFlowLayoutPanel

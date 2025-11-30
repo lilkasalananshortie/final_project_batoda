@@ -70,7 +70,6 @@ namespace BATODA
 
             foreach (var ev in allEvents)
             {
-                // ADD TO EVENTS DICTIONARY (FOR CALENDAR CELLS)
                 if (!events.ContainsKey(ev.Date))
                     events[ev.Date] = new List<CalendarEvent>();
                 events[ev.Date].Add(ev);
@@ -81,10 +80,20 @@ namespace BATODA
 
                 // DONE: All / Specific members
                 if (ev.Status == "Done" &&
-                    (ev.RequiredAttendees == "All Members" || ev.RequiredAttendees == "Specific Members Only"))
+                   (ev.RequiredAttendees == "All Members" || ev.RequiredAttendees == "Specific Members Only"))
                 {
-                    MoveToPreviousEvents(ev, true);
+                    // CHECK IF ATTENDANCE EXISTS FOR THIS EVENT
+                    bool hasAttendance = eventRepo.EventHasAttendance(ev.EventId);
+                    DoneToPreviousEvents.MoveToPreviousEvents(
+                        ev,
+                        hasAttendance,
+                        PastEventFlowLayoutPanel,
+                        DoneEventFlowLayoutPanel,
+                        PastEventPanel_DoubleClick,
+                        DoneEventPanel_DoubleClick
+                    );
                 }
+
 
                 // DONE: None (go straight to PastEventFlowLayoutPanel)
                 if (ev.Status == "Done" &&
@@ -94,7 +103,7 @@ namespace BATODA
                     panel.Size = new Size(410, EventPanelHeight);
                     panel.BorderStyle = BorderStyle.FixedSingle;
                     panel.Margin = new Padding(EventPanelMargin);
-                    panel.BackColor = Color.LightGreen; // done color
+                    panel.BackColor = Color.LightGreen;
 
                     panel.Tag = ev;
 
@@ -759,11 +768,30 @@ namespace BATODA
         {
             selectedPastEventPanel = sender as Panel;
             CalendarEvent ev = selectedPastEventPanel.Tag as CalendarEvent;
+            if (ev == null) return;
 
-            if (ev == null)
-                return;
+            AttendanceListDGV.Columns.Clear();
+            AttendanceListDGV.Rows.Clear();
 
-            LoadAttendanceIntoDGV(ev);
+            AttendanceListDGV.Columns.Add("BodyNumber", "Body Number");
+            AttendanceListDGV.Columns.Add("MemberName", "Member Name");
+            AttendanceListDGV.Columns.Add("Status", "Status");
+
+            if (ev.RequiredAttendees == "All Members")
+            {
+                var memberRepo = new MemberRepository();
+                var allMembers = memberRepo.GetAllMembers();
+
+                foreach (var m in allMembers)
+                {
+                    string fullName = $"{m.LastName}, {m.FirstName} {m.MiddleInitial}";
+
+                    var attendance = eventRepo.GetAttendanceForMember(ev.EventId, m.BodyNumber);
+                    string status = (attendance != null && attendance.IsPresent == 2) ? "Present" : "Absent";
+
+                    AttendanceListDGV.Rows.Add(m.BodyNumber.ToString("D3"), fullName, status);
+                }
+            }
         }
 
         private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
@@ -801,32 +829,38 @@ namespace BATODA
                 PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
                 PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
             }
-
+            //1167, 741
             CheckAttendancePanel.Location = PreviousEventPanel.Location;
             CheckAttendancePanel.Show();
             CheckAttendancePanel.BringToFront();
             PreviousEventPanel.Hide();
         }
 
-
-
-
-        //will save the attendance 
         private void SaveAttendanceButton_Click(object sender, EventArgs e)
         {
+            if (previousEventSelectedPanel?.Tag is CalendarEvent ev)
+            {
+                // SAVE ATTENDANCE FOR THIS EVENT
+                eventRepo.SaveAttendanceForEvent(ev.EventId, SetAttendanceGrid);
 
-            previousEventSelectedPanel.DoubleClick -= DoneEventPanel_DoubleClick;
-            previousEventSelectedPanel.DoubleClick -= PastEventPanel_DoubleClick;
-            previousEventSelectedPanel.Width = 535;
-            PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
-            PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
+                // REMOVE FROM DONE PANEL
+                DoneEventFlowLayoutPanel.Controls.Remove(previousEventSelectedPanel);
 
-            previousEventSelectedPanel.DoubleClick += PastEventPanel_DoubleClick;
+                // ADD TO PAST PANEL
+                previousEventSelectedPanel.Width = 410; // optional: match PastEventFlowLayoutPanel style
+                previousEventSelectedPanel.DoubleClick -= DoneEventPanel_DoubleClick;
+                previousEventSelectedPanel.DoubleClick += PastEventPanel_DoubleClick;
+                PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
+                PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
+            }
 
+            // RESET UI
             PreviousEventPanel.Show();
             PreviousEventPanel.BringToFront();
             CheckAttendancePanel.Hide();
         }
+
+
 
         private void EditEventButton_Click(object sender, EventArgs e)
         {

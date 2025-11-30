@@ -18,3 +18,20 @@ CREATE TABLE EventAttendees (
     IsPresent TINYINT NOT NULL DEFAULT 0, -- 0 = not required, 1 = absent, 2 = present
     CONSTRAINT FK_Event FOREIGN KEY (EventId) REFERENCES ScheduleEvents(EventId)
 );
+
+
+----------------------------------
+ALTER TABLE EventAttendees
+ALTER COLUMN IsPresent INT NOT NULL;
+
+** possible may error after nito kaya ilagay niyo yung nasa baba **
+
+ALTER TABLE EventAttendees
+DROP CONSTRAINT DF__EventAtte__IsPre__41B8C09B; -41B8C09B yung etong numb depende to kung ano lalabas sa error sa inyo
+
+ALTER TABLE EventAttendees
+ALTER COLUMN IsPresent INT NOT NULL;
+
+ALTER TABLE EventAttendees
+ADD CONSTRAINT DF_EventAttendees_IsPresent DEFAULT 0 FOR IsPresent;
+

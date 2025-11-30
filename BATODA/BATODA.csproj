@@ -97,6 +97,7 @@
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMemberSearchOwner.cs" />
+    <Compile Include="Modules\Schedule Module\DoneToPreviousEvents.cs" />
     <Compile Include="Modules\Schedule Module\EventModel.cs" />
     <Compile Include="Modules\Schedule Module\EventPanelUI.cs" />
     <Compile Include="Modules\Schedule Module\EventRepository.cs" />

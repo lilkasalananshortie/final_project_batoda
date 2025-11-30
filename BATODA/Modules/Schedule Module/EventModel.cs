@@ -25,7 +25,7 @@ namespace BATODA.Modules.Schedule_Module
         public int EventId { get; set; }
         public int BodyNumber { get; set; }
         public string MemberName { get; set; }
-        public byte IsPresent { get; set; } // 0 = not required, 1 = absent, 2 = present
+        public int IsPresent { get; set; } // 0 = not required, 1 = absent, 2 = present
     }
 
 }

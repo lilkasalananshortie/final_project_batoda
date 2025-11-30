@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace BATODA.Repositories
 {
@@ -140,23 +141,116 @@ namespace BATODA.Repositories
         }
 
         /* -------------------------------------- ATTENDEES ----------------------------------------*/
-        public void AllMembersRequired(EventAttendee attendee)
+        public void SaveAttendanceForEvent(int eventId, DataGridView attendanceGrid)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = @"INSERT INTO EventAttendees (EventId, BodyNumber, MemberName, IsPresent)
-                         VALUES (@EventId, @BodyNumber, @MemberName, @IsPresent)";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+
+                foreach (DataGridViewRow row in attendanceGrid.Rows)
                 {
-                    cmd.Parameters.AddWithValue("@EventId", attendee.EventId);
-                    cmd.Parameters.AddWithValue("@BodyNumber", attendee.BodyNumber);
-                    cmd.Parameters.AddWithValue("@MemberName", attendee.MemberName);
-                    cmd.Parameters.AddWithValue("@IsPresent", attendee.IsPresent);
-                    cmd.ExecuteNonQuery();
+                    if (row.IsNewRow) continue;
+
+                    int bodyNumber = int.Parse(row.Cells["BodyNumber"].Value.ToString());
+                    string memberName = row.Cells["MemberName"].Value.ToString();
+                    bool isChecked = row.Cells[0].Value is bool b && b;
+                    int isPresent = isChecked ? 2 : 1; // 2 = PRESENT, 1 = ABSENT
+
+                    // CHECK IF RECORD ALREADY EXISTS FOR THIS EVENT AND MEMBER
+                    string checkQuery = @"SELECT COUNT(*) FROM EventAttendees 
+                                  WHERE EventId = @EventId AND BodyNumber = @BodyNumber";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@EventId", eventId);
+                        checkCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                        int count = (int)checkCmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            // UPDATE EXISTING RECORD IF ALREADY EXISTS
+                            string updateQuery = @"UPDATE EventAttendees
+                                           SET IsPresent = @IsPresent
+                                           WHERE EventId = @EventId AND BodyNumber = @BodyNumber";
+                            using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
+                            {
+                                updateCmd.Parameters.AddWithValue("@IsPresent", isPresent);
+                                updateCmd.Parameters.AddWithValue("@EventId", eventId);
+                                updateCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                                updateCmd.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            // INSERT NEW RECORD IF NONE EXISTS
+                            string insertQuery = @"INSERT INTO EventAttendees (EventId, BodyNumber, MemberName, IsPresent)
+                                           VALUES (@EventId, @BodyNumber, @MemberName, @IsPresent)";
+                            using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                            {
+                                insertCmd.Parameters.AddWithValue("@EventId", eventId);
+                                insertCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                                insertCmd.Parameters.AddWithValue("@MemberName", memberName);
+                                insertCmd.Parameters.AddWithValue("@IsPresent", isPresent);
+                                insertCmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
                 }
             }
         }
+
+        public bool EventHasAttendance(int eventId)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM EventAttendees WHERE EventId = @EventId";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@EventId", eventId);
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
+        public EventAttendee GetAttendanceForMember(int eventId, int bodyNumber)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"SELECT EventId, BodyNumber, MemberName, IsPresent
+                         FROM EventAttendees
+                         WHERE EventId = @EventId AND BodyNumber = @BodyNumber";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@EventId", eventId);
+                    cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new EventAttendee
+                            {
+                                EventId = Convert.ToInt32(reader["EventId"]),
+                                BodyNumber = Convert.ToInt32(reader["BodyNumber"]),
+                                MemberName = reader["MemberName"].ToString(),
+                                IsPresent = (int)reader["IsPresent"]
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
+
+
+
+
+
 
 
 
