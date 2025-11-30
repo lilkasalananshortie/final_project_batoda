@@ -21,7 +21,7 @@ namespace BATODA.Helpers.DataGrid
             DataGridViewCheckBoxColumn chkColumn = new DataGridViewCheckBoxColumn();
             chkColumn.Name = "chkSelect";
             chkColumn.HeaderText = "";
-            chkColumn.Width = 30;
+            chkColumn.Width = 15;
             chkColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             chkColumn.ReadOnly = false;
             chkColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -82,6 +82,12 @@ namespace BATODA.Helpers.DataGrid
             dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 13, FontStyle.Regular);
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
+
+            dgv.CellContentClick += (s, e) =>
+            {
+                if (dgv.Columns[e.ColumnIndex] is DataGridViewCheckBoxColumn)
+                    dgv.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            };
         }
     }
 }

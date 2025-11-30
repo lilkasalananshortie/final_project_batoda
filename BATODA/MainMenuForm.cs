@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using BATODA.UI_Displays;
+using BATODA.User_Control_Forms;
 
 namespace BATODA
 {
@@ -59,7 +60,9 @@ namespace BATODA
                  AssistanceLogButton,
                  FinanceButton,
                  SettingsButton,
-                 CalendarBtn
+                 CalendarBtn,
+                 FareMatrixButton
+
             );
 
             DisplayClass.SetActive(HomeButton);
@@ -114,6 +117,11 @@ namespace BATODA
                     TopPanelText.Text = "CALENDAR";
                     break;
 
+                case "FareMatrix":
+                    DisplayClass.SetActive(FareMatrixButton);
+                  DisplayClass.ShowMain(new FareMatrixUForm());
+                    TopBarPanel.Text = "FARE MATRIX";
+                    break;
             }
         }
         private void HomeButton_Click(object sender, EventArgs e)
@@ -168,6 +176,13 @@ namespace BATODA
 
 
         }
+        private void FareMatrixButton_Click(object sender, EventArgs e)
+        {
+            ActivateMainButton("Fare Matrix");
+            DisplayClass.ShowMain(new FareMatrixUForm());
+            TopBarPanel.Text = "FARE MATRIX";
+
+        }
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
@@ -213,5 +228,7 @@ namespace BATODA
         {
 
         }
+
+       
     }
 }

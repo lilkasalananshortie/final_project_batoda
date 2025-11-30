@@ -98,6 +98,7 @@
     <Compile Include="Modules\Member Module\Member Classes\TransferMembershipHistoryRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\TransferMemberSearchOwner.cs" />
     <Compile Include="Modules\Schedule Module\EventModel.cs" />
+    <Compile Include="Modules\Schedule Module\EventPanelUI.cs" />
     <Compile Include="Modules\Schedule Module\EventRepository.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\SearchTricycle.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TransferTricLoadOwner.cs" />
@@ -174,6 +175,12 @@
     </Compile>
     <Compile Include="User Control Forms\DaysUForm.Designer.cs">
       <DependentUpon>DaysUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control Forms\FareMatrixUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\FareMatrixUForm.Designer.cs">
+      <DependentUpon>FareMatrixUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control Forms\FinanceUForm.cs">
       <SubType>UserControl</SubType>
@@ -291,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\DaysUForm.resx">
       <DependentUpon>DaysUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\FareMatrixUForm.resx">
+      <DependentUpon>FareMatrixUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\FinanceUForm.resx">
       <DependentUpon>FinanceUForm.cs</DependentUpon>
@@ -578,6 +588,7 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\application.png" />
     <None Include="Resources\bambang iufbbtodaa.PNG" />
     <None Include="Resources\bambang iufbbtoda.PNG" />
     <None Include="Resources\toda-removebg-preview %281%29.png" />

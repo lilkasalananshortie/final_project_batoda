@@ -145,6 +145,9 @@
   <data name="dashboard_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="change_vehicle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\change vehicle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +159,9 @@
   </data>
   <data name="total_due" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\total due.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bambang iufbbtodaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bambang iufbbtodaa.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,12 +184,6 @@
   <data name="circle_finance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle_finance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="circle (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tricycle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tricycle icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,20 +196,23 @@
   <data name="add_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="active_member" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\active member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="circle_dashed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle-dashed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_event" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add event.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="transfer_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transfer_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="filter_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filter off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="due" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\due.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="total_paid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\total paid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Request_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Request icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -225,6 +228,9 @@
   </data>
   <data name="add_member" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="released" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\released.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toda-removebg-preview (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toda-removebg-preview (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,9 +256,6 @@
   <data name="dash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="registered_vehicle_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\registered vehicle nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="actuvity_log" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actuvity_log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -277,6 +280,9 @@
   <data name="ascending" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ascending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="overdue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\overdue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cloud-sharing_12986916" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud-sharing_12986916.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -294,9 +300,6 @@
   </data>
   <data name="transfer-data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transfer-data.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="total_request" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\total request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,11 +319,11 @@
   <data name="blurred_bgc_tofa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\e54768b4-e600-438c-8aa2-2b13fa67169b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="released" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\released.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="active_member" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\active member.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transfer_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transfer_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="total_request" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\total request.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calendar_module" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar_module.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,8 +361,8 @@
   <data name="penalty_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\penalty icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="change_vehicle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\change vehicle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="registered_vehicle_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\registered vehicle nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -370,17 +373,17 @@
   <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pictures\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="down_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="total_paid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\total paid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tricycle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tricycle icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="operator_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\operator icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -403,16 +406,16 @@
   <data name="cloud_15451038" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud_15451038.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="down_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\down-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chevron_12143821" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chevron_12143821.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="overdue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\overdue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings_nav_bar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings nav bar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bambang iufbbtodaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bambang iufbbtodaa.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="application" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

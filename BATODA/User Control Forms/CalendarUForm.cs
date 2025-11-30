@@ -887,7 +887,7 @@ namespace BATODA
             if (ReqAttendeesCmb.SelectedItem != null &&
                 ReqAttendeesCmb.SelectedItem.ToString() == "Specific Members Only")
             {
-                DataGridCustom.ApplyCustomGrid(SelectMembersGrid);
+                AttendanceHandler.ApplyCustomGridWithCheckbox(SelectMembersGrid);
                 SpecificMembsPanel.Visible = true;
                 LoadAllMembersToSelectMembersGrid();
             }

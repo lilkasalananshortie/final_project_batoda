@@ -31,10 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TopBarPanel = new System.Windows.Forms.Panel();
             this.MainTime = new System.Windows.Forms.Label();
             this.MainDate = new System.Windows.Forms.Label();
+            this.CalendarButton = new BATODA.ButtonStyle();
+            this.NotificationButton = new BATODA.ButtonStyle();
+            this.AccountButton = new BATODA.ButtonStyle();
             this.SubTopPanel = new System.Windows.Forms.Label();
             this.TopPanelText = new System.Windows.Forms.Label();
             this.NotificationPanel = new System.Windows.Forms.Panel();
@@ -42,9 +44,7 @@
             this.CalendarXAccoutnContainerPanel = new System.Windows.Forms.Panel();
             this.NavBarPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.DisplayPanel = new System.Windows.Forms.Panel();
-            this.CalendarButton = new BATODA.ButtonStyle();
-            this.NotificationButton = new BATODA.ButtonStyle();
-            this.AccountButton = new BATODA.ButtonStyle();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.HomeButton = new BATODA.ButtonStyle();
             this.MembersMainButton = new BATODA.ButtonStyle();
             this.RegisteredVehiclesButton = new BATODA.ButtonStyle();
@@ -52,11 +52,12 @@
             this.FinanceButton = new BATODA.ButtonStyle();
             this.CalendarBtn = new BATODA.ButtonStyle();
             this.SettingsButton = new BATODA.ButtonStyle();
+            this.FareMatrixButton = new BATODA.ButtonStyle();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.TopBarPanel.SuspendLayout();
             this.NotificationPanel.SuspendLayout();
             this.NavBarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -70,16 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 152);
             this.panel1.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BATODA.Properties.Resources.BambangIUFBBTODA;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(277, 111);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
             // 
             // TopBarPanel
             // 
@@ -121,81 +112,6 @@
             this.MainDate.TabIndex = 7;
             this.MainDate.Text = "Loading . . .";
             this.MainDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // SubTopPanel
-            // 
-            this.SubTopPanel.AutoSize = true;
-            this.SubTopPanel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubTopPanel.ForeColor = System.Drawing.Color.White;
-            this.SubTopPanel.Location = new System.Drawing.Point(27, 57);
-            this.SubTopPanel.Name = "SubTopPanel";
-            this.SubTopPanel.Size = new System.Drawing.Size(345, 21);
-            this.SubTopPanel.TabIndex = 0;
-            this.SubTopPanel.Text = "Here’s what’s happening with your organization.";
-            this.SubTopPanel.Click += new System.EventHandler(this.TopPanelText_Click);
-            // 
-            // TopPanelText
-            // 
-            this.TopPanelText.AutoSize = true;
-            this.TopPanelText.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TopPanelText.ForeColor = System.Drawing.Color.White;
-            this.TopPanelText.Location = new System.Drawing.Point(23, 19);
-            this.TopPanelText.Name = "TopPanelText";
-            this.TopPanelText.Size = new System.Drawing.Size(325, 45);
-            this.TopPanelText.TabIndex = 0;
-            this.TopPanelText.Text = "BAMBANG TODA";
-            this.TopPanelText.Click += new System.EventHandler(this.TopPanelText_Click);
-            // 
-            // NotificationPanel
-            // 
-            this.NotificationPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.NotificationPanel.Controls.Add(this.label2);
-            this.NotificationPanel.Location = new System.Drawing.Point(1378, 96);
-            this.NotificationPanel.Name = "NotificationPanel";
-            this.NotificationPanel.Size = new System.Drawing.Size(366, 318);
-            this.NotificationPanel.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 42);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Notification";
-            // 
-            // CalendarXAccoutnContainerPanel
-            // 
-            this.CalendarXAccoutnContainerPanel.Location = new System.Drawing.Point(367, 111);
-            this.CalendarXAccoutnContainerPanel.Name = "CalendarXAccoutnContainerPanel";
-            this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(1433, 845);
-            this.CalendarXAccoutnContainerPanel.TabIndex = 4;
-            // 
-            // NavBarPanel
-            // 
-            this.NavBarPanel.BackColor = System.Drawing.Color.White;
-            this.NavBarPanel.Controls.Add(this.panel1);
-            this.NavBarPanel.Controls.Add(this.HomeButton);
-            this.NavBarPanel.Controls.Add(this.MembersMainButton);
-            this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
-            this.NavBarPanel.Controls.Add(this.AssistanceLogButton);
-            this.NavBarPanel.Controls.Add(this.FinanceButton);
-            this.NavBarPanel.Controls.Add(this.CalendarBtn);
-            this.NavBarPanel.Controls.Add(this.SettingsButton);
-            this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.NavBarPanel.Name = "NavBarPanel";
-            this.NavBarPanel.Size = new System.Drawing.Size(300, 1000);
-            this.NavBarPanel.TabIndex = 1;
-            // 
-            // DisplayPanel
-            // 
-            this.DisplayPanel.BackColor = System.Drawing.Color.Silver;
-            this.DisplayPanel.Location = new System.Drawing.Point(322, 522);
-            this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
-            this.DisplayPanel.TabIndex = 5;
             // 
             // CalendarButton
             // 
@@ -289,6 +205,92 @@
             this.AccountButton.ToggleColor = System.Drawing.Color.DarkGray;
             this.AccountButton.UseVisualStyleBackColor = false;
             this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
+            // 
+            // SubTopPanel
+            // 
+            this.SubTopPanel.AutoSize = true;
+            this.SubTopPanel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubTopPanel.ForeColor = System.Drawing.Color.White;
+            this.SubTopPanel.Location = new System.Drawing.Point(27, 57);
+            this.SubTopPanel.Name = "SubTopPanel";
+            this.SubTopPanel.Size = new System.Drawing.Size(345, 21);
+            this.SubTopPanel.TabIndex = 0;
+            this.SubTopPanel.Text = "Here’s what’s happening with your organization.";
+            this.SubTopPanel.Click += new System.EventHandler(this.TopPanelText_Click);
+            // 
+            // TopPanelText
+            // 
+            this.TopPanelText.AutoSize = true;
+            this.TopPanelText.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TopPanelText.ForeColor = System.Drawing.Color.White;
+            this.TopPanelText.Location = new System.Drawing.Point(23, 19);
+            this.TopPanelText.Name = "TopPanelText";
+            this.TopPanelText.Size = new System.Drawing.Size(325, 45);
+            this.TopPanelText.TabIndex = 0;
+            this.TopPanelText.Text = "BAMBANG TODA";
+            this.TopPanelText.Click += new System.EventHandler(this.TopPanelText_Click);
+            // 
+            // NotificationPanel
+            // 
+            this.NotificationPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.NotificationPanel.Controls.Add(this.label2);
+            this.NotificationPanel.Location = new System.Drawing.Point(1378, 96);
+            this.NotificationPanel.Name = "NotificationPanel";
+            this.NotificationPanel.Size = new System.Drawing.Size(366, 318);
+            this.NotificationPanel.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 42);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Notification";
+            // 
+            // CalendarXAccoutnContainerPanel
+            // 
+            this.CalendarXAccoutnContainerPanel.Location = new System.Drawing.Point(367, 111);
+            this.CalendarXAccoutnContainerPanel.Name = "CalendarXAccoutnContainerPanel";
+            this.CalendarXAccoutnContainerPanel.Size = new System.Drawing.Size(1433, 845);
+            this.CalendarXAccoutnContainerPanel.TabIndex = 4;
+            // 
+            // NavBarPanel
+            // 
+            this.NavBarPanel.BackColor = System.Drawing.Color.White;
+            this.NavBarPanel.Controls.Add(this.panel1);
+            this.NavBarPanel.Controls.Add(this.HomeButton);
+            this.NavBarPanel.Controls.Add(this.MembersMainButton);
+            this.NavBarPanel.Controls.Add(this.RegisteredVehiclesButton);
+            this.NavBarPanel.Controls.Add(this.AssistanceLogButton);
+            this.NavBarPanel.Controls.Add(this.FinanceButton);
+            this.NavBarPanel.Controls.Add(this.CalendarBtn);
+            this.NavBarPanel.Controls.Add(this.FareMatrixButton);
+            this.NavBarPanel.Controls.Add(this.SettingsButton);
+            this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
+            this.NavBarPanel.Name = "NavBarPanel";
+            this.NavBarPanel.Size = new System.Drawing.Size(300, 1000);
+            this.NavBarPanel.TabIndex = 1;
+            // 
+            // DisplayPanel
+            // 
+            this.DisplayPanel.BackColor = System.Drawing.Color.Silver;
+            this.DisplayPanel.Location = new System.Drawing.Point(322, 522);
+            this.DisplayPanel.Name = "DisplayPanel";
+            this.DisplayPanel.Size = new System.Drawing.Size(304, 176);
+            this.DisplayPanel.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BATODA.Properties.Resources.BambangIUFBBTODA;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(277, 111);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // HomeButton
             // 
@@ -501,7 +503,7 @@
             this.SettingsButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.SettingsButton.ImageSize = new System.Drawing.Size(32, 32);
             this.SettingsButton.IsToggled = false;
-            this.SettingsButton.Location = new System.Drawing.Point(3, 647);
+            this.SettingsButton.Location = new System.Drawing.Point(3, 728);
             this.SettingsButton.MouseDownColor = System.Drawing.Color.LightGray;
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.PaddingX = 0;
@@ -514,6 +516,38 @@
             this.SettingsButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.SettingsButton.UseVisualStyleBackColor = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // FareMatrixButton
+            // 
+            this.FareMatrixButton.BackColor = System.Drawing.Color.White;
+            this.FareMatrixButton.BackgroundColor = System.Drawing.Color.White;
+            this.FareMatrixButton.BorderColor = System.Drawing.Color.White;
+            this.FareMatrixButton.BorderRadius = 0;
+            this.FareMatrixButton.BorderSize = 0;
+            this.FareMatrixButton.ButtonImage = global::BATODA.Properties.Resources.application;
+            this.FareMatrixButton.FlatAppearance.BorderSize = 0;
+            this.FareMatrixButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FareMatrixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FareMatrixButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FareMatrixButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.FareMatrixButton.HoverColor = System.Drawing.Color.Silver;
+            this.FareMatrixButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FareMatrixButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.FareMatrixButton.ImageSize = new System.Drawing.Size(40, 40);
+            this.FareMatrixButton.IsToggled = false;
+            this.FareMatrixButton.Location = new System.Drawing.Point(3, 647);
+            this.FareMatrixButton.MouseDownColor = System.Drawing.Color.LightGray;
+            this.FareMatrixButton.Name = "FareMatrixButton";
+            this.FareMatrixButton.PaddingX = 0;
+            this.FareMatrixButton.PaddingY = 0;
+            this.FareMatrixButton.Size = new System.Drawing.Size(300, 75);
+            this.FareMatrixButton.TabIndex = 14;
+            this.FareMatrixButton.Text = "Fare Matrix";
+            this.FareMatrixButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.FareMatrixButton.TextOffset = 20;
+            this.FareMatrixButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.FareMatrixButton.UseVisualStyleBackColor = false;
+            this.FareMatrixButton.Click += new System.EventHandler(this.FareMatrixButton_Click);
             // 
             // DashboardForm
             // 
@@ -534,12 +568,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.TopBarPanel.ResumeLayout(false);
             this.TopBarPanel.PerformLayout();
             this.NotificationPanel.ResumeLayout(false);
             this.NotificationPanel.PerformLayout();
             this.NavBarPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -568,5 +602,6 @@
         private System.Windows.Forms.Label MainDate;
         private System.Windows.Forms.Label MainTime;
         private System.Windows.Forms.Label SubTopPanel;
+        private ButtonStyle FareMatrixButton;
     }
 }
