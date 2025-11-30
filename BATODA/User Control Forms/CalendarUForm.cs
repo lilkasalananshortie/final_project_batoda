@@ -76,7 +76,8 @@ namespace BATODA
 
                 // PENDING EVENTS
                 if (ev.Status == "Pending")
-                    AddEventToOverview(ev);
+                    CalendarHandler.AddEventToOverview(ev, EventsOverviewFlowLayoutPanel, EventPanel_DoubleClick, 
+                    EventPanel_Click, EventPanelWidth, EventPanelHeight, EventPanelMargin);
 
                 // DONE: All / Specific members
                 if (ev.Status == "Done" &&
@@ -84,7 +85,7 @@ namespace BATODA
                 {
                     // CHECK IF ATTENDANCE EXISTS FOR THIS EVENT
                     bool hasAttendance = eventRepo.EventHasAttendance(ev.EventId);
-                    DoneToPreviousEvents.MoveToPreviousEvents(
+                    PanelsHandler.MoveToPreviousEvents(
                         ev,
                         hasAttendance,
                         PastEventFlowLayoutPanel,
@@ -99,47 +100,8 @@ namespace BATODA
                 if (ev.Status == "Done" &&
                     ev.RequiredAttendees == "None")
                 {
-                    Panel panel = new Panel();
-                    panel.Size = new Size(410, EventPanelHeight);
-                    panel.BorderStyle = BorderStyle.FixedSingle;
-                    panel.Margin = new Padding(EventPanelMargin);
-                    panel.BackColor = Color.LightGreen;
+                    PanelsHandler.AddDoneEventWithNoAttendees(ev, PastEventFlowLayoutPanel, PastEventPanel_DoubleClick, EventPanelHeight, EventPanelMargin);
 
-                    panel.Tag = ev;
-
-                    Label lblTitle = new Label
-                    {
-                        Text = ev.Title,
-                        Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                        Location = new Point(10, 5),
-                        AutoSize = true
-                    };
-
-                    Label lblInfo = new Label
-                    {
-                        Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
-                        Font = new Font("Segoe UI", 8),
-                        Location = new Point(10, 25),
-                        AutoSize = true
-                    };
-
-                    Label lblDate = new Label
-                    {
-                        Text = ev.Date.ToString("MMMM d, yyyy"),
-                        Font = new Font("Segoe UI", 8, FontStyle.Italic),
-                        ForeColor = Color.Black,
-                        Location = new Point(10, 45),
-                        AutoSize = true
-                    };
-
-                    panel.Controls.Add(lblTitle);
-                    panel.Controls.Add(lblInfo);
-                    panel.Controls.Add(lblDate);
-
-                    PastEventFlowLayoutPanel.Controls.Add(panel);
-                    PastEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
-
-                    panel.DoubleClick += PastEventPanel_DoubleClick;
                 }
             }
 
@@ -194,86 +156,10 @@ namespace BATODA
 
             month = dateTime.Month;
             year = dateTime.Year;
-            calendarDays();
+            CalendarHandler.DisplayCalendarDays(month, year, DayContainer, lbDate, events, AddEventToDayCell);
+
         }
 
-
-        public void calendarDays()
-        {
-            string monthName = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            lbDate.Text = $"{monthName} {year}";
-
-            DateTime monthStart = new DateTime(year, month, 1);
-            int daysInMonth = DateTime.DaysInMonth(year, month);
-
-            int prevMonth = (month == 1) ? 12 : month - 1;
-            int prevYear = (month == 1) ? year - 1 : year;
-            int prevMonthDays = DateTime.DaysInMonth(prevYear, prevMonth);
-            int startDayOfWeek = (int)monthStart.DayOfWeek;
-
-            DayContainer.SuspendLayout();
-            DayContainer.Controls.Clear();
-
-            for (int i = startDayOfWeek - 1; i >= 0; i--)
-            {
-                DaysUForm prevDay = new DaysUForm();
-                prevDay.days(prevMonthDays - i, prevMonth, prevYear);
-                prevDay.BackColor = Color.LightGray;
-                DisablePastDay(prevDay);
-                DayContainer.Controls.Add(prevDay);
-            }
-
-            for (int i = 1; i <= daysInMonth; i++)
-            {
-                DaysUForm currentDay = new DaysUForm();
-                currentDay.days(i, month, year);
-                currentDay.BackColor = Color.White;
-                DisablePastDay(currentDay);
-                DayContainer.Controls.Add(currentDay);
-            }
-
-            int totalCells = DayContainer.Controls.Count;
-            int nextMonthDaysToAdd = 42 - totalCells;
-            int nextMonth = (month == 12) ? 1 : month + 1;
-            int nextYear = (month == 12) ? year + 1 : year;
-
-            for (int i = 1; i <= nextMonthDaysToAdd; i++)
-            {
-                DaysUForm nextDay = new DaysUForm();
-                nextDay.days(i, nextMonth, nextYear);
-                nextDay.BackColor = Color.LightGray;
-                DisablePastDay(nextDay);
-                DayContainer.Controls.Add(nextDay);
-            }
-
-            DayContainer.ResumeLayout();
-
-            RefreshEventIndicators();
-        }
-
-        private void DisablePastDay(DaysUForm day)
-        {
-            
-            if (day.DateValue.Date < DateTime.Today)
-            {
-                day.Enabled = false;
-                day.BackColor = Color.DarkGray; 
-            }
-        }
-
-        private void RefreshEventIndicators()
-        {
-            foreach (var dateEvents in events)
-            {
-                if (dateEvents.Key.Month == month && dateEvents.Key.Year == year)
-                {
-                    foreach (var evt in dateEvents.Value)
-                    {
-                        AddEventToDayCell(evt);
-                    }
-                }
-            }
-        }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
@@ -284,7 +170,8 @@ namespace BATODA
                 year++;
             }
             dateTime = new DateTime(year, month, 1);
-            calendarDays();
+            CalendarHandler.DisplayCalendarDays(month, year, DayContainer, lbDate, events, AddEventToDayCell);
+
         }
 
         private void previousButton_Click(object sender, EventArgs e)
@@ -296,7 +183,8 @@ namespace BATODA
                 year--;
             }
             dateTime = new DateTime(year, month, 1);
-            calendarDays();
+            CalendarHandler.DisplayCalendarDays(month, year, DayContainer, lbDate, events, AddEventToDayCell);
+
         }
 
         private void CancelEventButton_Click(object sender, EventArgs e)
@@ -320,14 +208,6 @@ namespace BATODA
             string description = NoteTxt.Text.Trim();
             string time = TimePicker.Value.ToString("HH:mm");
             string reqAttendees = ReqAttendeesCmb.SelectedItem?.ToString() ?? "None";
-
-            /* SPECIFIC MEMBS ONLY == LOAD ALL MEMBERS TO SELECT FROM
-               
-                ALL MEMBERS AND NONE WILL BE PROCESSED UPON CLICKING THE EVENTS INFO
-                - CHECK ON THE SPOT FOR RequiredAttendees
-            
-                IF ALL MEMBS = ALL WILL BE RECORDED ON EventAttendees
-                IF NONE, NO RECORD*/
 
             lock (eventLock)
             {
@@ -357,7 +237,7 @@ namespace BATODA
 
                     eventRepo.SaveEvent(editingEvent, reqAttendees, true, editingEvent.EventId, selectedMembers);
 
-                    UpdateEventPanel(editingEvent);
+                    PanelsHandler.UpdateEventPanel(editingEvent, EventsOverviewFlowLayoutPanel);
                     UpdateEventInDayCell(editingEvent);
 
                     editingEvent = null;
@@ -384,7 +264,7 @@ namespace BATODA
 
                     events[selectedDate].Add(newEvent);
 
-                    AddEventToOverview(newEvent);
+                    CalendarHandler.AddEventToOverview(newEvent, EventsOverviewFlowLayoutPanel, EventPanel_DoubleClick, EventPanel_Click, EventPanelWidth, EventPanelHeight, EventPanelMargin);
                     AddEventToDayCell(newEvent);
                 }
             }
@@ -398,91 +278,11 @@ namespace BATODA
         }
 
 
-        //ADDING OF EVENT AFTER SAVING
-        private void AddEventToOverview(CalendarEvent ev)
-        {
-            Panel panel = new Panel();
-            panel.Size = new Size(EventPanelWidth, EventPanelHeight);
-            panel.BackColor = Color.WhiteSmoke;
-            panel.BorderStyle = BorderStyle.FixedSingle;
-            panel.Margin = new Padding(EventPanelMargin);
-            panel.Tag = ev;
-
-            Label lblTitle = new Label
-            {
-                Text = ev.Title,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                Location = new Point(10, 5),
-                AutoSize = true
-            };
-
-            Label lblInfo = new Label
-            {
-                Text = $"{ev.Type} | {ev.Status} | {ev.Location} | {ev.Time}",
-                Font = new Font("Segoe UI", 8),
-                Location = new Point(10, 25),
-                AutoSize = true
-            };
-
-            Label lblDate = new Label
-            {
-                Text = ev.Date.ToString("MMMM d, yyyy"),
-                Font = new Font("Segoe UI", 8, FontStyle.Italic),
-                ForeColor = Color.Gray,
-                Location = new Point(10, 45),
-                AutoSize = true
-            };
-
-            panel.Controls.Add(lblTitle);
-            panel.Controls.Add(lblInfo);
-            panel.Controls.Add(lblDate);
-
-            panel.DoubleClick += EventPanel_DoubleClick;
-            panel.Click += EventPanel_Click;
-
-            int insertIndex = 0;
-            foreach (Control ctrl in EventsOverviewFlowLayoutPanel.Controls)
-            {
-                if (ctrl is Panel pnl && pnl.Tag is CalendarEvent existingEv)
-                {
-                    if (ev.Date < existingEv.Date ||
-                        (ev.Date == existingEv.Date && ev.Time.CompareTo(existingEv.Time) < 0))
-                    {
-                        break;
-                    }
-                    insertIndex++;
-                }
-            }
-
-            EventsOverviewFlowLayoutPanel.Controls.Add(panel);
-            EventsOverviewFlowLayoutPanel.Controls.SetChildIndex(panel, insertIndex);
-        }
-
         private void EventPanel_Click(object sender, EventArgs e)
         {
             selectedEventPanel = sender as Panel;
         }
 
-        private void UpdateEventPanel(CalendarEvent evt)
-        {
-            foreach (Control ctrl in EventsOverviewFlowLayoutPanel.Controls)
-            {
-                if (ctrl is Panel panel && panel.Tag == evt)
-                {
-                    foreach (Control child in panel.Controls)
-                    {
-                        if (child is Label lbl)
-                        {
-                            if (lbl.Font.Bold)
-                                lbl.Text = evt.Title;
-                            else if (!lbl.Font.Italic)
-                                lbl.Text = $"{evt.Type} | {evt.Status} | {evt.Location} | {evt.Time}";
-                        }
-                    }
-                    break;
-                }
-            }
-        }
         //EXPAND AND COLLAPSE PANEL
         private void EventPanel_DoubleClick(object sender, EventArgs e)
         {
@@ -933,12 +733,6 @@ namespace BATODA
             }
         }
 
-
-        private void DayContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             MapPanel.Visible = !MapPanel.Visible;
@@ -1025,18 +819,6 @@ namespace BATODA
                 }
             }
             return selected;
-        }
-
-
-
-        private void AddEventPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void SelectMembersGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

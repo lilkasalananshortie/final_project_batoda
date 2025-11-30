@@ -135,7 +135,6 @@
             this.DayContainer.Name = "DayContainer";
             this.DayContainer.Size = new System.Drawing.Size(1158, 740);
             this.DayContainer.TabIndex = 0;
-            this.DayContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.DayContainer_Paint);
             // 
             // label1
             // 
