@@ -18,8 +18,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace BATODA
 {
     public partial class CalendarUForm : UserControl
@@ -560,9 +558,53 @@ namespace BATODA
                 EventsOverviewFlowLayoutPanel.Controls.Remove(panel);
 
                 if (ev.RequiredAttendees != "None")
+                {
                     MoveToPreviousEvents(ev, true);
+                }
                 else
-                    PastEventFlowLayoutPanel.Controls.Add(panel);
+                {
+                    Panel pastPanel = new Panel();
+                    pastPanel.Size = new Size(410, EventPanelHeight);
+                    pastPanel.BorderStyle = BorderStyle.FixedSingle;
+                    pastPanel.Margin = new Padding(EventPanelMargin);
+                    pastPanel.BackColor = Color.LightGreen;
+                    pastPanel.Tag = ev;
+
+                    Label lblTitle = new Label
+                    {
+                        Text = ev.Title,
+                        Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                        Location = new Point(10, 5),
+                        AutoSize = true
+                    };
+
+                    Label lblInfo = new Label
+                    {
+                        Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
+                        Font = new Font("Segoe UI", 8),
+                        Location = new Point(10, 25),
+                        AutoSize = true
+                    };
+
+                    Label lblDate = new Label
+                    {
+                        Text = ev.Date.ToString("MMMM d, yyyy"),
+                        Font = new Font("Segoe UI", 8, FontStyle.Italic),
+                        ForeColor = Color.Black,
+                        Location = new Point(10, 45),
+                        AutoSize = true
+                    };
+
+                    pastPanel.Controls.Add(lblTitle);
+                    pastPanel.Controls.Add(lblInfo);
+                    pastPanel.Controls.Add(lblDate);
+
+                    PastEventFlowLayoutPanel.Controls.Add(pastPanel);
+                    PastEventFlowLayoutPanel.Controls.SetChildIndex(pastPanel, 0);
+
+                    pastPanel.DoubleClick += PastEventPanel_DoubleClick;
+                }
+
 
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
@@ -584,9 +626,6 @@ namespace BATODA
             panel.Controls.Add(btnDone);
             panel.Controls.Add(btnCancel);
         }
-
-
-
 
         //ADDING OF EVENT LABEL TO DAY CELL IN CALENDAR NOW CAN ADD MULTIPLE EVENTS IN THE SAME DAY 
         private void AddEventToDayCell(CalendarEvent ev)
@@ -755,8 +794,7 @@ namespace BATODA
             }
             else if (ev.RequiredAttendees == "Specific Members Only")
             {
-                // Do NOT load any members yet
-                // Grid stays empty for now
+
             }
             else if (ev.RequiredAttendees == "None")
             {
