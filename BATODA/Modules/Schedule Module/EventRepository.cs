@@ -20,6 +20,7 @@ namespace BATODA.Repositories
                 string query;
                 if (isUpdate)
                 {
+                    // UPDATE EXISTING EVENT
                     query = @"UPDATE ScheduleEvents
                       SET EventTitle = @Title,
                           EventType = @Type,
@@ -33,6 +34,7 @@ namespace BATODA.Repositories
                 }
                 else
                 {
+                    // INSERT NEW EVENT
                     query = @"INSERT INTO ScheduleEvents
                       (EventTitle, EventType, Location, Description, Date, Time, EventStatus, RequiredAttendees)  
                       VALUES
@@ -56,6 +58,14 @@ namespace BATODA.Repositories
                     {
                         cmd.Parameters.AddWithValue("@EventId", eventId);
                         cmd.ExecuteNonQuery();
+
+                        // DELETE OLD ATTENDEES FOR UPDATED EVENT
+                        using (SqlCommand deleteCmd = new SqlCommand("DELETE FROM EventAttendees WHERE EventId = @EventId", conn))
+                        {
+                            deleteCmd.Parameters.AddWithValue("@EventId", eventId);
+                            deleteCmd.ExecuteNonQuery();
+                        }
+
                         savedEventId = eventId;
                     }
                     else
@@ -70,13 +80,29 @@ namespace BATODA.Repositories
                 {
                     foreach (var bodyNumber in selectedMembers)
                     {
+                        // INSERT SELECTED MEMBERS INTO EventAttendees
                         using (SqlCommand cmd = new SqlCommand(@"
-                    INSERT INTO EventAttendees (EventId, BodyNumber, MemberName, Present)
+                    INSERT INTO EventAttendees (EventId, BodyNumber, MemberName, IsPresent)
                     VALUES (@EventId, @BodyNumber, @MemberName, 0)", conn))
                         {
                             cmd.Parameters.AddWithValue("@EventId", savedEventId);
                             cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
-                            cmd.Parameters.AddWithValue("@MemberName", "");
+
+                            // GET MEMBER NAME FOR THE BODYNUMBER
+                            using (SqlCommand nameCmd = new SqlCommand("SELECT FirstName, LastName, MiddleInitial FROM MemberInfo WHERE BodyNumber = @BodyNumber", conn))
+                            {
+                                nameCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                                using (SqlDataReader reader = nameCmd.ExecuteReader())
+                                {
+                                    string fullName = "";
+                                    if (reader.Read())
+                                    {
+                                        fullName = $"{reader["LastName"]}, {reader["FirstName"]} {reader["MiddleInitial"]}";
+                                    }
+                                    cmd.Parameters.AddWithValue("@MemberName", fullName);
+                                }
+                            }
+
                             cmd.ExecuteNonQuery();
                         }
                     }
@@ -85,6 +111,36 @@ namespace BATODA.Repositories
                 return savedEventId;
             }
         }
+
+
+        public List<EventAttendee> GetSavedEventAttendees(int eventId)
+        {
+            var list = new List<EventAttendee>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(
+                    "SELECT EventId, BodyNumber, MemberName, IsPresent FROM EventAttendees WHERE EventId = @EventId", conn))
+                {
+                    cmd.Parameters.AddWithValue("@EventId", eventId);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new EventAttendee
+                            {
+                                EventId = Convert.ToInt32(reader["EventId"]),
+                                BodyNumber = Convert.ToInt32(reader["BodyNumber"]),
+                                MemberName = reader["MemberName"].ToString(),
+                                IsPresent = Convert.ToInt32(reader["IsPresent"])
+                            });
+                        }
+                    }
+                }
+            }
+            return list;
+        }
+
 
 
 
@@ -236,7 +292,7 @@ namespace BATODA.Repositories
                                 EventId = Convert.ToInt32(reader["EventId"]),
                                 BodyNumber = Convert.ToInt32(reader["BodyNumber"]),
                                 MemberName = reader["MemberName"].ToString(),
-                                IsPresent = (int)reader["IsPresent"]
+                                IsPresent = Convert.ToInt32(reader["IsPresent"])
                             };
                         }
                     }
@@ -245,14 +301,5 @@ namespace BATODA.Repositories
 
             return null;
         }
-
-
-
-
-
-
-
-
-
     }
 }

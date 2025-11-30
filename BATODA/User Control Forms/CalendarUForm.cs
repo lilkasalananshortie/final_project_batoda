@@ -792,6 +792,18 @@ namespace BATODA
                     AttendanceListDGV.Rows.Add(m.BodyNumber.ToString("D3"), fullName, status);
                 }
             }
+            else if (ev.RequiredAttendees == "Specific Members Only")
+            {
+                var allAttendees = eventRepo.GetSavedEventAttendees(ev.EventId);
+
+                foreach (var a in allAttendees)
+                {
+                    string status = a.IsPresent == 2 ? "Present" : "Absent";
+                    AttendanceListDGV.Rows.Add(a.BodyNumber.ToString("D3"), a.MemberName, status);
+                }
+            }
+
+
         }
 
         private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
@@ -822,7 +834,13 @@ namespace BATODA
             }
             else if (ev.RequiredAttendees == "Specific Members Only")
             {
+                var repo = new EventRepository();
+                var attendees = repo.GetSavedEventAttendees(ev.EventId); 
 
+                foreach (var a in attendees)
+                {
+                    SetAttendanceGrid.Rows.Add(false, a.BodyNumber.ToString("D3"), a.MemberName);
+                }
             }
             else if (ev.RequiredAttendees == "None")
             {
@@ -847,7 +865,7 @@ namespace BATODA
                 DoneEventFlowLayoutPanel.Controls.Remove(previousEventSelectedPanel);
 
                 // ADD TO PAST PANEL
-                previousEventSelectedPanel.Width = 410; // optional: match PastEventFlowLayoutPanel style
+                previousEventSelectedPanel.Width = 410;
                 previousEventSelectedPanel.DoubleClick -= DoneEventPanel_DoubleClick;
                 previousEventSelectedPanel.DoubleClick += PastEventPanel_DoubleClick;
                 PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
