@@ -240,6 +240,22 @@ namespace BATODA
 
             DataGridColumns.LoadMembersToGrid(MembersDataGrid, MemberTable);
 
+            foreach (DataGridViewRow row in MembersDataGrid.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                int level = 0;
+                int.TryParse(row.Cells["PenaltyLevel"].Value?.ToString(), out level);
+
+                string text =
+                    level == 1 ? "First Warning" :
+                    level == 2 ? "Final Warning" :
+                    level == 3 ? $"Remaining {row.Cells["SuspensionDays"].Value} Hours of Suspension" :
+                    "";
+
+                row.Cells["PenaltyLevel"].Value = text;
+            }
+
             if (MemberTable.Rows.Count == 0)
             {
                 NoResultsPanel.BringToFront();
@@ -250,6 +266,7 @@ namespace BATODA
                 NoResultsPanel.Visible = false;
             }
         }
+
 
 
         private void UploadButton_Click(object sender, EventArgs e)
