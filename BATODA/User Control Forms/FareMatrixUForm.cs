@@ -38,10 +38,10 @@ namespace BATODA.User_Control_Forms
 
             dgv.EnableHeadersVisualStyles = false;
             dgv.BackgroundColor = Color.White;
-            dgv.GridColor = Color.FromArgb(173, 46, 36);
             dgv.BorderStyle = BorderStyle.None;
-            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgv.RowHeadersVisible = false;
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgv.GridColor = Color.White;
 
             Font gridFont = new Font("Microsoft Sans Serif", 12.75f, FontStyle.Regular);
             Font headerFont = new Font("Microsoft Sans Serif", 12.75f, FontStyle.Bold);
@@ -55,7 +55,7 @@ namespace BATODA.User_Control_Forms
             dgv.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dgv.ColumnHeadersHeight = 30;
-           
+
             dgv.RowTemplate.Height = 20;
             dgv.DefaultCellStyle.BackColor = Color.White;
             dgv.DefaultCellStyle.ForeColor = Color.Black;
@@ -71,6 +71,7 @@ namespace BATODA.User_Control_Forms
             dgv.Columns.Clear();
             dgv.Rows.Clear();
 
+            // Add columns to DataGridView
             dgv.Columns.Add(new DataGridViewTextBoxColumn()
             {
                 Name = "Barangay",
@@ -113,16 +114,17 @@ namespace BATODA.User_Control_Forms
             });
 
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-
             dgv.Columns["Barangay"].Width = 200;
             dgv.Columns["Route"].Width = 350;
             dgv.Columns["Fare1"].Width = 280;
             dgv.Columns["Fare2"].Width = 280;
             dgv.Columns["Fare3"].Width = 280;
 
-
             dgv.ReadOnly = true;
-            //ETO LANG YUG LAMAN PERO PWEDE PA MAIBA KUNG PAANO APPORACH MO SA DB <-- ARONE
+
+
+
+            // Add rows to the grid view <<-- pwede alising to ARONE 
             dgv.Rows.Add("TALIPTIP", "Dulo – San Sebastian", "35.00 PHP", "28.00 PHP", "28.00 PHP");
             dgv.Rows.Add("", "Binuangan", "25.00 PHP", "20.00 PHP", "20.00 PHP");
             dgv.Rows.Add("", "Sabang Daan", "21.00 PHP", "17.00 PHP", "17.00 PHP");
@@ -167,15 +169,44 @@ namespace BATODA.User_Control_Forms
             dgv.Rows.Add("STA. INES", "Min. fare", "16.00 PHP", "12.80 PHP", "12.80 PHP");
 
             dgv.Rows.Add("TIBIG", "Min. fare", "16.00 PHP", "12.80 PHP", "12.80 PHP");
-
             dgv.Rows.Add("MAYSANTOL", "Min. fare", "16.00 PHP", "12.80 PHP", "12.80 PHP");
-
             dgv.Rows.Add("SAN JOSE", "Min. fare", "16.00 PHP", "12.80 PHP", "12.80 PHP");
+
+
+            string lastBarangay = string.Empty;
+            bool isGray = true;
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                bool isBarangay = !string.IsNullOrWhiteSpace(row.Cells[0].Value?.ToString());
+
+                if (isBarangay)
+                {
+                    lastBarangay = row.Cells[0].Value.ToString();
+                    row.DefaultCellStyle.BackColor = isGray ? Color.LightGray : Color.White; 
+                    isGray = !isGray;
+                }
+                else if (row.Cells[0].Value?.ToString() == lastBarangay)
+                {
+                    row.DefaultCellStyle.BackColor = isGray ? Color.LightGray : Color.White;
+                    isGray = !isGray;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+                }
+            }
+
+            dgv.Invalidate(); 
         }
+
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
+            
+        }
+
+       
 
         }
     }
-}
