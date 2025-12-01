@@ -81,12 +81,12 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.MainRecieptFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.PrintButton = new BATODA.ButtonStyle();
-            this.CloseReceipt = new BATODA.ButtonStyle();
             this.MultiClose = new BATODA.ButtonStyle();
             this.MultiCancel = new BATODA.ButtonStyle();
             this.SaveMassChangeButton = new BATODA.ButtonStyle();
             this.ConfirmSave = new BATODA.ButtonStyle();
+            this.PrintButton = new BATODA.ButtonStyle();
+            this.CloseReceipt = new BATODA.ButtonStyle();
             this.MembershipRenewalButton = new BATODA.ButtonStyle();
             this.RenewalHistoryButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
@@ -747,71 +747,6 @@
             this.MainRecieptFlowPanel.Size = new System.Drawing.Size(540, 712);
             this.MainRecieptFlowPanel.TabIndex = 93;
             // 
-            // PrintButton
-            // 
-            this.PrintButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PrintButton.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PrintButton.BorderColor = System.Drawing.Color.Red;
-            this.PrintButton.BorderRadius = 0;
-            this.PrintButton.BorderSize = 0;
-            this.PrintButton.ButtonImage = null;
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintButton.ForeColor = System.Drawing.Color.Black;
-            this.PrintButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.PrintButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.PrintButton.ImageColor = System.Drawing.Color.Black;
-            this.PrintButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.PrintButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.PrintButton.IsToggled = false;
-            this.PrintButton.Location = new System.Drawing.Point(461, 57);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PrintButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.PaddingX = 0;
-            this.PrintButton.PaddingY = 0;
-            this.PrintButton.Size = new System.Drawing.Size(95, 25);
-            this.PrintButton.TabIndex = 92;
-            this.PrintButton.Text = "Print";
-            this.PrintButton.TextColor = System.Drawing.Color.Black;
-            this.PrintButton.TextOffset = 20;
-            this.PrintButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.PrintButton.UseVisualStyleBackColor = false;
-            // 
-            // CloseReceipt
-            // 
-            this.CloseReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CloseReceipt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CloseReceipt.BorderColor = System.Drawing.Color.Red;
-            this.CloseReceipt.BorderRadius = 0;
-            this.CloseReceipt.BorderSize = 0;
-            this.CloseReceipt.ButtonImage = null;
-            this.CloseReceipt.FlatAppearance.BorderSize = 0;
-            this.CloseReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseReceipt.ForeColor = System.Drawing.Color.White;
-            this.CloseReceipt.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CloseReceipt.HoverColor = System.Drawing.Color.DarkRed;
-            this.CloseReceipt.ImageColor = System.Drawing.Color.Black;
-            this.CloseReceipt.ImagePosition = new System.Drawing.Point(10, 8);
-            this.CloseReceipt.ImageSize = new System.Drawing.Size(24, 24);
-            this.CloseReceipt.IsToggled = false;
-            this.CloseReceipt.Location = new System.Drawing.Point(429, 808);
-            this.CloseReceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CloseReceipt.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CloseReceipt.Name = "CloseReceipt";
-            this.CloseReceipt.PaddingX = 0;
-            this.CloseReceipt.PaddingY = 0;
-            this.CloseReceipt.Size = new System.Drawing.Size(127, 33);
-            this.CloseReceipt.TabIndex = 91;
-            this.CloseReceipt.Text = "Close";
-            this.CloseReceipt.TextColor = System.Drawing.Color.White;
-            this.CloseReceipt.TextOffset = 20;
-            this.CloseReceipt.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CloseReceipt.UseVisualStyleBackColor = false;
-            this.CloseReceipt.Click += new System.EventHandler(this.CloseReceipt_Click);
-            // 
             // MultiClose
             // 
             this.MultiClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -945,6 +880,71 @@
             this.ConfirmSave.UseVisualStyleBackColor = false;
             this.ConfirmSave.Visible = false;
             this.ConfirmSave.Click += new System.EventHandler(this.ConfirmSave_Click);
+            // 
+            // PrintButton
+            // 
+            this.PrintButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PrintButton.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PrintButton.BorderColor = System.Drawing.Color.Red;
+            this.PrintButton.BorderRadius = 0;
+            this.PrintButton.BorderSize = 0;
+            this.PrintButton.ButtonImage = null;
+            this.PrintButton.FlatAppearance.BorderSize = 0;
+            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintButton.ForeColor = System.Drawing.Color.Black;
+            this.PrintButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.PrintButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.PrintButton.ImageColor = System.Drawing.Color.Black;
+            this.PrintButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.PrintButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.PrintButton.IsToggled = false;
+            this.PrintButton.Location = new System.Drawing.Point(461, 57);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PrintButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.PaddingX = 0;
+            this.PrintButton.PaddingY = 0;
+            this.PrintButton.Size = new System.Drawing.Size(95, 25);
+            this.PrintButton.TabIndex = 92;
+            this.PrintButton.Text = "Print";
+            this.PrintButton.TextColor = System.Drawing.Color.Black;
+            this.PrintButton.TextOffset = 20;
+            this.PrintButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.UseVisualStyleBackColor = false;
+            // 
+            // CloseReceipt
+            // 
+            this.CloseReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseReceipt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseReceipt.BorderColor = System.Drawing.Color.Red;
+            this.CloseReceipt.BorderRadius = 0;
+            this.CloseReceipt.BorderSize = 0;
+            this.CloseReceipt.ButtonImage = null;
+            this.CloseReceipt.FlatAppearance.BorderSize = 0;
+            this.CloseReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseReceipt.ForeColor = System.Drawing.Color.White;
+            this.CloseReceipt.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CloseReceipt.HoverColor = System.Drawing.Color.DarkRed;
+            this.CloseReceipt.ImageColor = System.Drawing.Color.Black;
+            this.CloseReceipt.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CloseReceipt.ImageSize = new System.Drawing.Size(24, 24);
+            this.CloseReceipt.IsToggled = false;
+            this.CloseReceipt.Location = new System.Drawing.Point(429, 808);
+            this.CloseReceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CloseReceipt.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseReceipt.Name = "CloseReceipt";
+            this.CloseReceipt.PaddingX = 0;
+            this.CloseReceipt.PaddingY = 0;
+            this.CloseReceipt.Size = new System.Drawing.Size(127, 33);
+            this.CloseReceipt.TabIndex = 91;
+            this.CloseReceipt.Text = "Close";
+            this.CloseReceipt.TextColor = System.Drawing.Color.White;
+            this.CloseReceipt.TextOffset = 20;
+            this.CloseReceipt.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseReceipt.UseVisualStyleBackColor = false;
+            this.CloseReceipt.Click += new System.EventHandler(this.CloseReceipt_Click);
             // 
             // MembershipRenewalButton
             // 
