@@ -68,16 +68,16 @@
             this.LoginPanel.Controls.Add(this.panel1);
             this.LoginPanel.Controls.Add(this.LoginButton);
             this.LoginPanel.ForeColor = System.Drawing.Color.White;
-            this.LoginPanel.Location = new System.Drawing.Point(443, 111);
+            this.LoginPanel.Location = new System.Drawing.Point(443, 58);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(401, 348);
+            this.LoginPanel.Size = new System.Drawing.Size(401, 431);
             this.LoginPanel.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.label4.Location = new System.Drawing.Point(242, 319);
+            this.label4.Location = new System.Drawing.Point(242, 352);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 18;
@@ -87,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(120, 319);
+            this.label3.Location = new System.Drawing.Point(120, 352);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 18;
@@ -97,7 +97,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(234, 217);
+            this.label2.Location = new System.Drawing.Point(234, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 18;
@@ -109,7 +109,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label1.Location = new System.Drawing.Point(81, 53);
+            this.label1.Location = new System.Drawing.Point(76, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(250, 29);
             this.label1.TabIndex = 17;
@@ -118,7 +118,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel2.Location = new System.Drawing.Point(81, 204);
+            this.panel2.Location = new System.Drawing.Point(81, 225);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(238, 3);
             this.panel2.TabIndex = 15;
@@ -128,7 +128,7 @@
             this.PasswordTextBox.BackColor = System.Drawing.Color.White;
             this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(118, 176);
+            this.PasswordTextBox.Location = new System.Drawing.Point(118, 197);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(201, 20);
             this.PasswordTextBox.TabIndex = 7;
@@ -137,7 +137,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(75, 164);
+            this.pictureBox4.Location = new System.Drawing.Point(75, 185);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(37, 42);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -149,7 +149,7 @@
             this.UsernameTextBox.BackColor = System.Drawing.Color.White;
             this.UsernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(118, 121);
+            this.UsernameTextBox.Location = new System.Drawing.Point(118, 142);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(201, 20);
             this.UsernameTextBox.TabIndex = 6;
@@ -158,7 +158,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(75, 113);
+            this.pictureBox3.Location = new System.Drawing.Point(75, 134);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -168,7 +168,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel1.Location = new System.Drawing.Point(81, 149);
+            this.panel1.Location = new System.Drawing.Point(81, 170);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 3);
             this.panel1.TabIndex = 14;
@@ -191,7 +191,7 @@
             this.LoginButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.LoginButton.ImageSize = new System.Drawing.Size(24, 24);
             this.LoginButton.IsToggled = false;
-            this.LoginButton.Location = new System.Drawing.Point(75, 258);
+            this.LoginButton.Location = new System.Drawing.Point(75, 291);
             this.LoginButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.PaddingX = 0;

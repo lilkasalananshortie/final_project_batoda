@@ -38,33 +38,33 @@
             this.ApplySearchButton = new BATODA.ButtonStyle();
             this.ClearButton = new BATODA.ButtonStyle();
             this.TricycleGrid = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.ApplyearchButton = new BATODA.ButtonStyle();
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
             this.OrderComboBox = new System.Windows.Forms.ComboBox();
             this.MemberTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.OperationalLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.UnavailableLbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.CodingLbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.SuspendedLbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TricycleGrid)).BeginInit();
@@ -208,9 +208,9 @@
             this.panel1.Controls.Add(this.MemberTypeComboBox);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Location = new System.Drawing.Point(25, 265);
+            this.panel1.Location = new System.Drawing.Point(14, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1584, 661);
+            this.panel1.Size = new System.Drawing.Size(1591, 661);
             this.panel1.TabIndex = 21;
             // 
             // ApplySearchButton
@@ -231,15 +231,15 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(1344, 90);
+            this.ApplySearchButton.Location = new System.Drawing.Point(1356, 40);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
             this.ApplySearchButton.PaddingX = 0;
             this.ApplySearchButton.PaddingY = 0;
-            this.ApplySearchButton.Size = new System.Drawing.Size(108, 33);
+            this.ApplySearchButton.Size = new System.Drawing.Size(98, 33);
             this.ApplySearchButton.TabIndex = 52;
-            this.ApplySearchButton.Text = "Apply Filter";
+            this.ApplySearchButton.Text = "Apply";
             this.ApplySearchButton.TextColor = System.Drawing.Color.White;
             this.ApplySearchButton.TextOffset = 20;
             this.ApplySearchButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -264,15 +264,15 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1458, 90);
+            this.ClearButton.Location = new System.Drawing.Point(1460, 40);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.PaddingX = 0;
             this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(103, 33);
+            this.ClearButton.Size = new System.Drawing.Size(98, 33);
             this.ClearButton.TabIndex = 51;
-            this.ClearButton.Text = "Clear Filter";
+            this.ClearButton.Text = "Clear";
             this.ClearButton.TextColor = System.Drawing.Color.White;
             this.ClearButton.TextOffset = 20;
             this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -291,7 +291,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TricycleGrid.Location = new System.Drawing.Point(21, 134);
+            this.TricycleGrid.Location = new System.Drawing.Point(26, 81);
             this.TricycleGrid.Name = "TricycleGrid";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -301,39 +301,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.TricycleGrid.Size = new System.Drawing.Size(1539, 504);
+            this.TricycleGrid.Size = new System.Drawing.Size(1532, 633);
             this.TricycleGrid.TabIndex = 34;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1307, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 20);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Status";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1041, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Sort";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(771, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 20);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Member Type";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ApplyearchButton
             // 
@@ -353,19 +322,20 @@
             this.ApplyearchButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.ApplyearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyearchButton.IsToggled = false;
-            this.ApplyearchButton.Location = new System.Drawing.Point(543, 88);
+            this.ApplyearchButton.Location = new System.Drawing.Point(416, 39);
             this.ApplyearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyearchButton.Name = "ApplyearchButton";
             this.ApplyearchButton.PaddingX = 0;
             this.ApplyearchButton.PaddingY = 0;
-            this.ApplyearchButton.Size = new System.Drawing.Size(115, 35);
+            this.ApplyearchButton.Size = new System.Drawing.Size(98, 33);
             this.ApplyearchButton.TabIndex = 28;
             this.ApplyearchButton.Text = "Search";
             this.ApplyearchButton.TextColor = System.Drawing.Color.White;
             this.ApplyearchButton.TextOffset = 0;
             this.ApplyearchButton.ToggleColor = System.Drawing.Color.Empty;
             this.ApplyearchButton.UseVisualStyleBackColor = false;
+            this.ApplyearchButton.Visible = false;
             this.ApplyearchButton.Click += new System.EventHandler(this.ApplyearchButton_Click_1);
             // 
             // StatusComboBox
@@ -375,69 +345,59 @@
             this.StatusComboBox.Items.AddRange(new object[] {
             "Operational",
             "Unavailable"});
-            this.StatusComboBox.Location = new System.Drawing.Point(1307, 37);
+            this.StatusComboBox.Location = new System.Drawing.Point(1162, 41);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(250, 33);
+            this.StatusComboBox.Size = new System.Drawing.Size(187, 33);
             this.StatusComboBox.TabIndex = 27;
             // 
             // OrderComboBox
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(1041, 37);
+            this.OrderComboBox.Location = new System.Drawing.Point(969, 40);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
-            this.OrderComboBox.Size = new System.Drawing.Size(250, 33);
+            this.OrderComboBox.Size = new System.Drawing.Size(187, 33);
             this.OrderComboBox.TabIndex = 26;
             // 
             // MemberTypeComboBox
             // 
             this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(771, 37);
+            this.MemberTypeComboBox.Location = new System.Drawing.Point(776, 40);
             this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
-            this.MemberTypeComboBox.Size = new System.Drawing.Size(250, 33);
+            this.MemberTypeComboBox.Size = new System.Drawing.Size(187, 33);
             this.MemberTypeComboBox.TabIndex = 24;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Search Member";
             // 
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.SearchTextBox);
             this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Location = new System.Drawing.Point(21, 40);
+            this.panel6.Location = new System.Drawing.Point(26, 40);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(637, 41);
+            this.panel6.Size = new System.Drawing.Size(384, 33);
             this.panel6.TabIndex = 38;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(46, 8);
+            this.SearchTextBox.Location = new System.Drawing.Point(6, 3);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(563, 24);
+            this.SearchTextBox.Size = new System.Drawing.Size(338, 24);
             this.SearchTextBox.TabIndex = 22;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(350, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
@@ -447,7 +407,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.OperationalLbl);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(84, 93);
             this.panel2.Name = "panel2";
@@ -466,16 +426,16 @@
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
             // 
-            // label11
+            // OperationalLbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(68, 74);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 39);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "1000";
+            this.OperationalLbl.AutoSize = true;
+            this.OperationalLbl.BackColor = System.Drawing.Color.Transparent;
+            this.OperationalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OperationalLbl.Location = new System.Drawing.Point(68, 74);
+            this.OperationalLbl.Name = "OperationalLbl";
+            this.OperationalLbl.Size = new System.Drawing.Size(97, 39);
+            this.OperationalLbl.TabIndex = 49;
+            this.OperationalLbl.Text = "1000";
             // 
             // label1
             // 
@@ -493,7 +453,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.UnavailableLbl);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(453, 93);
             this.panel3.Name = "panel3";
@@ -512,16 +472,16 @@
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
             // 
-            // label12
+            // UnavailableLbl
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(68, 74);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 39);
-            this.label12.TabIndex = 52;
-            this.label12.Text = "1000";
+            this.UnavailableLbl.AutoSize = true;
+            this.UnavailableLbl.BackColor = System.Drawing.Color.Transparent;
+            this.UnavailableLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UnavailableLbl.Location = new System.Drawing.Point(68, 74);
+            this.UnavailableLbl.Name = "UnavailableLbl";
+            this.UnavailableLbl.Size = new System.Drawing.Size(97, 39);
+            this.UnavailableLbl.TabIndex = 52;
+            this.UnavailableLbl.Text = "1000";
             // 
             // label8
             // 
@@ -539,7 +499,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.CodingLbl);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(821, 93);
             this.panel4.Name = "panel4";
@@ -558,16 +518,16 @@
             this.pictureBox4.TabIndex = 54;
             this.pictureBox4.TabStop = false;
             // 
-            // label7
+            // CodingLbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(68, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 39);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "1000";
+            this.CodingLbl.AutoSize = true;
+            this.CodingLbl.BackColor = System.Drawing.Color.Transparent;
+            this.CodingLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodingLbl.Location = new System.Drawing.Point(68, 74);
+            this.CodingLbl.Name = "CodingLbl";
+            this.CodingLbl.Size = new System.Drawing.Size(97, 39);
+            this.CodingLbl.TabIndex = 54;
+            this.CodingLbl.Text = "1000";
             // 
             // label9
             // 
@@ -585,7 +545,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.SuspendedLbl);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Location = new System.Drawing.Point(1189, 93);
             this.panel5.Name = "panel5";
@@ -604,27 +564,68 @@
             this.pictureBox6.TabIndex = 55;
             this.pictureBox6.TabStop = false;
             // 
-            // label10
+            // SuspendedLbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(68, 74);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 39);
-            this.label10.TabIndex = 56;
-            this.label10.Text = "1000";
+            this.SuspendedLbl.AutoSize = true;
+            this.SuspendedLbl.BackColor = System.Drawing.Color.Transparent;
+            this.SuspendedLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuspendedLbl.Location = new System.Drawing.Point(68, 74);
+            this.SuspendedLbl.Name = "SuspendedLbl";
+            this.SuspendedLbl.Size = new System.Drawing.Size(97, 39);
+            this.SuspendedLbl.TabIndex = 56;
+            this.SuspendedLbl.Text = "1000";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(28, 28);
+            this.label13.Location = new System.Drawing.Point(33, 28);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 24);
+            this.label13.Size = new System.Drawing.Size(108, 24);
             this.label13.TabIndex = 57;
-            this.label13.Text = "Date/Time";
+            this.label13.Text = "Suspended";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Search Member";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(772, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 20);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Member Type";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(965, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Sort";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1158, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 20);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Status";
             // 
             // TricycleUForm
             // 
@@ -670,35 +671,35 @@
         private ButtonStyle RegisteredVehicleButton;
         private ButtonStyle TransferVehicleButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private ButtonStyle ApplyearchButton;
         private System.Windows.Forms.ComboBox StatusComboBox;
         private System.Windows.Forms.ComboBox OrderComboBox;
         private System.Windows.Forms.ComboBox MemberTypeComboBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.DataGridView TricycleGrid;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label OperationalLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label UnavailableLbl;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label CodingLbl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label SuspendedLbl;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel6;
         private ButtonStyle ClearButton;
         private ButtonStyle ApplySearchButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
     }
 }

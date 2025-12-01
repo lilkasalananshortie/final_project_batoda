@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+
 
 namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
 {
@@ -161,5 +164,75 @@ namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
 
             return unavailable;
         }
+
+        public static void UpdateStatusLabels(Label operationalLbl, Label unavailableLbl, Label suspendedLbl, Label codingLbl)
+        {
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                DayOfWeek today = DateTime.Today.DayOfWeek;
+                string unavailableDigits = "";
+
+                if (today == DayOfWeek.Monday) unavailableDigits = "1,2";
+                else if (today == DayOfWeek.Tuesday) unavailableDigits = "3,4";
+                else if (today == DayOfWeek.Wednesday) unavailableDigits = "5,6";
+                else if (today == DayOfWeek.Thursday) unavailableDigits = "7,8";
+                else if (today == DayOfWeek.Friday) unavailableDigits = "9,0";
+
+                int unavailableCount = 0;
+                if (today != DayOfWeek.Saturday && today != DayOfWeek.Sunday)
+                {
+                    string unavailableQuery = $@"
+                SELECT COUNT(*) 
+                FROM MemberInfo 
+                WHERE RIGHT(CONVERT(VARCHAR, BodyNumber), 1) IN ({unavailableDigits}) 
+                  AND MemberStatus = 'Active' 
+                  AND PenaltyLevel < 3
+            ";
+                    using (SqlCommand cmd = new SqlCommand(unavailableQuery, conn))
+                    {
+                        unavailableCount = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+
+                string suspendedQuery = "SELECT COUNT(*) FROM MemberInfo WHERE PenaltyLevel = 3";
+                int suspendedCount = 0;
+                using (SqlCommand cmd = new SqlCommand(suspendedQuery, conn))
+                {
+                    suspendedCount = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+
+                string operationalQuery = $@"
+            SELECT COUNT(*) 
+            FROM MemberInfo 
+            WHERE MemberStatus = 'Active' 
+              AND PenaltyLevel < 3
+        ";
+                int operationalCount = Convert.ToInt32(new SqlCommand(operationalQuery, conn).ExecuteScalar());
+                operationalCount -= unavailableCount;
+
+                operationalLbl.Text = operationalCount.ToString();
+                unavailableLbl.Text = unavailableCount.ToString();
+                suspendedLbl.Text = suspendedCount.ToString();
+
+                string codingMembers = "";
+                if (today == DayOfWeek.Saturday || today == DayOfWeek.Sunday)
+                {
+                    string weekendQuery = "SELECT STRING_AGG(BodyNumber, ' / ') FROM MemberInfo WHERE MemberStatus = 'Active'";
+                    codingMembers = Convert.ToString(new SqlCommand(weekendQuery, conn).ExecuteScalar());
+                }
+                else
+                {
+                    codingMembers = unavailableDigits.Replace(",", " / ");
+                }
+
+                codingLbl.Text = codingMembers;
+            }
+        }
+
+
     }
 }

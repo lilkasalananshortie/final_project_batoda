@@ -239,22 +239,23 @@ namespace BATODA
             DataTable MemberTable = SearchMembers.Find(SearchText);
 
             DataGridColumns.LoadMembersToGrid(MembersDataGrid, MemberTable);
-
             foreach (DataGridViewRow row in MembersDataGrid.Rows)
             {
                 if (row.IsNewRow) continue;
 
-                int level = 0;
-                int.TryParse(row.Cells["PenaltyLevel"].Value?.ToString(), out level);
+                int bodyNumber = Convert.ToInt32(row.Cells["BodyNumber"].Value);
+                var member = MemberRepo.MemberOverview(bodyNumber);
 
                 string text =
-                    level == 1 ? "First Warning" :
-                    level == 2 ? "Final Warning" :
-                    level == 3 ? $"Remaining {row.Cells["SuspensionDays"].Value} Hours of Suspension" :
+                    member.PenaltyLevel == 1 ? "First Warning" :
+                    member.PenaltyLevel == 2 ? "Final Warning" :
+                    member.PenaltyLevel == 3 ? $"Remaining {member.SuspensionDays} Hours of Suspension" :
                     "";
 
                 row.Cells["PenaltyLevel"].Value = text;
             }
+
+
 
             if (MemberTable.Rows.Count == 0)
             {

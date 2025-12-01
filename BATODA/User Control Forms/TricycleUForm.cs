@@ -70,6 +70,7 @@ namespace BATODA
             DisplayClass.SetPlaceholder(StatusComboBox, "Brand", "Sample 1", "Sample 1", "Sample 1", "Sample 1", "Sample 1");
             DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
             DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
+            TricycleRepository.UpdateStatusLabels(OperationalLbl, UnavailableLbl, SuspendedLbl, CodingLbl);
             LoadTricycleGrid();
         }
 

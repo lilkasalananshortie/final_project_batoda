@@ -71,6 +71,8 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -210,11 +212,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(61, 23);
+            this.label3.Location = new System.Drawing.Point(46, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(210, 29);
+            this.label3.Size = new System.Drawing.Size(245, 29);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Penalized (Today)";
+            this.label3.Text = "Suspended Members";
             // 
             // panel4
             // 
@@ -317,9 +319,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(41, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(320, 29);
+            this.label6.Size = new System.Drawing.Size(281, 29);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Pending Assistance Request";
+            this.label6.Text = "Pending Assistance Req.";
             // 
             // panel7
             // 
@@ -367,6 +369,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.panel29);
             this.panel8.Controls.Add(this.QuickActionReviewActionButton);
             this.panel8.Controls.Add(this.QuickActionChangeVehicleButton);
             this.panel8.Controls.Add(this.QuickActionTransferMemberButton);
@@ -386,7 +389,7 @@
             this.QuickActionReviewActionButton.BorderSize = 1;
             this.QuickActionReviewActionButton.ButtonImage = global::BATODA.Properties.Resources.request;
             this.QuickActionReviewActionButton.FlatAppearance.BorderSize = 0;
-            this.QuickActionReviewActionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionReviewActionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuickActionReviewActionButton.ForeColor = System.Drawing.Color.Black;
             this.QuickActionReviewActionButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.QuickActionReviewActionButton.HoverColor = System.Drawing.Color.Silver;
@@ -394,7 +397,7 @@
             this.QuickActionReviewActionButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionReviewActionButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionReviewActionButton.IsToggled = false;
-            this.QuickActionReviewActionButton.Location = new System.Drawing.Point(45, 227);
+            this.QuickActionReviewActionButton.Location = new System.Drawing.Point(43, 238);
             this.QuickActionReviewActionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionReviewActionButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionReviewActionButton.Name = "QuickActionReviewActionButton";
@@ -402,7 +405,7 @@
             this.QuickActionReviewActionButton.PaddingY = 0;
             this.QuickActionReviewActionButton.Size = new System.Drawing.Size(432, 45);
             this.QuickActionReviewActionButton.TabIndex = 40;
-            this.QuickActionReviewActionButton.Text = "Review Request";
+            this.QuickActionReviewActionButton.Text = "Add New Request";
             this.QuickActionReviewActionButton.TextColor = System.Drawing.Color.Black;
             this.QuickActionReviewActionButton.TextOffset = 18;
             this.QuickActionReviewActionButton.ToggleColor = System.Drawing.Color.LightGray;
@@ -418,7 +421,7 @@
             this.QuickActionChangeVehicleButton.BorderSize = 1;
             this.QuickActionChangeVehicleButton.ButtonImage = global::BATODA.Properties.Resources.change_vehicle;
             this.QuickActionChangeVehicleButton.FlatAppearance.BorderSize = 0;
-            this.QuickActionChangeVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionChangeVehicleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuickActionChangeVehicleButton.ForeColor = System.Drawing.Color.Black;
             this.QuickActionChangeVehicleButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.QuickActionChangeVehicleButton.HoverColor = System.Drawing.Color.Silver;
@@ -426,7 +429,7 @@
             this.QuickActionChangeVehicleButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionChangeVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionChangeVehicleButton.IsToggled = false;
-            this.QuickActionChangeVehicleButton.Location = new System.Drawing.Point(45, 174);
+            this.QuickActionChangeVehicleButton.Location = new System.Drawing.Point(43, 185);
             this.QuickActionChangeVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionChangeVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionChangeVehicleButton.Name = "QuickActionChangeVehicleButton";
@@ -434,7 +437,7 @@
             this.QuickActionChangeVehicleButton.PaddingY = 0;
             this.QuickActionChangeVehicleButton.Size = new System.Drawing.Size(432, 45);
             this.QuickActionChangeVehicleButton.TabIndex = 40;
-            this.QuickActionChangeVehicleButton.Text = "Change Vehicle";
+            this.QuickActionChangeVehicleButton.Text = "Change Tricyle Info";
             this.QuickActionChangeVehicleButton.TextColor = System.Drawing.Color.Black;
             this.QuickActionChangeVehicleButton.TextOffset = 18;
             this.QuickActionChangeVehicleButton.ToggleColor = System.Drawing.Color.LightGray;
@@ -450,7 +453,7 @@
             this.QuickActionTransferMemberButton.BorderSize = 1;
             this.QuickActionTransferMemberButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.QuickActionTransferMemberButton.FlatAppearance.BorderSize = 0;
-            this.QuickActionTransferMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionTransferMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuickActionTransferMemberButton.ForeColor = System.Drawing.Color.Black;
             this.QuickActionTransferMemberButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.QuickActionTransferMemberButton.HoverColor = System.Drawing.Color.Silver;
@@ -458,7 +461,7 @@
             this.QuickActionTransferMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionTransferMemberButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionTransferMemberButton.IsToggled = false;
-            this.QuickActionTransferMemberButton.Location = new System.Drawing.Point(43, 121);
+            this.QuickActionTransferMemberButton.Location = new System.Drawing.Point(43, 132);
             this.QuickActionTransferMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionTransferMemberButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionTransferMemberButton.Name = "QuickActionTransferMemberButton";
@@ -483,7 +486,7 @@
             this.QuickActionNewMemberButton.ButtonImage = global::BATODA.Properties.Resources.add_member;
             this.QuickActionNewMemberButton.FlatAppearance.BorderSize = 0;
             this.QuickActionNewMemberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QuickActionNewMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuickActionNewMemberButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuickActionNewMemberButton.ForeColor = System.Drawing.Color.White;
             this.QuickActionNewMemberButton.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.QuickActionNewMemberButton.HoverColor = System.Drawing.Color.DarkRed;
@@ -491,7 +494,7 @@
             this.QuickActionNewMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionNewMemberButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionNewMemberButton.IsToggled = false;
-            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(43, 68);
+            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(43, 79);
             this.QuickActionNewMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionNewMemberButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.QuickActionNewMemberButton.Name = "QuickActionNewMemberButton";
@@ -509,17 +512,18 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(40, 21);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(21, 20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(176, 29);
+            this.label14.Size = new System.Drawing.Size(195, 33);
             this.label14.TabIndex = 5;
-            this.label14.Text = "Total Members";
+            this.label14.Text = "Quick Actions";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.panel12);
             this.panel9.Controls.Add(this.label19);
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.label17);
@@ -535,43 +539,43 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(405, 83);
+            this.label19.Location = new System.Drawing.Point(387, 86);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 20);
+            this.label19.Size = new System.Drawing.Size(88, 20);
             this.label19.TabIndex = 44;
-            this.label19.Text = "0 pesos";
+            this.label19.Text = "10 event(s)";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(387, 124);
+            this.label18.Location = new System.Drawing.Point(396, 128);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(84, 20);
+            this.label18.Size = new System.Drawing.Size(79, 20);
             this.label18.TabIndex = 43;
-            this.label18.Text = "9 paments";
+            this.label18.Text = "9 event(s)";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(47, 83);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(58, 20);
+            this.label17.Size = new System.Drawing.Size(104, 24);
             this.label17.TabIndex = 42;
-            this.label17.Text = "Events";
+            this.label17.Text = "This Month";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(47, 124);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 20);
+            this.label16.Size = new System.Drawing.Size(102, 24);
             this.label16.TabIndex = 41;
-            this.label16.Text = "Done";
+            this.label16.Text = "Completed";
             // 
             // buttonStyle4
             // 
@@ -607,10 +611,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(45, 27);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(22, 24);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(201, 29);
+            this.label15.Size = new System.Drawing.Size(244, 33);
             this.label15.TabIndex = 5;
             this.label15.Text = "Upcoming Events";
             // 
@@ -653,6 +657,22 @@
             this.label24.Size = new System.Drawing.Size(205, 29);
             this.label24.TabIndex = 5;
             this.label24.Text = "Payment Overdue";
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel29.Location = new System.Drawing.Point(20, 59);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(480, 3);
+            this.panel29.TabIndex = 91;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel12.Location = new System.Drawing.Point(21, 64);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(480, 3);
+            this.panel12.TabIndex = 92;
             // 
             // DashboardUForm
             // 
@@ -751,5 +771,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Panel panel12;
     }
 }

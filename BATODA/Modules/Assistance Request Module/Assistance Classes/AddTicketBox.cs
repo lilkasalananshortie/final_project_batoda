@@ -395,7 +395,10 @@ public class AddTicketBox
             else if (action.Equals("Request Rejected", StringComparison.OrdinalIgnoreCase))
                 statusForImage = "request rejected";  
             else if (action.Equals("Request Canceled", StringComparison.OrdinalIgnoreCase))
-                statusForImage = "canceled";          
+                statusForImage = "canceled";
+            else if (action.Equals("Request Released", StringComparison.OrdinalIgnoreCase))
+                statusForImage = "released";
+
             else
                 statusForImage = "unknown";
 
