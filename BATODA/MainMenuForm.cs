@@ -180,7 +180,8 @@ namespace BATODA
         {
             ActivateMainButton("Fare Matrix");
             DisplayClass.ShowMain(new FareMatrixUForm());
-            TopBarPanel.Text = "FARE MATRIX";
+            TopPanelText.Text = "FARE MATRIX";
+            SubTopPanel.Text = "Check the latest fare around bulakan";
 
         }
 
