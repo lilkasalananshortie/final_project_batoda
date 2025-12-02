@@ -55,6 +55,7 @@ namespace BATODA
             AddEventPanel.Hide();
             CheckAttendancePanel.Hide();
             ReqAttendeesCmb.SelectedIndexChanged += ReqAttendeesCmb_SelectedIndexChanged;
+            DefaultAttendancePanel.Show();
 
         }
 
@@ -373,7 +374,7 @@ namespace BATODA
                 else
                 {
                     Panel pastPanel = new Panel();
-                    pastPanel.Size = new Size(410, EventPanelHeight);
+                    pastPanel.Size = new Size(520, EventPanelHeight);
                     pastPanel.BorderStyle = BorderStyle.FixedSingle;
                     pastPanel.Margin = new Padding(EventPanelMargin);
                     pastPanel.BackColor = Color.LightGreen;
@@ -427,6 +428,7 @@ namespace BATODA
                 eventRepo.UpdateEventStatus(ev.EventId, "Canceled"); // UPDATE DATABASE
                 UpdateEventInDayCell(ev); // UPDATE CALENDAR CELL
                 EventsOverviewFlowLayoutPanel.Controls.Remove(panel); // REMOVE FROM OVERVIEW
+               
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
@@ -475,10 +477,10 @@ namespace BATODA
         private void MoveToPreviousEvents(CalendarEvent ev, bool isDone)
         {
             Panel panel = new Panel();
-            panel.Size = new Size(410, EventPanelHeight);
+            panel.Size = new Size(480, EventPanelHeight);
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Margin = new Padding(EventPanelMargin);
-            panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
+            panel.BackColor = isDone ? Color.LightGreen : Color.LightGreen;
 
             panel.Tag = ev;
 
@@ -569,7 +571,7 @@ namespace BATODA
             selectedPastEventPanel = sender as Panel;
             CalendarEvent ev = selectedPastEventPanel.Tag as CalendarEvent;
             if (ev == null) return;
-
+            DefaultAttendancePanel.Hide();
             AttendanceListDGV.Columns.Clear();
             AttendanceListDGV.Rows.Clear();
 
@@ -647,7 +649,7 @@ namespace BATODA
                 PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
                 PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
             }
-            //1167, 741
+           
             CheckAttendancePanel.Location = PreviousEventPanel.Location;
             CheckAttendancePanel.Show();
             CheckAttendancePanel.BringToFront();
@@ -664,10 +666,16 @@ namespace BATODA
                 // REMOVE FROM DONE PANEL
                 DoneEventFlowLayoutPanel.Controls.Remove(previousEventSelectedPanel);
 
-                // ADD TO PAST PANEL
-                previousEventSelectedPanel.Width = 410;
+                
+                previousEventSelectedPanel.Size = new Size(520, EventPanelHeight);
+
+                previousEventSelectedPanel.BackColor = Color.LightGreen;
+
+                // CHANGE THE DOUBLE-CLICK HANDLER
                 previousEventSelectedPanel.DoubleClick -= DoneEventPanel_DoubleClick;
                 previousEventSelectedPanel.DoubleClick += PastEventPanel_DoubleClick;
+
+                // ADD TO PAST PANEL
                 PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
                 PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
             }
@@ -820,5 +828,7 @@ namespace BATODA
             }
             return selected;
         }
+
+       
     }
 }
