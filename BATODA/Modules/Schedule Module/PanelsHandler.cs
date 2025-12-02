@@ -17,13 +17,16 @@ namespace BATODA.Modules.Schedule_Module
             int panelHeight = 70,
             int margin = 5)
         {
+            Size panelSize = hasAttendance ? new Size(520, panelHeight) : new Size(410, panelHeight);
+
             Panel panel = new Panel
             {
-                Size = new Size(410, panelHeight),
+                Size = panelSize,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(margin),
                 Tag = ev,
-                BackColor = hasAttendance ? Color.LightGreen : Color.LightCoral
+                BackColor = hasAttendance ? Color.LightGreen : Color.LightGreen
+
             };
 
             Label lblTitle = new Label
@@ -67,7 +70,9 @@ namespace BATODA.Modules.Schedule_Module
                 panel.DoubleClick += doneDoubleClickHandler;
                 doneEventPanel.Controls.SetChildIndex(panel, 0);
             }
+
         }
+       
 
         public static void AddDoneEventWithNoAttendees(
             CalendarEvent ev,
@@ -78,7 +83,7 @@ namespace BATODA.Modules.Schedule_Module
         {
             Panel panel = new Panel
             {
-                Size = new Size(410, panelHeight),
+                Size = new Size(520, panelHeight),
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(panelMargin),
                 BackColor = Color.LightGreen,

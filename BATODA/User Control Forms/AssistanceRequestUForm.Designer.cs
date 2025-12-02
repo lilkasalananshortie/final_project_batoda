@@ -209,7 +209,6 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.ARHButton);
             this.MembersTopPanel.Controls.Add(this.AssistanceRequestButton);
             this.MembersTopPanel.Location = new System.Drawing.Point(5, 14);
@@ -224,7 +223,7 @@
             this.ARHButton.BackgroundColor = System.Drawing.Color.White;
             this.ARHButton.BorderColor = System.Drawing.Color.Black;
             this.ARHButton.BorderRadius = 0;
-            this.ARHButton.BorderSize = 1;
+            this.ARHButton.BorderSize = 0;
             this.ARHButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.ARHButton.FlatAppearance.BorderSize = 0;
             this.ARHButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -257,7 +256,7 @@
             this.AssistanceRequestButton.BackgroundColor = System.Drawing.Color.LightGray;
             this.AssistanceRequestButton.BorderColor = System.Drawing.Color.Black;
             this.AssistanceRequestButton.BorderRadius = 0;
-            this.AssistanceRequestButton.BorderSize = 1;
+            this.AssistanceRequestButton.BorderSize = 0;
             this.AssistanceRequestButton.ButtonImage = global::BATODA.Properties.Resources.add;
             this.AssistanceRequestButton.FlatAppearance.BorderSize = 0;
             this.AssistanceRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
