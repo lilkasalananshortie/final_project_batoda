@@ -300,7 +300,7 @@
             this.panel1.Controls.Add(this.TicketFlowLayoutPanel);
             this.panel1.Location = new System.Drawing.Point(9, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1588, 1004);
+            this.panel1.Size = new System.Drawing.Size(1588, 917);
             this.panel1.TabIndex = 26;
             // 
             // buttonStyle1
@@ -321,13 +321,13 @@
             this.buttonStyle1.ImagePosition = new System.Drawing.Point(10, 8);
             this.buttonStyle1.ImageSize = new System.Drawing.Size(24, 24);
             this.buttonStyle1.IsToggled = false;
-            this.buttonStyle1.Location = new System.Drawing.Point(1449, 16);
+            this.buttonStyle1.Location = new System.Drawing.Point(1449, 17);
             this.buttonStyle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonStyle1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.buttonStyle1.Name = "buttonStyle1";
             this.buttonStyle1.PaddingX = 0;
             this.buttonStyle1.PaddingY = 0;
-            this.buttonStyle1.Size = new System.Drawing.Size(112, 33);
+            this.buttonStyle1.Size = new System.Drawing.Size(112, 32);
             this.buttonStyle1.TabIndex = 66;
             this.buttonStyle1.Text = "Apply Filter";
             this.buttonStyle1.TextColor = System.Drawing.Color.White;
@@ -1511,11 +1511,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(119, 59);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(129, 58);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 13);
+            this.label12.Size = new System.Drawing.Size(125, 13);
             this.label12.TabIndex = 0;
             this.label12.Text = "*Double Click To Create*";
             this.label12.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
@@ -1583,13 +1583,13 @@
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1333, 16);
+            this.ApplyButton.Location = new System.Drawing.Point(1333, 17);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.PaddingX = 0;
             this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(112, 33);
+            this.ApplyButton.Size = new System.Drawing.Size(112, 32);
             this.ApplyButton.TabIndex = 59;
             this.ApplyButton.Text = "Clear";
             this.ApplyButton.TextColor = System.Drawing.Color.White;
@@ -1599,7 +1599,7 @@
             // 
             // SortComboBox
             // 
-            this.SortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortComboBox.FormattingEnabled = true;
             this.SortComboBox.Items.AddRange(new object[] {
             "Oldest",
@@ -1607,17 +1607,17 @@
             this.SortComboBox.Location = new System.Drawing.Point(1168, 17);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SortComboBox.Name = "SortComboBox";
-            this.SortComboBox.Size = new System.Drawing.Size(155, 33);
+            this.SortComboBox.Size = new System.Drawing.Size(155, 32);
             this.SortComboBox.TabIndex = 58;
             // 
             // AssistanceTypeComboBox
             // 
-            this.AssistanceTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssistanceTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AssistanceTypeComboBox.FormattingEnabled = true;
-            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(1008, 17);
+            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(1006, 17);
             this.AssistanceTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
-            this.AssistanceTypeComboBox.Size = new System.Drawing.Size(155, 33);
+            this.AssistanceTypeComboBox.Size = new System.Drawing.Size(155, 32);
             this.AssistanceTypeComboBox.TabIndex = 57;
             // 
             // panel20
@@ -1625,28 +1625,28 @@
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.SearchTextBox);
             this.panel20.Controls.Add(this.pictureBox7);
-            this.panel20.Location = new System.Drawing.Point(390, 17);
+            this.panel20.Location = new System.Drawing.Point(377, 17);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(453, 41);
+            this.panel20.Size = new System.Drawing.Size(453, 33);
             this.panel20.TabIndex = 63;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(42, 8);
+            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.Location = new System.Drawing.Point(8, 4);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(399, 24);
+            this.SearchTextBox.Size = new System.Drawing.Size(399, 22);
             this.SearchTextBox.TabIndex = 41;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox7.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(420, 3);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox7.Size = new System.Drawing.Size(26, 25);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 45;
             this.pictureBox7.TabStop = false;
@@ -1670,9 +1670,9 @@
             this.TicketFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TicketFlowLayoutPanel.Controls.Add(this.TextStatusPanel);
             this.TicketFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.TicketFlowLayoutPanel.Location = new System.Drawing.Point(390, 64);
+            this.TicketFlowLayoutPanel.Location = new System.Drawing.Point(376, 64);
             this.TicketFlowLayoutPanel.Name = "TicketFlowLayoutPanel";
-            this.TicketFlowLayoutPanel.Size = new System.Drawing.Size(1171, 831);
+            this.TicketFlowLayoutPanel.Size = new System.Drawing.Size(1185, 831);
             this.TicketFlowLayoutPanel.TabIndex = 48;
             // 
             // TextStatusPanel
@@ -1680,7 +1680,7 @@
             this.TextStatusPanel.Controls.Add(this.label49);
             this.TextStatusPanel.Location = new System.Drawing.Point(3, 3);
             this.TextStatusPanel.Name = "TextStatusPanel";
-            this.TextStatusPanel.Size = new System.Drawing.Size(1159, 100);
+            this.TextStatusPanel.Size = new System.Drawing.Size(1172, 100);
             this.TextStatusPanel.TabIndex = 0;
             // 
             // label49

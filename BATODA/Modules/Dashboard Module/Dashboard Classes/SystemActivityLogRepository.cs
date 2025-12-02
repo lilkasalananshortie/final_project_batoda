@@ -84,5 +84,23 @@ namespace BATODA.Modules.Dashboard_Module.Dashboard_Classes
             AddLog(moduleName, actionType, description);
         }
 
+        public void LogNewAssistanceTicket(int ticketID)
+        {
+            string moduleName = "Assistance Request";
+            string actionType = "Added New Ticket";
+            string description = $"T-{ticketID} Financial Request is added";
+            AddLog(moduleName, actionType, description);
+        }
+
+        public void LogReleaseFinancialRequest(int ticketID)
+        {
+            string moduleName = "Assistance Request";
+            string actionType = "Release of Financial Request";
+            string description = $"Financial Request of T-{ticketID} has been released";
+
+            AddLog(moduleName, actionType, description);
+        }
+
+
     }
 }
