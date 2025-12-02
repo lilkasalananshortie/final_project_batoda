@@ -1,0 +1,8 @@
+CREATE TABLE SystemActivityLog
+(
+    SystemLogID INT IDENTITY(1,1) PRIMARY KEY,
+    ModuleName VARCHAR(100) NOT NULL,
+    ActionType VARCHAR(100) NOT NULL,
+    Description VARCHAR(MAX) NULL,
+    DateRecorded DATETIME NOT NULL DEFAULT GETDATE()
+);

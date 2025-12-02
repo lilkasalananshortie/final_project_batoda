@@ -36,8 +36,41 @@
             this.TransferRecordsButton = new BATODA.ButtonStyle();
             this.ManageMembersButton = new BATODA.ButtonStyle();
             this.ScrollablePanel = new System.Windows.Forms.Panel();
+            this.ConfirmationPanel = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.PlaceholderFname = new System.Windows.Forms.Label();
+            this.CancelConfirmation = new BATODA.ButtonStyle();
+            this.ConfirmationButton = new BATODA.ButtonStyle();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.HolderPanel1 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.OwnerSearchGrid = new System.Windows.Forms.DataGridView();
+            this.BodyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel27 = new System.Windows.Forms.Panel();
             this.TransferBtn = new BATODA.ButtonStyle();
             this.label23 = new System.Windows.Forms.Label();
@@ -84,10 +117,6 @@
             this.TransferUploadBtn = new BATODA.ButtonStyle();
             this.NewOwnerPb = new System.Windows.Forms.PictureBox();
             this.ClearButton = new BATODA.ButtonStyle();
-            this.OwnerSearchGrid = new System.Windows.Forms.DataGridView();
-            this.BodyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -135,43 +164,17 @@
             this.FinalSaveTransferBtn = new BATODA.ButtonStyle();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
-            this.ConfirmationPanel = new System.Windows.Forms.Panel();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.PlaceholderFname = new System.Windows.Forms.Label();
-            this.CancelConfirmation = new BATODA.ButtonStyle();
-            this.ConfirmationButton = new BATODA.ButtonStyle();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.TransferUploadImage = new System.Windows.Forms.OpenFileDialog();
             this.MembersTopPanel.SuspendLayout();
             this.ScrollablePanel.SuspendLayout();
+            this.ConfirmationPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.HolderPanel1.SuspendLayout();
             this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -186,7 +189,6 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewOwnerPb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).BeginInit();
             this.panel23.SuspendLayout();
             this.panel25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentOwnerPb)).BeginInit();
@@ -205,8 +207,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfirmNewImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfirmCurrentImage)).BeginInit();
             this.panel26.SuspendLayout();
-            this.ConfirmationPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -355,6 +355,367 @@
             this.ScrollablePanel.Size = new System.Drawing.Size(1585, 884);
             this.ScrollablePanel.TabIndex = 20;
             // 
+            // ConfirmationPanel
+            // 
+            this.ConfirmationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ConfirmationPanel.Controls.Add(this.label36);
+            this.ConfirmationPanel.Controls.Add(this.label35);
+            this.ConfirmationPanel.Controls.Add(this.label34);
+            this.ConfirmationPanel.Controls.Add(this.label31);
+            this.ConfirmationPanel.Controls.Add(this.label40);
+            this.ConfirmationPanel.Controls.Add(this.label32);
+            this.ConfirmationPanel.Controls.Add(this.label30);
+            this.ConfirmationPanel.Controls.Add(this.label17);
+            this.ConfirmationPanel.Controls.Add(this.label39);
+            this.ConfirmationPanel.Controls.Add(this.label38);
+            this.ConfirmationPanel.Controls.Add(this.label37);
+            this.ConfirmationPanel.Controls.Add(this.label33);
+            this.ConfirmationPanel.Controls.Add(this.PlaceholderFname);
+            this.ConfirmationPanel.Controls.Add(this.CancelConfirmation);
+            this.ConfirmationPanel.Controls.Add(this.ConfirmationButton);
+            this.ConfirmationPanel.Controls.Add(this.label15);
+            this.ConfirmationPanel.Controls.Add(this.label29);
+            this.ConfirmationPanel.Controls.Add(this.label28);
+            this.ConfirmationPanel.Controls.Add(this.label16);
+            this.ConfirmationPanel.Controls.Add(this.pictureBox1);
+            this.ConfirmationPanel.Controls.Add(this.label18);
+            this.ConfirmationPanel.Controls.Add(this.label19);
+            this.ConfirmationPanel.Controls.Add(this.label20);
+            this.ConfirmationPanel.Controls.Add(this.label21);
+            this.ConfirmationPanel.Controls.Add(this.label24);
+            this.ConfirmationPanel.Controls.Add(this.label25);
+            this.ConfirmationPanel.Controls.Add(this.label26);
+            this.ConfirmationPanel.Controls.Add(this.label27);
+            this.ConfirmationPanel.Location = new System.Drawing.Point(436, 9);
+            this.ConfirmationPanel.Name = "ConfirmationPanel";
+            this.ConfirmationPanel.Size = new System.Drawing.Size(118, 43);
+            this.ConfirmationPanel.TabIndex = 30;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(868, 313);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(126, 25);
+            this.label36.TabIndex = 91;
+            this.label36.Text = "Placeholder";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(907, 231);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(126, 25);
+            this.label35.TabIndex = 90;
+            this.label35.Text = "Placeholder";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(638, 234);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(126, 25);
+            this.label34.TabIndex = 89;
+            this.label34.Text = "Placeholder";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(420, 234);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(126, 25);
+            this.label31.TabIndex = 88;
+            this.label31.Text = "Placeholder";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(638, 314);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(126, 25);
+            this.label40.TabIndex = 87;
+            this.label40.Text = "Placeholder";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(420, 310);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(126, 25);
+            this.label32.TabIndex = 86;
+            this.label32.Text = "Placeholder";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(906, 152);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(126, 25);
+            this.label30.TabIndex = 85;
+            this.label30.Text = "Placeholder";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(645, 156);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(126, 25);
+            this.label17.TabIndex = 84;
+            this.label17.Text = "Placeholder";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(206, 49);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(126, 25);
+            this.label39.TabIndex = 83;
+            this.label39.Text = "Placeholder";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(206, 49);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(0, 25);
+            this.label38.TabIndex = 82;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(206, 410);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(126, 25);
+            this.label37.TabIndex = 81;
+            this.label37.Text = "Placeholder";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(936, 167);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(0, 25);
+            this.label33.TabIndex = 77;
+            // 
+            // PlaceholderFname
+            // 
+            this.PlaceholderFname.AutoSize = true;
+            this.PlaceholderFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlaceholderFname.Location = new System.Drawing.Point(422, 152);
+            this.PlaceholderFname.Name = "PlaceholderFname";
+            this.PlaceholderFname.Size = new System.Drawing.Size(126, 25);
+            this.PlaceholderFname.TabIndex = 72;
+            this.PlaceholderFname.Text = "Placeholder";
+            // 
+            // CancelConfirmation
+            // 
+            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.BorderRadius = 0;
+            this.CancelConfirmation.BorderSize = 0;
+            this.CancelConfirmation.ButtonImage = null;
+            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
+            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
+            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
+            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
+            this.CancelConfirmation.IsToggled = false;
+            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
+            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelConfirmation.Name = "CancelConfirmation";
+            this.CancelConfirmation.PaddingX = 0;
+            this.CancelConfirmation.PaddingY = 0;
+            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
+            this.CancelConfirmation.TabIndex = 56;
+            this.CancelConfirmation.Text = "Exit";
+            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
+            this.CancelConfirmation.TextOffset = 5;
+            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
+            this.CancelConfirmation.UseVisualStyleBackColor = false;
+            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
+            // 
+            // ConfirmationButton
+            // 
+            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.BorderRadius = 0;
+            this.ConfirmationButton.BorderSize = 0;
+            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
+            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
+            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
+            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
+            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ConfirmationButton.IsToggled = false;
+            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
+            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ConfirmationButton.Name = "ConfirmationButton";
+            this.ConfirmationButton.PaddingX = 0;
+            this.ConfirmationButton.PaddingY = 0;
+            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
+            this.ConfirmationButton.TabIndex = 71;
+            this.ConfirmationButton.Text = "Confrim Transfer";
+            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
+            this.ConfirmationButton.TextOffset = 5;
+            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ConfirmationButton.UseVisualStyleBackColor = false;
+            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(891, 204);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(158, 25);
+            this.label15.TabIndex = 70;
+            this.label15.Text = "Member Type *";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(627, 207);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(174, 25);
+            this.label29.TabIndex = 69;
+            this.label29.Text = "Engine Number *";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(46, 410);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(154, 25);
+            this.label28.TabIndex = 68;
+            this.label28.Text = "Body Number :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(420, 207);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(182, 25);
+            this.label16.TabIndex = 67;
+            this.label16.Text = "Chassis Number :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 316);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(46, 614);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(47, 25);
+            this.label18.TabIndex = 59;
+            this.label18.Text = "sda\r\n";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(638, 285);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 25);
+            this.label19.TabIndex = 63;
+            this.label19.Text = "Model *";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(852, 285);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(150, 25);
+            this.label20.TabIndex = 62;
+            this.label20.Text = "Tricycle Brand";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(411, 285);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(181, 25);
+            this.label21.TabIndex = 61;
+            this.label21.Text = "Contact Number *";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(46, 49);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(154, 25);
+            this.label24.TabIndex = 60;
+            this.label24.Text = "Plate Number :";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(899, 127);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(150, 25);
+            this.label25.TabIndex = 58;
+            this.label25.Text = "Middle Name :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(638, 127);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(127, 25);
+            this.label26.TabIndex = 57;
+            this.label26.Text = "Last Name :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(411, 127);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(128, 25);
+            this.label27.TabIndex = 56;
+            this.label27.Text = "First Name :";
+            // 
             // HolderPanel1
             // 
             this.HolderPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -362,7 +723,7 @@
             this.HolderPanel1.Controls.Add(this.panel23);
             this.HolderPanel1.Location = new System.Drawing.Point(39, 70);
             this.HolderPanel1.Name = "HolderPanel1";
-            this.HolderPanel1.Size = new System.Drawing.Size(1504, 770);
+            this.HolderPanel1.Size = new System.Drawing.Size(1504, 500);
             this.HolderPanel1.TabIndex = 29;
             this.HolderPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.HolderPanel1_Paint);
             // 
@@ -407,6 +768,40 @@
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(807, 748);
             this.panel24.TabIndex = 88;
+            // 
+            // OwnerSearchGrid
+            // 
+            this.OwnerSearchGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OwnerSearchGrid.BackgroundColor = System.Drawing.Color.White;
+            this.OwnerSearchGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.OwnerSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OwnerSearchGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BodyNumber,
+            this.FirstName,
+            this.LastName});
+            this.OwnerSearchGrid.Location = new System.Drawing.Point(275, 90);
+            this.OwnerSearchGrid.Name = "OwnerSearchGrid";
+            this.OwnerSearchGrid.RowHeadersVisible = false;
+            this.OwnerSearchGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.OwnerSearchGrid.Size = new System.Drawing.Size(518, 94);
+            this.OwnerSearchGrid.TabIndex = 60;
+            this.OwnerSearchGrid.Visible = false;
+            this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick_1);
+            // 
+            // BodyNumber
+            // 
+            this.BodyNumber.HeaderText = "Body No.";
+            this.BodyNumber.Name = "BodyNumber";
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
             // 
             // panel27
             // 
@@ -930,40 +1325,6 @@
             this.ClearButton.TextOffset = 5;
             this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
             this.ClearButton.UseVisualStyleBackColor = false;
-            // 
-            // OwnerSearchGrid
-            // 
-            this.OwnerSearchGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.OwnerSearchGrid.BackgroundColor = System.Drawing.Color.White;
-            this.OwnerSearchGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.OwnerSearchGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OwnerSearchGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BodyNumber,
-            this.FirstName,
-            this.LastName});
-            this.OwnerSearchGrid.Location = new System.Drawing.Point(275, 90);
-            this.OwnerSearchGrid.Name = "OwnerSearchGrid";
-            this.OwnerSearchGrid.RowHeadersVisible = false;
-            this.OwnerSearchGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OwnerSearchGrid.Size = new System.Drawing.Size(518, 94);
-            this.OwnerSearchGrid.TabIndex = 60;
-            this.OwnerSearchGrid.Visible = false;
-            this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick_1);
-            // 
-            // BodyNumber
-            // 
-            this.BodyNumber.HeaderText = "Body No.";
-            this.BodyNumber.Name = "BodyNumber";
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
             // 
             // panel23
             // 
@@ -1499,368 +1860,6 @@
             this.label46.TabIndex = 85;
             this.label46.Text = "Do you want to save the changes?";
             this.label46.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label46.Click += new System.EventHandler(this.label46_Click);
-            // 
-            // ConfirmationPanel
-            // 
-            this.ConfirmationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ConfirmationPanel.Controls.Add(this.label36);
-            this.ConfirmationPanel.Controls.Add(this.label35);
-            this.ConfirmationPanel.Controls.Add(this.label34);
-            this.ConfirmationPanel.Controls.Add(this.label31);
-            this.ConfirmationPanel.Controls.Add(this.label40);
-            this.ConfirmationPanel.Controls.Add(this.label32);
-            this.ConfirmationPanel.Controls.Add(this.label30);
-            this.ConfirmationPanel.Controls.Add(this.label17);
-            this.ConfirmationPanel.Controls.Add(this.label39);
-            this.ConfirmationPanel.Controls.Add(this.label38);
-            this.ConfirmationPanel.Controls.Add(this.label37);
-            this.ConfirmationPanel.Controls.Add(this.label33);
-            this.ConfirmationPanel.Controls.Add(this.PlaceholderFname);
-            this.ConfirmationPanel.Controls.Add(this.CancelConfirmation);
-            this.ConfirmationPanel.Controls.Add(this.ConfirmationButton);
-            this.ConfirmationPanel.Controls.Add(this.label15);
-            this.ConfirmationPanel.Controls.Add(this.label29);
-            this.ConfirmationPanel.Controls.Add(this.label28);
-            this.ConfirmationPanel.Controls.Add(this.label16);
-            this.ConfirmationPanel.Controls.Add(this.pictureBox1);
-            this.ConfirmationPanel.Controls.Add(this.label18);
-            this.ConfirmationPanel.Controls.Add(this.label19);
-            this.ConfirmationPanel.Controls.Add(this.label20);
-            this.ConfirmationPanel.Controls.Add(this.label21);
-            this.ConfirmationPanel.Controls.Add(this.label24);
-            this.ConfirmationPanel.Controls.Add(this.label25);
-            this.ConfirmationPanel.Controls.Add(this.label26);
-            this.ConfirmationPanel.Controls.Add(this.label27);
-            this.ConfirmationPanel.Location = new System.Drawing.Point(436, 9);
-            this.ConfirmationPanel.Name = "ConfirmationPanel";
-            this.ConfirmationPanel.Size = new System.Drawing.Size(692, 55);
-            this.ConfirmationPanel.TabIndex = 30;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(868, 313);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(126, 25);
-            this.label36.TabIndex = 91;
-            this.label36.Text = "Placeholder";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(907, 231);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(126, 25);
-            this.label35.TabIndex = 90;
-            this.label35.Text = "Placeholder";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(638, 234);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(126, 25);
-            this.label34.TabIndex = 89;
-            this.label34.Text = "Placeholder";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(420, 234);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(126, 25);
-            this.label31.TabIndex = 88;
-            this.label31.Text = "Placeholder";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(638, 314);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(126, 25);
-            this.label40.TabIndex = 87;
-            this.label40.Text = "Placeholder";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(420, 310);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(126, 25);
-            this.label32.TabIndex = 86;
-            this.label32.Text = "Placeholder";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(906, 152);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(126, 25);
-            this.label30.TabIndex = 85;
-            this.label30.Text = "Placeholder";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(645, 156);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(126, 25);
-            this.label17.TabIndex = 84;
-            this.label17.Text = "Placeholder";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(206, 49);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(126, 25);
-            this.label39.TabIndex = 83;
-            this.label39.Text = "Placeholder";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(206, 49);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(0, 25);
-            this.label38.TabIndex = 82;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(206, 410);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(126, 25);
-            this.label37.TabIndex = 81;
-            this.label37.Text = "Placeholder";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(936, 167);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(0, 25);
-            this.label33.TabIndex = 77;
-            // 
-            // PlaceholderFname
-            // 
-            this.PlaceholderFname.AutoSize = true;
-            this.PlaceholderFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlaceholderFname.Location = new System.Drawing.Point(422, 152);
-            this.PlaceholderFname.Name = "PlaceholderFname";
-            this.PlaceholderFname.Size = new System.Drawing.Size(126, 25);
-            this.PlaceholderFname.TabIndex = 72;
-            this.PlaceholderFname.Text = "Placeholder";
-            // 
-            // CancelConfirmation
-            // 
-            this.CancelConfirmation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.BorderRadius = 0;
-            this.CancelConfirmation.BorderSize = 0;
-            this.CancelConfirmation.ButtonImage = null;
-            this.CancelConfirmation.FlatAppearance.BorderSize = 0;
-            this.CancelConfirmation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelConfirmation.ForeColor = System.Drawing.Color.White;
-            this.CancelConfirmation.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.HoverColor = System.Drawing.Color.DarkRed;
-            this.CancelConfirmation.ImageColor = System.Drawing.Color.White;
-            this.CancelConfirmation.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CancelConfirmation.ImageSize = new System.Drawing.Size(32, 32);
-            this.CancelConfirmation.IsToggled = false;
-            this.CancelConfirmation.Location = new System.Drawing.Point(649, 410);
-            this.CancelConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelConfirmation.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelConfirmation.Name = "CancelConfirmation";
-            this.CancelConfirmation.PaddingX = 0;
-            this.CancelConfirmation.PaddingY = 0;
-            this.CancelConfirmation.Size = new System.Drawing.Size(181, 50);
-            this.CancelConfirmation.TabIndex = 56;
-            this.CancelConfirmation.Text = "Exit";
-            this.CancelConfirmation.TextColor = System.Drawing.Color.White;
-            this.CancelConfirmation.TextOffset = 5;
-            this.CancelConfirmation.ToggleColor = System.Drawing.Color.Empty;
-            this.CancelConfirmation.UseVisualStyleBackColor = false;
-            this.CancelConfirmation.Click += new System.EventHandler(this.CancelConfirmation_Click);
-            // 
-            // ConfirmationButton
-            // 
-            this.ConfirmationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.BorderRadius = 0;
-            this.ConfirmationButton.BorderSize = 0;
-            this.ConfirmationButton.ButtonImage = global::BATODA.Properties.Resources.transfer_data;
-            this.ConfirmationButton.FlatAppearance.BorderSize = 0;
-            this.ConfirmationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConfirmationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmationButton.ForeColor = System.Drawing.Color.White;
-            this.ConfirmationButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ConfirmationButton.ImageColor = System.Drawing.Color.White;
-            this.ConfirmationButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ConfirmationButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ConfirmationButton.IsToggled = false;
-            this.ConfirmationButton.Location = new System.Drawing.Point(836, 410);
-            this.ConfirmationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ConfirmationButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ConfirmationButton.Name = "ConfirmationButton";
-            this.ConfirmationButton.PaddingX = 0;
-            this.ConfirmationButton.PaddingY = 0;
-            this.ConfirmationButton.Size = new System.Drawing.Size(254, 50);
-            this.ConfirmationButton.TabIndex = 71;
-            this.ConfirmationButton.Text = "Confrim Transfer";
-            this.ConfirmationButton.TextColor = System.Drawing.Color.White;
-            this.ConfirmationButton.TextOffset = 5;
-            this.ConfirmationButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ConfirmationButton.UseVisualStyleBackColor = false;
-            this.ConfirmationButton.Click += new System.EventHandler(this.ConfirmationButton_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(891, 204);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(158, 25);
-            this.label15.TabIndex = 70;
-            this.label15.Text = "Member Type *";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(627, 207);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(174, 25);
-            this.label29.TabIndex = 69;
-            this.label29.Text = "Engine Number *";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(46, 410);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(154, 25);
-            this.label28.TabIndex = 68;
-            this.label28.Text = "Body Number :";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(420, 207);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(182, 25);
-            this.label16.TabIndex = 67;
-            this.label16.Text = "Chassis Number :";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 91);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 316);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(46, 614);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(47, 25);
-            this.label18.TabIndex = 59;
-            this.label18.Text = "sda\r\n";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(638, 285);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 25);
-            this.label19.TabIndex = 63;
-            this.label19.Text = "Model *";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(852, 285);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(150, 25);
-            this.label20.TabIndex = 62;
-            this.label20.Text = "Tricycle Brand";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(411, 285);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(181, 25);
-            this.label21.TabIndex = 61;
-            this.label21.Text = "Contact Number *";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(46, 49);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(154, 25);
-            this.label24.TabIndex = 60;
-            this.label24.Text = "Plate Number :";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(899, 127);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(150, 25);
-            this.label25.TabIndex = 58;
-            this.label25.Text = "Middle Name :";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(638, 127);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(127, 25);
-            this.label26.TabIndex = 57;
-            this.label26.Text = "Last Name :";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(411, 127);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(128, 25);
-            this.label27.TabIndex = 56;
-            this.label27.Text = "First Name :";
             // 
             // pictureBox3
             // 
@@ -1906,9 +1905,13 @@
             this.MembersTopPanel.ResumeLayout(false);
             this.ScrollablePanel.ResumeLayout(false);
             this.ScrollablePanel.PerformLayout();
+            this.ConfirmationPanel.ResumeLayout(false);
+            this.ConfirmationPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.HolderPanel1.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -1934,7 +1937,6 @@
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewOwnerPb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel25.ResumeLayout(false);
@@ -1966,9 +1968,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfirmCurrentImage)).EndInit();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
-            this.ConfirmationPanel.ResumeLayout(false);
-            this.ConfirmationPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -38,10 +38,14 @@
             this.ApplySearchButton = new BATODA.ButtonStyle();
             this.ClearButton = new BATODA.ButtonStyle();
             this.TricycleGrid = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.ApplyearchButton = new BATODA.ButtonStyle();
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
             this.OrderComboBox = new System.Windows.Forms.ComboBox();
             this.MemberTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,10 +65,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.SuspendedLbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TricycleGrid)).BeginInit();
@@ -210,7 +210,7 @@
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Location = new System.Drawing.Point(14, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1591, 661);
+            this.panel1.Size = new System.Drawing.Size(1591, 692);
             this.panel1.TabIndex = 21;
             // 
             // ApplySearchButton
@@ -291,7 +291,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TricycleGrid.Location = new System.Drawing.Point(26, 81);
+            this.TricycleGrid.Location = new System.Drawing.Point(26, 79);
             this.TricycleGrid.Name = "TricycleGrid";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -301,8 +301,39 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.TricycleGrid.Size = new System.Drawing.Size(1532, 633);
+            this.TricycleGrid.Size = new System.Drawing.Size(1532, 595);
             this.TricycleGrid.TabIndex = 34;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1158, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 20);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Status";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(965, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Sort";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(772, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 20);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Member Type";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ApplyearchButton
             // 
@@ -345,7 +376,7 @@
             this.StatusComboBox.Items.AddRange(new object[] {
             "Operational",
             "Unavailable"});
-            this.StatusComboBox.Location = new System.Drawing.Point(1162, 41);
+            this.StatusComboBox.Location = new System.Drawing.Point(1162, 39);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(187, 33);
@@ -355,7 +386,7 @@
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(969, 40);
+            this.OrderComboBox.Location = new System.Drawing.Point(969, 39);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
             this.OrderComboBox.Size = new System.Drawing.Size(187, 33);
@@ -370,6 +401,16 @@
             this.MemberTypeComboBox.Name = "MemberTypeComboBox";
             this.MemberTypeComboBox.Size = new System.Drawing.Size(187, 33);
             this.MemberTypeComboBox.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Search Member";
             // 
             // panel6
             // 
@@ -586,47 +627,6 @@
             this.label13.TabIndex = 57;
             this.label13.Text = "Suspended";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Search Member";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(772, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 20);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Member Type";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(965, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Sort";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1158, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 20);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Status";
-            // 
             // TricycleUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,7 +640,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "TricycleUForm";
-            this.Size = new System.Drawing.Size(1843, 942);
+            this.Size = new System.Drawing.Size(1843, 960);
             this.Load += new System.EventHandler(this.RegisteredVehicleUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

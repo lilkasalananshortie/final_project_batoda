@@ -68,7 +68,7 @@
             // 
             this.LabelTimeStamp.AutoSize = true;
             this.LabelTimeStamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTimeStamp.Location = new System.Drawing.Point(254, 4);
+            this.LabelTimeStamp.Location = new System.Drawing.Point(230, 8);
             this.LabelTimeStamp.Name = "LabelTimeStamp";
             this.LabelTimeStamp.Size = new System.Drawing.Size(35, 13);
             this.LabelTimeStamp.TabIndex = 1;

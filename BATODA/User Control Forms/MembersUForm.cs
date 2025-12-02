@@ -2,6 +2,7 @@
 using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Assistance_Request_Module.Renewal_Classes;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.Modules.Member_Module.Member_Classes;
 using BATODA.Modules.MemberModule;
 using BATODA.UI_Displays;
@@ -34,10 +35,7 @@ namespace BATODA
             TotalActiveLbl.Text = MemberInfoSummary.GetActiveCount().ToString();
             TotalInactiveLbl.Text = MemberInfoSummary.GetInactiveCount().ToString();
             TotalSuspendedLbl.Text = MemberInfoSummary.GetSuspendedCount().ToString();
-            
-           
         }
-
 
         private void MembersUForm_Load(object sender, EventArgs e)
         {
@@ -185,6 +183,9 @@ namespace BATODA
 
             var renewalRepo = new RenewalRepository();
             renewalRepo.AddRenewal(NewMember.BodyNumber);
+
+            var logRepo = new SystemActivityLogRepository();
+            logRepo.LogAddMember($"{NewMember.FirstName} {NewMember.MiddleInitial}. {NewMember.LastName}");
 
             ToastManager.Success("New Member Added Successfully!");
             LoadMembersToGrid();
@@ -451,7 +452,6 @@ namespace BATODA
 
             if (confirm == DialogResult.Yes)
             {
-
                 var latestMember = repo.MemberOverview(bodyNumber);
 
                 if (latestMember.PenaltyLevel == 3)
@@ -467,17 +467,18 @@ namespace BATODA
                 }
 
                 repo.IncrementPenaltyLevel(bodyNumber);
+                repo.UpdateSuspensionHours();
                 MessageBox.Show("Penalty added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                repo.UpdateSuspensionHours();
+                var logRepo = new SystemActivityLogRepository();
+                bool isSuspended = latestMember.PenaltyLevel + 1 >= 3;
+
+                logRepo.LogPenaltyAction($"{latestMember.FirstName} {latestMember.LastName}", isSuspended);
 
                 LoadMemberOverview(bodyNumber);
                 LoadMembersToGrid();
             }
         }
-
-
-
 
         private void label17_Click(object sender, EventArgs e)
         {

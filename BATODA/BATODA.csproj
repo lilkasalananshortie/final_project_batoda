@@ -86,6 +86,8 @@
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\TicketModel.cs" />
     <Compile Include="Modules\Assistance Request Module\Renewal Classes\MemberRenewalModel.cs" />
     <Compile Include="Modules\Assistance Request Module\Renewal Classes\RenewalRepository.cs" />
+    <Compile Include="Modules\Dashboard Module\Dashboard Classes\SystemActivityLogModel.cs" />
+    <Compile Include="Modules\Dashboard Module\Dashboard Classes\SystemActivityLogRepository.cs" />
     <Compile Include="Modules\Finance Module\Finance Classes\TaxRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
@@ -587,6 +589,7 @@
     <Content Include="Database Guide &amp; Queries\MemberPayment.txt" />
     <Content Include="Database Guide &amp; Queries\MemberRenewal.txt" />
     <Content Include="Database Guide &amp; Queries\ScheduleEvents.txt" />
+    <Content Include="Database Guide &amp; Queries\SystemActivityLog.txt" />
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
