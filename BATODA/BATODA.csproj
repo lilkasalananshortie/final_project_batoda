@@ -169,6 +169,12 @@
     <Compile Include="User Control Forms\CalendarUForm.Designer.cs">
       <DependentUpon>CalendarUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control Forms\CSUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\CSUForm.Designer.cs">
+      <DependentUpon>CSUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control Forms\DashboardUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\CalendarUForm.resx">
       <DependentUpon>CalendarUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\CSUForm.resx">
+      <DependentUpon>CSUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\DashboardUForm.resx">
       <DependentUpon>DashboardUForm.cs</DependentUpon>

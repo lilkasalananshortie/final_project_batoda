@@ -59,7 +59,7 @@ namespace BATODA
                  RegisteredVehiclesButton,
                  AssistanceLogButton,
                  FinanceButton,
-                 SettingsButton,
+                 CSButton,
                  CalendarBtn,
                  FareMatrixButton
 
@@ -106,7 +106,7 @@ namespace BATODA
                     break;
 
                 case "Settings":
-                    DisplayClass.SetActive(SettingsButton);
+                    DisplayClass.SetActive(CSButton);
                     DisplayClass.ShowMain(new SettingsUForm());
                     TopPanelText.Text = "SETTINGS";
                     break;
@@ -167,6 +167,7 @@ namespace BATODA
             SubTopPanel.Text = "Track member tax payments (Butaw) and membership renewal status";
 
         }
+       
         private void CalendarBtn_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Calendar");
@@ -184,15 +185,22 @@ namespace BATODA
             SubTopPanel.Text = "Check the latest fare around bulakan";
 
         }
-
+        private void CSButton_Click(object sender, EventArgs e)
+        {
+            ActivateMainButton("CSButton");
+            DisplayClass.ShowMain(new CSUForm());
+            TopPanelText.Text = "CUSTOMER SERVICE";
+            SubTopPanel.Text = "Manage customer service complaints and inquiries.";
+        }
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Settings");
             DisplayClass.ShowMain(new SettingsUForm());
             TopPanelText.Text = "SETTINGS";
             SubTopPanel.Text = "Backup/Restore your organizations data ";
-
         }
+
+
         //THIS PART IS FOR CALENDAR AND ACCOUNT BUTTONS NEED PA AYUSIN LOGIC KAPAG TINOGLE BUTTON CLOSE OR MAY IN BUILT CLOSE BTN
         private void AccountButton_Click(object sender, EventArgs e)
         {
@@ -230,6 +238,6 @@ namespace BATODA
 
         }
 
-       
+        
     }
 }
