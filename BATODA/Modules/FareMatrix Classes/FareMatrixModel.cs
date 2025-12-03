@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace BATODA.Modules.FareMatrix_Classes
 {
-    internal class FareMatrixData
+    internal class FareMatrixModel
     {
       
     }
 
     public class FareInfo
     {
+        public int RouteID { get; set; }
         public string Route { get; set; }
-        public string BaseFare { get; set; }
-        public string Discounted { get; set; }
-        public string Student { get; set; }
-
+        public decimal BaseFare { get; set; }
+        public decimal SeniorFare { get; set; }
+        public decimal StudentFare { get; set; }
     }
+
 
 }

@@ -101,7 +101,8 @@
     <Compile Include="Modules\Assistance Request Module\Renewal Classes\RenewalRepository.cs" />
     <Compile Include="Modules\Dashboard Module\Dashboard Classes\SystemActivityLogModel.cs" />
     <Compile Include="Modules\Dashboard Module\Dashboard Classes\SystemActivityLogRepository.cs" />
-    <Compile Include="Modules\FareMatrix Classes\FareMatrixData.cs" />
+    <Compile Include="Modules\FareMatrix Classes\FareMatrixModel.cs" />
+    <Compile Include="Modules\FareMatrix Classes\FareMatrixRepository.cs" />
     <Compile Include="Modules\Finance Module\Finance Classes\TaxRepository.cs" />
     <Compile Include="Modules\Inbox Module\Inbox Classes\GmailServiceHandler.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
@@ -619,6 +620,7 @@
     <Content Include="Database Guide &amp; Queries\DbConnectionGuide.txt" />
     <Content Include="Database Guide &amp; Queries\BatodaFunds.txt" />
     <Content Include="Database Guide &amp; Queries\EventAttendees.txt" />
+    <Content Include="Database Guide &amp; Queries\FareMatrix.txt" />
     <Content Include="Database Guide &amp; Queries\FinancialAssistanceRequests.txt" />
     <Content Include="Database Guide &amp; Queries\MemberPayment.txt" />
     <Content Include="Database Guide &amp; Queries\MemberRenewal.txt" />
