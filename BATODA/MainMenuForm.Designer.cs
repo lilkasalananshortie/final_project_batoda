@@ -51,8 +51,9 @@
             this.AssistanceLogButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
             this.CalendarBtn = new BATODA.ButtonStyle();
-            this.SettingsButton = new BATODA.ButtonStyle();
             this.FareMatrixButton = new BATODA.ButtonStyle();
+            this.CSButton = new BATODA.ButtonStyle();
+            this.SettingsButton = new BATODA.ButtonStyle();
             this.panel1.SuspendLayout();
             this.TopBarPanel.SuspendLayout();
             this.NotificationPanel.SuspendLayout();
@@ -267,6 +268,7 @@
             this.NavBarPanel.Controls.Add(this.FinanceButton);
             this.NavBarPanel.Controls.Add(this.CalendarBtn);
             this.NavBarPanel.Controls.Add(this.FareMatrixButton);
+            this.NavBarPanel.Controls.Add(this.CSButton);
             this.NavBarPanel.Controls.Add(this.SettingsButton);
             this.NavBarPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavBarPanel.Location = new System.Drawing.Point(0, 0);
@@ -485,38 +487,6 @@
             this.CalendarBtn.UseVisualStyleBackColor = false;
             this.CalendarBtn.Click += new System.EventHandler(this.CalendarBtn_Click);
             // 
-            // SettingsButton
-            // 
-            this.SettingsButton.BackColor = System.Drawing.Color.White;
-            this.SettingsButton.BackgroundColor = System.Drawing.Color.White;
-            this.SettingsButton.BorderColor = System.Drawing.Color.White;
-            this.SettingsButton.BorderRadius = 0;
-            this.SettingsButton.BorderSize = 0;
-            this.SettingsButton.ButtonImage = global::BATODA.Properties.Resources.settings_nav_bar_icon;
-            this.SettingsButton.FlatAppearance.BorderSize = 0;
-            this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.SettingsButton.HoverBorderColor = System.Drawing.Color.Black;
-            this.SettingsButton.HoverColor = System.Drawing.Color.Silver;
-            this.SettingsButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.SettingsButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SettingsButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.SettingsButton.IsToggled = false;
-            this.SettingsButton.Location = new System.Drawing.Point(3, 728);
-            this.SettingsButton.MouseDownColor = System.Drawing.Color.LightGray;
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.PaddingX = 0;
-            this.SettingsButton.PaddingY = 0;
-            this.SettingsButton.Size = new System.Drawing.Size(300, 75);
-            this.SettingsButton.TabIndex = 13;
-            this.SettingsButton.Text = "Settings";
-            this.SettingsButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.SettingsButton.TextOffset = 20;
-            this.SettingsButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.SettingsButton.UseVisualStyleBackColor = false;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
             // FareMatrixButton
             // 
             this.FareMatrixButton.BackColor = System.Drawing.Color.White;
@@ -548,6 +518,70 @@
             this.FareMatrixButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.FareMatrixButton.UseVisualStyleBackColor = false;
             this.FareMatrixButton.Click += new System.EventHandler(this.FareMatrixButton_Click);
+            // 
+            // CSButton
+            // 
+            this.CSButton.BackColor = System.Drawing.Color.White;
+            this.CSButton.BackgroundColor = System.Drawing.Color.White;
+            this.CSButton.BorderColor = System.Drawing.Color.White;
+            this.CSButton.BorderRadius = 0;
+            this.CSButton.BorderSize = 0;
+            this.CSButton.ButtonImage = global::BATODA.Properties.Resources.operator_icon;
+            this.CSButton.FlatAppearance.BorderSize = 0;
+            this.CSButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CSButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CSButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.CSButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.CSButton.HoverColor = System.Drawing.Color.Silver;
+            this.CSButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.CSButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CSButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.CSButton.IsToggled = false;
+            this.CSButton.Location = new System.Drawing.Point(3, 728);
+            this.CSButton.MouseDownColor = System.Drawing.Color.LightGray;
+            this.CSButton.Name = "CSButton";
+            this.CSButton.PaddingX = 0;
+            this.CSButton.PaddingY = 0;
+            this.CSButton.Size = new System.Drawing.Size(300, 75);
+            this.CSButton.TabIndex = 13;
+            this.CSButton.Text = "Customer Support";
+            this.CSButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.CSButton.TextOffset = 20;
+            this.CSButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CSButton.UseVisualStyleBackColor = false;
+            this.CSButton.Click += new System.EventHandler(this.CSButton_Click);
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.BackColor = System.Drawing.Color.White;
+            this.SettingsButton.BackgroundColor = System.Drawing.Color.White;
+            this.SettingsButton.BorderColor = System.Drawing.Color.White;
+            this.SettingsButton.BorderRadius = 0;
+            this.SettingsButton.BorderSize = 0;
+            this.SettingsButton.ButtonImage = global::BATODA.Properties.Resources.settings_nav_bar_icon;
+            this.SettingsButton.FlatAppearance.BorderSize = 0;
+            this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.SettingsButton.HoverColor = System.Drawing.Color.Silver;
+            this.SettingsButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SettingsButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SettingsButton.IsToggled = false;
+            this.SettingsButton.Location = new System.Drawing.Point(3, 809);
+            this.SettingsButton.MouseDownColor = System.Drawing.Color.LightGray;
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.PaddingX = 0;
+            this.SettingsButton.PaddingY = 0;
+            this.SettingsButton.Size = new System.Drawing.Size(300, 75);
+            this.SettingsButton.TabIndex = 15;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.SettingsButton.TextOffset = 20;
+            this.SettingsButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.SettingsButton.UseVisualStyleBackColor = false;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // DashboardForm
             // 
@@ -590,7 +624,7 @@
         private ButtonStyle RegisteredVehiclesButton;
         private ButtonStyle AssistanceLogButton;
         private ButtonStyle FinanceButton;
-        private ButtonStyle SettingsButton;
+        private ButtonStyle CSButton;
         private ButtonStyle AccountButton;
         private ButtonStyle NotificationButton;
         private ButtonStyle CalendarButton;
@@ -603,5 +637,6 @@
         private System.Windows.Forms.Label MainTime;
         private System.Windows.Forms.Label SubTopPanel;
         private ButtonStyle FareMatrixButton;
+        private ButtonStyle SettingsButton;
     }
 }
