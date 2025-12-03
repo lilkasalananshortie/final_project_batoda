@@ -13,7 +13,6 @@ namespace BATODA.Modules.FareMatrix_Classes
 
     public class FareInfo
     {
-        public string Baranggay { get; set; }
         public string Route { get; set; }
         public string BaseFare { get; set; }
         public string Discounted { get; set; }
