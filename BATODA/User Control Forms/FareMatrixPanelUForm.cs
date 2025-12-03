@@ -20,12 +20,6 @@ namespace BATODA.User_Control_Forms
 
         private bool isEditing = false;
 
-        public string Baranggay
-        {   
-            get => Baranggaylbl.Text;
-            set => Baranggaylbl.Text = value;
-        }
-
         public string Route
         {
             get => Routelbl.Text;
