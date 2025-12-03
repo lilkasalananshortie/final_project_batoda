@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BATODA.Helpers.Database.Members;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
+using BATODA.Modules.MemberModule;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using BATODA.Helpers.Database.Members;
-using BATODA.Modules.MemberModule;
 
 namespace BATODA.User_Control_Forms
 {
@@ -98,6 +99,9 @@ namespace BATODA.User_Control_Forms
                 }
 
                 // SUCCESS MESSAGE AND PANEL REFRESH
+                var logRepo = new SystemActivityLogRepository();
+                logRepo.LogMemberUpdate(SelectedMemberImage.BodyNumber);
+
                 MessageBox.Show("Member details and image updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DisplayClass.CloseMiniAndMain();
                 DisplayClass.ShowMain(new MembersUForm());

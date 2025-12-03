@@ -248,7 +248,7 @@
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Location = new System.Drawing.Point(14, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1591, 661);
+            this.panel1.Size = new System.Drawing.Size(1591, 692);
             this.panel1.TabIndex = 21;
             // 
             // ApplySearchButton
@@ -329,7 +329,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle1;
-            this.TricycleGrid.Location = new System.Drawing.Point(26, 81);
+            this.TricycleGrid.Location = new System.Drawing.Point(26, 79);
             this.TricycleGrid.Name = "TricycleGrid";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -339,7 +339,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.TricycleGrid.Size = new System.Drawing.Size(1532, 633);
+            this.TricycleGrid.Size = new System.Drawing.Size(1532, 595);
             this.TricycleGrid.TabIndex = 34;
             this.TricycleGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TricycleGrid_CellContentClick);
             // 
@@ -415,7 +415,7 @@
             this.StatusComboBox.Items.AddRange(new object[] {
             "Operational",
             "Unavailable"});
-            this.StatusComboBox.Location = new System.Drawing.Point(1162, 41);
+            this.StatusComboBox.Location = new System.Drawing.Point(1162, 39);
             this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StatusComboBox.Name = "StatusComboBox";
             this.StatusComboBox.Size = new System.Drawing.Size(187, 33);
@@ -425,7 +425,7 @@
             // 
             this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(969, 40);
+            this.OrderComboBox.Location = new System.Drawing.Point(969, 39);
             this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderComboBox.Name = "OrderComboBox";
             this.OrderComboBox.Size = new System.Drawing.Size(187, 33);
@@ -1030,7 +1030,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "TricycleUForm";
-            this.Size = new System.Drawing.Size(1843, 942);
+            this.Size = new System.Drawing.Size(1843, 960);
             this.Load += new System.EventHandler(this.RegisteredVehicleUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

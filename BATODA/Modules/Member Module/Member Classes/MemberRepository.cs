@@ -142,7 +142,7 @@ namespace BATODA.Modules.MemberModule
 
 
         // --------------- UPDATE MEMBERS -----------------
-        public void UpdateMember(MemberModel member)
+        public void TransferMember(MemberModel member)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -176,25 +176,25 @@ namespace BATODA.Modules.MemberModule
 
                 // UPDATE MEMBER INFO
                 string updateQuery = @"
-            UPDATE MemberInfo SET 
-                MembershipType=@MembershipType,
-                LastName=@LastName,
-                FirstName=@FirstName,
-                MiddleInitial=@MiddleInitial,
-                Birthdate=@Birthdate,
-                TricycleBrand=@TricycleBrand,
-                TricycleModel=@TricycleModel,
-                ContactNumber=@ContactNumber,
-                ChassisNumber=@ChassisNumber,
-                EngineNumber=@EngineNumber,
-                PlateNumber=@PlateNumber,
-                TaxBalance=@TaxBalance,
-                MemberStatus=@MemberStatus,
-                PenaltyLevel=@PenaltyLevel,
-                SuspensionDays=@SuspensionDays,
-                SuspensionStart=@SuspensionStart,
-                DateJoined=@DateJoined
-            WHERE BodyNumber=@BodyNumber";
+                UPDATE MemberInfo SET 
+                    MembershipType=@MembershipType,
+                    LastName=@LastName,
+                    FirstName=@FirstName,
+                    MiddleInitial=@MiddleInitial,
+                    Birthdate=@Birthdate,
+                    TricycleBrand=@TricycleBrand,
+                    TricycleModel=@TricycleModel,
+                    ContactNumber=@ContactNumber,
+                    ChassisNumber=@ChassisNumber,
+                    EngineNumber=@EngineNumber,
+                    PlateNumber=@PlateNumber,
+                    TaxBalance=@TaxBalance,
+                    MemberStatus=@MemberStatus,
+                    PenaltyLevel=@PenaltyLevel,
+                    SuspensionDays=@SuspensionDays,
+                    SuspensionStart=@SuspensionStart,
+                    DateJoined=@DateJoined
+                WHERE BodyNumber=@BodyNumber";
 
                 using (SqlCommand cmd = new SqlCommand(updateQuery, con))
                 {
@@ -221,6 +221,63 @@ namespace BATODA.Modules.MemberModule
                 }
             }
         }
+
+        public void UpdateMember(MemberModel member)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                // GET OLD CONTACT NUMBER (optional, not deleting anything)
+                string oldContactQuery = "SELECT ContactNumber FROM MemberInfo WHERE BodyNumber = @BodyNumber";
+                using (SqlCommand cmd = new SqlCommand(oldContactQuery, con))
+                {
+                    cmd.Parameters.AddWithValue("@BodyNumber", member.BodyNumber);
+                    cmd.ExecuteScalar(); // just to ensure connection works; no action needed
+                }
+
+                // UPDATE MEMBER INFO WITHOUT AFFECTING PENALTY OR SUSPENSION
+                string updateQuery = @"
+                UPDATE MemberInfo SET 
+                    MembershipType=@MembershipType,
+                    LastName=@LastName,
+                    FirstName=@FirstName,
+                    MiddleInitial=@MiddleInitial,
+                    Birthdate=@Birthdate,
+                    TricycleBrand=@TricycleBrand,
+                    TricycleModel=@TricycleModel,
+                    ContactNumber=@ContactNumber,
+                    ChassisNumber=@ChassisNumber,
+                    EngineNumber=@EngineNumber,
+                    PlateNumber=@PlateNumber,
+                    TaxBalance=@TaxBalance,
+                    MemberStatus=@MemberStatus,
+                    DateJoined=@DateJoined
+                WHERE BodyNumber=@BodyNumber";
+
+                using (SqlCommand cmd = new SqlCommand(updateQuery, con))
+                {
+                    cmd.Parameters.AddWithValue("@BodyNumber", member.BodyNumber);
+                    cmd.Parameters.AddWithValue("@MembershipType", member.MembershipType ?? "");
+                    cmd.Parameters.AddWithValue("@LastName", member.LastName ?? "");
+                    cmd.Parameters.AddWithValue("@FirstName", member.FirstName ?? "");
+                    cmd.Parameters.AddWithValue("@MiddleInitial", member.MiddleInitial ?? "");
+                    cmd.Parameters.AddWithValue("@Birthdate", member.Birthdate);
+                    cmd.Parameters.AddWithValue("@TricycleBrand", member.TricycleBrand ?? "");
+                    cmd.Parameters.AddWithValue("@TricycleModel", member.TricycleModel ?? "");
+                    cmd.Parameters.AddWithValue("@ContactNumber", member.ContactNumber ?? "");
+                    cmd.Parameters.AddWithValue("@ChassisNumber", member.ChassisNumber ?? "");
+                    cmd.Parameters.AddWithValue("@EngineNumber", member.EngineNumber ?? "");
+                    cmd.Parameters.AddWithValue("@PlateNumber", member.PlateNumber ?? "");
+                    cmd.Parameters.AddWithValue("@TaxBalance", member.TaxBalance);
+                    cmd.Parameters.AddWithValue("@MemberStatus", member.MemberStatus);
+                    cmd.Parameters.AddWithValue("@DateJoined", member.DateJoined);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+        }
+
 
         // --------------- DELETE MEMBERS -----------------
         public void DeleteMember(int bodyNumber)

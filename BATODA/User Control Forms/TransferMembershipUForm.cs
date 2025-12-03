@@ -1,4 +1,9 @@
-﻿using System;
+﻿using BATODA.Helpers.Database.Members;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
+using BATODA.Modules.Member_Module.Member_Classes;
+using BATODA.Modules.MemberModule;
+using BATODA.UI_Displays;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +13,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.Database.Members;
-using BATODA.Modules.Member_Module.Member_Classes;
-using BATODA.Modules.MemberModule;
-using BATODA.UI_Displays;
 
 namespace BATODA
 {
@@ -227,7 +228,7 @@ namespace BATODA
                     PlateNumber = TransferPlateTxt.Text,
                     TaxBalance = 0,
                     MemberStatus = "Active",
-                    PenaltyLevel = 1,
+                    PenaltyLevel = 0,
                     DateJoined = DateTime.Now
                 };
 
@@ -239,7 +240,7 @@ namespace BATODA
                 }
 
                 // UPDATE MEMBER DATA
-                memberRepo.UpdateMember(updatedMember);
+                memberRepo.TransferMember(updatedMember);
 
                 // RECORD TRANSFER HISTORY
                 TransferMembershipHistoryModel transferRecord = new TransferMembershipHistoryModel
@@ -252,6 +253,10 @@ namespace BATODA
                 };
 
                 transferRepo.AddTransferRecord(transferRecord);
+
+                var logRepo = new SystemActivityLogRepository();
+                logRepo.LogMembershipTransfer(bodyNumber, $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}");
+
 
                 MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ConfirmationTransferPanel.Hide();
@@ -295,41 +300,6 @@ namespace BATODA
 
                 NewOwnerPb.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-        }
-
-        private void label46_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel24_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TransferModelTxt_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void TransferUploadBtn_Click_1(object sender, EventArgs e)
@@ -415,11 +385,11 @@ namespace BATODA
                 ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
             }
 
-
             HolderPanel1.SendToBack();
             ConfirmationPanel.Show();
             ConfirmationTransferPanel.BringToFront();
             ConfirmationTransferPanel.Show();
         }
+
     }
 }

@@ -3,6 +3,7 @@ using BATODA.Helpers.DataGrid;
 using BATODA.Modules; 
 using BATODA.Modules.Assistance_Request_Module;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.Modules.MemberModule;
 using BATODA.User_Control_Forms;
 using System;
@@ -151,9 +152,13 @@ namespace BATODA
                 proofFilePath: ReqFileTxt.Text
             );
 
-
             AssistanceRepository repo = new AssistanceRepository();
             repo.AddRequest(data);
+
+            int ticketID = Ticket.GetNextTicketID() - 1;
+
+            var logRepo = new SystemActivityLogRepository();
+            logRepo.LogNewAssistanceTicket(ticketID);
 
             List<TicketModel> tickets = repo.GetAllRequests();
             TicketFlowLayoutPanel.Controls.Clear();

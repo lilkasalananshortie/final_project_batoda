@@ -86,6 +86,9 @@
     <Compile Include="Modules\Assistance Request Module\Assistance Classes\TicketModel.cs" />
     <Compile Include="Modules\Assistance Request Module\Renewal Classes\MemberRenewalModel.cs" />
     <Compile Include="Modules\Assistance Request Module\Renewal Classes\RenewalRepository.cs" />
+    <Compile Include="Modules\Dashboard Module\Dashboard Classes\SystemActivityLogModel.cs" />
+    <Compile Include="Modules\Dashboard Module\Dashboard Classes\SystemActivityLogRepository.cs" />
+    <Compile Include="Modules\FareMatrix Classes\FareMatrixData.cs" />
     <Compile Include="Modules\Finance Module\Finance Classes\TaxRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
@@ -177,6 +180,12 @@
     </Compile>
     <Compile Include="User Control Forms\DaysUForm.Designer.cs">
       <DependentUpon>DaysUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control Forms\FareMatrixPanelUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\FareMatrixPanelUForm.Designer.cs">
+      <DependentUpon>FareMatrixPanelUForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control Forms\FareMatrixUForm.cs">
       <SubType>UserControl</SubType>
@@ -300,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\DaysUForm.resx">
       <DependentUpon>DaysUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\FareMatrixPanelUForm.resx">
+      <DependentUpon>FareMatrixPanelUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\FareMatrixUForm.resx">
       <DependentUpon>FareMatrixUForm.cs</DependentUpon>
@@ -587,6 +599,7 @@
     <Content Include="Database Guide &amp; Queries\MemberPayment.txt" />
     <Content Include="Database Guide &amp; Queries\MemberRenewal.txt" />
     <Content Include="Database Guide &amp; Queries\ScheduleEvents.txt" />
+    <Content Include="Database Guide &amp; Queries\SystemActivityLog.txt" />
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />

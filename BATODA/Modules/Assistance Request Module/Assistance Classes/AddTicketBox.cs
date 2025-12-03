@@ -1,5 +1,6 @@
 ﻿using BATODA.Modules.Assistance_Request_Module;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.User_Control_Forms;
 using System;
 using System.Collections.Generic;
@@ -284,6 +285,10 @@ public class AddTicketBox
             releaseBtn.Hide();
 
             AddActivityLog("Request Released", $"Assistance request {trackingNumber} released", "released");
+
+            var logRepo = new SystemActivityLogRepository();
+            logRepo.LogReleaseFinancialRequest(ticketID);
+
             parent.Hide();
         };
 
