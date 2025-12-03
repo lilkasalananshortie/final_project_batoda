@@ -20,6 +20,7 @@ namespace BATODA
         public TricycleUForm()
         {
             InitializeComponent();
+            EditTrycPanel.Hide();
         }
 
         private void LoadTricycleGrid()
@@ -95,7 +96,7 @@ namespace BATODA
             ToastManager.Success("Filters Cleared Successfully!");
         }
 
-        
+
 
         private void AapplyButtton_Click(object sender, EventArgs e)
         {
@@ -112,7 +113,7 @@ namespace BATODA
             table.Columns.Add("LastName");
             table.Columns.Add("FirstName");
             table.Columns.Add("TricycleBrand");
-            table.Columns.Add("Model");   
+            table.Columns.Add("Model");
             table.Columns.Add("PlateNumber");
             table.Columns.Add("EngineNumber");
             table.Columns.Add("ChassisNumber");
@@ -124,7 +125,7 @@ namespace BATODA
                     r["LastName"],
                     r["FirstName"],
                     r["TricycleBrand"],
-                    r["TricycleModel"], 
+                    r["TricycleModel"],
                     r["PlateNumber"],
                     r["EngineNumber"],
                     r["ChassisNumber"]
@@ -158,6 +159,29 @@ namespace BATODA
 
             DataGridCustom.ApplyCustomGrid(TricycleGrid);
             DataGridCustom.AddEditButtonOnly(TricycleGrid);
+        }
+
+        private void TricycleGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.RowIndex == TricycleGrid.NewRowIndex) return;
+
+            DataGridView dgv = sender as DataGridView;
+            if (dgv == null) return;
+
+            if (dgv.Columns[e.ColumnIndex].Name == "Edit")
+            {
+                EditTrycPanel.Show();
+            }
+        }
+
+        private void CancelEditButton_Click(object sender, EventArgs e)
+        {
+            EditTrycPanel.Hide();
+        }
+
+        private void SaveChangesButton_Click(object sender, EventArgs e)
+        {
+            EditTrycPanel.Hide();
         }
     }
 }
