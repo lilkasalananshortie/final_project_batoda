@@ -33,56 +33,68 @@
             this.InboxFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TESTPANEL = new System.Windows.Forms.Button();
             this.MessagePanel = new System.Windows.Forms.Panel();
-            this.CloseMessage = new System.Windows.Forms.Button();
+            this.CloseMessage = new BATODA.ButtonStyle();
             this.DateLbl = new System.Windows.Forms.Label();
             this.FromLbl = new System.Windows.Forms.Label();
             this.ContentTxt = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.ReplyButton = new BATODA.ButtonStyle();
+            this.ReplyPanel = new System.Windows.Forms.Panel();
+            this.CancelReplyButton = new BATODA.ButtonStyle();
+            this.ReplyContentRTextbox = new System.Windows.Forms.RichTextBox();
+            this.SendReplyButton = new BATODA.ButtonStyle();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.MessagePanel.SuspendLayout();
+            this.ReplyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // EditBodyNoPreviewLbl
             // 
             this.EditBodyNoPreviewLbl.AutoSize = true;
             this.EditBodyNoPreviewLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBodyNoPreviewLbl.Location = new System.Drawing.Point(31, 64);
+            this.EditBodyNoPreviewLbl.Location = new System.Drawing.Point(43, 22);
             this.EditBodyNoPreviewLbl.Name = "EditBodyNoPreviewLbl";
-            this.EditBodyNoPreviewLbl.Size = new System.Drawing.Size(440, 42);
+            this.EditBodyNoPreviewLbl.Size = new System.Drawing.Size(209, 42);
             this.EditBodyNoPreviewLbl.TabIndex = 54;
-            this.EditBodyNoPreviewLbl.Text = "Messages / Placeholder";
+            this.EditBodyNoPreviewLbl.Text = "Messages ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1251, 64);
+            this.label1.Location = new System.Drawing.Point(1298, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 42);
+            this.label1.Size = new System.Drawing.Size(115, 42);
             this.label1.TabIndex = 55;
-            this.label1.Text = "Time / Placeholder";
+            this.label1.Text = "Time ";
             // 
             // InboxFlowLayoutPanel
             // 
+            this.InboxFlowLayoutPanel.AutoScroll = true;
             this.InboxFlowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.InboxFlowLayoutPanel.Location = new System.Drawing.Point(50, 137);
+            this.InboxFlowLayoutPanel.Location = new System.Drawing.Point(50, 70);
             this.InboxFlowLayoutPanel.Name = "InboxFlowLayoutPanel";
-            this.InboxFlowLayoutPanel.Size = new System.Drawing.Size(1547, 1000);
+            this.InboxFlowLayoutPanel.Size = new System.Drawing.Size(1547, 1067);
             this.InboxFlowLayoutPanel.TabIndex = 57;
             // 
             // TESTPANEL
             // 
-            this.TESTPANEL.Location = new System.Drawing.Point(477, 64);
+            this.TESTPANEL.Location = new System.Drawing.Point(258, 22);
             this.TESTPANEL.Name = "TESTPANEL";
             this.TESTPANEL.Size = new System.Drawing.Size(190, 42);
             this.TESTPANEL.TabIndex = 58;
-            this.TESTPANEL.Text = "PANG TEST";
+            this.TESTPANEL.Text = "PA REMOVE NA LANG PAG DONE NA ";
             this.TESTPANEL.UseVisualStyleBackColor = true;
             this.TESTPANEL.Click += new System.EventHandler(this.TESTPANEL_Click);
             // 
             // MessagePanel
             // 
+            this.MessagePanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MessagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MessagePanel.Controls.Add(this.ReplyButton);
             this.MessagePanel.Controls.Add(this.CloseMessage);
             this.MessagePanel.Controls.Add(this.DateLbl);
             this.MessagePanel.Controls.Add(this.FromLbl);
@@ -90,29 +102,50 @@
             this.MessagePanel.Controls.Add(this.label4);
             this.MessagePanel.Controls.Add(this.label3);
             this.MessagePanel.Controls.Add(this.label2);
-            this.MessagePanel.Location = new System.Drawing.Point(504, 168);
+            this.MessagePanel.Location = new System.Drawing.Point(260, 122);
             this.MessagePanel.Name = "MessagePanel";
-            this.MessagePanel.Size = new System.Drawing.Size(694, 650);
+            this.MessagePanel.Size = new System.Drawing.Size(905, 742);
             this.MessagePanel.TabIndex = 1;
             this.MessagePanel.Visible = false;
             // 
             // CloseMessage
             // 
-            this.CloseMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseMessage.Location = new System.Drawing.Point(35, 17);
+            this.CloseMessage.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CloseMessage.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.CloseMessage.BorderColor = System.Drawing.Color.White;
+            this.CloseMessage.BorderRadius = 0;
+            this.CloseMessage.BorderSize = 0;
+            this.CloseMessage.ButtonImage = global::BATODA.Properties.Resources.back;
+            this.CloseMessage.FlatAppearance.BorderSize = 0;
+            this.CloseMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CloseMessage.HoverBorderColor = System.Drawing.Color.Silver;
+            this.CloseMessage.HoverColor = System.Drawing.Color.Silver;
+            this.CloseMessage.ImageColor = System.Drawing.Color.White;
+            this.CloseMessage.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CloseMessage.ImageSize = new System.Drawing.Size(32, 32);
+            this.CloseMessage.IsToggled = false;
+            this.CloseMessage.Location = new System.Drawing.Point(12, 3);
+            this.CloseMessage.MouseDownColor = System.Drawing.Color.LightGray;
             this.CloseMessage.Name = "CloseMessage";
-            this.CloseMessage.Size = new System.Drawing.Size(38, 34);
-            this.CloseMessage.TabIndex = 6;
-            this.CloseMessage.Text = "<";
-            this.CloseMessage.UseVisualStyleBackColor = true;
-            this.CloseMessage.Click += new System.EventHandler(this.CloseMessage_Click);
+            this.CloseMessage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.CloseMessage.PaddingX = 0;
+            this.CloseMessage.PaddingY = 0;
+            this.CloseMessage.Size = new System.Drawing.Size(71, 59);
+            this.CloseMessage.TabIndex = 9;
+            this.CloseMessage.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CloseMessage.TextOffset = 20;
+            this.CloseMessage.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CloseMessage.UseVisualStyleBackColor = false;
+            this.CloseMessage.Click += new System.EventHandler(this.CloseMessage_Click_1);
             // 
             // DateLbl
             // 
             this.DateLbl.AutoSize = true;
             this.DateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLbl.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.DateLbl.Location = new System.Drawing.Point(558, 65);
+            this.DateLbl.Location = new System.Drawing.Point(671, 96);
             this.DateLbl.Name = "DateLbl";
             this.DateLbl.Size = new System.Drawing.Size(100, 24);
             this.DateLbl.TabIndex = 5;
@@ -131,11 +164,13 @@
             // 
             // ContentTxt
             // 
+            this.ContentTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ContentTxt.Enabled = false;
             this.ContentTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContentTxt.Location = new System.Drawing.Point(35, 134);
+            this.ContentTxt.Location = new System.Drawing.Point(24, 134);
             this.ContentTxt.Name = "ContentTxt";
-            this.ContentTxt.Size = new System.Drawing.Size(623, 487);
+            this.ContentTxt.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.ContentTxt.Size = new System.Drawing.Size(849, 579);
             this.ContentTxt.TabIndex = 3;
             this.ContentTxt.Text = "";
             // 
@@ -153,7 +188,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(513, 65);
+            this.label3.Location = new System.Drawing.Point(626, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 1;
@@ -169,20 +204,166 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "From:";
             // 
+            // ReplyButton
+            // 
+            this.ReplyButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ReplyButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.ReplyButton.BorderColor = System.Drawing.Color.White;
+            this.ReplyButton.BorderRadius = 0;
+            this.ReplyButton.BorderSize = 0;
+            this.ReplyButton.ButtonImage = global::BATODA.Properties.Resources.edit_hover;
+            this.ReplyButton.FlatAppearance.BorderSize = 0;
+            this.ReplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReplyButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.ReplyButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ReplyButton.HoverColor = System.Drawing.Color.Silver;
+            this.ReplyButton.ImageColor = System.Drawing.Color.IndianRed;
+            this.ReplyButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ReplyButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ReplyButton.IsToggled = false;
+            this.ReplyButton.Location = new System.Drawing.Point(692, 21);
+            this.ReplyButton.MouseDownColor = System.Drawing.Color.LightGray;
+            this.ReplyButton.Name = "ReplyButton";
+            this.ReplyButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ReplyButton.PaddingX = 0;
+            this.ReplyButton.PaddingY = 0;
+            this.ReplyButton.Size = new System.Drawing.Size(183, 59);
+            this.ReplyButton.TabIndex = 10;
+            this.ReplyButton.Text = "Reply";
+            this.ReplyButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.ReplyButton.TextOffset = 20;
+            this.ReplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.ReplyButton.UseVisualStyleBackColor = false;
+            this.ReplyButton.Click += new System.EventHandler(this.ReplyButton_Click);
+            // 
+            // ReplyPanel
+            // 
+            this.ReplyPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ReplyPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ReplyPanel.Controls.Add(this.label6);
+            this.ReplyPanel.Controls.Add(this.label5);
+            this.ReplyPanel.Controls.Add(this.SendReplyButton);
+            this.ReplyPanel.Controls.Add(this.ReplyContentRTextbox);
+            this.ReplyPanel.Controls.Add(this.CancelReplyButton);
+            this.ReplyPanel.Location = new System.Drawing.Point(984, 123);
+            this.ReplyPanel.Name = "ReplyPanel";
+            this.ReplyPanel.Size = new System.Drawing.Size(587, 741);
+            this.ReplyPanel.TabIndex = 59;
+            // 
+            // CancelReplyButton
+            // 
+            this.CancelReplyButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CancelReplyButton.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.CancelReplyButton.BorderColor = System.Drawing.Color.White;
+            this.CancelReplyButton.BorderRadius = 0;
+            this.CancelReplyButton.BorderSize = 0;
+            this.CancelReplyButton.ButtonImage = global::BATODA.Properties.Resources.back;
+            this.CancelReplyButton.FlatAppearance.BorderSize = 0;
+            this.CancelReplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelReplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelReplyButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CancelReplyButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.CancelReplyButton.HoverColor = System.Drawing.Color.Silver;
+            this.CancelReplyButton.ImageColor = System.Drawing.Color.White;
+            this.CancelReplyButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CancelReplyButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.CancelReplyButton.IsToggled = false;
+            this.CancelReplyButton.Location = new System.Drawing.Point(18, 19);
+            this.CancelReplyButton.MouseDownColor = System.Drawing.Color.LightGray;
+            this.CancelReplyButton.Name = "CancelReplyButton";
+            this.CancelReplyButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.CancelReplyButton.PaddingX = 0;
+            this.CancelReplyButton.PaddingY = 0;
+            this.CancelReplyButton.Size = new System.Drawing.Size(71, 59);
+            this.CancelReplyButton.TabIndex = 10;
+            this.CancelReplyButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CancelReplyButton.TextOffset = 20;
+            this.CancelReplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.CancelReplyButton.UseVisualStyleBackColor = false;
+            this.CancelReplyButton.Click += new System.EventHandler(this.CancelReplyButton_Click);
+            // 
+            // ReplyContentRTextbox
+            // 
+            this.ReplyContentRTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ReplyContentRTextbox.Location = new System.Drawing.Point(45, 101);
+            this.ReplyContentRTextbox.Name = "ReplyContentRTextbox";
+            this.ReplyContentRTextbox.Size = new System.Drawing.Size(520, 541);
+            this.ReplyContentRTextbox.TabIndex = 11;
+            this.ReplyContentRTextbox.Text = "";
+            // 
+            // SendReplyButton
+            // 
+            this.SendReplyButton.BackColor = System.Drawing.Color.White;
+            this.SendReplyButton.BackgroundColor = System.Drawing.Color.White;
+            this.SendReplyButton.BorderColor = System.Drawing.Color.White;
+            this.SendReplyButton.BorderRadius = 0;
+            this.SendReplyButton.BorderSize = 0;
+            this.SendReplyButton.ButtonImage = global::BATODA.Properties.Resources.request;
+            this.SendReplyButton.FlatAppearance.BorderSize = 0;
+            this.SendReplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SendReplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendReplyButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.SendReplyButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.SendReplyButton.HoverColor = System.Drawing.Color.Silver;
+            this.SendReplyButton.ImageColor = System.Drawing.Color.White;
+            this.SendReplyButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SendReplyButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.SendReplyButton.IsToggled = false;
+            this.SendReplyButton.Location = new System.Drawing.Point(359, 654);
+            this.SendReplyButton.MouseDownColor = System.Drawing.Color.LightGray;
+            this.SendReplyButton.Name = "SendReplyButton";
+            this.SendReplyButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.SendReplyButton.PaddingX = 0;
+            this.SendReplyButton.PaddingY = 0;
+            this.SendReplyButton.Size = new System.Drawing.Size(206, 59);
+            this.SendReplyButton.TabIndex = 12;
+            this.SendReplyButton.Text = "Send Reply";
+            this.SendReplyButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.SendReplyButton.TextOffset = 20;
+            this.SendReplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.SendReplyButton.UseVisualStyleBackColor = false;
+            this.SendReplyButton.Click += new System.EventHandler(this.SendReplyButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(326, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 24);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Reply to : ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label6.Location = new System.Drawing.Point(414, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 24);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "GmailUsername";
+            // 
             // CSUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.MessagePanel);
+            this.Controls.Add(this.ReplyPanel);
             this.Controls.Add(this.TESTPANEL);
             this.Controls.Add(this.InboxFlowLayoutPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EditBodyNoPreviewLbl);
             this.Name = "CSUForm";
             this.Size = new System.Drawing.Size(1768, 938);
+            this.Load += new System.EventHandler(this.CSUForm_Load);
             this.MessagePanel.ResumeLayout(false);
             this.MessagePanel.PerformLayout();
+            this.ReplyPanel.ResumeLayout(false);
+            this.ReplyPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,12 +375,19 @@
         private System.Windows.Forms.FlowLayoutPanel InboxFlowLayoutPanel;
         private System.Windows.Forms.Button TESTPANEL;
         private System.Windows.Forms.Panel MessagePanel;
-        private System.Windows.Forms.Button CloseMessage;
         private System.Windows.Forms.Label DateLbl;
         private System.Windows.Forms.Label FromLbl;
         private System.Windows.Forms.RichTextBox ContentTxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private ButtonStyle CloseMessage;
+        private ButtonStyle ReplyButton;
+        private System.Windows.Forms.Panel ReplyPanel;
+        private ButtonStyle SendReplyButton;
+        private System.Windows.Forms.RichTextBox ReplyContentRTextbox;
+        private ButtonStyle CancelReplyButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
