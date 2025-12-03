@@ -14,7 +14,7 @@ namespace BATODA.Modules.Inbox_Module.Inbox_Classes
     internal class GmailServiceHandler
     {
         private static readonly string[] Scopes = { GmailService.Scope.GmailReadonly };
-        private const string ApplicationName = "Batoda Gmail Viewer";
+        private const string ApplicationName = "Batoda Gmail OAuth";
         private GmailService _service;
 
         // AUTHENTICATE AND CREATE GMAIL SERVICE
