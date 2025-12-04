@@ -20,6 +20,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BATODA
 {
     public partial class MembersUForm : UserControl
@@ -48,7 +49,17 @@ namespace BATODA
             DataGridCustom.ApplyCustomGrid(MembersDataGrid);
 
             MembersDataGrid.AutoGenerateColumns = false;
-            repo.UpdateAllTaxBalances();
+
+            try
+            {
+                repo.UpdateAllTaxBalances();
+            }
+            catch (Exception ex)
+            {
+                ToastManager.Error($"Failed to update tax balances");
+            
+            }
+
             SetupGridColumns();
             LoadMembersToGrid();
 
@@ -156,7 +167,7 @@ namespace BATODA
        
         private void AddMemberButton_Click(object sender, EventArgs e)
         {
-            ToastManager.Info("Member Search");    // testing lang 
+                
             LoadBodyNumber.ShowNext(AddBodyNo);
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
@@ -181,7 +192,10 @@ namespace BATODA
                     string.IsNullOrWhiteSpace(AddChassisNumberTxt.Text) ||
                     string.IsNullOrWhiteSpace(AddEngineNumberTxt.Text))
                 {
-                    MessageBox.Show("Please fill in all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ToastManager.Warning("Please fill in all required fields before saving.");
+                    
+
+
                     return;
                 }
 
@@ -189,8 +203,8 @@ namespace BATODA
                 // CHECK IMAGE IF SELECTED
                 if (PreviewImagePb.Image == null)
                 {
-                    MessageBox.Show("A member image is required before saving.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                   ToastManager.Warning("Please upload an image before saving.");
+                     return;
                 }
 
                 int nextBodyNumber = LoadBodyNumber.GetNextNumber();
@@ -220,7 +234,7 @@ namespace BATODA
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving new member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               ToastManager.Error("Error adding new member: " + ex.Message);
             }
         }
 
@@ -518,6 +532,11 @@ namespace BATODA
             PreviewImagePb.Image = null;
             UploadImageDialog.FileName = "";
 
+        }
+
+        private void ManageMembersButton_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

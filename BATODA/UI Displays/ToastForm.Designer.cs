@@ -58,7 +58,7 @@ namespace BATODA.UI_Displays
             this.progressBarPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.progressBarPanel.Location = new System.Drawing.Point(0, 69);
             this.progressBarPanel.Name = "progressBarPanel";
-            this.progressBarPanel.Size = new System.Drawing.Size(374, 3);
+            this.progressBarPanel.Size = new System.Drawing.Size(402, 3);
             this.progressBarPanel.TabIndex = 3;
             // 
             // progressFillPanel
@@ -78,7 +78,7 @@ namespace BATODA.UI_Displays
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(348, 9);
+            this.btnClose.Location = new System.Drawing.Point(376, 9);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(21, 21);
             this.btnClose.TabIndex = 0;
@@ -97,7 +97,7 @@ namespace BATODA.UI_Displays
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 72);
+            this.ClientSize = new System.Drawing.Size(402, 72);
             this.Controls.Add(this.SideColorPanel);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
