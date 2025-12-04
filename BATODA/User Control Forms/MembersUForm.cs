@@ -167,34 +167,62 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            int nextBodyNumber = LoadBodyNumber.GetNextNumber(); 
-
-            MemberModel NewMember = GetMemberFromForm();
-            NewMember.BodyNumber = nextBodyNumber;
-
-            if (PreviewImagePb.Image != null && !string.IsNullOrEmpty(UploadImageDialog.FileName))
+            try
             {
+                // CHECK REQUIRED FIELDS
+                if (string.IsNullOrWhiteSpace(AddFirstNameTxt.Text) ||
+                    string.IsNullOrWhiteSpace(AddLastNameTxt.Text) ||
+                    string.IsNullOrWhiteSpace(AddMiddleNameTxt.Text) ||
+                    string.IsNullOrWhiteSpace(AddMemberTypeCmb.Text) ||
+                    string.IsNullOrWhiteSpace(AddContactNumber.Text) ||
+                    string.IsNullOrWhiteSpace(AddPlateNumberTxt.Text) ||
+                    string.IsNullOrWhiteSpace(AddTricycleBrand.Text) ||
+                    string.IsNullOrWhiteSpace(AddModelTxt.Text) ||
+                    string.IsNullOrWhiteSpace(AddChassisNumberTxt.Text) ||
+                    string.IsNullOrWhiteSpace(AddEngineNumberTxt.Text))
+                {
+                    MessageBox.Show("Please fill in all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                // CHECK IMAGE IF SELECTED
+                if (PreviewImagePb.Image == null)
+                {
+                    MessageBox.Show("A member image is required before saving.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int nextBodyNumber = LoadBodyNumber.GetNextNumber();
+
+                MemberModel NewMember = GetMemberFromForm();
+                NewMember.BodyNumber = nextBodyNumber;
+
+                // SAVE IMAGE
                 string savedPath = SaveImageToFolder.TransferMembershipSave(UploadImageDialog.FileName, nextBodyNumber);
                 NewMember.ImagePath = savedPath;
+
+                var MemberRepo = new MemberRepository();
+                MemberRepo.AddMember(NewMember);
+
+                var renewalRepo = new RenewalRepository();
+                renewalRepo.AddRenewal(NewMember.BodyNumber);
+
+                var logRepo = new SystemActivityLogRepository();
+                logRepo.LogAddMember($"{NewMember.FirstName} {NewMember.MiddleInitial}. {NewMember.LastName}");
+
+                ToastManager.Success("New Member Added Successfully!");
+                LoadMembersToGrid();
+
+                AddMemberPanel.Visible = false;
+                AddMemberButton.Enabled = true;
+                SearchBtn.Enabled = true;
             }
-
-            var MemberRepo = new MemberRepository();
-            MemberRepo.AddMember(NewMember);
-
-            var renewalRepo = new RenewalRepository();
-            renewalRepo.AddRenewal(NewMember.BodyNumber);
-
-            var logRepo = new SystemActivityLogRepository();
-            logRepo.LogAddMember($"{NewMember.FirstName} {NewMember.MiddleInitial}. {NewMember.LastName}");
-
-            ToastManager.Success("New Member Added Successfully!");
-            LoadMembersToGrid();
-
-            AddMemberPanel.Visible = false;
-            AddMemberButton.Enabled = true;
-            SearchBtn.Enabled = true;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving new member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
@@ -482,6 +510,13 @@ namespace BATODA
 
         private void label17_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            PreviewImagePb.Image = null;
+            UploadImageDialog.FileName = "";
 
         }
     }

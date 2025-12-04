@@ -31,7 +31,8 @@ public class AddTicketBox
         string amount,
         string assistanceThru,
         string contactNum,
-        string dateNeeded)
+        string dateNeeded,
+        Image memberImag)
     {
         Panel TicketBox = new Panel();
         TicketBox.Size = new Size(300, 150);
@@ -71,6 +72,12 @@ public class AddTicketBox
             BackColor = Color.LightGray
         };
 
+        if (memberImag != null)
+        {
+            picMember.Image = new Bitmap(memberImag);
+        }
+
+
         int rightX = picMember.Right + 10;
 
         Label lblName = new Label()
@@ -91,7 +98,7 @@ public class AddTicketBox
 
         Label lblDate = new Label()
         {
-            Text = "Date Requested: " + dateRequested,
+            Text = "Requested at: " + dateRequested,
             Location = new Point(rightX, y + 55),
             AutoSize = true,
             Font = new Font("Microsoft Sans Serif", 9)
@@ -329,8 +336,6 @@ public class AddTicketBox
         TicketFlowLayoutPanel.Controls.Add(TicketBox);
     }
 
-
-
     private void TicketBox_Click(object sender, EventArgs e)
     {
         Panel panel = sender as Panel;
@@ -372,7 +377,6 @@ public class AddTicketBox
     }
 
     // ----------------- Activity Log Methods Applied -----------------
-
     private void AddActivityLog(string actionTitle, string actionInfo, string status)
     {
         string timestamp = DateTime.Now.ToString("hh:mm tt");
@@ -416,9 +420,5 @@ public class AddTicketBox
 
             ActivityLogFlowLayoutPanel.Controls.Add(logCard);
         }
-
-
     }
-
-
 }

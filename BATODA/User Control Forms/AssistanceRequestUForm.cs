@@ -53,12 +53,23 @@ namespace BATODA
         private void LoadAllTickets()
         {
             TicketFlowLayoutPanel.Controls.Clear();
-
             AssistanceRepository repo = new AssistanceRepository();
             List<TicketModel> tickets = repo.GetAllRequests();
 
             foreach (TicketModel ticket in tickets)
             {
+                Image memberImage = null;
+                string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
+                string[] matchingImages = Directory.GetFiles(imagesFolder, $"{ticket.BodyNumber:D3}*.*");
+
+                if (matchingImages.Length > 0)
+                {
+                    using (var temp = new Bitmap(matchingImages[0]))
+                    {
+                        memberImage = new Bitmap(temp);
+                    }
+                }
+
                 ticketHelper.CreateTicketBox(
                     trackingNumber: "TR-" + ticket.TicketID,
                     fullName: ticket.FullName,
@@ -69,11 +80,12 @@ namespace BATODA
                     amount: "₱" + ticket.RequestedAmount.ToString("N2"),
                     assistanceThru: ticket.AssistanceThru,
                     contactNum: ticket.ContactNumber,
-                    dateNeeded: ticket.TargetDate.ToString("MM-dd-yyyy")
+                    dateNeeded: ticket.TargetDate.ToString("MM-dd-yyyy"),
+                    memberImag: memberImage
                 );
             }
-        }
 
+        }
 
         private void TransferToDisplayPanel()
         {
@@ -115,7 +127,6 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new ARHUForm());
         }
-
 
 
         private void TicketConfirmButton_Click(object sender, EventArgs e)
@@ -165,6 +176,18 @@ namespace BATODA
 
             foreach (TicketModel ticket in tickets)
             {
+                Image memberImage = null;
+                string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
+                string[] matchingImages = Directory.GetFiles(imagesFolder, $"{ticket.BodyNumber:D3}*.*");
+
+                if (matchingImages.Length > 0)
+                {
+                    using (var temp = new Bitmap(matchingImages[0]))
+                    {
+                        memberImage = new Bitmap(temp);
+                    }
+                }
+
                 ticketHelper.CreateTicketBox(
                     trackingNumber: "TR-" + ticket.TicketID,
                     fullName: ticket.FullName,
@@ -175,9 +198,11 @@ namespace BATODA
                     amount: "₱" + ticket.RequestedAmount.ToString("N2"),
                     assistanceThru: ticket.AssistanceThru,
                     contactNum: ticket.ContactNumber,
-                    dateNeeded: ticket.TargetDate.ToString("MM-dd-yyyy")
+                    dateNeeded: ticket.TargetDate.ToString("MM-dd-yyyy"),
+                    memberImag: memberImage
                 );
             }
+
 
             ConfirmationPanel.Hide();
         }

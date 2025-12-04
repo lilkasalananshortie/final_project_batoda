@@ -87,6 +87,7 @@
             this.label71 = new System.Windows.Forms.Label();
             this.PastEventAttendancePanel = new System.Windows.Forms.Panel();
             this.DefaultAttendancePanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.AttendanceListDGV = new System.Windows.Forms.DataGridView();
             this.PastEventFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -101,7 +102,6 @@
             this.nextButton = new BATODA.ButtonStyle();
             this.previousButton = new BATODA.ButtonStyle();
             this.SaveAttendanceButton = new BATODA.ButtonStyle();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.AddEventPanel.SuspendLayout();
             this.SpecificMembsPanel.SuspendLayout();
@@ -126,10 +126,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.PastEventAttendancePanel.SuspendLayout();
             this.DefaultAttendancePanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).BeginInit();
             this.panel20.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // DayContainer
@@ -446,6 +446,7 @@
             // 
             // ReqAttendeesCmb
             // 
+            this.ReqAttendeesCmb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ReqAttendeesCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReqAttendeesCmb.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReqAttendeesCmb.FormattingEnabled = true;
@@ -789,6 +790,16 @@
             this.DefaultAttendancePanel.Size = new System.Drawing.Size(602, 438);
             this.DefaultAttendancePanel.TabIndex = 15;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Location = new System.Drawing.Point(-1, 153);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(605, 125);
+            this.panel2.TabIndex = 3;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -885,6 +896,7 @@
             this.SaveSelectedBtn.BorderRadius = 0;
             this.SaveSelectedBtn.BorderSize = 1;
             this.SaveSelectedBtn.ButtonImage = null;
+            this.SaveSelectedBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveSelectedBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveSelectedBtn.ForeColor = System.Drawing.Color.Black;
             this.SaveSelectedBtn.HoverBorderColor = System.Drawing.Color.Black;
@@ -905,6 +917,7 @@
             this.SaveSelectedBtn.TextOffset = 20;
             this.SaveSelectedBtn.ToggleColor = System.Drawing.Color.Empty;
             this.SaveSelectedBtn.UseVisualStyleBackColor = false;
+            this.SaveSelectedBtn.Click += new System.EventHandler(this.SaveSelectedBtn_Click);
             // 
             // SaveEventButton
             // 
@@ -914,6 +927,7 @@
             this.SaveEventButton.BorderRadius = 0;
             this.SaveEventButton.BorderSize = 0;
             this.SaveEventButton.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.SaveEventButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveEventButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.SaveEventButton.HoverBorderColor = System.Drawing.Color.Empty;
             this.SaveEventButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -1055,16 +1069,6 @@
             this.SaveAttendanceButton.UseVisualStyleBackColor = false;
             this.SaveAttendanceButton.Click += new System.EventHandler(this.SaveAttendanceButton_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(-1, 153);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(605, 125);
-            this.panel2.TabIndex = 3;
-            // 
             // CalendarUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1119,13 +1123,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.PastEventAttendancePanel.ResumeLayout(false);
             this.DefaultAttendancePanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

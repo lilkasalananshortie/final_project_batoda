@@ -235,9 +235,6 @@ namespace BATODA
             ConfirmSave.BringToFront();
         }
 
-
-
-
         private void CancelMassChangeButton_Click(object sender, EventArgs e)
         {
             MassSelectGrid.BringToFront();

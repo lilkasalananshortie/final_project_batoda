@@ -723,7 +723,7 @@
             this.HolderPanel1.Controls.Add(this.panel23);
             this.HolderPanel1.Location = new System.Drawing.Point(39, 70);
             this.HolderPanel1.Name = "HolderPanel1";
-            this.HolderPanel1.Size = new System.Drawing.Size(1504, 500);
+            this.HolderPanel1.Size = new System.Drawing.Size(1504, 796);
             this.HolderPanel1.TabIndex = 29;
             this.HolderPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.HolderPanel1_Paint);
             // 

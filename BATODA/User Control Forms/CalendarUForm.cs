@@ -270,6 +270,7 @@ namespace BATODA
                 }
             }
 
+            SpecificMembsPanel.Visible = false;
             AddEventPanel.Hide();
             EventTitleTxt.Clear();
             EventTypeCmb.SelectedIndex = -1;
@@ -687,8 +688,6 @@ namespace BATODA
             CheckAttendancePanel.Hide();
         }
 
-
-
         private void EditEventButton_Click(object sender, EventArgs e)
         {
             if (selectedEventPanel != null && selectedEventPanel.Tag is CalendarEvent evt)
@@ -782,6 +781,7 @@ namespace BATODA
             {
                 AttendanceHandler.ApplyCustomGridWithCheckbox(SelectMembersGrid);
                 SpecificMembsPanel.Visible = true;
+                SpecificMembsPanel.BringToFront();
                 LoadAllMembersToSelectMembersGrid();
             }
             else
@@ -828,6 +828,11 @@ namespace BATODA
                 }
             }
             return selected;
+        }
+
+        private void SaveSelectedBtn_Click(object sender, EventArgs e)
+        {
+            SpecificMembsPanel.Visible = false;
         }
     }
 }

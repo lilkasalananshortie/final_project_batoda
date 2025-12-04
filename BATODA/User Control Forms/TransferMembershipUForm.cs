@@ -18,6 +18,7 @@ namespace BATODA
 {
     public partial class TransferMembershipUForm : UserControl
     {
+
         private MemberModel owner;
 
         public TransferMembershipUForm()
@@ -119,14 +120,7 @@ namespace BATODA
         
         private void OwnerSearchTxt_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    OwnerSearchGrid.Visible = true;
-            //    TransferMemberSearchOwner search = new TransferMemberSearchOwner();
-            //    search.SearchOwner(OwnerSearchTxt, OwnerSearchGrid);
-            //    OwnerSearchGrid.Focus();
-            //    e.SuppressKeyPress = true;
-            //}
+
         }
 
         private void OwnerSearchGrid_Leave(object sender, EventArgs e)
@@ -188,88 +182,89 @@ namespace BATODA
 
         private void SavePanelButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var memberRepo = new MemberRepository();
-                var transferRepo = new TransferMembershipHistoryRepository(); // REPO FOR HISTORY
+            //try
+            //{
+            //    var memberRepo = new MemberRepository();
+            //    var transferRepo = new TransferMembershipHistoryRepository(); // REPO FOR HISTORY
 
-                string digitsOnly = new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray());
-                if (string.IsNullOrEmpty(digitsOnly))
-                {
-                    MessageBox.Show("Invalid Body Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            //    string digitsOnly = new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray());
+            //    if (string.IsNullOrEmpty(digitsOnly))
+            //    {
+            //        MessageBox.Show("Invalid Body Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
 
-                int bodyNumber = int.Parse(digitsOnly);
+            //    int bodyNumber = int.Parse(digitsOnly);
 
-                // CHECK LAST TRANSFER DATE
-                DateTime? lastTransferDate = transferRepo.GetLastTransferDate(bodyNumber);
-                if (lastTransferDate.HasValue && (DateTime.Now - lastTransferDate.Value).TotalDays < 3)
-                {
-                    MessageBox.Show("This member was recently transferred. Please wait 3 days before transferring again.",
-                                    "Transfer Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+            //    // CHECK TAX BALANCE BEFORE TRANSFER
+            //    if (!transferRepo.CanTransferMember(bodyNumber))
+            //    {
+            //        return; // STOP IF MEMBER HAS REMAINING BALANCE
+            //    }
 
-                // CREATE UPDATED MEMBER INFO
-                MemberModel updatedMember = new MemberModel
-                {
-                    BodyNumber = bodyNumber,
-                    MembershipType = TransferMemberTypeCmb.Text,
-                    LastName = TransferLastNameTxt.Text,
-                    FirstName = TransferFirstNameTxt.Text,
-                    MiddleInitial = TransferMiddleTxt.Text,
-                    Birthdate = TransferBirthdatePicker.Value,
-                    TricycleBrand = TransferBrandTxt.Text,
-                    TricycleModel = TransferModelTxt.Text,
-                    ContactNumber = TransferContactTxt.Text,
-                    ChassisNumber = TransferChassisTxt.Text,
-                    EngineNumber = TransferEngineTxt.Text,
-                    PlateNumber = TransferPlateTxt.Text,
-                    TaxBalance = 0,
-                    MemberStatus = "Active",
-                    PenaltyLevel = 0,
-                    DateJoined = DateTime.Now
-                };
+            //    // CHECK LAST TRANSFER DATE
+            //    DateTime? lastTransferDate = transferRepo.GetLastTransferDate(bodyNumber);
+            //    if (lastTransferDate.HasValue && (DateTime.Now - lastTransferDate.Value).TotalDays < 3)
+            //    {
+            //        MessageBox.Show("This member was recently transferred. Please wait 3 days before transferring again.",
+            //                        "Transfer Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        return;
+            //    }
 
-                // SAVE NEW IMAGE IF AVAILABLE
-                if (NewOwnerPb.Image != null && !string.IsNullOrEmpty(TransferUploadImage.FileName))
-                {
-                    string savedPath = SaveImageToFolder.TransferMembershipSave(TransferUploadImage.FileName, bodyNumber);
-                    updatedMember.ImagePath = savedPath;
-                }
+            //    // CREATE UPDATED MEMBER INFO
+            //    MemberModel updatedMember = new MemberModel
+            //    {
+            //        BodyNumber = bodyNumber,
+            //        MembershipType = TransferMemberTypeCmb.Text,
+            //        LastName = TransferLastNameTxt.Text,
+            //        FirstName = TransferFirstNameTxt.Text,
+            //        MiddleInitial = TransferMiddleTxt.Text,
+            //        Birthdate = TransferBirthdatePicker.Value,
+            //        TricycleBrand = TransferBrandTxt.Text,
+            //        TricycleModel = TransferModelTxt.Text,
+            //        ContactNumber = TransferContactTxt.Text,
+            //        ChassisNumber = TransferChassisTxt.Text,
+            //        EngineNumber = TransferEngineTxt.Text,
+            //        PlateNumber = TransferPlateTxt.Text,
+            //        TaxBalance = 0,
+            //        MemberStatus = "Active",
+            //        PenaltyLevel = 0,
+            //        DateJoined = DateTime.Now
+            //    };
 
-                // UPDATE MEMBER DATA
-                memberRepo.TransferMember(updatedMember);
+            //    // SAVE NEW IMAGE IF AVAILABLE
+            //    if (NewOwnerPb.Image != null && !string.IsNullOrEmpty(TransferUploadImage.FileName))
+            //    {
+            //        string savedPath = SaveImageToFolder.TransferMembershipSave(TransferUploadImage.FileName, bodyNumber);
+            //        updatedMember.ImagePath = savedPath;
+            //    }
 
-                // RECORD TRANSFER HISTORY
-                TransferMembershipHistoryModel transferRecord = new TransferMembershipHistoryModel
-                {
-                    BodyNumber = bodyNumber,
-                    PastOwnerFullName = $"{CurrentFirstNameLbl.Text} {CurrentLastNameLbl.Text}",
-                    NewOwnerFullName = $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}",
-                    ReasonForTransfer = TransferReasonTxt.Text,
-                    DateOfTransfer = DateTime.Now
-                };
+            //    // UPDATE MEMBER DATA
+            //    memberRepo.TransferMember(updatedMember);
 
-                transferRepo.AddTransferRecord(transferRecord);
+            //    // RECORD TRANSFER HISTORY
+            //    TransferMembershipHistoryModel transferRecord = new TransferMembershipHistoryModel
+            //    {
+            //        BodyNumber = bodyNumber,
+            //        PastOwnerFullName = $"{CurrentFirstNameLbl.Text} {CurrentLastNameLbl.Text}",
+            //        NewOwnerFullName = $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}",
+            //        ReasonForTransfer = TransferReasonTxt.Text,
+            //        DateOfTransfer = DateTime.Now
+            //    };
 
-                var logRepo = new SystemActivityLogRepository();
-                logRepo.LogMembershipTransfer(bodyNumber, $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}");
+            //    transferRepo.AddTransferRecord(transferRecord);
 
+            //    var logRepo = new SystemActivityLogRepository();
+            //    logRepo.LogMembershipTransfer(bodyNumber, $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}");
 
-                MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ConfirmationTransferPanel.Hide();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    ConfirmationTransferPanel.Hide();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
-
-
-
-
 
         private void CancelPanelButton_Click(object sender, EventArgs e)
         {
@@ -368,28 +363,115 @@ namespace BATODA
 
         private void TransferBtn_Click(object sender, EventArgs e)
         {
-            // CURRENT OWNER
-            if (owner != null)
+            try
             {
-                LoadOwnerImage.FromMember(owner, ConfirmCurrentImage);
-            }
+                // ASK FOR CONFIRMATION
+                var result = MessageBox.Show("Are you sure you want to transfer this membership to the new member?",
+                                             "Confirm Transfer",
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
 
-            // NEW OWNER (UPLOADED FROM BTN)
-            if (NewOwnerPb.Image != null)
-            {
-                // Make a memory copy so the original NewOwnerPb image doesn't lock any file
-                using (var temp = new Bitmap(NewOwnerPb.Image))
+                if (result != DialogResult.Yes)
                 {
-                    ConfirmNewImage.Image = new Bitmap(temp);
+                    return; // STOP IF USER CHOOSES NO
                 }
-                ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
 
-            HolderPanel1.SendToBack();
-            ConfirmationPanel.Show();
-            ConfirmationTransferPanel.BringToFront();
-            ConfirmationTransferPanel.Show();
+                int bodyNumber = int.Parse(new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray()));
+
+                var memberRepo = new MemberRepository();
+                var transferRepo = new TransferMembershipHistoryRepository();
+
+                // CHECK TAX BALANCE BEFORE TRANSFER
+                if (!transferRepo.CanTransferMember(bodyNumber))
+                {
+                    return;
+                }
+
+                // CHECK LAST TRANSFER DATE
+                DateTime? lastTransferDate = transferRepo.GetLastTransferDate(bodyNumber);
+                if (lastTransferDate.HasValue && (DateTime.Now - lastTransferDate.Value).TotalDays < 3)
+                {
+                    MessageBox.Show("This member was recently transferred. Please wait 3 days before transferring again.",
+                                    "Transfer Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // CREATE UPDATED MEMBER INFO
+                MemberModel updatedMember = new MemberModel
+                {
+                    BodyNumber = bodyNumber,
+                    MembershipType = TransferMemberTypeCmb.Text,
+                    LastName = TransferLastNameTxt.Text,
+                    FirstName = TransferFirstNameTxt.Text,
+                    MiddleInitial = TransferMiddleTxt.Text,
+                    Birthdate = TransferBirthdatePicker.Value,
+                    TricycleBrand = TransferBrandTxt.Text,
+                    TricycleModel = TransferModelTxt.Text,
+                    ContactNumber = TransferContactTxt.Text,
+                    ChassisNumber = TransferChassisTxt.Text,
+                    EngineNumber = TransferEngineTxt.Text,
+                    PlateNumber = TransferPlateTxt.Text,
+                    TaxBalance = 0,
+                    MemberStatus = "Active",
+                    PenaltyLevel = 0,
+                    DateJoined = DateTime.Now
+                };
+
+                // SAVE NEW IMAGE IF AVAILABLE
+                if (NewOwnerPb.Image != null && !string.IsNullOrEmpty(TransferUploadImage.FileName))
+                {
+                    string savedPath = SaveImageToFolder.TransferMembershipSave(TransferUploadImage.FileName, bodyNumber);
+                    updatedMember.ImagePath = savedPath;
+                }
+
+                // UPDATE MEMBER DATA
+                memberRepo.TransferMember(updatedMember);
+
+                // RECORD TRANSFER HISTORY
+                TransferMembershipHistoryModel transferRecord = new TransferMembershipHistoryModel
+                {
+                    BodyNumber = bodyNumber,
+                    PastOwnerFullName = $"{CurrentFirstNameLbl.Text} {CurrentLastNameLbl.Text}",
+                    NewOwnerFullName = $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}",
+                    ReasonForTransfer = TransferReasonTxt.Text,
+                    DateOfTransfer = DateTime.Now
+                };
+
+                transferRepo.AddTransferRecord(transferRecord);
+
+                var logRepo = new SystemActivityLogRepository();
+                logRepo.LogMembershipTransfer(bodyNumber, $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}");
+
+                MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ConfirmationTransferPanel.Hide();
+
+                // CURRENT OWNER IMAGE
+                if (owner != null)
+                {
+                    LoadOwnerImage.FromMember(owner, ConfirmCurrentImage);
+                }
+
+                // NEW OWNER IMAGE
+                if (NewOwnerPb.Image != null)
+                {
+                    using (var temp = new Bitmap(NewOwnerPb.Image))
+                    {
+                        ConfirmNewImage.Image = new Bitmap(temp);
+                    }
+                    ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+
+                HolderPanel1.SendToBack();
+                ConfirmationPanel.Show();
+                ConfirmationTransferPanel.BringToFront();
+                ConfirmationTransferPanel.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
     }
 }

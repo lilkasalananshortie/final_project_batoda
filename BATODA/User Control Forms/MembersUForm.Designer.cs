@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.SortMembertTypeCmb = new System.Windows.Forms.ComboBox();
             this.SortOrderCmb = new System.Windows.Forms.ComboBox();
@@ -243,14 +243,14 @@
             this.MembersDataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.MembersDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.MembersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.MembersDataGrid.EnableHeadersVisualStyles = false;
             this.MembersDataGrid.Location = new System.Drawing.Point(28, 85);
             this.MembersDataGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -519,6 +519,7 @@
             this.ResetButton.TextOffset = 5;
             this.ResetButton.ToggleColor = System.Drawing.Color.Empty;
             this.ResetButton.UseVisualStyleBackColor = false;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // label3
             // 
@@ -575,7 +576,7 @@
             this.AddEngineNumberTxt.Location = new System.Drawing.Point(7, 7);
             this.AddEngineNumberTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddEngineNumberTxt.Name = "AddEngineNumberTxt";
-            this.AddEngineNumberTxt.Size = new System.Drawing.Size(200, 19);
+            this.AddEngineNumberTxt.Size = new System.Drawing.Size(230, 19);
             this.AddEngineNumberTxt.TabIndex = 42;
             // 
             // label23
@@ -1840,13 +1841,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ViewMemberInfoPanel);
+            this.Controls.Add(this.AddMemberPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.MembersTopPanel);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.AddMemberPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MembersUForm";

@@ -225,7 +225,6 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(1196, 590);
             this.panel16.TabIndex = 28;
-            this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
             // 
             // EditBirthdatePicker
             // 
@@ -493,7 +492,6 @@
             this.label13.Size = new System.Drawing.Size(150, 25);
             this.label13.TabIndex = 27;
             this.label13.Text = "Tricycle Brand";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // panel13
             // 
@@ -503,7 +501,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(327, 44);
             this.panel13.TabIndex = 26;
-            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
             // 
             // EditBrandLbl
             // 
@@ -632,7 +629,6 @@
             this.EditPlateNoLbl.Size = new System.Drawing.Size(126, 25);
             this.EditPlateNoLbl.TabIndex = 57;
             this.EditPlateNoLbl.Text = "Placeholder";
-            this.EditPlateNoLbl.Click += new System.EventHandler(this.EditPlateNoLbl_Click);
             // 
             // EditFileDialog
             // 

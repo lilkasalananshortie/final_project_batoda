@@ -87,7 +87,45 @@ namespace BATODA.Modules.Member_Module.Member_Classes
             return null; // RETURN NULL IF NO RECORD FOUND
         }
 
+        public bool CanTransferMember(int bodyNumber)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
 
+                    // CHECK TAX BALANCE OF MEMBER
+                    string query = "SELECT TaxBalance FROM MemberInfo WHERE BodyNumber = @BodyNumber";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            decimal taxBalance = Convert.ToDecimal(result);
+                            if (taxBalance > 0)
+                            {
+                                // SHOW WARNING IF MEMBER HAS REMAINING BALANCE
+                                MessageBox.Show(
+                                    $"This member cannot be transferred because they have a remaining balance of ₱{taxBalance:F2}.",
+                                    "Transfer Blocked", MessageBoxButtons.OK, MessageBoxIcon.Warning
+                                );
+                                return false;
+                            }
+                        }
+                    }
+                }
+
+                return true; // NO BALANCE, TRANSFER ALLOWED
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error checking member balance: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
 
     }
 }
