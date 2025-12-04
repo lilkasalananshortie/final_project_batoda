@@ -56,6 +56,7 @@ namespace BATODA
             CheckAttendancePanel.Hide();
             ReqAttendeesCmb.SelectedIndexChanged += ReqAttendeesCmb_SelectedIndexChanged;
             DefaultAttendancePanel.Show();
+            MiniPanel.Visible = false;
 
         }
 
@@ -296,6 +297,9 @@ namespace BATODA
 
             selectedEventPanel = clickedPanel;
 
+            if (MiniPanel.Visible)
+                MiniPanel.Visible = false;
+
             foreach (Control ctrl in EventsOverviewFlowLayoutPanel.Controls)
             {
                 if (ctrl is Panel pnl && pnl != clickedPanel)
@@ -349,19 +353,36 @@ namespace BATODA
                 Size = new Size(100, 30),
                 Tag = "Expanded"
             };
+            Button btnInfo = new Button
+            {
+                Text = "Info",
+                BackColor = Color.LightCoral,
+                Size = new Size(100, 30),
+                Tag = "Expanded"
+            }
+            ;
 
             // POSITION BUTTONS
             int marginRight = 20;
             int marginBottom = 15;
+            int marginTop = 10;
             btnCancel.Location = new Point(panel.Width - btnCancel.Width - marginRight, panel.Height - btnCancel.Height - marginBottom);
             btnDone.Location = new Point(btnCancel.Left - btnDone.Width - 10, btnCancel.Top);
+            btnInfo.Location = new Point(panel.Width - btnInfo.Width - marginRight, marginTop);
 
             btnDone.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
             btnCancel.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
+            btnInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 
             // DONE CLICK - UPDATE STATUS IN DB AND REMOVE FROM OVERVIEW
             btnDone.Click += (s, args) =>
             {
+                Panel mini = this.Controls["MiniPanel"] as Panel;
+                if (mini == null) return;
+
+                if (MiniPanel.Visible)
+                    MiniPanel.Visible = false;
+
                 ev.Status = "Done";
                 eventRepo.UpdateEventStatus(ev.EventId, "Done");
                 UpdateEventInDayCell(ev);
@@ -425,6 +446,12 @@ namespace BATODA
             // CANCEL CLICK - UPDATE STATUS IN DB AND REMOVE FROM OVERVIEW
             btnCancel.Click += (s, args) =>
             {
+                Panel mini = this.Controls["MiniPanel"] as Panel;
+                if (mini == null) return;
+
+                if (MiniPanel.Visible)
+                    MiniPanel.Visible = false;
+
                 ev.Status = "Canceled";
                 eventRepo.UpdateEventStatus(ev.EventId, "Canceled"); // UPDATE DATABASE
                 UpdateEventInDayCell(ev); // UPDATE CALENDAR CELL
@@ -432,10 +459,37 @@ namespace BATODA
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
+            btnInfo.Click += (s, args) =>
+            {
+                Panel mini = this.Controls["MiniPanel"] as Panel;
+                if (mini == null) return;
+
+
+                if (MiniPanel.Visible)
+                    MiniPanel.Visible = false;
+
+                // Calculate position
+                Point screenPos = panel.PointToScreen(Point.Empty);
+                Point localPos = this.PointToClient(screenPos);
+
+                int gap = 10;
+
+                int leftX = localPos.X - mini.Width - gap;
+                int topY = localPos.Y;
+
+                if (leftX < 0)
+                    leftX = 0;
+
+                mini.Location = new Point(leftX, topY);
+                mini.Visible = true;
+                mini.BringToFront();
+            };
+
 
             panel.Controls.Add(lblDescription);
             panel.Controls.Add(btnDone);
             panel.Controls.Add(btnCancel);
+            panel.Controls.Add(btnInfo);
         }
 
         //ADDING OF EVENT LABEL TO DAY CELL IN CALENDAR NOW CAN ADD MULTIPLE EVENTS IN THE SAME DAY 
