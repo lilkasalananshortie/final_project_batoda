@@ -71,7 +71,7 @@ namespace BATODA.User_Control_Forms
                 BaseFareTextBox.BringToFront();
 
                 BaseFarelbl.Visible = false;
-                EditFareMatrix.Text = "Save";
+                EditFareMatrix.ButtonImage = Properties.Resources.save;
 
                 BaseFareTextBox.Focus();
                 BaseFareTextBox.SelectAll();
@@ -118,7 +118,7 @@ namespace BATODA.User_Control_Forms
 
                 BaseFareTextBox.Visible = false;
                 BaseFarelbl.Visible = true;
-                EditFareMatrix.Text = "Edit";
+                EditFareMatrix.ButtonImage = Properties.Resources.edit;
                 isEditing = false;
             }
             else
