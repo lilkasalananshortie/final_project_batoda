@@ -95,7 +95,7 @@
             this.EditFareMatrix.BorderSize = 0;
             this.EditFareMatrix.ButtonImage = global::BATODA.Properties.Resources.edit;
             this.EditFareMatrix.FlatAppearance.BorderSize = 0;
-            this.EditFareMatrix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditFareMatrix.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.EditFareMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditFareMatrix.ForeColor = System.Drawing.Color.White;
             this.EditFareMatrix.HoverBorderColor = System.Drawing.Color.White;

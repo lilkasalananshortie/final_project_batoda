@@ -89,7 +89,7 @@ namespace BATODA.User_Control_Forms
 
             BaseFareTextBox.Visible = false;
             BaseFarelbl.Visible = true;
-            EditFareMatrix.Text = "Edit";
+            EditFareMatrix.ButtonImage = Properties.Resources.edit;
             isEditing = false;
         }
         private void EditFareMatrix_Click(object sender, EventArgs e)
@@ -100,7 +100,7 @@ namespace BATODA.User_Control_Forms
                 BaseFareTextBox.Text = BaseFarelbl.Text.Replace("₱", "").Trim();
                 BaseFareTextBox.Visible = true;
                 BaseFarelbl.Visible = false;
-                EditFareMatrix.Text = "Save";
+                EditFareMatrix.ButtonImage = Properties.Resources.save;
                 isEditing = true;
                 BaseFareTextBox.Focus(); // focus for immediate typing
             }
