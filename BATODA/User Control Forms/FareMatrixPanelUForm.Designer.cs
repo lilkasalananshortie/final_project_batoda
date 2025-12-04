@@ -50,7 +50,7 @@
             // 
             this.Discountedlbl.AutoSize = true;
             this.Discountedlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discountedlbl.Location = new System.Drawing.Point(763, 26);
+            this.Discountedlbl.Location = new System.Drawing.Point(763, 29);
             this.Discountedlbl.Name = "Discountedlbl";
             this.Discountedlbl.Size = new System.Drawing.Size(60, 20);
             this.Discountedlbl.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             this.Routelbl.AutoSize = true;
             this.Routelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Routelbl.Location = new System.Drawing.Point(52, 26);
+            this.Routelbl.Location = new System.Drawing.Point(52, 21);
             this.Routelbl.Name = "Routelbl";
             this.Routelbl.Size = new System.Drawing.Size(149, 20);
             this.Routelbl.TabIndex = 4;
@@ -80,11 +80,12 @@
             // 
             this.BaseFareTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BaseFareTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BaseFareTextBox.Location = new System.Drawing.Point(532, 23);
+            this.BaseFareTextBox.Location = new System.Drawing.Point(533, 23);
             this.BaseFareTextBox.Name = "BaseFareTextBox";
             this.BaseFareTextBox.Size = new System.Drawing.Size(100, 26);
             this.BaseFareTextBox.TabIndex = 6;
             this.BaseFareTextBox.Visible = false;
+            this.BaseFareTextBox.TextChanged += new System.EventHandler(this.BaseFareTextBox_TextChanged);
             // 
             // EditFareMatrix
             // 
@@ -132,6 +133,7 @@
             this.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.Name = "FareMatrixPanelUForm";
             this.Size = new System.Drawing.Size(1191, 77);
+            this.Load += new System.EventHandler(this.FareMatrixPanelUForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
