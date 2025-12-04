@@ -21,7 +21,7 @@ namespace BATODA.Modules.Schedule_Module
 
             Panel panel = new Panel
             {
-                Size = panelSize,
+               Size = panelSize,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(margin),
                 Tag = ev,

@@ -1,4 +1,11 @@
-﻿using System;
+﻿using BATODA.Helpers.DataGrid;
+using BATODA.Helpers.DataGrids;
+using BATODA.Modules.MemberModule;
+using BATODA.Modules.Schedule_Module;
+using BATODA.Repositories;
+using BATODA.User_Control_Forms;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,14 +17,6 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.DataGrid;
-using BATODA.Helpers.DataGrids;
-using BATODA.Modules.MemberModule;
-using BATODA.Modules.Schedule_Module;
-using BATODA.Repositories;
-using BATODA.User_Control_Forms;
-using Newtonsoft.Json;
-using static BATODA.Modules.Schedule_Module.EventPanelUI;
 
 namespace BATODA
 {
@@ -38,20 +37,12 @@ namespace BATODA
         private const int EventLabelHeight = 20;
         private const int EventLabelSpacing = 22;
 
-        private const int PanelWidth = 420;
-        private const int PanelHeight = 70;
-        private const int PanelMargin = 5;
-        private const int ExpandedHeight = 150;
-
         public int month;
         public int year;
         private DateTime dateTime = DateTime.Now;
 
         // COORDS
         private string selectedCoords = "";
-        
-        private Panel hoverPreviewPanel;
-        private Label hoverPreviewLabel;
 
         private readonly EventRepository eventRepo = new EventRepository();
 
@@ -59,7 +50,6 @@ namespace BATODA
         public CalendarUForm()
         {
             InitializeComponent();
-           
             AttendanceHandler.ApplyCustomGridWithCheckbox(SetAttendanceGrid);
             AttendanceHandler.ApplyCustomGridWithCheckbox(AttendanceListDGV);
             AddEventPanel.Hide();
@@ -76,7 +66,7 @@ namespace BATODA
 
         private async void CalendarUForm_Load(object sender, EventArgs e)
         {
-            InitializeHoverPreviewPanel();
+
             var allEvents = eventRepo.GetAllEvents();
 
             foreach (var ev in allEvents)
@@ -87,9 +77,8 @@ namespace BATODA
 
                 // PENDING EVENTS
                 if (ev.Status == "Pending")
-                    CalendarHandler.AddEventToOverview(ev, EventsOverviewFlowLayoutPanel, EventPanel_DoubleClick, 
+                    CalendarHandler.AddEventToOverview(ev, EventsOverviewFlowLayoutPanel, EventPanel_DoubleClick,
                     EventPanel_Click, EventPanelWidth, EventPanelHeight, EventPanelMargin);
-
 
                 // DONE: All / Specific members
                 if (ev.Status == "Done" &&
@@ -293,7 +282,6 @@ namespace BATODA
         private void EventPanel_Click(object sender, EventArgs e)
         {
             selectedEventPanel = sender as Panel;
-
         }
 
         //EXPAND AND COLLAPSE PANEL
@@ -440,7 +428,6 @@ namespace BATODA
                 eventRepo.UpdateEventStatus(ev.EventId, "Canceled"); // UPDATE DATABASE
                 UpdateEventInDayCell(ev); // UPDATE CALENDAR CELL
                 EventsOverviewFlowLayoutPanel.Controls.Remove(panel); // REMOVE FROM OVERVIEW
-               
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
@@ -478,31 +465,12 @@ namespace BATODA
                         TextAlign = ContentAlignment.MiddleLeft
                     };
 
-                    
-                    info.MouseHover += (s, e) =>
-                    {
-                        hoverPreviewLabel.Text = $"Event Location:\n{ev.Location}";
-
-                        Point screenPos = day.PointToScreen(new Point(info.Right + 5, info.Top));
-                        hoverPreviewPanel.Location = this.PointToClient(screenPos);
-
-                        hoverPreviewPanel.Visible = true;
-                        hoverPreviewPanel.BringToFront();
-                    };
-
-                    info.MouseLeave += (s, e) =>
-                    {
-                        hoverPreviewPanel.Visible = false;
-                    };
-
                     day.Controls.Add(info);
                     info.BringToFront();
-
-                    break; 
+                    break;
                 }
             }
         }
-
 
         //MOVE TO PREVIOUS EVENTS PANEL
         private void MoveToPreviousEvents(CalendarEvent ev, bool isDone)
@@ -511,7 +479,7 @@ namespace BATODA
             panel.Size = new Size(480, EventPanelHeight);
             panel.BorderStyle = BorderStyle.FixedSingle;
             panel.Margin = new Padding(EventPanelMargin);
-            panel.BackColor = isDone ? Color.LightGreen : Color.LightGreen;
+            panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
 
             panel.Tag = ev;
 
@@ -539,7 +507,6 @@ namespace BATODA
                 Location = new Point(10, 45),
                 AutoSize = true
             };
-
 
             panel.Controls.Add(lblTitle);
             panel.Controls.Add(lblInfo);
@@ -669,7 +636,7 @@ namespace BATODA
             else if (ev.RequiredAttendees == "Specific Members Only")
             {
                 var repo = new EventRepository();
-                var attendees = repo.GetSavedEventAttendees(ev.EventId); 
+                var attendees = repo.GetSavedEventAttendees(ev.EventId);
 
                 foreach (var a in attendees)
                 {
@@ -681,7 +648,7 @@ namespace BATODA
                 PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
                 PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
             }
-           
+            //1167, 741
             CheckAttendancePanel.Location = PreviousEventPanel.Location;
             CheckAttendancePanel.Show();
             CheckAttendancePanel.BringToFront();
@@ -698,7 +665,9 @@ namespace BATODA
                 // REMOVE FROM DONE PANEL
                 DoneEventFlowLayoutPanel.Controls.Remove(previousEventSelectedPanel);
 
-                
+                // ADD TO PAST PANEL
+                previousEventSelectedPanel.Width = 410;
+
                 previousEventSelectedPanel.Size = new Size(520, EventPanelHeight);
 
                 previousEventSelectedPanel.BackColor = Color.LightGreen;
@@ -859,170 +828,6 @@ namespace BATODA
                 }
             }
             return selected;
-        }
-        private void InitializeHoverPreviewPanel()
-        {
-            hoverPreviewPanel = new Panel
-            {
-                Size = new Size(200, 150),
-                BackColor = Color.LightYellow,
-                BorderStyle = BorderStyle.FixedSingle,
-                Visible = true
-            };
-
-            hoverPreviewLabel = new Label
-            {
-                AutoSize = true,
-                Location = new Point(5, 5),
-                Font = new Font("Segoe UI", 8),
-                ForeColor = Color.Black
-            };
-
-            hoverPreviewPanel.Controls.Add(hoverPreviewLabel);
-            this.Controls.Add(hoverPreviewPanel);
-        }
-        private static Color GetStatusColor(string status)
-        {
-            switch (status)
-            {
-                case "Done":
-                    return Color.Green;
-
-                case "Canceled":
-                    return Color.Red;
-
-                default:
-                    return Color.White;
-            }
-        }
-        private static void Collapse(Panel panel)
-        {
-            panel.Height = PanelHeight;
-
-            var expandControls = panel.Controls
-                                      .OfType<Control>()
-                                      .Where(c => c.Tag?.ToString() == "Expanded")
-                                      .ToList();
-
-            foreach (var c in expandControls)
-                panel.Controls.Remove(c);
-        }
-        private static void Expand(Panel panel, CalendarEvent ev)
-        {
-            panel.Height = ExpandedHeight;
-
-            Label lblDesc = new Label()
-            {
-                Text = "Description: " + ev.Description,
-                Location = new Point(10, 70),
-                AutoSize = true,
-                Tag = "Expanded"
-            };
-
-            Button btnDone = new Button()
-            {
-                Text = "Done",
-                BackColor = Color.LightGreen,
-                Size = new Size(90, 30),
-                Tag = "Expanded"
-            };
-
-            Button btnCancel = new Button()
-            {
-                Text = "Cancel",
-                BackColor = Color.LightCoral,
-                Size = new Size(90, 30),
-                Tag = "Expanded"
-            };
-
-            btnCancel.Location = new Point(panel.Width - btnCancel.Width - 15,
-                                           panel.Height - btnCancel.Height - 10);
-            btnDone.Location = new Point(btnCancel.Left - btnDone.Width - 10, btnCancel.Top);
-
-            panel.Controls.Add(lblDesc);
-            panel.Controls.Add(btnDone);
-            panel.Controls.Add(btnCancel);
-        }
-        public static Panel CreateEventPanel(CalendarEvent ev, EventPanelType type, Panel hoverPanel, Label hoverLabel)
-        {
-            Panel panel = new Panel
-            {
-                Width = PanelWidth,
-                Height = PanelHeight,
-                Margin = new Padding(PanelMargin),
-                BorderStyle = BorderStyle.FixedSingle,
-                Tag = ev,
-                BackColor = GetStatusColor(ev.Status)
-            };
-
-            // Title
-            Label lblTitle = new Label
-            {
-                Text = ev.Title,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                Location = new Point(10, 5),
-                AutoSize = true
-            };
-
-            // Info
-            Label lblInfo = new Label
-            {
-                Text = $"{ev.Type} | {ev.Status} | {ev.Location} | {ev.Time}",
-                Font = new Font("Segoe UI", 8),
-                Location = new Point(10, 25),
-                AutoSize = true
-            };
-
-            // Date
-            Label lblDate = new Label
-            {
-                Text = ev.Date.ToString("MMMM d, yyyy"),
-                Font = new Font("Segoe UI", 8, FontStyle.Italic),
-                ForeColor = Color.Gray,
-                Location = new Point(10, 45),
-                AutoSize = true
-            };
-
-            panel.Controls.Add(lblTitle);
-            panel.Controls.Add(lblInfo);
-            panel.Controls.Add(lblDate);
-
-            // Hover preview
-            panel.MouseHover += (s, e) =>
-            {
-                hoverLabel.Text = $"Event: {ev.Title}\nLocation: {ev.Location}\nDate: {ev.Date:MMMM d, yyyy}";
-                Point screenPos = panel.PointToScreen(new Point(panel.Right + 5, panel.Top));
-                hoverPanel.Location = panel.FindForm().PointToClient(screenPos);
-                hoverPanel.Visible = true;
-                hoverPanel.BringToFront();
-            };
-
-            panel.MouseLeave += (s, e) =>
-            {
-                hoverPanel.Visible = false;
-            };
-
-
-            if (type != EventPanelType.Past)
-                panel.DoubleClick += (s, e) => ToggleExpand(panel, ev);
-
-            return panel;
-        }
-        private static void ToggleExpand(Panel panel, CalendarEvent ev)
-        {
-            if (panel.Height > PanelHeight)
-            {
-                Collapse(panel);
-                return;
-            }
-
-            Expand(panel, ev);
-        }
-        public enum EventPanelType
-        {
-            Overview,
-            Previous,
-            Past
         }
     }
 }
