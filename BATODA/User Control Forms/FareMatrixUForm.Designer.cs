@@ -182,7 +182,7 @@
             // 
             // label20
             // 
-            this.label20.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(25, 2785);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(276, 47);
@@ -192,7 +192,7 @@
             // 
             // label13
             // 
-            this.label13.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(25, 1996);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(276, 47);
@@ -202,7 +202,7 @@
             // 
             // label19
             // 
-            this.label19.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(25, 2706);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(276, 47);
@@ -212,7 +212,7 @@
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(25, 1761);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(276, 47);
@@ -222,7 +222,7 @@
             // 
             // label18
             // 
-            this.label18.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(25, 2627);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(276, 47);
@@ -232,7 +232,7 @@
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(25, 1397);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(276, 47);
@@ -242,7 +242,7 @@
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(25, 2547);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(276, 47);
@@ -252,7 +252,7 @@
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(25, 1007);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(276, 47);
@@ -262,7 +262,7 @@
             // 
             // label16
             // 
-            this.label16.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(25, 2466);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(276, 47);
@@ -272,7 +272,7 @@
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(25, 771);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(276, 47);
@@ -282,7 +282,7 @@
             // 
             // label15
             // 
-            this.label15.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(25, 2387);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(276, 47);
@@ -293,7 +293,7 @@
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(25, 517);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(276, 47);
@@ -303,7 +303,7 @@
             // 
             // label14
             // 
-            this.label14.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(25, 2234);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(276, 47);
@@ -313,7 +313,7 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(35, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(276, 47);
