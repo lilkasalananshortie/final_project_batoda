@@ -144,19 +144,19 @@
             this.label49 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label25 = new System.Windows.Forms.Label();
+            this.TotalReleased = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.RejectedLbl = new System.Windows.Forms.Label();
+            this.dadsadas = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label45 = new System.Windows.Forms.Label();
+            this.TotalPending = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label47 = new System.Windows.Forms.Label();
+            this.TotalReqLbl = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.OpenProof = new System.Windows.Forms.OpenFileDialog();
             this.MembersTopPanel.SuspendLayout();
@@ -1698,7 +1698,7 @@
             this.panel16.BackColor = System.Drawing.Color.White;
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Controls.Add(this.pictureBox5);
-            this.panel16.Controls.Add(this.label25);
+            this.panel16.Controls.Add(this.TotalReleased);
             this.panel16.Controls.Add(this.label26);
             this.panel16.Location = new System.Drawing.Point(1189, 97);
             this.panel16.Name = "panel16";
@@ -1717,16 +1717,16 @@
             this.pictureBox5.TabIndex = 55;
             this.pictureBox5.TabStop = false;
             // 
-            // label25
+            // TotalReleased
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(68, 74);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(97, 39);
-            this.label25.TabIndex = 56;
-            this.label25.Text = "1000";
+            this.TotalReleased.AutoSize = true;
+            this.TotalReleased.BackColor = System.Drawing.Color.Transparent;
+            this.TotalReleased.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalReleased.Location = new System.Drawing.Point(68, 74);
+            this.TotalReleased.Name = "TotalReleased";
+            this.TotalReleased.Size = new System.Drawing.Size(97, 39);
+            this.TotalReleased.TabIndex = 56;
+            this.TotalReleased.Text = "1000";
             // 
             // label26
             // 
@@ -1735,17 +1735,17 @@
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(28, 28);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(134, 24);
+            this.label26.Size = new System.Drawing.Size(145, 24);
             this.label26.TabIndex = 57;
-            this.label26.Text = "To be Release";
+            this.label26.Text = "To be Released";
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.White;
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.pictureBox2);
-            this.panel17.Controls.Add(this.label43);
-            this.panel17.Controls.Add(this.label44);
+            this.panel17.Controls.Add(this.RejectedLbl);
+            this.panel17.Controls.Add(this.dadsadas);
             this.panel17.Location = new System.Drawing.Point(821, 97);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(350, 150);
@@ -1763,34 +1763,34 @@
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
             // 
-            // label43
+            // RejectedLbl
             // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(68, 74);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(97, 39);
-            this.label43.TabIndex = 54;
-            this.label43.Text = "1000";
+            this.RejectedLbl.AutoSize = true;
+            this.RejectedLbl.BackColor = System.Drawing.Color.Transparent;
+            this.RejectedLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RejectedLbl.Location = new System.Drawing.Point(68, 74);
+            this.RejectedLbl.Name = "RejectedLbl";
+            this.RejectedLbl.Size = new System.Drawing.Size(97, 39);
+            this.RejectedLbl.TabIndex = 54;
+            this.RejectedLbl.Text = "1000";
             // 
-            // label44
+            // dadsadas
             // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(28, 28);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(76, 24);
-            this.label44.TabIndex = 54;
-            this.label44.Text = "Expired";
+            this.dadsadas.AutoSize = true;
+            this.dadsadas.BackColor = System.Drawing.Color.Transparent;
+            this.dadsadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dadsadas.Location = new System.Drawing.Point(28, 28);
+            this.dadsadas.Name = "dadsadas";
+            this.dadsadas.Size = new System.Drawing.Size(191, 24);
+            this.dadsadas.TabIndex = 54;
+            this.dadsadas.Text = "Rejected(This Month)";
             // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.White;
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel18.Controls.Add(this.pictureBox4);
-            this.panel18.Controls.Add(this.label45);
+            this.panel18.Controls.Add(this.TotalPending);
             this.panel18.Controls.Add(this.label46);
             this.panel18.Location = new System.Drawing.Point(453, 97);
             this.panel18.Name = "panel18";
@@ -1809,16 +1809,16 @@
             this.pictureBox4.TabIndex = 53;
             this.pictureBox4.TabStop = false;
             // 
-            // label45
+            // TotalPending
             // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(68, 74);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(97, 39);
-            this.label45.TabIndex = 52;
-            this.label45.Text = "1000";
+            this.TotalPending.AutoSize = true;
+            this.TotalPending.BackColor = System.Drawing.Color.Transparent;
+            this.TotalPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPending.Location = new System.Drawing.Point(68, 74);
+            this.TotalPending.Name = "TotalPending";
+            this.TotalPending.Size = new System.Drawing.Size(97, 39);
+            this.TotalPending.TabIndex = 52;
+            this.TotalPending.Text = "1000";
             // 
             // label46
             // 
@@ -1836,7 +1836,7 @@
             this.panel19.BackColor = System.Drawing.Color.White;
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.pictureBox6);
-            this.panel19.Controls.Add(this.label47);
+            this.panel19.Controls.Add(this.TotalReqLbl);
             this.panel19.Controls.Add(this.label48);
             this.panel19.Location = new System.Drawing.Point(84, 97);
             this.panel19.Name = "panel19";
@@ -1855,16 +1855,16 @@
             this.pictureBox6.TabIndex = 50;
             this.pictureBox6.TabStop = false;
             // 
-            // label47
+            // TotalReqLbl
             // 
-            this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.Color.Transparent;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(68, 74);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(97, 39);
-            this.label47.TabIndex = 49;
-            this.label47.Text = "1000";
+            this.TotalReqLbl.AutoSize = true;
+            this.TotalReqLbl.BackColor = System.Drawing.Color.Transparent;
+            this.TotalReqLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalReqLbl.Location = new System.Drawing.Point(68, 74);
+            this.TotalReqLbl.Name = "TotalReqLbl";
+            this.TotalReqLbl.Size = new System.Drawing.Size(97, 39);
+            this.TotalReqLbl.TabIndex = 49;
+            this.TotalReqLbl.Text = "1000";
             // 
             // label48
             // 
@@ -1996,19 +1996,19 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label TotalReleased;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label RejectedLbl;
+        private System.Windows.Forms.Label dadsadas;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label TotalPending;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label TotalReqLbl;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Panel TextStatusPanel;
         private System.Windows.Forms.Label label49;

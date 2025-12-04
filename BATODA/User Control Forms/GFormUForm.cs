@@ -89,9 +89,6 @@ namespace BATODA.User_Control_Forms
                 }
 
                 currentSelectedPanel = panel;
-
-             
-
                 GFormFlowLayoutPanel.Size = new Size(860, 1067);
                 GFormFlowLayoutPanel.Location = new Point(50, 70);
 

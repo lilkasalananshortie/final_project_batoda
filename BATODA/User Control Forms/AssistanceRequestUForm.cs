@@ -17,6 +17,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BATODA.Modules.Assistance_Request_Module.AssistanceRepository;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 
 
@@ -42,15 +44,24 @@ namespace BATODA
             ticketHelper.LoadActivityLogs();
         }
 
+        public void UpdateRequestCounts()
+        {
+            TotalReqLbl.Text = AssistanceSummary.GetTotalTickets().ToString();
+            TotalPending.Text = AssistanceSummary.GetPendingTickets().ToString();
+            TotalReleased.Text = AssistanceSummary.GetApprovedTickets().ToString();
+            RejectedLbl.Text = AssistanceSummary.GetRejectedTickets().ToString();
+        }
+
+
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
             LoadAllTickets();
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
             DisplayClass.SetPlaceholder(SortComboBox, "Date");
-
+            UpdateRequestCounts(); 
         }
 
-        private void LoadAllTickets()
+        public void LoadAllTickets()
         {
             TicketFlowLayoutPanel.Controls.Clear();
             AssistanceRepository repo = new AssistanceRepository();
@@ -70,12 +81,21 @@ namespace BATODA
                     }
                 }
 
+                string displayStatus = ticket.RequestStatus;
+                DateTime today = DateTime.Today;
+                DateTime targetDate = ticket.TargetDate.Date;
+
+                if (ticket.RequestStatus == "Pending" && targetDate == today)
+                {
+                    displayStatus = "Today";
+                }
+
                 ticketHelper.CreateTicketBox(
                     trackingNumber: "TR-" + ticket.TicketID,
                     fullName: ticket.FullName,
                     typeOfAid: ticket.TypeOfAid,
                     dateRequested: ticket.DateRequested.ToString("MM-dd-yyyy hh:mm tt"),
-                    status: ticket.RequestStatus,
+                    status: displayStatus,
                     requestedBy: ticket.RequestedBy,
                     amount: "₱" + ticket.RequestedAmount.ToString("N2"),
                     assistanceThru: ticket.AssistanceThru,
@@ -84,8 +104,8 @@ namespace BATODA
                     memberImag: memberImage
                 );
             }
-
         }
+
 
         private void TransferToDisplayPanel()
         {
@@ -143,6 +163,8 @@ namespace BATODA
                 GcashNumber = ReqGcashNumTxt.Text,
                 DateRequested = DateTime.Parse(DateCreatedLbl.Text),
                 TargetDate = DateTime.Parse(DateNeededPicker.Text)
+
+
                 // DEFAULT PENDING STATUS SA TABLE
             };
 
@@ -203,7 +225,8 @@ namespace BATODA
                 );
             }
 
-
+            LoadAllTickets();
+            UpdateRequestCounts();
             ConfirmationPanel.Hide();
         }
 

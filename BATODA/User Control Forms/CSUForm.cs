@@ -166,6 +166,29 @@ namespace BATODA.User_Control_Forms
 
         private void SendReplyButton_Click(object sender, EventArgs e)
         {
+            if (currentSelectedPanel == null) return; 
+
+            string replyText = ReplyContentRTextbox.Text.Trim();
+            if (string.IsNullOrEmpty(replyText))
+            {
+                MessageBox.Show("Reply cannot be empty.");
+                return;
+            }
+
+            string recipient = FromLbl.Text;
+            string subject = "Re: " + (currentSelectedPanel.Controls.OfType<Label>().FirstOrDefault(l => l.Font.Bold)?.Text ?? "(No Subject)");
+
+            try
+            {
+                gmailHandler.SendEmail(recipient, subject, replyText);
+                MessageBox.Show("Reply sent successfully.");
+                ReplyContentRTextbox.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error sending reply: " + ex.Message);
+            }
+
             foreach (Control ctrl in InboxFlowLayoutPanel.Controls)
             {
                 if (ctrl is Panel p)
@@ -181,6 +204,7 @@ namespace BATODA.User_Control_Forms
 
             MessagePanel.Visible = false;
             ReplyPanel.Visible = false;
+
         }
 
         private void GFormRcvButton_Click(object sender, EventArgs e)

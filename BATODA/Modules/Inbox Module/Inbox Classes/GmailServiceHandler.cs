@@ -25,9 +25,11 @@ namespace BATODA.Modules.Inbox_Module.Inbox_Classes
             using (var stream = new FileStream(@"..\..\Modules\Inbox Module\GmailAuth\credentials.json", FileMode.Open, FileAccess.Read))
             {
                 string credPath = "token.json";
+                string[] scopes = { GmailService.Scope.GmailReadonly, GmailService.Scope.GmailSend };
+
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.FromStream(stream).Secrets,
-                    Scopes,
+                    scopes,
                     "user",
                     CancellationToken.None,
                     new FileDataStore(credPath, true)).Result;
@@ -38,6 +40,7 @@ namespace BATODA.Modules.Inbox_Module.Inbox_Classes
                 HttpClientInitializer = credential,
                 ApplicationName = ApplicationName,
             });
+
         }
 
         // GET MESSAGES WITH SUBJECT + SNIPPET + DATE
@@ -65,8 +68,6 @@ namespace BATODA.Modules.Inbox_Module.Inbox_Classes
 
             return result.OrderByDescending(m => m.Date).Take(maxResults).ToList();
         }
-
-
 
         public string FormatMessageTime(DateTime messageTime)
         {
@@ -144,6 +145,25 @@ namespace BATODA.Modules.Inbox_Module.Inbox_Classes
             var bytes = Convert.FromBase64String(s);
             return System.Text.Encoding.UTF8.GetString(bytes);
         }
+
+        // SEND/REPL EMAIL
+        public void SendEmail(string to, string subject, string bodyText)
+        {
+            if (_service == null)
+                Authenticate();
+
+            var msg = new Google.Apis.Gmail.v1.Data.Message();
+
+            string emailRaw = $"From: me\r\nTo: {to}\r\nSubject: {subject}\r\n\r\n{bodyText}";
+            var bytes = System.Text.Encoding.UTF8.GetBytes(emailRaw);
+            msg.Raw = Convert.ToBase64String(bytes)
+                             .Replace('+', '-')
+                             .Replace('/', '_')
+                             .Replace("=", "");
+
+            _service.Users.Messages.Send(msg, "me").Execute();
+        }
+
 
 
     }

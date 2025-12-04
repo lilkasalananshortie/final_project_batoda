@@ -232,5 +232,70 @@ namespace BATODA.Modules.Assistance_Request_Module
             if (diff.Days == 1) return "1 day ago";
             return diff.Days + " days ago";
         }
+
+        internal static class AssistanceSummary
+        {
+            private static readonly string connectionString =
+            @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True";
+
+            public static int GetTotalTickets()
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM FinancialAssistanceRequests WHERE IsActive = 1";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        return (int)cmd.ExecuteScalar();
+                    }
+                }
+            }
+
+            public static int GetPendingTickets()
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM FinancialAssistanceRequests WHERE RequestStatus='Pending' AND IsActive = 1";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        return (int)cmd.ExecuteScalar();
+                    }
+                }
+            }
+
+            public static int GetApprovedTickets()
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM FinancialAssistanceRequests WHERE RequestStatus='Approved' AND IsActive = 1";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        return (int)cmd.ExecuteScalar();
+                    }
+                }
+            }
+
+            public static int GetRejectedTickets()
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = @"
+                    SELECT COUNT(*) 
+                    FROM FinancialAssistanceRequests 
+                    WHERE RequestStatus='Rejected' 
+                      AND IsActive = 1
+                      AND YEAR(DateRequested) = YEAR(GETDATE())
+                      AND MONTH(DateRequested) = MONTH(GETDATE())";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        return (int)cmd.ExecuteScalar();
+                    }
+                }
+            }
+
+        }
     }
 }

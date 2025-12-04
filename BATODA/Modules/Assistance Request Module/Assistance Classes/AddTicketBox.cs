@@ -1,4 +1,5 @@
-﻿using BATODA.Modules.Assistance_Request_Module;
+﻿using BATODA;
+using BATODA.Modules.Assistance_Request_Module;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
 using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.User_Control_Forms;
@@ -14,12 +15,16 @@ public class AddTicketBox
     private FlowLayoutPanel TicketFlowLayoutPanel;
     private FlowLayoutPanel ActivityLogFlowLayoutPanel;
     AssistanceRepository repo = new AssistanceRepository();
+    private AssistanceRequestUForm parentForm;
 
-    public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel)
+
+    public AddTicketBox(FlowLayoutPanel panel, FlowLayoutPanel activityLogPanel, AssistanceRequestUForm parent = null)
     {
         TicketFlowLayoutPanel = panel;
         ActivityLogFlowLayoutPanel = activityLogPanel;
+        parentForm = parent;
     }
+
 
     public void CreateTicketBox(
         string trackingNumber,
@@ -228,6 +233,8 @@ public class AddTicketBox
             rejectBtn.Hide();
 
             AddActivityLog("Request Approved", $"Assistance request {trackingNumber} approved", "request approved");
+            parentForm?.LoadAllTickets();
+            parentForm?.UpdateRequestCounts();
 
 
         };
@@ -251,6 +258,9 @@ public class AddTicketBox
 
             AddActivityLog("Request Rejected", $"Assistance request {trackingNumber} rejected", "request rejected");
             parent.Hide();
+
+            parentForm?.LoadAllTickets();
+            parentForm?.UpdateRequestCounts();
         };
 
 
@@ -272,6 +282,8 @@ public class AddTicketBox
 
             AddActivityLog("Request Canceled", $"Assistance request {trackingNumber} canceled", "canceled");
             parent.Hide();
+            parentForm?.LoadAllTickets();
+            parentForm?.UpdateRequestCounts();
         };
 
         releaseBtn.Click += (s, e) =>
@@ -297,6 +309,8 @@ public class AddTicketBox
             logRepo.LogReleaseFinancialRequest(ticketID);
 
             parent.Hide();
+            parentForm?.LoadAllTickets();
+            parentForm?.UpdateRequestCounts();
         };
 
         TicketBox.Controls.Add(HeaderPanel);
@@ -319,14 +333,24 @@ public class AddTicketBox
         if (status == "Approved")
         {
             HeaderPanel.BackColor = Color.LightGreen;
-            lblTracking.BackColor = Color.LightGreen;
+            lblTracking.BackColor = Color.Transparent;
+            lblTracking.ForeColor = Color.Black;
             releaseBtn.Visible = true;
         }
         else if (status == "Rejected" || status == "Canceled")
         {
             HeaderPanel.BackColor = (status == "Rejected") ? Color.LightCoral : Color.LightGray;
             lblTracking.BackColor = HeaderPanel.BackColor;
+            lblTracking.ForeColor = Color.Black;
         }
+
+        else if (status == "Today")
+        {
+            HeaderPanel.BackColor = Color.Khaki; 
+            lblTracking.BackColor = HeaderPanel.BackColor;
+            lblTracking.ForeColor = Color.Black;
+        }
+
 
         lblTracking.BringToFront();
         lblTracking.BackColor = Color.LightGray;

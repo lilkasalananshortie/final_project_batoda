@@ -47,6 +47,9 @@
     <Reference Include="Google.Apis.Gmail.v1, Version=1.72.0.3966, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.Gmail.v1.1.72.0.3966\lib\net462\Google.Apis.Gmail.v1.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Apis.Sheets.v4, Version=1.72.0.3966, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Sheets.v4.1.72.0.3966\lib\net462\Google.Apis.Sheets.v4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3595.46, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3595.46\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
@@ -104,6 +107,7 @@
     <Compile Include="Modules\FareMatrix Classes\FareMatrixModel.cs" />
     <Compile Include="Modules\FareMatrix Classes\FareMatrixRepository.cs" />
     <Compile Include="Modules\Finance Module\Finance Classes\TaxRepository.cs" />
+    <Compile Include="Modules\Inbox Module\Gform Classes\GFormServiceHandler.cs" />
     <Compile Include="Modules\Inbox Module\Inbox Classes\GmailServiceHandler.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
@@ -672,6 +676,7 @@
     <None Include="Resources\transfer_black.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Modules\Inbox Module\GformAuth\" />
     <Folder Include="Modules\Member Module\Member Images\" />
   </ItemGroup>
   <ItemGroup>
