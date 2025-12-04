@@ -1,24 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Modules.FareMatrix_Classes;
 
 namespace BATODA.User_Control_Forms
 {
     public partial class FareMatrixPanelUForm : UserControl
     {
+        private bool isEditing = false;
+        private FareMatrixRepository repo = new FareMatrixRepository();
+        public int RouteID { get; set; }
+
         public FareMatrixPanelUForm()
         {
             InitializeComponent();
+
             BaseFareTextBox.KeyDown += BaseFareTextBox_KeyDown;
+            EditFareMatrix.Click += EditFareMatrix_Click;
+
+            BaseFareTextBox.Visible = false;
         }
 
-        private bool isEditing = false;
+        private void FareMatrixPanelUForm_Load(object sender, EventArgs e)
+        {
+            BaseFareTextBox.Location = BaseFarelbl.Location;
+            BaseFareTextBox.Size = BaseFarelbl.Size;
+        }
+
+        public decimal BaseFare
+        {
+            get => decimal.TryParse(BaseFarelbl.Text.Replace("₱", ""), out var val) ? val : 0;
+            set
+            {
+                BaseFarelbl.Text = $"₱{value:0.00}";
+                UpdateDiscounted();
+            }
+        }
 
         public string Route
         {
@@ -26,88 +42,97 @@ namespace BATODA.User_Control_Forms
             set => Routelbl.Text = value;
         }
 
-        public string BaseFare
+
+        public decimal Student
         {
-            get => BaseFarelbl.Text;
-            set
-            {
-                BaseFarelbl.Text = value;
-                UpdateDiscounted();
-            }
+            get => decimal.TryParse(Studentlbl.Text.Replace("₱", ""), out var val) ? val : 0;
+            set => Studentlbl.Text = $"₱{value:0.00}";
         }
 
-
-        public string Student
+        public decimal Discounted
         {
-            get => Studentlbl.Text;
-            set => Studentlbl.Text = value;
-        }
-
-        public string Discounted
-        {
-            get => Discountedlbl.Text;
-            set => Discountedlbl.Text = value;
+            get => decimal.TryParse(Discountedlbl.Text.Replace("₱", ""), out var val) ? val : 0;
+            set => Discountedlbl.Text = $"₱{value:0.00}";
         }
 
         private void UpdateDiscounted()
         {
-            if (decimal.TryParse(BaseFarelbl.Text.Replace("₱", ""), out decimal baseFare))
+            decimal discounted = BaseFare * 0.8m;
+            Discounted = discounted;
+            Student = discounted;
+        }
+
+        private void EditFareMatrix_Click(object sender, EventArgs e)
+        {
+            if (!isEditing)
             {
-                decimal discounted = baseFare * 0.8m; // 20% off
-                Discountedlbl.Text = $"₱{discounted:0.00}";
-                Studentlbl.Text = $"₱{discounted:0.00}";
+                BaseFareTextBox.Text = BaseFare.ToString("0.00");
+                BaseFareTextBox.Visible = true;
+                BaseFareTextBox.BringToFront();
+
+                BaseFarelbl.Visible = false;
+                EditFareMatrix.Text = "Save";
+
+                BaseFareTextBox.Focus();
+                BaseFareTextBox.SelectAll();
             }
             else
             {
-                Discountedlbl.Text = "₱--";
-                Studentlbl.Text = "₱--";
+                SaveBaseFare();
             }
         }
 
         private void BaseFareTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter && isEditing)
+            if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; // prevent ding sound
+                e.SuppressKeyPress = true; 
+
+                if (string.IsNullOrWhiteSpace(BaseFareTextBox.Text))
+                {
+                    MessageBox.Show("Please enter a fare before saving.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    BaseFareTextBox.Focus();
+                    return;
+                }
+
+                isEditing = true;
                 SaveBaseFare();
             }
         }
 
+
         private void SaveBaseFare()
         {
-            string input = BaseFareTextBox.Text.Trim();
-            if (decimal.TryParse(input, out decimal baseFare))
+            if (decimal.TryParse(BaseFareTextBox.Text.Trim(), out decimal baseFare))
             {
-                BaseFarelbl.Text = $"₱{baseFare:0.00}";
-                UpdateDiscounted();
+                BaseFare = baseFare;
+
+                FareInfo updatedFare = new FareInfo
+                {
+                    RouteID = this.RouteID,  
+                    BaseFare = this.BaseFare,
+                    SeniorFare = this.Discounted,
+                    StudentFare = this.Student
+                };
+                repo.UpdateFare(updatedFare);  
+
+                BaseFareTextBox.Visible = false;
+                BaseFarelbl.Visible = true;
+                EditFareMatrix.Text = "Edit";
+                isEditing = false;
             }
             else
             {
                 MessageBox.Show("Please enter a valid numeric fare.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                BaseFareTextBox.Focus();
             }
-
-            BaseFareTextBox.Visible = false;
-            BaseFarelbl.Visible = true;
-            EditFareMatrix.ButtonImage = Properties.Resources.edit;
-            isEditing = false;
         }
-        private void EditFareMatrix_Click(object sender, EventArgs e)
+
+
+        private void BaseFareTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (!isEditing)
-            {
-                // Switch to edit mode
-                BaseFareTextBox.Text = BaseFarelbl.Text.Replace("₱", "").Trim();
-                BaseFareTextBox.Visible = true;
-                BaseFarelbl.Visible = false;
-                EditFareMatrix.ButtonImage = Properties.Resources.save;
-                isEditing = true;
-                BaseFareTextBox.Focus(); // focus for immediate typing
-            }
-            else
-            {
-                SaveBaseFare();
-            }
+
         }
     }
+
 }

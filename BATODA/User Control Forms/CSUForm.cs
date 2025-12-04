@@ -18,6 +18,11 @@ namespace BATODA.User_Control_Forms
         {
             InitializeComponent();
             LoadGmailInbox();
+            
+        }
+        private void CSUForm_Load(object sender, EventArgs e)
+        {
+            ReplyPanel.Visible = false;
         }
 
         private async void LoadGmailInbox()
@@ -42,19 +47,19 @@ namespace BATODA.User_Control_Forms
         {
             var panel = new Panel
             {
-                Width = 1490,
+                Width = 1535,
                 Height = 80,
                 BackColor = Color.WhiteSmoke,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(3),
                 Padding = new Padding(10),
-                AutoScroll = true
+                AutoScroll = false
             };
 
             var header = new Label
             {
                 Text = headerText,
-                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold),
                 AutoSize = true,
                 Location = new Point(10, 5)
             };
@@ -62,7 +67,7 @@ namespace BATODA.User_Control_Forms
             var time = new Label
             {
                 Text = timeText,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold),
                 AutoSize = true,
                 Location = new Point(1350, 10)
             };
@@ -70,7 +75,7 @@ namespace BATODA.User_Control_Forms
             var messagePreview = new Label
             {
                 Text = previewText.Length > 100 ? previewText.Substring(0, 100) + "..." : previewText,
-                Font = new Font("Segoe UI", 10, FontStyle.Regular),
+                Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular),
                 AutoSize = true,
                 Location = new Point(10, 40),
                 ForeColor = Color.Gray
@@ -87,6 +92,7 @@ namespace BATODA.User_Control_Forms
                 FromLbl.Text = fullMsg.From;
                 DateLbl.Text = fullMsg.Date.ToString("MMMM dd, yyyy");
                 ContentTxt.Text = fullMsg.Body;
+                
             };
 
             return panel;
@@ -109,9 +115,36 @@ namespace BATODA.User_Control_Forms
         {
         }
 
+        
+
         private void CloseMessage_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void CloseMessage_Click_1(object sender, EventArgs e)
+        {
             MessagePanel.Visible = false;
+            ReplyPanel.Visible = false;
+        }
+
+        private void ReplyButton_Click(object sender, EventArgs e)
+        {
+            MessagePanel.Location = new Point(64, 122);
+            ReplyPanel.Visible = true;
+
+        }
+
+        private void CancelReplyButton_Click(object sender, EventArgs e)
+        {
+            MessagePanel.Location = new Point(260, 122);
+            ReplyPanel.Visible = false;
+        }
+
+        private void SendReplyButton_Click(object sender, EventArgs e)
+        {
+            MessagePanel.Visible = false;
+            ReplyPanel.Visible = false;
         }
     }
 
