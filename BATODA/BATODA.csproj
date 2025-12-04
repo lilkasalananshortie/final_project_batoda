@@ -129,6 +129,16 @@
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TransferTricSearchOwner.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TricycleModel.cs" />
     <Compile Include="Modules\Tricycle Module\Tricycle Classes\TricycleRepository.cs" />
+    <Compile Include="UI Displays\ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI Displays\ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Displays\ExceptionManager.cs" />
+    <Compile Include="UI Displays\ExceptionOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI Displays\FontFamily.cs" />
     <Compile Include="UI Displays\ToastForm.cs">
       <SubType>Form</SubType>
@@ -305,6 +315,9 @@
     <Compile Include="User Control Forms\TransferVehicleUForm.Designer.cs">
       <DependentUpon>TransferVehicleUForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI Displays\ExceptionForm.resx">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI Displays\ToastForm.resx">
       <DependentUpon>ToastForm.cs</DependentUpon>
     </EmbeddedResource>

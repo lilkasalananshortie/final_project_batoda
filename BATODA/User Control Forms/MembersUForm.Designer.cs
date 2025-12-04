@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.SortMembertTypeCmb = new System.Windows.Forms.ComboBox();
             this.SortOrderCmb = new System.Windows.Forms.ComboBox();
@@ -243,14 +243,14 @@
             this.MembersDataGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.MembersDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.MembersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MembersDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.MembersDataGrid.EnableHeadersVisualStyles = false;
             this.MembersDataGrid.Location = new System.Drawing.Point(28, 85);
             this.MembersDataGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -266,7 +266,6 @@
             // MembersTopPanel
             // 
             this.MembersTopPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MembersTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MembersTopPanel.Controls.Add(this.TransferMembershipButton);
             this.MembersTopPanel.Controls.Add(this.TransferRecordsButton);
             this.MembersTopPanel.Controls.Add(this.ManageMembersButton);
@@ -282,7 +281,7 @@
             this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.White;
             this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
             this.TransferMembershipButton.BorderRadius = 0;
-            this.TransferMembershipButton.BorderSize = 1;
+            this.TransferMembershipButton.BorderSize = 0;
             this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
             this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
             this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -315,7 +314,7 @@
             this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
             this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
             this.TransferRecordsButton.BorderRadius = 0;
-            this.TransferRecordsButton.BorderSize = 1;
+            this.TransferRecordsButton.BorderSize = 0;
             this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
             this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
             this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -348,7 +347,7 @@
             this.ManageMembersButton.BackgroundColor = System.Drawing.Color.LightGray;
             this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
             this.ManageMembersButton.BorderRadius = 0;
-            this.ManageMembersButton.BorderSize = 1;
+            this.ManageMembersButton.BorderSize = 0;
             this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
             this.ManageMembersButton.FlatAppearance.BorderSize = 0;
             this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -373,6 +372,7 @@
             this.ManageMembersButton.TextOffset = 20;
             this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
+            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
             // AddMemberPanel
             // 
@@ -383,7 +383,7 @@
             this.AddMemberPanel.Controls.Add(this.label1);
             this.AddMemberPanel.Controls.Add(this.AddMemberBtn);
             this.AddMemberPanel.Controls.Add(this.CancelButton);
-            this.AddMemberPanel.Location = new System.Drawing.Point(355, 109);
+            this.AddMemberPanel.Location = new System.Drawing.Point(237, 172);
             this.AddMemberPanel.Name = "AddMemberPanel";
             this.AddMemberPanel.Size = new System.Drawing.Size(1148, 602);
             this.AddMemberPanel.TabIndex = 22;
@@ -428,17 +428,17 @@
             // 
             this.BirthdatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BirthdatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirthdatePicker.Location = new System.Drawing.Point(552, 328);
+            this.BirthdatePicker.Location = new System.Drawing.Point(818, 326);
             this.BirthdatePicker.MaxDate = new System.DateTime(2999, 12, 31, 0, 0, 0, 0);
             this.BirthdatePicker.Name = "BirthdatePicker";
-            this.BirthdatePicker.Size = new System.Drawing.Size(267, 26);
+            this.BirthdatePicker.Size = new System.Drawing.Size(259, 26);
             this.BirthdatePicker.TabIndex = 54;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(549, 296);
+            this.label25.Location = new System.Drawing.Point(815, 294);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(84, 20);
             this.label25.TabIndex = 53;
@@ -545,7 +545,7 @@
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.AddChassisNumberTxt);
-            this.panel17.Location = new System.Drawing.Point(817, 244);
+            this.panel17.Location = new System.Drawing.Point(551, 325);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(256, 35);
             this.panel17.TabIndex = 28;
@@ -583,7 +583,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(840, 48);
+            this.label23.Location = new System.Drawing.Point(817, 129);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(115, 20);
             this.label23.TabIndex = 27;
@@ -594,9 +594,9 @@
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.AddMemberTypeCmb);
             this.panel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel15.Location = new System.Drawing.Point(841, 76);
+            this.panel15.Location = new System.Drawing.Point(818, 157);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(230, 35);
+            this.panel15.Size = new System.Drawing.Size(248, 35);
             this.panel15.TabIndex = 26;
             // 
             // AddMemberTypeCmb
@@ -609,7 +609,7 @@
             "Operator"});
             this.AddMemberTypeCmb.Location = new System.Drawing.Point(3, 3);
             this.AddMemberTypeCmb.Name = "AddMemberTypeCmb";
-            this.AddMemberTypeCmb.Size = new System.Drawing.Size(222, 28);
+            this.AddMemberTypeCmb.Size = new System.Drawing.Size(240, 28);
             this.AddMemberTypeCmb.TabIndex = 3;
             // 
             // label8
@@ -674,7 +674,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(816, 214);
+            this.label7.Location = new System.Drawing.Point(550, 295);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 20);
             this.label7.TabIndex = 27;
@@ -790,7 +790,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(777, 55);
+            this.label10.Location = new System.Drawing.Point(769, 49);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 20);
             this.label10.TabIndex = 27;
@@ -819,7 +819,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(817, 128);
+            this.label11.Location = new System.Drawing.Point(815, 215);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(115, 20);
             this.label11.TabIndex = 27;
@@ -829,7 +829,7 @@
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel11.Controls.Add(this.AddPlateNumberTxt);
-            this.panel11.Location = new System.Drawing.Point(818, 157);
+            this.panel11.Location = new System.Drawing.Point(816, 244);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(255, 35);
             this.panel11.TabIndex = 26;
@@ -1389,7 +1389,7 @@
             this.ViewMemberInfoPanel.Controls.Add(this.label49);
             this.ViewMemberInfoPanel.Controls.Add(this.GoToEditPanel);
             this.ViewMemberInfoPanel.Controls.Add(this.CloseBtn);
-            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(213, 122);
+            this.ViewMemberInfoPanel.Location = new System.Drawing.Point(319, 172);
             this.ViewMemberInfoPanel.Name = "ViewMemberInfoPanel";
             this.ViewMemberInfoPanel.Size = new System.Drawing.Size(991, 576);
             this.ViewMemberInfoPanel.TabIndex = 57;
@@ -1841,13 +1841,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.ViewMemberInfoPanel);
-            this.Controls.Add(this.AddMemberPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.MembersTopPanel);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.AddMemberPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MembersUForm";
