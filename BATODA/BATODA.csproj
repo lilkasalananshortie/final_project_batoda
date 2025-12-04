@@ -220,6 +220,12 @@
     <Compile Include="User Control Forms\FinanceUForm.Designer.cs">
       <DependentUpon>FinanceUForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control Forms\GFormUForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control Forms\GFormUForm.Designer.cs">
+      <DependentUpon>GFormUForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control Forms\LogoutUForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\FinanceUForm.resx">
       <DependentUpon>FinanceUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control Forms\GFormUForm.resx">
+      <DependentUpon>GFormUForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control Forms\LogoutUForm.resx">
       <DependentUpon>LogoutUForm.cs</DependentUpon>

@@ -13,12 +13,17 @@ namespace BATODA.User_Control_Forms
     {
         private GmailServiceHandler gmailHandler = new GmailServiceHandler();
         private List<(string Id, string Subject, DateTime Date)> cachedMessages;
-
+        private Panel currentSelectedPanel;
+        private int panelGenertedBig = 1530;
+        private int panelGenertedSmall = 933;
         public CSUForm()
         {
             InitializeComponent();
             LoadGmailInbox();
-            
+          
+
+
+
         }
         private void CSUForm_Load(object sender, EventArgs e)
         {
@@ -47,13 +52,12 @@ namespace BATODA.User_Control_Forms
         {
             var panel = new Panel
             {
-                Width = 1535,
+                Width = panelGenertedBig,
                 Height = 80,
                 BackColor = Color.WhiteSmoke,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(3),
-                Padding = new Padding(10),
-                AutoScroll = false
+                Padding = new Padding(10)
             };
 
             var header = new Label
@@ -61,7 +65,7 @@ namespace BATODA.User_Control_Forms
                 Text = headerText,
                 Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold),
                 AutoSize = true,
-                Location = new Point(10, 5)
+                Dock = DockStyle.Top
             };
 
             var time = new Label
@@ -69,47 +73,53 @@ namespace BATODA.User_Control_Forms
                 Text = timeText,
                 Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold),
                 AutoSize = true,
-                Location = new Point(1350, 10)
+                Anchor = AnchorStyles.Top | AnchorStyles.Right
             };
 
-            var messagePreview = new Label
+            var preview = new Label
             {
                 Text = previewText.Length > 100 ? previewText.Substring(0, 100) + "..." : previewText,
                 Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular),
                 AutoSize = true,
-                Location = new Point(10, 40),
-                ForeColor = Color.Gray
+                Dock = DockStyle.Top,
+                ForeColor = Color.Gray,
+                Padding = new Padding(0, 5, 0, 0)
             };
 
+            panel.Controls.Add(preview);
             panel.Controls.Add(header);
             panel.Controls.Add(time);
-            panel.Controls.Add(messagePreview);
+
+            panel.Resize += (s, e) =>
+            {
+                time.Location = new Point(panel.Width - time.Width - 20, 10);
+            };
 
             panel.Click += (s, e) =>
             {
+                foreach (Control ctrl in InboxFlowLayoutPanel.Controls)
+                {
+                    if (ctrl is Panel p)
+                    {
+                        p.Width = 850;
+                    }
+                }
+
+                currentSelectedPanel = panel;
+
                 MessagePanel.Visible = true;
-                var fullMsg = gmailHandler.GetFullMessage(messageId);
-                FromLbl.Text = fullMsg.From;
-                DateLbl.Text = fullMsg.Date.ToString("MMMM dd, yyyy");
-                ContentTxt.Text = fullMsg.Body;
-                
+
+                InboxFlowLayoutPanel.Size = new Size(860, 1067);
+                InboxFlowLayoutPanel.Location = new Point(50, 70);
+
+                var full = gmailHandler.GetFullMessage(messageId);
+                FromLbl.Text = full.From;
+                DateLbl.Text = full.Date.ToString("MMMM dd, yyyy");
+                ContentTxt.Text = full.Body;
             };
 
             return panel;
         }
-
-
-        private void TESTPANEL_Click(object sender, EventArgs e)
-        {
-            var panel = CreateInboxPanel(
-                "Test Subject",
-                "This is a sample preview of the message to demonstrate how the snippet will appear in the panel.",
-                DateTime.Now.ToString("hh:mm tt"),
-                "test"
-            );
-            InboxFlowLayoutPanel.Controls.Add(panel);
-        }
-
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
@@ -124,27 +134,58 @@ namespace BATODA.User_Control_Forms
 
         private void CloseMessage_Click_1(object sender, EventArgs e)
         {
+            foreach (Control ctrl in InboxFlowLayoutPanel.Controls)
+            {
+                if (ctrl is Panel p)
+                {
+                    p.Width = panelGenertedBig;
+                }
+            }
+
+            currentSelectedPanel = null;
+
+            InboxFlowLayoutPanel.Size = new Size(1535, 1067);
+            InboxFlowLayoutPanel.Location = new Point(50, 70);
+
             MessagePanel.Visible = false;
             ReplyPanel.Visible = false;
         }
 
         private void ReplyButton_Click(object sender, EventArgs e)
         {
-            MessagePanel.Location = new Point(64, 122);
+            
             ReplyPanel.Visible = true;
 
         }
 
         private void CancelReplyButton_Click(object sender, EventArgs e)
         {
-            MessagePanel.Location = new Point(260, 122);
+            
             ReplyPanel.Visible = false;
         }
 
         private void SendReplyButton_Click(object sender, EventArgs e)
         {
+            foreach (Control ctrl in InboxFlowLayoutPanel.Controls)
+            {
+                if (ctrl is Panel p)
+                {
+                    p.Width = panelGenertedBig;
+                }
+            }
+
+            currentSelectedPanel = null;
+
+            InboxFlowLayoutPanel.Size = new Size(1535, 1067);
+            InboxFlowLayoutPanel.Location = new Point(50, 70);
+
             MessagePanel.Visible = false;
             ReplyPanel.Visible = false;
+        }
+
+        private void GFormRcvButton_Click(object sender, EventArgs e)
+        {
+            DisplayClass.ShowMain(new GFormUForm());
         }
     }
 
