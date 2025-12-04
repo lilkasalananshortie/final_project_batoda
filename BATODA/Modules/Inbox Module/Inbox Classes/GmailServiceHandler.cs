@@ -22,10 +22,17 @@ namespace BATODA.Modules.Inbox_Module.Inbox_Classes
         {
             UserCredential credential;
 
-            using (var stream = new FileStream(@"..\..\Modules\Inbox Module\GmailAuth\credentials.json", FileMode.Open, FileAccess.Read))
+            using (var stream = new FileStream(
+                @"..\..\Modules\Inbox Module\GFormAuth\gforms-credentials.json",
+                FileMode.Open,
+                FileAccess.Read))
             {
                 string credPath = "token.json";
-                string[] scopes = { GmailService.Scope.GmailReadonly, GmailService.Scope.GmailSend };
+                string[] scopes =
+                {
+                    GmailService.Scope.GmailReadonly,
+                    GmailService.Scope.GmailSend
+                };
 
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.FromStream(stream).Secrets,

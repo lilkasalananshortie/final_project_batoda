@@ -107,6 +107,7 @@
     <Compile Include="Modules\FareMatrix Classes\FareMatrixModel.cs" />
     <Compile Include="Modules\FareMatrix Classes\FareMatrixRepository.cs" />
     <Compile Include="Modules\Finance Module\Finance Classes\TaxRepository.cs" />
+    <Compile Include="Modules\Inbox Module\Gform Classes\GFormResponseModel.cs" />
     <Compile Include="Modules\Inbox Module\Gform Classes\GFormServiceHandler.cs" />
     <Compile Include="Modules\Inbox Module\Inbox Classes\GmailServiceHandler.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
@@ -408,6 +409,7 @@
     <EmbeddedResource Include="Fonts\Montserrat-Normal.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="Modules\Inbox Module\GformAuth\gforms-credentials.json" />
     <None Include="Modules\Inbox Module\GmailAuth\credentials.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -676,7 +678,6 @@
     <None Include="Resources\transfer_black.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Modules\Inbox Module\GformAuth\" />
     <Folder Include="Modules\Member Module\Member Images\" />
   </ItemGroup>
   <ItemGroup>

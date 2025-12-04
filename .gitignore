@@ -5,3 +5,4 @@ BATODA/obj/
 BATODA/Debug/ 
 BATODA/Release/
 BATODA/Modules/Inbox Module/GmailAuth/credentials.json
+BATODA/Modules/Inbox Module/GformAuth/gforms-credentials.json

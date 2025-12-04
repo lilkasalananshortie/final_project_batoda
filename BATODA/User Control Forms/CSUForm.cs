@@ -20,7 +20,7 @@ namespace BATODA.User_Control_Forms
         {
             InitializeComponent();
             LoadGmailInbox();
-          
+
 
 
 
@@ -125,7 +125,7 @@ namespace BATODA.User_Control_Forms
         {
         }
 
-        
+
 
         private void CloseMessage_Click(object sender, EventArgs e)
         {
@@ -153,20 +153,20 @@ namespace BATODA.User_Control_Forms
 
         private void ReplyButton_Click(object sender, EventArgs e)
         {
-            
+
             ReplyPanel.Visible = true;
 
         }
 
         private void CancelReplyButton_Click(object sender, EventArgs e)
         {
-            
+
             ReplyPanel.Visible = false;
         }
 
         private void SendReplyButton_Click(object sender, EventArgs e)
         {
-            if (currentSelectedPanel == null) return; 
+            if (currentSelectedPanel == null) return;
 
             string replyText = ReplyContentRTextbox.Text.Trim();
             if (string.IsNullOrEmpty(replyText))

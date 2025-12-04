@@ -56,9 +56,9 @@
             // 
             this.InboxFlowLayoutPanel.AutoScroll = true;
             this.InboxFlowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.InboxFlowLayoutPanel.Location = new System.Drawing.Point(50, 70);
+            this.InboxFlowLayoutPanel.Location = new System.Drawing.Point(105, 81);
             this.InboxFlowLayoutPanel.Name = "InboxFlowLayoutPanel";
-            this.InboxFlowLayoutPanel.Size = new System.Drawing.Size(1534, 1067);
+            this.InboxFlowLayoutPanel.Size = new System.Drawing.Size(1095, 820);
             this.InboxFlowLayoutPanel.TabIndex = 57;
             // 
             // MessagePanel
@@ -75,7 +75,7 @@
             this.MessagePanel.Controls.Add(this.label2);
             this.MessagePanel.Location = new System.Drawing.Point(905, 72);
             this.MessagePanel.Name = "MessagePanel";
-            this.MessagePanel.Size = new System.Drawing.Size(632, 865);
+            this.MessagePanel.Size = new System.Drawing.Size(679, 865);
             this.MessagePanel.TabIndex = 1;
             this.MessagePanel.Visible = false;
             // 
@@ -97,13 +97,13 @@
             this.ReplyButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.ReplyButton.ImageSize = new System.Drawing.Size(32, 32);
             this.ReplyButton.IsToggled = false;
-            this.ReplyButton.Location = new System.Drawing.Point(454, 21);
+            this.ReplyButton.Location = new System.Drawing.Point(446, 95);
             this.ReplyButton.MouseDownColor = System.Drawing.Color.LightGray;
             this.ReplyButton.Name = "ReplyButton";
             this.ReplyButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.ReplyButton.PaddingX = 0;
             this.ReplyButton.PaddingY = 0;
-            this.ReplyButton.Size = new System.Drawing.Size(151, 59);
+            this.ReplyButton.Size = new System.Drawing.Size(127, 29);
             this.ReplyButton.TabIndex = 10;
             this.ReplyButton.Text = "Reply";
             this.ReplyButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
@@ -130,13 +130,13 @@
             this.CloseMessage.ImagePosition = new System.Drawing.Point(20, 0);
             this.CloseMessage.ImageSize = new System.Drawing.Size(32, 32);
             this.CloseMessage.IsToggled = false;
-            this.CloseMessage.Location = new System.Drawing.Point(12, 3);
+            this.CloseMessage.Location = new System.Drawing.Point(3, 8);
             this.CloseMessage.MouseDownColor = System.Drawing.Color.LightGray;
             this.CloseMessage.Name = "CloseMessage";
             this.CloseMessage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.CloseMessage.PaddingX = 0;
             this.CloseMessage.PaddingY = 0;
-            this.CloseMessage.Size = new System.Drawing.Size(71, 59);
+            this.CloseMessage.Size = new System.Drawing.Size(57, 42);
             this.CloseMessage.TabIndex = 9;
             this.CloseMessage.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.CloseMessage.TextOffset = 20;
@@ -149,7 +149,7 @@
             this.DateLbl.AutoSize = true;
             this.DateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLbl.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.DateLbl.Location = new System.Drawing.Point(497, 97);
+            this.DateLbl.Location = new System.Drawing.Point(510, 65);
             this.DateLbl.Name = "DateLbl";
             this.DateLbl.Size = new System.Drawing.Size(100, 24);
             this.DateLbl.TabIndex = 5;
@@ -160,7 +160,7 @@
             this.FromLbl.AutoSize = true;
             this.FromLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FromLbl.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.FromLbl.Location = new System.Drawing.Point(86, 65);
+            this.FromLbl.Location = new System.Drawing.Point(77, 65);
             this.FromLbl.Name = "FromLbl";
             this.FromLbl.Size = new System.Drawing.Size(145, 24);
             this.FromLbl.TabIndex = 4;
@@ -174,7 +174,7 @@
             this.ContentTxt.Location = new System.Drawing.Point(24, 134);
             this.ContentTxt.Name = "ContentTxt";
             this.ContentTxt.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.ContentTxt.Size = new System.Drawing.Size(593, 708);
+            this.ContentTxt.Size = new System.Drawing.Size(630, 713);
             this.ContentTxt.TabIndex = 3;
             this.ContentTxt.Text = "";
             // 
@@ -182,7 +182,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 101);
+            this.label4.Location = new System.Drawing.Point(22, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 24);
             this.label4.TabIndex = 2;
@@ -192,7 +192,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(452, 97);
+            this.label3.Location = new System.Drawing.Point(465, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 24);
             this.label3.TabIndex = 1;
@@ -202,7 +202,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 65);
+            this.label2.Location = new System.Drawing.Point(22, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 24);
             this.label2.TabIndex = 0;
@@ -210,6 +210,7 @@
             // 
             // ReplyPanel
             // 
+            this.ReplyPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ReplyPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ReplyPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ReplyPanel.Controls.Add(this.label6);
@@ -217,9 +218,9 @@
             this.ReplyPanel.Controls.Add(this.SendReplyButton);
             this.ReplyPanel.Controls.Add(this.ReplyContentRTextbox);
             this.ReplyPanel.Controls.Add(this.CancelReplyButton);
-            this.ReplyPanel.Location = new System.Drawing.Point(314, 133);
+            this.ReplyPanel.Location = new System.Drawing.Point(341, 163);
             this.ReplyPanel.Name = "ReplyPanel";
-            this.ReplyPanel.Size = new System.Drawing.Size(587, 741);
+            this.ReplyPanel.Size = new System.Drawing.Size(560, 655);
             this.ReplyPanel.TabIndex = 59;
             // 
             // label6
@@ -227,7 +228,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(414, 36);
+            this.label6.Location = new System.Drawing.Point(367, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 24);
             this.label6.TabIndex = 14;
@@ -237,7 +238,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(326, 36);
+            this.label5.Location = new System.Drawing.Point(279, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 24);
             this.label5.TabIndex = 13;
@@ -253,7 +254,7 @@
             this.SendReplyButton.ButtonImage = global::BATODA.Properties.Resources.request;
             this.SendReplyButton.FlatAppearance.BorderSize = 0;
             this.SendReplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SendReplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendReplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SendReplyButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.SendReplyButton.HoverBorderColor = System.Drawing.Color.Silver;
             this.SendReplyButton.HoverColor = System.Drawing.Color.Silver;
@@ -261,13 +262,13 @@
             this.SendReplyButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.SendReplyButton.ImageSize = new System.Drawing.Size(32, 32);
             this.SendReplyButton.IsToggled = false;
-            this.SendReplyButton.Location = new System.Drawing.Point(359, 654);
+            this.SendReplyButton.Location = new System.Drawing.Point(351, 603);
             this.SendReplyButton.MouseDownColor = System.Drawing.Color.LightGray;
             this.SendReplyButton.Name = "SendReplyButton";
             this.SendReplyButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.SendReplyButton.PaddingX = 0;
             this.SendReplyButton.PaddingY = 0;
-            this.SendReplyButton.Size = new System.Drawing.Size(206, 59);
+            this.SendReplyButton.Size = new System.Drawing.Size(189, 38);
             this.SendReplyButton.TabIndex = 12;
             this.SendReplyButton.Text = "Send Reply";
             this.SendReplyButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
@@ -278,8 +279,9 @@
             // 
             // ReplyContentRTextbox
             // 
+            this.ReplyContentRTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ReplyContentRTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ReplyContentRTextbox.Location = new System.Drawing.Point(45, 101);
+            this.ReplyContentRTextbox.Location = new System.Drawing.Point(20, 52);
             this.ReplyContentRTextbox.Name = "ReplyContentRTextbox";
             this.ReplyContentRTextbox.Size = new System.Drawing.Size(520, 541);
             this.ReplyContentRTextbox.TabIndex = 11;
@@ -303,13 +305,13 @@
             this.CancelReplyButton.ImagePosition = new System.Drawing.Point(20, 0);
             this.CancelReplyButton.ImageSize = new System.Drawing.Size(32, 32);
             this.CancelReplyButton.IsToggled = false;
-            this.CancelReplyButton.Location = new System.Drawing.Point(18, 19);
+            this.CancelReplyButton.Location = new System.Drawing.Point(0, 6);
             this.CancelReplyButton.MouseDownColor = System.Drawing.Color.LightGray;
             this.CancelReplyButton.Name = "CancelReplyButton";
             this.CancelReplyButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.CancelReplyButton.PaddingX = 0;
             this.CancelReplyButton.PaddingY = 0;
-            this.CancelReplyButton.Size = new System.Drawing.Size(71, 59);
+            this.CancelReplyButton.Size = new System.Drawing.Size(57, 44);
             this.CancelReplyButton.TabIndex = 10;
             this.CancelReplyButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.CancelReplyButton.TextOffset = 20;
@@ -403,7 +405,7 @@
             this.Controls.Add(this.ReplyPanel);
             this.Controls.Add(this.InboxFlowLayoutPanel);
             this.Name = "CSUForm";
-            this.Size = new System.Drawing.Size(1768, 938);
+            this.Size = new System.Drawing.Size(1768, 998);
             this.Load += new System.EventHandler(this.CSUForm_Load);
             this.MessagePanel.ResumeLayout(false);
             this.MessagePanel.PerformLayout();
