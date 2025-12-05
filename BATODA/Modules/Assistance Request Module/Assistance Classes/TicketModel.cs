@@ -9,7 +9,6 @@ namespace BATODA.Modules.Assistance_Request_Module.Assistance_Classes
     internal class TicketModel
     {
         public int TicketID { get; set; }
-
         public int BodyNumber { get; set; }
         public string FullName { get; set; }
         public string RequestedBy { get; set; }

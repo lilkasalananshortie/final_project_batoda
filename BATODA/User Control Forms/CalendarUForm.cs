@@ -372,7 +372,6 @@ namespace BATODA
             }
             ;
 
-            // POSITION BUTTONS
             int marginRight = 20;
             int marginBottom = 15;
             int marginTop = 10;
@@ -624,12 +623,6 @@ namespace BATODA
             }
         }
 
-        private void CheckAttendanceButton_Click(object sender, EventArgs e)
-        {
-            CheckAttendancePanel.Show();
-            CheckAttendancePanel.BringToFront();
-        }
-
         private void PastEventPanel_DoubleClick(object sender, EventArgs e)
         {
             selectedPastEventPanel = sender as Panel;
@@ -752,27 +745,6 @@ namespace BATODA
             CheckAttendancePanel.Hide();
         }
 
-        private void EditEventButton_Click(object sender, EventArgs e)
-        {
-            if (selectedEventPanel != null && selectedEventPanel.Tag is CalendarEvent evt)
-            {
-                EventTitleTxt.Text = evt.Title;
-                EventTypeCmb.Text = evt.Type;
-                EventLocationTxt.Text = evt.Location;
-                NoteTxt.Text = evt.Description;
-
-                if (TimeSpan.TryParse(evt.Time, out TimeSpan time))
-                {
-                    DatePicker.Value = DateTime.Today.Add(time);
-                }
-
-                selectedDate = evt.Date;
-                editingEvent = evt;
-                SaveEventButton.Text = "Update";
-                AddEventPanel.Show();
-                AddEventPanel.BringToFront();
-            }
-        }
         public void ShowAddEventPanel(DateTime date)
         {
             if (date.Date < DateTime.Today)
@@ -784,25 +756,6 @@ namespace BATODA
             selectedDate = date;
             AddEventPanel.Show();
             AddEventPanel.BringToFront();
-        }
-
-        private void LoadAttendanceIntoDGV(CalendarEvent ev)
-        {
-            AttendanceListDGV.Columns.Clear();
-            AttendanceListDGV.Rows.Clear();
-
-            AttendanceListDGV.Columns.Add("BodyNumber", "Body Number");
-            AttendanceListDGV.Columns.Add("MemberName", "Member Name");
-            AttendanceListDGV.Columns.Add("Status", "Status");
-
-            foreach (var member in ev.AttendanceList)
-            {
-                AttendanceListDGV.Rows.Add(
-                    member.BodyNumber,
-                    member.MemberName,
-                    member.IsPresent == 2 ? "Present" : "Absent"
-                );
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -877,21 +830,6 @@ namespace BATODA
                 string fullName = $"{m.LastName}, {m.FirstName} {m.MiddleInitial}";
                 SelectMembersGrid.Rows.Add(false, bodyNumberFormatted, fullName);
             }
-        }
-
-        private List<(int BodyNumber, string MemberName)> GetSelectedMembers()
-        {
-            var selected = new List<(int, string)>();
-            foreach (DataGridViewRow row in SelectMembersGrid.Rows)
-            {
-                if (row.Cells[0].Value is bool isChecked && isChecked)
-                {
-                    int bodyNumber = int.Parse(row.Cells["BodyNumber"].Value.ToString());
-                    string memberName = row.Cells["FullName"].Value.ToString();
-                    selected.Add((bodyNumber, memberName));
-                }
-            }
-            return selected;
         }
 
         private void SaveSelectedBtn_Click(object sender, EventArgs e)
