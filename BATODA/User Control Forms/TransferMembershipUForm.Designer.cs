@@ -32,6 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
+            this.TransferMembershipButton = new BATODA.ButtonStyle();
+            this.TransferRecordsButton = new BATODA.ButtonStyle();
+            this.ManageMembersButton = new BATODA.ButtonStyle();
             this.ScrollablePanel = new System.Windows.Forms.Panel();
             this.HolderPanel1 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
@@ -40,6 +43,7 @@
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.TransferBtn = new BATODA.ButtonStyle();
             this.label23 = new System.Windows.Forms.Label();
             this.TransferReasonTxt = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -81,7 +85,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.OwnerSearchTxt = new System.Windows.Forms.TextBox();
+            this.TransferUploadBtn = new BATODA.ButtonStyle();
             this.NewOwnerPb = new System.Windows.Forms.PictureBox();
+            this.ClearButton = new BATODA.ButtonStyle();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -125,12 +131,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.TransferUploadImage = new System.Windows.Forms.OpenFileDialog();
-            this.TransferMembershipButton = new BATODA.ButtonStyle();
-            this.TransferRecordsButton = new BATODA.ButtonStyle();
-            this.ManageMembersButton = new BATODA.ButtonStyle();
-            this.TransferBtn = new BATODA.ButtonStyle();
-            this.TransferUploadBtn = new BATODA.ButtonStyle();
-            this.ClearButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.ScrollablePanel.SuspendLayout();
             this.HolderPanel1.SuspendLayout();
@@ -197,6 +197,105 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 19;
             // 
+            // TransferMembershipButton
+            // 
+            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.BorderRadius = 0;
+            this.TransferMembershipButton.BorderSize = 1;
+            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
+            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
+            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
+            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferMembershipButton.IsToggled = false;
+            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
+            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferMembershipButton.Name = "TransferMembershipButton";
+            this.TransferMembershipButton.PaddingX = 0;
+            this.TransferMembershipButton.PaddingY = 0;
+            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferMembershipButton.TabIndex = 21;
+            this.TransferMembershipButton.Text = "Transfer Membership";
+            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
+            this.TransferMembershipButton.TextOffset = 20;
+            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferMembershipButton.UseVisualStyleBackColor = false;
+            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
+            // 
+            // TransferRecordsButton
+            // 
+            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
+            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.BorderRadius = 0;
+            this.TransferRecordsButton.BorderSize = 1;
+            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
+            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
+            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
+            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferRecordsButton.IsToggled = false;
+            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
+            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.TransferRecordsButton.Name = "TransferRecordsButton";
+            this.TransferRecordsButton.PaddingX = 0;
+            this.TransferRecordsButton.PaddingY = 0;
+            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
+            this.TransferRecordsButton.TabIndex = 20;
+            this.TransferRecordsButton.Text = "Transfer History";
+            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
+            this.TransferRecordsButton.TextOffset = 20;
+            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.TransferRecordsButton.UseVisualStyleBackColor = false;
+            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
+            // 
+            // ManageMembersButton
+            // 
+            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
+            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.BorderRadius = 0;
+            this.ManageMembersButton.BorderSize = 1;
+            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
+            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
+            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
+            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
+            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ManageMembersButton.IsToggled = false;
+            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
+            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.ManageMembersButton.Name = "ManageMembersButton";
+            this.ManageMembersButton.PaddingX = 0;
+            this.ManageMembersButton.PaddingY = 0;
+            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
+            this.ManageMembersButton.TabIndex = 19;
+            this.ManageMembersButton.Text = "Manage Members";
+            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
+            this.ManageMembersButton.TextOffset = 20;
+            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.ManageMembersButton.UseVisualStyleBackColor = false;
+            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
+            // 
             // ScrollablePanel
             // 
             this.ScrollablePanel.AutoScroll = true;
@@ -209,7 +308,6 @@
             this.ScrollablePanel.Name = "ScrollablePanel";
             this.ScrollablePanel.Size = new System.Drawing.Size(1585, 884);
             this.ScrollablePanel.TabIndex = 20;
-            this.ScrollablePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ScrollablePanel_Paint);
             // 
             // HolderPanel1
             // 
@@ -224,6 +322,7 @@
             // panel24
             // 
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel24.Controls.Add(this.panel3);
             this.panel24.Controls.Add(this.OwnerSearchGrid);
             this.panel24.Controls.Add(this.panel27);
             this.panel24.Controls.Add(this.TransferBtn);
@@ -239,7 +338,6 @@
             this.panel24.Controls.Add(this.panel4);
             this.panel24.Controls.Add(this.label7);
             this.panel24.Controls.Add(this.label14);
-            this.panel24.Controls.Add(this.panel3);
             this.panel24.Controls.Add(this.label6);
             this.panel24.Controls.Add(this.panel9);
             this.panel24.Controls.Add(this.panel13);
@@ -304,6 +402,39 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(770, 3);
             this.panel27.TabIndex = 88;
+            // 
+            // TransferBtn
+            // 
+            this.TransferBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.BorderRadius = 0;
+            this.TransferBtn.BorderSize = 0;
+            this.TransferBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
+            this.TransferBtn.FlatAppearance.BorderSize = 0;
+            this.TransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferBtn.ForeColor = System.Drawing.Color.White;
+            this.TransferBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.TransferBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.TransferBtn.ImageColor = System.Drawing.Color.White;
+            this.TransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.TransferBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferBtn.IsToggled = false;
+            this.TransferBtn.Location = new System.Drawing.Point(520, 683);
+            this.TransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferBtn.Name = "TransferBtn";
+            this.TransferBtn.PaddingX = 0;
+            this.TransferBtn.PaddingY = 0;
+            this.TransferBtn.Size = new System.Drawing.Size(255, 49);
+            this.TransferBtn.TabIndex = 59;
+            this.TransferBtn.Text = "Transfer Membership";
+            this.TransferBtn.TextColor = System.Drawing.Color.White;
+            this.TransferBtn.TextOffset = 5;
+            this.TransferBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.TransferBtn.UseVisualStyleBackColor = false;
+            this.TransferBtn.Click += new System.EventHandler(this.TransferBtn_Click);
             // 
             // label23
             // 
@@ -711,6 +842,39 @@
             this.OwnerSearchTxt.TabIndex = 42;
             this.OwnerSearchTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OwnerSearchTxt_KeyDown_1);
             // 
+            // TransferUploadBtn
+            // 
+            this.TransferUploadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferUploadBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferUploadBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferUploadBtn.BorderRadius = 0;
+            this.TransferUploadBtn.BorderSize = 0;
+            this.TransferUploadBtn.ButtonImage = null;
+            this.TransferUploadBtn.FlatAppearance.BorderSize = 0;
+            this.TransferUploadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferUploadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferUploadBtn.ForeColor = System.Drawing.Color.White;
+            this.TransferUploadBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.TransferUploadBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.TransferUploadBtn.ImageColor = System.Drawing.Color.White;
+            this.TransferUploadBtn.ImagePosition = new System.Drawing.Point(20, 0);
+            this.TransferUploadBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.TransferUploadBtn.IsToggled = false;
+            this.TransferUploadBtn.Location = new System.Drawing.Point(15, 260);
+            this.TransferUploadBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferUploadBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.TransferUploadBtn.Name = "TransferUploadBtn";
+            this.TransferUploadBtn.PaddingX = 0;
+            this.TransferUploadBtn.PaddingY = 0;
+            this.TransferUploadBtn.Size = new System.Drawing.Size(247, 37);
+            this.TransferUploadBtn.TabIndex = 49;
+            this.TransferUploadBtn.Text = "Upload Picture";
+            this.TransferUploadBtn.TextColor = System.Drawing.Color.White;
+            this.TransferUploadBtn.TextOffset = 5;
+            this.TransferUploadBtn.ToggleColor = System.Drawing.Color.Empty;
+            this.TransferUploadBtn.UseVisualStyleBackColor = false;
+            this.TransferUploadBtn.Click += new System.EventHandler(this.TransferUploadBtn_Click_1);
+            // 
             // NewOwnerPb
             // 
             this.NewOwnerPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -721,6 +885,38 @@
             this.NewOwnerPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NewOwnerPb.TabIndex = 48;
             this.NewOwnerPb.TabStop = false;
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.BorderRadius = 0;
+            this.ClearButton.BorderSize = 0;
+            this.ClearButton.ButtonImage = null;
+            this.ClearButton.FlatAppearance.BorderSize = 0;
+            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.ClearButton.ImageColor = System.Drawing.Color.White;
+            this.ClearButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.ClearButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.ClearButton.IsToggled = false;
+            this.ClearButton.Location = new System.Drawing.Point(15, 302);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.PaddingX = 0;
+            this.ClearButton.PaddingY = 0;
+            this.ClearButton.Size = new System.Drawing.Size(247, 37);
+            this.ClearButton.TabIndex = 46;
+            this.ClearButton.Text = "Reset";
+            this.ClearButton.TextColor = System.Drawing.Color.White;
+            this.ClearButton.TextOffset = 5;
+            this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
+            this.ClearButton.UseVisualStyleBackColor = false;
             // 
             // panel23
             // 
@@ -1149,203 +1345,6 @@
             // TransferUploadImage
             // 
             this.TransferUploadImage.FileName = "openFileDialog1";
-            // 
-            // TransferMembershipButton
-            // 
-            this.TransferMembershipButton.BackColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.BorderRadius = 0;
-            this.TransferMembershipButton.BorderSize = 1;
-            this.TransferMembershipButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
-            this.TransferMembershipButton.FlatAppearance.BorderSize = 0;
-            this.TransferMembershipButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferMembershipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferMembershipButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferMembershipButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.ImagePosition = new System.Drawing.Point(122, 0);
-            this.TransferMembershipButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferMembershipButton.IsToggled = false;
-            this.TransferMembershipButton.Location = new System.Drawing.Point(535, 5);
-            this.TransferMembershipButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferMembershipButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferMembershipButton.Name = "TransferMembershipButton";
-            this.TransferMembershipButton.PaddingX = 0;
-            this.TransferMembershipButton.PaddingY = 0;
-            this.TransferMembershipButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferMembershipButton.TabIndex = 21;
-            this.TransferMembershipButton.Text = "Transfer Membership";
-            this.TransferMembershipButton.TextColor = System.Drawing.Color.Black;
-            this.TransferMembershipButton.TextOffset = 20;
-            this.TransferMembershipButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferMembershipButton.UseVisualStyleBackColor = false;
-            this.TransferMembershipButton.Click += new System.EventHandler(this.TransferMembershipButton_Click);
-            // 
-            // TransferRecordsButton
-            // 
-            this.TransferRecordsButton.BackColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BackgroundColor = System.Drawing.Color.White;
-            this.TransferRecordsButton.BorderColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.BorderRadius = 0;
-            this.TransferRecordsButton.BorderSize = 1;
-            this.TransferRecordsButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.TransferRecordsButton.FlatAppearance.BorderSize = 0;
-            this.TransferRecordsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferRecordsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferRecordsButton.ForeColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.HoverColor = System.Drawing.Color.Silver;
-            this.TransferRecordsButton.ImageColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.ImagePosition = new System.Drawing.Point(149, 0);
-            this.TransferRecordsButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferRecordsButton.IsToggled = false;
-            this.TransferRecordsButton.Location = new System.Drawing.Point(1065, 5);
-            this.TransferRecordsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferRecordsButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.TransferRecordsButton.Name = "TransferRecordsButton";
-            this.TransferRecordsButton.PaddingX = 0;
-            this.TransferRecordsButton.PaddingY = 0;
-            this.TransferRecordsButton.Size = new System.Drawing.Size(525, 49);
-            this.TransferRecordsButton.TabIndex = 20;
-            this.TransferRecordsButton.Text = "Transfer History";
-            this.TransferRecordsButton.TextColor = System.Drawing.Color.Black;
-            this.TransferRecordsButton.TextOffset = 20;
-            this.TransferRecordsButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.TransferRecordsButton.UseVisualStyleBackColor = false;
-            this.TransferRecordsButton.Click += new System.EventHandler(this.TransferRecordsButton_Click);
-            // 
-            // ManageMembersButton
-            // 
-            this.ManageMembersButton.BackColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BackgroundColor = System.Drawing.Color.White;
-            this.ManageMembersButton.BorderColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.BorderRadius = 0;
-            this.ManageMembersButton.BorderSize = 1;
-            this.ManageMembersButton.ButtonImage = global::BATODA.Properties.Resources.tab_members_icon;
-            this.ManageMembersButton.FlatAppearance.BorderSize = 0;
-            this.ManageMembersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageMembersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageMembersButton.ForeColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.HoverColor = System.Drawing.Color.Silver;
-            this.ManageMembersButton.ImageColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.ImagePosition = new System.Drawing.Point(118, 0);
-            this.ManageMembersButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ManageMembersButton.IsToggled = false;
-            this.ManageMembersButton.Location = new System.Drawing.Point(5, 5);
-            this.ManageMembersButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ManageMembersButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.ManageMembersButton.Name = "ManageMembersButton";
-            this.ManageMembersButton.PaddingX = 0;
-            this.ManageMembersButton.PaddingY = 0;
-            this.ManageMembersButton.Size = new System.Drawing.Size(525, 49);
-            this.ManageMembersButton.TabIndex = 19;
-            this.ManageMembersButton.Text = "Manage Members";
-            this.ManageMembersButton.TextColor = System.Drawing.Color.Black;
-            this.ManageMembersButton.TextOffset = 20;
-            this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.ManageMembersButton.UseVisualStyleBackColor = false;
-            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
-            // 
-            // TransferBtn
-            // 
-            this.TransferBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.BorderRadius = 0;
-            this.TransferBtn.BorderSize = 0;
-            this.TransferBtn.ButtonImage = global::BATODA.Properties.Resources.save_white;
-            this.TransferBtn.FlatAppearance.BorderSize = 0;
-            this.TransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferBtn.ForeColor = System.Drawing.Color.White;
-            this.TransferBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.TransferBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.TransferBtn.ImageColor = System.Drawing.Color.White;
-            this.TransferBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.TransferBtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferBtn.IsToggled = false;
-            this.TransferBtn.Location = new System.Drawing.Point(520, 683);
-            this.TransferBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferBtn.Name = "TransferBtn";
-            this.TransferBtn.PaddingX = 0;
-            this.TransferBtn.PaddingY = 0;
-            this.TransferBtn.Size = new System.Drawing.Size(255, 49);
-            this.TransferBtn.TabIndex = 59;
-            this.TransferBtn.Text = "Transfer Membership";
-            this.TransferBtn.TextColor = System.Drawing.Color.White;
-            this.TransferBtn.TextOffset = 5;
-            this.TransferBtn.ToggleColor = System.Drawing.Color.Empty;
-            this.TransferBtn.UseVisualStyleBackColor = false;
-            this.TransferBtn.Click += new System.EventHandler(this.TransferBtn_Click);
-            // 
-            // TransferUploadBtn
-            // 
-            this.TransferUploadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferUploadBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferUploadBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferUploadBtn.BorderRadius = 0;
-            this.TransferUploadBtn.BorderSize = 0;
-            this.TransferUploadBtn.ButtonImage = null;
-            this.TransferUploadBtn.FlatAppearance.BorderSize = 0;
-            this.TransferUploadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferUploadBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferUploadBtn.ForeColor = System.Drawing.Color.White;
-            this.TransferUploadBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.TransferUploadBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.TransferUploadBtn.ImageColor = System.Drawing.Color.White;
-            this.TransferUploadBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.TransferUploadBtn.ImageSize = new System.Drawing.Size(32, 32);
-            this.TransferUploadBtn.IsToggled = false;
-            this.TransferUploadBtn.Location = new System.Drawing.Point(15, 260);
-            this.TransferUploadBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferUploadBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.TransferUploadBtn.Name = "TransferUploadBtn";
-            this.TransferUploadBtn.PaddingX = 0;
-            this.TransferUploadBtn.PaddingY = 0;
-            this.TransferUploadBtn.Size = new System.Drawing.Size(247, 37);
-            this.TransferUploadBtn.TabIndex = 49;
-            this.TransferUploadBtn.Text = "Upload Picture";
-            this.TransferUploadBtn.TextColor = System.Drawing.Color.White;
-            this.TransferUploadBtn.TextOffset = 5;
-            this.TransferUploadBtn.ToggleColor = System.Drawing.Color.Empty;
-            this.TransferUploadBtn.UseVisualStyleBackColor = false;
-            this.TransferUploadBtn.Click += new System.EventHandler(this.TransferUploadBtn_Click_1);
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderRadius = 0;
-            this.ClearButton.BorderSize = 0;
-            this.ClearButton.ButtonImage = null;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.ImageColor = System.Drawing.Color.White;
-            this.ClearButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.ClearButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(15, 302);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.PaddingX = 0;
-            this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(247, 37);
-            this.ClearButton.TabIndex = 46;
-            this.ClearButton.Text = "Reset";
-            this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextOffset = 5;
-            this.ClearButton.ToggleColor = System.Drawing.Color.Empty;
-            this.ClearButton.UseVisualStyleBackColor = false;
             // 
             // TransferMembershipUForm
             // 

@@ -176,20 +176,30 @@ namespace BATODA.Helpers.DataGrids
             editColumn.DefaultCellStyle.Padding = new Padding(5);
             int hoveredRow = -1;
 
-           
+
             dgv.CellMouseEnter += (s, e) =>
             {
-                if (e.RowIndex < 0 || e.ColumnIndex != dgv.Columns["Edit"].Index) return;
-                hoveredRow = e.RowIndex;
-                dgv.InvalidateCell(e.ColumnIndex, e.RowIndex); 
+                if (e.RowIndex < 0) return;
+
+                if (dgv.Columns.Contains("Edit") && e.ColumnIndex == dgv.Columns["Edit"].Index)
+                {
+                    hoveredRow = e.RowIndex;
+                    dgv.InvalidateCell(e.ColumnIndex, e.RowIndex);
+                }
             };
+
 
             dgv.CellMouseLeave += (s, e) =>
             {
-                if (e.RowIndex < 0 || e.ColumnIndex != dgv.Columns["Edit"].Index) return;
-                hoveredRow = -1;
-                dgv.InvalidateCell(e.ColumnIndex, e.RowIndex);
+                if (e.RowIndex < 0) return;
+
+                if (dgv.Columns.Contains("Edit") && e.ColumnIndex == dgv.Columns["Edit"].Index)
+                {
+                    hoveredRow = -1;
+                    dgv.InvalidateCell(e.ColumnIndex, e.RowIndex);
+                }
             };
+
 
             dgv.CellPainting += (s, e) =>
             {
