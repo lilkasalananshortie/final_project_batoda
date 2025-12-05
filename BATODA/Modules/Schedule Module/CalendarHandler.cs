@@ -109,14 +109,23 @@ namespace BATODA.Modules.Schedule_Module
         }
 
         public static void AddEventToOverview(
-        CalendarEvent ev,
-        FlowLayoutPanel eventsOverviewPanel,
-        EventHandler eventPanelDoubleClick,
-        EventHandler eventPanelClick,
-        int panelWidth = 410,
-        int panelHeight = 70,
-        int panelMargin = 5)
+             CalendarEvent ev,
+             FlowLayoutPanel eventsOverviewPanel,
+             EventHandler eventPanelDoubleClick,
+             EventHandler eventPanelClick,
+             int panelWidth = 410,
+             int panelHeight = 70,
+             int panelMargin = 5)
         {
+            // Marshal to UI thread if needed
+            if (eventsOverviewPanel.InvokeRequired)
+            {
+                eventsOverviewPanel.Invoke(new Action(() =>
+                    AddEventToOverview(ev, eventsOverviewPanel, eventPanelDoubleClick, eventPanelClick, panelWidth, panelHeight, panelMargin)
+                ));
+                return;
+            }
+
             Panel panel = new Panel
             {
                 Size = new Size(panelWidth, panelHeight),
@@ -175,6 +184,7 @@ namespace BATODA.Modules.Schedule_Module
             eventsOverviewPanel.Controls.Add(panel);
             eventsOverviewPanel.Controls.SetChildIndex(panel, insertIndex);
         }
+
 
 
     }
