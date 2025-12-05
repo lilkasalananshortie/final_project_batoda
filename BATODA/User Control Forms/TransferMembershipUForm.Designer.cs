@@ -38,6 +38,8 @@
             this.ScrollablePanel = new System.Windows.Forms.Panel();
             this.HolderPanel1 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.TransferChassisTxt = new System.Windows.Forms.TextBox();
             this.OwnerSearchGrid = new System.Windows.Forms.DataGridView();
             this.BodyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +61,6 @@
             this.TransferModelTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.TransferChassisTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.TransferLastNameTxt = new System.Windows.Forms.TextBox();
@@ -135,11 +135,11 @@
             this.ScrollablePanel.SuspendLayout();
             this.HolderPanel1.SuspendLayout();
             this.panel24.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -361,6 +361,25 @@
             this.panel24.Size = new System.Drawing.Size(807, 748);
             this.panel24.TabIndex = 88;
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.TransferChassisTxt);
+            this.panel3.Location = new System.Drawing.Point(275, 376);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(252, 35);
+            this.panel3.TabIndex = 79;
+            // 
+            // TransferChassisTxt
+            // 
+            this.TransferChassisTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TransferChassisTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferChassisTxt.Location = new System.Drawing.Point(7, 7);
+            this.TransferChassisTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TransferChassisTxt.Name = "TransferChassisTxt";
+            this.TransferChassisTxt.Size = new System.Drawing.Size(238, 19);
+            this.TransferChassisTxt.TabIndex = 42;
+            // 
             // OwnerSearchGrid
             // 
             this.OwnerSearchGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -379,6 +398,7 @@
             this.OwnerSearchGrid.TabIndex = 60;
             this.OwnerSearchGrid.Visible = false;
             this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick_1);
+            this.OwnerSearchGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellContentClick);
             // 
             // BodyNumber
             // 
@@ -587,25 +607,6 @@
             this.label14.Size = new System.Drawing.Size(135, 20);
             this.label14.TabIndex = 80;
             this.label14.Text = "Chassis Number *";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.TransferChassisTxt);
-            this.panel3.Location = new System.Drawing.Point(275, 376);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(252, 35);
-            this.panel3.TabIndex = 79;
-            // 
-            // TransferChassisTxt
-            // 
-            this.TransferChassisTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TransferChassisTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferChassisTxt.Location = new System.Drawing.Point(7, 7);
-            this.TransferChassisTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TransferChassisTxt.Name = "TransferChassisTxt";
-            this.TransferChassisTxt.Size = new System.Drawing.Size(238, 19);
-            this.TransferChassisTxt.TabIndex = 42;
             // 
             // label6
             // 
@@ -1365,14 +1366,14 @@
             this.HolderPanel1.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerSearchGrid)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel13.ResumeLayout(false);

@@ -44,41 +44,39 @@ namespace BATODA
         private void LoginButton_Click_1(object sender, EventArgs e)
         {
 
-            string username = UsernameTextBox.Text.Trim();
-            string password = PasswordTextBox.Text.Trim();
+            //string username = UsernameTextBox.Text.Trim();
+            //string password = PasswordTextBox.Text.Trim();
 
-            // 🔐 Hard-coded login credentials
-            if (username == "Admin123" && password == "12345")
-            {
-                DashboardForm DashBoardform = new DashboardForm();
-                DashBoardform.Show();
+            //if (username == "Admin123" && password == "12345")
+            //{
+               
+            //}
+            //else
+            //{
+            //    ToastManager.Error("Invalid username or password!");
+            //    PasswordTextBox.Clear();
+            //    PasswordTextBox.Focus();
+            //}
 
-                ToastManager.Success("Login Successful!");
-                this.Hide();
-            }
-            else
-            {
-                ToastManager.Error("Invalid username or password!");
-                PasswordTextBox.Clear();
-                PasswordTextBox.Focus();
-            }
 
-            
-           
+            DashboardForm DashBoardform = new DashboardForm();
+            DashBoardform.Show();
+
+            ToastManager.Success("Login Successful!");
+            this.Hide();
 
         }
 
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            // If placeholder is active, disable mask
             if (PasswordTextBox.ForeColor == Color.Gray)
             {
                 PasswordTextBox.UseSystemPasswordChar = false;
             }
             else
             {
-                PasswordTextBox.UseSystemPasswordChar = !showPassword; // mask based on eye icon
+                PasswordTextBox.UseSystemPasswordChar = !showPassword;
             }
         }
 
@@ -117,7 +115,6 @@ namespace BATODA
         {
             showPassword = !showPassword;
 
-            // toggle mask
             if (showPassword)
             {
                 PasswordTextBox.UseSystemPasswordChar = false;
@@ -126,10 +123,9 @@ namespace BATODA
             else
             {
                 PasswordTextBox.UseSystemPasswordChar = true;
-                ShowPassButton.Image = Properties.Resources.hide; // replace with your image
+                ShowPassButton.Image = Properties.Resources.hide;
             }
 
-            // Keep caret at end
             PasswordTextBox.SelectionStart = PasswordTextBox.Text.Length;
         }
     }

@@ -1,4 +1,5 @@
 ﻿using BATODA.Helpers.Database.Members;
+using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.Modules.Member_Module.Member_Classes;
 using BATODA.Modules.MemberModule;
@@ -114,10 +115,6 @@ namespace BATODA
                 OwnerSearchGrid.Visible = false;
         }
 
-        private void panel24_Click(object sender, EventArgs e)
-        {
-        }
-
         private void OwnerSearchGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -151,31 +148,9 @@ namespace BATODA
                 LoadOwnerImage.FromMember(owner, CurrentOwnerPb);
             }
 
+            DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
             OwnerSearchGrid.Visible = false;
-        }
 
-
-        private void ConfirmationTransferPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void SavePanelButton_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CancelPanelButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
-        {
         }
 
         private void TransferUploadBtn_Click(object sender, EventArgs e)
@@ -256,7 +231,11 @@ namespace BATODA
                 LoadOwnerImage.FromMember(owner, CurrentOwnerPb);
             }
 
+
+            DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
+
             OwnerSearchGrid.Visible = false;
+
         }
 
         private void TransferBtn_Click(object sender, EventArgs e)
@@ -351,6 +330,10 @@ namespace BATODA
             }
         }
 
+        private void OwnerSearchGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
 
+        }
     }
 }

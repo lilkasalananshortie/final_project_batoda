@@ -13,6 +13,44 @@ namespace BATODA.Helpers.DataGrids
         /// <summary>
         /// Applies consistent font and row height style to any DataGridView.
         /// </summary>
+        /// 
+
+        public static void ApplyCustomGridSearch(DataGridView dgv)
+        {
+            if (dgv == null) return;
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = Color.White;
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AllowUserToResizeRows = false;
+            dgv.AllowUserToResizeColumns = false;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgv.ColumnHeadersHeight = 40;
+            foreach (DataGridViewColumn col in dgv.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+            dgv.ReadOnly = true;
+
+
+            dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
+            dgv.RowTemplate.Height = 15;
+            dgv.MultiSelect = false;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            // header style
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(173, 46, 36);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
+
+        }
         public static void ApplyCustomGrid(DataGridView dgv)
         {
             if (dgv == null) return;
