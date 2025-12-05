@@ -8,34 +8,25 @@ namespace BATODA.Modules.Schedule_Module
     internal static class PanelsHandler
     {
         public static void MoveToPreviousEvents(
-         CalendarEvent ev,
-         bool hasAttendance,
-         FlowLayoutPanel pastEventPanel,
-         FlowLayoutPanel doneEventPanel,
-         EventHandler pastDoubleClickHandler,
-         EventHandler doneDoubleClickHandler,
-         int panelHeight = 70,
-         int margin = 5)
+            CalendarEvent ev,
+            bool hasAttendance,
+            FlowLayoutPanel pastEventPanel,
+            FlowLayoutPanel doneEventPanel,
+            EventHandler pastDoubleClickHandler,
+            EventHandler doneDoubleClickHandler,
+            int panelHeight = 70,
+            int margin = 5)
         {
-            FlowLayoutPanel targetPanel = hasAttendance ? pastEventPanel : doneEventPanel;
-            EventHandler doubleClickHandler = hasAttendance ? pastDoubleClickHandler : doneDoubleClickHandler;
-
-            if (targetPanel.InvokeRequired)
-            {
-                targetPanel.Invoke(new Action(() =>
-                {
-                    MoveToPreviousEvents(ev, hasAttendance, pastEventPanel, doneEventPanel, pastDoubleClickHandler, doneDoubleClickHandler, panelHeight, margin);
-                }));
-                return;
-            }
+            Size panelSize = hasAttendance ? new Size(520, panelHeight) : new Size(410, panelHeight);
 
             Panel panel = new Panel
             {
-                Size = new Size(hasAttendance ? 520 : 410, panelHeight),
+                Size = panelSize,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(margin),
                 Tag = ev,
-                BackColor = Color.LightGreen
+                BackColor = hasAttendance ? Color.LightGreen : Color.LightGreen
+
             };
 
             Label lblTitle = new Label
@@ -67,28 +58,29 @@ namespace BATODA.Modules.Schedule_Module
             panel.Controls.Add(lblInfo);
             panel.Controls.Add(lblDate);
 
-            targetPanel.Controls.Add(panel);
-            targetPanel.Controls.SetChildIndex(panel, 0);
-
-            panel.DoubleClick += doubleClickHandler;
-        }
-
-        public static void AddDoneEventWithNoAttendees(
-         CalendarEvent ev,
-        FlowLayoutPanel pastEventPanel,
-        EventHandler pastDoubleClickHandler,
-        int panelHeight = 70,
-        int panelMargin = 5)
-        {
-            if (pastEventPanel.InvokeRequired)
+            if (hasAttendance)
             {
-                pastEventPanel.Invoke(new Action(() =>
-                {
-                    AddDoneEventWithNoAttendees(ev, pastEventPanel, pastDoubleClickHandler, panelHeight, panelMargin);
-                }));
-                return;
+                pastEventPanel.Controls.Add(panel);
+                panel.DoubleClick += pastDoubleClickHandler;
+                pastEventPanel.Controls.SetChildIndex(panel, 0);
+            }
+            else
+            {
+                doneEventPanel.Controls.Add(panel);
+                panel.DoubleClick += doneDoubleClickHandler;
+                doneEventPanel.Controls.SetChildIndex(panel, 0);
             }
 
+        }
+
+
+        public static void AddDoneEventWithNoAttendees(
+            CalendarEvent ev,
+            FlowLayoutPanel pastEventPanel,
+            EventHandler pastDoubleClickHandler,
+            int panelHeight = 70,
+            int panelMargin = 5)
+        {
             Panel panel = new Panel
             {
                 Size = new Size(520, panelHeight),

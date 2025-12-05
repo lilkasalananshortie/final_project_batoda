@@ -44,17 +44,12 @@ namespace BATODA
         // COORDS
         private string selectedCoords = "";
 
-        private Panel loadingPanel;
-        private Label loadingLabel;
-
         private readonly EventRepository eventRepo = new EventRepository();
 
 
         public CalendarUForm()
         {
             InitializeComponent();
-            InitializeLoadingPanel();
-
             AttendanceHandler.ApplyCustomGridWithCheckbox(SetAttendanceGrid);
             AttendanceHandler.ApplyCustomGridWithCheckbox(AttendanceListDGV);
             AddEventPanel.Hide();
@@ -72,62 +67,100 @@ namespace BATODA
 
         private async void CalendarUForm_Load(object sender, EventArgs e)
         {
+
+            var allEvents = eventRepo.GetAllEvents();
+
+            foreach (var ev in allEvents)
+            {
+                if (!events.ContainsKey(ev.Date))
+                    events[ev.Date] = new List<CalendarEvent>();
+                events[ev.Date].Add(ev);
+
+                // PENDING EVENTS
+                if (ev.Status == "Pending")
+                    CalendarHandler.AddEventToOverview(ev, EventsOverviewFlowLayoutPanel, EventPanel_DoubleClick,
+                    EventPanel_Click, EventPanelWidth, EventPanelHeight, EventPanelMargin);
+
+                // DONE: All / Specific members
+                if (ev.Status == "Done" &&
+                   (ev.RequiredAttendees == "All Members" || ev.RequiredAttendees == "Specific Members Only"))
+                {
+                    // CHECK IF ATTENDANCE EXISTS FOR THIS EVENT
+                    bool hasAttendance = eventRepo.EventHasAttendance(ev.EventId);
+                    PanelsHandler.MoveToPreviousEvents(
+                        ev,
+                        hasAttendance,
+                        PastEventFlowLayoutPanel,
+                        DoneEventFlowLayoutPanel,
+                        PastEventPanel_DoubleClick,
+                        DoneEventPanel_DoubleClick
+                    );
+                }
+
+
+                // DONE: None (go straight to PastEventFlowLayoutPanel)
+                if (ev.Status == "Done" &&
+                    ev.RequiredAttendees == "None")
+                {
+                    PanelsHandler.AddDoneEventWithNoAttendees(ev, PastEventFlowLayoutPanel, PastEventPanel_DoubleClick, EventPanelHeight, EventPanelMargin);
+
+                }
+            }
+
             await webViewMap.EnsureCoreWebView2Async(null);
             webViewMap.WebMessageReceived += WebViewMap_WebMessageReceived;
+            string html = @"
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset=""utf-8"" />
+                <title>OSM Click + Search</title>
+                <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+                <link rel=""stylesheet"" href=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.css""/>
+                <link rel=""stylesheet"" href=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"" />
+                <script src=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.js""></script>
+                <script src=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js""></script>
+                <style>html, body, #map { height: 100%; margin: 0; }</style>
+            </head>
+            <body>
+                <div id=""map""></div>
+                <script>
+                    var map = L.map('map').setView([14.5995, 120.9842], 12);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
 
-            await LoadCalendarDataAsync(); // <- shows loading while events load
+                    var marker;
+
+                    // Click to place marker
+
+                    map.on('click', function(e) {
+                        if(marker) map.removeLayer(marker);
+                        marker = L.marker(e.latlng).addTo(map);
+                        window.chrome.webview.postMessage(e.latlng.lat + ',' + e.latlng.lng);
+                    });
+
+                    // Search box       
+
+                    L.Control.geocoder({
+                        defaultMarkGeocode: false
+                    }).on('markgeocode', function(e) {
+                        var center = e.geocode.center;
+                        map.setView(center, 16);
+                        if(marker) map.removeLayer(marker);
+                        marker = L.marker(center).addTo(map);
+                        window.chrome.webview.postMessage(center.lat + ',' + center.lng);
+                    }).addTo(map);
+                </script>
+            </body>
+            </html>
+            ";
+
+            webViewMap.NavigateToString(html);
 
             month = dateTime.Month;
             year = dateTime.Year;
             CalendarHandler.DisplayCalendarDays(month, year, DayContainer, lbDate, events, AddEventToDayCell);
 
-            string html = @"
- <!DOCTYPE html>
- <html>
- <head>
-     <meta charset=""utf-8"" />
-     <title>OSM Click + Search</title>
-     <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
-     <link rel=""stylesheet"" href=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.css""/>
-     <link rel=""stylesheet"" href=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"" />
-     <script src=""https://unpkg.com/leaflet@1.9.4/dist/leaflet.js""></script>
-     <script src=""https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js""></script>
-     <style>html, body, #map { height: 100%; margin: 0; }</style>
- </head>
- <body>
-     <div id=""map""></div>
-     <script>
-         var map = L.map('map').setView([14.5995, 120.9842], 12);
-         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-
-         var marker;
-
-         // Click to place marker
-
-         map.on('click', function(e) {
-             if(marker) map.removeLayer(marker);
-             marker = L.marker(e.latlng).addTo(map);
-             window.chrome.webview.postMessage(e.latlng.lat + ',' + e.latlng.lng);
-         });
-
-         // Search box       
-
-         L.Control.geocoder({
-             defaultMarkGeocode: false
-         }).on('markgeocode', function(e) {
-             var center = e.geocode.center;
-             map.setView(center, 16);
-             if(marker) map.removeLayer(marker);
-             marker = L.marker(center).addTo(map);
-             window.chrome.webview.postMessage(center.lat + ',' + center.lng);
-         }).addTo(map);
-     </script>
- </body>
- </html>
- ";
-            webViewMap.NavigateToString(html);
         }
-
 
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -468,13 +501,6 @@ namespace BATODA
                 {
                     int eventCount = day.Controls.OfType<Label>().Count();
 
-                   
-                    if (eventCount >= 3)
-                    {
-                        MessageBox.Show("Cannot add more than 2 events for this day.", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
                     Color backColor;
                     if (ev.Status == "Done")
                         backColor = Color.LightGreen;
@@ -501,34 +527,51 @@ namespace BATODA
             }
         }
 
-
-
         //MOVE TO PREVIOUS EVENTS PANEL
         private void MoveToPreviousEvents(CalendarEvent ev, bool isDone)
         {
-            Panel panel = new Panel
+            Panel panel = new Panel();
+            panel.Size = new Size(480, EventPanelHeight);
+            panel.BorderStyle = BorderStyle.FixedSingle;
+            panel.Margin = new Padding(EventPanelMargin);
+            panel.BackColor = isDone ? Color.LightGreen : Color.LightCoral;
+
+            panel.Tag = ev;
+
+            Label lblTitle = new Label
             {
-                Size = new Size(EventPanelWidth, EventPanelHeight),
-                BorderStyle = BorderStyle.FixedSingle,
-                Margin = new Padding(EventPanelMargin),
-                BackColor = isDone ? Color.LightGreen : Color.LightCoral,
-                Tag = ev
+                Text = ev.Title,
+                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                Location = new Point(10, 5),
+                AutoSize = true
             };
 
-            // Add labels
-            panel.Controls.Add(new Label { Text = ev.Title, Font = new Font("Segoe UI", 10, FontStyle.Bold), Location = new Point(10, 5), AutoSize = true });
-            panel.Controls.Add(new Label { Text = $"{ev.Type} | {ev.Status} | {ev.Location}", Font = new Font("Segoe UI", 8), Location = new Point(10, 25), AutoSize = true });
-            panel.Controls.Add(new Label { Text = ev.Date.ToString("MMMM d, yyyy"), Font = new Font("Segoe UI", 8, FontStyle.Italic), ForeColor = Color.Black, Location = new Point(10, 45), AutoSize = true });
+            Label lblInfo = new Label
+            {
+                Text = $"{ev.Type} | {ev.Status} | {ev.Location}",
+                Font = new Font("Segoe UI", 8),
+                Location = new Point(10, 25),
+                AutoSize = true
+            };
 
-            // Important: prevent FlowLayoutPanel from auto-resizing panel width
-            panel.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            Label lblDate = new Label
+            {
+                Text = ev.Date.ToString("MMMM d, yyyy"),
+                Font = new Font("Segoe UI", 8, FontStyle.Italic),
+                ForeColor = Color.Black,
+                Location = new Point(10, 45),
+                AutoSize = true
+            };
+
+            panel.Controls.Add(lblTitle);
+            panel.Controls.Add(lblInfo);
+            panel.Controls.Add(lblDate);
 
             DoneEventFlowLayoutPanel.Controls.Add(panel);
             DoneEventFlowLayoutPanel.Controls.SetChildIndex(panel, 0);
 
             panel.DoubleClick += DoneEventPanel_DoubleClick;
         }
-
         private void UpdateEventInDayCell(CalendarEvent ev)
         {
             foreach (Control ctrl in DayContainer.Controls)
@@ -845,77 +888,5 @@ namespace BATODA
         {
             SpecificMembsPanel.Visible = false;
         }
-        private void InitializeLoadingPanel()
-        {
-            loadingPanel = new Panel
-            {
-                Size = this.ClientSize,
-                BackColor = Color.FromArgb(150, Color.Gray),
-                Visible = false,
-                Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right
-            };
-
-            loadingLabel = new Label
-            {
-                Text = "Loading, please wait...",
-                ForeColor = Color.White,
-                Font = new Font("Segoe UI", 12, FontStyle.Bold),
-                AutoSize = true
-            };
-
-            loadingPanel.Controls.Add(loadingLabel);
-            this.Controls.Add(loadingPanel);
-            loadingPanel.BringToFront();
-
-            // Now the label has a proper size
-            loadingLabel.Location = new Point(
-                (loadingPanel.Width - loadingLabel.PreferredSize.Width) / 2,
-                (loadingPanel.Height - loadingLabel.PreferredSize.Height) / 2
-            );
-        }
-
-        private async Task LoadCalendarDataAsync()
-        {
-            loadingPanel.Visible = true;
-            loadingPanel.BringToFront();
-
-            await Task.Run(() =>
-            {
-                var allEvents = eventRepo.GetAllEvents();
-
-                foreach (var ev in allEvents)
-                {
-                    if (!events.ContainsKey(ev.Date))
-                        events[ev.Date] = new List<CalendarEvent>();
-                    events[ev.Date].Add(ev);
-
-                    if (ev.Status == "Pending")
-                        CalendarHandler.AddEventToOverview(ev, EventsOverviewFlowLayoutPanel, EventPanel_DoubleClick,
-                            EventPanel_Click, EventPanelWidth, EventPanelHeight, EventPanelMargin);
-
-                    if (ev.Status == "Done" &&
-                       (ev.RequiredAttendees == "All Members" || ev.RequiredAttendees == "Specific Members Only"))
-                    {
-                        bool hasAttendance = eventRepo.EventHasAttendance(ev.EventId);
-                        PanelsHandler.MoveToPreviousEvents(
-                            ev,
-                            hasAttendance,
-                            PastEventFlowLayoutPanel,
-                            DoneEventFlowLayoutPanel,
-                            PastEventPanel_DoubleClick,
-                            DoneEventPanel_DoubleClick
-                        );
-                    }
-
-                    if (ev.Status == "Done" && ev.RequiredAttendees == "None")
-                    {
-                        PanelsHandler.AddDoneEventWithNoAttendees(ev, PastEventFlowLayoutPanel, PastEventPanel_DoubleClick, EventPanelHeight, EventPanelMargin);
-                    }
-                }
-            });
-
-            loadingPanel.Visible = false;
-        }
-
     }
 }
