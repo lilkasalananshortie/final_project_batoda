@@ -231,5 +231,25 @@ namespace BATODA
         {
 
         }
+
+        private void CreateNewAdminCancelButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CreateNewAdminAccountButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
