@@ -40,7 +40,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.SwitchAdminAccountButton = new BATODA.ButtonStyle();
+            this.CreateNewAdminAccountButton = new BATODA.ButtonStyle();
+            this.LogOutButton = new BATODA.ButtonStyle();
             this.SwitchAdminPanel = new System.Windows.Forms.Panel();
+            this.SwitchAdminCancel = new BATODA.ButtonStyle();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -49,7 +53,10 @@
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.LoginButton = new BATODA.ButtonStyle();
             this.CreateNewAdminAccountPanel = new System.Windows.Forms.Panel();
+            this.CreateNewAdminCancelButton = new BATODA.ButtonStyle();
+            this.CreateAccountButton = new BATODA.ButtonStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -70,21 +77,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.BackupListDataGrid = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.buttonStyle2 = new BATODA.ButtonStyle();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonStyle2 = new BATODA.ButtonStyle();
             this.BackupButton = new BATODA.ButtonStyle();
-            this.SwitchAdminAccountButton = new BATODA.ButtonStyle();
-            this.CreateNewAdminAccountButton = new BATODA.ButtonStyle();
-            this.LogOutButton = new BATODA.ButtonStyle();
-            this.SwitchAdminCancel = new BATODA.ButtonStyle();
-            this.LoginButton = new BATODA.ButtonStyle();
-            this.CreateNewAdminCancelButton = new BATODA.ButtonStyle();
-            this.CreateAccountButton = new BATODA.ButtonStyle();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -114,14 +114,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.CreateNewAdminAccountPanel);
+            this.panel1.Controls.Add(this.SwitchAdminPanel);
             this.panel1.Controls.Add(this.panel29);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.SwitchAdminAccountButton);
             this.panel1.Controls.Add(this.CreateNewAdminAccountButton);
             this.panel1.Controls.Add(this.LogOutButton);
-            this.panel1.Controls.Add(this.SwitchAdminPanel);
-            this.panel1.Controls.Add(this.CreateNewAdminAccountPanel);
             this.panel1.Location = new System.Drawing.Point(32, 45);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 743);
@@ -210,6 +210,100 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Account Management";
             // 
+            // SwitchAdminAccountButton
+            // 
+            this.SwitchAdminAccountButton.BackColor = System.Drawing.Color.White;
+            this.SwitchAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
+            this.SwitchAdminAccountButton.BorderColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.BorderRadius = 8;
+            this.SwitchAdminAccountButton.BorderSize = 1;
+            this.SwitchAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
+            this.SwitchAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SwitchAdminAccountButton.ForeColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
+            this.SwitchAdminAccountButton.ImageColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SwitchAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SwitchAdminAccountButton.IsToggled = false;
+            this.SwitchAdminAccountButton.Location = new System.Drawing.Point(33, 271);
+            this.SwitchAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
+            this.SwitchAdminAccountButton.Name = "SwitchAdminAccountButton";
+            this.SwitchAdminAccountButton.PaddingX = 0;
+            this.SwitchAdminAccountButton.PaddingY = 0;
+            this.SwitchAdminAccountButton.Size = new System.Drawing.Size(362, 59);
+            this.SwitchAdminAccountButton.TabIndex = 23;
+            this.SwitchAdminAccountButton.Text = "Switch Admin Account";
+            this.SwitchAdminAccountButton.TextColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.TextOffset = 15;
+            this.SwitchAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
+            this.SwitchAdminAccountButton.UseVisualStyleBackColor = false;
+            this.SwitchAdminAccountButton.Click += new System.EventHandler(this.SwitchAdminAccountButton_Click);
+            // 
+            // CreateNewAdminAccountButton
+            // 
+            this.CreateNewAdminAccountButton.BackColor = System.Drawing.Color.White;
+            this.CreateNewAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
+            this.CreateNewAdminAccountButton.BorderColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.BorderRadius = 8;
+            this.CreateNewAdminAccountButton.BorderSize = 1;
+            this.CreateNewAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.add_user;
+            this.CreateNewAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateNewAdminAccountButton.ForeColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
+            this.CreateNewAdminAccountButton.ImageColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CreateNewAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CreateNewAdminAccountButton.IsToggled = false;
+            this.CreateNewAdminAccountButton.Location = new System.Drawing.Point(33, 346);
+            this.CreateNewAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
+            this.CreateNewAdminAccountButton.Name = "CreateNewAdminAccountButton";
+            this.CreateNewAdminAccountButton.PaddingX = 0;
+            this.CreateNewAdminAccountButton.PaddingY = 0;
+            this.CreateNewAdminAccountButton.Size = new System.Drawing.Size(362, 59);
+            this.CreateNewAdminAccountButton.TabIndex = 22;
+            this.CreateNewAdminAccountButton.Text = "Create New Admin Account";
+            this.CreateNewAdminAccountButton.TextColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.TextOffset = 15;
+            this.CreateNewAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
+            this.CreateNewAdminAccountButton.UseVisualStyleBackColor = false;
+            this.CreateNewAdminAccountButton.Click += new System.EventHandler(this.CreateNewAdminAccountButton_Click);
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LogOutButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LogOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LogOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LogOutButton.BorderRadius = 8;
+            this.LogOutButton.BorderSize = 1;
+            this.LogOutButton.ButtonImage = global::BATODA.Properties.Resources.logout__1_;
+            this.LogOutButton.FlatAppearance.BorderSize = 0;
+            this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutButton.ForeColor = System.Drawing.Color.White;
+            this.LogOutButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.LogOutButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.LogOutButton.ImageColor = System.Drawing.Color.White;
+            this.LogOutButton.ImagePosition = new System.Drawing.Point(125, 0);
+            this.LogOutButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.LogOutButton.IsToggled = false;
+            this.LogOutButton.Location = new System.Drawing.Point(33, 450);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LogOutButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.PaddingX = 0;
+            this.LogOutButton.PaddingY = 0;
+            this.LogOutButton.Size = new System.Drawing.Size(362, 59);
+            this.LogOutButton.TabIndex = 21;
+            this.LogOutButton.Text = "Log Out";
+            this.LogOutButton.TextColor = System.Drawing.Color.White;
+            this.LogOutButton.TextOffset = 20;
+            this.LogOutButton.ToggleColor = System.Drawing.Color.Empty;
+            this.LogOutButton.UseVisualStyleBackColor = false;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
+            // 
             // SwitchAdminPanel
             // 
             this.SwitchAdminPanel.BackColor = System.Drawing.Color.White;
@@ -229,6 +323,36 @@
             this.SwitchAdminPanel.Name = "SwitchAdminPanel";
             this.SwitchAdminPanel.Size = new System.Drawing.Size(373, 452);
             this.SwitchAdminPanel.TabIndex = 24;
+            // 
+            // SwitchAdminCancel
+            // 
+            this.SwitchAdminCancel.BackColor = System.Drawing.Color.White;
+            this.SwitchAdminCancel.BackgroundColor = System.Drawing.Color.White;
+            this.SwitchAdminCancel.BorderColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.BorderRadius = 30;
+            this.SwitchAdminCancel.BorderSize = 1;
+            this.SwitchAdminCancel.ButtonImage = null;
+            this.SwitchAdminCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SwitchAdminCancel.ForeColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.HoverBorderColor = System.Drawing.Color.White;
+            this.SwitchAdminCancel.HoverColor = System.Drawing.Color.LightGray;
+            this.SwitchAdminCancel.ImageColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.ImagePosition = new System.Drawing.Point(10, 0);
+            this.SwitchAdminCancel.ImageSize = new System.Drawing.Size(24, 24);
+            this.SwitchAdminCancel.IsToggled = false;
+            this.SwitchAdminCancel.Location = new System.Drawing.Point(111, 361);
+            this.SwitchAdminCancel.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.SwitchAdminCancel.Name = "SwitchAdminCancel";
+            this.SwitchAdminCancel.PaddingX = 0;
+            this.SwitchAdminCancel.PaddingY = 0;
+            this.SwitchAdminCancel.Size = new System.Drawing.Size(150, 40);
+            this.SwitchAdminCancel.TabIndex = 20;
+            this.SwitchAdminCancel.Text = "Cancel";
+            this.SwitchAdminCancel.TextColor = System.Drawing.Color.Black;
+            this.SwitchAdminCancel.TextOffset = 20;
+            this.SwitchAdminCancel.ToggleColor = System.Drawing.Color.Empty;
+            this.SwitchAdminCancel.UseVisualStyleBackColor = false;
+            this.SwitchAdminCancel.Click += new System.EventHandler(this.SwitchAdminCancel_Click);
             // 
             // pictureBox6
             // 
@@ -311,6 +435,37 @@
             this.panel9.Size = new System.Drawing.Size(238, 3);
             this.panel9.TabIndex = 14;
             // 
+            // LoginButton
+            // 
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.BorderColor = System.Drawing.Color.White;
+            this.LoginButton.BorderRadius = 28;
+            this.LoginButton.BorderSize = 0;
+            this.LoginButton.ButtonImage = null;
+            this.LoginButton.FlatAppearance.BorderSize = 0;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.White;
+            this.LoginButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.ImageColor = System.Drawing.Color.Black;
+            this.LoginButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.LoginButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.LoginButton.IsToggled = false;
+            this.LoginButton.Location = new System.Drawing.Point(66, 302);
+            this.LoginButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.PaddingX = 89;
+            this.LoginButton.PaddingY = 10;
+            this.LoginButton.Size = new System.Drawing.Size(245, 40);
+            this.LoginButton.TabIndex = 12;
+            this.LoginButton.Text = "Log In";
+            this.LoginButton.TextColor = System.Drawing.Color.White;
+            this.LoginButton.TextOffset = 0;
+            this.LoginButton.ToggleColor = System.Drawing.Color.DarkRed;
+            this.LoginButton.UseVisualStyleBackColor = false;
+            // 
             // CreateNewAdminAccountPanel
             // 
             this.CreateNewAdminAccountPanel.Controls.Add(this.CreateNewAdminCancelButton);
@@ -329,6 +484,65 @@
             this.CreateNewAdminAccountPanel.Name = "CreateNewAdminAccountPanel";
             this.CreateNewAdminAccountPanel.Size = new System.Drawing.Size(373, 594);
             this.CreateNewAdminAccountPanel.TabIndex = 92;
+            // 
+            // CreateNewAdminCancelButton
+            // 
+            this.CreateNewAdminCancelButton.BackColor = System.Drawing.Color.White;
+            this.CreateNewAdminCancelButton.BackgroundColor = System.Drawing.Color.White;
+            this.CreateNewAdminCancelButton.BorderColor = System.Drawing.Color.Black;
+            this.CreateNewAdminCancelButton.BorderRadius = 40;
+            this.CreateNewAdminCancelButton.BorderSize = 1;
+            this.CreateNewAdminCancelButton.ButtonImage = null;
+            this.CreateNewAdminCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateNewAdminCancelButton.ForeColor = System.Drawing.Color.Black;
+            this.CreateNewAdminCancelButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.CreateNewAdminCancelButton.HoverColor = System.Drawing.Color.LightGray;
+            this.CreateNewAdminCancelButton.ImageColor = System.Drawing.Color.Black;
+            this.CreateNewAdminCancelButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.CreateNewAdminCancelButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CreateNewAdminCancelButton.IsToggled = false;
+            this.CreateNewAdminCancelButton.Location = new System.Drawing.Point(57, 522);
+            this.CreateNewAdminCancelButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.CreateNewAdminCancelButton.Name = "CreateNewAdminCancelButton";
+            this.CreateNewAdminCancelButton.PaddingX = 0;
+            this.CreateNewAdminCancelButton.PaddingY = 0;
+            this.CreateNewAdminCancelButton.Size = new System.Drawing.Size(100, 40);
+            this.CreateNewAdminCancelButton.TabIndex = 29;
+            this.CreateNewAdminCancelButton.Text = "Cancel";
+            this.CreateNewAdminCancelButton.TextColor = System.Drawing.Color.Black;
+            this.CreateNewAdminCancelButton.TextOffset = 20;
+            this.CreateNewAdminCancelButton.ToggleColor = System.Drawing.Color.Empty;
+            this.CreateNewAdminCancelButton.UseVisualStyleBackColor = false;
+            this.CreateNewAdminCancelButton.Click += new System.EventHandler(this.CreateNewAdminCancelButton_Click);
+            // 
+            // CreateAccountButton
+            // 
+            this.CreateAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CreateAccountButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CreateAccountButton.BorderColor = System.Drawing.Color.DarkRed;
+            this.CreateAccountButton.BorderRadius = 40;
+            this.CreateAccountButton.BorderSize = 0;
+            this.CreateAccountButton.ButtonImage = null;
+            this.CreateAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAccountButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CreateAccountButton.HoverBorderColor = System.Drawing.Color.Empty;
+            this.CreateAccountButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.CreateAccountButton.ImageColor = System.Drawing.Color.Black;
+            this.CreateAccountButton.ImagePosition = new System.Drawing.Point(10, 0);
+            this.CreateAccountButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CreateAccountButton.IsToggled = false;
+            this.CreateAccountButton.Location = new System.Drawing.Point(169, 522);
+            this.CreateAccountButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CreateAccountButton.Name = "CreateAccountButton";
+            this.CreateAccountButton.PaddingX = 0;
+            this.CreateAccountButton.PaddingY = 0;
+            this.CreateAccountButton.Size = new System.Drawing.Size(150, 40);
+            this.CreateAccountButton.TabIndex = 28;
+            this.CreateAccountButton.Text = "Create Account";
+            this.CreateAccountButton.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.CreateAccountButton.TextOffset = 20;
+            this.CreateAccountButton.ToggleColor = System.Drawing.Color.Empty;
+            this.CreateAccountButton.UseVisualStyleBackColor = false;
             // 
             // label12
             // 
@@ -553,6 +767,35 @@
             this.panel7.Size = new System.Drawing.Size(978, 95);
             this.panel7.TabIndex = 24;
             // 
+            // buttonStyle2
+            // 
+            this.buttonStyle2.BackColor = System.Drawing.Color.White;
+            this.buttonStyle2.BackgroundColor = System.Drawing.Color.White;
+            this.buttonStyle2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle2.BorderRadius = 8;
+            this.buttonStyle2.BorderSize = 1;
+            this.buttonStyle2.ButtonImage = null;
+            this.buttonStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle2.HoverBorderColor = System.Drawing.Color.Empty;
+            this.buttonStyle2.HoverColor = System.Drawing.Color.Empty;
+            this.buttonStyle2.ImageColor = System.Drawing.Color.Black;
+            this.buttonStyle2.ImagePosition = new System.Drawing.Point(10, 0);
+            this.buttonStyle2.ImageSize = new System.Drawing.Size(24, 24);
+            this.buttonStyle2.IsToggled = false;
+            this.buttonStyle2.Location = new System.Drawing.Point(771, 28);
+            this.buttonStyle2.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonStyle2.Name = "buttonStyle2";
+            this.buttonStyle2.PaddingX = 0;
+            this.buttonStyle2.PaddingY = 0;
+            this.buttonStyle2.Size = new System.Drawing.Size(175, 40);
+            this.buttonStyle2.TabIndex = 1;
+            this.buttonStyle2.Text = "Restore selected";
+            this.buttonStyle2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle2.TextOffset = 20;
+            this.buttonStyle2.ToggleColor = System.Drawing.Color.Empty;
+            this.buttonStyle2.UseVisualStyleBackColor = false;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::BATODA.Properties.Resources.due;
@@ -606,46 +849,6 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(90, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(295, 31);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Account Management";
-            // 
-            // buttonStyle2
-            // 
-            this.buttonStyle2.BackColor = System.Drawing.Color.White;
-            this.buttonStyle2.BackgroundColor = System.Drawing.Color.White;
-            this.buttonStyle2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle2.BorderRadius = 8;
-            this.buttonStyle2.BorderSize = 1;
-            this.buttonStyle2.ButtonImage = null;
-            this.buttonStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle2.HoverBorderColor = System.Drawing.Color.Empty;
-            this.buttonStyle2.HoverColor = System.Drawing.Color.Empty;
-            this.buttonStyle2.ImageColor = System.Drawing.Color.Black;
-            this.buttonStyle2.ImagePosition = new System.Drawing.Point(10, 0);
-            this.buttonStyle2.ImageSize = new System.Drawing.Size(24, 24);
-            this.buttonStyle2.IsToggled = false;
-            this.buttonStyle2.Location = new System.Drawing.Point(771, 28);
-            this.buttonStyle2.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonStyle2.Name = "buttonStyle2";
-            this.buttonStyle2.PaddingX = 0;
-            this.buttonStyle2.PaddingY = 0;
-            this.buttonStyle2.Size = new System.Drawing.Size(175, 40);
-            this.buttonStyle2.TabIndex = 1;
-            this.buttonStyle2.Text = "Restore selected";
-            this.buttonStyle2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle2.TextOffset = 20;
-            this.buttonStyle2.ToggleColor = System.Drawing.Color.Empty;
-            this.buttonStyle2.UseVisualStyleBackColor = false;
-            // 
             // BackupButton
             // 
             this.BackupButton.BackColor = System.Drawing.Color.White;
@@ -679,219 +882,16 @@
             this.BackupButton.UseVisualStyleBackColor = false;
             this.BackupButton.Click += new System.EventHandler(this.BackupButton_Click);
             // 
-            // SwitchAdminAccountButton
+            // label4
             // 
-            this.SwitchAdminAccountButton.BackColor = System.Drawing.Color.White;
-            this.SwitchAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
-            this.SwitchAdminAccountButton.BorderColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.BorderRadius = 8;
-            this.SwitchAdminAccountButton.BorderSize = 1;
-            this.SwitchAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
-            this.SwitchAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SwitchAdminAccountButton.ForeColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
-            this.SwitchAdminAccountButton.ImageColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SwitchAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.SwitchAdminAccountButton.IsToggled = false;
-            this.SwitchAdminAccountButton.Location = new System.Drawing.Point(33, 271);
-            this.SwitchAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
-            this.SwitchAdminAccountButton.Name = "SwitchAdminAccountButton";
-            this.SwitchAdminAccountButton.PaddingX = 0;
-            this.SwitchAdminAccountButton.PaddingY = 0;
-            this.SwitchAdminAccountButton.Size = new System.Drawing.Size(362, 59);
-            this.SwitchAdminAccountButton.TabIndex = 23;
-            this.SwitchAdminAccountButton.Text = "Switch Admin Account";
-            this.SwitchAdminAccountButton.TextColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.TextOffset = 15;
-            this.SwitchAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
-            this.SwitchAdminAccountButton.UseVisualStyleBackColor = false;
-            this.SwitchAdminAccountButton.Click += new System.EventHandler(this.SwitchAdminAccountButton_Click);
-            // 
-            // CreateNewAdminAccountButton
-            // 
-            this.CreateNewAdminAccountButton.BackColor = System.Drawing.Color.White;
-            this.CreateNewAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
-            this.CreateNewAdminAccountButton.BorderColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.BorderRadius = 8;
-            this.CreateNewAdminAccountButton.BorderSize = 1;
-            this.CreateNewAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.add_user;
-            this.CreateNewAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateNewAdminAccountButton.ForeColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
-            this.CreateNewAdminAccountButton.ImageColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CreateNewAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CreateNewAdminAccountButton.IsToggled = false;
-            this.CreateNewAdminAccountButton.Location = new System.Drawing.Point(33, 346);
-            this.CreateNewAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
-            this.CreateNewAdminAccountButton.Name = "CreateNewAdminAccountButton";
-            this.CreateNewAdminAccountButton.PaddingX = 0;
-            this.CreateNewAdminAccountButton.PaddingY = 0;
-            this.CreateNewAdminAccountButton.Size = new System.Drawing.Size(362, 59);
-            this.CreateNewAdminAccountButton.TabIndex = 22;
-            this.CreateNewAdminAccountButton.Text = "Create New Admin Account";
-            this.CreateNewAdminAccountButton.TextColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.TextOffset = 15;
-            this.CreateNewAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
-            this.CreateNewAdminAccountButton.UseVisualStyleBackColor = false;
-            this.CreateNewAdminAccountButton.Click += new System.EventHandler(this.CreateNewAdminAccountButton_Click);
-            // 
-            // LogOutButton
-            // 
-            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LogOutButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LogOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LogOutButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LogOutButton.BorderRadius = 8;
-            this.LogOutButton.BorderSize = 1;
-            this.LogOutButton.ButtonImage = global::BATODA.Properties.Resources.logout__1_;
-            this.LogOutButton.FlatAppearance.BorderSize = 0;
-            this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOutButton.ForeColor = System.Drawing.Color.White;
-            this.LogOutButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.LogOutButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.LogOutButton.ImageColor = System.Drawing.Color.White;
-            this.LogOutButton.ImagePosition = new System.Drawing.Point(125, 0);
-            this.LogOutButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.LogOutButton.IsToggled = false;
-            this.LogOutButton.Location = new System.Drawing.Point(33, 450);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LogOutButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.PaddingX = 0;
-            this.LogOutButton.PaddingY = 0;
-            this.LogOutButton.Size = new System.Drawing.Size(362, 59);
-            this.LogOutButton.TabIndex = 21;
-            this.LogOutButton.Text = "Log Out";
-            this.LogOutButton.TextColor = System.Drawing.Color.White;
-            this.LogOutButton.TextOffset = 20;
-            this.LogOutButton.ToggleColor = System.Drawing.Color.Empty;
-            this.LogOutButton.UseVisualStyleBackColor = false;
-            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
-            // 
-            // SwitchAdminCancel
-            // 
-            this.SwitchAdminCancel.BackColor = System.Drawing.Color.White;
-            this.SwitchAdminCancel.BackgroundColor = System.Drawing.Color.White;
-            this.SwitchAdminCancel.BorderColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.BorderRadius = 30;
-            this.SwitchAdminCancel.BorderSize = 1;
-            this.SwitchAdminCancel.ButtonImage = null;
-            this.SwitchAdminCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SwitchAdminCancel.ForeColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.HoverBorderColor = System.Drawing.Color.White;
-            this.SwitchAdminCancel.HoverColor = System.Drawing.Color.LightGray;
-            this.SwitchAdminCancel.ImageColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.ImagePosition = new System.Drawing.Point(10, 0);
-            this.SwitchAdminCancel.ImageSize = new System.Drawing.Size(24, 24);
-            this.SwitchAdminCancel.IsToggled = false;
-            this.SwitchAdminCancel.Location = new System.Drawing.Point(111, 361);
-            this.SwitchAdminCancel.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.SwitchAdminCancel.Name = "SwitchAdminCancel";
-            this.SwitchAdminCancel.PaddingX = 0;
-            this.SwitchAdminCancel.PaddingY = 0;
-            this.SwitchAdminCancel.Size = new System.Drawing.Size(150, 40);
-            this.SwitchAdminCancel.TabIndex = 20;
-            this.SwitchAdminCancel.Text = "Cancel";
-            this.SwitchAdminCancel.TextColor = System.Drawing.Color.Black;
-            this.SwitchAdminCancel.TextOffset = 20;
-            this.SwitchAdminCancel.ToggleColor = System.Drawing.Color.Empty;
-            this.SwitchAdminCancel.UseVisualStyleBackColor = false;
-            this.SwitchAdminCancel.Click += new System.EventHandler(this.SwitchAdminCancel_Click);
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.BorderColor = System.Drawing.Color.White;
-            this.LoginButton.BorderRadius = 28;
-            this.LoginButton.BorderSize = 0;
-            this.LoginButton.ButtonImage = null;
-            this.LoginButton.FlatAppearance.BorderSize = 0;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.LoginButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.LoginButton.ImageColor = System.Drawing.Color.Black;
-            this.LoginButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.LoginButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.LoginButton.IsToggled = false;
-            this.LoginButton.Location = new System.Drawing.Point(66, 302);
-            this.LoginButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.PaddingX = 89;
-            this.LoginButton.PaddingY = 10;
-            this.LoginButton.Size = new System.Drawing.Size(245, 40);
-            this.LoginButton.TabIndex = 12;
-            this.LoginButton.Text = "Log In";
-            this.LoginButton.TextColor = System.Drawing.Color.White;
-            this.LoginButton.TextOffset = 0;
-            this.LoginButton.ToggleColor = System.Drawing.Color.DarkRed;
-            this.LoginButton.UseVisualStyleBackColor = false;
-            // 
-            // CreateNewAdminCancelButton
-            // 
-            this.CreateNewAdminCancelButton.BackColor = System.Drawing.Color.White;
-            this.CreateNewAdminCancelButton.BackgroundColor = System.Drawing.Color.White;
-            this.CreateNewAdminCancelButton.BorderColor = System.Drawing.Color.Black;
-            this.CreateNewAdminCancelButton.BorderRadius = 40;
-            this.CreateNewAdminCancelButton.BorderSize = 1;
-            this.CreateNewAdminCancelButton.ButtonImage = null;
-            this.CreateNewAdminCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateNewAdminCancelButton.ForeColor = System.Drawing.Color.Black;
-            this.CreateNewAdminCancelButton.HoverBorderColor = System.Drawing.Color.Black;
-            this.CreateNewAdminCancelButton.HoverColor = System.Drawing.Color.LightGray;
-            this.CreateNewAdminCancelButton.ImageColor = System.Drawing.Color.Black;
-            this.CreateNewAdminCancelButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.CreateNewAdminCancelButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CreateNewAdminCancelButton.IsToggled = false;
-            this.CreateNewAdminCancelButton.Location = new System.Drawing.Point(57, 522);
-            this.CreateNewAdminCancelButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.CreateNewAdminCancelButton.Name = "CreateNewAdminCancelButton";
-            this.CreateNewAdminCancelButton.PaddingX = 0;
-            this.CreateNewAdminCancelButton.PaddingY = 0;
-            this.CreateNewAdminCancelButton.Size = new System.Drawing.Size(100, 40);
-            this.CreateNewAdminCancelButton.TabIndex = 29;
-            this.CreateNewAdminCancelButton.Text = "Cancel";
-            this.CreateNewAdminCancelButton.TextColor = System.Drawing.Color.Black;
-            this.CreateNewAdminCancelButton.TextOffset = 20;
-            this.CreateNewAdminCancelButton.ToggleColor = System.Drawing.Color.Empty;
-            this.CreateNewAdminCancelButton.UseVisualStyleBackColor = false;
-            this.CreateNewAdminCancelButton.Click += new System.EventHandler(this.CreateNewAdminCancelButton_Click);
-            // 
-            // CreateAccountButton
-            // 
-            this.CreateAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CreateAccountButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CreateAccountButton.BorderColor = System.Drawing.Color.DarkRed;
-            this.CreateAccountButton.BorderRadius = 40;
-            this.CreateAccountButton.BorderSize = 0;
-            this.CreateAccountButton.ButtonImage = null;
-            this.CreateAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateAccountButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CreateAccountButton.HoverBorderColor = System.Drawing.Color.Empty;
-            this.CreateAccountButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.CreateAccountButton.ImageColor = System.Drawing.Color.Black;
-            this.CreateAccountButton.ImagePosition = new System.Drawing.Point(10, 0);
-            this.CreateAccountButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CreateAccountButton.IsToggled = false;
-            this.CreateAccountButton.Location = new System.Drawing.Point(169, 522);
-            this.CreateAccountButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CreateAccountButton.Name = "CreateAccountButton";
-            this.CreateAccountButton.PaddingX = 0;
-            this.CreateAccountButton.PaddingY = 0;
-            this.CreateAccountButton.Size = new System.Drawing.Size(150, 40);
-            this.CreateAccountButton.TabIndex = 28;
-            this.CreateAccountButton.Text = "Create Account";
-            this.CreateAccountButton.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.CreateAccountButton.TextOffset = 20;
-            this.CreateAccountButton.ToggleColor = System.Drawing.Color.Empty;
-            this.CreateAccountButton.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(90, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(295, 31);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Account Management";
             // 
             // SettingsUForm
             // 
