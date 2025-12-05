@@ -186,12 +186,12 @@ namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
                 if (today != DayOfWeek.Saturday && today != DayOfWeek.Sunday)
                 {
                     string unavailableQuery = $@"
-                SELECT COUNT(*) 
-                FROM MemberInfo 
-                WHERE RIGHT(CONVERT(VARCHAR, BodyNumber), 1) IN ({unavailableDigits}) 
-                  AND MemberStatus = 'Active' 
-                  AND PenaltyLevel < 3
-            ";
+                        SELECT COUNT(*) 
+                        FROM MemberInfo 
+                        WHERE RIGHT(CONVERT(VARCHAR, BodyNumber), 1) IN ({unavailableDigits}) 
+                        AND MemberStatus = 'Active' 
+                        AND PenaltyLevel < 3
+                    ";
                     using (SqlCommand cmd = new SqlCommand(unavailableQuery, conn))
                     {
                         unavailableCount = Convert.ToInt32(cmd.ExecuteScalar());
@@ -206,11 +206,12 @@ namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
                 }
 
                 string operationalQuery = $@"
-            SELECT COUNT(*) 
-            FROM MemberInfo 
-            WHERE MemberStatus = 'Active' 
-              AND PenaltyLevel < 3
-        ";
+                    SELECT COUNT(*) 
+                    FROM MemberInfo 
+                    WHERE MemberStatus = 'Active' 
+                      AND PenaltyLevel < 3
+                ";
+
                 int operationalCount = Convert.ToInt32(new SqlCommand(operationalQuery, conn).ExecuteScalar());
                 operationalCount -= unavailableCount;
 
