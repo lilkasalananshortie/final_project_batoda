@@ -15,8 +15,11 @@ using BATODA.UI_Displays;
 
 namespace BATODA
 {
+
     public partial class TricycleUForm : UserControl
     {
+        private TricycleRepository repo = new TricycleRepository();
+
         public TricycleUForm()
         {
             InitializeComponent();
@@ -31,7 +34,7 @@ namespace BATODA
 
 
             DataTable table = new DataTable();
-            table.Columns.Add("Body No.");
+            table.Columns.Add("BodyNumber");
             table.Columns.Add("Last Name");
             table.Columns.Add("First Name");
             table.Columns.Add("Brand");
@@ -163,6 +166,7 @@ namespace BATODA
 
         private void TricycleGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex < 0 || e.RowIndex == TricycleGrid.NewRowIndex) return;
 
             DataGridView dgv = sender as DataGridView;
@@ -171,6 +175,19 @@ namespace BATODA
             if (dgv.Columns[e.ColumnIndex].Name == "Edit")
             {
                 EditTrycPanel.Show();
+                int bodyNumber = Convert.ToInt32(TricycleGrid.Rows[e.RowIndex].Cells["BodyNumber"].Value);
+                EditBodyNoLbl.Text = "BATODA " + "(" +bodyNumber.ToString("D3") +")"; 
+                TricycleModel t = repo.GetTricycleDetails(bodyNumber);
+
+                FullNameLbl.Text = $"{t.FirstName} {t.MiddleInitial} {t.LastName}";
+                ContactLbl.Text = t.ContactNumber;
+                MembershipLbl.Text = t.MembershipType;
+                PlateTxt.Text = t.PlateNumber;
+                BrandTxt.Text = t.TricycleBrand;
+                ChassisTxt.Text = t.ChassisNumber;
+                EngineTxt.Text = t.EngineNumber;
+                ModelTxt.Text = t.TricModel;
+
             }
         }
 
@@ -181,8 +198,29 @@ namespace BATODA
 
         private void SaveChangesButton_Click(object sender, EventArgs e)
         {
+            if (TricycleGrid.CurrentRow == null) return;
+
+            int bodyNumber = Convert.ToInt32(TricycleGrid.CurrentRow.Cells["BodyNumber"].Value);
+            TricycleModel t = repo.GetTricycleDetails(bodyNumber);
+
+            repo.TransferTricycle(
+                bodyNumber,
+                t.MembershipType,
+                t.FirstName,
+                t.MiddleInitial,
+                t.LastName,
+                BrandTxt.Text,
+                ModelTxt.Text,
+                PlateTxt.Text,
+                ChassisTxt.Text,
+                EngineTxt.Text
+            );
+
             EditTrycPanel.Hide();
+            LoadTricycleGrid();
+            ToastManager.Success("Tricycle details updated successfully!");
         }
+
 
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
