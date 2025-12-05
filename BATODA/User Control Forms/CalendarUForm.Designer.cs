@@ -103,7 +103,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.EventsOverviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.MiniPanel = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.ViewCoord = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.panel1.SuspendLayout();
             this.AddEventPanel.SuspendLayout();
             this.SpecificMembsPanel.SuspendLayout();
@@ -133,6 +133,7 @@
             this.panel20.SuspendLayout();
             this.panel4.SuspendLayout();
             this.MiniPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewCoord)).BeginInit();
             this.SuspendLayout();
             // 
             // DayContainer
@@ -339,7 +340,7 @@
             this.SpecificMembsPanel.Controls.Add(this.label9);
             this.SpecificMembsPanel.Location = new System.Drawing.Point(437, 77);
             this.SpecificMembsPanel.Name = "SpecificMembsPanel";
-            this.SpecificMembsPanel.Size = new System.Drawing.Size(426, 346);
+            this.SpecificMembsPanel.Size = new System.Drawing.Size(426, 164);
             this.SpecificMembsPanel.TabIndex = 14;
             this.SpecificMembsPanel.Visible = false;
             // 
@@ -763,7 +764,7 @@
             this.PreviousEventPanel.Controls.Add(this.panel18);
             this.PreviousEventPanel.Location = new System.Drawing.Point(1167, 741);
             this.PreviousEventPanel.Name = "PreviousEventPanel";
-            this.PreviousEventPanel.Size = new System.Drawing.Size(436, 509);
+            this.PreviousEventPanel.Size = new System.Drawing.Size(436, 628);
             this.PreviousEventPanel.TabIndex = 13;
             // 
             // DoneEventFlowLayoutPanel
@@ -1074,25 +1075,25 @@
             // 
             // MiniPanel
             // 
-            this.MiniPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MiniPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.MiniPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiniPanel.Controls.Add(this.label11);
+            this.MiniPanel.Controls.Add(this.ViewCoord);
             this.MiniPanel.Location = new System.Drawing.Point(851, 94);
             this.MiniPanel.Name = "MiniPanel";
             this.MiniPanel.Size = new System.Drawing.Size(315, 155);
             this.MiniPanel.TabIndex = 15;
             // 
-            // label11
+            // ViewCoord
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(21, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 42);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "MAP";
+            this.ViewCoord.AllowExternalDrop = true;
+            this.ViewCoord.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ViewCoord.CreationProperties = null;
+            this.ViewCoord.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.ViewCoord.Location = new System.Drawing.Point(9, 7);
+            this.ViewCoord.Name = "ViewCoord";
+            this.ViewCoord.Size = new System.Drawing.Size(294, 138);
+            this.ViewCoord.TabIndex = 14;
+            this.ViewCoord.ZoomFactor = 1D;
             // 
             // CalendarUForm
             // 
@@ -1157,7 +1158,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.MiniPanel.ResumeLayout(false);
-            this.MiniPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewCoord)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1240,6 +1241,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel MiniPanel;
-        private System.Windows.Forms.Label label11;
+        private Microsoft.Web.WebView2.WinForms.WebView2 ViewCoord;
     }
 }
