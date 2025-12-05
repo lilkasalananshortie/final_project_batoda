@@ -16,6 +16,8 @@ namespace BATODA
     {
 
         Timer timer = new Timer();
+        bool showPassword = false;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -28,6 +30,10 @@ namespace BATODA
             timer.Start();
 
 
+            PasswordTextBox.UseSystemPasswordChar = true;
+            PasswordTextBox.TextChanged += PasswordTextBox_TextChanged;
+
+
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -37,12 +43,45 @@ namespace BATODA
 
         private void LoginButton_Click_1(object sender, EventArgs e)
         {
-            DashboardForm DashBoardform = new DashboardForm();
-            DashBoardform.Show();
-            ToastManager.Success("Login Successful!");
-            this.Hide();
+
+            string username = UsernameTextBox.Text.Trim();
+            string password = PasswordTextBox.Text.Trim();
+
+            // 🔐 Hard-coded login credentials
+            if (username == "Admin123" && password == "12345")
+            {
+                DashboardForm DashBoardform = new DashboardForm();
+                DashBoardform.Show();
+
+                ToastManager.Success("Login Successful!");
+                this.Hide();
+            }
+            else
+            {
+                ToastManager.Error("Invalid username or password!");
+                PasswordTextBox.Clear();
+                PasswordTextBox.Focus();
+            }
+
+            
+           
 
         }
+
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // If placeholder is active, disable mask
+            if (PasswordTextBox.ForeColor == Color.Gray)
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                PasswordTextBox.UseSystemPasswordChar = !showPassword; // mask based on eye icon
+            }
+        }
+
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -72,6 +111,26 @@ namespace BATODA
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ShowPassButton_Click(object sender, EventArgs e)
+        {
+            showPassword = !showPassword;
+
+            // toggle mask
+            if (showPassword)
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+                ShowPassButton.Image = Properties.Resources.view;
+            }
+            else
+            {
+                PasswordTextBox.UseSystemPasswordChar = true;
+                ShowPassButton.Image = Properties.Resources.hide; // replace with your image
+            }
+
+            // Keep caret at end
+            PasswordTextBox.SelectionStart = PasswordTextBox.Text.Length;
         }
     }
 }
