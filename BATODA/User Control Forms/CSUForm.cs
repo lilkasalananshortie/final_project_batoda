@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BATODA.User_Control_Forms
 {
     public partial class CSUForm : UserControl
@@ -16,36 +17,60 @@ namespace BATODA.User_Control_Forms
         private Panel currentSelectedPanel;
         private int panelGenertedBig = 1460;
         private int panelGenertedSmall = 933;
+        private Panel overlay;
         public CSUForm()
         {
             InitializeComponent();
-            LoadGmailInbox();
+            
 
 
 
 
         }
-        private void CSUForm_Load(object sender, EventArgs e)
+        private async void CSUForm_Load(object sender, EventArgs e)
         {
             ReplyPanel.Visible = false;
+            await Task.Delay(50);
+            LoadGmailInbox();
         }
 
         private async void LoadGmailInbox()
         {
+            ShowOverlay();
+
             InboxFlowLayoutPanel.Controls.Clear();
-
-            if (cachedMessages == null)
+           
+            var items = await Task.Run(() =>
             {
-                var messages = await Task.Run(() => gmailHandler.GetMessages(10));
-                cachedMessages = messages.Select(m => (m.Id, m.Subject, m.Date)).ToList();
+                if (cachedMessages == null)
+                {
+                    var messages = gmailHandler.GetMessages(10);
+                    cachedMessages = messages.Select(m => (m.Id, m.Subject, m.Date)).ToList();
+                }
+
+             
+                var results = new List<(string Subject, string Preview, string Time, string Id)>();
+
+                foreach (var m in cachedMessages)
+                {
+                    string preview = gmailHandler.GetPreview(m.Id, 70);
+                    string time = gmailHandler.FormatMessageTime(m.Date);
+
+                    results.Add((m.Subject, preview, time, m.Id));
+                }
+
+                return results;
+            });
+
+        
+            foreach (var msg in items)
+            {
+                InboxFlowLayoutPanel.Controls.Add(
+                    CreateInboxPanel(msg.Subject, msg.Preview, msg.Time, msg.Id)
+                );
             }
 
-            foreach (var m in cachedMessages)
-            {
-                string preview = gmailHandler.GetPreview(m.Id, 70);
-                var panel = CreateInboxPanel(m.Subject, preview, gmailHandler.FormatMessageTime(m.Date), m.Id);
-                InboxFlowLayoutPanel.Controls.Add(panel);
-            }
+            HideOverlay();
         }
 
         private Panel CreateInboxPanel(string headerText, string previewText, string timeText, string messageId)
@@ -200,6 +225,52 @@ namespace BATODA.User_Control_Forms
         private void GFormRcvButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new GFormUForm());
+        }
+        private void CreateOverlay()
+        {
+            if (overlay != null) return;
+
+            overlay = new Panel();
+            overlay.BackColor = Color.FromArgb(140, 0, 0, 0); 
+            overlay.Visible = false;
+            overlay.Dock = DockStyle.Fill;
+            overlay.BringToFront();
+
+            Label lbl = new Label();
+            lbl.Text = "Loading...";
+            lbl.ForeColor = Color.White;
+            lbl.Font = new Font("Segoe UI", 18, FontStyle.Bold);
+            lbl.AutoSize = true;
+            lbl.Anchor = AnchorStyles.None;
+
+            overlay.Controls.Add(lbl);
+
+            overlay.Resize += (s, e) =>
+            {
+                lbl.Location = new Point((overlay.Width - lbl.Width) / 2, (overlay.Height - lbl.Height) / 2);
+            };
+        }
+
+        private void ShowOverlay()
+        {
+            if (overlay == null)
+                CreateOverlay();
+
+            var form = this.FindForm();
+            if (form == null) return;
+
+            if (!form.Controls.Contains(overlay))
+                form.Controls.Add(overlay);
+
+            overlay.BringToFront();
+            overlay.Visible = true;
+            overlay.Update();
+        }
+
+        private void HideOverlay()
+        {
+            if (overlay != null)
+                overlay.Visible = false;
         }
     }
 
