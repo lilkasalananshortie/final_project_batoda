@@ -372,7 +372,6 @@
             this.ManageMembersButton.TextOffset = 20;
             this.ManageMembersButton.ToggleColor = System.Drawing.Color.LightGray;
             this.ManageMembersButton.UseVisualStyleBackColor = false;
-            this.ManageMembersButton.Click += new System.EventHandler(this.ManageMembersButton_Click);
             // 
             // AddMemberPanel
             // 
@@ -1263,7 +1262,6 @@
             this.label17.Size = new System.Drawing.Size(61, 24);
             this.label17.TabIndex = 51;
             this.label17.Text = "Active";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // panel4
             // 
@@ -1393,7 +1391,6 @@
             this.ViewMemberInfoPanel.Name = "ViewMemberInfoPanel";
             this.ViewMemberInfoPanel.Size = new System.Drawing.Size(991, 576);
             this.ViewMemberInfoPanel.TabIndex = 57;
-            this.ViewMemberInfoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewMemberInfoPanel_Paint);
             // 
             // panel21
             // 
