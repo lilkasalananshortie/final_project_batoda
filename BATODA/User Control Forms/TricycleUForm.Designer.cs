@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
             this.TransferRecordButton = new BATODA.ButtonStyle();
             this.RegisteredVehicleButton = new BATODA.ButtonStyle();
@@ -40,11 +40,9 @@
             this.TricycleGrid = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.ApplyearchButton = new BATODA.ButtonStyle();
-            this.StatusComboBox = new System.Windows.Forms.ComboBox();
-            this.OrderComboBox = new System.Windows.Forms.ComboBox();
-            this.MemberTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.StatusCmb = new System.Windows.Forms.ComboBox();
+            this.OrderCmb = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
@@ -247,11 +245,9 @@
             this.panel1.Controls.Add(this.TricycleGrid);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.ApplyearchButton);
-            this.panel1.Controls.Add(this.StatusComboBox);
-            this.panel1.Controls.Add(this.OrderComboBox);
-            this.panel1.Controls.Add(this.MemberTypeComboBox);
+            this.panel1.Controls.Add(this.StatusCmb);
+            this.panel1.Controls.Add(this.OrderCmb);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Location = new System.Drawing.Point(14, 265);
@@ -277,7 +273,7 @@
             this.ApplySearchButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplySearchButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplySearchButton.IsToggled = false;
-            this.ApplySearchButton.Location = new System.Drawing.Point(1356, 40);
+            this.ApplySearchButton.Location = new System.Drawing.Point(1358, 39);
             this.ApplySearchButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplySearchButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplySearchButton.Name = "ApplySearchButton";
@@ -310,7 +306,7 @@
             this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1460, 40);
+            this.ClearButton.Location = new System.Drawing.Point(1459, 39);
             this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ClearButton.Name = "ClearButton";
@@ -329,24 +325,24 @@
             // 
             this.TricycleGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.TricycleGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.TricycleGrid.Location = new System.Drawing.Point(26, 79);
             this.TricycleGrid.Name = "TricycleGrid";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.TricycleGrid.Size = new System.Drawing.Size(1532, 595);
             this.TricycleGrid.TabIndex = 34;
             this.TricycleGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TricycleGrid_CellContentClick);
@@ -355,7 +351,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1158, 19);
+            this.label6.Location = new System.Drawing.Point(1151, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 32;
@@ -365,22 +361,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(965, 19);
+            this.label4.Location = new System.Drawing.Point(958, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "Sort";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(772, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 20);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Member Type";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ApplyearchButton
             // 
@@ -416,38 +401,31 @@
             this.ApplyearchButton.Visible = false;
             this.ApplyearchButton.Click += new System.EventHandler(this.ApplyearchButton_Click_1);
             // 
-            // StatusComboBox
+            // StatusCmb
             // 
-            this.StatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Items.AddRange(new object[] {
+            this.StatusCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusCmb.FormattingEnabled = true;
+            this.StatusCmb.Items.AddRange(new object[] {
             "Operational",
             "Unavailable"});
-            this.StatusComboBox.Location = new System.Drawing.Point(1162, 39);
-            this.StatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(187, 33);
-            this.StatusComboBox.TabIndex = 27;
+            this.StatusCmb.Location = new System.Drawing.Point(1155, 39);
+            this.StatusCmb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.StatusCmb.Name = "StatusCmb";
+            this.StatusCmb.Size = new System.Drawing.Size(187, 33);
+            this.StatusCmb.TabIndex = 27;
             // 
-            // OrderComboBox
+            // OrderCmb
             // 
-            this.OrderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderComboBox.FormattingEnabled = true;
-            this.OrderComboBox.Location = new System.Drawing.Point(969, 39);
-            this.OrderComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderComboBox.Name = "OrderComboBox";
-            this.OrderComboBox.Size = new System.Drawing.Size(187, 33);
-            this.OrderComboBox.TabIndex = 26;
-            // 
-            // MemberTypeComboBox
-            // 
-            this.MemberTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemberTypeComboBox.FormattingEnabled = true;
-            this.MemberTypeComboBox.Location = new System.Drawing.Point(776, 40);
-            this.MemberTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MemberTypeComboBox.Name = "MemberTypeComboBox";
-            this.MemberTypeComboBox.Size = new System.Drawing.Size(187, 33);
-            this.MemberTypeComboBox.TabIndex = 24;
+            this.OrderCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderCmb.FormattingEnabled = true;
+            this.OrderCmb.Items.AddRange(new object[] {
+            "Ascending",
+            "Descending"});
+            this.OrderCmb.Location = new System.Drawing.Point(962, 39);
+            this.OrderCmb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderCmb.Name = "OrderCmb";
+            this.OrderCmb.Size = new System.Drawing.Size(187, 33);
+            this.OrderCmb.TabIndex = 26;
             // 
             // label2
             // 
@@ -681,9 +659,9 @@
             this.EditTrycPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EditTrycPanel.Controls.Add(this.label15);
             this.EditTrycPanel.Controls.Add(this.panel9);
-            this.EditTrycPanel.Location = new System.Drawing.Point(273, 265);
+            this.EditTrycPanel.Location = new System.Drawing.Point(273, 370);
             this.EditTrycPanel.Name = "EditTrycPanel";
-            this.EditTrycPanel.Size = new System.Drawing.Size(1142, 555);
+            this.EditTrycPanel.Size = new System.Drawing.Size(1142, 450);
             this.EditTrycPanel.TabIndex = 56;
             // 
             // label15
@@ -1148,9 +1126,8 @@
         private ButtonStyle TransferVehicleButton;
         private System.Windows.Forms.Panel panel1;
         private ButtonStyle ApplyearchButton;
-        private System.Windows.Forms.ComboBox StatusComboBox;
-        private System.Windows.Forms.ComboBox OrderComboBox;
-        private System.Windows.Forms.ComboBox MemberTypeComboBox;
+        private System.Windows.Forms.ComboBox StatusCmb;
+        private System.Windows.Forms.ComboBox OrderCmb;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.DataGridView TricycleGrid;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1175,7 +1152,6 @@
         private ButtonStyle ApplySearchButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel EditTrycPanel;
         private ButtonStyle CancelEditButton;
