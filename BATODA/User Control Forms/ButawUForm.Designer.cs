@@ -33,11 +33,11 @@
             this.RenewalHistoryButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.FinancHistoryCmb = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ButawGrid = new System.Windows.Forms.DataGridView();
+            this.PrintButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -116,7 +116,7 @@
             this.RenewalHistoryButton.PaddingY = 0;
             this.RenewalHistoryButton.Size = new System.Drawing.Size(525, 49);
             this.RenewalHistoryButton.TabIndex = 20;
-            this.RenewalHistoryButton.Text = "Renewal History";
+            this.RenewalHistoryButton.Text = "Butaw Payment History";
             this.RenewalHistoryButton.TextColor = System.Drawing.Color.Black;
             this.RenewalHistoryButton.TextOffset = 20;
             this.RenewalHistoryButton.ToggleColor = System.Drawing.Color.Empty;
@@ -160,25 +160,13 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.FinancHistoryCmb);
+            this.panel7.Controls.Add(this.PrintButton);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Location = new System.Drawing.Point(19, 94);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 51;
-            // 
-            // FinancHistoryCmb
-            // 
-            this.FinancHistoryCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinancHistoryCmb.FormattingEnabled = true;
-            this.FinancHistoryCmb.Items.AddRange(new object[] {
-            "Renewal Payments",
-            "Butaw Payments"});
-            this.FinancHistoryCmb.Location = new System.Drawing.Point(1368, 21);
-            this.FinancHistoryCmb.Name = "FinancHistoryCmb";
-            this.FinancHistoryCmb.Size = new System.Drawing.Size(192, 28);
-            this.FinancHistoryCmb.TabIndex = 45;
             // 
             // pictureBox7
             // 
@@ -217,6 +205,39 @@
             this.ButawGrid.Size = new System.Drawing.Size(1585, 743);
             this.ButawGrid.TabIndex = 0;
             // 
+            // PrintButton
+            // 
+            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.BorderColor = System.Drawing.Color.Red;
+            this.PrintButton.BorderRadius = 0;
+            this.PrintButton.BorderSize = 0;
+            this.PrintButton.ButtonImage = null;
+            this.PrintButton.FlatAppearance.BorderSize = 0;
+            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintButton.ForeColor = System.Drawing.Color.White;
+            this.PrintButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.PrintButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.PrintButton.ImageColor = System.Drawing.Color.Black;
+            this.PrintButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.PrintButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.PrintButton.IsToggled = false;
+            this.PrintButton.Location = new System.Drawing.Point(1463, 19);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PrintButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.PaddingX = 0;
+            this.PrintButton.PaddingY = 0;
+            this.PrintButton.Size = new System.Drawing.Size(98, 33);
+            this.PrintButton.TabIndex = 60;
+            this.PrintButton.Text = "Print";
+            this.PrintButton.TextColor = System.Drawing.Color.White;
+            this.PrintButton.TextOffset = 20;
+            this.PrintButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.UseVisualStyleBackColor = false;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
+            // 
             // ButawUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +268,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox FinancHistoryCmb;
         private System.Windows.Forms.DataGridView ButawGrid;
+        private ButtonStyle PrintButton;
     }
 }

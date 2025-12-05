@@ -37,6 +37,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TransferTricHistoryGrid = new System.Windows.Forms.DataGridView();
+            this.PrintButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -159,6 +160,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.PrintButton);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Location = new System.Drawing.Point(14, 94);
@@ -204,6 +206,39 @@
             this.TransferTricHistoryGrid.Size = new System.Drawing.Size(1595, 682);
             this.TransferTricHistoryGrid.TabIndex = 3;
             // 
+            // PrintButton
+            // 
+            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.BorderColor = System.Drawing.Color.Red;
+            this.PrintButton.BorderRadius = 0;
+            this.PrintButton.BorderSize = 0;
+            this.PrintButton.ButtonImage = null;
+            this.PrintButton.FlatAppearance.BorderSize = 0;
+            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintButton.ForeColor = System.Drawing.Color.White;
+            this.PrintButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.PrintButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.PrintButton.ImageColor = System.Drawing.Color.Black;
+            this.PrintButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.PrintButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.PrintButton.IsToggled = false;
+            this.PrintButton.Location = new System.Drawing.Point(1476, 19);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PrintButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.PaddingX = 0;
+            this.PrintButton.PaddingY = 0;
+            this.PrintButton.Size = new System.Drawing.Size(98, 33);
+            this.PrintButton.TabIndex = 59;
+            this.PrintButton.Text = "Print";
+            this.PrintButton.TextColor = System.Drawing.Color.White;
+            this.PrintButton.TextOffset = 20;
+            this.PrintButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.PrintButton.UseVisualStyleBackColor = false;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
+            // 
             // TransferRecordVehicleUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +272,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView TransferTricHistoryGrid;
+        private ButtonStyle PrintButton;
     }
 }
