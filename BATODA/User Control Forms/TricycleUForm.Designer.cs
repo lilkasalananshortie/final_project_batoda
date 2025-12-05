@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
             this.TransferRecordButton = new BATODA.ButtonStyle();
             this.RegisteredVehicleButton = new BATODA.ButtonStyle();
@@ -66,36 +66,37 @@
             this.SuspendedLbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.EditTrycPanel = new System.Windows.Forms.Panel();
-            this.EditBodyNoPreviewLbl = new System.Windows.Forms.Label();
-            this.PreviewImagePb = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.CancelEditButton = new BATODA.ButtonStyle();
-            this.SaveChangesButton = new BATODA.ButtonStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.EditBodyNoLbl = new System.Windows.Forms.Label();
+            this.SaveChangesButton = new BATODA.ButtonStyle();
+            this.PreviewImagePb = new System.Windows.Forms.PictureBox();
+            this.CancelEditButton = new BATODA.ButtonStyle();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.PlateTxt = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.FullNameLbl = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.MembershipLbl = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.ContactLbl = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.ModelTxt = new System.Windows.Forms.TextBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.ChassisTxt = new System.Windows.Forms.TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.BrandTxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EngineTxt = new System.Windows.Forms.TextBox();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TricycleGrid)).BeginInit();
@@ -110,16 +111,16 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.EditTrycPanel.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).BeginInit();
+            this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -324,24 +325,24 @@
             // 
             this.TricycleGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.TricycleGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle7;
             this.TricycleGrid.Location = new System.Drawing.Point(26, 79);
             this.TricycleGrid.Name = "TricycleGrid";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.TricycleGrid.Size = new System.Drawing.Size(1532, 595);
             this.TricycleGrid.TabIndex = 34;
             this.TricycleGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TricycleGrid_CellContentClick);
@@ -675,338 +676,16 @@
             this.EditTrycPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EditTrycPanel.Controls.Add(this.label15);
             this.EditTrycPanel.Controls.Add(this.panel9);
-            this.EditTrycPanel.Location = new System.Drawing.Point(209, 249);
+            this.EditTrycPanel.Location = new System.Drawing.Point(273, 265);
             this.EditTrycPanel.Name = "EditTrycPanel";
-            this.EditTrycPanel.Size = new System.Drawing.Size(1206, 601);
+            this.EditTrycPanel.Size = new System.Drawing.Size(1142, 555);
             this.EditTrycPanel.TabIndex = 56;
-            // 
-            // EditBodyNoPreviewLbl
-            // 
-            this.EditBodyNoPreviewLbl.AutoSize = true;
-            this.EditBodyNoPreviewLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBodyNoPreviewLbl.Location = new System.Drawing.Point(63, 40);
-            this.EditBodyNoPreviewLbl.Name = "EditBodyNoPreviewLbl";
-            this.EditBodyNoPreviewLbl.Size = new System.Drawing.Size(222, 33);
-            this.EditBodyNoPreviewLbl.TabIndex = 77;
-            this.EditBodyNoPreviewLbl.Text = "BATODA (027)";
-            // 
-            // PreviewImagePb
-            // 
-            this.PreviewImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PreviewImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.PreviewImagePb.Location = new System.Drawing.Point(23, 86);
-            this.PreviewImagePb.Name = "PreviewImagePb";
-            this.PreviewImagePb.Size = new System.Drawing.Size(292, 267);
-            this.PreviewImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PreviewImagePb.TabIndex = 76;
-            this.PreviewImagePb.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(389, 123);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(181, 25);
-            this.label12.TabIndex = 68;
-            this.label12.Text = "Contact Number *";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(387, 40);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 25);
-            this.label14.TabIndex = 69;
-            this.label14.Text = "First Name *";
-            // 
-            // panel8
-            // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.label20);
-            this.panel8.Location = new System.Drawing.Point(394, 68);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(346, 44);
-            this.panel8.TabIndex = 66;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(6, 9);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(133, 25);
-            this.label20.TabIndex = 58;
-            this.label20.Text = "PLaceholder";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(753, 40);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(198, 25);
-            this.label17.TabIndex = 73;
-            this.label17.Text = "Membership Type *";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label23);
-            this.panel7.Location = new System.Drawing.Point(755, 68);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(341, 44);
-            this.panel7.TabIndex = 72;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label23.Location = new System.Drawing.Point(9, 7);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(126, 25);
-            this.label23.TabIndex = 58;
-            this.label23.Text = "Placeholder";
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.label18);
-            this.panel12.Location = new System.Drawing.Point(394, 151);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(346, 44);
-            this.panel12.TabIndex = 67;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(4, 9);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 25);
-            this.label18.TabIndex = 58;
-            this.label18.Text = "Placeholder";
-            // 
-            // panel14
-            // 
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.textBox4);
-            this.panel14.Location = new System.Drawing.Point(755, 327);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(341, 44);
-            this.panel14.TabIndex = 55;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(6, 9);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 24);
-            this.textBox4.TabIndex = 76;
-            // 
-            // panel13
-            // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.textBox1);
-            this.panel13.Location = new System.Drawing.Point(394, 240);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(344, 44);
-            this.panel13.TabIndex = 56;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(10, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 24);
-            this.textBox1.TabIndex = 75;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(389, 299);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 25);
-            this.label3.TabIndex = 64;
-            this.label3.Text = "Engine Number *";
-            // 
-            // panel17
-            // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.textBox3);
-            this.panel17.Location = new System.Drawing.Point(755, 240);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(344, 44);
-            this.panel17.TabIndex = 62;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(6, 9);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 24);
-            this.textBox3.TabIndex = 76;
-            // 
-            // panel18
-            // 
-            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel18.Controls.Add(this.textBox5);
-            this.panel18.Location = new System.Drawing.Point(394, 327);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(343, 44);
-            this.panel18.TabIndex = 63;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(6, 9);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(312, 24);
-            this.textBox5.TabIndex = 76;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(753, 298);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(85, 25);
-            this.label22.TabIndex = 58;
-            this.label22.Text = "Model *";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(750, 212);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 25);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "Chasis Number *";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(389, 212);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 25);
-            this.label10.TabIndex = 60;
-            this.label10.Text = "Tricycle Brand";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(750, 123);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 25);
-            this.label11.TabIndex = 61;
-            this.label11.Text = "Plate Number *";
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.textBox2);
-            this.panel11.Location = new System.Drawing.Point(755, 151);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(346, 44);
-            this.panel11.TabIndex = 57;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(10, 14);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 24);
-            this.textBox2.TabIndex = 76;
-            // 
-            // CancelEditButton
-            // 
-            this.CancelEditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelEditButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelEditButton.BorderColor = System.Drawing.Color.Red;
-            this.CancelEditButton.BorderRadius = 0;
-            this.CancelEditButton.BorderSize = 0;
-            this.CancelEditButton.ButtonImage = null;
-            this.CancelEditButton.FlatAppearance.BorderSize = 0;
-            this.CancelEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelEditButton.ForeColor = System.Drawing.Color.White;
-            this.CancelEditButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CancelEditButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.CancelEditButton.ImageColor = System.Drawing.Color.Black;
-            this.CancelEditButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.CancelEditButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CancelEditButton.IsToggled = false;
-            this.CancelEditButton.Location = new System.Drawing.Point(782, 419);
-            this.CancelEditButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelEditButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelEditButton.Name = "CancelEditButton";
-            this.CancelEditButton.PaddingX = 0;
-            this.CancelEditButton.PaddingY = 0;
-            this.CancelEditButton.Size = new System.Drawing.Size(141, 40);
-            this.CancelEditButton.TabIndex = 54;
-            this.CancelEditButton.Text = "Cancel";
-            this.CancelEditButton.TextColor = System.Drawing.Color.White;
-            this.CancelEditButton.TextOffset = 20;
-            this.CancelEditButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelEditButton.UseVisualStyleBackColor = false;
-            this.CancelEditButton.Click += new System.EventHandler(this.CancelEditButton_Click);
-            // 
-            // SaveChangesButton
-            // 
-            this.SaveChangesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveChangesButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveChangesButton.BorderColor = System.Drawing.Color.Red;
-            this.SaveChangesButton.BorderRadius = 0;
-            this.SaveChangesButton.BorderSize = 0;
-            this.SaveChangesButton.ButtonImage = null;
-            this.SaveChangesButton.FlatAppearance.BorderSize = 0;
-            this.SaveChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveChangesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveChangesButton.ForeColor = System.Drawing.Color.White;
-            this.SaveChangesButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.SaveChangesButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.SaveChangesButton.ImageColor = System.Drawing.Color.Black;
-            this.SaveChangesButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.SaveChangesButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.SaveChangesButton.IsToggled = false;
-            this.SaveChangesButton.Location = new System.Drawing.Point(937, 419);
-            this.SaveChangesButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SaveChangesButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveChangesButton.Name = "SaveChangesButton";
-            this.SaveChangesButton.PaddingX = 0;
-            this.SaveChangesButton.PaddingY = 0;
-            this.SaveChangesButton.Size = new System.Drawing.Size(141, 40);
-            this.SaveChangesButton.TabIndex = 53;
-            this.SaveChangesButton.Text = "Save";
-            this.SaveChangesButton.TextColor = System.Drawing.Color.White;
-            this.SaveChangesButton.TextOffset = 20;
-            this.SaveChangesButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveChangesButton.UseVisualStyleBackColor = false;
-            this.SaveChangesButton.Click += new System.EventHandler(this.SaveChangesButton_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(87, 22);
+            this.label15.Location = new System.Drawing.Point(39, 19);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(435, 37);
             this.label15.TabIndex = 78;
@@ -1015,7 +694,7 @@
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.EditBodyNoPreviewLbl);
+            this.panel9.Controls.Add(this.EditBodyNoLbl);
             this.panel9.Controls.Add(this.SaveChangesButton);
             this.panel9.Controls.Add(this.PreviewImagePb);
             this.panel9.Controls.Add(this.CancelEditButton);
@@ -1035,11 +714,344 @@
             this.panel9.Controls.Add(this.panel17);
             this.panel9.Controls.Add(this.panel13);
             this.panel9.Controls.Add(this.label3);
-            this.panel9.Location = new System.Drawing.Point(41, 79);
+            this.panel9.Location = new System.Drawing.Point(23, 72);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1123, 477);
+            this.panel9.Size = new System.Drawing.Size(1092, 460);
             this.panel9.TabIndex = 79;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // EditBodyNoLbl
+            // 
+            this.EditBodyNoLbl.AutoSize = true;
+            this.EditBodyNoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBodyNoLbl.Location = new System.Drawing.Point(57, 40);
+            this.EditBodyNoLbl.Name = "EditBodyNoLbl";
+            this.EditBodyNoLbl.Size = new System.Drawing.Size(222, 33);
+            this.EditBodyNoLbl.TabIndex = 77;
+            this.EditBodyNoLbl.Text = "BATODA (027)";
+            // 
+            // SaveChangesButton
+            // 
+            this.SaveChangesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveChangesButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveChangesButton.BorderColor = System.Drawing.Color.Red;
+            this.SaveChangesButton.BorderRadius = 0;
+            this.SaveChangesButton.BorderSize = 0;
+            this.SaveChangesButton.ButtonImage = null;
+            this.SaveChangesButton.FlatAppearance.BorderSize = 0;
+            this.SaveChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveChangesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveChangesButton.ForeColor = System.Drawing.Color.White;
+            this.SaveChangesButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SaveChangesButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.SaveChangesButton.ImageColor = System.Drawing.Color.Black;
+            this.SaveChangesButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.SaveChangesButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SaveChangesButton.IsToggled = false;
+            this.SaveChangesButton.Location = new System.Drawing.Point(939, 396);
+            this.SaveChangesButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveChangesButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveChangesButton.Name = "SaveChangesButton";
+            this.SaveChangesButton.PaddingX = 0;
+            this.SaveChangesButton.PaddingY = 0;
+            this.SaveChangesButton.Size = new System.Drawing.Size(132, 33);
+            this.SaveChangesButton.TabIndex = 53;
+            this.SaveChangesButton.Text = "Save";
+            this.SaveChangesButton.TextColor = System.Drawing.Color.White;
+            this.SaveChangesButton.TextOffset = 20;
+            this.SaveChangesButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveChangesButton.UseVisualStyleBackColor = false;
+            this.SaveChangesButton.Click += new System.EventHandler(this.SaveChangesButton_Click);
+            // 
+            // PreviewImagePb
+            // 
+            this.PreviewImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PreviewImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
+            this.PreviewImagePb.Location = new System.Drawing.Point(22, 79);
+            this.PreviewImagePb.Name = "PreviewImagePb";
+            this.PreviewImagePb.Size = new System.Drawing.Size(292, 267);
+            this.PreviewImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PreviewImagePb.TabIndex = 76;
+            this.PreviewImagePb.TabStop = false;
+            // 
+            // CancelEditButton
+            // 
+            this.CancelEditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelEditButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelEditButton.BorderColor = System.Drawing.Color.Red;
+            this.CancelEditButton.BorderRadius = 0;
+            this.CancelEditButton.BorderSize = 0;
+            this.CancelEditButton.ButtonImage = null;
+            this.CancelEditButton.FlatAppearance.BorderSize = 0;
+            this.CancelEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelEditButton.ForeColor = System.Drawing.Color.White;
+            this.CancelEditButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelEditButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelEditButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelEditButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CancelEditButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CancelEditButton.IsToggled = false;
+            this.CancelEditButton.Location = new System.Drawing.Point(801, 396);
+            this.CancelEditButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelEditButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelEditButton.Name = "CancelEditButton";
+            this.CancelEditButton.PaddingX = 0;
+            this.CancelEditButton.PaddingY = 0;
+            this.CancelEditButton.Size = new System.Drawing.Size(132, 33);
+            this.CancelEditButton.TabIndex = 54;
+            this.CancelEditButton.Text = "Cancel";
+            this.CancelEditButton.TextColor = System.Drawing.Color.White;
+            this.CancelEditButton.TextOffset = 20;
+            this.CancelEditButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelEditButton.UseVisualStyleBackColor = false;
+            this.CancelEditButton.Click += new System.EventHandler(this.CancelEditButton_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(359, 123);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(139, 25);
+            this.label12.TabIndex = 68;
+            this.label12.Text = "Contact No. *";
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.PlateTxt);
+            this.panel11.Location = new System.Drawing.Point(725, 151);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(344, 44);
+            this.panel11.TabIndex = 57;
+            // 
+            // PlateTxt
+            // 
+            this.PlateTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PlateTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlateTxt.Location = new System.Drawing.Point(6, 9);
+            this.PlateTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PlateTxt.Name = "PlateTxt";
+            this.PlateTxt.Size = new System.Drawing.Size(331, 24);
+            this.PlateTxt.TabIndex = 76;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(357, 40);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(123, 25);
+            this.label14.TabIndex = 69;
+            this.label14.Text = "Full Name *";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(720, 123);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 25);
+            this.label11.TabIndex = 61;
+            this.label11.Text = "Plate No. *";
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.FullNameLbl);
+            this.panel8.Location = new System.Drawing.Point(364, 68);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(346, 44);
+            this.panel8.TabIndex = 66;
+            // 
+            // FullNameLbl
+            // 
+            this.FullNameLbl.AutoSize = true;
+            this.FullNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullNameLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FullNameLbl.Location = new System.Drawing.Point(6, 9);
+            this.FullNameLbl.Name = "FullNameLbl";
+            this.FullNameLbl.Size = new System.Drawing.Size(133, 25);
+            this.FullNameLbl.TabIndex = 58;
+            this.FullNameLbl.Text = "PLaceholder";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(359, 212);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 25);
+            this.label10.TabIndex = 60;
+            this.label10.Text = "Tricycle Brand";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(723, 40);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(198, 25);
+            this.label17.TabIndex = 73;
+            this.label17.Text = "Membership Type *";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(720, 212);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 25);
+            this.label7.TabIndex = 59;
+            this.label7.Text = "Chassis No *";
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.MembershipLbl);
+            this.panel7.Location = new System.Drawing.Point(725, 68);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(341, 44);
+            this.panel7.TabIndex = 72;
+            // 
+            // MembershipLbl
+            // 
+            this.MembershipLbl.AutoSize = true;
+            this.MembershipLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembershipLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MembershipLbl.Location = new System.Drawing.Point(9, 7);
+            this.MembershipLbl.Name = "MembershipLbl";
+            this.MembershipLbl.Size = new System.Drawing.Size(126, 25);
+            this.MembershipLbl.TabIndex = 58;
+            this.MembershipLbl.Text = "Placeholder";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(723, 298);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(85, 25);
+            this.label22.TabIndex = 58;
+            this.label22.Text = "Model *";
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.ContactLbl);
+            this.panel12.Location = new System.Drawing.Point(364, 151);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(346, 44);
+            this.panel12.TabIndex = 67;
+            // 
+            // ContactLbl
+            // 
+            this.ContactLbl.AutoSize = true;
+            this.ContactLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ContactLbl.Location = new System.Drawing.Point(4, 9);
+            this.ContactLbl.Name = "ContactLbl";
+            this.ContactLbl.Size = new System.Drawing.Size(126, 25);
+            this.ContactLbl.TabIndex = 58;
+            this.ContactLbl.Text = "Placeholder";
+            // 
+            // panel18
+            // 
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel18.Controls.Add(this.EngineTxt);
+            this.panel18.Controls.Add(this.textBox5);
+            this.panel18.Location = new System.Drawing.Point(364, 327);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(346, 44);
+            this.panel18.TabIndex = 63;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(6, 9);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(312, 24);
+            this.textBox5.TabIndex = 76;
+            // 
+            // panel14
+            // 
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel14.Controls.Add(this.ModelTxt);
+            this.panel14.Location = new System.Drawing.Point(725, 327);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(346, 44);
+            this.panel14.TabIndex = 55;
+            // 
+            // ModelTxt
+            // 
+            this.ModelTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ModelTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModelTxt.Location = new System.Drawing.Point(8, 9);
+            this.ModelTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ModelTxt.Name = "ModelTxt";
+            this.ModelTxt.Size = new System.Drawing.Size(321, 24);
+            this.ModelTxt.TabIndex = 76;
+            // 
+            // panel17
+            // 
+            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel17.Controls.Add(this.ChassisTxt);
+            this.panel17.Location = new System.Drawing.Point(725, 240);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(344, 44);
+            this.panel17.TabIndex = 62;
+            // 
+            // ChassisTxt
+            // 
+            this.ChassisTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ChassisTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChassisTxt.Location = new System.Drawing.Point(9, 9);
+            this.ChassisTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ChassisTxt.Name = "ChassisTxt";
+            this.ChassisTxt.Size = new System.Drawing.Size(318, 24);
+            this.ChassisTxt.TabIndex = 76;
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.BrandTxt);
+            this.panel13.Location = new System.Drawing.Point(364, 240);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(346, 44);
+            this.panel13.TabIndex = 56;
+            // 
+            // BrandTxt
+            // 
+            this.BrandTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BrandTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrandTxt.Location = new System.Drawing.Point(10, 9);
+            this.BrandTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BrandTxt.Name = "BrandTxt";
+            this.BrandTxt.Size = new System.Drawing.Size(321, 24);
+            this.BrandTxt.TabIndex = 75;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(359, 299);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 25);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Engine Number *";
+            // 
+            // EngineTxt
+            // 
+            this.EngineTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EngineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EngineTxt.Location = new System.Drawing.Point(8, 9);
+            this.EngineTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EngineTxt.Name = "EngineTxt";
+            this.EngineTxt.Size = new System.Drawing.Size(323, 24);
+            this.EngineTxt.TabIndex = 76;
             // 
             // TricycleUForm
             // 
@@ -1078,25 +1090,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.EditTrycPanel.ResumeLayout(false);
             this.EditTrycPanel.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1155,18 +1167,19 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label FullNameLbl;
+        private System.Windows.Forms.Label MembershipLbl;
+        private System.Windows.Forms.Label ContactLbl;
+        private System.Windows.Forms.TextBox ModelTxt;
+        private System.Windows.Forms.TextBox BrandTxt;
+        private System.Windows.Forms.TextBox ChassisTxt;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PlateTxt;
         private System.Windows.Forms.PictureBox PreviewImagePb;
         private ButtonStyle SaveChangesButton;
-        private System.Windows.Forms.Label EditBodyNoPreviewLbl;
+        private System.Windows.Forms.Label EditBodyNoLbl;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox EngineTxt;
     }
 }

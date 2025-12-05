@@ -11,6 +11,9 @@ namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
         public int BodyNumber { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
+        public string MiddleInitial { get; set; } 
+        public string ContactNumber { get; set; } 
+        public string MembershipType { get; set; }
         public string TricycleBrand { get; set; }
         public string TricModel { get; set; }
         public string PlateNumber { get; set; }

@@ -233,6 +233,42 @@ namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
             }
         }
 
+        public TricycleModel GetTricycleDetails(int bodyNumber)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = @"
+            SELECT FirstName, MiddleInitial, LastName, ContactNumber, MembershipType,
+                   PlateNumber, TricycleBrand, ChassisNumber, EngineNumber, TricycleModel
+            FROM MemberInfo
+            WHERE BodyNumber = @BodyNumber";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        return new TricycleModel
+                        {
+                            BodyNumber = bodyNumber,
+                            FirstName = reader["FirstName"].ToString(),
+                            MiddleInitial = reader["MiddleInitial"].ToString(),
+                            LastName = reader["LastName"].ToString(),
+                            ContactNumber = reader["ContactNumber"].ToString(),
+                            MembershipType = reader["MembershipType"].ToString(),
+                            PlateNumber = reader["PlateNumber"].ToString(),
+                            TricycleBrand = reader["TricycleBrand"].ToString(),
+                            ChassisNumber = reader["ChassisNumber"].ToString(),
+                            EngineNumber = reader["EngineNumber"].ToString(),
+                            TricModel = reader["TricycleModel"].ToString()
+                        };
+                    }
+                    return null;
+                }
+            }
+        }
 
     }
 }
