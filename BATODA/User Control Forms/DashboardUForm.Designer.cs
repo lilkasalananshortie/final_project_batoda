@@ -62,8 +62,8 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.EventsLbl = new System.Windows.Forms.Label();
+            this.CompletedEventsLbl = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -425,8 +425,8 @@
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.panel12);
-            this.panel9.Controls.Add(this.label19);
-            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.EventsLbl);
+            this.panel9.Controls.Add(this.CompletedEventsLbl);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.label16);
             this.panel9.Controls.Add(this.label15);
@@ -451,27 +451,27 @@
             this.panel12.Size = new System.Drawing.Size(480, 3);
             this.panel12.TabIndex = 92;
             // 
-            // label19
+            // EventsLbl
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(386, 102);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(88, 20);
-            this.label19.TabIndex = 44;
-            this.label19.Text = "10 event(s)";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EventsLbl.AutoSize = true;
+            this.EventsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventsLbl.Location = new System.Drawing.Point(386, 102);
+            this.EventsLbl.Name = "EventsLbl";
+            this.EventsLbl.Size = new System.Drawing.Size(88, 20);
+            this.EventsLbl.TabIndex = 44;
+            this.EventsLbl.Text = "10 event(s)";
+            this.EventsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label18
+            // CompletedEventsLbl
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(395, 144);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 20);
-            this.label18.TabIndex = 43;
-            this.label18.Text = "9 event(s)";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CompletedEventsLbl.AutoSize = true;
+            this.CompletedEventsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompletedEventsLbl.Location = new System.Drawing.Point(385, 144);
+            this.CompletedEventsLbl.Name = "CompletedEventsLbl";
+            this.CompletedEventsLbl.Size = new System.Drawing.Size(79, 20);
+            this.CompletedEventsLbl.TabIndex = 43;
+            this.CompletedEventsLbl.Text = "9 event(s)";
+            this.CompletedEventsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label17
             // 
@@ -717,8 +717,8 @@
         private ButtonStyle QuickActionTransferMemberButton;
         private ButtonStyle QuickActionNewMemberButton;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label EventsLbl;
+        private System.Windows.Forms.Label CompletedEventsLbl;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;

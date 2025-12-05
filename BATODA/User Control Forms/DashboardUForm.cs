@@ -3,6 +3,7 @@ using BATODA.Helpers.Database.Assistance;
 using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
+using BATODA.Repositories;
 using BATODA.User_Control_Forms;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,31 @@ namespace BATODA
             var taxRepo = new TaxRepository();
             TaxTodayLbl.Text = "₱" + taxRepo.GetPaidTodayTotal().ToString("N2");
             OverdueLbl.Text = "₱" + taxRepo.GetOverdueLastMonthTotal().ToString("N2");
+
+            var eventRepo = new EventRepository();
+            int currentMonth = DateTime.Today.Month;
+            int currentYear = DateTime.Today.Year;
+
+            var allEvents = eventRepo.GetAllEvents();
+            int totalThisMonth = 0;
+            int completedThisMonth = 0;
+
+            foreach (var ev in allEvents)
+            {
+                if (ev.Date.Month == currentMonth && ev.Date.Year == currentYear)
+                {
+                    totalThisMonth++;
+                    if (ev.Status == "Done")
+                    {
+                        completedThisMonth++;
+                    }
+                }
+            }
+
+            EventsLbl.Text = totalThisMonth.ToString() + " Event(s)";
+            CompletedEventsLbl.Text = completedThisMonth.ToString() + " Event(s)";
+
+
         }
 
 

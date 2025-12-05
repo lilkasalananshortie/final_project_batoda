@@ -136,5 +136,22 @@ namespace BATODA.Modules.Dashboard_Module.Dashboard_Classes
             }
         }
 
+        public static int CountPendingRequestsActive()
+        {
+            int count = 0;
+            using (SqlConnection conn = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=BatodaDb;Integrated Security=True;TrustServerCertificate=True"))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM AssistanceRequests WHERE Status = 'Pending' AND IsActive = 1";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    count = (int)cmd.ExecuteScalar();
+                }
+            }
+            return count;
+        }
+
+
+
     }
 }
