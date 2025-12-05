@@ -45,17 +45,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ShowPassButton = new System.Windows.Forms.PictureBox();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPassButton)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginPanel
             // 
             this.LoginPanel.BackColor = System.Drawing.Color.White;
             this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LoginPanel.Controls.Add(this.ShowPassButton);
             this.LoginPanel.Controls.Add(this.label4);
             this.LoginPanel.Controls.Add(this.label3);
             this.LoginPanel.Controls.Add(this.label2);
@@ -130,7 +133,7 @@
             this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.Location = new System.Drawing.Point(118, 197);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(201, 20);
+            this.PasswordTextBox.Size = new System.Drawing.Size(177, 20);
             this.PasswordTextBox.TabIndex = 7;
             // 
             // pictureBox4
@@ -242,6 +245,17 @@
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
+            // ShowPassButton
+            // 
+            this.ShowPassButton.Image = global::BATODA.Properties.Resources.view;
+            this.ShowPassButton.Location = new System.Drawing.Point(301, 199);
+            this.ShowPassButton.Name = "ShowPassButton";
+            this.ShowPassButton.Size = new System.Drawing.Size(18, 18);
+            this.ShowPassButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ShowPassButton.TabIndex = 19;
+            this.ShowPassButton.TabStop = false;
+            this.ShowPassButton.Click += new System.EventHandler(this.ShowPassButton_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPassButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,6 +305,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox ShowPassButton;
     }
 }
 
