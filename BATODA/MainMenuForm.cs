@@ -16,6 +16,7 @@ namespace BATODA
             InitializeComponent();
             
 
+
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayClass.SetMainPanel(DisplayPanel);
 
@@ -191,14 +192,7 @@ namespace BATODA
             TopPanelText.Text = "CUSTOMER SERVICE";
             SubTopPanel.Text = "Manage customer service complaints and inquiries.";
         }
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
-            ActivateMainButton("Settings");
-            DisplayClass.ShowMain(new SettingsUForm());
-            TopPanelText.Text = "SETTINGS";
-            SubTopPanel.Text = "Backup/Restore your organizations data ";
-        }
-
+       
         private void TopBarPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -228,7 +222,12 @@ namespace BATODA
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-
+            Close();
+            LoginForm login = new LoginForm();
+            login.Show();
+            
         }
+
+       
     }
 }

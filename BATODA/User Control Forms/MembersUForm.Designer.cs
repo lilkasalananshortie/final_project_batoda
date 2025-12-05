@@ -1399,9 +1399,9 @@
             // 
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel21.Controls.Add(this.CurrentBirthdayLbl);
-            this.panel21.Location = new System.Drawing.Point(700, 136);
+            this.panel21.Location = new System.Drawing.Point(645, 136);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(233, 41);
+            this.panel21.Size = new System.Drawing.Size(298, 41);
             this.panel21.TabIndex = 83;
             // 
             // CurrentBirthdayLbl
@@ -1419,7 +1419,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(695, 106);
+            this.label20.Location = new System.Drawing.Point(640, 106);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(112, 25);
             this.label20.TabIndex = 111;
@@ -1428,42 +1428,42 @@
             // BodyNumLbl
             // 
             this.BodyNumLbl.AutoSize = true;
-            this.BodyNumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BodyNumLbl.Location = new System.Drawing.Point(46, 114);
+            this.BodyNumLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BodyNumLbl.Location = new System.Drawing.Point(49, 115);
             this.BodyNumLbl.Name = "BodyNumLbl";
-            this.BodyNumLbl.Size = new System.Drawing.Size(242, 33);
+            this.BodyNumLbl.Size = new System.Drawing.Size(226, 31);
             this.BodyNumLbl.TabIndex = 110;
             this.BodyNumLbl.Text = "BATODA - (100)";
             // 
             // AddPenaltyBtn
             // 
-            this.AddPenaltyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.AddPenaltyBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.BackColor = System.Drawing.Color.White;
+            this.AddPenaltyBtn.BackgroundColor = System.Drawing.Color.White;
             this.AddPenaltyBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.AddPenaltyBtn.BorderRadius = 0;
-            this.AddPenaltyBtn.BorderSize = 0;
+            this.AddPenaltyBtn.BorderSize = 1;
             this.AddPenaltyBtn.ButtonImage = global::BATODA.Properties.Resources.exit;
             this.AddPenaltyBtn.FlatAppearance.BorderSize = 0;
             this.AddPenaltyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddPenaltyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddPenaltyBtn.ForeColor = System.Drawing.Color.White;
-            this.AddPenaltyBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.AddPenaltyBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.AddPenaltyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.HoverColor = System.Drawing.Color.LightGray;
             this.AddPenaltyBtn.ImageColor = System.Drawing.Color.Black;
-            this.AddPenaltyBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.AddPenaltyBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.AddPenaltyBtn.ImagePosition = new System.Drawing.Point(40, 0);
+            this.AddPenaltyBtn.ImageSize = new System.Drawing.Size(20, 20);
             this.AddPenaltyBtn.IsToggled = false;
-            this.AddPenaltyBtn.Location = new System.Drawing.Point(63, 424);
+            this.AddPenaltyBtn.Location = new System.Drawing.Point(57, 424);
             this.AddPenaltyBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddPenaltyBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.MouseDownColor = System.Drawing.Color.White;
             this.AddPenaltyBtn.Name = "AddPenaltyBtn";
             this.AddPenaltyBtn.PaddingX = 0;
             this.AddPenaltyBtn.PaddingY = 0;
             this.AddPenaltyBtn.Size = new System.Drawing.Size(212, 44);
             this.AddPenaltyBtn.TabIndex = 109;
             this.AddPenaltyBtn.Text = "Penalty";
-            this.AddPenaltyBtn.TextColor = System.Drawing.Color.White;
-            this.AddPenaltyBtn.TextOffset = 5;
+            this.AddPenaltyBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.AddPenaltyBtn.TextOffset = 20;
             this.AddPenaltyBtn.ToggleColor = System.Drawing.Color.Empty;
             this.AddPenaltyBtn.UseVisualStyleBackColor = false;
             this.AddPenaltyBtn.Click += new System.EventHandler(this.AddPenaltyBtn_Click);
@@ -1472,7 +1472,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(626, 369);
+            this.label16.Location = new System.Drawing.Point(642, 369);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(174, 25);
             this.label16.TabIndex = 107;
@@ -1491,6 +1491,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(24, 14);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(355, 46);
@@ -1501,7 +1502,7 @@
             // 
             this.EditImagePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EditImagePb.Image = global::BATODA.Properties.Resources.icon_add_image;
-            this.EditImagePb.Location = new System.Drawing.Point(61, 158);
+            this.EditImagePb.Location = new System.Drawing.Point(55, 158);
             this.EditImagePb.Name = "EditImagePb";
             this.EditImagePb.Size = new System.Drawing.Size(214, 199);
             this.EditImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1512,9 +1513,9 @@
             // 
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel25.Controls.Add(this.CurrentBirthdateLbl);
-            this.panel25.Location = new System.Drawing.Point(629, 401);
+            this.panel25.Location = new System.Drawing.Point(645, 401);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(304, 41);
+            this.panel25.Size = new System.Drawing.Size(298, 41);
             this.panel25.TabIndex = 100;
             // 
             // CurrentBirthdateLbl
@@ -1532,9 +1533,9 @@
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.CurrentMemberTypeLbl);
-            this.panel19.Location = new System.Drawing.Point(331, 223);
+            this.panel19.Location = new System.Drawing.Point(313, 223);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(277, 41);
+            this.panel19.Size = new System.Drawing.Size(298, 41);
             this.panel19.TabIndex = 96;
             // 
             // CurrentMemberTypeLbl
@@ -1552,7 +1553,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(326, 106);
+            this.label53.Location = new System.Drawing.Point(308, 106);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(129, 25);
             this.label53.TabIndex = 83;
@@ -1562,9 +1563,9 @@
             // 
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel22.Controls.Add(this.CurrentNameLbl);
-            this.panel22.Location = new System.Drawing.Point(331, 136);
+            this.panel22.Location = new System.Drawing.Point(313, 136);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(353, 41);
+            this.panel22.Size = new System.Drawing.Size(298, 41);
             this.panel22.TabIndex = 82;
             // 
             // CurrentNameLbl
@@ -1582,9 +1583,9 @@
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.CurrentModelLbl);
-            this.panel20.Location = new System.Drawing.Point(331, 488);
+            this.panel20.Location = new System.Drawing.Point(313, 488);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(273, 41);
+            this.panel20.Size = new System.Drawing.Size(298, 41);
             this.panel20.TabIndex = 95;
             // 
             // CurrentModelLbl
@@ -1602,7 +1603,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(624, 281);
+            this.label43.Location = new System.Drawing.Point(640, 281);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(174, 25);
             this.label43.TabIndex = 99;
@@ -1612,9 +1613,9 @@
             // 
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel23.Controls.Add(this.CurrentEngineLbl);
-            this.panel23.Location = new System.Drawing.Point(629, 311);
+            this.panel23.Location = new System.Drawing.Point(645, 311);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(304, 41);
+            this.panel23.Size = new System.Drawing.Size(298, 41);
             this.panel23.TabIndex = 98;
             // 
             // CurrentEngineLbl
@@ -1632,7 +1633,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(326, 281);
+            this.label44.Location = new System.Drawing.Point(308, 281);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(184, 25);
             this.label44.TabIndex = 102;
@@ -1642,9 +1643,9 @@
             // 
             this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel26.Controls.Add(this.CurrentPlateLbl);
-            this.panel26.Location = new System.Drawing.Point(629, 223);
+            this.panel26.Location = new System.Drawing.Point(645, 223);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(304, 41);
+            this.panel26.Size = new System.Drawing.Size(298, 41);
             this.panel26.TabIndex = 88;
             // 
             // CurrentPlateLbl
@@ -1662,9 +1663,9 @@
             // 
             this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel27.Controls.Add(this.CurrentChassisLbl);
-            this.panel27.Location = new System.Drawing.Point(331, 311);
+            this.panel27.Location = new System.Drawing.Point(313, 311);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(277, 41);
+            this.panel27.Size = new System.Drawing.Size(298, 41);
             this.panel27.TabIndex = 101;
             // 
             // CurrentChassisLbl
@@ -1682,7 +1683,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(624, 192);
+            this.label50.Location = new System.Drawing.Point(640, 192);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(156, 25);
             this.label50.TabIndex = 89;
@@ -1692,7 +1693,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(326, 192);
+            this.label45.Location = new System.Drawing.Point(308, 192);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(158, 25);
             this.label45.TabIndex = 97;
@@ -1702,9 +1703,9 @@
             // 
             this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel28.Controls.Add(this.CurrentContactLbl);
-            this.panel28.Location = new System.Drawing.Point(629, 488);
+            this.panel28.Location = new System.Drawing.Point(645, 488);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(304, 41);
+            this.panel28.Size = new System.Drawing.Size(298, 41);
             this.panel28.TabIndex = 90;
             // 
             // CurrentContactLbl
@@ -1722,7 +1723,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(326, 457);
+            this.label47.Location = new System.Drawing.Point(308, 457);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(85, 25);
             this.label47.TabIndex = 94;
@@ -1732,9 +1733,9 @@
             // 
             this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel29.Controls.Add(this.CurrentBrandLbl);
-            this.panel29.Location = new System.Drawing.Point(331, 401);
+            this.panel29.Location = new System.Drawing.Point(313, 401);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(277, 41);
+            this.panel29.Size = new System.Drawing.Size(298, 41);
             this.panel29.TabIndex = 92;
             // 
             // CurrentBrandLbl
@@ -1752,7 +1753,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(326, 369);
+            this.label48.Location = new System.Drawing.Point(308, 369);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(150, 25);
             this.label48.TabIndex = 93;
@@ -1762,7 +1763,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(624, 457);
+            this.label49.Location = new System.Drawing.Point(640, 457);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(181, 25);
             this.label49.TabIndex = 91;
@@ -1770,32 +1771,32 @@
             // 
             // GoToEditPanel
             // 
-            this.GoToEditPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.GoToEditPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.GoToEditPanel.BackColor = System.Drawing.Color.White;
+            this.GoToEditPanel.BackgroundColor = System.Drawing.Color.White;
             this.GoToEditPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.GoToEditPanel.BorderRadius = 0;
-            this.GoToEditPanel.BorderSize = 0;
+            this.GoToEditPanel.BorderSize = 1;
             this.GoToEditPanel.ButtonImage = global::BATODA.Properties.Resources.edit;
             this.GoToEditPanel.FlatAppearance.BorderSize = 0;
             this.GoToEditPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoToEditPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoToEditPanel.ForeColor = System.Drawing.Color.White;
-            this.GoToEditPanel.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.GoToEditPanel.HoverColor = System.Drawing.Color.DarkRed;
+            this.GoToEditPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.GoToEditPanel.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.GoToEditPanel.HoverColor = System.Drawing.Color.LightGray;
             this.GoToEditPanel.ImageColor = System.Drawing.Color.WhiteSmoke;
-            this.GoToEditPanel.ImagePosition = new System.Drawing.Point(20, 0);
-            this.GoToEditPanel.ImageSize = new System.Drawing.Size(32, 32);
+            this.GoToEditPanel.ImagePosition = new System.Drawing.Point(40, 0);
+            this.GoToEditPanel.ImageSize = new System.Drawing.Size(24, 24);
             this.GoToEditPanel.IsToggled = false;
-            this.GoToEditPanel.Location = new System.Drawing.Point(63, 373);
+            this.GoToEditPanel.Location = new System.Drawing.Point(57, 373);
             this.GoToEditPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GoToEditPanel.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.GoToEditPanel.MouseDownColor = System.Drawing.Color.White;
             this.GoToEditPanel.Name = "GoToEditPanel";
             this.GoToEditPanel.PaddingX = 0;
             this.GoToEditPanel.PaddingY = 0;
             this.GoToEditPanel.Size = new System.Drawing.Size(212, 43);
             this.GoToEditPanel.TabIndex = 36;
             this.GoToEditPanel.Text = "Edit Member";
-            this.GoToEditPanel.TextColor = System.Drawing.Color.White;
+            this.GoToEditPanel.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.GoToEditPanel.TextOffset = 5;
             this.GoToEditPanel.ToggleColor = System.Drawing.Color.Empty;
             this.GoToEditPanel.UseVisualStyleBackColor = false;
@@ -1803,33 +1804,33 @@
             // 
             // CloseBtn
             // 
-            this.CloseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CloseBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseBtn.BackColor = System.Drawing.Color.White;
+            this.CloseBtn.BackgroundColor = System.Drawing.Color.White;
             this.CloseBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CloseBtn.BorderRadius = 0;
-            this.CloseBtn.BorderSize = 0;
+            this.CloseBtn.BorderSize = 1;
             this.CloseBtn.ButtonImage = global::BATODA.Properties.Resources.exit;
             this.CloseBtn.FlatAppearance.BorderSize = 0;
             this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseBtn.ForeColor = System.Drawing.Color.White;
-            this.CloseBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CloseBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.CloseBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseBtn.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseBtn.HoverColor = System.Drawing.Color.LightGray;
             this.CloseBtn.ImageColor = System.Drawing.Color.Black;
-            this.CloseBtn.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CloseBtn.ImageSize = new System.Drawing.Size(32, 32);
+            this.CloseBtn.ImagePosition = new System.Drawing.Point(40, 0);
+            this.CloseBtn.ImageSize = new System.Drawing.Size(20, 20);
             this.CloseBtn.IsToggled = false;
-            this.CloseBtn.Location = new System.Drawing.Point(63, 476);
+            this.CloseBtn.Location = new System.Drawing.Point(57, 476);
             this.CloseBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CloseBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseBtn.MouseDownColor = System.Drawing.Color.White;
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.PaddingX = 0;
             this.CloseBtn.PaddingY = 0;
             this.CloseBtn.Size = new System.Drawing.Size(212, 43);
             this.CloseBtn.TabIndex = 35;
             this.CloseBtn.Text = "Cancel";
-            this.CloseBtn.TextColor = System.Drawing.Color.White;
-            this.CloseBtn.TextOffset = 5;
+            this.CloseBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CloseBtn.TextOffset = 20;
             this.CloseBtn.ToggleColor = System.Drawing.Color.Empty;
             this.CloseBtn.UseVisualStyleBackColor = false;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
@@ -1840,13 +1841,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.AddMemberPanel);
             this.Controls.Add(this.ViewMemberInfoPanel);
+            this.Controls.Add(this.MembersTopPanel);
+            this.Controls.Add(this.AddMemberPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.MembersTopPanel);
             this.Controls.Add(this.panel5);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
