@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
 using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Member_Module.Member_Classes;
+using BATODA.UI_Displays;
 using Word = Microsoft.Office.Interop.Word;
-using System.Windows.Forms;
 
 namespace BATODA
 {
     public partial class TransferRecordMemberUForm : UserControl
     {
+        private int currentRow = 0;
         public TransferRecordMemberUForm()
         {
             InitializeComponent();
-            
+
         }
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
@@ -46,62 +49,107 @@ namespace BATODA
             DataGridColumns.LoadMembershipTransferHistoryToGrid(TransferMembershipHistoryGrid, table);
         }
 
-        /* WOP - NOT FINAL */
         private void ApplyFilterBtn_Click(object sender, EventArgs e)
         {
-            var wordApp = new Word.Application();
-            var doc = wordApp.Documents.Add();
-
-            Word.Paragraph title = doc.Content.Paragraphs.Add();
-            title.Range.Text = "Membership Transfer Report";
-            title.Range.Font.Size = 16;
-            title.Range.Font.Bold = 1;
-            title.Range.InsertParagraphAfter();
-
-            Word.Paragraph para = doc.Content.Paragraphs.Add();
-            para.Range.Text = "Generated on: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm");
-            para.Range.Font.Size = 12;
-            para.Range.Font.Bold = 0;
-            para.Range.InsertParagraphAfter();
-
-            int rowCount = TransferMembershipHistoryGrid.Rows.Count + 1;
-            int colCount = TransferMembershipHistoryGrid.Columns.Count;
-
-            Word.Table table = doc.Tables.Add(doc.Range(0, 0), rowCount, colCount);
-            table.Borders.Enable = 1; 
-            table.AutoFitBehavior(Word.WdAutoFitBehavior.wdAutoFitWindow); 
-
-            for (int c = 0; c < colCount; c++)
+            if (TransferMembershipHistoryGrid.Rows.Count == 0)
             {
-                var cellRange = table.Cell(1, c + 1).Range;
-                cellRange.Text = TransferMembershipHistoryGrid.Columns[c].HeaderText;
-                cellRange.Bold = 1;
-                cellRange.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
+                ToastManager.Warning("No transfer record data to print.");
+                return;
             }
 
-            for (int r = 0; r < TransferMembershipHistoryGrid.Rows.Count; r++)
+            try
             {
-                for (int c = 0; c < colCount; c++)
+                currentRow = 0;
+                PrintDocument printDoc = new PrintDocument();
+                printDoc.DefaultPageSettings.Landscape = true;
+                printDoc.PrintPage += PrintDoc_PrintPage;
+
+                PrintPreviewDialog previewDialog = new PrintPreviewDialog
                 {
-                    var cellText = TransferMembershipHistoryGrid.Rows[r].Cells[c].Value?.ToString() ?? "";
-                    var cellRange = table.Cell(r + 2, c + 1).Range;
-                    cellRange.Text = cellText;
-                    cellRange.Bold = 0; 
-                    cellRange.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphJustify;
+                    Document = printDoc,
+                    Width = 1000,
+                    Height = 800
+                };
+
+                previewDialog.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                ToastManager.Error($"Failed to print transfer records: {ex.Message}");
+            }
+        }
+        private void PrintDoc_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Font titleFont = new Font("Arial", 18, FontStyle.Bold);
+            Font dateFont = new Font("Arial", 10, FontStyle.Regular);
+            Font headerFont = new Font("Arial", 10, FontStyle.Bold);
+            Font rowFont = new Font("Arial", 10, FontStyle.Regular);
+
+            int leftMargin = e.MarginBounds.Left;
+            int topMargin = e.MarginBounds.Top;
+            int rowHeight = 25;
+            int yPos = topMargin;
+
+            // Title
+            string title = "BAMBANG TODA - Transfer Records";
+            SizeF titleSize = e.Graphics.MeasureString(title, titleFont);
+            e.Graphics.DrawString(title, titleFont, Brushes.Black,
+                e.MarginBounds.Left + (e.MarginBounds.Width - titleSize.Width) / 2, yPos);
+            yPos += (int)titleSize.Height + 10;
+
+            // Print Date
+            string printDate = $"Print Date: {DateTime.Now:MMMM dd, yyyy}";
+            SizeF dateSize = e.Graphics.MeasureString(printDate, dateFont);
+            e.Graphics.DrawString(printDate, dateFont, Brushes.Black,
+                e.MarginBounds.Right - dateSize.Width, topMargin);
+            yPos += 20;
+
+            // Column headers
+            int columnCount = TransferMembershipHistoryGrid.Columns.Count;
+            int totalWidth = e.MarginBounds.Width;
+            int columnWidth = totalWidth / columnCount;
+            int[] columnWidths = new int[columnCount];
+            for (int i = 0; i < columnCount; i++)
+                columnWidths[i] = columnWidth;
+
+            int xPos = leftMargin;
+            for (int i = 0; i < columnCount; i++)
+            {
+                e.Graphics.DrawRectangle(Pens.Black, xPos, yPos, columnWidths[i], rowHeight);
+                e.Graphics.DrawString(TransferMembershipHistoryGrid.Columns[i].HeaderText, headerFont, Brushes.Black,
+                    new RectangleF(xPos, yPos, columnWidths[i], rowHeight),
+                    new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                xPos += columnWidths[i];
+            }
+            yPos += rowHeight;
+
+            while (currentRow < TransferMembershipHistoryGrid.Rows.Count)
+            {
+                DataGridViewRow row = TransferMembershipHistoryGrid.Rows[currentRow];
+                if (row.IsNewRow) { currentRow++; continue; }
+
+                xPos = leftMargin;
+                for (int i = 0; i < columnCount; i++)
+                {
+                    e.Graphics.DrawRectangle(Pens.Black, xPos, yPos, columnWidths[i], rowHeight);
+                    string cellText = row.Cells[i].Value?.ToString() ?? "";
+                    e.Graphics.DrawString(cellText, rowFont, Brushes.Black,
+                        new RectangleF(xPos, yPos, columnWidths[i], rowHeight),
+                        new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                    xPos += columnWidths[i];
+                }
+
+                yPos += rowHeight;
+                currentRow++;
+
+                if (yPos + rowHeight > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true;
+                    return;
                 }
             }
 
-            wordApp.Visible = true;
-
-            SaveFileDialog saveDialog = new SaveFileDialog();
-            saveDialog.Filter = "Word Document (*.docx)|*.docx";
-            saveDialog.FileName = "MembershipTransferReport.docx";
-
-            if (saveDialog.ShowDialog() == DialogResult.OK)
-            {
-                doc.SaveAs2(saveDialog.FileName);
-                MessageBox.Show("Document saved successfully!");
-            }
+            e.HasMorePages = false;
         }
     }
 }

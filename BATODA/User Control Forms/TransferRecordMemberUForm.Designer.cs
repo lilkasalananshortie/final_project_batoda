@@ -33,11 +33,11 @@
             this.TransferRecordsButton = new BATODA.ButtonStyle();
             this.ManageMembersButton = new BATODA.ButtonStyle();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.ApplyFilterBtn = new BATODA.ButtonStyle();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.TransferMembershipHistoryGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ApplyFilterBtn = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -169,6 +169,39 @@
             this.panel7.Size = new System.Drawing.Size(1585, 75);
             this.panel7.TabIndex = 47;
             // 
+            // ApplyFilterBtn
+            // 
+            this.ApplyFilterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyFilterBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyFilterBtn.BorderColor = System.Drawing.Color.Red;
+            this.ApplyFilterBtn.BorderRadius = 0;
+            this.ApplyFilterBtn.BorderSize = 0;
+            this.ApplyFilterBtn.ButtonImage = null;
+            this.ApplyFilterBtn.FlatAppearance.BorderSize = 0;
+            this.ApplyFilterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ApplyFilterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApplyFilterBtn.ForeColor = System.Drawing.Color.White;
+            this.ApplyFilterBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.ApplyFilterBtn.HoverColor = System.Drawing.Color.DarkRed;
+            this.ApplyFilterBtn.ImageColor = System.Drawing.Color.Black;
+            this.ApplyFilterBtn.ImagePosition = new System.Drawing.Point(10, 8);
+            this.ApplyFilterBtn.ImageSize = new System.Drawing.Size(24, 24);
+            this.ApplyFilterBtn.IsToggled = false;
+            this.ApplyFilterBtn.Location = new System.Drawing.Point(1459, 21);
+            this.ApplyFilterBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ApplyFilterBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyFilterBtn.Name = "ApplyFilterBtn";
+            this.ApplyFilterBtn.PaddingX = 0;
+            this.ApplyFilterBtn.PaddingY = 0;
+            this.ApplyFilterBtn.Size = new System.Drawing.Size(98, 33);
+            this.ApplyFilterBtn.TabIndex = 53;
+            this.ApplyFilterBtn.Text = "Print";
+            this.ApplyFilterBtn.TextColor = System.Drawing.Color.White;
+            this.ApplyFilterBtn.TextOffset = 20;
+            this.ApplyFilterBtn.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.ApplyFilterBtn.UseVisualStyleBackColor = false;
+            this.ApplyFilterBtn.Click += new System.EventHandler(this.ApplyFilterBtn_Click);
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::BATODA.Properties.Resources.history;
@@ -205,39 +238,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1585, 810);
             this.panel1.TabIndex = 20;
-            // 
-            // ApplyFilterBtn
-            // 
-            this.ApplyFilterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyFilterBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyFilterBtn.BorderColor = System.Drawing.Color.Red;
-            this.ApplyFilterBtn.BorderRadius = 0;
-            this.ApplyFilterBtn.BorderSize = 0;
-            this.ApplyFilterBtn.ButtonImage = null;
-            this.ApplyFilterBtn.FlatAppearance.BorderSize = 0;
-            this.ApplyFilterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyFilterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyFilterBtn.ForeColor = System.Drawing.Color.White;
-            this.ApplyFilterBtn.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplyFilterBtn.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplyFilterBtn.ImageColor = System.Drawing.Color.Black;
-            this.ApplyFilterBtn.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplyFilterBtn.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplyFilterBtn.IsToggled = false;
-            this.ApplyFilterBtn.Location = new System.Drawing.Point(1459, 21);
-            this.ApplyFilterBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplyFilterBtn.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyFilterBtn.Name = "ApplyFilterBtn";
-            this.ApplyFilterBtn.PaddingX = 0;
-            this.ApplyFilterBtn.PaddingY = 0;
-            this.ApplyFilterBtn.Size = new System.Drawing.Size(98, 33);
-            this.ApplyFilterBtn.TabIndex = 53;
-            this.ApplyFilterBtn.Text = "Apply";
-            this.ApplyFilterBtn.TextColor = System.Drawing.Color.White;
-            this.ApplyFilterBtn.TextOffset = 20;
-            this.ApplyFilterBtn.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyFilterBtn.UseVisualStyleBackColor = false;
-            this.ApplyFilterBtn.Click += new System.EventHandler(this.ApplyFilterBtn_Click);
             // 
             // TransferRecordMemberUForm
             // 
