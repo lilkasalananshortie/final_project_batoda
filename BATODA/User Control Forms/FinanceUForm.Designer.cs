@@ -82,9 +82,9 @@
             this.MembershipRenewalButton = new BATODA.ButtonStyle();
             this.RenewalHistoryButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
-            this.MassChangeButton = new BATODA.ButtonStyle();
             this.CancelStateButton = new BATODA.ButtonStyle();
             this.SaveStateButton = new BATODA.ButtonStyle();
+            this.MassChangeButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.RenewSelectedPanelHolder.SuspendLayout();
@@ -471,9 +471,9 @@
             this.MassChangeSelectionPanel.Controls.Add(this.ConfirmSave);
             this.MassChangeSelectionPanel.Controls.Add(this.MassSelectGrid);
             this.MassChangeSelectionPanel.Controls.Add(this.MultiPreviewGrid);
-            this.MassChangeSelectionPanel.Location = new System.Drawing.Point(519, 393);
+            this.MassChangeSelectionPanel.Location = new System.Drawing.Point(519, 299);
             this.MassChangeSelectionPanel.Name = "MassChangeSelectionPanel";
-            this.MassChangeSelectionPanel.Size = new System.Drawing.Size(575, 514);
+            this.MassChangeSelectionPanel.Size = new System.Drawing.Size(575, 608);
             this.MassChangeSelectionPanel.TabIndex = 53;
             // 
             // AssignmentLbl
@@ -563,7 +563,7 @@
             this.MassSelectGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MassSelectGrid.Location = new System.Drawing.Point(16, 100);
             this.MassSelectGrid.Name = "MassSelectGrid";
-            this.MassSelectGrid.Size = new System.Drawing.Size(525, 630);
+            this.MassSelectGrid.Size = new System.Drawing.Size(527, 630);
             this.MassSelectGrid.TabIndex = 0;
             // 
             // MultiPreviewGrid
@@ -586,9 +586,9 @@
             this.ViewReceiptPanel.Controls.Add(this.PrintButton);
             this.ViewReceiptPanel.Controls.Add(this.CloseReceipt);
             this.ViewReceiptPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ViewReceiptPanel.Location = new System.Drawing.Point(1576, 0);
+            this.ViewReceiptPanel.Location = new System.Drawing.Point(1254, 0);
             this.ViewReceiptPanel.Name = "ViewReceiptPanel";
-            this.ViewReceiptPanel.Size = new System.Drawing.Size(265, 972);
+            this.ViewReceiptPanel.Size = new System.Drawing.Size(587, 972);
             this.ViewReceiptPanel.TabIndex = 54;
             // 
             // panel8
@@ -598,7 +598,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(263, 67);
+            this.panel8.Size = new System.Drawing.Size(585, 67);
             this.panel8.TabIndex = 96;
             // 
             // label20
@@ -942,39 +942,6 @@
             this.FinanceButton.ToggleColor = System.Drawing.Color.LightGray;
             this.FinanceButton.UseVisualStyleBackColor = false;
             // 
-            // MassChangeButton
-            // 
-            this.MassChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.BorderColor = System.Drawing.Color.Red;
-            this.MassChangeButton.BorderRadius = 0;
-            this.MassChangeButton.BorderSize = 0;
-            this.MassChangeButton.ButtonImage = null;
-            this.MassChangeButton.FlatAppearance.BorderSize = 0;
-            this.MassChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MassChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MassChangeButton.ForeColor = System.Drawing.Color.White;
-            this.MassChangeButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.MassChangeButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.MassChangeButton.ImageColor = System.Drawing.Color.Black;
-            this.MassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.MassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.MassChangeButton.IsToggled = false;
-            this.MassChangeButton.Location = new System.Drawing.Point(459, 17);
-            this.MassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.Name = "MassChangeButton";
-            this.MassChangeButton.PaddingX = 0;
-            this.MassChangeButton.PaddingY = 0;
-            this.MassChangeButton.Size = new System.Drawing.Size(137, 28);
-            this.MassChangeButton.TabIndex = 53;
-            this.MassChangeButton.Text = "Multi Selection";
-            this.MassChangeButton.TextColor = System.Drawing.Color.White;
-            this.MassChangeButton.TextOffset = 20;
-            this.MassChangeButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.UseVisualStyleBackColor = false;
-            this.MassChangeButton.Click += new System.EventHandler(this.MassChangeButton_Click);
-            // 
             // CancelStateButton
             // 
             this.CancelStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -1038,6 +1005,39 @@
             this.SaveStateButton.TextOffset = 20;
             this.SaveStateButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.SaveStateButton.UseVisualStyleBackColor = false;
+            // 
+            // MassChangeButton
+            // 
+            this.MassChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.BorderColor = System.Drawing.Color.Red;
+            this.MassChangeButton.BorderRadius = 0;
+            this.MassChangeButton.BorderSize = 0;
+            this.MassChangeButton.ButtonImage = null;
+            this.MassChangeButton.FlatAppearance.BorderSize = 0;
+            this.MassChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MassChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MassChangeButton.ForeColor = System.Drawing.Color.White;
+            this.MassChangeButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.MassChangeButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.MassChangeButton.ImageColor = System.Drawing.Color.Black;
+            this.MassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.MassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.MassChangeButton.IsToggled = false;
+            this.MassChangeButton.Location = new System.Drawing.Point(459, 17);
+            this.MassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.Name = "MassChangeButton";
+            this.MassChangeButton.PaddingX = 0;
+            this.MassChangeButton.PaddingY = 0;
+            this.MassChangeButton.Size = new System.Drawing.Size(137, 28);
+            this.MassChangeButton.TabIndex = 53;
+            this.MassChangeButton.Text = "Multi Selection";
+            this.MassChangeButton.TextColor = System.Drawing.Color.White;
+            this.MassChangeButton.TextOffset = 20;
+            this.MassChangeButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.UseVisualStyleBackColor = false;
+            this.MassChangeButton.Click += new System.EventHandler(this.MassChangeButton_Click);
             // 
             // FinanceUForm
             // 

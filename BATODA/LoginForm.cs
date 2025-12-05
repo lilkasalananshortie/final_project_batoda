@@ -41,35 +41,35 @@ namespace BATODA
 
         private void LoginButton_Click_1(object sender, EventArgs e)
         {
-            //string username = UsernameTextBox.Text.Trim();
-            //string password = PasswordTextBox.Text.Trim();
+            string username = UsernameTextBox.Text.Trim();
+            string password = PasswordTextBox.Text.Trim();
 
-            //LoginRepository repo = new LoginRepository();
+            LoginRepository repo = new LoginRepository();
 
-            //try
-            //{
-            //    if (repo.VerifyLogin(username, password))
-            //    {
-                   
-            //    }
-            //    else
-            //    {
-            //        ToastManager.Error("Invalid username or password!");
-            //        PasswordTextBox.Clear();
-            //        PasswordTextBox.Focus();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    ToastManager.Error(ex.Message);
-            //}
-
-            DashboardForm DashBoardform = new DashboardForm();
-            DashBoardform.Show();
-
-            ToastManager.Success("Login Successful!");
-            this.Hide();
+            try
+            {
+                if (repo.VerifyLogin(username, password))
+                {
+                    DashboardForm DashBoardform = new DashboardForm();
+                    DashBoardform.Show();
+                    ToastManager.Success("Login Successful!");
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    PasswordTextBox.Clear();
+                    PasswordTextBox.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PasswordTextBox.Clear();
+                PasswordTextBox.Focus();
+            }
         }
+
 
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)

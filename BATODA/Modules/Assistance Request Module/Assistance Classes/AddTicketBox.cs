@@ -25,7 +25,6 @@ public class AddTicketBox
         parentForm = parent;
     }
 
-
     public void CreateTicketBox(
         string trackingNumber,
         string fullName,

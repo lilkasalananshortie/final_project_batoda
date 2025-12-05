@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
+using BATODA.Modules.Tricycle_Module.Tricycle_Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.DataGrids;
-using BATODA.Modules.Tricycle_Module.Tricycle_Classes;
 
 namespace BATODA
 {
@@ -98,6 +99,10 @@ namespace BATODA
                 string fullName = $"{FirstNameLbl.Text} {MiddleLbl.Text}. {LastNameLbl.Text}";
                 string processType = "Tricycle Transfer";
                 string reason = TricTransReasonCmb.Text;
+
+                var logRepo = new SystemActivityLogRepository();
+                logRepo.LogTransferVehicle(int.Parse(BodyNumberLbl.Text));
+
 
                 repo.SaveTricycleTransferHistory(
                     int.Parse(BodyNumberLbl.Text),

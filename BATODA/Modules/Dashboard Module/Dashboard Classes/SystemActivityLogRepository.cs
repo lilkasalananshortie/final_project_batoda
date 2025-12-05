@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+
 
 namespace BATODA.Modules.Dashboard_Module.Dashboard_Classes
 {
@@ -31,6 +33,8 @@ namespace BATODA.Modules.Dashboard_Module.Dashboard_Classes
                 cmd.ExecuteNonQuery();
             }
         }
+
+
 
         // MEMBER MODULE
         public void LogAddMember(string memberFullName)
@@ -97,10 +101,40 @@ namespace BATODA.Modules.Dashboard_Module.Dashboard_Classes
             string moduleName = "Assistance Request";
             string actionType = "Release of Financial Request";
             string description = $"Financial Request of T-{ticketID} has been released";
-
             AddLog(moduleName, actionType, description);
         }
 
+        public void LogEditVehicle(int bodyNumber)
+        {
+            AddLog(
+                moduleName: "Registered Vehicle",
+                actionType: "Edit Vehicle Information",
+                description: $"Body No. {bodyNumber} Edited Vehicle Information"
+            );
+        }
+
+        public void LogTransferVehicle(int bodyNumber)
+        {
+            AddLog(
+                moduleName: "Registered Vehicle",
+                actionType: "Transfer",
+                description: $"Body No. {bodyNumber} transferred to new vehicle"
+            );
+        }
+
+
+        public DataTable GetAllLogs()
+        {
+            string query = @"SELECT ModuleName, ActionType, Description, DateRecorded FROM SystemActivityLog ORDER BY DateRecorded DESC";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(query, conn))
+            {
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
 
     }
 }

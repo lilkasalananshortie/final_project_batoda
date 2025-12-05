@@ -1,4 +1,9 @@
-﻿using System;
+﻿using BATODA.Helpers.Database.Tricycle;
+using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
+using BATODA.Modules.Tricycle_Module.Tricycle_Classes;
+using BATODA.UI_Displays;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +13,6 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.Database.Tricycle;
-using BATODA.Helpers.DataGrids;
-using BATODA.Modules.Tricycle_Module.Tricycle_Classes;
-using BATODA.UI_Displays;
 
 namespace BATODA
 {
@@ -267,6 +268,9 @@ namespace BATODA
                 ChassisTxt.Text,
                 EngineTxt.Text
             );
+
+            var logRepo = new SystemActivityLogRepository();
+            logRepo.LogEditVehicle(bodyNumber);
 
             EditTrycPanel.Hide();
             LoadTricycleGrid();

@@ -1,5 +1,6 @@
 ﻿using BATODA.Helpers.DataGrid;
 using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.Modules.MemberModule;
 using BATODA.Modules.Schedule_Module;
 using BATODA.Repositories;
@@ -271,6 +272,14 @@ namespace BATODA
 
                     CalendarHandler.AddEventToOverview(newEvent, EventsOverviewFlowLayoutPanel, EventPanel_DoubleClick, EventPanel_Click, EventPanelWidth, EventPanelHeight, EventPanelMargin);
                     AddEventToDayCell(newEvent);
+
+                    var logRepo = new SystemActivityLogRepository();
+                    logRepo.AddLog(
+                        moduleName: "Schedule",
+                        actionType: "Added new event",
+                        description: $"New event '{title}' has been added on {selectedDate:yyyy-MM-dd} at {time}"
+                    );
+
                 }
             }
 

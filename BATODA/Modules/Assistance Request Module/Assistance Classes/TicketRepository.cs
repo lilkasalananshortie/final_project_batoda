@@ -164,11 +164,11 @@ namespace BATODA.Modules.Assistance_Request_Module
             {
                 conn.Open();
                 string query = @"
-        SELECT * 
-        FROM FinancialAssistanceRequests
-        WHERE RequestStatus IN ('Pending','Approved')
-          AND IsActive = 1
-        ORDER BY BodyNumber";
+                SELECT * 
+                FROM FinancialAssistanceRequests
+                WHERE RequestStatus IN ('Pending','Approved')
+                  AND IsActive = 1
+                ORDER BY BodyNumber";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 using (SqlDataReader reader = cmd.ExecuteReader())
