@@ -146,8 +146,6 @@ namespace BATODA.Helpers.DataGrid
 
         }
 
-
-
         public static void EnsureYearRecords(int year)
         {
             var repo = new TaxRepository();

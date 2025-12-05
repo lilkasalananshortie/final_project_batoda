@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using BATODA.Modules.Finance_Module.Finance_Classes;
+
 
 namespace BATODA.Helpers.Data
 {
@@ -37,6 +39,70 @@ namespace BATODA.Helpers.Data
 
             return list;
         }
+
+        public List<int> GetDistinctPaymentYears()
+        {
+            List<int> years = new List<int>();
+            using (var conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand("SELECT DISTINCT Year FROM MemberPayment ORDER BY Year", conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                        years.Add(reader.GetInt32(0));
+                }
+            }
+            return years;
+        }
+
+
+        private string GetPaymentStatus(int bodyNumber, int year, int month)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT Status FROM MemberPayment WHERE BodyNumber=@BodyNumber AND Year=@Year AND Month=@Month";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
+                cmd.Parameters.AddWithValue("@Year", year);
+                cmd.Parameters.AddWithValue("@Month", month);
+
+                var result = cmd.ExecuteScalar();
+                return result != null ? result.ToString() : "Due";
+            }
+        }
+
+
+        public List<MemberPaymentModel> GetAllMemberPayments(int year)
+        {
+            var payments = new List<MemberPaymentModel>();
+            var members = GetAllMembers(); // Returns List<(int BodyNumber, string FullName)>
+
+            foreach (var member in members)
+            {
+                payments.Add(new MemberPaymentModel
+                {
+                    BodyNumber = member.Item1,  // tuple Item1 = BodyNumber
+                    FullName = member.Item2,    // tuple Item2 = FullName
+                    January = GetPaymentStatus(member.Item1, year, 1),
+                    February = GetPaymentStatus(member.Item1, year, 2),
+                    March = GetPaymentStatus(member.Item1, year, 3),
+                    April = GetPaymentStatus(member.Item1, year, 4),
+                    May = GetPaymentStatus(member.Item1, year, 5),
+                    June = GetPaymentStatus(member.Item1, year, 6),
+                    July = GetPaymentStatus(member.Item1, year, 7),
+                    August = GetPaymentStatus(member.Item1, year, 8),
+                    September = GetPaymentStatus(member.Item1, year, 9),
+                    October = GetPaymentStatus(member.Item1, year, 10),
+                    November = GetPaymentStatus(member.Item1, year, 11),
+                    December = GetPaymentStatus(member.Item1, year, 12)
+                });
+            }
+
+            return payments;
+        }
+
 
         public List<(int BodyNumber, int Month, string Status, decimal Amount, DateTime? PaymentDate)> GetPaymentsByYear(int year)
         {
@@ -148,28 +214,41 @@ namespace BATODA.Helpers.Data
                 }
                 if (paymentId != null)
                 {
-                    string updateQuery = "UPDATE MemberPayment SET Status=@Status, PaymentDate=@Date WHERE PaymentID=@PaymentID";
+                    string updateQuery = @"
+                    UPDATE MemberPayment 
+                    SET Status=@Status, 
+                        PaymentDate=@Date, 
+                        Amount=@Amount
+                    WHERE PaymentID=@PaymentID";
+
                     SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
                     updateCmd.Parameters.AddWithValue("@Status", dbStatus);
-
-                    // Set PaymentDate only if Paid, otherwise NULL
                     updateCmd.Parameters.AddWithValue("@Date", dbStatus == "Paid" ? (object)DateTime.Today : DBNull.Value);
-
+                    updateCmd.Parameters.AddWithValue("@Amount", amount); // ← THIS IS THE FIX
                     updateCmd.Parameters.AddWithValue("@PaymentID", paymentId);
+
                     updateCmd.ExecuteNonQuery();
                 }
+
                 else
                 {
-                    string insertQuery = "INSERT INTO MemberPayment (BodyNumber, Year, Month, Amount, Status, PaymentDate) VALUES (@BodyNumber, @Year, @Month, @Amount, @Status, @Date)";
+                    string insertQuery = @"
+                INSERT INTO MemberPayment 
+                    (BodyNumber, Year, Month, Amount, Status, PaymentDate) 
+                VALUES 
+                    (@BodyNumber, @Year, @Month, @Amount, @Status, @Date)";
+
                     SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
                     insertCmd.Parameters.AddWithValue("@BodyNumber", bodyNumber);
                     insertCmd.Parameters.AddWithValue("@Year", year);
                     insertCmd.Parameters.AddWithValue("@Month", month);
                     insertCmd.Parameters.AddWithValue("@Amount", amount);
                     insertCmd.Parameters.AddWithValue("@Status", dbStatus);
+
                     insertCmd.Parameters.AddWithValue("@Date", dbStatus == "Paid" ? (object)DateTime.Today : DBNull.Value);
                     insertCmd.ExecuteNonQuery();
                 }
+
 
 
             }
@@ -342,5 +421,77 @@ namespace BATODA.Helpers.Data
             return list;
         }
 
+        public decimal GetYearTotal(int year)
+        {
+            decimal total = 0;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+                    SELECT ISNULL(SUM(Amount),0)
+                    FROM MemberPayment
+                    WHERE Year=@Year AND Status='Paid'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Year", year);
+                total = (decimal)cmd.ExecuteScalar();
+            }
+            return total;
+        }
+
+        public decimal GetMonthTotal(int year, int month)
+        {
+            decimal total = 0;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+                    SELECT ISNULL(SUM(Amount),0)
+                    FROM MemberPayment
+                    WHERE Year=@Year AND Month=@Month AND Status='Paid'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Year", year);
+                cmd.Parameters.AddWithValue("@Month", month);
+                total = (decimal)cmd.ExecuteScalar();
+            }
+            return total;
+        }
+
+        public decimal GetPaidTodayTotal()
+        {
+            decimal total = 0;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+                    SELECT ISNULL(SUM(Amount),0)
+                    FROM MemberPayment
+                    WHERE Status='Paid' AND PaymentDate = CAST(GETDATE() AS DATE)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                total = (decimal)cmd.ExecuteScalar();
+            }
+            return total;
+        }
+
+        public decimal GetOverdueLastMonthTotal()
+        {
+            decimal total = 0;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                int lastMonth = DateTime.Today.AddMonths(-1).Month;
+                int year = DateTime.Today.AddMonths(-1).Year;
+
+                string query = @"
+                    SELECT ISNULL(SUM(Amount),0)
+                    FROM MemberPayment
+                    WHERE Year=@Year AND Month=@Month AND Status='Overdue'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Year", year);
+                cmd.Parameters.AddWithValue("@Month", lastMonth);
+                total = (decimal)cmd.ExecuteScalar();
+            }
+            return total;
+
+        }
     }
 }

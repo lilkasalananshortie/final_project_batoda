@@ -29,15 +29,8 @@
         private void InitializeComponent()
         {
             this.MembersTopPanel = new System.Windows.Forms.Panel();
-            this.MembershipRenewalButton = new BATODA.ButtonStyle();
-            this.RenewalHistoryButton = new BATODA.ButtonStyle();
-            this.FinanceButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MassChangeButton = new BATODA.ButtonStyle();
             this.RenewSelectedPanelHolder = new System.Windows.Forms.Panel();
-            this.CancelStateButton = new BATODA.ButtonStyle();
-            this.SaveStateButton = new BATODA.ButtonStyle();
-            this.ApplyButton = new BATODA.ButtonStyle();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -47,18 +40,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.ClearButton = new BATODA.ButtonStyle();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ButawDataGrid = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.SortComboBox = new System.Windows.Forms.ComboBox();
-            this.YearComboBox = new System.Windows.Forms.ComboBox();
-            this.PaymentStatusComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.YearTotalLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,7 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.DueCountLbl = new System.Windows.Forms.Label();
+            this.PaidTodayLbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -76,16 +59,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.MassChangeSelectionPanel = new System.Windows.Forms.Panel();
-            this.MultiClose = new BATODA.ButtonStyle();
             this.AssignmentLbl = new System.Windows.Forms.Label();
             this.MultiMonth = new System.Windows.Forms.ComboBox();
             this.MultiYear = new System.Windows.Forms.ComboBox();
             this.MultiAction = new System.Windows.Forms.ComboBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.MultiCancel = new BATODA.ButtonStyle();
-            this.SaveMassChangeButton = new BATODA.ButtonStyle();
-            this.ConfirmSave = new BATODA.ButtonStyle();
             this.MassSelectGrid = new System.Windows.Forms.DataGridView();
             this.MultiPreviewGrid = new System.Windows.Forms.DataGridView();
             this.ViewReceiptPanel = new System.Windows.Forms.Panel();
@@ -94,8 +73,18 @@
             this.OverviewName = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.MainRecieptFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.MultiClose = new BATODA.ButtonStyle();
+            this.MultiCancel = new BATODA.ButtonStyle();
+            this.SaveMassChangeButton = new BATODA.ButtonStyle();
+            this.ConfirmSave = new BATODA.ButtonStyle();
             this.PrintButton = new BATODA.ButtonStyle();
             this.CloseReceipt = new BATODA.ButtonStyle();
+            this.MembershipRenewalButton = new BATODA.ButtonStyle();
+            this.RenewalHistoryButton = new BATODA.ButtonStyle();
+            this.FinanceButton = new BATODA.ButtonStyle();
+            this.MassChangeButton = new BATODA.ButtonStyle();
+            this.CancelStateButton = new BATODA.ButtonStyle();
+            this.SaveStateButton = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.RenewSelectedPanelHolder.SuspendLayout();
@@ -104,8 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButawDataGrid)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,162 +123,17 @@
             this.MembersTopPanel.Size = new System.Drawing.Size(1595, 62);
             this.MembersTopPanel.TabIndex = 19;
             // 
-            // MembershipRenewalButton
-            // 
-            this.MembershipRenewalButton.BackColor = System.Drawing.Color.White;
-            this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.White;
-            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.BorderRadius = 0;
-            this.MembershipRenewalButton.BorderSize = 0;
-            this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
-            this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
-            this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MembershipRenewalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MembershipRenewalButton.ForeColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.MembershipRenewalButton.HoverColor = System.Drawing.Color.Silver;
-            this.MembershipRenewalButton.ImageColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(130, 0);
-            this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.MembershipRenewalButton.IsToggled = false;
-            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 5);
-            this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MembershipRenewalButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.MembershipRenewalButton.Name = "MembershipRenewalButton";
-            this.MembershipRenewalButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.MembershipRenewalButton.PaddingX = 0;
-            this.MembershipRenewalButton.PaddingY = 0;
-            this.MembershipRenewalButton.Size = new System.Drawing.Size(525, 49);
-            this.MembershipRenewalButton.TabIndex = 21;
-            this.MembershipRenewalButton.Text = "Membership Renewal";
-            this.MembershipRenewalButton.TextColor = System.Drawing.Color.Black;
-            this.MembershipRenewalButton.TextOffset = 20;
-            this.MembershipRenewalButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.MembershipRenewalButton.UseVisualStyleBackColor = false;
-            this.MembershipRenewalButton.Click += new System.EventHandler(this.MembershipRenewalButton_Click_1);
-            // 
-            // RenewalHistoryButton
-            // 
-            this.RenewalHistoryButton.BackColor = System.Drawing.Color.White;
-            this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.White;
-            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.BorderRadius = 0;
-            this.RenewalHistoryButton.BorderSize = 0;
-            this.RenewalHistoryButton.ButtonImage = global::BATODA.Properties.Resources.history;
-            this.RenewalHistoryButton.FlatAppearance.BorderSize = 0;
-            this.RenewalHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RenewalHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RenewalHistoryButton.ForeColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.RenewalHistoryButton.HoverColor = System.Drawing.Color.Silver;
-            this.RenewalHistoryButton.ImageColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(155, 0);
-            this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.RenewalHistoryButton.IsToggled = false;
-            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 5);
-            this.RenewalHistoryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RenewalHistoryButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.RenewalHistoryButton.Name = "RenewalHistoryButton";
-            this.RenewalHistoryButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.RenewalHistoryButton.PaddingX = 0;
-            this.RenewalHistoryButton.PaddingY = 0;
-            this.RenewalHistoryButton.Size = new System.Drawing.Size(525, 49);
-            this.RenewalHistoryButton.TabIndex = 20;
-            this.RenewalHistoryButton.Text = "Renewal History";
-            this.RenewalHistoryButton.TextColor = System.Drawing.Color.Black;
-            this.RenewalHistoryButton.TextOffset = 20;
-            this.RenewalHistoryButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.RenewalHistoryButton.UseVisualStyleBackColor = false;
-            this.RenewalHistoryButton.Click += new System.EventHandler(this.RenewalHistoryButton_Click);
-            // 
-            // FinanceButton
-            // 
-            this.FinanceButton.BackColor = System.Drawing.Color.LightGray;
-            this.FinanceButton.BackgroundColor = System.Drawing.Color.LightGray;
-            this.FinanceButton.BorderColor = System.Drawing.Color.Black;
-            this.FinanceButton.BorderRadius = 0;
-            this.FinanceButton.BorderSize = 0;
-            this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
-            this.FinanceButton.FlatAppearance.BorderSize = 0;
-            this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinanceButton.ForeColor = System.Drawing.Color.Black;
-            this.FinanceButton.HoverBorderColor = System.Drawing.Color.Silver;
-            this.FinanceButton.HoverColor = System.Drawing.Color.Silver;
-            this.FinanceButton.ImageColor = System.Drawing.Color.Black;
-            this.FinanceButton.ImagePosition = new System.Drawing.Point(180, 0);
-            this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
-            this.FinanceButton.IsToggled = false;
-            this.FinanceButton.Location = new System.Drawing.Point(5, 5);
-            this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.FinanceButton.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.FinanceButton.Name = "FinanceButton";
-            this.FinanceButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.FinanceButton.PaddingX = 0;
-            this.FinanceButton.PaddingY = 0;
-            this.FinanceButton.Size = new System.Drawing.Size(525, 49);
-            this.FinanceButton.TabIndex = 19;
-            this.FinanceButton.Text = "Finance";
-            this.FinanceButton.TextColor = System.Drawing.Color.Black;
-            this.FinanceButton.TextOffset = 20;
-            this.FinanceButton.ToggleColor = System.Drawing.Color.LightGray;
-            this.FinanceButton.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.MassChangeButton);
             this.panel1.Controls.Add(this.RenewSelectedPanelHolder);
-            this.panel1.Controls.Add(this.ApplyButton);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.ClearButton);
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.ButawDataGrid);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.SortComboBox);
-            this.panel1.Controls.Add(this.YearComboBox);
-            this.panel1.Controls.Add(this.PaymentStatusComboBox);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(25, 265);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1573, 691);
             this.panel1.TabIndex = 22;
-            // 
-            // MassChangeButton
-            // 
-            this.MassChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.BorderColor = System.Drawing.Color.Red;
-            this.MassChangeButton.BorderRadius = 0;
-            this.MassChangeButton.BorderSize = 0;
-            this.MassChangeButton.ButtonImage = null;
-            this.MassChangeButton.FlatAppearance.BorderSize = 0;
-            this.MassChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MassChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MassChangeButton.ForeColor = System.Drawing.Color.White;
-            this.MassChangeButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.MassChangeButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.MassChangeButton.ImageColor = System.Drawing.Color.Black;
-            this.MassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.MassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.MassChangeButton.IsToggled = false;
-            this.MassChangeButton.Location = new System.Drawing.Point(510, 49);
-            this.MassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.Name = "MassChangeButton";
-            this.MassChangeButton.PaddingX = 0;
-            this.MassChangeButton.PaddingY = 0;
-            this.MassChangeButton.Size = new System.Drawing.Size(137, 33);
-            this.MassChangeButton.TabIndex = 53;
-            this.MassChangeButton.Text = "Multi Selection";
-            this.MassChangeButton.TextColor = System.Drawing.Color.White;
-            this.MassChangeButton.TextOffset = 20;
-            this.MassChangeButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MassChangeButton.UseVisualStyleBackColor = false;
-            this.MassChangeButton.Click += new System.EventHandler(this.MassChangeButton_Click);
             // 
             // RenewSelectedPanelHolder
             // 
@@ -302,117 +144,21 @@
             this.RenewSelectedPanelHolder.Size = new System.Drawing.Size(1520, 50);
             this.RenewSelectedPanelHolder.TabIndex = 52;
             // 
-            // CancelStateButton
-            // 
-            this.CancelStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelStateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelStateButton.BorderColor = System.Drawing.Color.Red;
-            this.CancelStateButton.BorderRadius = 0;
-            this.CancelStateButton.BorderSize = 0;
-            this.CancelStateButton.ButtonImage = null;
-            this.CancelStateButton.FlatAppearance.BorderSize = 0;
-            this.CancelStateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelStateButton.ForeColor = System.Drawing.Color.White;
-            this.CancelStateButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.CancelStateButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.CancelStateButton.ImageColor = System.Drawing.Color.Black;
-            this.CancelStateButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.CancelStateButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CancelStateButton.IsToggled = false;
-            this.CancelStateButton.Location = new System.Drawing.Point(1271, 9);
-            this.CancelStateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CancelStateButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelStateButton.Name = "CancelStateButton";
-            this.CancelStateButton.PaddingX = 0;
-            this.CancelStateButton.PaddingY = 0;
-            this.CancelStateButton.Size = new System.Drawing.Size(119, 33);
-            this.CancelStateButton.TabIndex = 54;
-            this.CancelStateButton.Text = "Cancel";
-            this.CancelStateButton.TextColor = System.Drawing.Color.White;
-            this.CancelStateButton.TextOffset = 20;
-            this.CancelStateButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CancelStateButton.UseVisualStyleBackColor = false;
-            // 
-            // SaveStateButton
-            // 
-            this.SaveStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveStateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveStateButton.BorderColor = System.Drawing.Color.Red;
-            this.SaveStateButton.BorderRadius = 0;
-            this.SaveStateButton.BorderSize = 0;
-            this.SaveStateButton.ButtonImage = null;
-            this.SaveStateButton.FlatAppearance.BorderSize = 0;
-            this.SaveStateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveStateButton.ForeColor = System.Drawing.Color.White;
-            this.SaveStateButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.SaveStateButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.SaveStateButton.ImageColor = System.Drawing.Color.Black;
-            this.SaveStateButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.SaveStateButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.SaveStateButton.IsToggled = false;
-            this.SaveStateButton.Location = new System.Drawing.Point(1398, 9);
-            this.SaveStateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SaveStateButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveStateButton.Name = "SaveStateButton";
-            this.SaveStateButton.PaddingX = 0;
-            this.SaveStateButton.PaddingY = 0;
-            this.SaveStateButton.Size = new System.Drawing.Size(111, 33);
-            this.SaveStateButton.TabIndex = 53;
-            this.SaveStateButton.Text = "Save Changes";
-            this.SaveStateButton.TextColor = System.Drawing.Color.White;
-            this.SaveStateButton.TextOffset = 20;
-            this.SaveStateButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.SaveStateButton.UseVisualStyleBackColor = false;
-            this.SaveStateButton.Click += new System.EventHandler(this.SaveStateButton_Click);
-            // 
-            // ApplyButton
-            // 
-            this.ApplyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.BorderColor = System.Drawing.Color.Red;
-            this.ApplyButton.BorderRadius = 0;
-            this.ApplyButton.BorderSize = 0;
-            this.ApplyButton.ButtonImage = null;
-            this.ApplyButton.FlatAppearance.BorderSize = 0;
-            this.ApplyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApplyButton.ForeColor = System.Drawing.Color.White;
-            this.ApplyButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ApplyButton.ImageColor = System.Drawing.Color.Black;
-            this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1433, 45);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.PaddingX = 0;
-            this.ApplyButton.PaddingY = 0;
-            this.ApplyButton.Size = new System.Drawing.Size(108, 33);
-            this.ApplyButton.TabIndex = 50;
-            this.ApplyButton.Text = "Apply Filter";
-            this.ApplyButton.TextColor = System.Drawing.Color.White;
-            this.ApplyButton.TextOffset = 20;
-            this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ApplyButton.UseVisualStyleBackColor = false;
-            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.MassChangeButton);
             this.panel7.Controls.Add(this.pictureBox10);
             this.panel7.Controls.Add(this.pictureBox9);
             this.panel7.Controls.Add(this.pictureBox8);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.SortComboBox);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(24, 93);
+            this.panel7.Location = new System.Drawing.Point(24, 19);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1520, 61);
             this.panel7.TabIndex = 46;
@@ -420,7 +166,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::BATODA.Properties.Resources.paid;
-            this.pictureBox10.Location = new System.Drawing.Point(1049, 15);
+            this.pictureBox10.Location = new System.Drawing.Point(898, 16);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(28, 28);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -430,7 +176,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::BATODA.Properties.Resources.due;
-            this.pictureBox9.Location = new System.Drawing.Point(1349, 15);
+            this.pictureBox9.Location = new System.Drawing.Point(1198, 16);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(28, 28);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -440,7 +186,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::BATODA.Properties.Resources.overdue;
-            this.pictureBox8.Location = new System.Drawing.Point(1195, 15);
+            this.pictureBox8.Location = new System.Drawing.Point(1044, 16);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(28, 28);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,7 +198,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1384, 19);
+            this.label17.Location = new System.Drawing.Point(1233, 20);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 20);
             this.label17.TabIndex = 51;
@@ -463,7 +209,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1230, 19);
+            this.label16.Location = new System.Drawing.Point(1079, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 20);
             this.label16.TabIndex = 50;
@@ -474,7 +220,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(1084, 19);
+            this.label15.Location = new System.Drawing.Point(933, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(49, 20);
             this.label15.TabIndex = 49;
@@ -500,73 +246,6 @@
             this.label7.TabIndex = 43;
             this.label7.Text = "Tax (Butaw Overview) - 2025";
             // 
-            // ClearButton
-            // 
-            this.ClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.BorderColor = System.Drawing.Color.Red;
-            this.ClearButton.BorderRadius = 0;
-            this.ClearButton.BorderSize = 0;
-            this.ClearButton.ButtonImage = null;
-            this.ClearButton.FlatAppearance.BorderSize = 0;
-            this.ClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.HoverColor = System.Drawing.Color.DarkRed;
-            this.ClearButton.ImageColor = System.Drawing.Color.Black;
-            this.ClearButton.ImagePosition = new System.Drawing.Point(10, 8);
-            this.ClearButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.ClearButton.IsToggled = false;
-            this.ClearButton.Location = new System.Drawing.Point(1324, 44);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.PaddingX = 0;
-            this.ClearButton.PaddingY = 0;
-            this.ClearButton.Size = new System.Drawing.Size(103, 33);
-            this.ClearButton.TabIndex = 51;
-            this.ClearButton.Text = "Clear";
-            this.ClearButton.TextColor = System.Drawing.Color.White;
-            this.ClearButton.TextOffset = 20;
-            this.ClearButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.ClearButton.UseVisualStyleBackColor = false;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click_1);
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.SearchTextBox);
-            this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(24, 44);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(480, 41);
-            this.panel6.TabIndex = 45;
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(42, 8);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(433, 24);
-            this.SearchTextBox.TabIndex = 28;
-            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 40;
-            this.pictureBox4.TabStop = false;
-            // 
             // ButawDataGrid
             // 
             this.ButawDataGrid.AllowUserToAddRows = false;
@@ -575,85 +254,22 @@
             this.ButawDataGrid.AllowUserToResizeRows = false;
             this.ButawDataGrid.BackgroundColor = System.Drawing.Color.DarkGray;
             this.ButawDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ButawDataGrid.Location = new System.Drawing.Point(24, 153);
+            this.ButawDataGrid.Location = new System.Drawing.Point(24, 80);
             this.ButawDataGrid.Name = "ButawDataGrid";
             this.ButawDataGrid.ReadOnly = true;
-            this.ButawDataGrid.Size = new System.Drawing.Size(1520, 523);
+            this.ButawDataGrid.Size = new System.Drawing.Size(1520, 596);
             this.ButawDataGrid.TabIndex = 44;
             this.ButawDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ButawDataGrid_CellContentClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(786, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Sort By";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1142, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 20);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Year";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(964, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 20);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Payment Status";
             // 
             // SortComboBox
             // 
             this.SortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortComboBox.FormattingEnabled = true;
-            this.SortComboBox.Location = new System.Drawing.Point(1146, 44);
+            this.SortComboBox.Location = new System.Drawing.Point(1336, 13);
             this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SortComboBox.Name = "SortComboBox";
             this.SortComboBox.Size = new System.Drawing.Size(172, 33);
             this.SortComboBox.TabIndex = 33;
-            // 
-            // YearComboBox
-            // 
-            this.YearComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearComboBox.FormattingEnabled = true;
-            this.YearComboBox.Location = new System.Drawing.Point(968, 44);
-            this.YearComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.YearComboBox.Name = "YearComboBox";
-            this.YearComboBox.Size = new System.Drawing.Size(172, 33);
-            this.YearComboBox.TabIndex = 32;
-            // 
-            // PaymentStatusComboBox
-            // 
-            this.PaymentStatusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PaymentStatusComboBox.FormattingEnabled = true;
-            this.PaymentStatusComboBox.Location = new System.Drawing.Point(790, 45);
-            this.PaymentStatusComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PaymentStatusComboBox.Name = "PaymentStatusComboBox";
-            this.PaymentStatusComboBox.Size = new System.Drawing.Size(172, 33);
-            this.PaymentStatusComboBox.TabIndex = 30;
-            this.PaymentStatusComboBox.SelectedIndexChanged += new System.EventHandler(this.PaymentStatusComboBox_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 20);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Search Member";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -672,7 +288,7 @@
             this.YearTotalLbl.AutoSize = true;
             this.YearTotalLbl.BackColor = System.Drawing.Color.Transparent;
             this.YearTotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearTotalLbl.Location = new System.Drawing.Point(68, 74);
+            this.YearTotalLbl.Location = new System.Drawing.Point(53, 74);
             this.YearTotalLbl.Name = "YearTotalLbl";
             this.YearTotalLbl.Size = new System.Drawing.Size(97, 39);
             this.YearTotalLbl.TabIndex = 48;
@@ -683,7 +299,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 28);
+            this.label1.Location = new System.Drawing.Point(26, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 24);
             this.label1.TabIndex = 47;
@@ -712,13 +328,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(350, 150);
             this.panel3.TabIndex = 24;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // MonthTotalLbl
             // 
             this.MonthTotalLbl.AutoSize = true;
             this.MonthTotalLbl.BackColor = System.Drawing.Color.Transparent;
             this.MonthTotalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthTotalLbl.Location = new System.Drawing.Point(68, 74);
+            this.MonthTotalLbl.Location = new System.Drawing.Point(58, 74);
             this.MonthTotalLbl.Name = "MonthTotalLbl";
             this.MonthTotalLbl.Size = new System.Drawing.Size(97, 39);
             this.MonthTotalLbl.TabIndex = 49;
@@ -729,11 +346,11 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(28, 28);
+            this.label8.Location = new System.Drawing.Point(17, 28);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 24);
+            this.label8.Size = new System.Drawing.Size(229, 24);
             this.label8.TabIndex = 48;
-            this.label8.Text = "Paid (This Month)";
+            this.label8.Text = "Paid Amount (This Month)";
             // 
             // pictureBox2
             // 
@@ -751,7 +368,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.DueCountLbl);
+            this.panel4.Controls.Add(this.PaidTodayLbl);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(821, 93);
@@ -759,27 +376,27 @@
             this.panel4.Size = new System.Drawing.Size(350, 150);
             this.panel4.TabIndex = 25;
             // 
-            // DueCountLbl
+            // PaidTodayLbl
             // 
-            this.DueCountLbl.AutoSize = true;
-            this.DueCountLbl.BackColor = System.Drawing.Color.Transparent;
-            this.DueCountLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DueCountLbl.Location = new System.Drawing.Point(68, 74);
-            this.DueCountLbl.Name = "DueCountLbl";
-            this.DueCountLbl.Size = new System.Drawing.Size(97, 39);
-            this.DueCountLbl.TabIndex = 49;
-            this.DueCountLbl.Text = "1000";
+            this.PaidTodayLbl.AutoSize = true;
+            this.PaidTodayLbl.BackColor = System.Drawing.Color.Transparent;
+            this.PaidTodayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaidTodayLbl.Location = new System.Drawing.Point(59, 74);
+            this.PaidTodayLbl.Name = "PaidTodayLbl";
+            this.PaidTodayLbl.Size = new System.Drawing.Size(97, 39);
+            this.PaidTodayLbl.TabIndex = 49;
+            this.PaidTodayLbl.Text = "1000";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(30, 28);
+            this.label9.Location = new System.Drawing.Point(29, 28);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(211, 24);
+            this.label9.Size = new System.Drawing.Size(188, 24);
             this.label9.TabIndex = 48;
-            this.label9.Text = "Due Count (This Month)";
+            this.label9.Text = "Paid Amount (Today)";
             // 
             // pictureBox3
             // 
@@ -810,7 +427,7 @@
             this.OverdueLbl.AutoSize = true;
             this.OverdueLbl.BackColor = System.Drawing.Color.Transparent;
             this.OverdueLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverdueLbl.Location = new System.Drawing.Point(68, 74);
+            this.OverdueLbl.Location = new System.Drawing.Point(57, 74);
             this.OverdueLbl.Name = "OverdueLbl";
             this.OverdueLbl.Size = new System.Drawing.Size(97, 39);
             this.OverdueLbl.TabIndex = 49;
@@ -821,11 +438,11 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(28, 28);
+            this.label10.Location = new System.Drawing.Point(41, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(247, 24);
+            this.label10.Size = new System.Drawing.Size(174, 48);
             this.label10.TabIndex = 48;
-            this.label10.Text = "Overdue Count (Last Month)";
+            this.label10.Text = "Overdue Members \r\n    (Last Month)";
             // 
             // pictureBox6
             // 
@@ -854,43 +471,10 @@
             this.MassChangeSelectionPanel.Controls.Add(this.ConfirmSave);
             this.MassChangeSelectionPanel.Controls.Add(this.MassSelectGrid);
             this.MassChangeSelectionPanel.Controls.Add(this.MultiPreviewGrid);
-            this.MassChangeSelectionPanel.Location = new System.Drawing.Point(519, 375);
+            this.MassChangeSelectionPanel.Location = new System.Drawing.Point(519, 393);
             this.MassChangeSelectionPanel.Name = "MassChangeSelectionPanel";
-            this.MassChangeSelectionPanel.Size = new System.Drawing.Size(575, 532);
+            this.MassChangeSelectionPanel.Size = new System.Drawing.Size(575, 514);
             this.MassChangeSelectionPanel.TabIndex = 53;
-            // 
-            // MultiClose
-            // 
-            this.MultiClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MultiClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MultiClose.BorderColor = System.Drawing.Color.Red;
-            this.MultiClose.BorderRadius = 0;
-            this.MultiClose.BorderSize = 0;
-            this.MultiClose.ButtonImage = null;
-            this.MultiClose.FlatAppearance.BorderSize = 0;
-            this.MultiClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MultiClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultiClose.ForeColor = System.Drawing.Color.White;
-            this.MultiClose.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.MultiClose.HoverColor = System.Drawing.Color.DarkRed;
-            this.MultiClose.ImageColor = System.Drawing.Color.Black;
-            this.MultiClose.ImagePosition = new System.Drawing.Point(10, 8);
-            this.MultiClose.ImageSize = new System.Drawing.Size(24, 24);
-            this.MultiClose.IsToggled = false;
-            this.MultiClose.Location = new System.Drawing.Point(280, 746);
-            this.MultiClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MultiClose.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MultiClose.Name = "MultiClose";
-            this.MultiClose.PaddingX = 0;
-            this.MultiClose.PaddingY = 0;
-            this.MultiClose.Size = new System.Drawing.Size(127, 33);
-            this.MultiClose.TabIndex = 90;
-            this.MultiClose.Text = "Close";
-            this.MultiClose.TextColor = System.Drawing.Color.White;
-            this.MultiClose.TextOffset = 20;
-            this.MultiClose.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.MultiClose.UseVisualStyleBackColor = false;
-            this.MultiClose.Click += new System.EventHandler(this.MultiClose_Click);
             // 
             // AssignmentLbl
             // 
@@ -973,6 +557,123 @@
             this.label19.Size = new System.Drawing.Size(303, 29);
             this.label19.TabIndex = 30;
             this.label19.Text = "Select Multiple Members";
+            // 
+            // MassSelectGrid
+            // 
+            this.MassSelectGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MassSelectGrid.Location = new System.Drawing.Point(16, 100);
+            this.MassSelectGrid.Name = "MassSelectGrid";
+            this.MassSelectGrid.Size = new System.Drawing.Size(525, 630);
+            this.MassSelectGrid.TabIndex = 0;
+            // 
+            // MultiPreviewGrid
+            // 
+            this.MultiPreviewGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MultiPreviewGrid.Location = new System.Drawing.Point(16, 60);
+            this.MultiPreviewGrid.Name = "MultiPreviewGrid";
+            this.MultiPreviewGrid.Size = new System.Drawing.Size(525, 670);
+            this.MultiPreviewGrid.TabIndex = 88;
+            this.MultiPreviewGrid.Visible = false;
+            // 
+            // ViewReceiptPanel
+            // 
+            this.ViewReceiptPanel.BackColor = System.Drawing.Color.White;
+            this.ViewReceiptPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ViewReceiptPanel.Controls.Add(this.panel8);
+            this.ViewReceiptPanel.Controls.Add(this.OverviewName);
+            this.ViewReceiptPanel.Controls.Add(this.label21);
+            this.ViewReceiptPanel.Controls.Add(this.MainRecieptFlowPanel);
+            this.ViewReceiptPanel.Controls.Add(this.PrintButton);
+            this.ViewReceiptPanel.Controls.Add(this.CloseReceipt);
+            this.ViewReceiptPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ViewReceiptPanel.Location = new System.Drawing.Point(1576, 0);
+            this.ViewReceiptPanel.Name = "ViewReceiptPanel";
+            this.ViewReceiptPanel.Size = new System.Drawing.Size(265, 972);
+            this.ViewReceiptPanel.TabIndex = 54;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.panel8.Controls.Add(this.label20);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(263, 67);
+            this.panel8.TabIndex = 96;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label20.Location = new System.Drawing.Point(17, 14);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(363, 37);
+            this.label20.TabIndex = 55;
+            this.label20.Text = "Tax Payment Overview";
+            // 
+            // OverviewName
+            // 
+            this.OverviewName.AutoSize = true;
+            this.OverviewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewName.ForeColor = System.Drawing.Color.Black;
+            this.OverviewName.Location = new System.Drawing.Point(99, 79);
+            this.OverviewName.Name = "OverviewName";
+            this.OverviewName.Size = new System.Drawing.Size(224, 25);
+            this.OverviewName.TabIndex = 95;
+            this.OverviewName.Text = "Mark Arone Dela Cruz";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(23, 79);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(79, 25);
+            this.label21.TabIndex = 94;
+            this.label21.Text = "Name:";
+            // 
+            // MainRecieptFlowPanel
+            // 
+            this.MainRecieptFlowPanel.BackColor = System.Drawing.Color.White;
+            this.MainRecieptFlowPanel.Location = new System.Drawing.Point(24, 111);
+            this.MainRecieptFlowPanel.Name = "MainRecieptFlowPanel";
+            this.MainRecieptFlowPanel.Size = new System.Drawing.Size(540, 779);
+            this.MainRecieptFlowPanel.TabIndex = 93;
+            // 
+            // MultiClose
+            // 
+            this.MultiClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MultiClose.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MultiClose.BorderColor = System.Drawing.Color.Red;
+            this.MultiClose.BorderRadius = 0;
+            this.MultiClose.BorderSize = 0;
+            this.MultiClose.ButtonImage = null;
+            this.MultiClose.FlatAppearance.BorderSize = 0;
+            this.MultiClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MultiClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MultiClose.ForeColor = System.Drawing.Color.White;
+            this.MultiClose.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.MultiClose.HoverColor = System.Drawing.Color.DarkRed;
+            this.MultiClose.ImageColor = System.Drawing.Color.Black;
+            this.MultiClose.ImagePosition = new System.Drawing.Point(10, 8);
+            this.MultiClose.ImageSize = new System.Drawing.Size(24, 24);
+            this.MultiClose.IsToggled = false;
+            this.MultiClose.Location = new System.Drawing.Point(280, 746);
+            this.MultiClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MultiClose.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MultiClose.Name = "MultiClose";
+            this.MultiClose.PaddingX = 0;
+            this.MultiClose.PaddingY = 0;
+            this.MultiClose.Size = new System.Drawing.Size(127, 33);
+            this.MultiClose.TabIndex = 90;
+            this.MultiClose.Text = "Close";
+            this.MultiClose.TextColor = System.Drawing.Color.White;
+            this.MultiClose.TextOffset = 20;
+            this.MultiClose.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MultiClose.UseVisualStyleBackColor = false;
+            this.MultiClose.Click += new System.EventHandler(this.MultiClose_Click);
             // 
             // MultiCancel
             // 
@@ -1075,91 +776,6 @@
             this.ConfirmSave.Visible = false;
             this.ConfirmSave.Click += new System.EventHandler(this.ConfirmSave_Click);
             // 
-            // MassSelectGrid
-            // 
-            this.MassSelectGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MassSelectGrid.Location = new System.Drawing.Point(16, 100);
-            this.MassSelectGrid.Name = "MassSelectGrid";
-            this.MassSelectGrid.Size = new System.Drawing.Size(525, 630);
-            this.MassSelectGrid.TabIndex = 0;
-            this.MassSelectGrid.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.MassSelectGrid_CellMouseDown);
-            // 
-            // MultiPreviewGrid
-            // 
-            this.MultiPreviewGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MultiPreviewGrid.Location = new System.Drawing.Point(16, 60);
-            this.MultiPreviewGrid.Name = "MultiPreviewGrid";
-            this.MultiPreviewGrid.Size = new System.Drawing.Size(525, 670);
-            this.MultiPreviewGrid.TabIndex = 88;
-            this.MultiPreviewGrid.Visible = false;
-            // 
-            // ViewReceiptPanel
-            // 
-            this.ViewReceiptPanel.BackColor = System.Drawing.Color.White;
-            this.ViewReceiptPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ViewReceiptPanel.Controls.Add(this.panel8);
-            this.ViewReceiptPanel.Controls.Add(this.OverviewName);
-            this.ViewReceiptPanel.Controls.Add(this.label21);
-            this.ViewReceiptPanel.Controls.Add(this.MainRecieptFlowPanel);
-            this.ViewReceiptPanel.Controls.Add(this.PrintButton);
-            this.ViewReceiptPanel.Controls.Add(this.CloseReceipt);
-            this.ViewReceiptPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ViewReceiptPanel.Location = new System.Drawing.Point(1459, 0);
-            this.ViewReceiptPanel.Name = "ViewReceiptPanel";
-            this.ViewReceiptPanel.Size = new System.Drawing.Size(382, 972);
-            this.ViewReceiptPanel.TabIndex = 54;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.panel8.Controls.Add(this.label20);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(380, 67);
-            this.panel8.TabIndex = 96;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label20.Location = new System.Drawing.Point(17, 14);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(363, 37);
-            this.label20.TabIndex = 55;
-            this.label20.Text = "Tax Payment Overview";
-            // 
-            // OverviewName
-            // 
-            this.OverviewName.AutoSize = true;
-            this.OverviewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewName.ForeColor = System.Drawing.Color.Black;
-            this.OverviewName.Location = new System.Drawing.Point(99, 79);
-            this.OverviewName.Name = "OverviewName";
-            this.OverviewName.Size = new System.Drawing.Size(224, 25);
-            this.OverviewName.TabIndex = 95;
-            this.OverviewName.Text = "Mark Arone Dela Cruz";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(23, 79);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(79, 25);
-            this.label21.TabIndex = 94;
-            this.label21.Text = "Name:";
-            // 
-            // MainRecieptFlowPanel
-            // 
-            this.MainRecieptFlowPanel.BackColor = System.Drawing.Color.White;
-            this.MainRecieptFlowPanel.Location = new System.Drawing.Point(24, 111);
-            this.MainRecieptFlowPanel.Name = "MainRecieptFlowPanel";
-            this.MainRecieptFlowPanel.Size = new System.Drawing.Size(540, 779);
-            this.MainRecieptFlowPanel.TabIndex = 93;
-            // 
             // PrintButton
             // 
             this.PrintButton.BackColor = System.Drawing.Color.White;
@@ -1225,6 +841,204 @@
             this.CloseReceipt.UseVisualStyleBackColor = false;
             this.CloseReceipt.Click += new System.EventHandler(this.CloseReceipt_Click);
             // 
+            // MembershipRenewalButton
+            // 
+            this.MembershipRenewalButton.BackColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BackgroundColor = System.Drawing.Color.White;
+            this.MembershipRenewalButton.BorderColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.BorderRadius = 0;
+            this.MembershipRenewalButton.BorderSize = 0;
+            this.MembershipRenewalButton.ButtonImage = global::BATODA.Properties.Resources.membership_renewal;
+            this.MembershipRenewalButton.FlatAppearance.BorderSize = 0;
+            this.MembershipRenewalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MembershipRenewalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MembershipRenewalButton.ForeColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.MembershipRenewalButton.HoverColor = System.Drawing.Color.Silver;
+            this.MembershipRenewalButton.ImageColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.ImagePosition = new System.Drawing.Point(130, 0);
+            this.MembershipRenewalButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.MembershipRenewalButton.IsToggled = false;
+            this.MembershipRenewalButton.Location = new System.Drawing.Point(535, 5);
+            this.MembershipRenewalButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MembershipRenewalButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.MembershipRenewalButton.Name = "MembershipRenewalButton";
+            this.MembershipRenewalButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.MembershipRenewalButton.PaddingX = 0;
+            this.MembershipRenewalButton.PaddingY = 0;
+            this.MembershipRenewalButton.Size = new System.Drawing.Size(525, 49);
+            this.MembershipRenewalButton.TabIndex = 21;
+            this.MembershipRenewalButton.Text = "Membership Renewal";
+            this.MembershipRenewalButton.TextColor = System.Drawing.Color.Black;
+            this.MembershipRenewalButton.TextOffset = 20;
+            this.MembershipRenewalButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.MembershipRenewalButton.UseVisualStyleBackColor = false;
+            this.MembershipRenewalButton.Click += new System.EventHandler(this.MembershipRenewalButton_Click_1);
+            // 
+            // RenewalHistoryButton
+            // 
+            this.RenewalHistoryButton.BackColor = System.Drawing.Color.White;
+            this.RenewalHistoryButton.BackgroundColor = System.Drawing.Color.White;
+            this.RenewalHistoryButton.BorderColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.BorderRadius = 0;
+            this.RenewalHistoryButton.BorderSize = 0;
+            this.RenewalHistoryButton.ButtonImage = global::BATODA.Properties.Resources.history;
+            this.RenewalHistoryButton.FlatAppearance.BorderSize = 0;
+            this.RenewalHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RenewalHistoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RenewalHistoryButton.ForeColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.RenewalHistoryButton.HoverColor = System.Drawing.Color.Silver;
+            this.RenewalHistoryButton.ImageColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.ImagePosition = new System.Drawing.Point(155, 0);
+            this.RenewalHistoryButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.RenewalHistoryButton.IsToggled = false;
+            this.RenewalHistoryButton.Location = new System.Drawing.Point(1065, 5);
+            this.RenewalHistoryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RenewalHistoryButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.RenewalHistoryButton.Name = "RenewalHistoryButton";
+            this.RenewalHistoryButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.RenewalHistoryButton.PaddingX = 0;
+            this.RenewalHistoryButton.PaddingY = 0;
+            this.RenewalHistoryButton.Size = new System.Drawing.Size(525, 49);
+            this.RenewalHistoryButton.TabIndex = 20;
+            this.RenewalHistoryButton.Text = "Renewal History";
+            this.RenewalHistoryButton.TextColor = System.Drawing.Color.Black;
+            this.RenewalHistoryButton.TextOffset = 20;
+            this.RenewalHistoryButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.RenewalHistoryButton.UseVisualStyleBackColor = false;
+            this.RenewalHistoryButton.Click += new System.EventHandler(this.RenewalHistoryButton_Click);
+            // 
+            // FinanceButton
+            // 
+            this.FinanceButton.BackColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.BackgroundColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.BorderColor = System.Drawing.Color.Black;
+            this.FinanceButton.BorderRadius = 0;
+            this.FinanceButton.BorderSize = 0;
+            this.FinanceButton.ButtonImage = global::BATODA.Properties.Resources.finance_nav_bar_icon;
+            this.FinanceButton.FlatAppearance.BorderSize = 0;
+            this.FinanceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FinanceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinanceButton.ForeColor = System.Drawing.Color.Black;
+            this.FinanceButton.HoverBorderColor = System.Drawing.Color.Silver;
+            this.FinanceButton.HoverColor = System.Drawing.Color.Silver;
+            this.FinanceButton.ImageColor = System.Drawing.Color.Black;
+            this.FinanceButton.ImagePosition = new System.Drawing.Point(180, 0);
+            this.FinanceButton.ImageSize = new System.Drawing.Size(32, 32);
+            this.FinanceButton.IsToggled = false;
+            this.FinanceButton.Location = new System.Drawing.Point(5, 5);
+            this.FinanceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FinanceButton.MouseDownColor = System.Drawing.Color.DarkGray;
+            this.FinanceButton.Name = "FinanceButton";
+            this.FinanceButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.FinanceButton.PaddingX = 0;
+            this.FinanceButton.PaddingY = 0;
+            this.FinanceButton.Size = new System.Drawing.Size(525, 49);
+            this.FinanceButton.TabIndex = 19;
+            this.FinanceButton.Text = "Finance";
+            this.FinanceButton.TextColor = System.Drawing.Color.Black;
+            this.FinanceButton.TextOffset = 20;
+            this.FinanceButton.ToggleColor = System.Drawing.Color.LightGray;
+            this.FinanceButton.UseVisualStyleBackColor = false;
+            // 
+            // MassChangeButton
+            // 
+            this.MassChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.BorderColor = System.Drawing.Color.Red;
+            this.MassChangeButton.BorderRadius = 0;
+            this.MassChangeButton.BorderSize = 0;
+            this.MassChangeButton.ButtonImage = null;
+            this.MassChangeButton.FlatAppearance.BorderSize = 0;
+            this.MassChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MassChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MassChangeButton.ForeColor = System.Drawing.Color.White;
+            this.MassChangeButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.MassChangeButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.MassChangeButton.ImageColor = System.Drawing.Color.Black;
+            this.MassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.MassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.MassChangeButton.IsToggled = false;
+            this.MassChangeButton.Location = new System.Drawing.Point(459, 17);
+            this.MassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.Name = "MassChangeButton";
+            this.MassChangeButton.PaddingX = 0;
+            this.MassChangeButton.PaddingY = 0;
+            this.MassChangeButton.Size = new System.Drawing.Size(137, 28);
+            this.MassChangeButton.TabIndex = 53;
+            this.MassChangeButton.Text = "Multi Selection";
+            this.MassChangeButton.TextColor = System.Drawing.Color.White;
+            this.MassChangeButton.TextOffset = 20;
+            this.MassChangeButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.MassChangeButton.UseVisualStyleBackColor = false;
+            this.MassChangeButton.Click += new System.EventHandler(this.MassChangeButton_Click);
+            // 
+            // CancelStateButton
+            // 
+            this.CancelStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.BorderColor = System.Drawing.Color.Red;
+            this.CancelStateButton.BorderRadius = 0;
+            this.CancelStateButton.BorderSize = 0;
+            this.CancelStateButton.ButtonImage = null;
+            this.CancelStateButton.FlatAppearance.BorderSize = 0;
+            this.CancelStateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelStateButton.ForeColor = System.Drawing.Color.White;
+            this.CancelStateButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.CancelStateButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.CancelStateButton.ImageColor = System.Drawing.Color.Black;
+            this.CancelStateButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.CancelStateButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CancelStateButton.IsToggled = false;
+            this.CancelStateButton.Location = new System.Drawing.Point(1271, 9);
+            this.CancelStateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelStateButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.Name = "CancelStateButton";
+            this.CancelStateButton.PaddingX = 0;
+            this.CancelStateButton.PaddingY = 0;
+            this.CancelStateButton.Size = new System.Drawing.Size(119, 33);
+            this.CancelStateButton.TabIndex = 54;
+            this.CancelStateButton.Text = "Cancel";
+            this.CancelStateButton.TextColor = System.Drawing.Color.White;
+            this.CancelStateButton.TextOffset = 20;
+            this.CancelStateButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.CancelStateButton.UseVisualStyleBackColor = false;
+            // 
+            // SaveStateButton
+            // 
+            this.SaveStateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.BorderColor = System.Drawing.Color.Red;
+            this.SaveStateButton.BorderRadius = 0;
+            this.SaveStateButton.BorderSize = 0;
+            this.SaveStateButton.ButtonImage = null;
+            this.SaveStateButton.FlatAppearance.BorderSize = 0;
+            this.SaveStateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveStateButton.ForeColor = System.Drawing.Color.White;
+            this.SaveStateButton.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.SaveStateButton.HoverColor = System.Drawing.Color.DarkRed;
+            this.SaveStateButton.ImageColor = System.Drawing.Color.Black;
+            this.SaveStateButton.ImagePosition = new System.Drawing.Point(10, 8);
+            this.SaveStateButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SaveStateButton.IsToggled = false;
+            this.SaveStateButton.Location = new System.Drawing.Point(1398, 9);
+            this.SaveStateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SaveStateButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.Name = "SaveStateButton";
+            this.SaveStateButton.PaddingX = 0;
+            this.SaveStateButton.PaddingY = 0;
+            this.SaveStateButton.Size = new System.Drawing.Size(111, 33);
+            this.SaveStateButton.TabIndex = 53;
+            this.SaveStateButton.Text = "Save Changes";
+            this.SaveStateButton.TextColor = System.Drawing.Color.White;
+            this.SaveStateButton.TextOffset = 20;
+            this.SaveStateButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.SaveStateButton.UseVisualStyleBackColor = false;
+            // 
             // FinanceUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1244,7 +1058,6 @@
             this.Load += new System.EventHandler(this.FinanceUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.RenewSelectedPanelHolder.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -1252,9 +1065,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButawDataGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -1292,18 +1102,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox SortComboBox;
-        private System.Windows.Forms.ComboBox YearComboBox;
-        private System.Windows.Forms.ComboBox PaymentStatusComboBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView ButawDataGrid;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
@@ -1313,7 +1114,7 @@
         private System.Windows.Forms.Label YearTotalLbl;
         private System.Windows.Forms.Label MonthTotalLbl;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label DueCountLbl;
+        private System.Windows.Forms.Label PaidTodayLbl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label OverdueLbl;
         private System.Windows.Forms.Label label10;
@@ -1324,8 +1125,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private ButtonStyle ApplyButton;
-        private ButtonStyle ClearButton;
         private System.Windows.Forms.Panel RenewSelectedPanelHolder;
         private ButtonStyle CancelStateButton;
         private ButtonStyle SaveStateButton;

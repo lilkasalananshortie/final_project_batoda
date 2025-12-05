@@ -43,6 +43,7 @@ namespace BATODA
             ticketHelper.LoadActivityLogs();
         }
 
+
         public void UpdateRequestCounts()
         {
             TotalReqLbl.Text = AssistanceSummary.GetTotalTickets().ToString();

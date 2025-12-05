@@ -106,6 +106,7 @@
     <Compile Include="Modules\Dashboard Module\Dashboard Classes\SystemActivityLogRepository.cs" />
     <Compile Include="Modules\FareMatrix Classes\FareMatrixModel.cs" />
     <Compile Include="Modules\FareMatrix Classes\FareMatrixRepository.cs" />
+    <Compile Include="Modules\Finance Module\Finance Classes\MemberPaymentModel.cs" />
     <Compile Include="Modules\Finance Module\Finance Classes\TaxRepository.cs" />
     <Compile Include="Modules\Inbox Module\Gform Classes\GFormResponseModel.cs" />
     <Compile Include="Modules\Inbox Module\Gform Classes\GFormServiceHandler.cs" />

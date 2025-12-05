@@ -1,6 +1,7 @@
 ﻿using BATODA.Helpers.Data;
 using BATODA.Helpers.DataGrid;
 using BATODA.Helpers.DataGrids;
+using BATODA.Modules.Finance_Module.Finance_Classes;
 using BATODA.UI_Displays;
 using System;
 using System.Collections.Generic;
@@ -17,31 +18,28 @@ namespace BATODA
     public partial class FinanceUForm : UserControl
     {
         public int selectedYear = 2025;
-       
+        private TaxRepository taxRepo;
+
         public FinanceUForm()
         {
             InitializeComponent();
+
+            taxRepo = new TaxRepository();
             TaxHandler.Initialize(ButawDataGrid);
 
             TaxHandler.LoadMemberPayments(ButawDataGrid, selectedYear);
 
-            DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
-            DisplayClass.SetPlaceholder(PaymentStatusComboBox, "Status", "Paid", "Unpaid", "Overdue");
-            DisplayClass.SetPlaceholder(YearComboBox, "Year", "2025", "2024");
-            DisplayClass.SetPlaceholder(SortComboBox, "Sort By", "Body Number", "Name");
-
-          
-            ViewReceiptPanel.Hide(); 
+            ViewReceiptPanel.Hide();
             ButawDataGrid.CellContentClick += ButawDataGrid_CellContentClick;
 
         }
 
-        private void YearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        public void ReloadFinanceLabels()
         {
-            if (int.TryParse(YearComboBox.Text, out int year))
-            {
-                TaxHandler.LoadMemberPayments(ButawDataGrid, year);
-            }
+            YearTotalLbl.Text = "₱" + taxRepo.GetYearTotal(selectedYear).ToString("N2");
+            MonthTotalLbl.Text = "₱" + taxRepo.GetMonthTotal(selectedYear, DateTime.Today.Month).ToString("N2");
+            PaidTodayLbl.Text = "₱" + taxRepo.GetPaidTodayTotal().ToString("N2");
+            OverdueLbl.Text = "₱" + taxRepo.GetOverdueLastMonthTotal().ToString("N2");
         }
 
         private void LoadMassSelectGrid()
@@ -60,8 +58,6 @@ namespace BATODA
             }
         }
 
-
-
         private void LoadYears()
         {
             MultiYear.Items.Clear();
@@ -76,18 +72,16 @@ namespace BATODA
             MultiYear.SelectedItem = currentYear;
         }
 
-
-
         private void FinanceUForm_Load(object sender, EventArgs e)
         {
             LoadYears();
             LoadMassSelectGrid();
+            ReloadFinanceLabels();
+            LoadYearsFromDB();
             RenewSelectedPanelHolder.Hide();
             MassChangeSelectionPanel.Hide();
-
         }
 
-        
 
         private void btnPaid_Click(object sender, EventArgs e)
         {
@@ -102,14 +96,10 @@ namespace BATODA
             TaxHandler.SetMode("Due");
         }
 
-
-
-
         private void MembershipRenewalButton_Click_1(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new MembershipRenewalUForm());
         }
-
 
         private void RenewalHistoryButton_Click(object sender, EventArgs e)
         {
@@ -137,61 +127,6 @@ namespace BATODA
             ToastManager.Success("Filters Applied!");
 
         }
-
-        private void ApplySearchButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ViewPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void MassChangeButton_Click(object sender, EventArgs e)
-        {
-            MassChangeSelectionPanel.Show();
-        }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void CurrentFirstNameLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MassSelectGrid_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-        }
-
         private void SaveMassChangeButton_Click(object sender, EventArgs e)
         {
             //CHECK IF MONTH AND ACTION ARE SELECTED
@@ -263,24 +198,23 @@ namespace BATODA
             int year = int.Parse(MultiYear.SelectedItem.ToString());
             string action = MultiAction.SelectedItem.ToString();
 
-            var repo = new TaxRepository();
-
             //LOOP THROUGH SELECTED MEMBERS
             foreach (DataGridViewRow row in MassSelectGrid.SelectedRows)
             {
                 int bodyNumber = int.Parse(row.Cells["BodyNo"].Value.ToString());
 
-                //UPDATE OR INSERT PAYMENT IN DB
                 TaxRepository.UpdatePaymentInDB(bodyNumber, year, month, action);
             }
 
-            //SHOW SUCCESS AND RELOAD GRID
+            //SHOW SUCCESS AND RELOAD GRID & LABELS
             MessageBox.Show("Selected members updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadMassSelectGrid();
 
             TaxHandler.LoadMemberPayments(ButawDataGrid, selectedYear);
+
             MassChangeSelectionPanel.Hide();
         }
+
 
         private void MultiClose_Click(object sender, EventArgs e)
         {
@@ -327,8 +261,6 @@ namespace BATODA
                     status = "Due";
                     date = null;
                 }
-
-
 
                 MainRecieptFlowPanel.Controls.Add(CreateReceiptPanel(i, months[i], status, date, i + 1));
             }
@@ -432,7 +364,7 @@ namespace BATODA
                     return;
                 }
                 string bodyStr = cell.Value.ToString().TrimStart('0'); // REMOVE LEADING ZEROS
-                if (string.IsNullOrEmpty(bodyStr)) bodyStr = "0"; 
+                if (string.IsNullOrEmpty(bodyStr)) bodyStr = "0";
                 if (!int.TryParse(bodyStr, out int bodyNumber))
                 {
                     MessageBox.Show("Invalid BodyNumber value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -446,9 +378,35 @@ namespace BATODA
             }
         }
 
-        private void SaveStateButton_Click(object sender, EventArgs e)
+        private void LoadYearsFromDB()
+        {
+            SortComboBox.Items.Clear();
+            var repo = new TaxRepository();
+            var years = repo.GetDistinctPaymentYears();
+
+            foreach (var y in years)
+                SortComboBox.Items.Add(y);
+
+            if (years.Count > 0)
+                SortComboBox.SelectedItem = years.Max();
+        }
+
+
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void MassChangeButton_Click(object sender, EventArgs e)
+        {
+            MassChangeSelectionPanel.Show();
+        }
+
+        private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
     }
 }
