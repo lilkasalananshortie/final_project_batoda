@@ -1,6 +1,4 @@
-﻿using BATODA.Helpers.Database.Members;
-using BATODA.Helpers.Database.Assistance;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.Database.Assistance;
+using BATODA.Helpers.Database.Members;
+using BATODA.User_Control_Forms;
 
 namespace BATODA
 {
@@ -66,27 +67,32 @@ namespace BATODA
 
         private void QuickActionNewMemberButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMain(new MembersUForm());
+           
             _mainForm.ActivateMainButton("Members");
+            DisplayClass.ShowMain(new MembersUForm());
+            
         }   
 
         private void QuickActionTransferMemberButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMain(new TransferMembershipUForm());
+           
             _mainForm.ActivateMainButton("Members");
+            DisplayClass.ShowMain(new TransferMembershipUForm());
         }
 
         private void QuickActionChangeVehicleButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMain(new TransferVehicleUForm());
+            
             _mainForm.ActivateMainButton("Vehicles");
+            DisplayClass.ShowMain(new TransferVehicleUForm());
 
         }
 
         private void QuickActionReviewActionButton_Click(object sender, EventArgs e)
         {
-            DisplayClass.ShowMain(new AssistanceRequestUForm());
+           
             _mainForm.ActivateMainButton("Assistance");
+            DisplayClass.ShowMain(new AssistanceRequestUForm());
 
         }
     }
