@@ -100,7 +100,6 @@ namespace BATODA.User_Control_Forms
             }
         }
 
-
         private void SaveBaseFare()
         {
             if (decimal.TryParse(BaseFareTextBox.Text.Trim(), out decimal baseFare))
@@ -127,7 +126,6 @@ namespace BATODA.User_Control_Forms
                 BaseFareTextBox.Focus();
             }
         }
-
 
         private void BaseFareTextBox_TextChanged(object sender, EventArgs e)
         {

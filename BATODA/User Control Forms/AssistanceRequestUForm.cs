@@ -51,7 +51,6 @@ namespace BATODA
             RejectedLbl.Text = AssistanceSummary.GetRejectedTickets().ToString();
         }
 
-
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
             LoadAllTickets();
@@ -107,7 +106,6 @@ namespace BATODA
             }
         }
 
-
         private void TransferToDisplayPanel()
         {
             ConfNameLbl.Text = ReqFirstNameTxt.Text + " " + ReqLastNameTxt.Text;
@@ -132,8 +130,6 @@ namespace BATODA
 
             ConfPreviewImage.Image = MemberImagePb.Image;
         }
-
-
         private void AssistanceHomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new AssistanceLogUForm());
@@ -148,7 +144,6 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new ARHUForm());
         }
-
 
         private void TicketConfirmButton_Click(object sender, EventArgs e)
         {
@@ -165,7 +160,6 @@ namespace BATODA
                 DateRequested = DateTime.Parse(DateCreatedLbl.Text),
                 TargetDate = DateTime.Parse(DateNeededPicker.Text)
             };
-
 
             GmailSender GmailSend = new GmailSender();
             GmailSend.SendAssistanceEmail(
@@ -273,8 +267,6 @@ namespace BATODA
             ConfirmationPanel.BringToFront();
             FillUpFormPanel.Hide();
         }
-
-
         private void ClearButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ClearInputs(this);
@@ -371,8 +363,6 @@ namespace BATODA
             FillUpFormPanel.BringToFront();
             TicketIdlbl.Text = "TR-" + Ticket.GetNextTicketID().ToString();
             DateCreatedLbl.Text = DateTime.Now.ToString("MM-dd-yyyy hh:mm tt");
-
-
         }
 
         private void CreateTicketCancelBtn_Click(object sender, EventArgs e)
@@ -398,11 +388,6 @@ namespace BATODA
         {
             SearchTextBox.Text = "";
             LoadAllTickets();
-        }
-
-        private void CreateTicketPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

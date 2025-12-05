@@ -194,11 +194,6 @@ namespace BATODA
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ApplyearchButton_Click_1(object sender, EventArgs e)
         {
             string searchText = SearchTextBox.Text.Trim();
@@ -276,12 +271,6 @@ namespace BATODA
             EditTrycPanel.Hide();
             LoadTricycleGrid();
             ToastManager.Success("Tricycle details updated successfully!");
-        }
-
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)

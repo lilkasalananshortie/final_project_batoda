@@ -25,7 +25,6 @@ namespace BATODA.User_Control_Forms
         {
             InitializeComponent();
 
-            // Enable double buffering to reduce flicker
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
                           ControlStyles.AllPaintingInWmPaint |
@@ -147,7 +146,6 @@ namespace BATODA.User_Control_Forms
             return panel;
         }
 
-  
         private void CloseMessage_Click_1(object sender, EventArgs e)
         {
             foreach (Control ctrl in InboxFlowLayoutPanel.Controls)

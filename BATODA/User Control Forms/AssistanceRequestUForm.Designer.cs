@@ -991,7 +991,6 @@
             this.CreateTicketPanel.Name = "CreateTicketPanel";
             this.CreateTicketPanel.Size = new System.Drawing.Size(333, 96);
             this.CreateTicketPanel.TabIndex = 55;
-            this.CreateTicketPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CreateTicketPanel_Paint);
             this.CreateTicketPanel.DoubleClick += new System.EventHandler(this.CreateTicketPanel_DoubleClick);
             // 
             // pictureBox1

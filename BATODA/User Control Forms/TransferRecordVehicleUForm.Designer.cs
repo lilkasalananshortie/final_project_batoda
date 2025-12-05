@@ -203,7 +203,6 @@
             this.TransferTricHistoryGrid.Name = "TransferTricHistoryGrid";
             this.TransferTricHistoryGrid.Size = new System.Drawing.Size(1595, 682);
             this.TransferTricHistoryGrid.TabIndex = 3;
-            this.TransferTricHistoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // TransferRecordVehicleUForm
             // 

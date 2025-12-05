@@ -155,8 +155,6 @@ namespace BATODA.User_Control_Forms
                 ToastManager.Error($"Failed to load image: {ex.Message}");
             }
         }
-
-
         private void MembersEditPanel_Load(object sender, EventArgs e)
         {
             int bodyNumber = SelectedMemberImage.BodyNumber;

@@ -175,7 +175,6 @@ namespace BATODA.User_Control_Forms
            
         }
 
-
         private void ReplyButton_Click(object sender, EventArgs e)
         {
             if (currentSelectedResponse == null)
@@ -227,9 +226,6 @@ namespace BATODA.User_Control_Forms
                 }
             }
         }
-
-
-
 
         private void SendReplyButton_Click(object sender, EventArgs e)
         {

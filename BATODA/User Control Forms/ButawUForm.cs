@@ -29,7 +29,6 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new FinanceUForm());
         }
-   
 
         private void MembershipRenewalButton_Click_1(object sender, EventArgs e)
         {

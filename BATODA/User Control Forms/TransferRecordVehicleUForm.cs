@@ -45,8 +45,6 @@ namespace BATODA
             DataGridCustom.ApplyCustomGrid(TransferTricHistoryGrid);
         }
 
-
-
         private void TransferRecordVehicleUForm_Load(object sender, EventArgs e)
         {
             
@@ -65,11 +63,6 @@ namespace BATODA
         private void TransferRecordButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferRecordVehicleUForm());
-        }
-
-        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

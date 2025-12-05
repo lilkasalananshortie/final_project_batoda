@@ -26,7 +26,6 @@ namespace BATODA
         {
             InitializeComponent();
 
-            // test lang pang push
         }
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
@@ -58,12 +57,7 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-
-
-
-
             HolderPanel1.SendToBack();
-
         }
 
         private void OwnerSearchGrid_Leave(object sender, EventArgs e)
@@ -286,7 +280,5 @@ namespace BATODA
                 MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-      
     }
 }

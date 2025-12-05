@@ -69,8 +69,6 @@ namespace BATODA.User_Control_Forms
             "Min. fare"
         };
 
-
-
         private void FareMatrixUForm_Load(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -89,17 +87,6 @@ namespace BATODA.User_Control_Forms
 
                 flowLayoutPanel1.Controls.Add(panel);
             }
-
-        }
-
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
 
         }
     }

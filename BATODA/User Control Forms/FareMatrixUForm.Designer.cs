@@ -155,7 +155,6 @@
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1198, 2848);
             this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel3
             // 
@@ -289,7 +288,6 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "BAGUMBAYAN";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label8
             // 
