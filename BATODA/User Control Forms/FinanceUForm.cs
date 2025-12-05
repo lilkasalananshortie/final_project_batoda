@@ -446,17 +446,7 @@ namespace BATODA
             }
         }
 
-        private void ButawDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
+        private void SaveStateButton_Click(object sender, EventArgs e)
         {
 
         }

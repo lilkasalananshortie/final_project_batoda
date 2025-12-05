@@ -69,7 +69,9 @@ namespace BATODA
         {
            
             _mainForm.ActivateMainButton("Members");
-            DisplayClass.ShowMain(new MembersUForm());
+            var membersUC = new MembersUForm();
+            DisplayClass.ShowMain(membersUC);
+            membersUC.ShowAddMemberPanel();
             
         }   
 
