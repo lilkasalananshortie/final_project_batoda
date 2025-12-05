@@ -32,22 +32,21 @@ namespace BATODA
             TricycleRepository repo = new TricycleRepository();
             List<TricycleModel> tricycles = repo.GetAllTricycles();
 
-
             DataTable table = new DataTable();
             table.Columns.Add("BodyNumber");
-            table.Columns.Add("Last Name");
-            table.Columns.Add("First Name");
-            table.Columns.Add("Brand");
-            table.Columns.Add("Model");
-            table.Columns.Add("Plate No.");
-            table.Columns.Add("Engine No.");
-            table.Columns.Add("Chassis No.");
+            table.Columns.Add("LastName");
+            table.Columns.Add("FirstName");
+            table.Columns.Add("TricycleBrand");
+            table.Columns.Add("TricModel");
+            table.Columns.Add("PlateNumber");
+            table.Columns.Add("EngineNumber");
+            table.Columns.Add("ChassisNumber");
             table.Columns.Add("Availability");
 
             foreach (var t in tricycles)
             {
                 table.Rows.Add(
-                    t.BodyNumber.ToString("D3"),
+                    t.BodyNumber,
                     t.LastName,
                     t.FirstName,
                     t.TricycleBrand,
@@ -71,9 +70,8 @@ namespace BATODA
         private void RegisteredVehicleUForm_Load(object sender, EventArgs e)
         {
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
-            DisplayClass.SetPlaceholder(StatusComboBox, "Brand", "Sample 1", "Sample 1", "Sample 1", "Sample 1", "Sample 1");
-            DisplayClass.SetPlaceholder(MemberTypeComboBox, "Member Type", "Operator", "Driver");
-            DisplayClass.SetPlaceholder(OrderComboBox, "Order By", "Ascending", "Descending");
+            DisplayClass.SetPlaceholder(StatusCmb, "Brand", "Operational", "Unavailable");
+            DisplayClass.SetPlaceholder(OrderCmb, "Order By", "Ascending", "Descending");
             TricycleRepository.UpdateStatusLabels(OperationalLbl, UnavailableLbl, SuspendedLbl, CodingLbl);
             LoadTricycleGrid();
         }
@@ -103,7 +101,57 @@ namespace BATODA
 
         private void AapplyButtton_Click(object sender, EventArgs e)
         {
+            List<TricycleModel> tricycles = repo.GetAllTricycles();
+
+            string status = StatusCmb.Text.Trim();
+            if (!string.IsNullOrEmpty(status) && (status == "Operational" || status == "Unavailable"))
+            {
+                tricycles = tricycles.Where(t => t.Availability.Equals(status, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+
+            string order = OrderCmb.Text.Trim();
+            if (!string.IsNullOrEmpty(order))
+            {
+                tricycles = order == "Ascending"
+                    ? tricycles.OrderBy(t => t.BodyNumber).ToList()
+                    : tricycles.OrderByDescending(t => t.BodyNumber).ToList();
+            }
+
+            DataTable table = new DataTable();
+            table.Columns.Add("BodyNumber");
+            table.Columns.Add("LastName");
+            table.Columns.Add("FirstName");
+            table.Columns.Add("TricycleBrand");
+            table.Columns.Add("TricModel");
+            table.Columns.Add("PlateNumber");
+            table.Columns.Add("EngineNumber");
+            table.Columns.Add("ChassisNumber");
+            table.Columns.Add("Availability");
+
+            foreach (var t in tricycles)
+            {
+                table.Rows.Add(
+                    t.BodyNumber.ToString("D3"),
+                    t.LastName,
+                    t.FirstName,
+                    t.TricycleBrand,
+                    t.TricModel,
+                    t.PlateNumber,
+                    t.EngineNumber,
+                    t.ChassisNumber,
+                    t.Availability
+                );
+            }
+
+            DataGridColumns.LoadTricyclesToGrid(TricycleGrid, table);
+            DataGridCustom.ApplyCustomGrid(TricycleGrid);
+            DataGridCustom.AddEditButtonOnly(TricycleGrid);
+
+            NoResultsPanel.Visible = table.Rows.Count == 0;
+            if (NoResultsPanel.Visible) NoResultsPanel.BringToFront();
+
             ToastManager.Success("Filters Applied!");
+
         }
 
         private void ApplyearchButton_Click(object sender, EventArgs e)
@@ -116,7 +164,7 @@ namespace BATODA
             table.Columns.Add("LastName");
             table.Columns.Add("FirstName");
             table.Columns.Add("TricycleBrand");
-            table.Columns.Add("Model");
+            table.Columns.Add("TricModel");
             table.Columns.Add("PlateNumber");
             table.Columns.Add("EngineNumber");
             table.Columns.Add("ChassisNumber");
@@ -135,6 +183,7 @@ namespace BATODA
                 );
             }
             LoadTricycleTable.LoadTricycleGridWithData(TricycleGrid, table);
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -157,11 +206,11 @@ namespace BATODA
                 row["Availability"] = new TricycleModel { BodyNumber = bodyNumber }.Availability;
             }
 
-            // RELOAD
             DataGridColumns.LoadTricyclesToGrid(TricycleGrid, results);
 
             DataGridCustom.ApplyCustomGrid(TricycleGrid);
             DataGridCustom.AddEditButtonOnly(TricycleGrid);
+
         }
 
         private void TricycleGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -239,7 +288,6 @@ namespace BATODA
         private void PerformSearch()
         {
             string searchText = SearchTextBox.Text.Trim();
-
             if (string.IsNullOrEmpty(searchText))
             {
                 MessageBox.Show("Search input cannot be empty.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -256,20 +304,20 @@ namespace BATODA
             ).ToList();
 
             DataTable table = new DataTable();
-            table.Columns.Add("Body No.");
-            table.Columns.Add("Last Name");
-            table.Columns.Add("First Name");
-            table.Columns.Add("Brand");
-            table.Columns.Add("Model");
-            table.Columns.Add("Plate No.");
-            table.Columns.Add("Engine No.");
-            table.Columns.Add("Chassis No.");
+            table.Columns.Add("BodyNumber");
+            table.Columns.Add("LastName");
+            table.Columns.Add("FirstName");
+            table.Columns.Add("TricycleBrand");
+            table.Columns.Add("TricModel");
+            table.Columns.Add("PlateNumber");
+            table.Columns.Add("EngineNumber");
+            table.Columns.Add("ChassisNumber");
             table.Columns.Add("Availability");
 
             foreach (var t in filtered)
             {
                 table.Rows.Add(
-                    t.BodyNumber,     
+                    t.BodyNumber.ToString("D3"),
                     t.LastName,
                     t.FirstName,
                     t.TricycleBrand,
@@ -282,11 +330,14 @@ namespace BATODA
             }
 
             DataGridColumns.LoadTricyclesToGrid(TricycleGrid, table);
+
             DataGridCustom.ApplyCustomGrid(TricycleGrid);
             DataGridCustom.AddEditButtonOnly(TricycleGrid);
 
             NoResultsPanel.Visible = table.Rows.Count == 0;
             if (NoResultsPanel.Visible) NoResultsPanel.BringToFront();
+
         }
+
     }
 }

@@ -657,6 +657,11 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\notification.png" />
+    <None Include="Resources\lists.png" />
+    <None Include="Resources\write.png" />
+    <None Include="Resources\right-alignment.png" />
+    <None Include="Resources\menu.png" />
     <None Include="Modules\Inbox Module\GformAuth\arrow-small-left.png" />
     <None Include="Resources\application.png" />
     <None Include="Resources\bambang iufbbtodaa.PNG" />

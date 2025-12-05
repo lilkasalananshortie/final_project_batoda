@@ -18,12 +18,11 @@ namespace BATODA
 
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayClass.SetMainPanel(DisplayPanel);
-            DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
+            SettingsPanel.Hide();
             DisplayPanel.Visible = true;
             DisplayPanel.Dock = DockStyle.Fill;
-            NotificationPanel.Visible = false;
-            CalendarXAccoutnContainerPanel.Visible = false;
+            CreateNewAdminAccountPanel.Visible = false;
         }
 
         private Timer clockTimer;
@@ -200,44 +199,36 @@ namespace BATODA
             SubTopPanel.Text = "Backup/Restore your organizations data ";
         }
 
-
-        //THIS PART IS FOR CALENDAR AND ACCOUNT BUTTONS NEED PA AYUSIN LOGIC KAPAG TINOGLE BUTTON CLOSE OR MAY IN BUILT CLOSE BTN
-        private void AccountButton_Click(object sender, EventArgs e)
-        {
-            DisplayClass.ShowMini(new AccountUForm());
-            CalendarXAccoutnContainerPanel.Visible = true; 
-            CalendarXAccoutnContainerPanel.BringToFront();
-        }
-
-        private void CalendarButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        private void NotificationButton_Click(object sender, EventArgs e)
-        {
-            NotificationPanel.Visible = !NotificationPanel.Visible;
-                 if (NotificationPanel.Visible)
-                   NotificationPanel.BringToFront();
-        }
-
-       
-
         private void TopBarPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void NavBarPanel_Paint(object sender, PaintEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            SettingsPanel.Visible = !SettingsPanel.Visible;
+
+            if (SettingsPanel.Visible)
+                SettingsPanel.Show();
+            else
+                SettingsPanel.Hide();
+        }
+
+        private void CreateNewAdminAccountButton_Click(object sender, EventArgs e)
+        {
+            CreateNewAdminAccountPanel.Visible = true;
+            CreateNewAdminAccountPanel.BringToFront();
+        }
+
+        private void CreateNewAdminCancelButton_Click(object sender, EventArgs e)
+        {
+            CreateNewAdminAccountPanel.Visible = false;
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void TopPanelText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
