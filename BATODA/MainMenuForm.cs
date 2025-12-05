@@ -20,6 +20,8 @@ namespace BATODA
             DisplayClass.SetMainPanel(DisplayPanel);
             DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
+
+            SettingsPanel.Visible = false;
             DisplayPanel.Visible = true;
             DisplayPanel.Dock = DockStyle.Fill;
             NotificationPanel.Visible = false;
@@ -227,10 +229,7 @@ namespace BATODA
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void CreateNewAdminCancelButton_Click(object sender, EventArgs e)
         {
@@ -250,6 +249,16 @@ namespace BATODA
         private void LogOutButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SettingButton_Click(object sender, EventArgs e)
+        {
+            SettingsPanel.Visible = !SettingsPanel.Visible;
+
+            if (SettingsPanel.Visible)
+                SettingsPanel.Show();
+            else
+                SettingsPanel.Hide();       
         }
     }
 }

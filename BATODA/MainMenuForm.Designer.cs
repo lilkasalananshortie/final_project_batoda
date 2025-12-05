@@ -33,6 +33,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TopBarPanel = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.SettingButton = new System.Windows.Forms.PictureBox();
             this.MainTime = new System.Windows.Forms.Label();
             this.MainDate = new System.Windows.Forms.Label();
             this.SubTopPanel = new System.Windows.Forms.Label();
@@ -51,11 +53,15 @@
             this.DisplayPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.NotificationPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.SettingsPanel = new System.Windows.Forms.Panel();
             this.CreateNewAdminAccountPanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SwitchAdminAccountButton = new BATODA.ButtonStyle();
             this.CreateNewAdminCancelButton = new BATODA.ButtonStyle();
+            this.CreateNewAdminAccountButton = new BATODA.ButtonStyle();
             this.CreateAccountButton = new BATODA.ButtonStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -71,29 +77,23 @@
             this.FullnameTextbox = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SwitchAdminAccountButton = new BATODA.ButtonStyle();
-            this.CreateNewAdminAccountButton = new BATODA.ButtonStyle();
             this.LogOutButton = new BATODA.ButtonStyle();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.TopBarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingButton)).BeginInit();
             this.NavBarPanel.SuspendLayout();
             this.NotificationPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.SettingsPanel.SuspendLayout();
             this.CreateNewAdminAccountPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -122,7 +122,7 @@
             // 
             this.TopBarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.TopBarPanel.Controls.Add(this.pictureBox3);
-            this.TopBarPanel.Controls.Add(this.pictureBox1);
+            this.TopBarPanel.Controls.Add(this.SettingButton);
             this.TopBarPanel.Controls.Add(this.MainTime);
             this.TopBarPanel.Controls.Add(this.MainDate);
             this.TopBarPanel.Controls.Add(this.SubTopPanel);
@@ -133,6 +133,29 @@
             this.TopBarPanel.Size = new System.Drawing.Size(1620, 90);
             this.TopBarPanel.TabIndex = 3;
             this.TopBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopBarPanel_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::BATODA.Properties.Resources.notification;
+            this.pictureBox3.Location = new System.Drawing.Point(1499, 30);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // SettingButton
+            // 
+            this.SettingButton.BackColor = System.Drawing.Color.Transparent;
+            this.SettingButton.Image = global::BATODA.Properties.Resources.settings_nav_bar_icon;
+            this.SettingButton.Location = new System.Drawing.Point(1550, 28);
+            this.SettingButton.Name = "SettingButton";
+            this.SettingButton.Size = new System.Drawing.Size(34, 34);
+            this.SettingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SettingButton.TabIndex = 9;
+            this.SettingButton.TabStop = false;
+            this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
             // 
             // MainTime
             // 
@@ -523,41 +546,17 @@
             this.NotificationPanel.Size = new System.Drawing.Size(366, 318);
             this.NotificationPanel.TabIndex = 0;
             // 
-            // pictureBox1
+            // SettingsPanel
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::BATODA.Properties.Resources.settings_nav_bar_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(1550, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::BATODA.Properties.Resources.notification;
-            this.pictureBox3.Location = new System.Drawing.Point(1499, 30);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.CreateNewAdminAccountPanel);
-            this.panel2.Controls.Add(this.LogOutButton);
-            this.panel2.Location = new System.Drawing.Point(1535, 90);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(384, 966);
-            this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.SettingsPanel.BackColor = System.Drawing.Color.White;
+            this.SettingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SettingsPanel.Controls.Add(this.CreateNewAdminAccountPanel);
+            this.SettingsPanel.Controls.Add(this.LogOutButton);
+            this.SettingsPanel.Location = new System.Drawing.Point(1535, 90);
+            this.SettingsPanel.Name = "SettingsPanel";
+            this.SettingsPanel.Size = new System.Drawing.Size(384, 966);
+            this.SettingsPanel.TabIndex = 6;
+            this.SettingsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // CreateNewAdminAccountPanel
             // 
@@ -581,6 +580,77 @@
             this.CreateNewAdminAccountPanel.Name = "CreateNewAdminAccountPanel";
             this.CreateNewAdminAccountPanel.Size = new System.Drawing.Size(373, 594);
             this.CreateNewAdminAccountPanel.TabIndex = 93;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(6, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(362, 106);
+            this.panel3.TabIndex = 97;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::BATODA.Properties.Resources.unblur_bgc_toda;
+            this.pictureBox4.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(61, 56);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(100, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Account Management";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(100, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Account Management";
+            // 
+            // SwitchAdminAccountButton
+            // 
+            this.SwitchAdminAccountButton.BackColor = System.Drawing.Color.White;
+            this.SwitchAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
+            this.SwitchAdminAccountButton.BorderColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.BorderRadius = 8;
+            this.SwitchAdminAccountButton.BorderSize = 1;
+            this.SwitchAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
+            this.SwitchAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SwitchAdminAccountButton.ForeColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
+            this.SwitchAdminAccountButton.ImageColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.SwitchAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.SwitchAdminAccountButton.IsToggled = false;
+            this.SwitchAdminAccountButton.Location = new System.Drawing.Point(6, 132);
+            this.SwitchAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
+            this.SwitchAdminAccountButton.Name = "SwitchAdminAccountButton";
+            this.SwitchAdminAccountButton.PaddingX = 0;
+            this.SwitchAdminAccountButton.PaddingY = 0;
+            this.SwitchAdminAccountButton.Size = new System.Drawing.Size(362, 59);
+            this.SwitchAdminAccountButton.TabIndex = 96;
+            this.SwitchAdminAccountButton.Text = "Set ";
+            this.SwitchAdminAccountButton.TextColor = System.Drawing.Color.Black;
+            this.SwitchAdminAccountButton.TextOffset = 15;
+            this.SwitchAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
+            this.SwitchAdminAccountButton.UseVisualStyleBackColor = false;
             // 
             // CreateNewAdminCancelButton
             // 
@@ -610,6 +680,35 @@
             this.CreateNewAdminCancelButton.TextOffset = 20;
             this.CreateNewAdminCancelButton.ToggleColor = System.Drawing.Color.Empty;
             this.CreateNewAdminCancelButton.UseVisualStyleBackColor = false;
+            // 
+            // CreateNewAdminAccountButton
+            // 
+            this.CreateNewAdminAccountButton.BackColor = System.Drawing.Color.White;
+            this.CreateNewAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
+            this.CreateNewAdminAccountButton.BorderColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.BorderRadius = 8;
+            this.CreateNewAdminAccountButton.BorderSize = 1;
+            this.CreateNewAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.add_user;
+            this.CreateNewAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateNewAdminAccountButton.ForeColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
+            this.CreateNewAdminAccountButton.ImageColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
+            this.CreateNewAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.CreateNewAdminAccountButton.IsToggled = false;
+            this.CreateNewAdminAccountButton.Location = new System.Drawing.Point(6, 207);
+            this.CreateNewAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
+            this.CreateNewAdminAccountButton.Name = "CreateNewAdminAccountButton";
+            this.CreateNewAdminAccountButton.PaddingX = 0;
+            this.CreateNewAdminAccountButton.PaddingY = 0;
+            this.CreateNewAdminAccountButton.Size = new System.Drawing.Size(362, 59);
+            this.CreateNewAdminAccountButton.TabIndex = 95;
+            this.CreateNewAdminAccountButton.Text = "Create New Admin Account";
+            this.CreateNewAdminAccountButton.TextColor = System.Drawing.Color.Black;
+            this.CreateNewAdminAccountButton.TextOffset = 15;
+            this.CreateNewAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
+            this.CreateNewAdminAccountButton.UseVisualStyleBackColor = false;
             // 
             // CreateAccountButton
             // 
@@ -783,106 +882,6 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Create New Admin Account";
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(6, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(362, 106);
-            this.panel3.TabIndex = 97;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::BATODA.Properties.Resources.unblur_bgc_toda;
-            this.pictureBox4.Location = new System.Drawing.Point(25, 25);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(61, 56);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(100, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Account Management";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(100, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Account Management";
-            // 
-            // SwitchAdminAccountButton
-            // 
-            this.SwitchAdminAccountButton.BackColor = System.Drawing.Color.White;
-            this.SwitchAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
-            this.SwitchAdminAccountButton.BorderColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.BorderRadius = 8;
-            this.SwitchAdminAccountButton.BorderSize = 1;
-            this.SwitchAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.transfer;
-            this.SwitchAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SwitchAdminAccountButton.ForeColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
-            this.SwitchAdminAccountButton.ImageColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.SwitchAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.SwitchAdminAccountButton.IsToggled = false;
-            this.SwitchAdminAccountButton.Location = new System.Drawing.Point(6, 132);
-            this.SwitchAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
-            this.SwitchAdminAccountButton.Name = "SwitchAdminAccountButton";
-            this.SwitchAdminAccountButton.PaddingX = 0;
-            this.SwitchAdminAccountButton.PaddingY = 0;
-            this.SwitchAdminAccountButton.Size = new System.Drawing.Size(362, 59);
-            this.SwitchAdminAccountButton.TabIndex = 96;
-            this.SwitchAdminAccountButton.Text = "Set ";
-            this.SwitchAdminAccountButton.TextColor = System.Drawing.Color.Black;
-            this.SwitchAdminAccountButton.TextOffset = 15;
-            this.SwitchAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
-            this.SwitchAdminAccountButton.UseVisualStyleBackColor = false;
-            // 
-            // CreateNewAdminAccountButton
-            // 
-            this.CreateNewAdminAccountButton.BackColor = System.Drawing.Color.White;
-            this.CreateNewAdminAccountButton.BackgroundColor = System.Drawing.Color.White;
-            this.CreateNewAdminAccountButton.BorderColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.BorderRadius = 8;
-            this.CreateNewAdminAccountButton.BorderSize = 1;
-            this.CreateNewAdminAccountButton.ButtonImage = global::BATODA.Properties.Resources.add_user;
-            this.CreateNewAdminAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateNewAdminAccountButton.ForeColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.HoverBorderColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.HoverColor = System.Drawing.Color.LightGray;
-            this.CreateNewAdminAccountButton.ImageColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.ImagePosition = new System.Drawing.Point(20, 0);
-            this.CreateNewAdminAccountButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.CreateNewAdminAccountButton.IsToggled = false;
-            this.CreateNewAdminAccountButton.Location = new System.Drawing.Point(6, 207);
-            this.CreateNewAdminAccountButton.MouseDownColor = System.Drawing.Color.White;
-            this.CreateNewAdminAccountButton.Name = "CreateNewAdminAccountButton";
-            this.CreateNewAdminAccountButton.PaddingX = 0;
-            this.CreateNewAdminAccountButton.PaddingY = 0;
-            this.CreateNewAdminAccountButton.Size = new System.Drawing.Size(362, 59);
-            this.CreateNewAdminAccountButton.TabIndex = 95;
-            this.CreateNewAdminAccountButton.Text = "Create New Admin Account";
-            this.CreateNewAdminAccountButton.TextColor = System.Drawing.Color.Black;
-            this.CreateNewAdminAccountButton.TextOffset = 15;
-            this.CreateNewAdminAccountButton.ToggleColor = System.Drawing.Color.Empty;
-            this.CreateNewAdminAccountButton.UseVisualStyleBackColor = false;
-            // 
             // LogOutButton
             // 
             this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
@@ -923,7 +922,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1920, 1061);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.SettingsPanel);
             this.Controls.Add(this.DisplayPanel);
             this.Controls.Add(this.NotificationPanel);
             this.Controls.Add(this.TopBarPanel);
@@ -939,14 +938,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.TopBarPanel.ResumeLayout(false);
             this.TopBarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingButton)).EndInit();
             this.NavBarPanel.ResumeLayout(false);
             this.NotificationPanel.ResumeLayout(false);
             this.NotificationPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.SettingsPanel.ResumeLayout(false);
             this.CreateNewAdminAccountPanel.ResumeLayout(false);
             this.CreateNewAdminAccountPanel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
@@ -956,9 +958,6 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -986,9 +985,9 @@
         private ButtonStyle SettingsButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel NotificationPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox SettingButton;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel SettingsPanel;
         private System.Windows.Forms.Panel CreateNewAdminAccountPanel;
         private ButtonStyle CreateNewAdminCancelButton;
         private ButtonStyle CreateAccountButton;
