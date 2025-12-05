@@ -204,6 +204,15 @@ namespace BATODA
                 return;
             }
 
+            if (editingEvent == null)
+            {
+                if (events.ContainsKey(selectedDate) && events[selectedDate].Count >= 2)
+                {
+                    MessageBox.Show("You can only add up to 2 events per day.", "Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             string title = EventTitleTxt.Text.Trim();
             string type = EventTypeCmb.Text.Trim();
             string location = EventLocationTxt.Text.Trim();
@@ -246,7 +255,7 @@ namespace BATODA
                     SaveEventButton.Text = "Save";
                 }
                 else
-                {
+                {                
                     CalendarEvent newEvent = new CalendarEvent
                     {
                         Title = title,
@@ -279,6 +288,7 @@ namespace BATODA
             NoteTxt.Clear();
             TimePicker.Value = DateTime.Now;
         }
+
 
 
         private void EventPanel_Click(object sender, EventArgs e)

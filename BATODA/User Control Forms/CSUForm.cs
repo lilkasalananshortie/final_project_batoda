@@ -7,7 +7,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace BATODA.User_Control_Forms
 {
     public partial class CSUForm : UserControl
@@ -17,60 +16,66 @@ namespace BATODA.User_Control_Forms
         private Panel currentSelectedPanel;
         private int panelGenertedBig = 1460;
         private int panelGenertedSmall = 933;
+
         private Panel overlay;
+        private Panel progressBarBackground;
+        private Panel progressBarFill;
+
         public CSUForm()
         {
             InitializeComponent();
-            
 
-
-
-
+            // Enable double buffering to reduce flicker
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.AllPaintingInWmPaint |
+                          ControlStyles.UserPaint, true);
+            this.UpdateStyles();
         }
+
         private async void CSUForm_Load(object sender, EventArgs e)
         {
             ReplyPanel.Visible = false;
-            await Task.Delay(50);
-            LoadGmailInbox();
-        }
 
-        private async void LoadGmailInbox()
-        {
-            ShowOverlay();
-
-            InboxFlowLayoutPanel.Controls.Clear();
            
-            var items = await Task.Run(() =>
-            {
-                if (cachedMessages == null)
-                {
-                    var messages = gmailHandler.GetMessages(10);
-                    cachedMessages = messages.Select(m => (m.Id, m.Subject, m.Date)).ToList();
-                }
+            ShowOverlay();
+            Application.DoEvents();
 
-             
-                var results = new List<(string Subject, string Preview, string Time, string Id)>();
-
-                foreach (var m in cachedMessages)
-                {
-                    string preview = gmailHandler.GetPreview(m.Id, 70);
-                    string time = gmailHandler.FormatMessageTime(m.Date);
-
-                    results.Add((m.Subject, preview, time, m.Id));
-                }
-
-                return results;
-            });
-
-        
-            foreach (var msg in items)
-            {
-                InboxFlowLayoutPanel.Controls.Add(
-                    CreateInboxPanel(msg.Subject, msg.Preview, msg.Time, msg.Id)
-                );
-            }
+            await LoadGmailInboxAsync();
 
             HideOverlay();
+        }
+
+        private async Task LoadGmailInboxAsync()
+        {
+            InboxFlowLayoutPanel.Controls.Clear();
+
+            if (cachedMessages == null)
+            {
+                var messages = await Task.Run(() => gmailHandler.GetMessages(10));
+                cachedMessages = messages.Select(m => (m.Id, m.Subject, m.Date)).ToList();
+            }
+
+            int total = cachedMessages.Count;
+            int counter = 0;
+
+            foreach (var m in cachedMessages)
+            {
+                
+                var preview = await Task.Run(() => gmailHandler.GetPreview(m.Id, 70));
+                var time = await Task.Run(() => gmailHandler.FormatMessageTime(m.Date));
+
+                
+                var panel = CreateInboxPanel(m.Subject, preview, time, m.Id);
+                InboxFlowLayoutPanel.Controls.Add(panel);
+
+                
+                counter++;
+                int percentage = counter * 100 / total;
+                UpdateProgress(percentage);
+
+                await Task.Delay(20);
+            }
         }
 
         private Panel CreateInboxPanel(string headerText, string previewText, string timeText, string messageId)
@@ -123,12 +128,8 @@ namespace BATODA.User_Control_Forms
             panel.Click += (s, e) =>
             {
                 foreach (Control ctrl in InboxFlowLayoutPanel.Controls)
-                {
                     if (ctrl is Panel p)
-                    {
                         p.Width = 780;
-                    }
-                }
 
                 currentSelectedPanel = panel;
 
@@ -146,15 +147,12 @@ namespace BATODA.User_Control_Forms
             return panel;
         }
 
+  
         private void CloseMessage_Click_1(object sender, EventArgs e)
         {
             foreach (Control ctrl in InboxFlowLayoutPanel.Controls)
-            {
                 if (ctrl is Panel p)
-                {
                     p.Width = panelGenertedBig;
-                }
-            }
 
             currentSelectedPanel = null;
 
@@ -167,15 +165,12 @@ namespace BATODA.User_Control_Forms
 
         private void ReplyButton_Click(object sender, EventArgs e)
         {
-           
             ReplyPanel.Visible = true;
             ReplyPanel.Location = new Point(270, 140);
-
         }
 
         private void CancelReplyButton_Click(object sender, EventArgs e)
         {
-
             ReplyPanel.Visible = false;
         }
 
@@ -205,12 +200,8 @@ namespace BATODA.User_Control_Forms
             }
 
             foreach (Control ctrl in InboxFlowLayoutPanel.Controls)
-            {
                 if (ctrl is Panel p)
-                {
                     p.Width = panelGenertedBig;
-                }
-            }
 
             currentSelectedPanel = null;
 
@@ -219,36 +210,48 @@ namespace BATODA.User_Control_Forms
 
             MessagePanel.Visible = false;
             ReplyPanel.Visible = false;
-
         }
 
         private void GFormRcvButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new GFormUForm());
         }
+
+        // ---------------- Overlay + custom progress bar ----------------
         private void CreateOverlay()
         {
             if (overlay != null) return;
 
-            overlay = new Panel();
-            overlay.BackColor = Color.FromArgb(140, 0, 0, 0); 
-            overlay.Visible = false;
-            overlay.Dock = DockStyle.Fill;
-            overlay.BringToFront();
-
-            Label lbl = new Label();
-            lbl.Text = "Loading...";
-            lbl.ForeColor = Color.White;
-            lbl.Font = new Font("Segoe UI", 18, FontStyle.Bold);
-            lbl.AutoSize = true;
-            lbl.Anchor = AnchorStyles.None;
-
-            overlay.Controls.Add(lbl);
-
-            overlay.Resize += (s, e) =>
+            overlay = new Panel
             {
-                lbl.Location = new Point((overlay.Width - lbl.Width) / 2, (overlay.Height - lbl.Height) / 2);
+                BackColor = Color.FromArgb(140, 0, 0, 0),
+                Dock = DockStyle.Fill,
+                Visible = false
             };
+
+          
+            progressBarBackground = new Panel
+            {
+                Dock = DockStyle.Bottom,
+                Height = 5,
+                BackColor = Color.DarkRed
+            };
+
+            
+            progressBarFill = new Panel
+            {
+                Dock = DockStyle.Left,
+                Height = 5,
+                Width = 0,
+                BackColor = Color.Red
+            };
+
+            progressBarBackground.Controls.Add(progressBarFill);
+            overlay.Controls.Add(progressBarBackground);
+
+           
+            overlay.GetType().GetProperty("DoubleBuffered", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
+                   .SetValue(overlay, true, null);
         }
 
         private void ShowOverlay()
@@ -264,7 +267,7 @@ namespace BATODA.User_Control_Forms
 
             overlay.BringToFront();
             overlay.Visible = true;
-            overlay.Update();
+            overlay.Refresh();
         }
 
         private void HideOverlay()
@@ -272,6 +275,15 @@ namespace BATODA.User_Control_Forms
             if (overlay != null)
                 overlay.Visible = false;
         }
-    }
 
+        private void UpdateProgress(int percentage)
+        {
+            if (progressBarFill != null && progressBarBackground != null)
+            {
+                int width = progressBarBackground.Width * percentage / 100;
+                progressBarFill.Width = width;
+                progressBarFill.Refresh();
+            }
+        }
+    }
 }
