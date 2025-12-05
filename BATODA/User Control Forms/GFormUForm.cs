@@ -76,7 +76,7 @@ namespace BATODA.User_Control_Forms
         {
             Panel panel = new Panel
             {
-                Width = 1500,
+                Width = 1460,
                 Height = 80,
                 BackColor = Color.WhiteSmoke,
                 BorderStyle = BorderStyle.FixedSingle,
@@ -125,14 +125,14 @@ namespace BATODA.User_Control_Forms
                 foreach (Control ctrl in GFormFlowLayoutPanel.Controls)
                 {
                     if (ctrl is Panel p)
-                        p.Width = 850;
+                        p.Width = 790;
                 }
 
                 currentSelectedPanel = panel;
-                currentSelectedResponse = response; 
+                currentSelectedResponse = response;
 
-                GFormFlowLayoutPanel.Size = new Size(860, 1067);
-                GFormFlowLayoutPanel.Location = new Point(50, 70);
+                GFormFlowLayoutPanel.Size = new Size(803, 739);
+                GFormFlowLayoutPanel.Location = new Point(20, 82);
 
                 MessagePanel.Visible = true;
                 FromLbl.Text = response.Email;
@@ -158,14 +158,14 @@ namespace BATODA.User_Control_Forms
             {
                 if (ctrl is Panel p)
                 {
-                    p.Width = 1530;
+                    p.Width = 1460;
                 }
             }
 
             currentSelectedPanel = null;
 
-            GFormFlowLayoutPanel.Size = new Size(1535, 1067);
-            GFormFlowLayoutPanel.Location = new Point(50, 70);
+            GFormFlowLayoutPanel.Size = new Size(1486, 725);
+            GFormFlowLayoutPanel.Location = new Point(20, 82);
 
             MessagePanel.Visible = false;
         }

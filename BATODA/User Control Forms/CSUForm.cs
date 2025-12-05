@@ -14,7 +14,7 @@ namespace BATODA.User_Control_Forms
         private GmailServiceHandler gmailHandler = new GmailServiceHandler();
         private List<(string Id, string Subject, DateTime Date)> cachedMessages;
         private Panel currentSelectedPanel;
-        private int panelGenertedBig = 1530;
+        private int panelGenertedBig = 1460;
         private int panelGenertedSmall = 933;
         public CSUForm()
         {
@@ -101,7 +101,7 @@ namespace BATODA.User_Control_Forms
                 {
                     if (ctrl is Panel p)
                     {
-                        p.Width = 850;
+                        p.Width = 780;
                     }
                 }
 
@@ -109,8 +109,8 @@ namespace BATODA.User_Control_Forms
 
                 MessagePanel.Visible = true;
 
-                InboxFlowLayoutPanel.Size = new Size(860, 1067);
-                InboxFlowLayoutPanel.Location = new Point(50, 70);
+                InboxFlowLayoutPanel.Size = new Size(803, 739);
+                InboxFlowLayoutPanel.Location = new Point(20, 82);
 
                 var full = gmailHandler.GetFullMessage(messageId);
                 FromLbl.Text = full.From;
@@ -119,17 +119,6 @@ namespace BATODA.User_Control_Forms
             };
 
             return panel;
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-        }
-
-
-
-        private void CloseMessage_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void CloseMessage_Click_1(object sender, EventArgs e)
@@ -144,8 +133,8 @@ namespace BATODA.User_Control_Forms
 
             currentSelectedPanel = null;
 
-            InboxFlowLayoutPanel.Size = new Size(1535, 1067);
-            InboxFlowLayoutPanel.Location = new Point(50, 70);
+            InboxFlowLayoutPanel.Size = new Size(1486, 725);
+            InboxFlowLayoutPanel.Location = new Point(20, 82);
 
             MessagePanel.Visible = false;
             ReplyPanel.Visible = false;
@@ -153,8 +142,9 @@ namespace BATODA.User_Control_Forms
 
         private void ReplyButton_Click(object sender, EventArgs e)
         {
-
+           
             ReplyPanel.Visible = true;
+            ReplyPanel.Location = new Point(270, 140);
 
         }
 
@@ -199,8 +189,8 @@ namespace BATODA.User_Control_Forms
 
             currentSelectedPanel = null;
 
-            InboxFlowLayoutPanel.Size = new Size(1535, 1067);
-            InboxFlowLayoutPanel.Location = new Point(50, 70);
+            InboxFlowLayoutPanel.Size = new Size(1480, 767);
+            InboxFlowLayoutPanel.Location = new Point(20, 82);
 
             MessagePanel.Visible = false;
             ReplyPanel.Visible = false;
