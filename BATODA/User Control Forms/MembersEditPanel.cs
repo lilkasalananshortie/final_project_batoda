@@ -177,6 +177,8 @@ namespace BATODA.User_Control_Forms
                 EditBrandLbl.Text = member.TricycleBrand;
                 EditModelLbl.Text = member.TricycleModel;
                 EditMemberTypeLbl.Text = member.MembershipType;
+                StatusLbl.Text = member.MemberStatus;
+
             }
         }
     }

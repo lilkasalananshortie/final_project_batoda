@@ -275,6 +275,23 @@ namespace BATODA
 
             DataGridColumns.LoadMembersToGrid(MembersDataGrid, dataTable);
 
+            foreach (DataGridViewRow row in MembersDataGrid.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                if (DateTime.TryParse(row.Cells["Birthdate"].Value?.ToString(), out DateTime birthdate))
+                    row.Cells["Birthdate"].Value = birthdate.ToString("MMMM d, yyyy");
+
+                int penalty = Convert.ToInt32(row.Cells["PenaltyLevel"].Value);
+                string penaltyText = penalty == 0 ? "" :
+                                     penalty == 1 ? "First Warning" :
+                                     penalty == 2 ? "Final Warning" :
+                                     penalty == 3 ? $"Remaining {row.Cells["SuspensionDays"].Value} Hours of Suspension" :
+                                     "Unknown";
+                row.Cells["PenaltyLevel"].Value = penaltyText;
+            }
+
+
             ToastManager.Success("Filters Applied!");
         }
 
@@ -469,6 +486,8 @@ namespace BATODA
                 CurrentChassisLbl.Text = member.ChassisNumber;
                 CurrentEngineLbl.Text = member.EngineNumber;
                 CurrentPlateLbl.Text = member.PlateNumber;
+                StatusLbl.Text = member.MemberStatus;
+
 
                 AddPenaltyBtn.Text = member.PenaltyLevel == 3 ? "Suspend" : "Add Penalty";
             }
