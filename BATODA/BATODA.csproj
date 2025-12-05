@@ -110,6 +110,7 @@
     <Compile Include="Modules\Inbox Module\Gform Classes\GFormResponseModel.cs" />
     <Compile Include="Modules\Inbox Module\Gform Classes\GFormServiceHandler.cs" />
     <Compile Include="Modules\Inbox Module\Inbox Classes\GmailServiceHandler.cs" />
+    <Compile Include="Modules\Login Module\LoginRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberSort.cs" />
@@ -656,6 +657,7 @@
     <Content Include="Database Guide &amp; Queries\SystemActivityLog.txt" />
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
+    <Content Include="Database Guide &amp; Queries\UserAccountt.txt" />
     <Content Include="FixImageNotShowing.txt" />
     <None Include="Resources\hide.png" />
     <None Include="Resources\employee_14331334.png" />

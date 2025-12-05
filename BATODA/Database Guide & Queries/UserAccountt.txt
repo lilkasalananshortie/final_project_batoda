@@ -1,0 +1,11 @@
+CREATE TABLE UserAccount (
+    Username NVARCHAR(50) NOT NULL PRIMARY KEY,
+    Password NVARCHAR(255) NOT NULL,
+    FullName NVARCHAR(100) NOT NULL,
+    UserGmail NVARCHAR(100),
+    MunicipalGmail NVARCHAR(100),
+    DateCreated DATETIME NOT NULL DEFAULT GETDATE()
+);
+
+INSERT INTO UserAccount (Username, Password, FullName, UserGmail, MunicipalGmail, DateCreated)
+VALUES ('test', 'test123', 'Erwin Galman', 'bambangtoda@gmail.com', 'manalilimhakujose@gmail.com', GETDATE());

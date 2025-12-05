@@ -102,8 +102,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.EventsOverviewFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.MiniPanel = new System.Windows.Forms.Panel();
-            this.ViewCoord = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.panel1.SuspendLayout();
             this.AddEventPanel.SuspendLayout();
             this.SpecificMembsPanel.SuspendLayout();
@@ -132,8 +130,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceListDGV)).BeginInit();
             this.panel20.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.MiniPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewCoord)).BeginInit();
             this.SuspendLayout();
             // 
             // DayContainer
@@ -340,7 +336,7 @@
             this.SpecificMembsPanel.Controls.Add(this.label9);
             this.SpecificMembsPanel.Location = new System.Drawing.Point(437, 77);
             this.SpecificMembsPanel.Name = "SpecificMembsPanel";
-            this.SpecificMembsPanel.Size = new System.Drawing.Size(426, 164);
+            this.SpecificMembsPanel.Size = new System.Drawing.Size(426, 346);
             this.SpecificMembsPanel.TabIndex = 14;
             this.SpecificMembsPanel.Visible = false;
             // 
@@ -1073,35 +1069,12 @@
             this.EventsOverviewFlowLayoutPanel.Size = new System.Drawing.Size(433, 657);
             this.EventsOverviewFlowLayoutPanel.TabIndex = 14;
             // 
-            // MiniPanel
-            // 
-            this.MiniPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.MiniPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MiniPanel.Controls.Add(this.ViewCoord);
-            this.MiniPanel.Location = new System.Drawing.Point(851, 94);
-            this.MiniPanel.Name = "MiniPanel";
-            this.MiniPanel.Size = new System.Drawing.Size(315, 155);
-            this.MiniPanel.TabIndex = 15;
-            // 
-            // ViewCoord
-            // 
-            this.ViewCoord.AllowExternalDrop = true;
-            this.ViewCoord.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ViewCoord.CreationProperties = null;
-            this.ViewCoord.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.ViewCoord.Location = new System.Drawing.Point(9, 7);
-            this.ViewCoord.Name = "ViewCoord";
-            this.ViewCoord.Size = new System.Drawing.Size(294, 138);
-            this.ViewCoord.TabIndex = 14;
-            this.ViewCoord.ZoomFactor = 1D;
-            // 
             // CalendarUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
-            this.Controls.Add(this.MiniPanel);
             this.Controls.Add(this.PastEventAttendancePanel);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel20);
@@ -1157,8 +1130,6 @@
             this.panel20.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.MiniPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ViewCoord)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1240,7 +1211,5 @@
         private System.Windows.Forms.Panel DefaultAttendancePanel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel MiniPanel;
-        private Microsoft.Web.WebView2.WinForms.WebView2 ViewCoord;
     }
 }

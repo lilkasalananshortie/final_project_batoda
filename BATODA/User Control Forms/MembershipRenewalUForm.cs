@@ -58,7 +58,6 @@ namespace BATODA
             }
         }
 
-
         private void ShowNextCheckedMember()
         {
             DataGridViewRow nextRow = null;
@@ -134,8 +133,6 @@ namespace BATODA
             MessageBox.Show("Selected members have been renewed.");
             LoadRenewalGrid();
         }
-
-       
 
         private void FinanceButton_Click(object sender, EventArgs e)
         {
