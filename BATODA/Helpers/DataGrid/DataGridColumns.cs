@@ -81,17 +81,16 @@ namespace BATODA.Helpers.DataGrids
         public static void LoadTricyclesToGrid(DataGridView grid, DataTable table)
         {
             grid.DataSource = null;
-
             grid.Columns.Clear();
 
-            grid.Columns.Add("BodyNumber", "Body No.");
-            grid.Columns.Add("LastName", "Surname");
-            grid.Columns.Add("FirstName", "First Name");
-            grid.Columns.Add("TricycleBrand", "Brand");
-            grid.Columns.Add("TricModel", "Model");
-            grid.Columns.Add("PlateNumber", "Plate No.");
-            grid.Columns.Add("EngineNumber", "Engine No.");
-            grid.Columns.Add("ChassisNumber", "Chassis No.");
+            grid.Columns.Add("Body No.", "Body No.");
+            grid.Columns.Add("Last Name", "Surname");
+            grid.Columns.Add("First Name", "First Name");
+            grid.Columns.Add("Brand", "Brand");
+            grid.Columns.Add("Model", "Model");
+            grid.Columns.Add("Plate No.", "Plate No.");
+            grid.Columns.Add("Engine No.", "Engine No.");
+            grid.Columns.Add("Chassis No.", "Chassis No.");
             grid.Columns.Add("Availability", "Availability");
 
             foreach (DataGridViewColumn col in grid.Columns)
@@ -99,22 +98,22 @@ namespace BATODA.Helpers.DataGrids
 
             grid.Rows.Clear();
 
-            if (!table.Columns.Contains("BodyNumber"))
-                table.Columns.Add("BodyNumber");
+            if (!table.Columns.Contains("Body No."))
+                table.Columns.Add("Body No.");
             if (!table.Columns.Contains("Availability"))
                 table.Columns.Add("Availability");
 
             foreach (DataRow row in table.Rows)
             {
                 grid.Rows.Add(
-                    row["BodyNumber"].ToString().PadLeft(3, '0'), 
-                    row["LastName"].ToString(),
-                    row["FirstName"].ToString(),
-                    row["TricycleBrand"].ToString(),
-                    row["TricycleModel"].ToString(),
-                    row["PlateNumber"].ToString(),
-                    row["EngineNumber"].ToString(),
-                    row["ChassisNumber"].ToString(),
+                    row["Body No."].ToString().PadLeft(3, '0'),
+                    row["Last Name"].ToString(),
+                    row["First Name"].ToString(),
+                    row["Brand"].ToString(),
+                    row["Model"].ToString(),
+                    row["Plate No."].ToString(),
+                    row["Engine No."].ToString(),
+                    row["Chassis No."].ToString(),
                     row["Availability"].ToString()
                 );
             }

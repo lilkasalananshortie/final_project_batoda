@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MembersTopPanel = new System.Windows.Forms.Panel();
             this.TransferRecordButton = new BATODA.ButtonStyle();
             this.RegisteredVehicleButton = new BATODA.ButtonStyle();
@@ -88,6 +88,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.ContactLbl = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.EngineTxt = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.ModelTxt = new System.Windows.Forms.TextBox();
@@ -96,7 +97,8 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.BrandTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.EngineTxt = new System.Windows.Forms.TextBox();
+            this.NoResultsPanel = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TricycleGrid)).BeginInit();
@@ -121,6 +123,7 @@
             this.panel14.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.NoResultsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -238,6 +241,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.NoResultsPanel);
             this.panel1.Controls.Add(this.ApplySearchButton);
             this.panel1.Controls.Add(this.ClearButton);
             this.panel1.Controls.Add(this.TricycleGrid);
@@ -325,24 +329,24 @@
             // 
             this.TricycleGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.TricycleGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TricycleGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.TricycleGrid.Location = new System.Drawing.Point(26, 79);
             this.TricycleGrid.Name = "TricycleGrid";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TricycleGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.TricycleGrid.Size = new System.Drawing.Size(1532, 595);
             this.TricycleGrid.TabIndex = 34;
             this.TricycleGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TricycleGrid_CellContentClick);
@@ -469,11 +473,12 @@
             // 
             this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(6, 3);
+            this.SearchTextBox.Location = new System.Drawing.Point(5, 3);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(338, 24);
             this.SearchTextBox.TabIndex = 22;
+            this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
             // 
             // pictureBox1
             // 
@@ -966,6 +971,16 @@
             this.panel18.Size = new System.Drawing.Size(346, 44);
             this.panel18.TabIndex = 63;
             // 
+            // EngineTxt
+            // 
+            this.EngineTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EngineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EngineTxt.Location = new System.Drawing.Point(8, 9);
+            this.EngineTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EngineTxt.Name = "EngineTxt";
+            this.EngineTxt.Size = new System.Drawing.Size(323, 24);
+            this.EngineTxt.TabIndex = 76;
+            // 
             // textBox5
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1043,15 +1058,26 @@
             this.label3.TabIndex = 64;
             this.label3.Text = "Engine Number *";
             // 
-            // EngineTxt
+            // NoResultsPanel
             // 
-            this.EngineTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EngineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EngineTxt.Location = new System.Drawing.Point(8, 9);
-            this.EngineTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EngineTxt.Name = "EngineTxt";
-            this.EngineTxt.Size = new System.Drawing.Size(323, 24);
-            this.EngineTxt.TabIndex = 76;
+            this.NoResultsPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.NoResultsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NoResultsPanel.Controls.Add(this.label16);
+            this.NoResultsPanel.Location = new System.Drawing.Point(26, 80);
+            this.NoResultsPanel.Name = "NoResultsPanel";
+            this.NoResultsPanel.Size = new System.Drawing.Size(1532, 100);
+            this.NoResultsPanel.TabIndex = 54;
+            this.NoResultsPanel.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(637, 34);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(274, 37);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "No Results Found";
             // 
             // TricycleUForm
             // 
@@ -1109,6 +1135,8 @@
             this.panel17.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.NoResultsPanel.ResumeLayout(false);
+            this.NoResultsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1181,5 +1209,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox EngineTxt;
+        private System.Windows.Forms.Panel NoResultsPanel;
+        private System.Windows.Forms.Label label16;
     }
 }
