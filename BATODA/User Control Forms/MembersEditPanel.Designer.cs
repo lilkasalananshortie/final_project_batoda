@@ -34,10 +34,22 @@
             this.SaveEditBtn = new BATODA.ButtonStyle();
             this.CancelButton = new BATODA.ButtonStyle();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.EditBodyNoPreviewLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.EditBirthdatePicker = new System.Windows.Forms.DateTimePicker();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.EditModelLbl = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.EditBrandLbl = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.EditLastNameTxt = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.UploadImageBtn = new BATODA.ButtonStyle();
             this.PreviewImagePb = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.EditContactNoLbl = new System.Windows.Forms.TextBox();
             this.ResetButton = new BATODA.ButtonStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -51,19 +63,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.EditFirstNameTxt = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.EditModelLbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.EditBodyNoPreviewLbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.EditBrandLbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.EditLastNameTxt = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.EditContactNoLbl = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.EditMiddleTxt = new System.Windows.Forms.TextBox();
@@ -71,20 +73,20 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.EditPlateNoLbl = new System.Windows.Forms.Label();
             this.EditFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.StatusLbl = new System.Windows.Forms.Label();
             this.AddMemberPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel16.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).BeginInit();
+            this.panel12.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.SuspendLayout();
@@ -226,6 +228,26 @@
             this.panel16.Size = new System.Drawing.Size(1196, 590);
             this.panel16.TabIndex = 28;
             // 
+            // EditBodyNoPreviewLbl
+            // 
+            this.EditBodyNoPreviewLbl.AutoSize = true;
+            this.EditBodyNoPreviewLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBodyNoPreviewLbl.Location = new System.Drawing.Point(70, 52);
+            this.EditBodyNoPreviewLbl.Name = "EditBodyNoPreviewLbl";
+            this.EditBodyNoPreviewLbl.Size = new System.Drawing.Size(281, 42);
+            this.EditBodyNoPreviewLbl.TabIndex = 53;
+            this.EditBodyNoPreviewLbl.Text = "BATODA (027)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(782, 206);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 25);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Status *";
+            // 
             // EditBirthdatePicker
             // 
             this.EditBirthdatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,9 +256,77 @@
             this.EditBirthdatePicker.Location = new System.Drawing.Point(785, 144);
             this.EditBirthdatePicker.MaxDate = new System.DateTime(2999, 12, 31, 0, 0, 0, 0);
             this.EditBirthdatePicker.Name = "EditBirthdatePicker";
-            this.EditBirthdatePicker.Size = new System.Drawing.Size(327, 35);
+            this.EditBirthdatePicker.Size = new System.Drawing.Size(329, 35);
             this.EditBirthdatePicker.TabIndex = 54;
             this.EditBirthdatePicker.Value = new System.DateTime(2025, 11, 17, 2, 39, 13, 0);
+            // 
+            // panel14
+            // 
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel14.Controls.Add(this.EditModelLbl);
+            this.panel14.Location = new System.Drawing.Point(787, 322);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(327, 44);
+            this.panel14.TabIndex = 26;
+            // 
+            // EditModelLbl
+            // 
+            this.EditModelLbl.AutoSize = true;
+            this.EditModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditModelLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.EditModelLbl.Location = new System.Drawing.Point(5, 7);
+            this.EditModelLbl.Name = "EditModelLbl";
+            this.EditModelLbl.Size = new System.Drawing.Size(126, 25);
+            this.EditModelLbl.TabIndex = 58;
+            this.EditModelLbl.Text = "Placeholder";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.StatusLbl);
+            this.panel1.Location = new System.Drawing.Point(787, 234);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(327, 44);
+            this.panel1.TabIndex = 55;
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.EditBrandLbl);
+            this.panel13.Location = new System.Drawing.Point(423, 322);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(327, 44);
+            this.panel13.TabIndex = 26;
+            // 
+            // EditBrandLbl
+            // 
+            this.EditBrandLbl.AutoSize = true;
+            this.EditBrandLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBrandLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.EditBrandLbl.Location = new System.Drawing.Point(5, 8);
+            this.EditBrandLbl.Name = "EditBrandLbl";
+            this.EditBrandLbl.Size = new System.Drawing.Size(126, 25);
+            this.EditBrandLbl.TabIndex = 57;
+            this.EditBrandLbl.Text = "Placeholder";
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.EditLastNameTxt);
+            this.panel9.Location = new System.Drawing.Point(785, 58);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(329, 44);
+            this.panel9.TabIndex = 26;
+            // 
+            // EditLastNameTxt
+            // 
+            this.EditLastNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditLastNameTxt.Location = new System.Drawing.Point(10, 8);
+            this.EditLastNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EditLastNameTxt.Name = "EditLastNameTxt";
+            this.EditLastNameTxt.Size = new System.Drawing.Size(300, 24);
+            this.EditLastNameTxt.TabIndex = 42;
             // 
             // label25
             // 
@@ -291,6 +381,35 @@
             this.PreviewImagePb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PreviewImagePb.TabIndex = 51;
             this.PreviewImagePb.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(418, 205);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(181, 25);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Contact Number *";
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.EditContactNoLbl);
+            this.panel12.Location = new System.Drawing.Point(423, 234);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(327, 44);
+            this.panel12.TabIndex = 26;
+            // 
+            // EditContactNoLbl
+            // 
+            this.EditContactNoLbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EditContactNoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditContactNoLbl.Location = new System.Drawing.Point(6, 6);
+            this.EditContactNoLbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EditContactNoLbl.Name = "EditContactNoLbl";
+            this.EditContactNoLbl.Size = new System.Drawing.Size(249, 24);
+            this.EditContactNoLbl.TabIndex = 42;
             // 
             // ResetButton
             // 
@@ -443,26 +562,6 @@
             this.label22.TabIndex = 27;
             this.label22.Text = "Model *";
             // 
-            // panel14
-            // 
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.EditModelLbl);
-            this.panel14.Location = new System.Drawing.Point(787, 322);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(327, 44);
-            this.panel14.TabIndex = 26;
-            // 
-            // EditModelLbl
-            // 
-            this.EditModelLbl.AutoSize = true;
-            this.EditModelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditModelLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.EditModelLbl.Location = new System.Drawing.Point(5, 7);
-            this.EditModelLbl.Name = "EditModelLbl";
-            this.EditModelLbl.Size = new System.Drawing.Size(126, 25);
-            this.EditModelLbl.TabIndex = 58;
-            this.EditModelLbl.Text = "Placeholder";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -472,16 +571,6 @@
             this.label7.Size = new System.Drawing.Size(173, 25);
             this.label7.TabIndex = 27;
             this.label7.Text = "Chasis Number *";
-            // 
-            // EditBodyNoPreviewLbl
-            // 
-            this.EditBodyNoPreviewLbl.AutoSize = true;
-            this.EditBodyNoPreviewLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBodyNoPreviewLbl.Location = new System.Drawing.Point(70, 52);
-            this.EditBodyNoPreviewLbl.Name = "EditBodyNoPreviewLbl";
-            this.EditBodyNoPreviewLbl.Size = new System.Drawing.Size(281, 42);
-            this.EditBodyNoPreviewLbl.TabIndex = 53;
-            this.EditBodyNoPreviewLbl.Text = "BATODA (027)";
             // 
             // label13
             // 
@@ -493,26 +582,6 @@
             this.label13.TabIndex = 27;
             this.label13.Text = "Tricycle Brand";
             // 
-            // panel13
-            // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.EditBrandLbl);
-            this.panel13.Location = new System.Drawing.Point(423, 322);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(327, 44);
-            this.panel13.TabIndex = 26;
-            // 
-            // EditBrandLbl
-            // 
-            this.EditBrandLbl.AutoSize = true;
-            this.EditBrandLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBrandLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.EditBrandLbl.Location = new System.Drawing.Point(5, 8);
-            this.EditBrandLbl.Name = "EditBrandLbl";
-            this.EditBrandLbl.Size = new System.Drawing.Size(126, 25);
-            this.EditBrandLbl.TabIndex = 57;
-            this.EditBrandLbl.Text = "Placeholder";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -522,54 +591,6 @@
             this.label9.Size = new System.Drawing.Size(129, 25);
             this.label9.TabIndex = 27;
             this.label9.Text = "Last Name *";
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.EditLastNameTxt);
-            this.panel9.Location = new System.Drawing.Point(785, 58);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(327, 44);
-            this.panel9.TabIndex = 26;
-            // 
-            // EditLastNameTxt
-            // 
-            this.EditLastNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EditLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditLastNameTxt.Location = new System.Drawing.Point(9, 12);
-            this.EditLastNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EditLastNameTxt.Name = "EditLastNameTxt";
-            this.EditLastNameTxt.Size = new System.Drawing.Size(300, 24);
-            this.EditLastNameTxt.TabIndex = 42;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(418, 205);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(181, 25);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Contact Number *";
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.EditContactNoLbl);
-            this.panel12.Location = new System.Drawing.Point(423, 234);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(327, 44);
-            this.panel12.TabIndex = 26;
-            // 
-            // EditContactNoLbl
-            // 
-            this.EditContactNoLbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EditContactNoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditContactNoLbl.Location = new System.Drawing.Point(6, 6);
-            this.EditContactNoLbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EditContactNoLbl.Name = "EditContactNoLbl";
-            this.EditContactNoLbl.Size = new System.Drawing.Size(249, 24);
-            this.EditContactNoLbl.TabIndex = 42;
             // 
             // label10
             // 
@@ -634,23 +655,16 @@
             // 
             this.EditFileDialog.FileName = "openFileDialog1";
             // 
-            // label2
+            // StatusLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(782, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 25);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Status *";
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(790, 234);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 44);
-            this.panel1.TabIndex = 55;
+            this.StatusLbl.AutoSize = true;
+            this.StatusLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusLbl.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.StatusLbl.Location = new System.Drawing.Point(5, 8);
+            this.StatusLbl.Name = "StatusLbl";
+            this.StatusLbl.Size = new System.Drawing.Size(126, 25);
+            this.StatusLbl.TabIndex = 59;
+            this.StatusLbl.Text = "Placeholder";
             // 
             // MembersEditPanel
             // 
@@ -665,7 +679,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewImagePb)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
@@ -674,14 +698,6 @@
             this.panel15.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -737,5 +753,6 @@
         private System.Windows.Forms.Label EditModelLbl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label StatusLbl;
     }
 }
