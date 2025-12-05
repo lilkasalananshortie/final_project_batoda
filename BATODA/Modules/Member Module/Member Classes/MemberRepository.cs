@@ -112,7 +112,7 @@ namespace BATODA.Modules.MemberModule
                 INSERT INTO MemberInfo 
                 (MembershipType, LastName, FirstName, MiddleInitial, Birthdate, 
                 TricycleBrand, TricycleModel, ContactNumber, ChassisNumber, 
-                EngineNumber, PlateNumber, DateJoined, MemberStatus, TaxBalance)
+                EngineNumber, PlateNumber, DateJoined, MemberStatus)
                 VALUES 
                 (@MembershipType, @LastName, @FirstName, @MiddleInitial, @Birthdate, 
                 @TricycleBrand, @TricycleModel, @ContactNumber, @ChassisNumber, 
@@ -136,7 +136,6 @@ namespace BATODA.Modules.MemberModule
 
                     cmd.ExecuteNonQuery();
                 }
-
             }
         }
 

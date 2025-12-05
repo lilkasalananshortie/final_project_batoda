@@ -234,7 +234,7 @@ namespace BATODA
             }
             catch (Exception ex)
             {
-               ToastManager.Error("Error adding new member: " + ex.Message);
+                MessageBox.Show("Error adding new member: " + ex.Message);
             }
         }
 
