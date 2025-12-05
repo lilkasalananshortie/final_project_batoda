@@ -39,7 +39,7 @@ namespace BATODA
 
         private void TransferRecordMemberUForm_Load(object sender, EventArgs e)
         {
-            DataGridCustom.ApplyCustomGrid(TransferMembershipHistoryGrid);
+            DataGridCustom.ApplyCustomMemberHistoryGrid(TransferMembershipHistoryGrid);
 
             TransferMembershipHistoryRepository historyRepo = new TransferMembershipHistoryRepository();
             var table = historyRepo.GetAllTransferRecords();

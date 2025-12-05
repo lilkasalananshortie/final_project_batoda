@@ -111,6 +111,19 @@ namespace BATODA
                     }
                 }
 
+                else if (ctrl is PictureBox pb)
+                {
+                    if (pb.Tag is string) 
+                    {
+                        pb.Image = Properties.Resources.icon_add_image; 
+                        pb.Refresh();
+                    }
+                    else
+                    {
+                        pb.Image = Properties.Resources.icon_add_image; 
+                    }
+                }
+
                 if (ctrl.HasChildren)
                 {
                     ClearInputs(ctrl);

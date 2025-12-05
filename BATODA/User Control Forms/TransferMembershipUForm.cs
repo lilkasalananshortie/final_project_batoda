@@ -24,19 +24,7 @@ namespace BATODA
         public TransferMembershipUForm()
         {
             InitializeComponent();
-
-            ConfirmationPanel.Hide();
-            ConfirmationTransferPanel.Hide();
-
-            // test lang pang push
         }
-
-        private void TransferMembershipUForm_Load(object sender, EventArgs e)
-        {
-            
-            
-        }
-
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
         {
@@ -51,38 +39,16 @@ namespace BATODA
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
-        }
-
-        private void SearchButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            
-
-            
-
-        }
-
-       
+        }       
 
         private void ConfirmationButton_Click(object sender, EventArgs e)
         {
-           ConfirmationPanel.Hide();
            ToastManager.Success("Membership Transferred Successfully!");
             
         }
 
         private void CancelConfirmation_Click(object sender, EventArgs e)
         {
-            ConfirmationPanel.Hide();
             ToastManager.Info("Membership Transfer Cancelled.");
         }
 
@@ -107,20 +73,6 @@ namespace BATODA
 
 
             HolderPanel1.SendToBack();
-            ConfirmationPanel.Show();
-            ConfirmationTransferPanel.BringToFront();
-            ConfirmationTransferPanel.Show();
-        }
-
-
-        private void HolderPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        
-        private void OwnerSearchTxt_KeyDown(object sender, KeyEventArgs e)
-        {
-
         }
 
         private void OwnerSearchGrid_Leave(object sender, EventArgs e)
@@ -132,10 +84,6 @@ namespace BATODA
         {
             if (OwnerSearchGrid.Visible)
                 OwnerSearchGrid.Visible = false;
-        }
-
-        private void panel24_Click(object sender, EventArgs e)
-        {
         }
 
         private void OwnerSearchGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -174,111 +122,10 @@ namespace BATODA
             OwnerSearchGrid.Visible = false;
         }
 
-
-        private void ConfirmationTransferPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void SavePanelButton_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    var memberRepo = new MemberRepository();
-            //    var transferRepo = new TransferMembershipHistoryRepository(); // REPO FOR HISTORY
-
-            //    string digitsOnly = new string(CurrentBodyNumberLbl.Text.Where(char.IsDigit).ToArray());
-            //    if (string.IsNullOrEmpty(digitsOnly))
-            //    {
-            //        MessageBox.Show("Invalid Body Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        return;
-            //    }
-
-            //    int bodyNumber = int.Parse(digitsOnly);
-
-            //    // CHECK TAX BALANCE BEFORE TRANSFER
-            //    if (!transferRepo.CanTransferMember(bodyNumber))
-            //    {
-            //        return; // STOP IF MEMBER HAS REMAINING BALANCE
-            //    }
-
-            //    // CHECK LAST TRANSFER DATE
-            //    DateTime? lastTransferDate = transferRepo.GetLastTransferDate(bodyNumber);
-            //    if (lastTransferDate.HasValue && (DateTime.Now - lastTransferDate.Value).TotalDays < 3)
-            //    {
-            //        MessageBox.Show("This member was recently transferred. Please wait 3 days before transferring again.",
-            //                        "Transfer Restricted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        return;
-            //    }
-
-            //    // CREATE UPDATED MEMBER INFO
-            //    MemberModel updatedMember = new MemberModel
-            //    {
-            //        BodyNumber = bodyNumber,
-            //        MembershipType = TransferMemberTypeCmb.Text,
-            //        LastName = TransferLastNameTxt.Text,
-            //        FirstName = TransferFirstNameTxt.Text,
-            //        MiddleInitial = TransferMiddleTxt.Text,
-            //        Birthdate = TransferBirthdatePicker.Value,
-            //        TricycleBrand = TransferBrandTxt.Text,
-            //        TricycleModel = TransferModelTxt.Text,
-            //        ContactNumber = TransferContactTxt.Text,
-            //        ChassisNumber = TransferChassisTxt.Text,
-            //        EngineNumber = TransferEngineTxt.Text,
-            //        PlateNumber = TransferPlateTxt.Text,
-            //        TaxBalance = 0,
-            //        MemberStatus = "Active",
-            //        PenaltyLevel = 0,
-            //        DateJoined = DateTime.Now
-            //    };
-
-            //    // SAVE NEW IMAGE IF AVAILABLE
-            //    if (NewOwnerPb.Image != null && !string.IsNullOrEmpty(TransferUploadImage.FileName))
-            //    {
-            //        string savedPath = SaveImageToFolder.TransferMembershipSave(TransferUploadImage.FileName, bodyNumber);
-            //        updatedMember.ImagePath = savedPath;
-            //    }
-
-            //    // UPDATE MEMBER DATA
-            //    memberRepo.TransferMember(updatedMember);
-
-            //    // RECORD TRANSFER HISTORY
-            //    TransferMembershipHistoryModel transferRecord = new TransferMembershipHistoryModel
-            //    {
-            //        BodyNumber = bodyNumber,
-            //        PastOwnerFullName = $"{CurrentFirstNameLbl.Text} {CurrentLastNameLbl.Text}",
-            //        NewOwnerFullName = $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}",
-            //        ReasonForTransfer = TransferReasonTxt.Text,
-            //        DateOfTransfer = DateTime.Now
-            //    };
-
-            //    transferRepo.AddTransferRecord(transferRecord);
-
-            //    var logRepo = new SystemActivityLogRepository();
-            //    logRepo.LogMembershipTransfer(bodyNumber, $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}");
-
-            //    MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    ConfirmationTransferPanel.Hide();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-        }
-
         private void CancelPanelButton_Click(object sender, EventArgs e)
         {
             ConfirmationTransferPanel.Hide();
         }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
-        {
-                    }
 
         private void TransferUploadBtn_Click(object sender, EventArgs e)
         {
@@ -462,9 +309,6 @@ namespace BATODA
                 }
 
                 HolderPanel1.SendToBack();
-                ConfirmationPanel.Show();
-                ConfirmationTransferPanel.BringToFront();
-                ConfirmationTransferPanel.Show();
             }
             catch (Exception ex)
             {

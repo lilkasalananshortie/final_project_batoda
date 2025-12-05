@@ -236,6 +236,8 @@ namespace BATODA
             {
                 MessageBox.Show("Error adding new member: " + ex.Message);
             }
+
+            DisplayClass.ClearInputs(this);
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
