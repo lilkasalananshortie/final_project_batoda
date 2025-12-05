@@ -406,5 +406,9 @@ namespace BATODA
 
         }
 
+        private void MassChangeSelectionPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BATODA.Helpers.Database.Assistance;
 using BATODA.Helpers.Database.Members;
+using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.User_Control_Forms;
 using System;
@@ -86,6 +87,8 @@ namespace BATODA
             SystemLogGrid.Columns["ActionType"].HeaderText = "Action Type";
             SystemLogGrid.Columns["Description"].HeaderText = "Description";
             SystemLogGrid.Columns["DateRecorded"].HeaderText = "Date";
+
+            DataGridCustom.ApplyActivityLogGrid(SystemLogGrid);
         }
 
 
