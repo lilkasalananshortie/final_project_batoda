@@ -24,11 +24,28 @@ namespace BATODA
         {
             TricycleRepository repo = new TricycleRepository();
             DataTable history = repo.LoadTransferHistory();
+
+            if (!history.Columns.Contains("BodyNumberDisplay"))
+                history.Columns.Add("BodyNumberDisplay", typeof(string));
+
+            foreach (DataRow row in history.Rows)
+            {
+                row["BodyNumberDisplay"] = Convert.ToInt32(row["BodyNumber"]).ToString("D3");
+            }
+
             TransferTricHistoryGrid.DataSource = history;
+
+            if (TransferTricHistoryGrid.Columns.Contains("BodyNumberDisplay"))
+            {
+                TransferTricHistoryGrid.Columns["BodyNumberDisplay"].HeaderText = "Body No.";
+                TransferTricHistoryGrid.Columns["BodyNumberDisplay"].DisplayIndex = 0;
+            }
 
             DataGridColumns.LoadTransferHistoryToGrid(TransferTricHistoryGrid, history);
             DataGridCustom.ApplyCustomGrid(TransferTricHistoryGrid);
         }
+
+
 
         private void TransferRecordVehicleUForm_Load(object sender, EventArgs e)
         {

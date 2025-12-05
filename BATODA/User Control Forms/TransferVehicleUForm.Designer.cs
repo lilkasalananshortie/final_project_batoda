@@ -309,9 +309,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(527, 212);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 25);
+            this.label17.Size = new System.Drawing.Size(198, 25);
             this.label17.TabIndex = 111;
-            this.label17.Text = "Role *";
+            this.label17.Text = "Membership Type *";
             // 
             // panel2
             // 
@@ -423,7 +423,7 @@
             this.OwnerSearchGrid.Name = "OwnerSearchGrid";
             this.OwnerSearchGrid.RowHeadersVisible = false;
             this.OwnerSearchGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.OwnerSearchGrid.Size = new System.Drawing.Size(524, 21);
+            this.OwnerSearchGrid.Size = new System.Drawing.Size(524, 67);
             this.OwnerSearchGrid.TabIndex = 105;
             this.OwnerSearchGrid.Visible = false;
             this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick);
@@ -688,7 +688,7 @@
             // 
             this.VehicOwnerSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.VehicOwnerSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VehicOwnerSearch.Location = new System.Drawing.Point(3, 6);
+            this.VehicOwnerSearch.Location = new System.Drawing.Point(8, 7);
             this.VehicOwnerSearch.Name = "VehicOwnerSearch";
             this.VehicOwnerSearch.Size = new System.Drawing.Size(462, 22);
             this.VehicOwnerSearch.TabIndex = 44;
@@ -697,10 +697,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox2.Location = new System.Drawing.Point(479, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(485, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Size = new System.Drawing.Size(25, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
