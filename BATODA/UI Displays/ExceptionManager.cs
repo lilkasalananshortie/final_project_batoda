@@ -19,7 +19,7 @@ internal static class ExceptionManager
 
             using (ExceptionForm exForm = new ExceptionForm(message))
             {
-                exForm.BackColor = backColor; // set the color here
+                exForm.BackColor = backColor; 
                 exForm.StartPosition = FormStartPosition.CenterScreen;
                 exForm.TopMost = true;
 

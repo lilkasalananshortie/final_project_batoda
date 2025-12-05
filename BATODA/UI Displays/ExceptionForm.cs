@@ -16,12 +16,9 @@ namespace BATODA.UI_Displays
             Opacity = 0;
             TopMost = true;
 
-
-
-            // Hook close button
             btnClose.Click += (s, e) => StartFadeOut();
 
-            // Fade-in
+   
             _fadeIn = new Timer { Interval = 25 };
             _fadeIn.Tick += (s, e) =>
             {
@@ -29,7 +26,7 @@ namespace BATODA.UI_Displays
                 if (Opacity >= 1.0) _fadeIn.Stop();
             };
 
-            // Fade-out
+   
             _fadeOut = new Timer { Interval = 25 };
             _fadeOut.Tick += (s, e) =>
             {
@@ -41,7 +38,6 @@ namespace BATODA.UI_Displays
                 }
             };
 
-            // Auto-close after 3 seconds
             _autoClose = new Timer { Interval = 3000 };
             _autoClose.Tick += (s, e) =>
             {
