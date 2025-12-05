@@ -1,5 +1,6 @@
 ﻿using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrid;
+using BATODA.Helpers.DataGrids;
 using BATODA.Modules; 
 using BATODA.Modules.Assistance_Request_Module;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
@@ -292,6 +293,8 @@ namespace BATODA
                 RequestSearchOwner search = new RequestSearchOwner();
                 search.SearchOwner(ReqSearchTxt, ReqSearchGrid);
                 SearchResults.SetupSearchGrid(ReqSearchGrid);
+                DataGridCustom.ApplyCustomGridSearch(ReqSearchGrid);
+
                 ReqSearchGrid.Focus();
                 e.SuppressKeyPress = true;
             }
@@ -395,6 +398,11 @@ namespace BATODA
         {
             SearchTextBox.Text = "";
             LoadAllTickets();
+        }
+
+        private void CreateTicketPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
