@@ -181,6 +181,8 @@ namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
                 else if (today == DayOfWeek.Wednesday) unavailableDigits = "5,6";
                 else if (today == DayOfWeek.Thursday) unavailableDigits = "7,8";
                 else if (today == DayOfWeek.Friday) unavailableDigits = "9,0";
+                else if (today == DayOfWeek.Saturday || today == DayOfWeek.Sunday) unavailableDigits = "All Available";
+
 
                 int unavailableCount = 0;
                 if (today != DayOfWeek.Saturday && today != DayOfWeek.Sunday)
@@ -222,13 +224,13 @@ namespace BATODA.Modules.Tricycle_Module.Tricycle_Classes
                 string codingMembers = "";
                 if (today == DayOfWeek.Saturday || today == DayOfWeek.Sunday)
                 {
-                    string weekendQuery = "SELECT STRING_AGG(BodyNumber, ' / ') FROM MemberInfo WHERE MemberStatus = 'Active'";
-                    codingMembers = Convert.ToString(new SqlCommand(weekendQuery, conn).ExecuteScalar());
+                    codingMembers = "All Available";
                 }
                 else
                 {
                     codingMembers = unavailableDigits.Replace(",", " / ");
                 }
+
 
                 codingLbl.Text = codingMembers;
             }

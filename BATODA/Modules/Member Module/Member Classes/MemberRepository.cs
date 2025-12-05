@@ -426,25 +426,25 @@ namespace BATODA.Modules.MemberModule
         public void UpdateSuspensionHours()
         {
             string query = @"
-        UPDATE MemberInfo
-        SET 
-            SuspensionDays = CASE 
-                                WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) > 0
-                                THEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE())
-                                ELSE 0
-                              END,
-            PenaltyLevel = CASE
-                            WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) <= 0
-                            THEN 0
-                            ELSE PenaltyLevel
-                          END,
-            SuspensionStart = CASE
+            UPDATE MemberInfo
+            SET 
+                SuspensionDays = CASE 
+                                    WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) > 0
+                                    THEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE())
+                                    ELSE 0
+                                  END,
+                PenaltyLevel = CASE
                                 WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) <= 0
-                                THEN NULL
-                                ELSE SuspensionStart
-                              END
-        WHERE PenaltyLevel = 3;
-    ";
+                                THEN 0
+                                ELSE PenaltyLevel
+                              END,
+                SuspensionStart = CASE
+                                    WHEN 24 - DATEDIFF(HOUR, SuspensionStart, GETDATE()) <= 0
+                                    THEN NULL
+                                    ELSE SuspensionStart
+                                  END
+            WHERE PenaltyLevel = 3;
+            ";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))

@@ -104,6 +104,7 @@ namespace BATODA
 
         private void ClearButton_Click_1(object sender, EventArgs e)
         {
+            LoadTricycleGrid();
             DisplayClass.ClearInputs(this);
             ToastManager.Success("Filters Cleared Successfully!");
         }

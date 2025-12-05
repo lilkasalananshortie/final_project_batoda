@@ -260,6 +260,7 @@ namespace BATODA
 
         private void ClearButton_Click_1(object sender, EventArgs e)
         {
+            LoadMembersToGrid();
             DisplayClass.ClearInputs(this);
             ToastManager.Success("Filters Cleared Successfully!");
         }
