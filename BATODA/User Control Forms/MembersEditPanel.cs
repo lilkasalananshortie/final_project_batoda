@@ -1,6 +1,7 @@
 ﻿using BATODA.Helpers.Database.Members;
 using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
 using BATODA.Modules.MemberModule;
+using BATODA.UI_Displays;
 using System;
 using System.Drawing;
 using System.IO;
@@ -36,10 +37,9 @@ namespace BATODA.User_Control_Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading member image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading member image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);               
             }
         }
-
 
         private void SaveEditBtn_Click(object sender, EventArgs e)
         {
@@ -102,7 +102,7 @@ namespace BATODA.User_Control_Forms
                 var logRepo = new SystemActivityLogRepository();
                 logRepo.LogMemberUpdate(SelectedMemberImage.BodyNumber);
 
-                MessageBox.Show("Member details and image updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ToastManager.Success("Member details and image updated successfully!");        
                 DisplayClass.CloseMiniAndMain();
                 DisplayClass.ShowMain(new MembersUForm());
             }
@@ -112,7 +112,6 @@ namespace BATODA.User_Control_Forms
             }
         }
 
-
         private void CancelButton_Click(object sender, EventArgs e)
         {
             DisplayClass.CloseMini(this);
@@ -121,26 +120,42 @@ namespace BATODA.User_Control_Forms
 
         private void UploadImageBtn_Click(object sender, EventArgs e)
         {
-            EditFileDialog.Title = "Select an Image";
-            EditFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-
-            if (EditFileDialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                EditImagePath = EditFileDialog.FileName;
+                EditFileDialog.Title = "Select an Image";
+                EditFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
-                using (var temp = new Bitmap(EditImagePath))
+                if (EditFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    if (PreviewImagePb.Image != null)
+                    EditImagePath = EditFileDialog.FileName;
+
+                    using (var temp = new Bitmap(EditImagePath))
                     {
-                        PreviewImagePb.Image.Dispose();
+                        if (PreviewImagePb.Image != null)
+                        {
+                            PreviewImagePb.Image.Dispose();
+                        }
+
+                        PreviewImagePb.Image = new Bitmap(temp);
                     }
 
-                    PreviewImagePb.Image = new Bitmap(temp);
+                    PreviewImagePb.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
-
-                PreviewImagePb.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            catch (FileNotFoundException)
+            {
+                ToastManager.Error("Selected image file was not found.");
+            }
+            catch (OutOfMemoryException)
+            {
+                ToastManager.Error("The selected file is not a valid image.");
+            }
+            catch (Exception ex)
+            {
+                ToastManager.Error($"Failed to load image: {ex.Message}");
             }
         }
+
 
         private void MembersEditPanel_Load(object sender, EventArgs e)
         {
@@ -163,26 +178,6 @@ namespace BATODA.User_Control_Forms
                 EditModelLbl.Text = member.TricycleModel;
                 EditMemberTypeLbl.Text = member.MembershipType;
             }
-        }
-
-        private void EditPlateNoLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel13_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel16_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

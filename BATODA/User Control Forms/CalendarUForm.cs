@@ -45,8 +45,6 @@ namespace BATODA
         private string selectedCoords = "";
 
         private readonly EventRepository eventRepo = new EventRepository();
-
-
         public CalendarUForm()
         {
             InitializeComponent();
@@ -56,15 +54,13 @@ namespace BATODA
             CheckAttendancePanel.Hide();
             ReqAttendeesCmb.SelectedIndexChanged += ReqAttendeesCmb_SelectedIndexChanged;
             DefaultAttendancePanel.Show();
-            MiniPanel.Visible = false;
+            
 
         }
-
         private void WebViewMap_WebMessageReceived(object sender, Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs e)
         {
             selectedCoords = e.TryGetWebMessageAsString();
         }
-
         private async void CalendarUForm_Load(object sender, EventArgs e)
         {
 
@@ -162,7 +158,6 @@ namespace BATODA
 
         }
 
-
         private void nextButton_Click(object sender, EventArgs e)
         {
             month++;
@@ -175,7 +170,6 @@ namespace BATODA
             CalendarHandler.DisplayCalendarDays(month, year, DayContainer, lbDate, events, AddEventToDayCell);
 
         }
-
         private void previousButton_Click(object sender, EventArgs e)
         {
             month--;
@@ -289,8 +283,6 @@ namespace BATODA
             TimePicker.Value = DateTime.Now;
         }
 
-
-
         private void EventPanel_Click(object sender, EventArgs e)
         {
             selectedEventPanel = sender as Panel;
@@ -305,10 +297,7 @@ namespace BATODA
             CalendarEvent ev = clickedPanel.Tag as CalendarEvent;
             if (ev == null) return;
 
-            selectedEventPanel = clickedPanel;
-
-            if (MiniPanel.Visible)
-                MiniPanel.Visible = false;
+            selectedEventPanel = clickedPanel;          
 
             foreach (Control ctrl in EventsOverviewFlowLayoutPanel.Controls)
             {
@@ -317,7 +306,6 @@ namespace BATODA
                     CollapsePanel(pnl);
                 }
             }
-
             if (clickedPanel.Height > EventPanelHeight)
             {
                 CollapsePanel(clickedPanel);
@@ -327,7 +315,6 @@ namespace BATODA
                 ExpandPanel(clickedPanel, ev);
             }
         }
-
         private void CollapsePanel(Panel panel)
         {
             panel.Height = EventPanelHeight;
@@ -369,29 +356,21 @@ namespace BATODA
                 BackColor = Color.LightCoral,
                 Size = new Size(100, 30),
                 Tag = "Expanded"
-            }
-            ;
-
+            };
+            
             int marginRight = 20;
             int marginBottom = 15;
             int marginTop = 10;
+
             btnCancel.Location = new Point(panel.Width - btnCancel.Width - marginRight, panel.Height - btnCancel.Height - marginBottom);
             btnDone.Location = new Point(btnCancel.Left - btnDone.Width - 10, btnCancel.Top);
-            btnInfo.Location = new Point(panel.Width - btnInfo.Width - marginRight, marginTop);
 
             btnDone.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
             btnCancel.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
-            btnInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 
             // DONE CLICK - UPDATE STATUS IN DB AND REMOVE FROM OVERVIEW
             btnDone.Click += (s, args) =>
-            {
-                Panel mini = this.Controls["MiniPanel"] as Panel;
-                if (mini == null) return;
-
-                if (MiniPanel.Visible)
-                    MiniPanel.Visible = false;
-
+            {             
                 ev.Status = "Done";
                 eventRepo.UpdateEventStatus(ev.EventId, "Done");
                 UpdateEventInDayCell(ev);
@@ -437,7 +416,6 @@ namespace BATODA
                     };
 
                     pastPanel.Controls.Add(lblTitle);
-                    pastPanel.Controls.Add(lblInfo);
                     pastPanel.Controls.Add(lblDate);
 
                     PastEventFlowLayoutPanel.Controls.Add(pastPanel);
@@ -450,17 +428,9 @@ namespace BATODA
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
-
-
             // CANCEL CLICK - UPDATE STATUS IN DB AND REMOVE FROM OVERVIEW
             btnCancel.Click += (s, args) =>
             {
-                Panel mini = this.Controls["MiniPanel"] as Panel;
-                if (mini == null) return;
-
-                if (MiniPanel.Visible)
-                    MiniPanel.Visible = false;
-
                 ev.Status = "Canceled";
                 eventRepo.UpdateEventStatus(ev.EventId, "Canceled"); // UPDATE DATABASE
                 UpdateEventInDayCell(ev); // UPDATE CALENDAR CELL
@@ -468,39 +438,10 @@ namespace BATODA
                 if (selectedEventPanel == panel)
                     selectedEventPanel = null;
             };
-            btnInfo.Click += (s, args) =>
-            {
-                Panel mini = this.Controls["MiniPanel"] as Panel;
-                if (mini == null) return;
-
-
-                if (MiniPanel.Visible)
-                    MiniPanel.Visible = false;
-
-                // Calculate position
-                Point screenPos = panel.PointToScreen(Point.Empty);
-                Point localPos = this.PointToClient(screenPos);
-
-                int gap = 10;
-
-                int leftX = localPos.X - mini.Width - gap;
-                int topY = localPos.Y;
-
-                if (leftX < 0)
-                    leftX = 0;
-
-                mini.Location = new Point(leftX, topY);
-                mini.Visible = true;
-                mini.BringToFront();
-            };
-
-
             panel.Controls.Add(lblDescription);
             panel.Controls.Add(btnDone);
             panel.Controls.Add(btnCancel);
-            panel.Controls.Add(btnInfo);
         }
-
         //ADDING OF EVENT LABEL TO DAY CELL IN CALENDAR NOW CAN ADD MULTIPLE EVENTS IN THE SAME DAY 
         private void AddEventToDayCell(CalendarEvent ev)
         {
@@ -535,7 +476,6 @@ namespace BATODA
                 }
             }
         }
-
         //MOVE TO PREVIOUS EVENTS PANEL
         private void MoveToPreviousEvents(CalendarEvent ev, bool isDone)
         {
@@ -581,6 +521,7 @@ namespace BATODA
 
             panel.DoubleClick += DoneEventPanel_DoubleClick;
         }
+        //UPDATE EVENT IN DAY CELL
         private void UpdateEventInDayCell(CalendarEvent ev)
         {
             foreach (Control ctrl in DayContainer.Controls)
@@ -604,7 +545,6 @@ namespace BATODA
                 }
             }
         }
-
         //COLOR CODE FOR EVENT TYPES
         private Color GetEventColor(string eventType)
         {
@@ -622,7 +562,7 @@ namespace BATODA
                     return Color.LightGray;
             }
         }
-
+        //PAST EVENT PANEL DOUBLE CLICK - SHOW ATTENDANCE
         private void PastEventPanel_DoubleClick(object sender, EventArgs e)
         {
             selectedPastEventPanel = sender as Panel;
@@ -661,8 +601,6 @@ namespace BATODA
                     AttendanceListDGV.Rows.Add(a.BodyNumber.ToString("D3"), a.MemberName, status);
                 }
             }
-
-
         }
 
         private void DoneEventPanel_DoubleClick(object sender, EventArgs e)
@@ -717,34 +655,23 @@ namespace BATODA
         {
             if (previousEventSelectedPanel?.Tag is CalendarEvent ev)
             {
-                // SAVE ATTENDANCE FOR THIS EVENT
                 eventRepo.SaveAttendanceForEvent(ev.EventId, SetAttendanceGrid);
-
-                // REMOVE FROM DONE PANEL
                 DoneEventFlowLayoutPanel.Controls.Remove(previousEventSelectedPanel);
 
-                // ADD TO PAST PANEL
                 previousEventSelectedPanel.Width = 410;
-
                 previousEventSelectedPanel.Size = new Size(520, EventPanelHeight);
-
                 previousEventSelectedPanel.BackColor = Color.LightGreen;
-
-                // CHANGE THE DOUBLE-CLICK HANDLER
+              
                 previousEventSelectedPanel.DoubleClick -= DoneEventPanel_DoubleClick;
                 previousEventSelectedPanel.DoubleClick += PastEventPanel_DoubleClick;
 
-                // ADD TO PAST PANEL
                 PastEventFlowLayoutPanel.Controls.Add(previousEventSelectedPanel);
                 PastEventFlowLayoutPanel.Controls.SetChildIndex(previousEventSelectedPanel, 0);
             }
-
-            // RESET UI
             PreviousEventPanel.Show();
             PreviousEventPanel.BringToFront();
             CheckAttendancePanel.Hide();
         }
-
         public void ShowAddEventPanel(DateTime date)
         {
             if (date.Date < DateTime.Today)
@@ -790,7 +717,6 @@ namespace BATODA
                 }
             }
         }
-
         private void ReqAttendeesCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ReqAttendeesCmb.SelectedItem != null &&
@@ -818,7 +744,6 @@ namespace BATODA
             SelectMembersGrid.Columns.Add(checkCol);
 
             SelectMembersGrid.Columns.Add("BodyNumber", "Body Number");
-
             SelectMembersGrid.Columns.Add("FullName", "Full Name");
 
             var repo = new MemberRepository();
