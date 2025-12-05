@@ -55,24 +55,23 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
             this.QuickActionReviewActionButton = new BATODA.ButtonStyle();
             this.QuickActionChangeVehicleButton = new BATODA.ButtonStyle();
             this.QuickActionTransferMemberButton = new BATODA.ButtonStyle();
             this.QuickActionNewMemberButton = new BATODA.ButtonStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.buttonStyle4 = new BATODA.ButtonStyle();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,7 +87,6 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -380,6 +378,14 @@
             this.panel8.Size = new System.Drawing.Size(523, 314);
             this.panel8.TabIndex = 2;
             // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel29.Location = new System.Drawing.Point(20, 59);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(480, 3);
+            this.panel29.TabIndex = 91;
+            // 
             // QuickActionReviewActionButton
             // 
             this.QuickActionReviewActionButton.BackColor = System.Drawing.Color.White;
@@ -523,17 +529,54 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.panel12);
+            this.panel9.Controls.Add(this.label24);
             this.panel9.Controls.Add(this.label19);
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.label16);
-            this.panel9.Controls.Add(this.buttonStyle4);
             this.panel9.Controls.Add(this.label15);
             this.panel9.Location = new System.Drawing.Point(1077, 663);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(523, 239);
+            this.panel9.Size = new System.Drawing.Size(524, 423);
             this.panel9.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel10.Location = new System.Drawing.Point(21, 172);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(480, 3);
+            this.panel10.TabIndex = 93;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DarkGray;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Location = new System.Drawing.Point(21, 228);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(480, 174);
+            this.panel11.TabIndex = 6;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel12.Location = new System.Drawing.Point(21, 64);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(480, 3);
+            this.panel12.TabIndex = 92;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
+            this.label24.Location = new System.Drawing.Point(22, 192);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(250, 33);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "Payment Overdue";
             // 
             // label19
             // 
@@ -577,37 +620,6 @@
             this.label16.TabIndex = 41;
             this.label16.Text = "Completed";
             // 
-            // buttonStyle4
-            // 
-            this.buttonStyle4.BackColor = System.Drawing.Color.White;
-            this.buttonStyle4.BackgroundColor = System.Drawing.Color.White;
-            this.buttonStyle4.BorderColor = System.Drawing.Color.Black;
-            this.buttonStyle4.BorderRadius = 0;
-            this.buttonStyle4.BorderSize = 1;
-            this.buttonStyle4.ButtonImage = null;
-            this.buttonStyle4.FlatAppearance.BorderSize = 0;
-            this.buttonStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle4.ForeColor = System.Drawing.Color.Black;
-            this.buttonStyle4.HoverBorderColor = System.Drawing.Color.Silver;
-            this.buttonStyle4.HoverColor = System.Drawing.Color.Silver;
-            this.buttonStyle4.ImageColor = System.Drawing.Color.Black;
-            this.buttonStyle4.ImagePosition = new System.Drawing.Point(0, 0);
-            this.buttonStyle4.ImageSize = new System.Drawing.Size(32, 32);
-            this.buttonStyle4.IsToggled = false;
-            this.buttonStyle4.Location = new System.Drawing.Point(29, 175);
-            this.buttonStyle4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle4.MouseDownColor = System.Drawing.Color.DarkGray;
-            this.buttonStyle4.Name = "buttonStyle4";
-            this.buttonStyle4.PaddingX = 0;
-            this.buttonStyle4.PaddingY = 0;
-            this.buttonStyle4.Size = new System.Drawing.Size(466, 45);
-            this.buttonStyle4.TabIndex = 40;
-            this.buttonStyle4.Text = "View Full Log";
-            this.buttonStyle4.TextColor = System.Drawing.Color.Black;
-            this.buttonStyle4.TextOffset = 0;
-            this.buttonStyle4.ToggleColor = System.Drawing.Color.LightGray;
-            this.buttonStyle4.UseVisualStyleBackColor = false;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -628,52 +640,6 @@
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Controls.Add(this.label24);
-            this.panel10.Location = new System.Drawing.Point(1077, 908);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(524, 386);
-            this.panel10.TabIndex = 7;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.DarkGray;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Location = new System.Drawing.Point(16, 62);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(491, 303);
-            this.panel11.TabIndex = 6;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(12, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(205, 29);
-            this.label24.TabIndex = 5;
-            this.label24.Text = "Payment Overdue";
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel29.Location = new System.Drawing.Point(20, 59);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(480, 3);
-            this.panel29.TabIndex = 91;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel12.Location = new System.Drawing.Point(21, 64);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(480, 3);
-            this.panel12.TabIndex = 92;
-            // 
             // DashboardUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -681,7 +647,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(239)))), ((int)(((byte)(236)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.pictureBox7);
@@ -719,8 +684,6 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -766,12 +729,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private ButtonStyle buttonStyle4;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel10;
     }
 }

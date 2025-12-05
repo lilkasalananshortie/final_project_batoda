@@ -648,6 +648,9 @@ namespace BATODA
 
             e.HasMorePages = false;
         }
-
+        public void ShowAddMemberPanel()
+        {
+            AddMemberPanel.Visible = true;
+        }
     }
 }
