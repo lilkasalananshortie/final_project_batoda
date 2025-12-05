@@ -226,5 +226,67 @@ namespace BATODA
         {
 
         }
+
+        private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                PerformSearch();
+            }
+        }
+
+        private void PerformSearch()
+        {
+            string searchText = SearchTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Search input cannot be empty.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            List<TricycleModel> allTricycles = repo.GetAllTricycles();
+
+            var filtered = allTricycles.Where(t =>
+                t.BodyNumber.ToString("D3").Contains(searchText) ||
+                t.FirstName.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                t.LastName.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                t.PlateNumber.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0
+            ).ToList();
+
+            DataTable table = new DataTable();
+            table.Columns.Add("Body No.");
+            table.Columns.Add("Last Name");
+            table.Columns.Add("First Name");
+            table.Columns.Add("Brand");
+            table.Columns.Add("Model");
+            table.Columns.Add("Plate No.");
+            table.Columns.Add("Engine No.");
+            table.Columns.Add("Chassis No.");
+            table.Columns.Add("Availability");
+
+            foreach (var t in filtered)
+            {
+                table.Rows.Add(
+                    t.BodyNumber,     
+                    t.LastName,
+                    t.FirstName,
+                    t.TricycleBrand,
+                    t.TricModel,
+                    t.PlateNumber,
+                    t.EngineNumber,
+                    t.ChassisNumber,
+                    t.Availability
+                );
+            }
+
+            DataGridColumns.LoadTricyclesToGrid(TricycleGrid, table);
+            DataGridCustom.ApplyCustomGrid(TricycleGrid);
+            DataGridCustom.AddEditButtonOnly(TricycleGrid);
+
+            NoResultsPanel.Visible = table.Rows.Count == 0;
+            if (NoResultsPanel.Visible) NoResultsPanel.BringToFront();
+        }
     }
 }
