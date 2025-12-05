@@ -103,7 +103,7 @@ public class AddTicketBox
 
         Label lblDate = new Label()
         {
-            Text = "Requested at: " + dateRequested,
+            Text = "Requested: " + dateRequested,
             Location = new Point(rightX, y + 55),
             AutoSize = true,
             Font = new Font("Microsoft Sans Serif", 9)

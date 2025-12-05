@@ -187,8 +187,10 @@ namespace BATODA.Modules.Assistance_Request_Module
                             TargetDate = reader.GetDateTime(reader.GetOrdinal("TargetDate")),
                             RequestStatus = reader.GetString(reader.GetOrdinal("RequestStatus")),
                             DateRequested = reader.GetDateTime(reader.GetOrdinal("DateRequested")),
-                            GcashNumber = reader.GetString(reader.GetOrdinal("GcashNumber"))
+                            GcashNumber = reader.GetString(reader.GetOrdinal("GcashNumber")),
+                            IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")) ? 1 : 0
                         });
+
                     }
                 }
             }

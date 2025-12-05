@@ -21,5 +21,6 @@ namespace BATODA.Modules.Assistance_Request_Module.Assistance_Classes
         public DateTime DateRequested { get; set; }
         public string ContactNumber { get; set; }
         public string GcashNumber { get; set; }
+        public int IsActive { get; set; }
     }
 }

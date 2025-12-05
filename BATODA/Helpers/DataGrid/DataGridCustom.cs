@@ -101,9 +101,6 @@ namespace BATODA.Helpers.DataGrids
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
         }
-
-
-
         public static void FinanceMultiSelectCustomGrid(DataGridView dgv)
         {
             if (dgv == null) return;
@@ -157,8 +154,6 @@ namespace BATODA.Helpers.DataGrids
             dgv.Columns.Add(colFullName);
         }
 
-
-
         //edit button with hover effect =)
         public static void AddEditButtonOnly(DataGridView dgv)
         {
@@ -179,8 +174,6 @@ namespace BATODA.Helpers.DataGrids
             dgv.Columns.Add(editColumn);
             editColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             editColumn.DefaultCellStyle.Padding = new Padding(5);
-
-          
             int hoveredRow = -1;
 
            
@@ -302,8 +295,6 @@ namespace BATODA.Helpers.DataGrids
                 e.Handled = true;
             };
         }
-
-
     }
 }
 

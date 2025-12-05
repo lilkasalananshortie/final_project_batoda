@@ -32,7 +32,6 @@
             this.ARHButton = new BATODA.ButtonStyle();
             this.AssistanceRequestButton = new BATODA.ButtonStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonStyle1 = new BATODA.ButtonStyle();
             this.ConfirmationPanel = new System.Windows.Forms.Panel();
             this.ConfirmationPanelCancelBtn = new BATODA.ButtonStyle();
             this.label9 = new System.Windows.Forms.Label();
@@ -133,8 +132,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.ApplyButton = new BATODA.ButtonStyle();
-            this.SortComboBox = new System.Windows.Forms.ComboBox();
-            this.AssistanceTypeComboBox = new System.Windows.Forms.ComboBox();
             this.panel20 = new System.Windows.Forms.Panel();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -287,53 +284,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.buttonStyle1);
-            this.panel1.Controls.Add(this.ConfirmationPanel);
             this.panel1.Controls.Add(this.FillUpFormPanel);
             this.panel1.Controls.Add(this.CreateTicketPanel);
             this.panel1.Controls.Add(this.panel30);
             this.panel1.Controls.Add(this.ApplyButton);
-            this.panel1.Controls.Add(this.SortComboBox);
-            this.panel1.Controls.Add(this.AssistanceTypeComboBox);
             this.panel1.Controls.Add(this.panel20);
             this.panel1.Controls.Add(this.FLPActivityLog);
             this.panel1.Controls.Add(this.TicketFlowLayoutPanel);
+            this.panel1.Controls.Add(this.ConfirmationPanel);
             this.panel1.Location = new System.Drawing.Point(9, 265);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1588, 917);
             this.panel1.TabIndex = 26;
-            // 
-            // buttonStyle1
-            // 
-            this.buttonStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.BorderColor = System.Drawing.Color.Red;
-            this.buttonStyle1.BorderRadius = 0;
-            this.buttonStyle1.BorderSize = 0;
-            this.buttonStyle1.ButtonImage = null;
-            this.buttonStyle1.FlatAppearance.BorderSize = 0;
-            this.buttonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStyle1.ForeColor = System.Drawing.Color.White;
-            this.buttonStyle1.HoverBorderColor = System.Drawing.Color.DarkRed;
-            this.buttonStyle1.HoverColor = System.Drawing.Color.DarkRed;
-            this.buttonStyle1.ImageColor = System.Drawing.Color.Black;
-            this.buttonStyle1.ImagePosition = new System.Drawing.Point(10, 8);
-            this.buttonStyle1.ImageSize = new System.Drawing.Size(24, 24);
-            this.buttonStyle1.IsToggled = false;
-            this.buttonStyle1.Location = new System.Drawing.Point(1449, 17);
-            this.buttonStyle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonStyle1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.Name = "buttonStyle1";
-            this.buttonStyle1.PaddingX = 0;
-            this.buttonStyle1.PaddingY = 0;
-            this.buttonStyle1.Size = new System.Drawing.Size(112, 32);
-            this.buttonStyle1.TabIndex = 66;
-            this.buttonStyle1.Text = "Apply Filter";
-            this.buttonStyle1.TextColor = System.Drawing.Color.White;
-            this.buttonStyle1.TextOffset = 20;
-            this.buttonStyle1.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.buttonStyle1.UseVisualStyleBackColor = false;
             // 
             // ConfirmationPanel
             // 
@@ -1583,7 +1545,7 @@
             this.ApplyButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.ApplyButton.ImageSize = new System.Drawing.Size(24, 24);
             this.ApplyButton.IsToggled = false;
-            this.ApplyButton.Location = new System.Drawing.Point(1333, 17);
+            this.ApplyButton.Location = new System.Drawing.Point(1449, 18);
             this.ApplyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ApplyButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.Name = "ApplyButton";
@@ -1591,34 +1553,12 @@
             this.ApplyButton.PaddingY = 0;
             this.ApplyButton.Size = new System.Drawing.Size(112, 32);
             this.ApplyButton.TabIndex = 59;
-            this.ApplyButton.Text = "Clear";
+            this.ApplyButton.Text = "Refresh";
             this.ApplyButton.TextColor = System.Drawing.Color.White;
             this.ApplyButton.TextOffset = 20;
             this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.UseVisualStyleBackColor = false;
-            // 
-            // SortComboBox
-            // 
-            this.SortComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortComboBox.FormattingEnabled = true;
-            this.SortComboBox.Items.AddRange(new object[] {
-            "Oldest",
-            "Newest"});
-            this.SortComboBox.Location = new System.Drawing.Point(1168, 17);
-            this.SortComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SortComboBox.Name = "SortComboBox";
-            this.SortComboBox.Size = new System.Drawing.Size(155, 32);
-            this.SortComboBox.TabIndex = 58;
-            // 
-            // AssistanceTypeComboBox
-            // 
-            this.AssistanceTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssistanceTypeComboBox.FormattingEnabled = true;
-            this.AssistanceTypeComboBox.Location = new System.Drawing.Point(1006, 17);
-            this.AssistanceTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssistanceTypeComboBox.Name = "AssistanceTypeComboBox";
-            this.AssistanceTypeComboBox.Size = new System.Drawing.Size(155, 32);
-            this.AssistanceTypeComboBox.TabIndex = 57;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // panel20
             // 
@@ -1639,6 +1579,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(399, 22);
             this.SearchTextBox.TabIndex = 41;
+            this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
             // 
             // pictureBox7
             // 
@@ -2013,8 +1954,6 @@
         private System.Windows.Forms.Panel TextStatusPanel;
         private System.Windows.Forms.Label label49;
         private ButtonStyle ApplyButton;
-        private System.Windows.Forms.ComboBox SortComboBox;
-        private System.Windows.Forms.ComboBox AssistanceTypeComboBox;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -2107,6 +2046,5 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private ButtonStyle CreateTicketCancelBtn;
         private ButtonStyle ConfirmationPanelCancelBtn;
-        private ButtonStyle buttonStyle1;
     }
 }
