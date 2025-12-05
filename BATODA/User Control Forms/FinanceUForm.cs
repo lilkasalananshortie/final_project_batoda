@@ -455,5 +455,10 @@ namespace BATODA
         {
 
         }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -95,6 +95,7 @@
             this.MainRecieptFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.PrintButton = new BATODA.ButtonStyle();
             this.CloseReceipt = new BATODA.ButtonStyle();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.RenewSelectedPanelHolder.SuspendLayout();
@@ -119,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MassSelectGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MultiPreviewGrid)).BeginInit();
             this.ViewReceiptPanel.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // MembersTopPanel
@@ -966,6 +968,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(10, 11);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(303, 29);
@@ -1093,24 +1096,26 @@
             // 
             // ViewReceiptPanel
             // 
-            this.ViewReceiptPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ViewReceiptPanel.BackColor = System.Drawing.Color.White;
             this.ViewReceiptPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ViewReceiptPanel.Controls.Add(this.panel8);
             this.ViewReceiptPanel.Controls.Add(this.OverviewName);
             this.ViewReceiptPanel.Controls.Add(this.label21);
-            this.ViewReceiptPanel.Controls.Add(this.label20);
             this.ViewReceiptPanel.Controls.Add(this.MainRecieptFlowPanel);
             this.ViewReceiptPanel.Controls.Add(this.PrintButton);
             this.ViewReceiptPanel.Controls.Add(this.CloseReceipt);
-            this.ViewReceiptPanel.Location = new System.Drawing.Point(521, 52);
+            this.ViewReceiptPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ViewReceiptPanel.Location = new System.Drawing.Point(1257, 0);
             this.ViewReceiptPanel.Name = "ViewReceiptPanel";
-            this.ViewReceiptPanel.Size = new System.Drawing.Size(574, 855);
+            this.ViewReceiptPanel.Size = new System.Drawing.Size(584, 972);
             this.ViewReceiptPanel.TabIndex = 54;
             // 
             // OverviewName
             // 
             this.OverviewName.AutoSize = true;
             this.OverviewName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverviewName.Location = new System.Drawing.Point(87, 57);
+            this.OverviewName.ForeColor = System.Drawing.Color.Black;
+            this.OverviewName.Location = new System.Drawing.Point(99, 79);
             this.OverviewName.Name = "OverviewName";
             this.OverviewName.Size = new System.Drawing.Size(224, 25);
             this.OverviewName.TabIndex = 95;
@@ -1120,7 +1125,8 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(11, 57);
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(23, 79);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(79, 25);
             this.label21.TabIndex = 94;
@@ -1129,40 +1135,41 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(10, 14);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label20.Location = new System.Drawing.Point(17, 14);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(338, 33);
+            this.label20.Size = new System.Drawing.Size(363, 37);
             this.label20.TabIndex = 55;
             this.label20.Text = "Tax Payment Overview";
             // 
             // MainRecieptFlowPanel
             // 
             this.MainRecieptFlowPanel.BackColor = System.Drawing.Color.White;
-            this.MainRecieptFlowPanel.Location = new System.Drawing.Point(16, 89);
+            this.MainRecieptFlowPanel.Location = new System.Drawing.Point(24, 111);
             this.MainRecieptFlowPanel.Name = "MainRecieptFlowPanel";
-            this.MainRecieptFlowPanel.Size = new System.Drawing.Size(540, 712);
+            this.MainRecieptFlowPanel.Size = new System.Drawing.Size(540, 779);
             this.MainRecieptFlowPanel.TabIndex = 93;
             // 
             // PrintButton
             // 
-            this.PrintButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PrintButton.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.PrintButton.BorderColor = System.Drawing.Color.Red;
+            this.PrintButton.BackColor = System.Drawing.Color.White;
+            this.PrintButton.BackgroundColor = System.Drawing.Color.White;
+            this.PrintButton.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.PrintButton.BorderRadius = 0;
-            this.PrintButton.BorderSize = 0;
+            this.PrintButton.BorderSize = 2;
             this.PrintButton.ButtonImage = null;
             this.PrintButton.FlatAppearance.BorderSize = 0;
             this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintButton.ForeColor = System.Drawing.Color.Black;
+            this.PrintButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.PrintButton.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.PrintButton.HoverColor = System.Drawing.Color.DarkRed;
             this.PrintButton.ImageColor = System.Drawing.Color.Black;
             this.PrintButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.PrintButton.ImageSize = new System.Drawing.Size(24, 24);
             this.PrintButton.IsToggled = false;
-            this.PrintButton.Location = new System.Drawing.Point(461, 57);
+            this.PrintButton.Location = new System.Drawing.Point(468, 76);
             this.PrintButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PrintButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.PrintButton.Name = "PrintButton";
@@ -1171,30 +1178,30 @@
             this.PrintButton.Size = new System.Drawing.Size(95, 25);
             this.PrintButton.TabIndex = 92;
             this.PrintButton.Text = "Print";
-            this.PrintButton.TextColor = System.Drawing.Color.Black;
+            this.PrintButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.PrintButton.TextOffset = 20;
             this.PrintButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.PrintButton.UseVisualStyleBackColor = false;
             // 
             // CloseReceipt
             // 
-            this.CloseReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CloseReceipt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.CloseReceipt.BorderColor = System.Drawing.Color.Red;
+            this.CloseReceipt.BackColor = System.Drawing.Color.White;
+            this.CloseReceipt.BackgroundColor = System.Drawing.Color.White;
+            this.CloseReceipt.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CloseReceipt.BorderRadius = 0;
-            this.CloseReceipt.BorderSize = 0;
+            this.CloseReceipt.BorderSize = 1;
             this.CloseReceipt.ButtonImage = null;
             this.CloseReceipt.FlatAppearance.BorderSize = 0;
             this.CloseReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseReceipt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseReceipt.ForeColor = System.Drawing.Color.White;
+            this.CloseReceipt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CloseReceipt.HoverBorderColor = System.Drawing.Color.DarkRed;
             this.CloseReceipt.HoverColor = System.Drawing.Color.DarkRed;
             this.CloseReceipt.ImageColor = System.Drawing.Color.Black;
             this.CloseReceipt.ImagePosition = new System.Drawing.Point(10, 8);
             this.CloseReceipt.ImageSize = new System.Drawing.Size(24, 24);
             this.CloseReceipt.IsToggled = false;
-            this.CloseReceipt.Location = new System.Drawing.Point(429, 808);
+            this.CloseReceipt.Location = new System.Drawing.Point(437, 908);
             this.CloseReceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CloseReceipt.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CloseReceipt.Name = "CloseReceipt";
@@ -1203,11 +1210,22 @@
             this.CloseReceipt.Size = new System.Drawing.Size(127, 33);
             this.CloseReceipt.TabIndex = 91;
             this.CloseReceipt.Text = "Close";
-            this.CloseReceipt.TextColor = System.Drawing.Color.White;
+            this.CloseReceipt.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CloseReceipt.TextOffset = 20;
             this.CloseReceipt.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.CloseReceipt.UseVisualStyleBackColor = false;
             this.CloseReceipt.Click += new System.EventHandler(this.CloseReceipt_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.panel8.Controls.Add(this.label20);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(582, 67);
+            this.panel8.TabIndex = 96;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // FinanceUForm
             // 
@@ -1260,6 +1278,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MultiPreviewGrid)).EndInit();
             this.ViewReceiptPanel.ResumeLayout(false);
             this.ViewReceiptPanel.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1332,5 +1352,6 @@
         private System.Windows.Forms.Label OverviewName;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel8;
     }
 }
