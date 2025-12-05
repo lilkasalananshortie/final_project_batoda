@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BATODA.Modules.Login_Module;
+using BATODA.UI_Displays;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.UI_Displays;
-
 
 namespace BATODA
 {
@@ -21,67 +21,61 @@ namespace BATODA
         public LoginForm()
         {
             InitializeComponent();
-            
+
             LoadingPanel.Visible = true;
             LoadingPanel.Dock = DockStyle.Fill;
-            LoadingPanel.BringToFront();    
+            LoadingPanel.BringToFront();
             timer.Interval = 2000;
             timer.Tick += Timer_Tick;
             timer.Start();
 
-
             PasswordTextBox.UseSystemPasswordChar = true;
             PasswordTextBox.TextChanged += PasswordTextBox_TextChanged;
-
-
         }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
-            timer.Stop(); 
-            LoadingPanel.Visible = false; 
+            timer.Stop();
+            LoadingPanel.Visible = false;
         }
 
         private void LoginButton_Click_1(object sender, EventArgs e)
         {
-
             string username = UsernameTextBox.Text.Trim();
             string password = PasswordTextBox.Text.Trim();
 
-            // 🔐 Hard-coded login credentials
-            if (username == "Admin123" && password == "12345")
+            LoginRepository repo = new LoginRepository();
+
+            try
             {
-                DashboardForm DashBoardform = new DashboardForm();
-                DashBoardform.Show();
+                if (repo.VerifyLogin(username, password))
+                {
+                    DashboardForm DashBoardform = new DashboardForm();
+                    DashBoardform.Show();
 
-                ToastManager.Success("Login Successful!");
-                this.Hide();
+                    ToastManager.Success("Login Successful!");
+                    this.Hide();
+                }
+                else
+                {
+                    ToastManager.Error("Invalid username or password!");
+                    PasswordTextBox.Clear();
+                    PasswordTextBox.Focus();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ToastManager.Error("Invalid username or password!");
-                PasswordTextBox.Clear();
-                PasswordTextBox.Focus();
+                ToastManager.Error(ex.Message);
             }
-
-            
-           
-
         }
 
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            // If placeholder is active, disable mask
-            if (PasswordTextBox.ForeColor == Color.Gray)
-            {
-                PasswordTextBox.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                PasswordTextBox.UseSystemPasswordChar = !showPassword; // mask based on eye icon
-            }
+            // Only apply mask if user typed real password (not placeholder)
+            if (PasswordTextBox.ForeColor != Color.Gray)
+                PasswordTextBox.UseSystemPasswordChar = !showPassword;
         }
-
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -89,13 +83,12 @@ namespace BATODA
             DisplayClass.SetPlaceholder(PasswordTextBox, "Password");
 
             this.ActiveControl = null;
-
-
         }
+
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            this.ActiveControl = null; 
+            this.ActiveControl = null;
         }
 
         public class TransparentTextBox : TextBox
@@ -117,21 +110,11 @@ namespace BATODA
         {
             showPassword = !showPassword;
 
-            // toggle mask
-            if (showPassword)
-            {
-                PasswordTextBox.UseSystemPasswordChar = false;
-                ShowPassButton.Image = Properties.Resources.view;
-            }
-            else
-            {
-                PasswordTextBox.UseSystemPasswordChar = true;
-                ShowPassButton.Image = Properties.Resources.hide; // replace with your image
-            }
+            PasswordTextBox.UseSystemPasswordChar = !showPassword;
 
-            // Keep caret at end
+            ShowPassButton.Image = showPassword ? Properties.Resources.view : Properties.Resources.hide;
+
             PasswordTextBox.SelectionStart = PasswordTextBox.Text.Length;
         }
     }
 }
-

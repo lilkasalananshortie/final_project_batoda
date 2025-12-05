@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginPanel = new System.Windows.Forms.Panel();
+            this.ShowPassButton = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,13 +46,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ShowPassButton = new System.Windows.Forms.PictureBox();
             this.LoginPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPassButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowPassButton)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginPanel
@@ -75,6 +75,17 @@
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(401, 431);
             this.LoginPanel.TabIndex = 0;
+            // 
+            // ShowPassButton
+            // 
+            this.ShowPassButton.Image = global::BATODA.Properties.Resources.view;
+            this.ShowPassButton.Location = new System.Drawing.Point(301, 199);
+            this.ShowPassButton.Name = "ShowPassButton";
+            this.ShowPassButton.Size = new System.Drawing.Size(18, 18);
+            this.ShowPassButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ShowPassButton.TabIndex = 19;
+            this.ShowPassButton.TabStop = false;
+            this.ShowPassButton.Click += new System.EventHandler(this.ShowPassButton_Click);
             // 
             // label4
             // 
@@ -245,17 +256,6 @@
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
-            // ShowPassButton
-            // 
-            this.ShowPassButton.Image = global::BATODA.Properties.Resources.view;
-            this.ShowPassButton.Location = new System.Drawing.Point(301, 199);
-            this.ShowPassButton.Name = "ShowPassButton";
-            this.ShowPassButton.Size = new System.Drawing.Size(18, 18);
-            this.ShowPassButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ShowPassButton.TabIndex = 19;
-            this.ShowPassButton.TabStop = false;
-            this.ShowPassButton.Click += new System.EventHandler(this.ShowPassButton_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,11 +278,11 @@
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowPassButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowPassButton)).EndInit();
             this.ResumeLayout(false);
 
         }

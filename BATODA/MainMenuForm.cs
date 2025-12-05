@@ -8,18 +8,12 @@ namespace BATODA
 {
     public partial class DashboardForm : Form
     {
-
-
-
         public DashboardForm()
         {
             InitializeComponent();
-
-
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayClass.SetMainPanel(DisplayPanel);
             DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
-
 
             SwitchAdminPanel.Visible = false;
             SettingsPanel.Visible = false;
@@ -71,8 +65,6 @@ namespace BATODA
             DisplayClass.SetActive(HomeButton);
 
             CreateNewAdminAccountPanel.Visible = false;
-
-
         }
 
         public void ActivateMainButton(string module)
@@ -152,7 +144,6 @@ namespace BATODA
             DisplayClass.ShowMain(new TricycleUForm());
             TopPanelText.Text = "MANAGE VEHICLE";
             SubTopPanel.Text = "Manage Vehicle Registrations, transfers and information";
-
         }
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
@@ -241,7 +232,5 @@ namespace BATODA
         {
             SwitchAdminPanel.Visible = false;
         }
-
-        
     }
 }
