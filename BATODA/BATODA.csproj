@@ -657,6 +657,7 @@
     <Content Include="Database Guide &amp; Queries\TransferMembershipHistory.txt" />
     <Content Include="Database Guide &amp; Queries\TransferTricycleHistory.txt" />
     <Content Include="FixImageNotShowing.txt" />
+    <None Include="Resources\hide.png" />
     <None Include="Resources\employee_14331334.png" />
     <None Include="Resources\notification.png" />
     <None Include="Resources\lists.png" />
