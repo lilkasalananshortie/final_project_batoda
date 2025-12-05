@@ -9,21 +9,21 @@ namespace BATODA
     public partial class DashboardForm : Form
     {
 
-       
-        
+
+
         public DashboardForm()
         {
             InitializeComponent();
-            
 
 
             //WAG PALITAN NAKA HIDE DITO YUNG DAPAT DI MAKITA MUNA
             DisplayClass.SetMainPanel(DisplayPanel);
+            DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
-            SettingsPanel.Hide();
             DisplayPanel.Visible = true;
             DisplayPanel.Dock = DockStyle.Fill;
-            CreateNewAdminAccountPanel.Visible = false;
+            NotificationPanel.Visible = false;
+            CalendarXAccoutnContainerPanel.Visible = false;
         }
 
         private Timer clockTimer;
@@ -31,14 +31,14 @@ namespace BATODA
         private void SetupClock()
         {
             clockTimer = new Timer();
-            clockTimer.Interval = 1000; 
+            clockTimer.Interval = 1000;
             clockTimer.Tick += ClockTimer_Tick;
             clockTimer.Start();
         }
 
         private void ClockTimer_Tick(object sender, EventArgs e)
         {
-            MainTime.Text = DateTime.Now.ToString("hh:mm tt"); 
+            MainTime.Text = DateTime.Now.ToString("hh:mm tt");
         }
 
 
@@ -67,7 +67,7 @@ namespace BATODA
 
             DisplayClass.SetActive(HomeButton);
 
-         
+
 
         }
 
@@ -119,7 +119,7 @@ namespace BATODA
 
                 case "FareMatrix":
                     DisplayClass.SetActive(FareMatrixButton);
-                  DisplayClass.ShowMain(new FareMatrixUForm());
+                    DisplayClass.ShowMain(new FareMatrixUForm());
                     TopBarPanel.Text = "FARE MATRIX";
                     break;
             }
@@ -153,7 +153,7 @@ namespace BATODA
 
         private void AssistanceLogButton_Click(object sender, EventArgs e)
         {
-            ActivateMainButton("Assistance"); 
+            ActivateMainButton("Assistance");
             DisplayClass.ShowMain(new AssistanceRequestUForm());
             TopPanelText.Text = "MANAGE ASSISTANCE";
             SubTopPanel.Text = "Manage member assistance request and approvals.";
@@ -167,7 +167,7 @@ namespace BATODA
             SubTopPanel.Text = "Track member tax payments (Butaw) and membership renewal status";
 
         }
-       
+
         private void CalendarBtn_Click(object sender, EventArgs e)
         {
             ActivateMainButton("Calendar");
@@ -192,8 +192,37 @@ namespace BATODA
             TopPanelText.Text = "CUSTOMER SERVICE";
             SubTopPanel.Text = "Manage customer service complaints and inquiries.";
         }
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            ActivateMainButton("Settings");
+            DisplayClass.ShowMain(new SettingsUForm());
+            TopPanelText.Text = "SETTINGS";
+            SubTopPanel.Text = "Backup/Restore your organizations data ";
+        }
+
+
        
+
+     
+
+
+
         private void TopBarPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NavBarPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TopPanelText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainDate_Click(object sender, EventArgs e)
         {
 
         }
@@ -201,33 +230,6 @@ namespace BATODA
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            SettingsPanel.Visible = !SettingsPanel.Visible;
-
-            if (SettingsPanel.Visible)
-                SettingsPanel.Show();
-            else
-                SettingsPanel.Hide();
         }
-
-        private void CreateNewAdminAccountButton_Click(object sender, EventArgs e)
-        {
-            CreateNewAdminAccountPanel.Visible = true;
-            CreateNewAdminAccountPanel.BringToFront();
-        }
-
-        private void CreateNewAdminCancelButton_Click(object sender, EventArgs e)
-        {
-            CreateNewAdminAccountPanel.Visible = false;
-        }
-
-        private void LogOutButton_Click(object sender, EventArgs e)
-        {
-            Close();
-            LoginForm login = new LoginForm();
-            login.Show();
-            
-        }
-
-       
     }
 }
