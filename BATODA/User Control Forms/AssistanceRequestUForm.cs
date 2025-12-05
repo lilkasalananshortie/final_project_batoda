@@ -1,7 +1,7 @@
 ﻿using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrid;
 using BATODA.Helpers.DataGrids;
-using BATODA.Modules; 
+using BATODA.Modules;
 using BATODA.Modules.Assistance_Request_Module;
 using BATODA.Modules.Assistance_Request_Module.Assistance_Classes;
 using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
@@ -20,6 +20,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BATODA.Modules.Assistance_Request_Module.AssistanceRepository;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+
+
 
 namespace BATODA
 {
@@ -43,7 +45,6 @@ namespace BATODA
             ticketHelper.LoadActivityLogs();
         }
 
-
         public void UpdateRequestCounts()
         {
             TotalReqLbl.Text = AssistanceSummary.GetTotalTickets().ToString();
@@ -52,32 +53,21 @@ namespace BATODA
             RejectedLbl.Text = AssistanceSummary.GetRejectedTickets().ToString();
         }
 
+
         private void AssistanceRequestUForm_Load(object sender, EventArgs e)
         {
             LoadAllTickets();
             DisplayClass.SetPlaceholder(SearchTextBox, "Search Member");
-            UpdateRequestCounts(); 
+            UpdateRequestCounts();
         }
 
-        public void LoadAllTickets(string statusFilter = null)
+        public void LoadAllTickets()
         {
             TicketFlowLayoutPanel.Controls.Clear();
             AssistanceRepository repo = new AssistanceRepository();
             List<TicketModel> tickets = repo.GetAllRequests();
 
-            string search = SearchTextBox.Text.Trim().ToLower();
-
-            var filtered = tickets
-                .Where(t =>
-                    t.IsActive == 1 &&
-                    (string.IsNullOrEmpty(statusFilter) || t.RequestStatus == statusFilter) &&
-                    (string.IsNullOrEmpty(search) ||
-                     t.BodyNumber.ToString().Contains(search) ||
-                     t.FullName.ToLower().Contains(search) ||
-                     ("TR-" + t.TicketID).ToLower().Contains(search)))
-                .ToList();
-
-            foreach (TicketModel ticket in filtered)
+            foreach (TicketModel ticket in tickets)
             {
                 Image memberImage = null;
                 string imagesFolder = Path.Combine(Application.StartupPath, "..\\..\\Modules\\Member Module\\Member Images");
@@ -91,12 +81,21 @@ namespace BATODA
                     }
                 }
 
+                string displayStatus = ticket.RequestStatus;
+                DateTime today = DateTime.Today;
+                DateTime targetDate = ticket.TargetDate.Date;
+
+                if (ticket.RequestStatus == "Pending" && targetDate == today)
+                {
+                    displayStatus = "Today";
+                }
+
                 ticketHelper.CreateTicketBox(
                     trackingNumber: "TR-" + ticket.TicketID,
                     fullName: ticket.FullName,
                     typeOfAid: ticket.TypeOfAid,
                     dateRequested: ticket.DateRequested.ToString("MM-dd-yyyy hh:mm tt"),
-                    status: ticket.RequestStatus,
+                    status: displayStatus,
                     requestedBy: ticket.RequestedBy,
                     amount: "₱" + ticket.RequestedAmount.ToString("N2"),
                     assistanceThru: ticket.AssistanceThru,
@@ -106,6 +105,7 @@ namespace BATODA
                 );
             }
         }
+
 
         private void TransferToDisplayPanel()
         {
@@ -131,6 +131,8 @@ namespace BATODA
 
             ConfPreviewImage.Image = MemberImagePb.Image;
         }
+
+
         private void AssistanceHomeButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new AssistanceLogUForm());
@@ -146,6 +148,7 @@ namespace BATODA
             DisplayClass.ShowMain(new ARHUForm());
         }
 
+
         private void TicketConfirmButton_Click(object sender, EventArgs e)
         {
             AssistanceModel data = new AssistanceModel
@@ -160,7 +163,11 @@ namespace BATODA
                 GcashNumber = ReqGcashNumTxt.Text,
                 DateRequested = DateTime.Parse(DateCreatedLbl.Text),
                 TargetDate = DateTime.Parse(DateNeededPicker.Text)
+
+
+                // DEFAULT PENDING STATUS SA TABLE
             };
+
 
             GmailSender GmailSend = new GmailSender();
             GmailSend.SendAssistanceEmail(
@@ -245,29 +252,12 @@ namespace BATODA
 
         private void SubmitTicket_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(ReqFirstNameTxt.Text) ||
-                string.IsNullOrWhiteSpace(ReqLastNameTxt.Text) ||
-                string.IsNullOrWhiteSpace(TypeOfAidCmb.Text) ||
-                string.IsNullOrWhiteSpace(ReqAssistanceThruCmb.Text) ||
-                string.IsNullOrWhiteSpace(ReqAmountTxt.Text) ||
-                string.IsNullOrWhiteSpace(RequestByCmb.Text) ||
-                string.IsNullOrWhiteSpace(DateNeededPicker.Text))
-            {
-                MessageBox.Show("Please fill in all required fields before submitting.", "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
-            }
-
-            if (!decimal.TryParse(ReqAmountTxt.Text, out _))
-            {
-                MessageBox.Show("Please enter a valid amount.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             TransferToDisplayPanel();
             ConfirmationPanel.Show();
             ConfirmationPanel.BringToFront();
             FillUpFormPanel.Hide();
         }
+
         private void ClearButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ClearInputs(this);
@@ -282,12 +272,11 @@ namespace BATODA
         {
             if (e.KeyCode == Keys.Enter)
             {
+                DataGridCustom.ApplyCustomGridSearch(ReqSearchGrid);
                 ReqSearchGrid.Visible = true;
                 RequestSearchOwner search = new RequestSearchOwner();
                 search.SearchOwner(ReqSearchTxt, ReqSearchGrid);
                 SearchResults.SetupSearchGrid(ReqSearchGrid);
-                DataGridCustom.ApplyCustomGridSearch(ReqSearchGrid);
-
                 ReqSearchGrid.Focus();
                 e.SuppressKeyPress = true;
             }
@@ -321,6 +310,7 @@ namespace BATODA
 
             LoadOwnerImage.FromMember(member, MemberImagePb);
 
+
             ReqSearchGrid.Visible = false;
 
         }
@@ -342,7 +332,9 @@ namespace BATODA
                 ReqGcashNumTxt.Text = "XXXXXXXXXXX";
                 ReqGcashNumTxt.Enabled = false;
             }
+
         }
+
 
         private void UploadProofBtn_Click(object sender, EventArgs e)
         {
@@ -364,6 +356,8 @@ namespace BATODA
             FillUpFormPanel.BringToFront();
             TicketIdlbl.Text = "TR-" + Ticket.GetNextTicketID().ToString();
             DateCreatedLbl.Text = DateTime.Now.ToString("MM-dd-yyyy hh:mm tt");
+
+
         }
 
         private void CreateTicketCancelBtn_Click(object sender, EventArgs e)
@@ -374,21 +368,6 @@ namespace BATODA
         private void ConfirmationPanelCancelBtn_Click(object sender, EventArgs e)
         {
             ConfirmationPanel.Hide();
-        }
-
-        private void SearchTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                LoadAllTickets();
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        private void ApplyButton_Click(object sender, EventArgs e)
-        {
-            SearchTextBox.Text = "";
-            LoadAllTickets();
         }
     }
 }

@@ -60,6 +60,7 @@ public class AddTicketBox
         {
             Text = "Tracking Number: " + trackingNumber,
             Location = new Point(10, 7),
+            BackColor = HeaderPanel.BackColor,
             AutoSize = true,
             Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold)
 

@@ -1092,7 +1092,6 @@
             this.ApplyButton.TextOffset = 20;
             this.ApplyButton.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ApplyButton.UseVisualStyleBackColor = false;
-            this.ApplyButton.Click += new System.EventHandler(this.ApplyButton_Click);
             // 
             // panel20
             // 
@@ -1113,7 +1112,6 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(399, 22);
             this.SearchTextBox.TabIndex = 41;
-            this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
             // 
             // pictureBox7
             // 
