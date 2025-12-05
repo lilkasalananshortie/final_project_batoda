@@ -26,8 +26,6 @@ namespace BATODA
     public partial class MembersUForm : UserControl
     {
         MemberRepository MemberRepo = new MemberRepository();
-
-
         public MembersUForm()
         {
             InitializeComponent();
@@ -37,7 +35,6 @@ namespace BATODA
             TotalInactiveLbl.Text = MemberInfoSummary.GetInactiveCount().ToString();
             TotalSuspendedLbl.Text = MemberInfoSummary.GetSuspendedCount().ToString();
         }
-
         private void MembersUForm_Load(object sender, EventArgs e)
         {
             var repo = new TaxRepository();
@@ -54,18 +51,37 @@ namespace BATODA
             {
                 repo.UpdateAllTaxBalances();
             }
+            catch (SqlException sqlEx)
+            {
+                ToastManager.Error($"Failed to update tax balances (Database error): {sqlEx.Message}");
+            }
+            catch (InvalidOperationException invEx)
+            {
+                ToastManager.Error($"Failed to update tax balances: {invEx.Message}");
+            }
             catch (Exception ex)
             {
-                ToastManager.Error($"Failed to update tax balances");
-            
+                ToastManager.Error($"Unexpected error while updating tax balances: {ex.Message}");
             }
 
-            SetupGridColumns();
-            LoadMembersToGrid();
-
-            DataGridCustom.ApplyCustomGrid(MembersDataGrid);
-            DataGridCustom.AddActionButtons(MembersDataGrid);
-
+            try
+            {
+                SetupGridColumns();
+                LoadMembersToGrid();
+            }
+            catch (Exception ex)
+            {
+                ToastManager.Error($"Failed to load members to grid: {ex.Message}");
+            }
+            try
+            {
+                DataGridCustom.ApplyCustomGrid(MembersDataGrid);
+                DataGridCustom.AddActionButtons(MembersDataGrid);
+            }
+            catch (Exception ex)
+            {
+                ToastManager.Error($"Failed to configure grid actions: {ex.Message}");
+            }
 
             AddMemberPanel.Visible = false;
             AddMemberPanel.BringToFront();
@@ -87,7 +103,6 @@ namespace BATODA
             }
 
         }
-
         private void LoadMembersToGrid()
         {
             MemberRepo.UpdateSuspensionHours();
@@ -161,13 +176,9 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new TransferMembershipUForm());
         }
-
-
-
        
         private void AddMemberButton_Click(object sender, EventArgs e)
-        {
-                
+        {                
             LoadBodyNumber.ShowNext(AddBodyNo);
             AddMemberPanel.Visible = true;
             AddMemberButton.Enabled = false;
@@ -175,7 +186,6 @@ namespace BATODA
             SearchBtn.Enabled = false;
 
         }
-
         private void SaveButton_Click(object sender, EventArgs e)
         {
             try
@@ -192,13 +202,9 @@ namespace BATODA
                     string.IsNullOrWhiteSpace(AddChassisNumberTxt.Text) ||
                     string.IsNullOrWhiteSpace(AddEngineNumberTxt.Text))
                 {
-                    ToastManager.Warning("Please fill in all required fields before saving.");
-                    
-
-
+                    ToastManager.Warning("Please fill in all required fields before saving.");                   
                     return;
                 }
-
 
                 // CHECK IMAGE IF SELECTED
                 if (PreviewImagePb.Image == null)
@@ -256,8 +262,6 @@ namespace BATODA
             ToastManager.Success("Filters Cleared Successfully!");
         }
 
-
-
         private void ApplyButton_Click(object sender, EventArgs e)
         {
             string memberType = SortMembertTypeCmb.SelectedItem?.ToString();
@@ -301,8 +305,6 @@ namespace BATODA
                 row.Cells["PenaltyLevel"].Value = text;
             }
 
-
-
             if (MemberTable.Rows.Count == 0)
             {
                 NoResultsPanel.BringToFront();
@@ -313,8 +315,6 @@ namespace BATODA
                 NoResultsPanel.Visible = false;
             }
         }
-
-
 
         private void UploadButton_Click(object sender, EventArgs e)
         {
@@ -450,7 +450,6 @@ namespace BATODA
             }
         }
 
-
         private void LoadMemberOverview(int bodyNumber)
         {
             var repo = new MemberRepository();
@@ -472,12 +471,6 @@ namespace BATODA
                 AddPenaltyBtn.Text = member.PenaltyLevel == 3 ? "Suspend" : "Add Penalty";
             }
         }
-
-        private void ViewMemberInfoPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void AddPenaltyBtn_Click(object sender, EventArgs e)
         {
             if (MembersDataGrid.SelectedRows.Count == 0) return;
@@ -524,22 +517,11 @@ namespace BATODA
                 LoadMembersToGrid();
             }
         }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ResetButton_Click(object sender, EventArgs e)
         {
             PreviewImagePb.Image = null;
             UploadImageDialog.FileName = "";
 
-        }
-
-        private void ManageMembersButton_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }
