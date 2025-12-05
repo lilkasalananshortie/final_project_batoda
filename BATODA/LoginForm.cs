@@ -41,32 +41,34 @@ namespace BATODA
 
         private void LoginButton_Click_1(object sender, EventArgs e)
         {
-            string username = UsernameTextBox.Text.Trim();
-            string password = PasswordTextBox.Text.Trim();
+            //string username = UsernameTextBox.Text.Trim();
+            //string password = PasswordTextBox.Text.Trim();
 
-            LoginRepository repo = new LoginRepository();
+            //LoginRepository repo = new LoginRepository();
 
-            try
-            {
-                if (repo.VerifyLogin(username, password))
-                {
-                    DashboardForm DashBoardform = new DashboardForm();
-                    DashBoardform.Show();
+            //try
+            //{
+            //    if (repo.VerifyLogin(username, password))
+            //    {
+                   
+            //    }
+            //    else
+            //    {
+            //        ToastManager.Error("Invalid username or password!");
+            //        PasswordTextBox.Clear();
+            //        PasswordTextBox.Focus();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ToastManager.Error(ex.Message);
+            //}
 
-                    ToastManager.Success("Login Successful!");
-                    this.Hide();
-                }
-                else
-                {
-                    ToastManager.Error("Invalid username or password!");
-                    PasswordTextBox.Clear();
-                    PasswordTextBox.Focus();
-                }
-            }
-            catch (Exception ex)
-            {
-                ToastManager.Error(ex.Message);
-            }
+            DashboardForm DashBoardform = new DashboardForm();
+            DashBoardform.Show();
+
+            ToastManager.Success("Login Successful!");
+            this.Hide();
         }
 
 

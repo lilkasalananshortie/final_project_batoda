@@ -18,39 +18,46 @@ namespace BATODA.Helpers.DataGrids
         public static void ApplyCustomGridSearch(DataGridView dgv)
         {
             if (dgv == null) return;
+
+            // General settings
             dgv.BorderStyle = BorderStyle.None;
             dgv.BackgroundColor = Color.White;
             dgv.RowHeadersVisible = false;
             dgv.AllowUserToAddRows = false;
             dgv.AllowUserToResizeRows = false;
+            dgv.AllowUserToResizeColumns = false;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv.AllowUserToResizeRows = false;
-            dgv.AllowUserToResizeColumns = false;
-            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgv.ColumnHeadersHeight = 40;
-            foreach (DataGridViewColumn col in dgv.Columns)
-            {
-                col.SortMode = DataGridViewColumnSortMode.NotSortable;
-                dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
             dgv.ReadOnly = true;
-
-
-            dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
-            dgv.RowTemplate.Height = 15;
             dgv.MultiSelect = false;
+
+            // Default cell style
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 230, 230);
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
 
-            // header style
+            // Row style
+            dgv.RowTemplate.Height = 20;
+            // Header style
             dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersHeight = 20;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(173, 46, 36);
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Regular);
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
 
+            // Column settings
+            foreach (DataGridViewColumn col in dgv.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
+
+        
         public static void ApplyCustomGrid(DataGridView dgv)
         {
             if (dgv == null) return;
@@ -78,7 +85,6 @@ namespace BATODA.Helpers.DataGrids
 
 
             dgv.DefaultCellStyle.BackColor = Color.White;
-            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 230, 230);
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular);

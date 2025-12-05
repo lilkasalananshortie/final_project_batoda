@@ -29,13 +29,6 @@ namespace BATODA
             // test lang pang push
         }
 
-        private void TransferMembershipUForm_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-
         private void ManageMembersButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new MembersUForm());
@@ -50,26 +43,6 @@ namespace BATODA
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
         }
-
-        private void SearchButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-
-
-
-
-        }
-
-
 
         private void ConfirmationButton_Click(object sender, EventArgs e)
         {
@@ -90,17 +63,6 @@ namespace BATODA
 
 
             HolderPanel1.SendToBack();
-
-        }
-
-
-        private void HolderPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void OwnerSearchTxt_KeyDown(object sender, KeyEventArgs e)
-        {
 
         }
 
@@ -148,7 +110,6 @@ namespace BATODA
                 LoadOwnerImage.FromMember(owner, CurrentOwnerPb);
             }
 
-            DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
             OwnerSearchGrid.Visible = false;
 
         }
@@ -193,6 +154,7 @@ namespace BATODA
                 OwnerSearchGrid.Visible = true;
                 TransferMemberSearchOwner search = new TransferMemberSearchOwner();
                 search.SearchOwner(OwnerSearchTxt, OwnerSearchGrid);
+                DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
                 OwnerSearchGrid.Focus();
                 e.SuppressKeyPress = true;
             }
@@ -230,12 +192,7 @@ namespace BATODA
             {
                 LoadOwnerImage.FromMember(owner, CurrentOwnerPb);
             }
-
-
-            DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
-
             OwnerSearchGrid.Visible = false;
-
         }
 
         private void TransferBtn_Click(object sender, EventArgs e)
@@ -330,10 +287,6 @@ namespace BATODA
             }
         }
 
-        private void OwnerSearchGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
-
-        }
+      
     }
 }

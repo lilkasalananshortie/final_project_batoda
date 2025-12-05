@@ -790,7 +790,6 @@
             this.Controls.Add(this.MembersTopPanel);
             this.Name = "TransferVehicleUForm";
             this.Size = new System.Drawing.Size(1669, 1047);
-            this.Load += new System.EventHandler(this.TransferVehicleUForm_Load);
             this.MembersTopPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

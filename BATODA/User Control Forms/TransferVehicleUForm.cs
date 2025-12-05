@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Tricycle_Module.Tricycle_Classes;
 
 namespace BATODA
@@ -16,13 +17,6 @@ namespace BATODA
         public TransferVehicleUForm()
         {
             InitializeComponent();
-        }
-          
-
-
-        private void TransferVehicleUForm_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void RegisteredVehicleButton_Click(object sender, EventArgs e)
@@ -40,21 +34,6 @@ namespace BATODA
             DisplayClass.ShowMain(new TransferRecordVehicleUForm());
         }
 
-        private void SearchButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -62,6 +41,7 @@ namespace BATODA
                 OwnerSearchGrid.Visible = true;
                 TransferTricSearchOwner search = new TransferTricSearchOwner();
                 search.SearchOwner(VehicOwnerSearch, OwnerSearchGrid);
+                DataGridCustom.ApplyCustomGridSearch(OwnerSearchGrid);
                 OwnerSearchGrid.Focus();
                 e.SuppressKeyPress = true;
             }

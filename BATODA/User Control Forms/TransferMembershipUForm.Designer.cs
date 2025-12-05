@@ -398,7 +398,6 @@
             this.OwnerSearchGrid.TabIndex = 60;
             this.OwnerSearchGrid.Visible = false;
             this.OwnerSearchGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellClick_1);
-            this.OwnerSearchGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OwnerSearchGrid_CellContentClick);
             // 
             // BodyNumber
             // 
