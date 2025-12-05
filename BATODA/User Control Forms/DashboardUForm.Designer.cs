@@ -63,21 +63,21 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.SystemLogGrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
@@ -87,6 +87,7 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SystemLogGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -218,22 +219,25 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkGray;
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Location = new System.Drawing.Point(15, 388);
+            this.panel4.Controls.Add(this.SystemLogGrid);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.pictureBox7);
+            this.panel4.Location = new System.Drawing.Point(15, 343);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1054, 514);
+            this.panel4.Size = new System.Drawing.Size(1054, 559);
             this.panel4.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 339);
+            this.label4.Location = new System.Drawing.Point(63, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 31);
+            this.label4.Size = new System.Drawing.Size(167, 31);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Activity Log";
+            this.label4.Text = "System Log";
             // 
             // panel5
             // 
@@ -403,7 +407,7 @@
             this.QuickActionReviewActionButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionReviewActionButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionReviewActionButton.IsToggled = false;
-            this.QuickActionReviewActionButton.Location = new System.Drawing.Point(43, 238);
+            this.QuickActionReviewActionButton.Location = new System.Drawing.Point(44, 238);
             this.QuickActionReviewActionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionReviewActionButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionReviewActionButton.Name = "QuickActionReviewActionButton";
@@ -435,7 +439,7 @@
             this.QuickActionChangeVehicleButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionChangeVehicleButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionChangeVehicleButton.IsToggled = false;
-            this.QuickActionChangeVehicleButton.Location = new System.Drawing.Point(43, 185);
+            this.QuickActionChangeVehicleButton.Location = new System.Drawing.Point(44, 185);
             this.QuickActionChangeVehicleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionChangeVehicleButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionChangeVehicleButton.Name = "QuickActionChangeVehicleButton";
@@ -467,7 +471,7 @@
             this.QuickActionTransferMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionTransferMemberButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionTransferMemberButton.IsToggled = false;
-            this.QuickActionTransferMemberButton.Location = new System.Drawing.Point(43, 132);
+            this.QuickActionTransferMemberButton.Location = new System.Drawing.Point(44, 132);
             this.QuickActionTransferMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionTransferMemberButton.MouseDownColor = System.Drawing.Color.DarkGray;
             this.QuickActionTransferMemberButton.Name = "QuickActionTransferMemberButton";
@@ -500,7 +504,7 @@
             this.QuickActionNewMemberButton.ImagePosition = new System.Drawing.Point(0, 0);
             this.QuickActionNewMemberButton.ImageSize = new System.Drawing.Size(32, 32);
             this.QuickActionNewMemberButton.IsToggled = false;
-            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(43, 79);
+            this.QuickActionNewMemberButton.Location = new System.Drawing.Point(44, 79);
             this.QuickActionNewMemberButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.QuickActionNewMemberButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.QuickActionNewMemberButton.Name = "QuickActionNewMemberButton";
@@ -530,9 +534,7 @@
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.panel12);
-            this.panel9.Controls.Add(this.label24);
             this.panel9.Controls.Add(this.label19);
             this.panel9.Controls.Add(this.label18);
             this.panel9.Controls.Add(this.label17);
@@ -540,49 +542,30 @@
             this.panel9.Controls.Add(this.label15);
             this.panel9.Location = new System.Drawing.Point(1077, 663);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(524, 423);
+            this.panel9.Size = new System.Drawing.Size(524, 239);
             this.panel9.TabIndex = 2;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel10.Location = new System.Drawing.Point(21, 172);
+            this.panel10.Location = new System.Drawing.Point(21, 198);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(480, 3);
             this.panel10.TabIndex = 93;
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.DarkGray;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Location = new System.Drawing.Point(21, 228);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(480, 174);
-            this.panel11.TabIndex = 6;
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel12.Location = new System.Drawing.Point(21, 64);
+            this.panel12.Location = new System.Drawing.Point(21, 73);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(480, 3);
             this.panel12.TabIndex = 92;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
-            this.label24.Location = new System.Drawing.Point(22, 192);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(250, 33);
-            this.label24.TabIndex = 5;
-            this.label24.Text = "Payment Overdue";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(387, 86);
+            this.label19.Location = new System.Drawing.Point(386, 102);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(88, 20);
             this.label19.TabIndex = 44;
@@ -593,7 +576,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(396, 128);
+            this.label18.Location = new System.Drawing.Point(395, 144);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(79, 20);
             this.label18.TabIndex = 43;
@@ -604,7 +587,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(47, 83);
+            this.label17.Location = new System.Drawing.Point(46, 99);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(104, 24);
             this.label17.TabIndex = 42;
@@ -614,7 +597,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(47, 124);
+            this.label16.Location = new System.Drawing.Point(46, 140);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(102, 24);
             this.label16.TabIndex = 41;
@@ -624,7 +607,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(22, 24);
+            this.label15.Location = new System.Drawing.Point(22, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(244, 33);
             this.label15.TabIndex = 5;
@@ -633,12 +616,21 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::BATODA.Properties.Resources.actuvity_log;
-            this.pictureBox7.Location = new System.Drawing.Point(15, 339);
+            this.pictureBox7.Location = new System.Drawing.Point(25, 17);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(35, 35);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
+            // 
+            // SystemLogGrid
+            // 
+            this.SystemLogGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.SystemLogGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SystemLogGrid.Location = new System.Drawing.Point(24, 69);
+            this.SystemLogGrid.Name = "SystemLogGrid";
+            this.SystemLogGrid.Size = new System.Drawing.Size(1004, 463);
+            this.SystemLogGrid.TabIndex = 0;
             // 
             // DashboardUForm
             // 
@@ -649,11 +641,9 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -670,6 +660,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -684,8 +676,8 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SystemLogGrid)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -730,10 +722,9 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.DataGridView SystemLogGrid;
     }
 }

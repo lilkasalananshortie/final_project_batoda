@@ -76,9 +76,6 @@
             this.label41 = new System.Windows.Forms.Label();
             this.PreviousEventPanel = new System.Windows.Forms.Panel();
             this.DoneEventFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
             this.CheckAttendancePanel = new System.Windows.Forms.Panel();
@@ -754,9 +751,6 @@
             this.PreviousEventPanel.BackColor = System.Drawing.Color.White;
             this.PreviousEventPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PreviousEventPanel.Controls.Add(this.DoneEventFlowLayoutPanel);
-            this.PreviousEventPanel.Controls.Add(this.comboBox2);
-            this.PreviousEventPanel.Controls.Add(this.label35);
-            this.PreviousEventPanel.Controls.Add(this.label36);
             this.PreviousEventPanel.Controls.Add(this.panel18);
             this.PreviousEventPanel.Location = new System.Drawing.Point(1167, 741);
             this.PreviousEventPanel.Name = "PreviousEventPanel";
@@ -766,38 +760,10 @@
             // DoneEventFlowLayoutPanel
             // 
             this.DoneEventFlowLayoutPanel.AutoScroll = true;
-            this.DoneEventFlowLayoutPanel.Location = new System.Drawing.Point(5, 131);
+            this.DoneEventFlowLayoutPanel.Location = new System.Drawing.Point(5, 77);
             this.DoneEventFlowLayoutPanel.Name = "DoneEventFlowLayoutPanel";
-            this.DoneEventFlowLayoutPanel.Size = new System.Drawing.Size(423, 491);
+            this.DoneEventFlowLayoutPanel.Size = new System.Drawing.Size(423, 545);
             this.DoneEventFlowLayoutPanel.TabIndex = 7;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(323, 89);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 6;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(10, 83);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(118, 29);
-            this.label35.TabIndex = 4;
-            this.label35.Text = "All Events";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(232, 90);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(92, 18);
-            this.label36.TabIndex = 5;
-            this.label36.Text = "Select Date :";
             // 
             // panel18
             // 
@@ -815,7 +781,7 @@
             this.label49.BackColor = System.Drawing.Color.Transparent;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.White;
-            this.label49.Location = new System.Drawing.Point(77, 15);
+            this.label49.Location = new System.Drawing.Point(68, 15);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(304, 42);
             this.label49.TabIndex = 0;
@@ -1109,7 +1075,6 @@
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.PreviousEventPanel.ResumeLayout(false);
-            this.PreviousEventPanel.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.CheckAttendancePanel.ResumeLayout(false);
@@ -1170,9 +1135,6 @@
         private System.Windows.Forms.Panel PreviousEventPanel;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel PastEventAttendancePanel;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label37;

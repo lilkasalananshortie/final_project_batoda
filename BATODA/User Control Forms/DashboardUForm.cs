@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BATODA.Helpers.Database.Assistance;
+using BATODA.Helpers.Database.Members;
+using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
+using BATODA.User_Control_Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BATODA.Helpers.Database.Assistance;
-using BATODA.Helpers.Database.Members;
-using BATODA.User_Control_Forms;
 
 namespace BATODA
 {
@@ -30,6 +31,7 @@ namespace BATODA
             TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
             PendingReqLbl.Text = RequestsCount.CountPendingRequests().ToString();
             UpdateCodingNumber();
+            LoadSystemLogs();
         }
 
 
@@ -73,7 +75,19 @@ namespace BATODA
             DisplayClass.ShowMain(membersUC);
             membersUC.ShowAddMemberPanel();
             
-        }   
+        }
+
+        private void LoadSystemLogs()
+        {
+            var logRepo = new SystemActivityLogRepository();
+            SystemLogGrid.DataSource = logRepo.GetAllLogs();
+
+            SystemLogGrid.Columns["ModuleName"].HeaderText = "Module";
+            SystemLogGrid.Columns["ActionType"].HeaderText = "Action Type";
+            SystemLogGrid.Columns["Description"].HeaderText = "Description";
+            SystemLogGrid.Columns["DateRecorded"].HeaderText = "Date";
+        }
+
 
         private void QuickActionTransferMemberButton_Click(object sender, EventArgs e)
         {
@@ -95,6 +109,11 @@ namespace BATODA
            
             _mainForm.ActivateMainButton("Assistance");
             DisplayClass.ShowMain(new AssistanceRequestUForm());
+
+        }
+
+        private void dataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
