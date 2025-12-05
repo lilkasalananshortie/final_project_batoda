@@ -24,7 +24,16 @@ namespace BATODA
         public TransferMembershipUForm()
         {
             InitializeComponent();
+
+            // test lang pang push
         }
+
+        private void TransferMembershipUForm_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
 
         private void ManageMembersButton_Click(object sender, EventArgs e)
         {
@@ -39,12 +48,33 @@ namespace BATODA
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
-        }       
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+
 
         private void ConfirmationButton_Click(object sender, EventArgs e)
         {
-           ToastManager.Success("Membership Transferred Successfully!");
-            
+
+            ToastManager.Success("Membership Transferred Successfully!");
+
         }
 
         private void CancelConfirmation_Click(object sender, EventArgs e)
@@ -54,25 +84,23 @@ namespace BATODA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            // CURRENT OWNER
-            if (owner != null)
-            {
-                LoadOwnerImage.FromMember(owner, ConfirmCurrentImage);
-            }
 
-            // NEW OWNER (UPLOADED FROM BTN)
-            if (NewOwnerPb.Image != null)
-            {
-                // Make a memory copy so the original NewOwnerPb image doesn't lock any file
-                using (var temp = new Bitmap(NewOwnerPb.Image))
-                {
-                    ConfirmNewImage.Image = new Bitmap(temp);
-                }
-                ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
+
 
 
             HolderPanel1.SendToBack();
+
+        }
+
+
+        private void HolderPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void OwnerSearchTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
 
         private void OwnerSearchGrid_Leave(object sender, EventArgs e)
@@ -84,6 +112,10 @@ namespace BATODA
         {
             if (OwnerSearchGrid.Visible)
                 OwnerSearchGrid.Visible = false;
+        }
+
+        private void panel24_Click(object sender, EventArgs e)
+        {
         }
 
         private void OwnerSearchGrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -122,9 +154,28 @@ namespace BATODA
             OwnerSearchGrid.Visible = false;
         }
 
+
+        private void ConfirmationTransferPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SavePanelButton_Click(object sender, EventArgs e)
+        {
+        }
+
         private void CancelPanelButton_Click(object sender, EventArgs e)
         {
-            ConfirmationTransferPanel.Hide();
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
+        {
         }
 
         private void TransferUploadBtn_Click(object sender, EventArgs e)
@@ -290,25 +341,9 @@ namespace BATODA
                 logRepo.LogMembershipTransfer(bodyNumber, $"{TransferFirstNameTxt.Text} {TransferLastNameTxt.Text}");
 
                 MessageBox.Show("Owner information updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ConfirmationTransferPanel.Hide();
-
-                // CURRENT OWNER IMAGE
-                if (owner != null)
-                {
-                    LoadOwnerImage.FromMember(owner, ConfirmCurrentImage);
-                }
-
-                // NEW OWNER IMAGE
-                if (NewOwnerPb.Image != null)
-                {
-                    using (var temp = new Bitmap(NewOwnerPb.Image))
-                    {
-                        ConfirmNewImage.Image = new Bitmap(temp);
-                    }
-                    ConfirmNewImage.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
 
                 HolderPanel1.SendToBack();
+
             }
             catch (Exception ex)
             {
