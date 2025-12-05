@@ -161,9 +161,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(19, 94);
+            this.panel7.Location = new System.Drawing.Point(14, 94);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1585, 75);
+            this.panel7.Size = new System.Drawing.Size(1595, 75);
             this.panel7.TabIndex = 49;
             // 
             // pictureBox7
@@ -191,17 +191,17 @@
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.TransferTricHistoryGrid);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(19, 169);
+            this.panel1.Location = new System.Drawing.Point(14, 169);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1585, 642);
+            this.panel1.Size = new System.Drawing.Size(1595, 682);
             this.panel1.TabIndex = 48;
             // 
             // TransferTricHistoryGrid
             // 
             this.TransferTricHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransferTricHistoryGrid.Location = new System.Drawing.Point(1, 0);
+            this.TransferTricHistoryGrid.Location = new System.Drawing.Point(0, 0);
             this.TransferTricHistoryGrid.Name = "TransferTricHistoryGrid";
-            this.TransferTricHistoryGrid.Size = new System.Drawing.Size(1582, 639);
+            this.TransferTricHistoryGrid.Size = new System.Drawing.Size(1595, 682);
             this.TransferTricHistoryGrid.TabIndex = 3;
             this.TransferTricHistoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 

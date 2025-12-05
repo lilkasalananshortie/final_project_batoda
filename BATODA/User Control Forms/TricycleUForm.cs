@@ -46,7 +46,7 @@ namespace BATODA
             foreach (var t in tricycles)
             {
                 table.Rows.Add(
-                    t.BodyNumber,
+                    t.BodyNumber.ToString("D3"),
                     t.LastName,
                     t.FirstName,
                     t.TricycleBrand,
@@ -60,6 +60,16 @@ namespace BATODA
 
             TricycleGrid.DataSource = table;
             DataGridCustom.AddEditButtonOnly(TricycleGrid);
+
+            TricycleGrid.Columns["BodyNumber"].HeaderText = "Body No."; 
+            TricycleGrid.Columns["LastName"].HeaderText = "Surname"; 
+            TricycleGrid.Columns["FirstName"].HeaderText = "First Name"; 
+            TricycleGrid.Columns["TricycleBrand"].HeaderText = "Brand"; 
+            TricycleGrid.Columns["TricModel"].HeaderText = "Model"; 
+            TricycleGrid.Columns["PlateNumber"].HeaderText = "Plate No."; 
+            TricycleGrid.Columns["EngineNumber"].HeaderText = "Engine No."; 
+            TricycleGrid.Columns["ChassisNumber"].HeaderText = "Chassis No."; 
+            TricycleGrid.Columns["Availability"].HeaderText = "Availability";
 
             foreach (DataGridViewColumn col in TricycleGrid.Columns)
             {
@@ -96,8 +106,6 @@ namespace BATODA
             DisplayClass.ClearInputs(this);
             ToastManager.Success("Filters Cleared Successfully!");
         }
-
-
 
         private void AapplyButtton_Click(object sender, EventArgs e)
         {
@@ -302,7 +310,7 @@ namespace BATODA
                 t.LastName.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0 ||
                 t.PlateNumber.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0
             ).ToList();
-
+            
             DataTable table = new DataTable();
             table.Columns.Add("BodyNumber");
             table.Columns.Add("LastName");
