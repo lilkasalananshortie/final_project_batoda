@@ -21,6 +21,7 @@ namespace BATODA
             DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
 
+            SwitchAdminPanel.Visible = false;
             SettingsPanel.Visible = false;
             DisplayPanel.Visible = true;
             DisplayPanel.Dock = DockStyle.Fill;
@@ -69,6 +70,7 @@ namespace BATODA
 
             DisplayClass.SetActive(HomeButton);
 
+            CreateNewAdminAccountPanel.Visible = false;
 
 
         }
@@ -201,56 +203,6 @@ namespace BATODA
             TopPanelText.Text = "SETTINGS";
             SubTopPanel.Text = "Backup/Restore your organizations data ";
         }
-
-
-       
-
-     
-
-
-
-        private void TopBarPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void NavBarPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void TopPanelText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void CreateNewAdminCancelButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void CreateNewAdminAccountButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogOutButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void SettingButton_Click(object sender, EventArgs e)
         {
             SettingsPanel.Visible = !SettingsPanel.Visible;
@@ -260,5 +212,36 @@ namespace BATODA
             else
                 SettingsPanel.Hide();       
         }
+
+        private void CreateNewAdminCancelButton_Click_1(object sender, EventArgs e)
+        {
+            CreateNewAdminAccountPanel.Visible = false;
+        }
+
+        private void CreateNewAdminAccountButton_Click_1(object sender, EventArgs e)
+        {
+            CreateNewAdminAccountPanel.Visible = true;
+            CreateNewAdminAccountPanel.BringToFront();
+        }
+
+        private void LogOutButton_Click_1(object sender, EventArgs e)
+        {
+            LoginForm LoginForm = new LoginForm();
+            Close();
+            LoginForm.Show();
+        }
+
+        private void SwitchAdminAccountButton_Click(object sender, EventArgs e)
+        {
+            SwitchAdminPanel.Visible = true;
+            SwitchAdminPanel.BringToFront();
+        }
+
+        private void CancelBindButton_Click(object sender, EventArgs e)
+        {
+            SwitchAdminPanel.Visible = false;
+        }
+
+        
     }
 }
