@@ -28,7 +28,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.AllowUserToResizeRows = false;
             dgv.AllowUserToResizeColumns = false;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgv.ColumnHeadersHeight = 70;
+            dgv.ColumnHeadersHeight = 40;
 
             foreach (DataGridViewColumn col in dgv.Columns)
             {
@@ -57,7 +57,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(173, 46, 36);
         }
 
-        public static void ApplyCustomMemberHistoryGrid(DataGridView dgv)
+        public static void ApplyCustomHistoryGrid(DataGridView dgv)
         {
             if (dgv == null) return;
 
@@ -72,7 +72,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.AllowUserToResizeRows = false;
             dgv.AllowUserToResizeColumns = false;
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgv.ColumnHeadersHeight = 60;
+            dgv.ColumnHeadersHeight = 40;
 
             foreach (DataGridViewColumn col in dgv.Columns)
             {

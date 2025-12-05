@@ -24,100 +24,41 @@ namespace BATODA
         public TransferMembershipUForm()
         {
             InitializeComponent();
-
-            // test lang pang push
         }
-
-        private void TransferMembershipUForm_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-
         private void ManageMembersButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new MembersUForm());
         }
-
         private void TransferMembershipButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferMembershipUForm());
         }
-
         private void TransferRecordsButton_Click(object sender, EventArgs e)
         {
             DisplayClass.ShowMain(new TransferRecordMemberUForm());
         }
-
-        private void SearchButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-
-
-
-
-        }
-
-
-
         private void ConfirmationButton_Click(object sender, EventArgs e)
         {
-
             ToastManager.Success("Membership Transferred Successfully!");
-
         }
 
         private void CancelConfirmation_Click(object sender, EventArgs e)
         {
             ToastManager.Info("Membership Transfer Cancelled.");
         }
-
         private void SaveButton_Click(object sender, EventArgs e)
         {
-
-
-
-
             HolderPanel1.SendToBack();
-
         }
-
-
-        private void HolderPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void OwnerSearchTxt_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
         private void OwnerSearchGrid_Leave(object sender, EventArgs e)
         {
             OwnerSearchGrid.Visible = false;
         }
-
         private void OwnerSearchGrid_Click(object sender, EventArgs e)
         {
             if (OwnerSearchGrid.Visible)
                 OwnerSearchGrid.Visible = false;
         }
-
-        private void panel24_Click(object sender, EventArgs e)
-        {
-        }
-
         private void OwnerSearchGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -152,30 +93,6 @@ namespace BATODA
             }
 
             OwnerSearchGrid.Visible = false;
-        }
-
-
-        private void ConfirmationTransferPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void SavePanelButton_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CancelPanelButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
-        {
         }
 
         private void TransferUploadBtn_Click(object sender, EventArgs e)
@@ -349,8 +266,13 @@ namespace BATODA
             {
                 MessageBox.Show($"Error updating member: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            DisplayClass.ClearImage(this);
+            DisplayClass.ClearInputs(this);
         }
 
+        private void ScrollablePanel_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

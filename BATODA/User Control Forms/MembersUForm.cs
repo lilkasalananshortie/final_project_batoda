@@ -237,6 +237,7 @@ namespace BATODA
                 MessageBox.Show("Error adding new member: " + ex.Message);
             }
 
+            DisplayClass.ClearImage(this);
             DisplayClass.ClearInputs(this);
         }
 

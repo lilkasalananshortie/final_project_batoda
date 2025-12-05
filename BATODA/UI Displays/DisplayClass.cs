@@ -82,6 +82,29 @@ namespace BATODA
             };
         }
 
+        public static void ClearImage(Control parent)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (ctrl is PictureBox pb)
+                {
+                    if (pb.Tag is string)
+                    {
+                        pb.Image = Properties.Resources.icon_add_image;
+                        pb.Refresh();
+                    }
+                    else
+                    {
+                        pb.Image = Properties.Resources.icon_add_image;
+                    }
+                }
+
+                if (ctrl.HasChildren)
+                {
+                    ClearInputs(ctrl);
+                }
+            }
+        }
         public static void ClearInputs(Control parent)
         {
             foreach (Control ctrl in parent.Controls)
@@ -108,19 +131,6 @@ namespace BATODA
                     else
                     {
                         cb.SelectedIndex = -1;
-                    }
-                }
-
-                else if (ctrl is PictureBox pb)
-                {
-                    if (pb.Tag is string) 
-                    {
-                        pb.Image = Properties.Resources.icon_add_image; 
-                        pb.Refresh();
-                    }
-                    else
-                    {
-                        pb.Image = Properties.Resources.icon_add_image; 
                     }
                 }
 
