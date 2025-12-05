@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.ShowPassButton = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
@@ -59,9 +56,6 @@
             this.LoginPanel.BackColor = System.Drawing.Color.White;
             this.LoginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.LoginPanel.Controls.Add(this.ShowPassButton);
-            this.LoginPanel.Controls.Add(this.label4);
-            this.LoginPanel.Controls.Add(this.label3);
-            this.LoginPanel.Controls.Add(this.label2);
             this.LoginPanel.Controls.Add(this.label1);
             this.LoginPanel.Controls.Add(this.panel2);
             this.LoginPanel.Controls.Add(this.PasswordTextBox);
@@ -71,9 +65,9 @@
             this.LoginPanel.Controls.Add(this.panel1);
             this.LoginPanel.Controls.Add(this.LoginButton);
             this.LoginPanel.ForeColor = System.Drawing.Color.White;
-            this.LoginPanel.Location = new System.Drawing.Point(443, 58);
+            this.LoginPanel.Location = new System.Drawing.Point(449, 58);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(401, 431);
+            this.LoginPanel.Size = new System.Drawing.Size(395, 431);
             this.LoginPanel.TabIndex = 0;
             // 
             // ShowPassButton
@@ -86,36 +80,6 @@
             this.ShowPassButton.TabIndex = 19;
             this.ShowPassButton.TabStop = false;
             this.ShowPassButton.Click += new System.EventHandler(this.ShowPassButton_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
-            this.label4.Location = new System.Drawing.Point(242, 352);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Create";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(120, 352);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Don\' t have an account?";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(234, 238);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Forgot password?";
             // 
             // label1
             // 
@@ -249,7 +213,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::BATODA.Properties.Resources.bambang_iufbbtodaa;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 227);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 200);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(381, 107);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -300,9 +264,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox ShowPassButton;

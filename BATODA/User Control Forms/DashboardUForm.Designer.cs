@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.TaxTodayLbl = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -41,7 +41,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.SystemLogGrid = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.CodingNoLbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -51,15 +53,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.OverdueLbl = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
-            this.QuickActionReviewActionButton = new BATODA.ButtonStyle();
-            this.QuickActionChangeVehicleButton = new BATODA.ButtonStyle();
-            this.QuickActionTransferMemberButton = new BATODA.ButtonStyle();
-            this.QuickActionNewMemberButton = new BATODA.ButtonStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -69,8 +67,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.SystemLogGrid = new System.Windows.Forms.DataGridView();
+            this.QuickActionReviewActionButton = new BATODA.ButtonStyle();
+            this.QuickActionChangeVehicleButton = new BATODA.ButtonStyle();
+            this.QuickActionTransferMemberButton = new BATODA.ButtonStyle();
+            this.QuickActionNewMemberButton = new BATODA.ButtonStyle();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -78,6 +78,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SystemLogGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
@@ -86,8 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SystemLogGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -137,7 +137,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.TaxTodayLbl);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(546, 172);
@@ -145,15 +145,15 @@
             this.panel2.Size = new System.Drawing.Size(523, 153);
             this.panel2.TabIndex = 1;
             // 
-            // label11
+            // TaxTodayLbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(114, 67);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 55);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "618";
+            this.TaxTodayLbl.AutoSize = true;
+            this.TaxTodayLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaxTodayLbl.Location = new System.Drawing.Point(76, 67);
+            this.TaxTodayLbl.Name = "TaxTodayLbl";
+            this.TaxTodayLbl.Size = new System.Drawing.Size(108, 55);
+            this.TaxTodayLbl.TabIndex = 6;
+            this.TaxTodayLbl.Text = "618";
             // 
             // pictureBox4
             // 
@@ -229,6 +229,15 @@
             this.panel4.Size = new System.Drawing.Size(1054, 559);
             this.panel4.TabIndex = 1;
             // 
+            // SystemLogGrid
+            // 
+            this.SystemLogGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.SystemLogGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SystemLogGrid.Location = new System.Drawing.Point(24, 69);
+            this.SystemLogGrid.Name = "SystemLogGrid";
+            this.SystemLogGrid.Size = new System.Drawing.Size(1004, 463);
+            this.SystemLogGrid.TabIndex = 0;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -238,6 +247,16 @@
             this.label4.Size = new System.Drawing.Size(167, 31);
             this.label4.TabIndex = 5;
             this.label4.Text = "System Log";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BATODA.Properties.Resources.actuvity_log;
+            this.pictureBox7.Location = new System.Drawing.Point(25, 17);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
             // 
             // panel5
             // 
@@ -329,7 +348,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.OverdueLbl);
             this.panel7.Controls.Add(this.pictureBox5);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Location = new System.Drawing.Point(1077, 172);
@@ -337,15 +356,15 @@
             this.panel7.Size = new System.Drawing.Size(523, 153);
             this.panel7.TabIndex = 5;
             // 
-            // label12
+            // OverdueLbl
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(114, 78);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 55);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "618";
+            this.OverdueLbl.AutoSize = true;
+            this.OverdueLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverdueLbl.Location = new System.Drawing.Point(89, 67);
+            this.OverdueLbl.Name = "OverdueLbl";
+            this.OverdueLbl.Size = new System.Drawing.Size(108, 55);
+            this.OverdueLbl.TabIndex = 7;
+            this.OverdueLbl.Text = "618";
             // 
             // pictureBox5
             // 
@@ -363,9 +382,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(39, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(290, 29);
+            this.label7.Size = new System.Drawing.Size(244, 29);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Overdue Member (Month)";
+            this.label7.Text = "Overdue (Last Month)";
             // 
             // panel8
             // 
@@ -389,6 +408,100 @@
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(480, 3);
             this.panel29.TabIndex = 91;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(21, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(195, 33);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Quick Actions";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel12);
+            this.panel9.Controls.Add(this.label19);
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.label17);
+            this.panel9.Controls.Add(this.label16);
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Location = new System.Drawing.Point(1077, 663);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(524, 239);
+            this.panel9.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel10.Location = new System.Drawing.Point(21, 198);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(480, 3);
+            this.panel10.TabIndex = 93;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel12.Location = new System.Drawing.Point(21, 73);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(480, 3);
+            this.panel12.TabIndex = 92;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(386, 102);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(88, 20);
+            this.label19.TabIndex = 44;
+            this.label19.Text = "10 event(s)";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(395, 144);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 20);
+            this.label18.TabIndex = 43;
+            this.label18.Text = "9 event(s)";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(46, 99);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 24);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "This Month";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(46, 140);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(102, 24);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "Completed";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(22, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(244, 33);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Upcoming Events";
             // 
             // QuickActionReviewActionButton
             // 
@@ -519,119 +632,6 @@
             this.QuickActionNewMemberButton.UseVisualStyleBackColor = false;
             this.QuickActionNewMemberButton.Click += new System.EventHandler(this.QuickActionNewMemberButton_Click);
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(21, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(195, 33);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Quick Actions";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel12);
-            this.panel9.Controls.Add(this.label19);
-            this.panel9.Controls.Add(this.label18);
-            this.panel9.Controls.Add(this.label17);
-            this.panel9.Controls.Add(this.label16);
-            this.panel9.Controls.Add(this.label15);
-            this.panel9.Location = new System.Drawing.Point(1077, 663);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(524, 239);
-            this.panel9.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel10.Location = new System.Drawing.Point(21, 198);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(480, 3);
-            this.panel10.TabIndex = 93;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.panel12.Location = new System.Drawing.Point(21, 73);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(480, 3);
-            this.panel12.TabIndex = 92;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(386, 102);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(88, 20);
-            this.label19.TabIndex = 44;
-            this.label19.Text = "10 event(s)";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(395, 144);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 20);
-            this.label18.TabIndex = 43;
-            this.label18.Text = "9 event(s)";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(46, 99);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(104, 24);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "This Month";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(46, 140);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(102, 24);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "Completed";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(22, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(244, 33);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Upcoming Events";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::BATODA.Properties.Resources.actuvity_log;
-            this.pictureBox7.Location = new System.Drawing.Point(25, 17);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // SystemLogGrid
-            // 
-            this.SystemLogGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.SystemLogGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SystemLogGrid.Location = new System.Drawing.Point(24, 69);
-            this.SystemLogGrid.Name = "SystemLogGrid";
-            this.SystemLogGrid.Size = new System.Drawing.Size(1004, 463);
-            this.SystemLogGrid.TabIndex = 0;
-            // 
             // DashboardUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,6 +662,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SystemLogGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -675,8 +677,6 @@
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SystemLogGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,11 +705,11 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label TotalMembersLbl;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label TaxTodayLbl;
         private System.Windows.Forms.Label PenalizedLbl;
         private System.Windows.Forms.Label CodingNoLbl;
         private System.Windows.Forms.Label PendingReqLbl;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label OverdueLbl;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label14;
         private ButtonStyle QuickActionReviewActionButton;

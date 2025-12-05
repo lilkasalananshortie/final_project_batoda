@@ -1,4 +1,5 @@
-﻿using BATODA.Helpers.Database.Assistance;
+﻿using BATODA.Helpers.Data;
+using BATODA.Helpers.Database.Assistance;
 using BATODA.Helpers.Database.Members;
 using BATODA.Helpers.DataGrids;
 using BATODA.Modules.Dashboard_Module.Dashboard_Classes;
@@ -33,6 +34,10 @@ namespace BATODA
             PendingReqLbl.Text = RequestsCount.CountPendingRequests().ToString();
             UpdateCodingNumber();
             LoadSystemLogs();
+
+            var taxRepo = new TaxRepository();
+            TaxTodayLbl.Text = "₱" + taxRepo.GetPaidTodayTotal().ToString("N2");
+            OverdueLbl.Text = "₱" + taxRepo.GetOverdueLastMonthTotal().ToString("N2");
         }
 
 
