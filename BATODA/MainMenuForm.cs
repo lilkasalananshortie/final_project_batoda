@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using BATODA.UI_Displays;
 using BATODA.User_Control_Forms;
+using BATODA.Modules.Main_Menu;
 
 namespace BATODA
 {
@@ -15,7 +18,6 @@ namespace BATODA
             DisplayClass.SetMainPanel(DisplayPanel);
             DisplayClass.SetMiniPanel(CalendarXAccoutnContainerPanel);
 
-            SwitchAdminPanel.Visible = false;
             SettingsPanel.Visible = false;
             DisplayPanel.Visible = true;
             DisplayPanel.Dock = DockStyle.Fill;
@@ -59,6 +61,8 @@ namespace BATODA
                  CSButton,
                  CalendarBtn,
                  FareMatrixButton
+                
+
 
             );
 
@@ -118,6 +122,12 @@ namespace BATODA
                     DisplayClass.ShowMain(new FareMatrixUForm());
                     TopBarPanel.Text = "FARE MATRIX";
                     break;
+
+                case "Reports":
+                    DisplayClass.SetActive(CSButton);
+                    DisplayClass.ShowMain(new CSUForm());
+                    TopBarPanel.Text = "Reports";
+                    break;
             }
         }
         private void HomeButton_Click(object sender, EventArgs e)
@@ -167,7 +177,7 @@ namespace BATODA
         {
             ActivateMainButton("Calendar");
             DisplayClass.ShowMain(new CalendarUForm());
-            TopPanelText.Text = "CALENDAR";
+            TopPanelText.Text = "Schedule";
             SubTopPanel.Text = "Create and manage your upcoming events.";
 
 
@@ -182,9 +192,9 @@ namespace BATODA
         }
         private void CSButton_Click(object sender, EventArgs e)
         {
-            ActivateMainButton("CSButton");
+            ActivateMainButton("Reports");
             DisplayClass.ShowMain(new CSUForm());
-            TopPanelText.Text = "CUSTOMER SERVICE";
+            TopPanelText.Text = "Reports";
             SubTopPanel.Text = "Manage customer service complaints and inquiries.";
         }
         private void SettingsButton_Click(object sender, EventArgs e)
@@ -224,13 +234,70 @@ namespace BATODA
 
         private void SwitchAdminAccountButton_Click(object sender, EventArgs e)
         {
-            SwitchAdminPanel.Visible = true;
-            SwitchAdminPanel.BringToFront();
+
         }
 
         private void CancelBindButton_Click(object sender, EventArgs e)
         {
-            SwitchAdminPanel.Visible = false;
         }
+
+        private void CreateAccountButton_Click(object sender, EventArgs e)
+        {
+            string username = NewUserName.Text.Trim();
+            string password = NewPasswordTextbox.Text.Trim();
+            string confirmPassword = ConfirmPasswordTextbox.Text.Trim();
+            string fullName = FullnameTextbox.Text.Trim();
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Passwords do not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(fullName))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MainMenuRepository repo = new MainMenuRepository();
+            if (repo.ReplaceAdminAccount(username, password, fullName, out string msg))
+            {
+                MessageBox.Show(msg, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                NewUserName.Text = "";
+                FullnameTextbox.Text = "";
+                NewPasswordTextbox.Text = "";
+                ConfirmPasswordTextbox.Text = "";
+
+                CreateNewAdminAccountPanel.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        public bool VerifyPassword(string enteredPassword, string storedHash)
+        {
+            byte[] hashBytes = Convert.FromBase64String(storedHash);
+            byte[] salt = new byte[16];
+            Buffer.BlockCopy(hashBytes, 0, salt, 0, 16);
+
+            var pbkdf2 = new Rfc2898DeriveBytes(enteredPassword, salt, 10000);
+            byte[] hash = pbkdf2.GetBytes(20);
+
+            for (int i = 0; i < 20; i++)
+            {
+                if (hashBytes[i + 16] != hash[i])
+                    return false;
+            }
+
+            return true;
+        }
+
+
+
     }
 }

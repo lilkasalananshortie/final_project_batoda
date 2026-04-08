@@ -58,7 +58,7 @@ namespace BATODA.Modules.Inbox_Module.Inbox_Classes
 
             var listRequest = _service.Users.Messages.List("me");
             listRequest.MaxResults = maxResults * 2;
-            var messages = listRequest.Execute().Messages;
+                var messages = listRequest.Execute().Messages;
 
             var result = new List<(string Id, string Subject, string Snippet, DateTime Date)>();
 

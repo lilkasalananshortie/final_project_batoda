@@ -222,7 +222,7 @@ namespace BATODA.User_Control_Forms
 
             overlay = new Panel
             {
-                BackColor = Color.FromArgb(140, 0, 0, 0),
+                BackColor = Color.WhiteSmoke,
                 Dock = DockStyle.Fill,
                 Visible = false
             };
@@ -231,8 +231,8 @@ namespace BATODA.User_Control_Forms
             progressBarBackground = new Panel
             {
                 Dock = DockStyle.Bottom,
-                Height = 5,
-                BackColor = Color.DarkRed
+                Height = 20,
+                BackColor = Color.WhiteSmoke
             };
 
             

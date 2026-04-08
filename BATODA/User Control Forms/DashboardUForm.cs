@@ -31,7 +31,7 @@ namespace BATODA
 
         private void DashboardUForm_Load(object sender, EventArgs e)
         {
-            TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
+            TotalMembersLbl.Text = (TotalMembers.GetCount() + 1).ToString();
             PendingReqLbl.Text = RequestsCount.CountPendingRequests().ToString();
             UpdateCodingNumber();
             LoadSystemLogs();

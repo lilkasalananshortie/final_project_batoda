@@ -85,6 +85,7 @@
             this.MainRecieptFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.PrintButton = new BATODA.ButtonStyle();
             this.CloseReceipt = new BATODA.ButtonStyle();
+            this.buttonStyle1 = new BATODA.ButtonStyle();
             this.MembersTopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.RenewSelectedPanelHolder.SuspendLayout();
@@ -313,6 +314,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.buttonStyle1);
             this.panel7.Controls.Add(this.MassChangeButton);
             this.panel7.Controls.Add(this.pictureBox10);
             this.panel7.Controls.Add(this.pictureBox9);
@@ -669,9 +671,9 @@
             this.MassChangeSelectionPanel.Controls.Add(this.ConfirmSave);
             this.MassChangeSelectionPanel.Controls.Add(this.MassSelectGrid);
             this.MassChangeSelectionPanel.Controls.Add(this.MultiPreviewGrid);
-            this.MassChangeSelectionPanel.Location = new System.Drawing.Point(510, 265);
+            this.MassChangeSelectionPanel.Location = new System.Drawing.Point(510, 414);
             this.MassChangeSelectionPanel.Name = "MassChangeSelectionPanel";
-            this.MassChangeSelectionPanel.Size = new System.Drawing.Size(575, 691);
+            this.MassChangeSelectionPanel.Size = new System.Drawing.Size(575, 518);
             this.MassChangeSelectionPanel.TabIndex = 53;
             this.MassChangeSelectionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MassChangeSelectionPanel_Paint);
             // 
@@ -693,7 +695,7 @@
             this.MultiClose.ImagePosition = new System.Drawing.Point(10, 8);
             this.MultiClose.ImageSize = new System.Drawing.Size(24, 24);
             this.MultiClose.IsToggled = false;
-            this.MultiClose.Location = new System.Drawing.Point(280, 637);
+            this.MultiClose.Location = new System.Drawing.Point(303, 637);
             this.MultiClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MultiClose.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.MultiClose.Name = "MultiClose";
@@ -842,7 +844,7 @@
             this.SaveMassChangeButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.SaveMassChangeButton.ImageSize = new System.Drawing.Size(24, 24);
             this.SaveMassChangeButton.IsToggled = false;
-            this.SaveMassChangeButton.Location = new System.Drawing.Point(416, 637);
+            this.SaveMassChangeButton.Location = new System.Drawing.Point(436, 637);
             this.SaveMassChangeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SaveMassChangeButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.SaveMassChangeButton.Name = "SaveMassChangeButton";
@@ -875,7 +877,7 @@
             this.ConfirmSave.ImagePosition = new System.Drawing.Point(10, 8);
             this.ConfirmSave.ImageSize = new System.Drawing.Size(24, 24);
             this.ConfirmSave.IsToggled = false;
-            this.ConfirmSave.Location = new System.Drawing.Point(416, 637);
+            this.ConfirmSave.Location = new System.Drawing.Point(436, 637);
             this.ConfirmSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ConfirmSave.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.ConfirmSave.Name = "ConfirmSave";
@@ -1041,6 +1043,39 @@
             this.CloseReceipt.UseVisualStyleBackColor = false;
             this.CloseReceipt.Click += new System.EventHandler(this.CloseReceipt_Click);
             // 
+            // buttonStyle1
+            // 
+            this.buttonStyle1.BackColor = System.Drawing.Color.White;
+            this.buttonStyle1.BackgroundColor = System.Drawing.Color.White;
+            this.buttonStyle1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.BorderRadius = 0;
+            this.buttonStyle1.BorderSize = 1;
+            this.buttonStyle1.ButtonImage = null;
+            this.buttonStyle1.FlatAppearance.BorderSize = 0;
+            this.buttonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.HoverBorderColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle1.HoverColor = System.Drawing.Color.DarkRed;
+            this.buttonStyle1.ImageColor = System.Drawing.Color.Black;
+            this.buttonStyle1.ImagePosition = new System.Drawing.Point(10, 8);
+            this.buttonStyle1.ImageSize = new System.Drawing.Size(24, 24);
+            this.buttonStyle1.IsToggled = false;
+            this.buttonStyle1.Location = new System.Drawing.Point(599, 17);
+            this.buttonStyle1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonStyle1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.Name = "buttonStyle1";
+            this.buttonStyle1.PaddingX = 0;
+            this.buttonStyle1.PaddingY = 0;
+            this.buttonStyle1.Size = new System.Drawing.Size(137, 28);
+            this.buttonStyle1.TabIndex = 55;
+            this.buttonStyle1.Text = "Refresh";
+            this.buttonStyle1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.TextOffset = 20;
+            this.buttonStyle1.ToggleColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
+            this.buttonStyle1.UseVisualStyleBackColor = false;
+            this.buttonStyle1.Click += new System.EventHandler(this.buttonStyle1_Click);
+            // 
             // FinanceUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1152,5 +1187,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel8;
+        private ButtonStyle buttonStyle1;
     }
 }

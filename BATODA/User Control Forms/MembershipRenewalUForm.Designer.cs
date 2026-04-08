@@ -32,14 +32,10 @@
             this.MembershipRenewalButton = new BATODA.ButtonStyle();
             this.RenewalHistoryButton = new BATODA.ButtonStyle();
             this.FinanceButton = new BATODA.ButtonStyle();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RenewSelectedButton = new BATODA.ButtonStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.RenewalGrid = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.ConfirmationRenewPanel = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -68,8 +64,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.MembersTopPanel.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).BeginInit();
@@ -195,45 +189,11 @@
             this.FinanceButton.UseVisualStyleBackColor = false;
             this.FinanceButton.Click += new System.EventHandler(this.FinanceButton_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.SearchTextBox);
-            this.panel6.Controls.Add(this.pictureBox4);
-            this.panel6.Location = new System.Drawing.Point(14, 39);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(464, 41);
-            this.panel6.TabIndex = 34;
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.Location = new System.Drawing.Point(9, 8);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(401, 24);
-            this.SearchTextBox.TabIndex = 4;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox4.Image = global::BATODA.Properties.Resources.magnifying_glass;
-            this.pictureBox4.Location = new System.Drawing.Point(418, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 25;
-            this.pictureBox4.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.RenewSelectedButton);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.ConfirmationRenewPanel);
             this.panel1.Location = new System.Drawing.Point(14, 159);
             this.panel1.Name = "panel1";
@@ -258,7 +218,7 @@
             this.RenewSelectedButton.ImagePosition = new System.Drawing.Point(10, 8);
             this.RenewSelectedButton.ImageSize = new System.Drawing.Size(24, 24);
             this.RenewSelectedButton.IsToggled = false;
-            this.RenewSelectedButton.Location = new System.Drawing.Point(1368, 48);
+            this.RenewSelectedButton.Location = new System.Drawing.Point(1368, 11);
             this.RenewSelectedButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RenewSelectedButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(46)))), ((int)(((byte)(36)))));
             this.RenewSelectedButton.Name = "RenewSelectedButton";
@@ -277,9 +237,9 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.RenewalGrid);
-            this.panel2.Location = new System.Drawing.Point(14, 86);
+            this.panel2.Location = new System.Drawing.Point(14, 51);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1556, 663);
+            this.panel2.Size = new System.Drawing.Size(1556, 698);
             this.panel2.TabIndex = 35;
             // 
             // RenewalGrid
@@ -291,18 +251,8 @@
             this.RenewalGrid.Location = new System.Drawing.Point(16, 12);
             this.RenewalGrid.Name = "RenewalGrid";
             this.RenewalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RenewalGrid.Size = new System.Drawing.Size(1525, 637);
+            this.RenewalGrid.Size = new System.Drawing.Size(1525, 662);
             this.RenewalGrid.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 25);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Search Member";
             // 
             // ConfirmationRenewPanel
             // 
@@ -649,11 +599,7 @@
             this.Name = "MembershipRenewalUForm";
             this.Size = new System.Drawing.Size(1752, 944);
             this.MembersTopPanel.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).EndInit();
             this.ConfirmationRenewPanel.ResumeLayout(false);
@@ -682,9 +628,6 @@
         private ButtonStyle RenewalHistoryButton;
         private ButtonStyle MembershipRenewalButton;
         private System.Windows.Forms.Panel MembersTopPanel;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox SearchTextBox;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -695,7 +638,6 @@
         private ButtonStyle RenewSelectedButton;
         private ButtonStyle CancelRenewalButton;
         private ButtonStyle RenewButton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label PlateNumberLabel;
         private System.Windows.Forms.Label label12;

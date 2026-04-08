@@ -323,8 +323,8 @@ namespace BATODA.Helpers.DataGrids
 
             if (dgv.Columns.Contains("Edit"))
                 dgv.Columns.Remove("Edit");
-            if (dgv.Columns.Contains("Delete"))
-                dgv.Columns.Remove("Delete");
+            //if (dgv.Columns.Contains("Delete"))
+            //    dgv.Columns.Remove("Delete");
 
             var editColumn = new DataGridViewImageColumn
             {
@@ -336,20 +336,20 @@ namespace BATODA.Helpers.DataGrids
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.None
             };
 
-            var deleteColumn = new DataGridViewImageColumn
-            {
-                Name = "Delete",
-                HeaderText = "Delete",
-                Image = Properties.Resources.delete,
-                ImageLayout = DataGridViewImageCellLayout.Zoom,
-                Width = 70, 
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-            };
+            //var deleteColumn = new DataGridViewImageColumn
+            //{
+            //    Name = "Delete",
+            //    HeaderText = "Delete",
+            //    Image = Properties.Resources.delete,
+            //    ImageLayout = DataGridViewImageCellLayout.Zoom,
+            //    Width = 70, 
+            //    AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+            //};
 
             dgv.Columns.Add(editColumn);
-            dgv.Columns.Add(deleteColumn);
+            //dgv.Columns.Add(deleteColumn);
 
-            foreach (DataGridViewColumn col in new[] { editColumn, deleteColumn })
+            foreach (DataGridViewColumn col in new[] { editColumn })
             {
                 col.DefaultCellStyle.Padding = new Padding(5);
                 col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -361,7 +361,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.CellMouseEnter += (s, e) =>
             {
                 if (e.RowIndex < 0) return;
-                if (e.ColumnIndex == dgv.Columns["Edit"].Index || e.ColumnIndex == dgv.Columns["Delete"].Index)
+                if (e.ColumnIndex == dgv.Columns["Edit"].Index )
                 {
                     hoveredRow = e.RowIndex;
                     hoveredCol = e.ColumnIndex;
@@ -383,7 +383,7 @@ namespace BATODA.Helpers.DataGrids
             dgv.CellPainting += (s, e) =>
             {
                 if (e.RowIndex < 0) return;
-                if (e.ColumnIndex != dgv.Columns["Edit"].Index && e.ColumnIndex != dgv.Columns["Delete"].Index)
+                if (e.ColumnIndex != dgv.Columns["Edit"].Index)
                     return;
 
                 e.PaintBackground(e.CellBounds, true);

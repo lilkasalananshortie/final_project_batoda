@@ -32,8 +32,8 @@ namespace BATODA
         {
             InitializeComponent();
 
-            TotalMembersLbl.Text = TotalMembers.GetCount().ToString();
-            TotalActiveLbl.Text = MemberInfoSummary.GetActiveCount().ToString();
+            TotalMembersLbl.Text = (TotalMembers.GetCount() + 1).ToString();
+            TotalActiveLbl.Text = (MemberInfoSummary.GetActiveCount() + 1).ToString();
             TotalInactiveLbl.Text = MemberInfoSummary.GetInactiveCount().ToString();
             TotalSuspendedLbl.Text = MemberInfoSummary.GetSuspendedCount().ToString();
         }
@@ -284,15 +284,26 @@ namespace BATODA
                     row.Cells["Birthdate"].Value = birthdate.ToString("MMMM d, yyyy");
 
                 int penalty = Convert.ToInt32(row.Cells["PenaltyLevel"].Value);
-                string penaltyText = penalty == 0 ? "" :
-                                     penalty == 1 ? "First Warning" :
-                                     penalty == 2 ? "Final Warning" :
-                                     penalty == 3 ? $"Remaining {row.Cells["SuspensionDays"].Value} Hours of Suspension" :
-                                     "Unknown";
+
+                string penaltyText = "";
+                if (penalty == 0)
+                    penaltyText = "";
+                else if (penalty == 1)
+                    penaltyText = "First Warning";
+                else if (penalty == 2)
+                    penaltyText = "Final Warning";
+                else if (penalty == 3)
+                {
+                    if (MembersDataGrid.Columns.Contains("SuspensionDays"))
+                        penaltyText = $"Remaining {row.Cells["SuspensionDays"].Value} Hours of Suspension";
+                    else
+                        penaltyText = "Remaining ? Hours of Suspension";
+                }
+                else
+                    penaltyText = "Unknown";
+
                 row.Cells["PenaltyLevel"].Value = penaltyText;
             }
-
-
             ToastManager.Success("Filters Applied!");
         }
 
@@ -371,25 +382,25 @@ namespace BATODA
                 DisplayClass.ShowMini(new MembersEditPanel());
             }
 
-            else if (dgv.Columns[e.ColumnIndex].Name == "Delete")
-            {
-                int bodyNumber = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["BodyNumber"].Value);
+            //else if (dgv.Columns[e.ColumnIndex].Name == "Delete")
+            //{
+            //    int bodyNumber = Convert.ToInt32(dgv.Rows[e.RowIndex].Cells["BodyNumber"].Value);
 
-                var confirm = MessageBox.Show(
-                    "Are you sure you want to delete this member?",
-                    "Confirm Delete",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning
-                );
+            //    var confirm = MessageBox.Show(
+            //        "Are you sure you want to delete this member?",
+            //        "Confirm Delete",
+            //        MessageBoxButtons.YesNo,
+            //        MessageBoxIcon.Warning
+            //    );
 
-                if (confirm == DialogResult.Yes)
-                {
-                    MemberRepository repo = new MemberRepository();
-                    repo.DeleteMember(bodyNumber);
+            //    if (confirm == DialogResult.Yes)
+            //    {
+            //        MemberRepository repo = new MemberRepository();
+            //        repo.DeleteMember(bodyNumber);
 
-                    LoadMembersToGrid();
-                }
-            }
+            //        LoadMembersToGrid();
+            //    }
+           // }
         }
 
         private void MembersDataGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

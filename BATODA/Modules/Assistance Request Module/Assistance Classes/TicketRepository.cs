@@ -184,6 +184,7 @@ namespace BATODA.Modules.Assistance_Request_Module
                             TypeOfAid = reader.GetString(reader.GetOrdinal("TypeOfAid")),
                             AssistanceThru = reader.GetString(reader.GetOrdinal("AssistanceThru")),
                             RequestedAmount = reader.GetDecimal(reader.GetOrdinal("RequestedAmount")),
+                            ContactNumber = reader["ContactNumber"].ToString(), 
                             TargetDate = reader.GetDateTime(reader.GetOrdinal("TargetDate")),
                             RequestStatus = reader.GetString(reader.GetOrdinal("RequestStatus")),
                             DateRequested = reader.GetDateTime(reader.GetOrdinal("DateRequested")),

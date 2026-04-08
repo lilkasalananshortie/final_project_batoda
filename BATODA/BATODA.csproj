@@ -112,6 +112,7 @@
     <Compile Include="Modules\Inbox Module\Gform Classes\GFormServiceHandler.cs" />
     <Compile Include="Modules\Inbox Module\Inbox Classes\GmailServiceHandler.cs" />
     <Compile Include="Modules\Login Module\LoginRepository.cs" />
+    <Compile Include="Modules\Main Menu\MainMenuRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberModel.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberRepository.cs" />
     <Compile Include="Modules\Member Module\Member Classes\MemberSort.cs" />

@@ -410,5 +410,15 @@ namespace BATODA
         {
 
         }
+
+        private void buttonStyle1_Click(object sender, EventArgs e)
+        {
+            LoadYears();
+            LoadMassSelectGrid();
+            ReloadFinanceLabels();
+            LoadYearsFromDB();
+            RenewSelectedPanelHolder.Hide();
+            MassChangeSelectionPanel.Hide();
+        }
     }
 }

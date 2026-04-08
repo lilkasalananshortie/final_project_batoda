@@ -21,7 +21,7 @@ namespace BATODA.Modules.Login_Module
                     {
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
-
+                       
                         int count = (int)cmd.ExecuteScalar();
                         return count > 0;
                     }
